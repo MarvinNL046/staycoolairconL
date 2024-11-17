@@ -1,0 +1,92 @@
+PRODUCTFOTO'S RICHTLIJNEN STAYCOOL AIRCO
+
+1. BESTANDSLOCATIE
+=================
+Plaats alle productfoto's in: /public/images/products/[merk]/[model]/
+
+Bijvoorbeeld:
+/public/images/products/daikin/stylish/main.jpg
+/public/images/products/daikin/stylish/front.jpg
+/public/images/products/daikin/stylish/side.jpg
+/public/images/products/daikin/stylish/installed.jpg
+
+2. NAAMGEVINGSCONVENTIE
+======================
+Voor elk model zijn de volgende foto's nodig:
+
+- main.jpg     : Hoofdfoto voor overzichtspagina's
+- front.jpg    : Vooraanzicht van de unit
+- side.jpg     : Zijaanzicht van de unit
+- installed.jpg: Geïnstalleerde unit in een ruimte
+- detail.jpg   : (Optioneel) Close-up van specifieke features
+
+3. BESTANDSSPECIFICATIES
+=======================
+- Formaat    : JPG of WEBP (voorkeur voor WEBP)
+- Resolutie  : 
+  * main.jpg     : 1200x800px
+  * overige      : 1600x1200px
+- Kwaliteit  : 80-85%
+- Maximale bestandsgrootte: 300KB
+- Kleurprofiel: sRGB
+
+4. MAPPENSTRUCTUUR VOORBEELD
+==========================
+/public/images/products/
+  ├── daikin/
+  │   ├── stylish/
+  │   │   ├── main.jpg
+  │   │   ├── front.jpg
+  │   │   ├── side.jpg
+  │   │   └── installed.jpg
+  │   └── brand.jpg
+  ├── lg/
+  │   ├── artcool/
+  │   │   ├── main.jpg
+  │   │   ├── front.jpg
+  │   │   ├── side.jpg
+  │   │   └── installed.jpg
+  │   └── brand.jpg
+  └── [andere-merken]/
+
+5. IMPLEMENTATIE IN CODE
+======================
+Update de imageUrl en images array in de productdata bestanden:
+
+src/data/brands/[merk].ts:
+
+{
+  name: 'Model Naam',
+  imageUrl: '/images/products/merk/model/main.jpg',
+  images: [
+    {
+      url: '/images/products/merk/model/front.jpg',
+      alt: 'Merk Model - Vooraanzicht'
+    },
+    {
+      url: '/images/products/merk/model/side.jpg',
+      alt: 'Merk Model - Zijaanzicht'
+    },
+    {
+      url: '/images/products/merk/model/installed.jpg',
+      alt: 'Merk Model - Geïnstalleerd'
+    }
+  ]
+}
+
+6. OPTIMALISATIE TIPS
+===================
+1. Gebruik tools als ImageOptim of Squoosh voor optimalisatie
+2. Converteer naar WebP met fallback JPG
+3. Zorg voor consistente afmetingen per type foto
+4. Gebruik beschrijvende alt-teksten
+5. Comprimeer zonder zichtbaar kwaliteitsverlies
+
+7. AANDACHTSPUNTEN
+================
+- Zorg voor professionele productfoto's
+- Gebruik consistente belichting
+- Maak foto's vanuit dezelfde hoeken
+- Toon installaties in nette, representatieve ruimtes
+- Vermijd watermerken of logo's in de foto's
+- Zorg dat de unit goed zichtbaar is

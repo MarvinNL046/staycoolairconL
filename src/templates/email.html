@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayCool Airco</title>
+  <style>
+    /* Base styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f5f5f5;
+    }
+
+    /* Container */
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #2563eb;
+      color: white;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .logo {
+      max-width: 200px;
+      height: auto;
+    }
+
+    /* Content */
+    .content {
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    /* Message */
+    .message {
+      padding: 20px;
+      background-color: #f8fafc;
+      border-left: 4px solid #2563eb;
+      margin: 20px 0;
+      border-radius: 4px;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      background-color: #f1f5f9;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    /* Button */
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    /* Social Links */
+    .social-links {
+      margin: 20px 0;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 600px) {
+      .container {
+        width: 100%;
+        padding: 10px;
+      }
+      
+      .content {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="https://staycoolairco.nl/logo.png" alt="StayCool Airco" class="logo">
+    </div>
+
+    <div class="content">
+      <h2>Beste {{to_name}},</h2>
+      
+      <p>Bedankt voor uw bericht. U heeft een nieuw bericht ontvangen van {{from_name}}.</p>
+
+      <div class="message">
+        <p><em>{{message}}</em></p>
+      </div>
+
+      <div class="contact-info">
+        <h3>Contactgegevens:</h3>
+        <p>Naam: {{from_name}}</p>
+        <p>Email: {{from_email}}</p>
+        <p>Telefoon: {{phone}}</p>
+        <p>Woonplaats: {{city}}</p>
+      </div>
+
+      <a href="https://afspraken.staycoolairco.nl" class="button">Direct een afspraak inplannen</a>
+
+      <div class="social-links">
+        <a href="https://facebook.com/staycoolairco">Facebook</a>
+        <a href="https://instagram.com/staycoolairco">Instagram</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Met vriendelijke groet,<br>
+      Het team van StayCool Airco</p>
+      
+      <p>Tel: 046 202 1430<br>
+      Email: info@staycoolairco.nl<br>
+      Website: <a href="https://staycoolairco.nl">staycoolairco.nl</a></p>
+
+      <p style="font-size: 12px; color: #94a3b8;">
+        Dit is een automatisch gegenereerd bericht. U kunt hier niet op reageren.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

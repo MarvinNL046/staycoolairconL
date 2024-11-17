@@ -1,0 +1,184 @@
+STAYCOOL AIRCO WEBSITE DOCUMENTATIE
+
+1. OVERZICHT
+============
+StayCool Airco is een professionele website voor een airconditioning installatiebedrijf in Limburg. De website is gebouwd met React, TypeScript en Tailwind CSS, en biedt uitgebreide informatie over airconditioning producten en diensten.
+
+2. TECHNISCHE STACK
+==================
+- React 18
+- TypeScript
+- Tailwind CSS
+- Framer Motion (animaties)
+- React Router DOM (routing)
+- React Helmet Async (SEO)
+- EmailJS (contactformulieren)
+- Lucide React (iconen)
+
+3. HOOFDFUNCTIONALITEITEN
+=========================
+
+A. Homepage
+----------
+- Hero sectie met contactformulier
+- Services overzicht
+- Google Reviews integratie
+- USP sectie
+- Contact sectie
+
+B. Producten
+-----------
+- Overzicht van alle airco merken
+- Detail pagina's per merk
+- Specifieke product/model pagina's
+- Technische specificaties
+- Prijsinformatie
+- Productafbeeldingen carousel
+
+C. Werkgebied
+------------
+- Interactieve kaart van servicegebied
+- Lijst van steden/gemeenten
+- Statistieken per regio
+- Direct contact mogelijkheden
+
+D. Kennisbank
+------------
+- Informatieve artikelen
+- SCOP/SEER uitleg
+- Onderhoudstips
+- Probleemoplossing
+- CO2-reductie informatie
+
+E. Contact
+---------
+- Contactformulier
+- Direct bellen functie
+- WhatsApp integratie
+- Locatie informatie
+- Online afspraken systeem
+
+4. BESTANDSSTRUCTUUR
+===================
+
+/src
+  /components      # Herbruikbare UI componenten
+  /pages          # Hoofdpagina's
+  /data           # Data en content
+  /types          # TypeScript interfaces
+  /utils          # Hulpfuncties
+  /config         # Configuratie bestanden
+  /templates      # Email templates
+
+5. BELANGRIJKE COMPONENTEN
+=========================
+
+A. Navigatie
+-----------
+- Transparante header
+- Mobiel menu
+- Breadcrumbs
+- Skip to content
+
+B. Forms
+-------
+- Contact formulier
+- Offerte aanvraag
+- Validatie
+- EmailJS integratie
+
+C. Product Components
+-------------------
+- Product cards
+- Image carousel
+- Specificatie tabellen
+- CTA secties
+
+D. SEO Components
+---------------
+- Meta tags
+- Schema.org markup
+- Open Graph tags
+- Canonical URLs
+
+6. INTEGRATIES
+=============
+- Google Analytics
+- Google Tag Manager
+- EmailJS
+- Google Reviews
+- Online afspraken systeem
+
+7. PERFORMANCE OPTIMALISATIES
+===========================
+- Code splitting
+- Lazy loading
+- Image optimization
+- PWA ready
+- Caching strategieën
+
+8. TOEGANKELIJKHEID
+==================
+- WCAG 2.1 richtlijnen
+- Keyboard navigatie
+- Screen reader support
+- Aria labels
+- Kleurcontrast
+
+9. SEO OPTIMALISATIE
+===================
+- Meta tags per pagina
+- Structured data
+- Sitemap.xml
+- Robots.txt
+- Canonical URLs
+
+10. DEPLOYMENT
+============
+- Netlify hosting
+- Automatische builds
+- SSL certificaat
+- Redirect regels
+- Headers configuratie
+
+11. ONDERHOUD
+============
+- Regelmatige content updates
+- Performance monitoring
+- Analytics tracking
+- Security updates
+- Backup strategie
+
+12. TOEKOMSTIGE UITBREIDINGEN
+===========================
+- Blog sectie
+- Klantportaal
+- Online betalingen
+- Chat functionaliteit
+- Voorraad management
+
+13. SECURITY
+===========
+- HTTPS
+- CSP headers
+- XSS protection
+- CSRF protection
+- Input validatie
+
+14. MONITORING
+============
+- Error tracking
+- Performance metrics
+- User analytics
+- Conversion tracking
+- Uptime monitoring
+
+15. TESTING
+==========
+- Unit tests
+- Integration tests
+- E2E tests
+- Performance tests
+- Accessibility tests
+
+Deze documentatie biedt een compleet overzicht van de StayCool Airco website. Voor specifieke implementatiedetails, zie de bijbehorende codebestanden in de repository.

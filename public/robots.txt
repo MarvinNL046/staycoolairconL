@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Disallow admin and private paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Allow CSS, JS, and Images
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.png$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# Crawl delay
+Crawl-delay: 10
+
+# Sitemaps
+Sitemap: https://staycoolairco.nl/sitemap.xml
