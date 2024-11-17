@@ -42,12 +42,6 @@
     Cache-Control = "public, max-age=31536000, immutable"
     Access-Control-Allow-Origin = "*"
 
-# Cache JavaScript files with Gzip compression
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Content-Encoding = "gzip"
-
 # Cache CSS files with Gzip compression
 [[headers]]
   for = "/*.css"
