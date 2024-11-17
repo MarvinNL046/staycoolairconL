@@ -15,45 +15,50 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https:; frame-src 'self' https://www.google.com https://www.googletagmanager.com; object-src 'none';"
+    Content-Security-Policy = """
+      default-src 'self' https:; 
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com; 
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+      img-src 'self' data: https: blob:; 
+      font-src 'self' data: https://fonts.gstatic.com; 
+      connect-src 'self' https:; 
+      frame-src 'self' https://www.google.com https://www.googletagmanager.com; 
+      object-src 'none'
+    """
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 
-# Cache static assets
 [[headers]]
-  for = "/assets/*"
+  for = "/*.js"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-    # Enable Brotli/Gzip compression
-    Content-Encoding = "gzip"
+    Content-Type = "application/javascript; charset=utf-8"
+    Vary = "Accept-Encoding"
 
-# Cache images
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "text/css; charset=utf-8"
+    Vary = "Accept-Encoding"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "font/woff2"
+    Access-Control-Allow-Origin = "*"
+
 [[headers]]
   for = "/*.{jpg,jpeg,png,gif,webp,svg,ico}"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-    # Enable image optimization
-    Accept-CH = "DPR, Width, Viewport-Width"
-
-# Cache fonts
-[[headers]]
-  for = "/*.{woff,woff2,ttf,otf,eot}"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-    Access-Control-Allow-Origin = "*"
-
-# Cache CSS files with Gzip compression
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Content-Encoding = "gzip"
-
+    Vary = "Accept-Encoding"
 
 [build.environment]
   NODE_VERSION = "20"
   NPM_FLAGS = "--no-audit --no-fund"
 
-# Enable Brotli compression
 [build.processing]
   skip_processing = false
 
