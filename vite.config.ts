@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.png', 'robots.txt', 'icon-192.png', 'icon-512.png'],
+      includeAssets: ['favicon.png', 'robots.txt'],
       manifest: {
         name: 'StayCool Airco',
         short_name: 'StayCool',
@@ -15,13 +15,19 @@ export default defineConfig({
         theme_color: '#2563eb',
         icons: [
           {
-            src: '/icon-192.png',
+            src: '/images/logo.svg',
+            sizes: '48x48 72x72 96x96 128x128 256x256',
+            type: 'image/svg+xml',
+            purpose: 'any'
+          },
+          {
+            src: '/images/logo-192.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any maskable'
           },
           {
-            src: '/icon-512.png',
+            src: '/images/logo-512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable'
@@ -31,30 +37,33 @@ export default defineConfig({
     })
   ],
   build: {
-    sourcemap: false,
+    sourcemap: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-vendor': ['framer-motion', 'lucide-react'],
-          'form-vendor': ['@emailjs/browser', 'react-hot-toast']
-        }
+        manualChunks: undefined,
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       }
     },
-    target: 'esnext',
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
-    },
+    target: 'es2015',
+    minify: 'esbuild',
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096,
     reportCompressedSize: true,
     chunkSizeWarningLimit: 1000
   },
   server: {
     headers: {
-      'Cache-Control': 'no-store',
+      'Cache-Control': 'no-cache',
+      'Content-Type': 'text/javascript'
+    }
+  },
+  preview: {
+    port: 4173,
+    strictPort: true,
+    headers: {
+      'Cache-Control': 'no-cache',
       'Content-Type': 'text/javascript'
     }
   }
