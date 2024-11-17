@@ -1,205 +1,227 @@
 import { Brand } from '../../types/products';
 
-export const tosotData: Brand = {
-  name: 'Tosot by Gree',
-  description: 'Moderne technologie voor optimaal comfort tegen een scherpe prijs. Tosot is het premium merk van GREE, één van de grootste airco fabrikanten ter wereld.',
-  imageUrl: '/images/products/tosot/brand.jpg',
+export const toshibaData: Brand = {
+  name: 'Toshiba',
+  description: 'Premium Japanse technologie met focus op design, duurzaamheid en innovatie. Toshiba staat bekend om hun hoogwaardige airconditioners met unieke features.',
+  imageUrl: '/images/products/toshiba/brand.jpg',
   features: [
-    'G-Tech Inverter technologie',
-    'Wifi-ready modellen beschikbaar',
-    'Energiezuinige werking',
-    'Uitstekende prijs-kwaliteitverhouding'
+    'Ultra Pure filtertechnologie',
+    'Magic Coil coating',
+    'Plasma Ionizer',
+    'Smart Home integratie'
   ],
   models: [
     {
-      name: 'Cosmo',
-      slug: 'cosmo',
-      description: 'De Tosot Cosmo biedt betrouwbare klimaatbeheersing voor een zeer aantrekkelijke prijs. Perfect voor wie op zoek is naar een goede basis airco.',
-      imageUrl: '/images/products/tosot/cosmo/main.jpg',
+      name: 'Haori',
+      slug: 'haori',
+      description: 'De Toshiba Haori is een unieke designwandmodel met verwisselbare stoffen bekleding. Perfect voor wie een airconditioner zoekt die naadloos in het interieur past.',
+      imageUrl: '/images/products/toshiba/haori/main.jpg',
       images: [
         {
-          url: '/images/products/tosot/cosmo/front.jpg',
-          alt: 'Tosot Cosmo - Vooraanzicht'
+          url: '/images/products/toshiba/haori/front.jpg',
+          alt: 'Toshiba Haori - Vooraanzicht'
         },
         {
-          url: '/images/products/tosot/cosmo/side.jpg',
-          alt: 'Tosot Cosmo - Zijaanzicht'
+          url: '/images/products/toshiba/haori/side.jpg',
+          alt: 'Toshiba Haori - Zijaanzicht'
         },
         {
-          url: '/images/products/tosot/cosmo/installed.jpg',
-          alt: 'Tosot Cosmo - Geïnstalleerd'
+          url: '/images/products/toshiba/haori/installed.jpg',
+          alt: 'Toshiba Haori - Geïnstalleerd'
+        },
+        {
+          url: '/images/products/toshiba/haori/detail.jpg',
+          alt: 'Toshiba Haori - Stoffen bekleding detail'
         }
       ],
-      price: '€522,-',
-      energyLabel: 'A++',
-      capacity: '2,5 kW - 6,1 kW',
+      price: '€1.599,-',
+      energyLabel: 'A+++',
+      capacity: '2,5 kW - 4,6 kW',
       features: [
-        'G-Tech Inverter technologie',
-        'Energiezuinige werking',
-        'Stil in gebruik',
-        'Auto-herstart functie',
-        'Timer functie',
-        'Eenvoudige installatie'
+        'Verwisselbare stoffen hoes',
+        'Ingebouwde wifi-module',
+        'Ultra Pure filter (94% PM2.5)',
+        'Magic Coil coating',
+        'Plasma Ionizer',
+        '3D-luchtstroom',
+        'Fluisterstille werking vanaf 19 dB(A)'
       ],
       specifications: [
-        { label: 'Beschikbare capaciteiten', value: '2,5 kW, 3,2 kW, 4,6 kW, 6,1 kW' },
+        { label: 'Beschikbare capaciteiten', value: '2,5 kW, 3,5 kW, 4,6 kW' },
+        { label: 'SEER', value: 'tot 8,60' },
+        { label: 'SCOP', value: 'tot 5,10' },
+        { label: 'Geluidsniveau binnen', value: '19-23-41 dB(A)' },
+        { label: 'Afmetingen (HxBxD)', value: '300 x 987 x 210 mm' },
+        { label: 'Gewicht', value: '11,0 kg' },
         { label: 'Koudemiddel', value: 'R32' },
-        { label: 'Energielabel', value: 'A++' },
-        { label: 'Type', value: 'Wandmodel' }
+        { label: 'Standaard hoezen', value: 'Lichtgrijs en antraciet' }
       ]
     },
     {
-      name: 'Pular',
-      slug: 'pular',
-      description: 'De Tosot Pular combineert moderne technologie met ingebouwde wifi-besturing. Een slimme keuze voor wie op zoek is naar extra functionaliteit.',
-      imageUrl: '/images/products/tosot/pular/main.jpg',
+      name: 'Shorai Edge',
+      slug: 'shorai-edge',
+      description: 'De Toshiba Shorai Edge combineert modern design met geavanceerde technologie. Een krachtige en efficiënte wandunit voor optimaal comfort.',
+      imageUrl: '/images/products/toshiba/shorai-edge/main.jpg',
       images: [
         {
-          url: '/images/products/tosot/pular/front.jpg',
-          alt: 'Tosot Pular - Vooraanzicht'
+          url: '/images/products/toshiba/shorai-edge/front.jpg',
+          alt: 'Toshiba Shorai Edge - Vooraanzicht'
         },
         {
-          url: '/images/products/tosot/pular/side.jpg',
-          alt: 'Tosot Pular - Zijaanzicht'
+          url: '/images/products/toshiba/shorai-edge/side.jpg',
+          alt: 'Toshiba Shorai Edge - Zijaanzicht'
         },
         {
-          url: '/images/products/tosot/pular/installed.jpg',
-          alt: 'Tosot Pular - Geïnstalleerd'
+          url: '/images/products/toshiba/shorai-edge/installed.jpg',
+          alt: 'Toshiba Shorai Edge - Geïnstalleerd'
         }
       ],
-      price: '€564,-',
-      energyLabel: 'A++',
-      capacity: '2,2 kW - 6,1 kW',
+      price: '€1.299,-',
+      energyLabel: 'A+++',
+      capacity: '2,5 kW - 7,0 kW',
       features: [
-        'Ingebouwde wifi-besturing',
-        'G-Tech Inverter technologie',
-        'Smart Control via app',
-        'Energiezuinige werking',
-        'Uitgebreide timerfuncties',
-        'Auto-reiniging'
+        'Ingebouwde wifi-module',
+        'Ultra Pure filter',
+        'Magic Coil coating',
+        'Plasma Ionizer',
+        'Power Selection',
+        'Fireplace modus',
+        'Silent modus'
       ],
       specifications: [
-        { label: 'Beschikbare capaciteiten', value: '2,2 kW, 2,5 kW, 3,2 kW, 4,6 kW, 6,1 kW' },
+        { label: 'Beschikbare capaciteiten', value: '2,5 kW, 3,2 kW, 4,6 kW, 5,0 kW, 6,1 kW, 7,0 kW' },
+        { label: 'SEER', value: 'tot 7,70' },
+        { label: 'SCOP', value: 'tot 4,70' },
+        { label: 'Geluidsniveau binnen', value: '19 dB(A)' },
         { label: 'Koudemiddel', value: 'R32' },
-        { label: 'Energielabel', value: 'A++' },
-        { label: 'Type', value: 'Wandmodel' }
+        { label: 'Wifi', value: 'Standaard ingebouwd' }
       ]
     },
     {
-      name: 'Bora',
-      slug: 'bora',
-      description: 'De Tosot Bora biedt krachtige prestaties in een compact design. Ideaal voor wie zoekt naar een betrouwbare airco met goede basisfuncties.',
-      imageUrl: '/images/products/tosot/bora/main.jpg',
+      name: 'Seiya',
+      slug: 'seiya',
+      description: 'De Toshiba Seiya biedt betrouwbare prestaties voor een aantrekkelijke prijs. Perfect voor wie op zoek is naar een kwalitatieve basis airco.',
+      imageUrl: '/images/products/toshiba/seiya/main.jpg',
       images: [
         {
-          url: '/images/products/tosot/bora/front.jpg',
-          alt: 'Tosot Bora - Vooraanzicht'
+          url: '/images/products/toshiba/seiya/front.jpg',
+          alt: 'Toshiba Seiya - Vooraanzicht'
         },
         {
-          url: '/images/products/tosot/bora/side.jpg',
-          alt: 'Tosot Bora - Zijaanzicht'
+          url: '/images/products/toshiba/seiya/side.jpg',
+          alt: 'Toshiba Seiya - Zijaanzicht'
         },
         {
-          url: '/images/products/tosot/bora/installed.jpg',
-          alt: 'Tosot Bora - Geïnstalleerd'
+          url: '/images/products/toshiba/seiya/installed.jpg',
+          alt: 'Toshiba Seiya - Geïnstalleerd'
         }
       ],
-      price: '€598,-',
+      price: '€999,-',
       energyLabel: 'A++',
-      capacity: '3,2 kW - 6,1 kW',
+      capacity: '2,0 kW - 6,5 kW',
       features: [
-        'G-Tech Inverter technologie',
-        'Compact design',
-        'Energiezuinige werking',
-        'Auto-herstart',
-        'Timer functie',
-        'Eenvoudig onderhoud'
+        'Wifi-module (optioneel)',
+        'Magic Coil coating',
+        'Eco modus',
+        'Hi-power modus',
+        'Quiet modus',
+        'Preset modus',
+        'Comfort Sleep'
       ],
       specifications: [
-        { label: 'Beschikbare capaciteiten', value: '3,2 kW, 6,1 kW' },
+        { label: 'Beschikbare capaciteiten', value: '2,0 kW, 2,5 kW, 3,3 kW, 4,6 kW, 5,0 kW, 6,5 kW' },
+        { label: 'SEER', value: 'tot 6,90' },
+        { label: 'SCOP', value: 'tot 4,60' },
+        { label: 'Geluidsniveau binnen', value: '21 dB(A)' },
         { label: 'Koudemiddel', value: 'R32' },
-        { label: 'Energielabel', value: 'A++' },
-        { label: 'Type', value: 'Wandmodel' }
-      ]
-    },
-    {
-      name: 'Clivia Design',
-      slug: 'clivia',
-      description: 'De Tosot Clivia is verkrijgbaar in stijlvol wit of zwart design. Perfect voor wie waarde hecht aan zowel prestaties als uitstraling.',
-      imageUrl: '/images/products/tosot/clivia/main.jpg',
-      images: [
-        {
-          url: '/images/products/tosot/clivia/front-white.jpg',
-          alt: 'Tosot Clivia - Vooraanzicht wit'
-        },
-        {
-          url: '/images/products/tosot/clivia/front-black.jpg',
-          alt: 'Tosot Clivia - Vooraanzicht zwart'
-        },
-        {
-          url: '/images/products/tosot/clivia/side.jpg',
-          alt: 'Tosot Clivia - Zijaanzicht'
-        },
-        {
-          url: '/images/products/tosot/clivia/installed.jpg',
-          alt: 'Tosot Clivia - Geïnstalleerd'
-        }
-      ],
-      price: '€690,-',
-      energyLabel: 'A++',
-      capacity: '2,5 kW - 7,1 kW',
-      features: [
-        'Verkrijgbaar in wit of zwart design',
-        'G-Tech Inverter technologie',
-        'Premium uitstraling',
-        'Energiezuinige werking',
-        'Uitgebreide functies',
-        'Stil in gebruik'
-      ],
-      specifications: [
-        { label: 'Beschikbare capaciteiten', value: '2,5 kW, 3,5 kW, 5,3 kW, 7,1 kW' },
-        { label: 'Koudemiddel', value: 'R32' },
-        { label: 'Energielabel', value: 'A++' },
-        { label: 'Type', value: 'Wandmodel' },
-        { label: 'Kleuren', value: 'Wit of zwart' }
+        { label: 'Wifi', value: 'Optioneel' }
       ]
     },
     {
       name: 'Console',
       slug: 'console',
-      description: 'Het Tosot Console model is ideaal voor montage op of nabij de vloer. Standaard voorzien van wifi-besturing voor optimaal gebruiksgemak.',
-      imageUrl: '/images/products/tosot/console/main.jpg',
+      description: 'De Toshiba Console is een veelzijdig vloermodel met dubbele luchtuitblaas. Ideaal voor montage onder het raam of op zolder.',
+      imageUrl: '/images/products/toshiba/console/main.jpg',
       images: [
         {
-          url: '/images/products/tosot/console/front.jpg',
-          alt: 'Tosot Console - Vooraanzicht'
+          url: '/images/products/toshiba/console/front.jpg',
+          alt: 'Toshiba Console - Vooraanzicht'
         },
         {
-          url: '/images/products/tosot/console/side.jpg',
-          alt: 'Tosot Console - Zijaanzicht'
+          url: '/images/products/toshiba/console/side.jpg',
+          alt: 'Toshiba Console - Zijaanzicht'
         },
         {
-          url: '/images/products/tosot/console/installed.jpg',
-          alt: 'Tosot Console - Geïnstalleerd'
+          url: '/images/products/toshiba/console/installed.jpg',
+          alt: 'Toshiba Console - Geïnstalleerd'
         }
       ],
-      price: '€1.048,-',
+      price: '€1.499,-',
       energyLabel: 'A++',
-      capacity: '3,5 kW - 5,2 kW',
+      capacity: '2,5 kW - 5,0 kW',
       features: [
-        'Standaard wifi-besturing',
-        'Flexibele plaatsing',
-        'G-Tech Inverter technologie',
         'Dubbele luchtuitblaas',
-        'Smart Control via app',
-        'Energiezuinige werking'
+        'Vloerverwarming effect',
+        'Wifi-module (optioneel)',
+        'Ultra Pure filter',
+        'Magic Coil coating',
+        'Quiet modus',
+        'Compact design'
       ],
       specifications: [
-        { label: 'Beschikbare capaciteiten', value: '3,5 kW, 5,2 kW' },
+        { label: 'Beschikbare capaciteiten', value: '2,5 kW, 3,5 kW, 5,0 kW' },
+        { label: 'SEER', value: '7,00' },
+        { label: 'SCOP', value: '4,60' },
+        { label: 'Geluidsniveau binnen', value: '23 dB(A)' },
         { label: 'Koudemiddel', value: 'R32' },
-        { label: 'Energielabel', value: 'A++' },
-        { label: 'Type', value: 'Vloermodel' },
-        { label: 'Wifi', value: 'Standaard ingebouwd' }
+        { label: 'Afmetingen (HxBxD)', value: '600 x 700 x 220 mm' }
+      ]
+    },
+    {
+      name: 'Daiseikai 10',
+      slug: 'daiseikai-10',
+      description: 'De Toshiba Daiseikai 10 is een high-end airconditioner met uitzonderlijke energie-efficiëntie en uniek design, verkrijgbaar in hout of wit.',
+      imageUrl: '/images/products/toshiba/daiseikai-10/main.jpg',
+      images: [
+        {
+          url: '/images/products/toshiba/daiseikai-10/front-white.jpg',
+          alt: 'Toshiba Daiseikai 10 - Vooraanzicht wit'
+        },
+        {
+          url: '/images/products/toshiba/daiseikai-10/front-wood.jpg',
+          alt: 'Toshiba Daiseikai 10 - Vooraanzicht hout'
+        },
+        {
+          url: '/images/products/toshiba/daiseikai-10/side.jpg',
+          alt: 'Toshiba Daiseikai 10 - Zijaanzicht'
+        },
+        {
+          url: '/images/products/toshiba/daiseikai-10/installed.jpg',
+          alt: 'Toshiba Daiseikai 10 - Geïnstalleerd'
+        }
+      ],
+      price: '€4.412,-',
+      energyLabel: 'A+++',
+      capacity: '2,5 kW - 5,0 kW',
+      features: [
+        'PEFC gecertificeerd houten design (optioneel)',
+        'Smart Sensing technologie',
+        'Smart Defrost systeem',
+        'Plasma Ionizer',
+        'Ultra Pure filters',
+        'HaDa-care voor indirecte luchtstroom',
+        'Raisin coil coating',
+        '43% gerecycled materiaal'
+      ],
+      specifications: [
+        { label: 'Beschikbare capaciteiten', value: '2,5 kW, 3,5 kW, 5,0 kW' },
+        { label: 'SEER', value: '10,7' },
+        { label: 'SCOP', value: '5,3' },
+        { label: 'Energielabel', value: 'A+++' },
+        { label: 'Koudemiddel', value: 'R32' },
+        { label: 'Uitvoeringen', value: 'Wit of houten design' },
+        { label: 'Smart Home', value: 'Compatible met Alexa en Google Assistant' },
+        { label: 'Fijnstof filtering', value: '94% PM2.5 absorptie' }
       ]
     }
   ]
