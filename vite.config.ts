@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
+import fs from 'fs';
 
 export default defineConfig({
   plugins: [
@@ -34,7 +35,14 @@ export default defineConfig({
           }
         ]
       }
-    })
+    }),
+    {
+      name: 'copy-sitemap',
+      closeBundle() {
+        // Copy sitemap.xml from public to dist during build
+        fs.copyFileSync('public/sitemap.xml', 'dist/sitemap.xml');
+      }
+    }
   ],
   build: {
     sourcemap: true,
