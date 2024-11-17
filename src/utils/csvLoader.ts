@@ -1,5 +1,4 @@
 import Papa from 'papaparse';
-import type { RegionStats } from '../components/RegionStats';
 
 export interface City {
   city: string;
@@ -34,19 +33,19 @@ export async function loadCitiesFromCSV(): Promise<City[]> {
   }
 }
 
-export const calculateRegionStats = (cities: City[]): RegionStats => {
-  const stats: RegionStats = {
-    'Noord-Limburg': { gemeenten: 0, inwoners: 0 },
-    'Midden-Limburg': { gemeenten: 0, inwoners: 0 },
-    'Zuid-Limburg': { gemeenten: 0, inwoners: 0 }
+export function calculateRegionStats(cities: City[]) {
+  const stats = {
+    'Noord-Limburg': { count: 0, totalPopulation: 0 },
+    'Midden-Limburg': { count: 0, totalPopulation: 0 },
+    'Zuid-Limburg': { count: 0, totalPopulation: 0 }
   };
 
   cities.forEach(city => {
-    if (stats[city.region as keyof RegionStats]) {
-      stats[city.region as keyof RegionStats].gemeenten += 1;
-      stats[city.region as keyof RegionStats].inwoners += city.population;
+    if (stats[city.region as keyof typeof stats]) {
+      stats[city.region as keyof typeof stats].count++;
+      stats[city.region as keyof typeof stats].totalPopulation += city.population;
     }
   });
 
   return stats;
-};
+}

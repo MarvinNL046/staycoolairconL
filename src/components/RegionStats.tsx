@@ -1,14 +1,19 @@
-import React from 'react';
-import { m } from 'framer-motion';
+import { motion as m } from 'framer-motion';
 import { MapPin } from 'lucide-react';
 
+interface RegionStatsData {
+  gemeenten: number;
+  inwoners: number;
+}
+
+export interface RegionStats {
+  'Noord-Limburg': RegionStatsData;
+  'Midden-Limburg': RegionStatsData;
+  'Zuid-Limburg': RegionStatsData;
+}
+
 interface RegionStatsProps {
-  stats: {
-    [key: string]: {
-      gemeenten: number;
-      inwoners: number;
-    };
-  };
+  stats: RegionStats;
 }
 
 export default function RegionStats({ stats }: RegionStatsProps) {

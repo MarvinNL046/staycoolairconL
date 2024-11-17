@@ -1,116 +1,99 @@
-import React, { useState, useEffect } from 'react';
-import { m } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
-import { Calendar } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import RegionStats from '../components/RegionStats';
-import RegionFilter from '../components/RegionFilter';
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import { City, loadCitiesFromCSV, calculateRegionStats } from '../utils/cityService';
 import CityCard from '../components/CityCard';
-import { loadCities, calculateRegionStats, type City } from '../utils/cityService';
+import RegionStats from '../components/RegionStats';
 
 export default function ServiceArea() {
-  const [activeRegion, setActiveRegion] = useState('Alle regio\'s');
   const [cities, setCities] = useState<City[]>([]);
-  const [stats, setStats] = useState({
-    'Noord-Limburg': { gemeenten: 0, inwoners: 0 },
-    'Midden-Limburg': { gemeenten: 0, inwoners: 0 },
-    'Zuid-Limburg': { gemeenten: 0, inwoners: 0 }
-  });
-
-  const regions = ['Alle regio\'s', 'Noord-Limburg', 'Midden-Limburg', 'Zuid-Limburg'];
+  const [selectedRegion, setSelectedRegion] = useState<string>('all');
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const initializeCities = async () => {
-      const loadedCities = await loadCities();
-      setCities(loadedCities);
-      setStats(calculateRegionStats(loadedCities));
-    };
+    async function fetchCities() {
+      try {
+        const citiesData = await loadCitiesFromCSV();
+        setCities(citiesData);
+        setLoading(false);
+      } catch (err) {
+        setError('Error loading cities data');
+        setLoading(false);
+      }
+    }
 
-    initializeCities();
+    fetchCities();
   }, []);
 
-  const filteredCities = activeRegion === 'Alle regio\'s' 
+  const filteredCities = selectedRegion === 'all' 
     ? cities 
-    : cities.filter(city => city.region === activeRegion);
+    : cities.filter(city => city.region === selectedRegion);
+
+  const stats = calculateRegionStats(cities);
+
+  if (loading) return (
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+    </div>
+  );
+
+  if (error) return (
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="text-red-600 text-center">
+        <p className="text-xl font-semibold mb-2">Error</p>
+        <p>{error}</p>
+      </div>
+    </div>
+  );
 
   return (
-    <>
-      <Helmet>
-        <title>Werkgebied | StayCool Airco</title>
-        <meta 
-          name="description" 
-          content="Bekijk ons werkgebied in Limburg. Wij installeren en onderhouden airconditioning in heel Limburg, inclusief Heerlen, Weert, Roermond en Maastricht."
-        />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="container mx-auto px-4 py-8"
+    >
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-4xl font-bold mb-4">Werkgebied</h1>
+        <p className="text-gray-600 mb-8">
+          StayCool Airco is actief in heel Limburg. Bekijk hieronder alle steden en gemeenten waar wij onze diensten aanbieden.
+        </p>
+        
+        {/* Region Filter */}
+        <div className="mb-8">
+          <label htmlFor="region" className="block text-sm font-medium mb-2">
+            Filter op regio:
+          </label>
+          <select
+            id="region"
+            value={selectedRegion}
+            onChange={(e) => setSelectedRegion(e.target.value)}
+            className="w-full md:w-64 p-2 border rounded shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           >
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Airco Installatie Limburg
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              StayCool Airco is uw specialist voor airco installatie en onderhoud in heel Limburg. 
-              Erkend F-gassen installateur in Heerlen, Weert, Roermond, Eygelshoven, Maastricht en omgeving.
-            </p>
-          </m.div>
+            <option value="all">Alle regio's</option>
+            <option value="Noord-Limburg">Noord-Limburg</option>
+            <option value="Midden-Limburg">Midden-Limburg</option>
+            <option value="Zuid-Limburg">Zuid-Limburg</option>
+          </select>
+        </div>
 
-          <RegionStats stats={stats} />
-          
-          <RegionFilter 
-            regions={regions}
-            activeRegion={activeRegion}
-            onRegionChange={setActiveRegion}
-          />
+        {/* Region Statistics */}
+        <RegionStats stats={stats} />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredCities.map((city, index) => (
-              <CityCard key={city.city} city={city} index={index} />
-            ))}
-          </div>
-
-          <m.div 
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="mt-16 bg-blue-50 rounded-2xl p-8 text-center"
-          >
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">
-              Woont u in Limburg?
-            </h2>
-            <p className="text-blue-700 mb-8">
-              Plan direct online een afspraak in of vraag een vrijblijvende offerte aan
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a
-                href="https://afspraken.staycoolairco.nl"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-              >
-                <Calendar className="h-5 w-5 mr-2" />
-                Direct inplannen
-              </a>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50"
-              >
-                Offerte aanvragen
-              </Link>
-              <a
-                href="tel:0462021430"
-                className="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50"
-              >
-                Bel direct: 046 202 1430
-              </a>
-            </div>
-          </m.div>
+        {/* Cities Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredCities.map((city, index) => (
+            <motion.div
+              key={`${city.city}-${city.postal_codes}`}
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: index * 0.05 }}
+            >
+              <CityCard city={city} />
+            </motion.div>
+          ))}
         </div>
       </div>
-    </>
+    </motion.div>
   );
 }
