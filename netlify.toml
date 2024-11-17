@@ -22,10 +22,12 @@
       img-src 'self' data: https: blob:; 
       font-src 'self' data: https://fonts.gstatic.com; 
       connect-src 'self' https:; 
-      frame-src 'self' https://www.google.com https://www.googletagmanager.com https://www.youtube.com; 
+      frame-src 'self' https://www.google.com https://www.googletagmanager.com; 
       object-src 'none';
       worker-src 'self' blob:;
       manifest-src 'self';
+      require-trusted-types-for 'script';
+      trusted-types 'allow-duplicates';
     """
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
