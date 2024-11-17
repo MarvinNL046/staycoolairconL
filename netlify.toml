@@ -4,14 +4,8 @@
   
 [[redirects]]
   from = "/*"
-  to = "https://sweet-blini-854aa7.netlify.app/"
+  to = "https://sweet-blini-854aa7.netlify.app"
   status = 302
-  force = true
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
   force = true
 
 [[headers]]
