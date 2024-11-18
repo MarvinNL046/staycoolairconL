@@ -6,6 +6,7 @@ import Logo from './Logo';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
@@ -13,6 +14,11 @@ export default function Navbar() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setIsScrolled(scrollPosition > 50);
+      
+      // Calculate scroll progress (0 to 1)
+      const maxScroll = 200; // Maximum scroll for full opacity
+      const progress = Math.min(scrollPosition / maxScroll, 1);
+      setScrollProgress(progress);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -27,7 +33,9 @@ export default function Navbar() {
     if (!isScrolled && isHomePage) {
       return 'bg-transparent';
     }
-    return 'bg-white/95 backdrop-blur-md shadow-lg';
+    // Dynamic background opacity based on scroll progress
+    const opacity = Math.floor(scrollProgress * 90); // Max opacity of 90%
+    return `bg-white/${opacity} backdrop-blur-sm shadow-lg`;
   };
 
   const getLinkColor = () => {
@@ -43,7 +51,7 @@ export default function Navbar() {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <Logo inverted={!isScrolled && isHomePage && !isOpen} className="h-10 w-auto" />
+              <Logo className="h-10 w-auto" />
             </Link>
           </div>
           

@@ -6,35 +6,35 @@ export default function Products() {
   const brands = [
     {
       name: 'Daikin',
-      logo: 'https://images.unsplash.com/photo-1635048424329-a9bfb146d7aa?auto=format&fit=crop&q=80&w=200&h=100',
+      logo: '/images/products/daikin-stylish-silver.webp',
       description: 'Japanse kwaliteit en innovatie, bekend om hun betrouwbaarheid en energiezuinigheid.',
       features: ['Zeer energiezuinig', 'Stil in gebruik', 'Smart Home integratie'],
       popular: ['Perfera', 'Stylish', 'Emura']
     },
     {
       name: 'LG',
-      logo: 'https://images.unsplash.com/photo-1635048424329-a9bfb146d7aa?auto=format&fit=crop&q=80&w=200&h=100',
+      logo: '/images/products/lg-artcool-mirror.webp',
       description: 'Vooruitstrevende technologie met focus op design en gebruiksgemak.',
       features: ['ThinQ technologie', 'Dual Inverter', 'Ingebouwde wifi'],
-      popular: ['Artcool', 'Standard Plus', 'Deluxe']
+      popular: ['Artcool', 'Standard Plus', 'Premium']
     },
     {
       name: 'Toshiba',
-      logo: 'https://images.unsplash.com/photo-1635048424329-a9bfb146d7aa?auto=format&fit=crop&q=80&w=200&h=100',
+      logo: '/images/products/daikin-stylish-silver.webp',
       description: 'Betrouwbare Japanse techniek met uitstekende prijs-kwaliteitverhouding.',
       features: ['Hi-Power modus', 'Self-cleaning', 'Compact design'],
       popular: ['Shorai Edge', 'Seiya', 'Daiseikai']
     },
     {
       name: 'Mitsubishi',
-      logo: 'https://images.unsplash.com/photo-1635048424329-a9bfb146d7aa?auto=format&fit=crop&q=80&w=200&h=100',
+      logo: '/images/products/daikin-stylish-wit.webp',
       description: 'Premium kwaliteit met geavanceerde filtratiesystemen.',
       features: ['3D i-See Sensor', 'Plasma Quad Filter', 'Hyper Heating'],
       popular: ['MSZ-LN', 'MSZ-AP', 'MSZ-EF']
     },
     {
       name: 'Tosot by Gree',
-      logo: 'https://images.unsplash.com/photo-1635048424329-a9bfb146d7aa?auto=format&fit=crop&q=80&w=200&h=100',
+      logo: '/images/products/rac-eu-lg-premium.webp',
       description: 'Moderne technologie voor optimaal comfort tegen een scherpe prijs.',
       features: ['G-Tech Inverter', 'I Feel functie', 'ECO modus'],
       popular: ['Amber', 'Liberty', 'U-Crown']

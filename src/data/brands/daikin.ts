@@ -15,19 +15,11 @@ export const daikinData: Brand = {
       name: 'Sensira FTXF-A/B',
       slug: 'sensira-ftxf',
       description: 'De Daikin Sensira biedt betrouwbare klimaatbeheersing voor een aantrekkelijke prijs. Deze wandunit combineert een modern design met efficiënte technologie.',
-      imageUrl: '/images/products/daikin/sensira/main.jpg',
+      imageUrl: '/images/products/daikin-sensira-wit.webp',
       images: [
         {
-          url: '/images/products/daikin/sensira/front.jpg',
-          alt: 'Daikin Sensira - Vooraanzicht'
-        },
-        {
-          url: '/images/products/daikin/sensira/side.jpg',
-          alt: 'Daikin Sensira - Zijaanzicht'
-        },
-        {
-          url: '/images/products/daikin/sensira/installed.jpg',
-          alt: 'Daikin Sensira - Geïnstalleerd'
+          url: '/images/products/daikin-sensira-wit.webp',
+          alt: 'Daikin Sensira - Wit'
         }
       ],
       price: '€1.599,-',
@@ -52,64 +44,14 @@ export const daikinData: Brand = {
       ]
     },
     {
-      name: 'Comfora FTXP-M9',
-      slug: 'comfora-ftxp-m9',
-      description: 'De Daikin Comfora biedt een efficiënte en comfortabele klimaatoplossing met standaard ingebouwde wifi-besturing. Perfect voor wie op zoek is naar een betrouwbare allrounder.',
-      imageUrl: '/images/products/daikin/comfora/main.jpg',
-      images: [
-        {
-          url: '/images/products/daikin/comfora/front.jpg',
-          alt: 'Daikin Comfora - Vooraanzicht'
-        },
-        {
-          url: '/images/products/daikin/comfora/side.jpg',
-          alt: 'Daikin Comfora - Zijaanzicht'
-        },
-        {
-          url: '/images/products/daikin/comfora/installed.jpg',
-          alt: 'Daikin Comfora - Geïnstalleerd'
-        }
-      ],
-      price: '€1.199,-',
-      energyLabel: 'A++',
-      capacity: '2,0 kW - 7,1 kW',
-      features: [
-        'Standaard ingebouwde WLAN-adapter',
-        'Fluisterstille werking vanaf 20 dBA',
-        'Zilverfilter voor allergeenbestrijding',
-        '3D-luchtstroom voor optimale verdeling',
-        'Ontvochtigingsfunctie',
-        'Energiebesparende standby-modus',
-        'Weekklok'
-      ],
-      specifications: [
-        { label: 'Koelcapaciteit', value: '2,0 - 7,1 kW' },
-        { label: 'Verwarmingscapaciteit', value: '2,5 - 8,2 kW' },
-        { label: 'SEER', value: '6,62' },
-        { label: 'SCOP', value: '4,64' },
-        { label: 'Geluidsniveau binnen', value: '20 dB(A)' },
-        { label: 'Afmetingen (HxBxD)', value: '286 x 770 x 225 mm' },
-        { label: 'Gewicht', value: '9 kg' },
-        { label: 'Koudemiddel', value: 'R-32' }
-      ]
-    },
-    {
       name: 'Perfera FTXM-R',
       slug: 'perfera-ftxm-r',
       description: 'De Daikin Perfera is een hoogwaardige wandunit die zorgt voor optimaal comfort in uw woning. Met geavanceerde technologieën zoals de Flash Streamer en 3D luchtstroom biedt deze unit een perfecte balans tussen prestaties en comfort.',
-      imageUrl: '/images/products/daikin/perfera/main.jpg',
+      imageUrl: '/images/products/daikin-perfera-wit.webp',
       images: [
         {
-          url: '/images/products/daikin/perfera/front.jpg',
-          alt: 'Daikin Perfera - Vooraanzicht'
-        },
-        {
-          url: '/images/products/daikin/perfera/side.jpg',
-          alt: 'Daikin Perfera - Zijaanzicht'
-        },
-        {
-          url: '/images/products/daikin/perfera/installed.jpg',
-          alt: 'Daikin Perfera - Geïnstalleerd'
+          url: '/images/products/daikin-perfera-wit.webp',
+          alt: 'Daikin Perfera - Wit'
         }
       ],
       price: '€1.299,-',
@@ -137,19 +79,19 @@ export const daikinData: Brand = {
       name: 'Stylish FTXA-AW/BS/BB/BT',
       slug: 'stylish',
       description: 'De Daikin Stylish combineert een uniek design met innovatieve technologie. Het Coanda-effect zorgt voor een optimale verdeling van verwarmde en gekoelde lucht.',
-      imageUrl: '/images/products/daikin/stylish/main.jpg',
+      imageUrl: '/images/products/daikin-stylish-wit.webp',
       images: [
         {
-          url: '/images/products/daikin/stylish/front.jpg',
-          alt: 'Daikin Stylish - Vooraanzicht'
+          url: '/images/products/daikin-stylish-wit.webp',
+          alt: 'Daikin Stylish - Wit'
         },
         {
-          url: '/images/products/daikin/stylish/side.jpg',
-          alt: 'Daikin Stylish - Zijaanzicht'
+          url: '/images/products/daikin-stylish-silver.webp',
+          alt: 'Daikin Stylish - Zilver'
         },
         {
-          url: '/images/products/daikin/stylish/installed.jpg',
-          alt: 'Daikin Stylish - Geïnstalleerd'
+          url: '/images/products/daikin-stylish-zwart.webp',
+          alt: 'Daikin Stylish - Zwart'
         }
       ],
       price: '€1.499,-',
@@ -177,19 +119,19 @@ export const daikinData: Brand = {
       name: 'Emura FTXJ-AW/BS/BB',
       slug: 'emura',
       description: 'De Daikin Emura is een premium wandmodel dat bekroond design combineert met geavanceerde technologie voor optimaal comfort.',
-      imageUrl: '/images/products/daikin/emura/main.jpg',
+      imageUrl: '/images/products/daikin-emura-wit.webp',
       images: [
         {
-          url: '/images/products/daikin/emura/front.jpg',
-          alt: 'Daikin Emura - Vooraanzicht'
+          url: '/images/products/daikin-emura-wit.webp',
+          alt: 'Daikin Emura - Wit'
         },
         {
-          url: '/images/products/daikin/emura/side.jpg',
-          alt: 'Daikin Emura - Zijaanzicht'
+          url: '/images/products/daikin-emura-zilver.webp',
+          alt: 'Daikin Emura - Zilver'
         },
         {
-          url: '/images/products/daikin/emura/installed.jpg',
-          alt: 'Daikin Emura - Geïnstalleerd'
+          url: '/images/products/daikin-emura-zwart.webp',
+          alt: 'Daikin Emura - Zwart'
         }
       ],
       price: '€1.699,-',
@@ -210,89 +152,6 @@ export const daikinData: Brand = {
         { label: 'SEER', value: 'tot 8.73' },
         { label: 'SCOP', value: 'tot 5.12' },
         { label: 'Geluidsniveau binnen', value: '19 dB(A)' },
-        { label: 'Koudemiddel', value: 'R-32' }
-      ]
-    },
-    {
-      name: 'Ururu Sarara FTXZ-N',
-      slug: 'ururu-sarara',
-      description: 'De Daikin Ururu Sarara is de meest geavanceerde residentiële airconditioner met unieke bevochtigings- en ontvochtigingsfuncties voor het ultieme comfort.',
-      imageUrl: '/images/products/daikin/ururu-sarara/main.jpg',
-      images: [
-        {
-          url: '/images/products/daikin/ururu-sarara/front.jpg',
-          alt: 'Daikin Ururu Sarara - Vooraanzicht'
-        },
-        {
-          url: '/images/products/daikin/ururu-sarara/side.jpg',
-          alt: 'Daikin Ururu Sarara - Zijaanzicht'
-        },
-        {
-          url: '/images/products/daikin/ururu-sarara/installed.jpg',
-          alt: 'Daikin Ururu Sarara - Geïnstalleerd'
-        }
-      ],
-      price: '€2.499,-',
-      energyLabel: 'A+++',
-      capacity: '2,5 kW - 5,0 kW',
-      features: [
-        'Ururu bevochtiging',
-        'Sarara ontvochtiging',
-        'Ventilatie met verse lucht',
-        'Flash Streamer luchtzuivering',
-        '3-zone bewegingssensor',
-        'Auto-reiniging',
-        'Ingebouwde wifi-adapter'
-      ],
-      specifications: [
-        { label: 'Koelcapaciteit', value: '2,5 - 5,0 kW' },
-        { label: 'Verwarmingscapaciteit', value: '3,6 - 6,3 kW' },
-        { label: 'SEER', value: 'tot 9.54' },
-        { label: 'SCOP', value: 'tot 5.90' },
-        { label: 'Geluidsniveau binnen', value: '19 dB(A)' },
-        { label: 'Bevochtigingscapaciteit', value: 'tot 500 ml/h' },
-        { label: 'Koudemiddel', value: 'R-32' }
-      ]
-    },
-    {
-      name: 'Console FVXM-F',
-      slug: 'console',
-      description: 'De Daikin Console unit is een veelzijdig vloermodel dat zowel op als vlak boven de grond geplaatst kan worden. Perfect voor onder een raam of op zolder.',
-      imageUrl: '/images/products/daikin/console/main.jpg',
-      images: [
-        {
-          url: '/images/products/daikin/console/front.jpg',
-          alt: 'Daikin Console - Vooraanzicht'
-        },
-        {
-          url: '/images/products/daikin/console/side.jpg',
-          alt: 'Daikin Console - Zijaanzicht'
-        },
-        {
-          url: '/images/products/daikin/console/installed.jpg',
-          alt: 'Daikin Console - Geïnstalleerd'
-        }
-      ],
-      price: '€1.399,-',
-      energyLabel: 'A++',
-      capacity: '2,5 kW - 5,0 kW',
-      features: [
-        'Flexibele plaatsing',
-        'Dubbele luchtstroom voor betere warmteverdeling',
-        'Fluisterstille werking vanaf 23 dBA',
-        'Ingebouwde wifi-adapter (optioneel)',
-        'Heat boost functie voor snelle opwarming',
-        'Weekklok',
-        'Auto-reiniging'
-      ],
-      specifications: [
-        { label: 'Koelcapaciteit', value: '2,5 - 5,0 kW' },
-        { label: 'Verwarmingscapaciteit', value: '3,4 - 5,8 kW' },
-        { label: 'SEER', value: 'tot 7.20' },
-        { label: 'SCOP', value: 'tot 4.56' },
-        { label: 'Geluidsniveau binnen', value: '23 dB(A)' },
-        { label: 'Afmetingen (HxBxD)', value: '600 x 750 x 238 mm' },
-        { label: 'Gewicht', value: '15 kg' },
         { label: 'Koudemiddel', value: 'R-32' }
       ]
     }
