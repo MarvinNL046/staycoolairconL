@@ -16,7 +16,7 @@ export default function Home() {
         />
         <meta 
           name="keywords" 
-          content="airco installateur limburg, airco specialist limburg, airco plaatsen limburg, airconditioning limburg, airco installatie limburg, airco kopen limburg, airco onderhoud limburg, airco service limburg, airco monteur limburg, airco prijzen limburg, airco offertes limburg, airco advies limburg, professionele airco installatie, gecertificeerde airco installateur, energiezuinige airco's, daikin dealer limburg, mitsubishi electric dealer limburg, split airco systemen, multisplit airco's, binnenklimaat verbeteren"
+          content="airco installateur limburg, airco specialist limburg, airco plaatsen limburg, airconditioning limburg, airco installatie limburg"
         />
         <link rel="canonical" href="https://staycoolairco.nl" />
       </Helmet>

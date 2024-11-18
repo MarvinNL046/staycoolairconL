@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
-import fs from 'fs';
 
 export default defineConfig({
   plugins: [
@@ -35,44 +34,10 @@ export default defineConfig({
           }
         ]
       }
-    }),
-    {
-      name: 'copy-sitemap',
-      closeBundle() {
-        // Copy sitemap.xml from public to dist during build
-        fs.copyFileSync('public/sitemap.xml', 'dist/sitemap.xml');
-      }
-    }
+    })
   ],
-  build: {
-    sourcemap: true,
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-        entryFileNames: 'assets/[name]-[hash].js',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]'
-      }
-    },
-    target: 'es2015',
-    minify: 'esbuild',
-    cssCodeSplit: true,
-    assetsInlineLimit: 4096,
-    reportCompressedSize: true,
-    chunkSizeWarningLimit: 1000
-  },
   server: {
-    headers: {
-      'Cache-Control': 'no-cache',
-      'Content-Type': 'text/javascript'
-    }
-  },
-  preview: {
-    port: 4173,
-    strictPort: true,
-    headers: {
-      'Cache-Control': 'no-cache',
-      'Content-Type': 'text/javascript'
-    }
+    port: 5173,
+    strictPort: true
   }
 });

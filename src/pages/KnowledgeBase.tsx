@@ -14,12 +14,12 @@ export default function KnowledgeBase() {
         {
           title: 'Hoe werkt een airco?',
           description: 'Leer de basisprincipes van airconditioning en klimaatbeheersing.',
-          slug: 'hoe-werkt-airco'
+          slug: 'how-airco-works'
         },
         {
           title: 'Verschillende soorten aircosystemen',
           description: 'Ontdek welk type airconditioning het beste bij uw situatie past.',
-          slug: 'soorten-airco'
+          slug: 'airco-types'
         },
         {
           title: 'Split-unit vs. Mono-block',
@@ -29,7 +29,7 @@ export default function KnowledgeBase() {
         {
           title: 'SCOP en SEER Waarden Uitgelegd',
           description: 'Begrijp de efficiëntie-indicatoren van airconditioners.',
-          slug: 'scop-seer-uitleg'
+          slug: 'scop-seer'
         },
         {
           title: 'Het Coanda Effect',
@@ -46,17 +46,17 @@ export default function KnowledgeBase() {
         {
           title: 'Verwarmen met airco',
           description: 'Bespaar op verwarmingskosten door slim gebruik van uw airco.',
-          slug: 'verwarmen-met-airco'
+          slug: 'heating-with-airco'
         },
         {
           title: 'Terugleverkosten voorkomen',
           description: 'Optimaal gebruik van zonnepanelen in combinatie met airco.',
-          slug: 'terugleverkosten'
+          slug: 'prevent-feed-in'
         },
         {
           title: 'Energielabels en verbruik',
           description: 'Alles over energielabels en het verbruik van aircosystemen.',
-          slug: 'energielabels'
+          slug: 'energy-labels'
         }
       ]
     },
@@ -68,17 +68,17 @@ export default function KnowledgeBase() {
         {
           title: 'Onderhoudstips',
           description: 'Praktische tips voor het onderhouden van uw airconditioning.',
-          slug: 'onderhoudstips'
+          slug: 'maintenance-tips'
         },
         {
           title: 'Veel voorkomende problemen',
           description: 'Oplossingen voor veelvoorkomende airconditioningproblemen.',
-          slug: 'problemen'
+          slug: 'common-problems'
         },
         {
           title: 'Wanneer onderhoud nodig?',
           description: 'Richtlijnen voor regelmatig onderhoud van uw systeem.',
-          slug: 'onderhoud-planning'
+          slug: 'maintenance-schedule'
         }
       ]
     },
@@ -90,12 +90,12 @@ export default function KnowledgeBase() {
         {
           title: 'Koudemiddelen en milieu',
           description: 'Impact van verschillende koudemiddelen op het milieu.',
-          slug: 'koudemiddelen'
+          slug: 'refrigerants'
         },
         {
           title: 'CO2-reductie',
           description: 'Hoe airconditioning kan bijdragen aan CO2-reductie.',
-          slug: 'co2-reductie'
+          slug: 'co2-reduction'
         }
       ]
     }

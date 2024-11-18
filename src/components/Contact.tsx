@@ -1,19 +1,28 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, MessageSquare, Calendar } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
 import { sendEmail } from '../utils/email';
-import { trackEvent, trackConversion } from '../utils/analytics';
-import { trackFormSubmission } from '../utils/gtm';
+import { trackEvent } from '../utils/analytics';
 import toast, { Toaster } from 'react-hot-toast';
+
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  city: string;
+  message: string;
+}
+
+const initialFormState: FormData = {
+  name: '',
+  email: '',
+  phone: '',
+  city: '',
+  message: ''
+};
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    city: '',
-    message: ''
-  });
+  const [formData, setFormData] = useState<FormData>(initialFormState);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -23,37 +32,31 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    if (isSubmitting) return;
+
     setIsSubmitting(true);
 
     try {
       await sendEmail(formData);
 
-      // Track form submission in GA4
+      // Track successful form submission
       trackEvent('form_submission', {
         form_name: 'contact_form',
         form_type: 'contact'
       });
 
-      // Track conversion in Google Ads
-      trackConversion('CONTACT_FORM_SUBMIT', 'contact_submit');
-
-      // Track in GTM
-      trackFormSubmission('contact_form', formData);
-
       toast.success('Bericht succesvol verzonden! We nemen zo spoedig mogelijk contact met u op.');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        city: '',
-        message: ''
-      });
+      
+      // Reset form
+      setFormData(initialFormState);
     } catch (error) {
+      console.error('Form submission error:', error);
       toast.error('Er is iets misgegaan. Probeer het later opnieuw of neem telefonisch contact op.');
       
-      // Track error in GA4
+      // Track error
       trackEvent('form_error', {
         form_name: 'contact_form',
         error_type: 'submission_failed'
@@ -97,15 +100,6 @@ export default function Contact() {
                   <MapPin className="h-6 w-6 mr-3" />
                   <span>Werkgebied: Limburg, Nederland</span>
                 </div>
-                <a 
-                  href="https://afspraken.staycoolairco.nl"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  <Calendar className="h-5 w-5 mr-2" />
-                  Direct online inplannen
-                </a>
               </div>
             </div>
           </div>
@@ -124,7 +118,8 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                    disabled={isSubmitting}
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50"
                   />
                 </div>
                 <div>
@@ -138,7 +133,8 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                    disabled={isSubmitting}
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50"
                   />
                 </div>
                 <div>
@@ -152,7 +148,8 @@ export default function Contact() {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                    disabled={isSubmitting}
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50"
                   />
                 </div>
                 <div>
@@ -166,7 +163,8 @@ export default function Contact() {
                     required
                     value={formData.city}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                    disabled={isSubmitting}
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50"
                   />
                 </div>
                 <div>
@@ -180,15 +178,26 @@ export default function Contact() {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                    disabled={isSubmitting}
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50"
                   ></textarea>
                 </div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? 'Verzenden...' : 'Verstuur Bericht'}
+                  {isSubmitting ? (
+                    <>
+                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Verzenden...
+                    </>
+                  ) : (
+                    'Verstuur Bericht'
+                  )}
                 </button>
               </div>
             </form>
