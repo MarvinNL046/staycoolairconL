@@ -43,7 +43,7 @@ export default function Navbar() {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <Logo inverted={!isScrolled && isHomePage && !isOpen} />
+              <Logo inverted={!isScrolled && isHomePage && !isOpen} className="h-10 w-auto" />
             </Link>
           </div>
           

@@ -1,5 +1,4 @@
 import Papa from 'papaparse';
-import type { RegionStats } from '../components/RegionStats';
 
 export interface City {
   city: string;
@@ -32,6 +31,12 @@ export async function loadCitiesFromCSV(): Promise<City[]> {
     console.error('Error loading cities:', error);
     throw error;
   }
+}
+
+export interface RegionStats {
+  'Noord-Limburg': { gemeenten: number; inwoners: number };
+  'Midden-Limburg': { gemeenten: number; inwoners: number };
+  'Zuid-Limburg': { gemeenten: number; inwoners: number };
 }
 
 export const calculateRegionStats = (cities: City[]): RegionStats => {
