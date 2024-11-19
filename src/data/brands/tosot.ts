@@ -30,7 +30,7 @@ export const tosotData: Brand = {
           alt: 'Tosot Cosmo - Geïnstalleerd'
         }
       ],
-      price: '€522,-',
+      price: '€1395,-',
       energyLabel: 'A++',
       capacity: '2,5 kW - 6,1 kW',
       features: [
@@ -67,7 +67,7 @@ export const tosotData: Brand = {
           alt: 'Tosot Pular - Geïnstalleerd'
         }
       ],
-      price: '€564,-',
+      price: '€1495,-',
       energyLabel: 'A++',
       capacity: '2,2 kW - 6,1 kW',
       features: [
@@ -104,7 +104,7 @@ export const tosotData: Brand = {
           alt: 'Tosot Bora - Geïnstalleerd'
         }
       ],
-      price: '€598,-',
+      price: '€1395,-',
       energyLabel: 'A++',
       capacity: '3,2 kW - 6,1 kW',
       features: [
@@ -145,7 +145,7 @@ export const tosotData: Brand = {
           alt: 'Tosot Clivia - Geïnstalleerd'
         }
       ],
-      price: '€690,-',
+      price: '€1595,-',
       energyLabel: 'A++',
       capacity: '2,5 kW - 7,1 kW',
       features: [
@@ -183,7 +183,7 @@ export const tosotData: Brand = {
           alt: 'Tosot Console - Geïnstalleerd'
         }
       ],
-      price: '€1.048,-',
+      price: '€1.845,-',
       energyLabel: 'A++',
       capacity: '3,5 kW - 5,2 kW',
       features: [
