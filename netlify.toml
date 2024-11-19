@@ -49,6 +49,15 @@
 [build.environment]
   NODE_VERSION = "20"
   NPM_FLAGS = "--no-audit --no-fund"
+  NETLIFY_EMAILS_DIRECTORY = "./emails"
+  NETLIFY_EMAILS_SECRET = "329dbc21-c4af-437d-a937-865b28b3dcb0"
+  VITE_EMAILJS_BOOKING_TEMPLATE_ID = "your_booking_template_id"
+  VITE_EMAILJS_PUBLIC_KEY = "sjJ8kK6U9wFjY0zX9"
+  VITE_EMAILJS_SERVICE_ID = "service_1rruujp"
+  VITE_EMAILJS_TEMPLATE_ID = "template_3ovrl8t"
+  VITE_GA_TRACKING_ID = "G-8JJ3BRSW92"
+  VITE_GOOGLE_ADS_ID = "AW-10789737434"
+  VITE_GTM_ID = "GTM-K2B9M3S"
 
 [build.processing]
   skip_processing = false
