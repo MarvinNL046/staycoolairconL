@@ -3,7 +3,7 @@ import { Brand } from '../../types/products';
 export const lgData: Brand = {
   name: 'LG',
   description: 'Vooruitstrevende technologie met focus op design, gebruiksgemak en luchtkwaliteit.',
-  imageUrl: '/images/products/lg/brand.jpg',
+  imageUrl: '/images/products/LG-dualcool-indoor-premium.png',
   features: [
     'ThinQ Smart Diagnosis',
     'Dual Inverter Compressor',

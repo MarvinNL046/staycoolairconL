@@ -3,7 +3,7 @@ import { Brand } from '../../types/products';
 export const tosotData: Brand = {
   name: 'Tosot by Gree',
   description: 'Moderne technologie voor optimaal comfort tegen een scherpe prijs. Tosot is het premium merk van GREE, één van de grootste airco fabrikanten ter wereld.',
-  imageUrl: '/images/products/tosot/brand.jpg',
+  imageUrl: '/images/products/724-clivia-wit-binnen-vooraanzicht.webp',
   features: [
     'G-Tech Inverter technologie',
     'Wifi-ready modellen beschikbaar',

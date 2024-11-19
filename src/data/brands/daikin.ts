@@ -3,7 +3,7 @@ import { Brand } from '../../types/products';
 export const daikinData: Brand = {
   name: 'Daikin',
   description: 'Japanse kwaliteit en innovatie, bekend om hun betrouwbaarheid en energiezuinigheid.',
-  imageUrl: '/images/products/daikin/brand.jpg',
+  imageUrl: '/images/products/daikin-stylish-wit.webp',
   features: [
     'Zeer energiezuinig (tot A+++)',
     'Fluisterstille werking vanaf 19dB',

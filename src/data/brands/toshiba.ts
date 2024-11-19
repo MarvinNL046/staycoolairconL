@@ -3,7 +3,7 @@ import { Brand } from '../../types/products';
 export const toshibaData: Brand = {
   name: 'Toshiba',
   description: 'Premium Japanse technologie met focus op design, duurzaamheid en innovatie. Toshiba staat bekend om hun hoogwaardige airconditioners met unieke features.',
-  imageUrl: '/images/products/toshiba/brand.jpg',
+  imageUrl: '/images/products/Daiseikai 10-Hout-vooraanzicht_2_11zon.webp',
   features: [
     'Ultra Pure filtertechnologie',
     'Magic Coil coating',
