@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import AnnouncementBar from './components/AnnouncementBar';
 import CookieConsent from './components/CookieConsent';
 import ErrorFallback from './components/ErrorFallback';
+import BackToTop from './components/BackToTop';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import BrandDetail from './pages/BrandDetail';
@@ -71,6 +72,7 @@ export default function App() {
             </Routes>
           </AnimatePresence>
         </main>
+        <BackToTop />
         <AnnouncementBar />
         <Footer />
         <CookieConsent />
