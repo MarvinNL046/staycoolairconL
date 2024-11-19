@@ -15,19 +15,19 @@ export const tosotData: Brand = {
       name: 'Cosmo',
       slug: 'cosmo',
       description: 'De Tosot Cosmo biedt betrouwbare klimaatbeheersing voor een zeer aantrekkelijke prijs. Perfect voor wie op zoek is naar een goede basis airco.',
-      imageUrl: '/images/products/tosot/cosmo/main.jpg',
+      imageUrl: '/images/products/787-cosmo-indoor-vooraanzicht.webp',
       images: [
         {
-          url: '/images/products/tosot/cosmo/front.jpg',
+          url: '/images/products/787-cosmo-indoor-vooraanzicht.webp',
           alt: 'Tosot Cosmo - Vooraanzicht'
         },
         {
-          url: '/images/products/tosot/cosmo/side.jpg',
+          url: '/images/products/788-cosmo-indoor.webp',
           alt: 'Tosot Cosmo - Zijaanzicht'
         },
         {
-          url: '/images/products/tosot/cosmo/installed.jpg',
-          alt: 'Tosot Cosmo - Geïnstalleerd'
+          url: '/images/products/789-cosmo-indoor.webp',
+          alt: 'Tosot Cosmo - Andere kant'
         }
       ],
       price: '€1395,-',
@@ -52,19 +52,15 @@ export const tosotData: Brand = {
       name: 'Pular',
       slug: 'pular',
       description: 'De Tosot Pular combineert moderne technologie met ingebouwde wifi-besturing. Een slimme keuze voor wie op zoek is naar extra functionaliteit.',
-      imageUrl: '/images/products/tosot/pular/main.jpg',
+      imageUrl: '/images/products/568-Pular-indoor-vooraanzicht.webp',
       images: [
         {
-          url: '/images/products/tosot/pular/front.jpg',
+          url: '/images/products/568-Pular-indoor-vooraanzicht.webp',
           alt: 'Tosot Pular - Vooraanzicht'
         },
         {
-          url: '/images/products/tosot/pular/side.jpg',
-          alt: 'Tosot Pular - Zijaanzicht'
-        },
-        {
-          url: '/images/products/tosot/pular/installed.jpg',
-          alt: 'Tosot Pular - Geïnstalleerd'
+          url: '/images/products/570-Pular-indoor-right.webp',
+          alt: 'Tosot Pular - Rechts'
         }
       ],
       price: '€1495,-',
@@ -86,63 +82,34 @@ export const tosotData: Brand = {
       ]
     },
     {
-      name: 'Bora',
-      slug: 'bora',
-      description: 'De Tosot Bora biedt krachtige prestaties in een compact design. Ideaal voor wie zoekt naar een betrouwbare airco met goede basisfuncties.',
-      imageUrl: '/images/products/tosot/bora/main.jpg',
-      images: [
-        {
-          url: '/images/products/tosot/bora/front.jpg',
-          alt: 'Tosot Bora - Vooraanzicht'
-        },
-        {
-          url: '/images/products/tosot/bora/side.jpg',
-          alt: 'Tosot Bora - Zijaanzicht'
-        },
-        {
-          url: '/images/products/tosot/bora/installed.jpg',
-          alt: 'Tosot Bora - Geïnstalleerd'
-        }
-      ],
-      price: '€1395,-',
-      energyLabel: 'A++',
-      capacity: '3,2 kW - 6,1 kW',
-      features: [
-        'G-Tech Inverter technologie',
-        'Compact design',
-        'Energiezuinige werking',
-        'Auto-herstart',
-        'Timer functie',
-        'Eenvoudig onderhoud'
-      ],
-      specifications: [
-        { label: 'Beschikbare capaciteiten', value: '3,2 kW, 6,1 kW' },
-        { label: 'Koudemiddel', value: 'R32' },
-        { label: 'Energielabel', value: 'A++' },
-        { label: 'Type', value: 'Wandmodel' }
-      ]
-    },
-    {
       name: 'Clivia Design',
       slug: 'clivia',
       description: 'De Tosot Clivia is verkrijgbaar in stijlvol wit of zwart design. Perfect voor wie waarde hecht aan zowel prestaties als uitstraling.',
-      imageUrl: '/images/products/tosot/clivia/main.jpg',
+      imageUrl: '/images/products/724-clivia-wit-binnen-vooraanzicht.webp',
       images: [
         {
-          url: '/images/products/tosot/clivia/front-white.jpg',
+          url: '/images/products/724-clivia-wit-binnen-vooraanzicht.webp',
           alt: 'Tosot Clivia - Vooraanzicht wit'
         },
         {
-          url: '/images/products/tosot/clivia/front-black.jpg',
+          url: '/images/products/723-cliva-wit-binnen-schuin-boven.webp',
+          alt: 'Tosot Clivia - Schuin boven wit'
+        },
+        {
+          url: '/images/products/727-clivia-wit-binnen-left.webp',
+          alt: 'Tosot Clivia - Links wit'
+        },
+        {
+          url: '/images/products/712-clivia-black-indoor-vooraanzicht.webp',
           alt: 'Tosot Clivia - Vooraanzicht zwart'
         },
         {
-          url: '/images/products/tosot/clivia/side.jpg',
-          alt: 'Tosot Clivia - Zijaanzicht'
+          url: '/images/products/711-clivia-black-indoor-schuin-boven.webp',
+          alt: 'Tosot Clivia - Schuin boven zwart'
         },
         {
-          url: '/images/products/tosot/clivia/installed.jpg',
-          alt: 'Tosot Clivia - Geïnstalleerd'
+          url: '/images/products/710-clivia-black-indoor-links.webp',
+          alt: 'Tosot Clivia - Links zwart'
         }
       ],
       price: '€1595,-',
@@ -168,19 +135,15 @@ export const tosotData: Brand = {
       name: 'Console',
       slug: 'console',
       description: 'Het Tosot Console model is ideaal voor montage op of nabij de vloer. Standaard voorzien van wifi-besturing voor optimaal gebruiksgemak.',
-      imageUrl: '/images/products/tosot/console/main.jpg',
+      imageUrl: '/images/products/374-WTS-indoor-console-vloernmodel-tosot.webp',
       images: [
         {
-          url: '/images/products/tosot/console/front.jpg',
+          url: '/images/products/374-WTS-indoor-console-vloernmodel-tosot.webp',
           alt: 'Tosot Console - Vooraanzicht'
         },
         {
-          url: '/images/products/tosot/console/side.jpg',
-          alt: 'Tosot Console - Zijaanzicht'
-        },
-        {
-          url: '/images/products/tosot/console/installed.jpg',
-          alt: 'Tosot Console - Geïnstalleerd'
+          url: '/images/products/375-WTS-remote-console-tosot.webp',
+          alt: 'Tosot Console - Afstandsbediening'
         }
       ],
       price: '€1.845,-',
