@@ -52,7 +52,7 @@ export default function App() {
               <Route path="/kennisbank" element={<KnowledgeBase />} />
               <Route path="/voorwaarden" element={<Terms />} />
               <Route path="/privacy" element={<Privacy />} />
-              <Route path="/onderhoud-procedures" element={<MaintenanceProcedures />} />
+              <Route path="/onderhoud" element={<MaintenanceProcedures />} />
 
               {/* Knowledge Base Articles */}
               <Route path="/kennisbank/how-airco-works" element={<HowAircoWorks />} />

@@ -1,10 +1,49 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { Wrench, Calendar, ThermometerSun, Shield, AlertTriangle, Filter, Wind, Clock, ArrowLeft } from 'lucide-react';
+import { Wrench, Calendar, ThermometerSun, Shield, AlertTriangle, Filter, Wind, Clock, ArrowLeft, Check, Star, Crown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function MaintenanceProcedures() {
+  const maintenancePackages = [
+    {
+      icon: Check,
+      title: 'Basis Pakket',
+      price: '9,-',
+      features: [
+        'Jaarlijks onderhoud',
+        'Reiniging van binnen- en buitenunit',
+        'Controle koudemiddel en druk',
+        'Inspectie elektrische aansluitingen',
+        'Controle condensafvoer'
+      ]
+    },
+    {
+      icon: Star,
+      title: 'Premium Pakket',
+      price: '11,-',
+      features: [
+        'Alles uit het Basis Pakket',
+        'Voorrang bij storingen',
+        'Uitgebreide systeemcheck',
+        'Gratis filters vervangen',
+        'Telefonische support'
+      ]
+    },
+    {
+      icon: Crown,
+      title: 'All-Inclusive Pakket',
+      price: '15,-',
+      features: [
+        'Alles uit het Premium Pakket',
+        'Directe vervanging bij defecten',
+        'Geen onverwachte kosten',
+        '24/7 storingsdienst',
+        'Garantie op onderdelen'
+      ]
+    }
+  ];
+
   const procedures = [
     {
       title: 'Regulier Onderhoud',
@@ -47,27 +86,6 @@ export default function MaintenanceProcedures() {
         'Laptop voor firmware updates'
       ],
       duration: '2-3 uur'
-    },
-    {
-      title: 'Storingsonderhoud',
-      interval: 'Op afroep',
-      steps: [
-        'Diagnose storing',
-        'Uitlezen foutcodes',
-        'Controle elektrische componenten',
-        'Controle sensoren',
-        'Controle koudemiddelcircuit',
-        'Reparatie of vervanging defecte onderdelen',
-        'Systeemtest na reparatie'
-      ],
-      tools: [
-        'Diagnoseapparatuur',
-        'Multimeter',
-        'Manometerset',
-        'Reserveonderdelen',
-        'Gereedschapsset'
-      ],
-      duration: 'Afhankelijk van storing'
     }
   ];
 
@@ -83,12 +101,11 @@ export default function MaintenanceProcedures() {
   return (
     <>
       <Helmet>
-        <title>Onderhoudsprocedures | StayCool Airco</title>
+        <title>Onderhoudspakketten | StayCool Airco</title>
         <meta 
           name="description" 
-          content="Gedetailleerde onderhoudsprocedures voor airconditioning systemen. Voor technici en medewerkers van StayCool Airco."
+          content="Bekijk onze onderhoudspakketten voor uw airconditioning. Kies uit Basis, Premium of All-Inclusive voor optimale zorg voor uw systeem."
         />
-        <meta name="robots" content="noindex" /> {/* Niet indexeren door zoekmachines */}
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
@@ -105,7 +122,7 @@ export default function MaintenanceProcedures() {
                 <span className="text-gray-400">/</span>
               </li>
               <li>
-                <span className="text-gray-900">Onderhoudsprocedures</span>
+                <span className="text-gray-900">Onderhoudspakketten</span>
               </li>
             </ol>
           </nav>
@@ -118,13 +135,59 @@ export default function MaintenanceProcedures() {
             <div className="flex items-center gap-4 mb-6">
               <Wrench className="h-8 w-8 text-blue-600" />
               <h1 className="text-4xl font-bold text-gray-900">
-                Onderhoudsprocedures
+                Onderhoudspakketten
               </h1>
             </div>
             <p className="text-xl text-gray-600">
-              Gestandaardiseerde procedures voor onderhoud en service
+              Kies het onderhoudspakket dat het beste bij u past
             </p>
           </motion.div>
+
+          {/* Maintenance Packages */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {maintenancePackages.map((pkg, index) => (
+              <motion.div
+                key={pkg.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="p-6">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600 mb-4">
+                    <pkg.icon className="h-6 w-6" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                    {pkg.title}
+                  </h2>
+                  <div className="text-3xl font-bold text-blue-600 mb-6">
+                    €{pkg.price}
+                    <span className="text-base font-normal text-gray-600"> p.m.</span>
+                  </div>
+                  <ul className="space-y-3">
+                    {pkg.features.map((feature, featureIndex) => (
+                      <li 
+                        key={featureIndex}
+                        className="flex items-start"
+                      >
+                        <Check className="h-5 w-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-600">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-8">
+                    <a
+                      href="#contact"
+                      className="block w-full text-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300"
+                    >
+                      Kies {pkg.title}
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
 
           {/* Safety Guidelines */}
           <div className="bg-yellow-50 rounded-xl p-6 mb-12">
@@ -219,41 +282,6 @@ export default function MaintenanceProcedures() {
                 </div>
               </motion.div>
             ))}
-          </div>
-
-          {/* Additional Notes */}
-          <div className="mt-12 bg-blue-50 rounded-xl p-8">
-            <h2 className="text-xl font-bold text-blue-900 mb-4">
-              Belangrijke Aandachtspunten
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="font-semibold text-blue-900 mb-3">Documentatie</h3>
-                <ul className="space-y-2 text-blue-800">
-                  <li className="flex items-center">
-                    <Filter className="h-5 w-5 text-blue-600 mr-2" />
-                    Vul altijd het onderhoudsrapport volledig in
-                  </li>
-                  <li className="flex items-center">
-                    <Wind className="h-5 w-5 text-blue-600 mr-2" />
-                    Noteer gemeten waardes en instellingen
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-semibold text-blue-900 mb-3">Communicatie</h3>
-                <ul className="space-y-2 text-blue-800">
-                  <li className="flex items-center">
-                    <ThermometerSun className="h-5 w-5 text-blue-600 mr-2" />
-                    Leg werking uit aan de klant
-                  </li>
-                  <li className="flex items-center">
-                    <AlertTriangle className="h-5 w-5 text-blue-600 mr-2" />
-                    Meld bijzonderheden direct aan kantoor
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
       </div>

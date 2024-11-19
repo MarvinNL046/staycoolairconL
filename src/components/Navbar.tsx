@@ -69,6 +69,12 @@ export default function Navbar() {
               Producten
             </Link>
             <Link 
+              to="/onderhoud" 
+              className={`transition-colors duration-300 ${getLinkColor()}`}
+            >
+              Onderhoud
+            </Link>
+            <Link 
               to="/werkgebied" 
               className={`transition-colors duration-300 ${getLinkColor()}`}
             >
@@ -153,6 +159,13 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Producten
+            </Link>
+            <Link 
+              to="/onderhoud"
+              className="block px-3 py-2 rounded-md text-gray-700 hover:text-blue-600"
+              onClick={() => setIsOpen(false)}
+            >
+              Onderhoud
             </Link>
             <Link 
               to="/werkgebied"

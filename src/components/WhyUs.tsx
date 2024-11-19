@@ -11,7 +11,7 @@ export default function WhyUs() {
     {
       icon: Clock,
       title: 'Snelle Service',
-      description: 'Binnen 24 uur reactie op uw aanvraag'
+      description: 'Snelle reactie op uw aanvraag'
     },
     {
       icon: ThumbsUp,

@@ -20,7 +20,7 @@ export default function Services() {
       icon: Wrench,
       title: 'Onderhoud & Service',
       description: 'Regelmatig onderhoud voor optimale werking en langere levensduur van uw airconditioning.',
-      features: ['Preventief onderhoud', 'Snelle reparatie', '24/7 storingsdienst']
+      features: ['Preventief onderhoud', 'Snelle reparatie',]
     }
   ];
 
