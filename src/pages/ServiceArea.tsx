@@ -51,7 +51,7 @@ export default function ServiceArea() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="container mx-auto px-4 py-8"
+      className="container mx-auto px-4 pt-32 pb-8" // Changed py-8 to pt-32 pb-8
     >
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">Werkgebied</h1>
