@@ -15,26 +15,38 @@ export const toshibaData: Brand = {
       name: 'Haori',
       slug: 'haori',
       description: 'De Toshiba Haori is een unieke designwandmodel met verwisselbare stoffen bekleding. Perfect voor wie een airconditioner zoekt die naadloos in het interieur past.',
-      imageUrl: '/images/products/toshiba/haori/main.jpg',
+      imageUrl: '/images/products/Haori-zwart-vooraanzicht_3_11zon.webp',
       images: [
         {
-          url: '/images/products/toshiba/haori/front.jpg',
-          alt: 'Toshiba Haori - Vooraanzicht'
+          url: '/images/products/Haori-zwart-vooraanzicht_3_11zon.webp',
+          alt: 'Toshiba Haori - Vooraanzicht zwart'
         },
         {
-          url: '/images/products/toshiba/haori/side.jpg',
-          alt: 'Toshiba Haori - Zijaanzicht'
+          url: '/images/products/Haori-zwart-links_1_11zon.webp',
+          alt: 'Toshiba Haori - Links zwart'
         },
         {
-          url: '/images/products/toshiba/haori/installed.jpg',
-          alt: 'Toshiba Haori - Geïnstalleerd'
+          url: '/images/products/Haori-zwart-rechts_2_11zon.webp',
+          alt: 'Toshiba Haori - Rechts zwart'
         },
         {
-          url: '/images/products/toshiba/haori/detail.jpg',
-          alt: 'Toshiba Haori - Stoffen bekleding detail'
+          url: '/images/products/Haori-blauw-links_16_11zon.webp',
+          alt: 'Toshiba Haori - Blauw'
+        },
+        {
+          url: '/images/products/Haori-bruin-links_17_11zon.webp',
+          alt: 'Toshiba Haori - Bruin'
+        },
+        {
+          url: '/images/products/Haori-creme-links_18_11zon.webp',
+          alt: 'Toshiba Haori - Crème'
+        },
+        {
+          url: '/images/products/Haori-grijs-links_19_11zon.webp',
+          alt: 'Toshiba Haori - Grijs'
         }
       ],
-      price: '€1.599,-',
+      price: '€ Op aanvraag',
       energyLabel: 'A+++',
       capacity: '2,5 kW - 4,6 kW',
       features: [
@@ -54,69 +66,81 @@ export const toshibaData: Brand = {
         { label: 'Afmetingen (HxBxD)', value: '300 x 987 x 210 mm' },
         { label: 'Gewicht', value: '11,0 kg' },
         { label: 'Koudemiddel', value: 'R32' },
-        { label: 'Standaard hoezen', value: 'Lichtgrijs en antraciet' }
+        { label: 'Beschikbare kleuren', value: 'Zwart, blauw, bruin, crème, grijs' }
       ]
     },
     {
-      name: 'Shorai Edge',
-      slug: 'shorai-edge',
-      description: 'De Toshiba Shorai Edge combineert modern design met geavanceerde technologie. Een krachtige en efficiënte wandunit voor optimaal comfort.',
-      imageUrl: '/images/products/toshiba/shorai-edge/main.jpg',
+      name: 'Kazumi Plus',
+      slug: 'kazumi-plus',
+      description: 'De Toshiba Kazumi Plus combineert elegant design met geavanceerde technologie. Verkrijgbaar in stijlvol zwart of klassiek wit voor een perfecte match met elk interieur.',
+      imageUrl: '/images/products/Kazumi-plus-Black-vooraanzicht_6_11zon.webp',
       images: [
         {
-          url: '/images/products/toshiba/shorai-edge/front.jpg',
-          alt: 'Toshiba Shorai Edge - Vooraanzicht'
+          url: '/images/products/Kazumi-plus-Black-vooraanzicht_6_11zon.webp',
+          alt: 'Toshiba Kazumi Plus - Vooraanzicht zwart'
         },
         {
-          url: '/images/products/toshiba/shorai-edge/side.jpg',
-          alt: 'Toshiba Shorai Edge - Zijaanzicht'
+          url: '/images/products/Kazumi-plus-Black-links-open_4_11zon.webp',
+          alt: 'Toshiba Kazumi Plus - Links open zwart'
         },
         {
-          url: '/images/products/toshiba/shorai-edge/installed.jpg',
-          alt: 'Toshiba Shorai Edge - Geïnstalleerd'
+          url: '/images/products/Kazumi-plus-Black-rechts-open_5_11zon.webp',
+          alt: 'Toshiba Kazumi Plus - Rechts open zwart'
+        },
+        {
+          url: '/images/products/Kazumi-plus-white-vooraanzicht_8_11zon.webp',
+          alt: 'Toshiba Kazumi Plus - Vooraanzicht wit'
+        },
+        {
+          url: '/images/products/Kazumi-plus-white-rechts_7_11zon.webp',
+          alt: 'Toshiba Kazumi Plus - Rechts wit'
         }
       ],
-      price: '€1.299,-',
+      price: '€ Op aanvraag',
       energyLabel: 'A+++',
-      capacity: '2,5 kW - 7,0 kW',
+      capacity: '2,5 kW - 4,6 kW',
       features: [
+        'Verkrijgbaar in zwart en wit',
         'Ingebouwde wifi-module',
         'Ultra Pure filter',
         'Magic Coil coating',
         'Plasma Ionizer',
         'Power Selection',
-        'Fireplace modus',
         'Silent modus'
       ],
       specifications: [
-        { label: 'Beschikbare capaciteiten', value: '2,5 kW, 3,2 kW, 4,6 kW, 5,0 kW, 6,1 kW, 7,0 kW' },
-        { label: 'SEER', value: 'tot 7,70' },
-        { label: 'SCOP', value: 'tot 4,70' },
+        { label: 'Beschikbare capaciteiten', value: '2,5 kW, 3,5 kW, 4,6 kW' },
+        { label: 'SEER', value: 'tot 8,80' },
+        { label: 'SCOP', value: 'tot 5,10' },
         { label: 'Geluidsniveau binnen', value: '19 dB(A)' },
         { label: 'Koudemiddel', value: 'R32' },
-        { label: 'Wifi', value: 'Standaard ingebouwd' }
+        { label: 'Kleuren', value: 'Zwart of wit' }
       ]
     },
     {
-      name: 'Seiya',
-      slug: 'seiya',
-      description: 'De Toshiba Seiya biedt betrouwbare prestaties voor een aantrekkelijke prijs. Perfect voor wie op zoek is naar een kwalitatieve basis airco.',
-      imageUrl: '/images/products/toshiba/seiya/main.jpg',
+      name: 'Seiya Plus',
+      slug: 'seiya-plus',
+      description: 'De Toshiba Seiya Plus biedt betrouwbare prestaties voor een aantrekkelijke prijs. Perfect voor wie op zoek is naar een kwalitatieve basis airco.',
+      imageUrl: '/images/products/Seiya-plus-wit-vooraanzicht_12_11zon.webp',
       images: [
         {
-          url: '/images/products/toshiba/seiya/front.jpg',
-          alt: 'Toshiba Seiya - Vooraanzicht'
+          url: '/images/products/Seiya-plus-wit-vooraanzicht_12_11zon.webp',
+          alt: 'Toshiba Seiya Plus - Vooraanzicht'
         },
         {
-          url: '/images/products/toshiba/seiya/side.jpg',
-          alt: 'Toshiba Seiya - Zijaanzicht'
+          url: '/images/products/Seiya-plus-wit-links_9_11zon.webp',
+          alt: 'Toshiba Seiya Plus - Links'
         },
         {
-          url: '/images/products/toshiba/seiya/installed.jpg',
-          alt: 'Toshiba Seiya - Geïnstalleerd'
+          url: '/images/products/Seiya-plus-wit-rechts_11_11zon.webp',
+          alt: 'Toshiba Seiya Plus - Rechts'
+        },
+        {
+          url: '/images/products/Seiya-plus-wit-onderaanzicht-open_10_11zon.webp',
+          alt: 'Toshiba Seiya Plus - Onderaanzicht open'
         }
       ],
-      price: '€999,-',
+      price: '€ Op aanvraag',
       energyLabel: 'A++',
       capacity: '2,0 kW - 6,5 kW',
       features: [
@@ -141,22 +165,22 @@ export const toshibaData: Brand = {
       name: 'Console',
       slug: 'console',
       description: 'De Toshiba Console is een veelzijdig vloermodel met dubbele luchtuitblaas. Ideaal voor montage onder het raam of op zolder.',
-      imageUrl: '/images/products/toshiba/console/main.jpg',
+      imageUrl: '/images/products/toshiba-console-vloermodel-wit_13_11zon.webp',
       images: [
         {
-          url: '/images/products/toshiba/console/front.jpg',
+          url: '/images/products/toshiba-console-vloermodel-wit_13_11zon.webp',
           alt: 'Toshiba Console - Vooraanzicht'
         },
         {
-          url: '/images/products/toshiba/console/side.jpg',
-          alt: 'Toshiba Console - Zijaanzicht'
+          url: '/images/products/toshiba-console-vloermodel-wit-linksboven_14_11zon.webp',
+          alt: 'Toshiba Console - Links boven'
         },
         {
-          url: '/images/products/toshiba/console/installed.jpg',
-          alt: 'Toshiba Console - Geïnstalleerd'
+          url: '/images/products/toshiba-console-vloermodel-wit-reacht_15_11zon.webp',
+          alt: 'Toshiba Console - Rechts'
         }
       ],
-      price: '€1.499,-',
+      price: '€ Op aanvraag',
       energyLabel: 'A++',
       capacity: '2,5 kW - 5,0 kW',
       features: [
@@ -181,26 +205,30 @@ export const toshibaData: Brand = {
       name: 'Daiseikai 10',
       slug: 'daiseikai-10',
       description: 'De Toshiba Daiseikai 10 is een high-end airconditioner met uitzonderlijke energie-efficiëntie en uniek design, verkrijgbaar in hout of wit.',
-      imageUrl: '/images/products/toshiba/daiseikai-10/main.jpg',
+      imageUrl: '/images/products/Daiseikai 10-Hout-vooraanzicht_2_11zon.webp',
       images: [
         {
-          url: '/images/products/toshiba/daiseikai-10/front-white.jpg',
-          alt: 'Toshiba Daiseikai 10 - Vooraanzicht wit'
-        },
-        {
-          url: '/images/products/toshiba/daiseikai-10/front-wood.jpg',
+          url: '/images/products/Daiseikai 10-Hout-vooraanzicht_2_11zon.webp',
           alt: 'Toshiba Daiseikai 10 - Vooraanzicht hout'
         },
         {
-          url: '/images/products/toshiba/daiseikai-10/side.jpg',
-          alt: 'Toshiba Daiseikai 10 - Zijaanzicht'
+          url: '/images/products/Daiseikai 10-Hout-links-open_5_11zon.webp',
+          alt: 'Toshiba Daiseikai 10 - Links open hout'
         },
         {
-          url: '/images/products/toshiba/daiseikai-10/installed.jpg',
-          alt: 'Toshiba Daiseikai 10 - Geïnstalleerd'
+          url: '/images/products/Daiseikai 10-Hout-sfeerfoto_1_11zon.webp',
+          alt: 'Toshiba Daiseikai 10 - Sfeerbeeld hout'
+        },
+        {
+          url: '/images/products/Daiseikai 10-Wit-vooraanzicht_4_11zon.webp',
+          alt: 'Toshiba Daiseikai 10 - Vooraanzicht wit'
+        },
+        {
+          url: '/images/products/Daiseikai 10-Wit-rechts_3_11zon.webp',
+          alt: 'Toshiba Daiseikai 10 - Rechts wit'
         }
       ],
-      price: '€4.412,-',
+      price: '€ Op aanvraag',
       energyLabel: 'A+++',
       capacity: '2,5 kW - 5,0 kW',
       features: [
