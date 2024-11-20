@@ -4,6 +4,7 @@ import { lgData } from './brands/lg';
 import { mitsubishiHeavyData } from './brands/mitsubishi-heavy';
 import { toshibaData } from './brands/toshiba';
 import { tosotData } from './brands/tosot';
+import { aircoCoverData } from './brands/airco-covers';
 
 export const productData: ProductData = {
   brands: [
@@ -11,6 +12,7 @@ export const productData: ProductData = {
     lgData,
     mitsubishiHeavyData,
     toshibaData,
-    tosotData
+    tosotData,
+    aircoCoverData
   ]
 };

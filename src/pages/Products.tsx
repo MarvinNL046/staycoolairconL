@@ -78,18 +78,22 @@ export default function Products() {
 
                   <div className="space-y-4">
                     <Link
-                      to={`/products/${brand.name.toLowerCase()}`}
+                      to={brand.name === "Airco Bescherming/Omkasting" 
+                        ? "/products/airco-covers" 
+                        : `/products/${brand.name.toLowerCase()}`}
                       className="block w-full text-center py-3 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
                     >
-                      Bekijk Modellen
+                      {brand.name === "Airco Bescherming/Omkasting" ? "Bekijk Omkastingen" : "Bekijk Modellen"}
                       <ArrowRight className="inline-block ml-2 h-5 w-5" />
                     </Link>
-                    <Link
-                      to="/contact"
-                      className="block w-full text-center py-3 px-4 bg-white text-blue-600 border-2 border-blue-600 rounded-lg hover:bg-blue-50 transition-colors duration-300"
-                    >
-                      Vraag Offerte Aan
-                    </Link>
+                    {brand.name !== "Airco Bescherming/Omkasting" && (
+                      <Link
+                        to="/contact"
+                        className="block w-full text-center py-3 px-4 bg-white text-blue-600 border-2 border-blue-600 rounded-lg hover:bg-blue-50 transition-colors duration-300"
+                      >
+                        Vraag Offerte Aan
+                      </Link>
+                    )}
                   </div>
                 </div>
               </m.div>

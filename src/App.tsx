@@ -19,6 +19,7 @@ import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import MaintenanceProcedures from './pages/MaintenanceProcedures';
 import SkipToContent from './components/SkipToContent';
+import AircoCovers from './pages/AircoCovers';
 
 // Knowledge Base Articles
 import HowAircoWorks from './pages/articles/HowAircoWorks';
@@ -46,6 +47,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
+              <Route path="/products/airco-covers" element={<AircoCovers />} />
               <Route path="/products/:brand" element={<BrandDetail />} />
               <Route path="/products/:brand/:model" element={<ProductDetail />} />
               <Route path="/contact" element={<Contact />} />

@@ -19,6 +19,7 @@ export interface Model {
   capacity: string;
   features: string[];
   specifications: Specification[];
+  stripeBuyUrl?: string;  // Added for Stripe buy button URL
 }
 
 export interface Brand {
