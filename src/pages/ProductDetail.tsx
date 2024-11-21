@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { m } from 'framer-motion';
-import { Phone, Check, ThermometerSun, Wind, Zap, Timer, Ruler, Info } from 'lucide-react';
+import { Phone, Check, ThermometerSun, Wind, Zap, Timer, Ruler, Info, X } from 'lucide-react';
 import { productData } from '../data/products';
 import ProductCarousel from '../components/ProductCarousel';
 import { Helmet } from 'react-helmet-async';
 
 export default function ProductDetail() {
   const { brand, model } = useParams();
+  const [showInstallationInfo, setShowInstallationInfo] = useState(false);
   
   // Find the product data
   const brandData = productData.brands.find(b => b.name.toLowerCase() === brand);
@@ -177,7 +178,17 @@ export default function ProductDetail() {
                 {modelData.price && (
                   <div className="mb-8">
                     <div className="text-sm text-gray-600">Vanaf</div>
-                    <div className="text-3xl font-bold text-gray-900">{modelData.price}</div>
+                    <div className="text-3xl font-bold text-gray-900">
+                      {modelData.price}
+                      {modelData.price.includes('inclusief standaard installatie') && (
+                        <button
+                          onClick={() => setShowInstallationInfo(true)}
+                          className="ml-2 text-sm font-normal text-blue-600 hover:text-blue-700 underline"
+                        >
+                          Wat houdt dit in?
+                        </button>
+                      )}
+                    </div>
                   </div>
                 )}
 
@@ -232,6 +243,33 @@ export default function ProductDetail() {
               </div>
             </div>
           </div>
+
+          {/* Installation Info Modal */}
+          {showInstallationInfo && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+              <div className="bg-white rounded-lg max-w-2xl w-full p-6 relative">
+                <button
+                  onClick={() => setShowInstallationInfo(false)}
+                  className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Standaard Installatie</h3>
+                <div className="space-y-4 text-gray-600">
+                  <p className="font-medium">Een standaard installatie bij StayCool Airco bestaat uit:</p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Koelleiding lengte tussen binnen- en buitenunit maximaal 4 meter</li>
+                    <li>Gangbare hoogte voor de buitenunit tot 2,5 meter hoogte</li>
+                    <li>Diamantboring door de muur (uitgezonderd beton)</li>
+                    <li>Electra aansluiting zonder groep bij plaatsing in de meterkast</li>
+                  </ul>
+                  <p className="text-sm mt-4">
+                    <strong>Let op:</strong> Eventueel benodigde hoogwerker of steigerwerk is niet inbegrepen in de standaard installatie.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </>

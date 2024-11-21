@@ -26,7 +26,7 @@ export const mitsubishiHeavyData: Brand = {
           alt: 'Mitsubishi Heavy ZS-W - Zijaanzicht'
         }
       ],
-      price: '€1.099,-',
+      price: '€1.099,- inclusief standaard installatie',
       energyLabel: 'A+++',
       capacity: '2,0 kW - 5,0 kW',
       features: [
@@ -64,7 +64,7 @@ export const mitsubishiHeavyData: Brand = {
           alt: 'Mitsubishi Heavy ZSX-W - Zijaanzicht'
         }
       ],
-      price: '€1.399,-',
+      price: '€1.399,- inclusief standaard installatie',
       energyLabel: 'A+++',
       capacity: '2,5 kW - 6,0 kW',
       features: [
@@ -101,7 +101,7 @@ export const mitsubishiHeavyData: Brand = {
           alt: 'Mitsubishi Heavy SRF-ZMX-S - Zijaanzicht'
         }
       ],
-      price: '€1.599,-',
+      price: '€1.599,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,5 kW - 5,0 kW',
       features: [

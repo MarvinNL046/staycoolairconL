@@ -26,7 +26,7 @@ export const daikinData: Brand = {
           alt: 'Daikin Ururu Sarara - Rechts'
         }
       ],
-      price: '€4.500,-',
+      price: '€4.500,- inclusief standaard installatie',
       energyLabel: 'A+++',
       capacity: '2,5 kW - 5,0 kW',
       features: [
@@ -58,7 +58,7 @@ export const daikinData: Brand = {
           alt: 'Daikin Sensira - Wit'
         }
       ],
-      price: '€1.599,-',
+      price: '€1.599,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,0 kW - 7,1 kW',
       features: [
@@ -98,7 +98,7 @@ export const daikinData: Brand = {
           alt: 'Daikin Comfora - Onecta App'
         }
       ],
-      price: '€2.155,-',
+      price: '€2.155,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,0 kW - 7,1 kW',
       features: [
@@ -130,7 +130,7 @@ export const daikinData: Brand = {
           alt: 'Daikin Perfera - Wit'
         }
       ],
-      price: '€2.420,-',
+      price: '€2.420,- inclusief standaard installatie',
       energyLabel: 'A+++',
       capacity: '3,5 kW',
       features: [
@@ -170,7 +170,7 @@ export const daikinData: Brand = {
           alt: 'Daikin Stylish - Zwart'
         }
       ],
-      price: '€2.710,-',
+      price: '€2.710,- inclusief standaard installatie',
       energyLabel: 'A+++',
       capacity: '2,0 kW - 5,0 kW',
       features: [
@@ -206,7 +206,7 @@ export const daikinData: Brand = {
           alt: 'Daikin Perfera Vloermodel - Rechts'
         }
       ],
-      price: '€2.725,-',
+      price: '€2.725,- inclusief standaard installatie',
       energyLabel: 'A+++',
       capacity: '2,5 kW - 5,0 kW',
       features: [
@@ -246,7 +246,7 @@ export const daikinData: Brand = {
           alt: 'Daikin Emura - Zwart'
         }
       ],
-      price: '€2.850,-',
+      price: '€2.850,- inclusief standaard installatie',
       energyLabel: 'A+++',
       capacity: '2,0 kW - 5,0 kW',
       features: [

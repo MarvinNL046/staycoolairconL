@@ -30,7 +30,7 @@ export const tosotData: Brand = {
           alt: 'Tosot Cosmo - Andere kant'
         }
       ],
-      price: '€1395,-',
+      price: '€1395,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,5 kW - 6,1 kW',
       features: [
@@ -63,7 +63,7 @@ export const tosotData: Brand = {
           alt: 'Tosot Pular - Rechts'
         }
       ],
-      price: '€1495,-',
+      price: '€1495,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,2 kW - 6,1 kW',
       features: [
@@ -112,7 +112,7 @@ export const tosotData: Brand = {
           alt: 'Tosot Clivia - Links zwart'
         }
       ],
-      price: '€1595,-',
+      price: '€1595,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,5 kW - 7,1 kW',
       features: [
@@ -146,7 +146,7 @@ export const tosotData: Brand = {
           alt: 'Tosot Console - Afstandsbediening'
         }
       ],
-      price: '€1.845,-',
+      price: '€1.845,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '3,5 kW - 5,2 kW',
       features: [

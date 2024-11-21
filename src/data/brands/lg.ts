@@ -22,7 +22,7 @@ export const lgData: Brand = {
           alt: 'LG DualCool Standaard Plus'
         }
       ],
-      price: '€1.695,-',
+      price: '€1.695,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,5 kW - 6,6 kW',
       features: [
@@ -54,7 +54,7 @@ export const lgData: Brand = {
           alt: 'LG DualCool Premium'
         }
       ],
-      price: '€2.060,-',
+      price: '€2.060,- inclusief standaard installatie',
       energyLabel: 'A+++',
       capacity: '2,5 kW - 6,6 kW',
       features: [
@@ -86,7 +86,7 @@ export const lgData: Brand = {
           alt: 'LG ARTCOOL Mirror'
         }
       ],
-      price: '€2.289,-',
+      price: '€2.289,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,5 kW - 6,6 kW',
       features: [
@@ -118,7 +118,7 @@ export const lgData: Brand = {
           alt: 'LG ARTCOOL Black'
         }
       ],
-      price: '€2.530,-',
+      price: '€2.530,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,5 kW - 6,6 kW',
       features: [
