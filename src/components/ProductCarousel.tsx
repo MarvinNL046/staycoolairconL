@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { m, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import LazyImage from './LazyImage';
 
 interface ProductImage {
   url: string;
@@ -14,10 +15,27 @@ interface ProductCarouselProps {
 export default function ProductCarousel({ images }: ProductCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Preload images
+  useEffect(() => {
+    const imagePromises = images.map(image => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = image.url;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
+
+    Promise.all(imagePromises)
+      .then(() => setIsLoading(false))
+      .catch(error => console.error('Error preloading images:', error));
+  }, [images]);
 
   const slideVariants = {
     enter: (direction: number) => ({
-      x: direction > 0 ? 1000 : -1000,
+      x: direction > 0 ? 300 : -300,
       opacity: 0
     }),
     center: {
@@ -27,12 +45,12 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
     },
     exit: (direction: number) => ({
       zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
+      x: direction < 0 ? 300 : -300,
       opacity: 0
     })
   };
 
-  const swipeConfidenceThreshold = 10000;
+  const swipeConfidenceThreshold = 3000; // Reduced threshold for mobile
   const swipePower = (offset: number, velocity: number) => {
     return Math.abs(offset) * velocity;
   };
@@ -48,13 +66,22 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
   };
 
   return (
-    <div className="relative w-full aspect-square bg-white rounded-2xl shadow-lg overflow-hidden">
+    <div 
+      className="relative w-full bg-white rounded-lg sm:rounded-2xl shadow-lg overflow-hidden"
+      style={{ aspectRatio: '1/1' }}
+      role="region"
+      aria-label="Product image carousel"
+    >
+      {/* Loading state */}
+      {isLoading && (
+        <div className="absolute inset-0 bg-gray-100 animate-pulse" />
+      )}
+
+      {/* Image container */}
       <div className="absolute inset-0">
         <AnimatePresence initial={false} custom={direction}>
-          <m.img
+          <m.div
             key={currentIndex}
-            src={images[currentIndex].url}
-            alt={images[currentIndex].alt}
             custom={direction}
             variants={slideVariants}
             initial="enter"
@@ -66,7 +93,7 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
             }}
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={1}
+            dragElastic={0.7}
             onDragEnd={(e, { offset, velocity }) => {
               const swipe = swipePower(offset.x, velocity.x);
 
@@ -76,27 +103,41 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
                 paginate(-1);
               }
             }}
-            className="absolute inset-0 w-full h-full object-contain"
-          />
+            className="absolute inset-0 touch-pan-y"
+          >
+            <LazyImage
+              src={images[currentIndex].url}
+              alt={images[currentIndex].alt}
+              width="100%"
+              height="100%"
+              className="object-contain"
+            />
+          </m.div>
         </AnimatePresence>
       </div>
 
       {/* Navigation Buttons */}
       <button
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center shadow-lg transition-all duration-200 z-10"
+        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center shadow-lg transition-colors duration-200 z-10"
         onClick={() => paginate(-1)}
+        aria-label="Previous image"
       >
-        <ChevronLeft className="h-6 w-6 text-gray-800" />
+        <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 text-gray-800" />
       </button>
       <button
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center shadow-lg transition-all duration-200 z-10"
+        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center shadow-lg transition-colors duration-200 z-10"
         onClick={() => paginate(1)}
+        aria-label="Next image"
       >
-        <ChevronRight className="h-6 w-6 text-gray-800" />
+        <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 text-gray-800" />
       </button>
 
       {/* Thumbnails */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10">
+      <div 
+        className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 sm:gap-2 z-10"
+        role="tablist"
+        aria-label="Product images"
+      >
         {images.map((_, index) => (
           <button
             key={index}
@@ -104,11 +145,14 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
               setDirection(index > currentIndex ? 1 : -1);
               setCurrentIndex(index);
             }}
-            className={`w-2 h-2 rounded-full transition-all duration-200 ${
+            className={`w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full transition-colors duration-200 ${
               index === currentIndex 
-                ? 'bg-blue-600 w-4' 
+                ? 'bg-blue-600 w-3 sm:w-4' 
                 : 'bg-white/60 hover:bg-white'
             }`}
+            role="tab"
+            aria-selected={index === currentIndex}
+            aria-label={`Image ${index + 1} of ${images.length}`}
           />
         ))}
       </div>

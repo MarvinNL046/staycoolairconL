@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ScrollToTop from './components/ScrollToTop';
 import { Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
@@ -9,33 +9,42 @@ import AnnouncementBar from './components/AnnouncementBar';
 import CookieConsent from './components/CookieConsent';
 import ErrorFallback from './components/ErrorFallback';
 import BackToTop from './components/BackToTop';
-import Home from './pages/Home';
-import Products from './pages/Products';
-import BrandDetail from './pages/BrandDetail';
-import ProductDetail from './pages/ProductDetail';
-import Contact from './pages/Contact';
-import ServiceArea from './pages/ServiceArea';
-import KnowledgeBase from './pages/KnowledgeBase';
-import Terms from './pages/Terms';
-import Privacy from './pages/Privacy';
-import MaintenanceProcedures from './pages/MaintenanceProcedures';
 import SkipToContent from './components/SkipToContent';
-import AircoCovers from './pages/AircoCovers';
+
+// Lazy load all pages
+const Home = lazy(() => import('./pages/Home'));
+const Products = lazy(() => import('./pages/Products'));
+const BrandDetail = lazy(() => import('./pages/BrandDetail'));
+const ProductDetail = lazy(() => import('./pages/ProductDetail'));
+const Contact = lazy(() => import('./pages/Contact'));
+const ServiceArea = lazy(() => import('./pages/ServiceArea'));
+const KnowledgeBase = lazy(() => import('./pages/KnowledgeBase'));
+const Terms = lazy(() => import('./pages/Terms'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const MaintenanceProcedures = lazy(() => import('./pages/MaintenanceProcedures'));
+const AircoCovers = lazy(() => import('./pages/AircoCovers'));
 
 // Knowledge Base Articles
-import HoeWerktAirco from './pages/articles/HoeWerktAirco';
-import SoortenAirco from './pages/articles/SoortenAirco';
-import SplitVsMonoSystemen from './pages/articles/SplitVsMonoSystemen';
-import ScopSeerWaarden from './pages/articles/ScopSeerWaarden';
-import CoandaEffect from './pages/articles/CoandaEffect';
-import VerwarmenMetAirco from './pages/articles/VerwarmenMetAirco';
-import TerugleverKostenVoorkomen from './pages/articles/TerugleverKostenVoorkomen';
-import Energielabels from './pages/articles/Energielabels';
-import Onderhoudstips from './pages/articles/Onderhoudstips';
-import VeelvoorkendeProblemen from './pages/articles/VeelvoorkendeProblemen';
-import Onderhoudsschema from './pages/articles/Onderhoudsschema';
-import Koudemiddelen from './pages/articles/Koudemiddelen';
-import CO2Reductie from './pages/articles/CO2Reductie';
+const HoeWerktAirco = lazy(() => import('./pages/articles/HoeWerktAirco'));
+const SoortenAirco = lazy(() => import('./pages/articles/SoortenAirco'));
+const SplitVsMonoSystemen = lazy(() => import('./pages/articles/SplitVsMonoSystemen'));
+const ScopSeerWaarden = lazy(() => import('./pages/articles/ScopSeerWaarden'));
+const CoandaEffect = lazy(() => import('./pages/articles/CoandaEffect'));
+const VerwarmenMetAirco = lazy(() => import('./pages/articles/VerwarmenMetAirco'));
+const TerugleverKostenVoorkomen = lazy(() => import('./pages/articles/TerugleverKostenVoorkomen'));
+const Energielabels = lazy(() => import('./pages/articles/Energielabels'));
+const Onderhoudstips = lazy(() => import('./pages/articles/Onderhoudstips'));
+const VeelvoorkendeProblemen = lazy(() => import('./pages/articles/VeelvoorkendeProblemen'));
+const Onderhoudsschema = lazy(() => import('./pages/articles/Onderhoudsschema'));
+const Koudemiddelen = lazy(() => import('./pages/articles/Koudemiddelen'));
+const CO2Reductie = lazy(() => import('./pages/articles/CO2Reductie'));
+
+// Loading fallback component
+const LoadingFallback = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
 
 export default function App() {
   return (
@@ -46,7 +55,8 @@ export default function App() {
         <Navbar />
         <main id="main-content" tabIndex={-1}>
           <AnimatePresence mode="wait">
-            <Routes>
+            <Suspense fallback={<LoadingFallback />}>
+              <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
               <Route path="/products/airco-covers" element={<AircoCovers />} />
@@ -73,7 +83,8 @@ export default function App() {
               <Route path="/kennisbank/onderhoudsschema" element={<Onderhoudsschema />} />
               <Route path="/kennisbank/koudemiddelen" element={<Koudemiddelen />} />
               <Route path="/kennisbank/co2-reductie" element={<CO2Reductie />} />
-            </Routes>
+              </Routes>
+            </Suspense>
           </AnimatePresence>
         </main>
         <BackToTop />

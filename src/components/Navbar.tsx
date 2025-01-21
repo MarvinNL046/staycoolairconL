@@ -6,22 +6,23 @@ import Logo from './Logo';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
   useEffect(() => {
+    // Throttle scroll handler to run at most every 100ms
+    let ticking = false;
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 50);
-      
-      // Calculate scroll progress (0 to 1)
-      const maxScroll = 200; // Maximum scroll for full opacity
-      const progress = Math.min(scrollPosition / maxScroll, 1);
-      setScrollProgress(progress);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 50);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Check initial scroll position
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -33,9 +34,7 @@ export default function Navbar() {
     if (!isScrolled && isHomePage) {
       return 'bg-transparent';
     }
-    // Dynamic background opacity based on scroll progress
-    const opacity = Math.floor(scrollProgress * 90); // Max opacity of 90%
-    return `bg-white/${opacity} backdrop-blur-sm shadow-lg`;
+    return 'bg-white/90 backdrop-blur-sm shadow-lg';
   };
 
   const getLinkColor = () => {
@@ -46,12 +45,14 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${getNavBackground()}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
-          <div className="flex items-center">
-            <Link to="/" className="flex items-center">
-              <Logo className="h-10 w-auto" />
+    <nav 
+      className={`fixed w-full z-50 transition-colors duration-300 h-[64px] sm:h-[80px] ${getNavBackground()}`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div className="flex justify-between h-full">
+          <div className="flex items-center h-full py-2">
+            <Link to="/" className="flex items-center h-full">
+              <Logo className="h-8 sm:h-10 w-[100px] sm:w-[120px]" />
             </Link>
           </div>
           
@@ -96,7 +97,7 @@ export default function Navbar() {
               href="https://afspraken.staycoolairco.nl"
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md transition-all duration-300 ${
+              className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md transition-colors duration-300 ${
                 isScrolled || !isHomePage || isOpen
                   ? 'text-white bg-blue-600 hover:bg-blue-700'
                   : 'text-blue-600 bg-white hover:bg-blue-50'
@@ -107,7 +108,7 @@ export default function Navbar() {
             </a>
             <a 
               href="tel:0462021430" 
-              className={`inline-flex items-center px-4 py-2 border-2 text-sm font-medium rounded-md transition-all duration-300 ${
+              className={`inline-flex items-center px-4 py-2 border-2 text-sm font-medium rounded-md transition-colors duration-300 ${
                 isScrolled || !isHomePage || isOpen
                   ? 'border-blue-600 text-blue-600 hover:bg-blue-50'
                   : 'border-white text-white hover:bg-white/10'
@@ -143,71 +144,73 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 backdrop-blur-md">
-            <Link 
-              to="/"
-              className="block px-3 py-2 rounded-md text-gray-700 hover:text-blue-600"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-            <Link 
-              to="/products"
-              className="block px-3 py-2 rounded-md text-gray-700 hover:text-blue-600"
-              onClick={() => setIsOpen(false)}
-            >
-              Producten
-            </Link>
-            <Link 
-              to="/onderhoud"
-              className="block px-3 py-2 rounded-md text-gray-700 hover:text-blue-600"
-              onClick={() => setIsOpen(false)}
-            >
-              Onderhoud
-            </Link>
-            <Link 
-              to="/werkgebied"
-              className="block px-3 py-2 rounded-md text-gray-700 hover:text-blue-600"
-              onClick={() => setIsOpen(false)}
-            >
-              Werkgebied
-            </Link>
-            <Link 
-              to="/kennisbank"
-              className="block px-3 py-2 rounded-md text-gray-700 hover:text-blue-600"
-              onClick={() => setIsOpen(false)}
-            >
-              Kennisbank
-            </Link>
-            <Link 
-              to="/contact"
-              className="block px-3 py-2 rounded-md text-gray-700 hover:text-blue-600"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </Link>
-            <a 
-              href="https://afspraken.staycoolairco.nl"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block px-3 py-2 rounded-md bg-blue-600 text-white"
-              onClick={() => setIsOpen(false)}
-            >
-              <Calendar className="h-4 w-4 inline mr-2" />
-              Plan afspraak
-            </a>
-            <a 
-              href="tel:0462021430" 
-              className="block px-3 py-2 rounded-md text-blue-600"
-            >
-              <Phone className="h-4 w-4 inline mr-2" />
-              046 202 1430
-            </a>
-          </div>
+      <div 
+        className={`md:hidden fixed inset-x-0 top-[64px] transition-transform duration-200 ${
+          isOpen ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      >
+        <div className="px-4 pt-2 pb-3 space-y-2 bg-white/95 backdrop-blur-md shadow-lg">
+          <Link 
+            to="/"
+            className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-blue-600 active:bg-gray-50"
+            onClick={() => setIsOpen(false)}
+          >
+            Home
+          </Link>
+          <Link 
+            to="/products"
+            className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-blue-600 active:bg-gray-50"
+            onClick={() => setIsOpen(false)}
+          >
+            Producten
+          </Link>
+          <Link 
+            to="/onderhoud"
+            className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-blue-600 active:bg-gray-50"
+            onClick={() => setIsOpen(false)}
+          >
+            Onderhoud
+          </Link>
+          <Link 
+            to="/werkgebied"
+            className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-blue-600 active:bg-gray-50"
+            onClick={() => setIsOpen(false)}
+          >
+            Werkgebied
+          </Link>
+          <Link 
+            to="/kennisbank"
+            className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-blue-600 active:bg-gray-50"
+            onClick={() => setIsOpen(false)}
+          >
+            Kennisbank
+          </Link>
+          <Link 
+            to="/contact"
+            className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-blue-600 active:bg-gray-50"
+            onClick={() => setIsOpen(false)}
+          >
+            Contact
+          </Link>
+          <a 
+            href="https://afspraken.staycoolairco.nl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block px-4 py-2.5 rounded-md bg-blue-600 text-white active:bg-blue-700"
+            onClick={() => setIsOpen(false)}
+          >
+            <Calendar className="h-4 w-4 inline mr-2" />
+            Plan afspraak
+          </a>
+          <a 
+            href="tel:0462021430" 
+            className="block px-4 py-2.5 rounded-md text-blue-600 active:text-blue-700"
+          >
+            <Phone className="h-4 w-4 inline mr-2" />
+            046 202 1430
+          </a>
         </div>
-      )}
+      </div>
     </nav>
   );
 }

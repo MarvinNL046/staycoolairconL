@@ -1,23 +1,43 @@
 import React from 'react';
 import { m } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import MetaTags from '../../components/MetaTags';
 import { ArrowLeft, Thermometer, Wind, Droplets, Sun, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function HowAircoWorks() {
   return (
     <>
-      <Helmet>
-        <title>Hoe werkt een airco? | StayCool Airco Kennisbank</title>
-        <meta 
-          name="description" 
-          content="Leer hoe een airconditioner precies werkt. Ontdek het proces van warmte-uitwisseling, de rol van het koudemiddel en de verschillende componenten van een airco."
-        />
-        <meta 
-          name="keywords" 
-          content="airco werking, airconditioner uitleg, warmte-uitwisseling, koudemiddel, compressor airco, verdamper airco, condensor airco"
-        />
-      </Helmet>
+      <MetaTags
+        title="Hoe werkt een airco? | StayCool Airco Kennisbank"
+        description="Leer hoe een airconditioner precies werkt. Ontdek het proces van warmte-uitwisseling, de rol van het koudemiddel en de verschillende componenten van een airco."
+        keywords="airco werking, airconditioner uitleg, warmte-uitwisseling, koudemiddel, compressor airco, verdamper airco, condensor airco"
+        canonicalUrl="https://staycoolairco.nl/kennisbank/hoe-werkt-airco"
+        type="article"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Hoe werkt een airco?",
+          "description": "Leer hoe een airconditioner precies werkt. Ontdek het proces van warmte-uitwisseling, de rol van het koudemiddel en de verschillende componenten van een airco.",
+          "author": {
+            "@type": "Organization",
+            "name": "StayCool Airco"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "StayCool Airco",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://staycoolairco.nl/images/logo.svg"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://staycoolairco.nl/kennisbank/hoe-werkt-airco"
+          },
+          "datePublished": "2024-01-01",
+          "dateModified": new Date().toISOString().split('T')[0]
+        }}
+      />
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
