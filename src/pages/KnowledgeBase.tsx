@@ -89,6 +89,11 @@ export default function KnowledgeBase() {
           title: 'Airco Storingscodes',
           description: 'Complete gids voor het begrijpen en oplossen van storingscodes.',
           slug: 'storingscodes'
+        },
+        {
+          title: 'LG Storingscode CH 24',
+          description: 'Wat betekent LG storingscode CH 24 en hoe los je het op?',
+          slug: 'lg-airco-storingscodes'
         }
       ]
     },
@@ -169,7 +174,7 @@ export default function KnowledgeBase() {
                     {category.articles.map((article) => (
                       <Link
                         key={article.slug}
-                        to={`/kennisbank/${article.slug}`}
+                        to={article.slug.startsWith('lg-') ? `/${article.slug}` : `/kennisbank/${article.slug}`}
                         className="block bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors duration-200"
                       >
                         <div className="flex items-center justify-between">

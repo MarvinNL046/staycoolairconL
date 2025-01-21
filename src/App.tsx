@@ -39,6 +39,7 @@ const Onderhoudsschema = lazy(() => import('./pages/articles/Onderhoudsschema'))
 const Koudemiddelen = lazy(() => import('./pages/articles/Koudemiddelen'));
 const CO2Reductie = lazy(() => import('./pages/articles/CO2Reductie'));
 const StoringscodeGids = lazy(() => import('./pages/articles/StoringscodeGids'));
+const LGStoringscode = lazy(() => import('./pages/articles/LGStoringscode'));
 
 // Loading fallback component
 const LoadingFallback = () => (
@@ -85,6 +86,7 @@ export default function App() {
               <Route path="/kennisbank/koudemiddelen" element={<Koudemiddelen />} />
               <Route path="/kennisbank/co2-reductie" element={<CO2Reductie />} />
               <Route path="/kennisbank/storingscodes" element={<StoringscodeGids />} />
+              <Route path="/lg-airco-storingscodes" element={<LGStoringscode />} />
               </Routes>
             </Suspense>
           </AnimatePresence>
