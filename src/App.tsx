@@ -22,19 +22,19 @@ import SkipToContent from './components/SkipToContent';
 import AircoCovers from './pages/AircoCovers';
 
 // Knowledge Base Articles
-import HowAircoWorks from './pages/articles/HowAircoWorks';
-import AircoTypes from './pages/articles/AircoTypes';
-import SplitVsMono from './pages/articles/SplitVsMono';
-import ScopSeerArticle from './pages/articles/ScopSeerArticle';
+import HoeWerktAirco from './pages/articles/HoeWerktAirco';
+import SoortenAirco from './pages/articles/SoortenAirco';
+import SplitVsMonoSystemen from './pages/articles/SplitVsMonoSystemen';
+import ScopSeerWaarden from './pages/articles/ScopSeerWaarden';
 import CoandaEffect from './pages/articles/CoandaEffect';
-import HeatingWithAirco from './pages/articles/HeatingWithAirco';
-import PreventFeedIn from './pages/articles/PreventFeedIn';
-import EnergyLabels from './pages/articles/EnergyLabels';
-import MaintenanceTips from './pages/articles/MaintenanceTips';
-import CommonProblems from './pages/articles/CommonProblems';
-import MaintenanceSchedule from './pages/articles/MaintenanceSchedule';
-import Refrigerants from './pages/articles/Refrigerants';
-import CO2Reduction from './pages/articles/CO2Reduction';
+import VerwarmenMetAirco from './pages/articles/VerwarmenMetAirco';
+import TerugleverKostenVoorkomen from './pages/articles/TerugleverKostenVoorkomen';
+import Energielabels from './pages/articles/Energielabels';
+import Onderhoudstips from './pages/articles/Onderhoudstips';
+import VeelvoorkendeProblemen from './pages/articles/VeelvoorkendeProblemen';
+import Onderhoudsschema from './pages/articles/Onderhoudsschema';
+import Koudemiddelen from './pages/articles/Koudemiddelen';
+import CO2Reductie from './pages/articles/CO2Reductie';
 
 export default function App() {
   return (
@@ -58,19 +58,19 @@ export default function App() {
               <Route path="/onderhoud" element={<MaintenanceProcedures />} />
 
               {/* Knowledge Base Articles */}
-              <Route path="/kennisbank/how-airco-works" element={<HowAircoWorks />} />
-              <Route path="/kennisbank/airco-types" element={<AircoTypes />} />
-              <Route path="/kennisbank/split-vs-mono" element={<SplitVsMono />} />
-              <Route path="/kennisbank/scop-seer" element={<ScopSeerArticle />} />
+              <Route path="/kennisbank/hoe-werkt-airco" element={<HoeWerktAirco />} />
+              <Route path="/kennisbank/soorten-airco" element={<SoortenAirco />} />
+              <Route path="/kennisbank/split-vs-mono-systemen" element={<SplitVsMonoSystemen />} />
+              <Route path="/kennisbank/scop-seer-waarden" element={<ScopSeerWaarden />} />
               <Route path="/kennisbank/coanda-effect" element={<CoandaEffect />} />
-              <Route path="/kennisbank/heating-with-airco" element={<HeatingWithAirco />} />
-              <Route path="/kennisbank/prevent-feed-in" element={<PreventFeedIn />} />
-              <Route path="/kennisbank/energy-labels" element={<EnergyLabels />} />
-              <Route path="/kennisbank/maintenance-tips" element={<MaintenanceTips />} />
-              <Route path="/kennisbank/common-problems" element={<CommonProblems />} />
-              <Route path="/kennisbank/maintenance-schedule" element={<MaintenanceSchedule />} />
-              <Route path="/kennisbank/refrigerants" element={<Refrigerants />} />
-              <Route path="/kennisbank/co2-reduction" element={<CO2Reduction />} />
+              <Route path="/kennisbank/verwarmen-met-airco" element={<VerwarmenMetAirco />} />
+              <Route path="/kennisbank/terugleverkosten-voorkomen" element={<TerugleverKostenVoorkomen />} />
+              <Route path="/kennisbank/energielabels" element={<Energielabels />} />
+              <Route path="/kennisbank/onderhoudstips" element={<Onderhoudstips />} />
+              <Route path="/kennisbank/veelvoorkomende-problemen" element={<VeelvoorkendeProblemen />} />
+              <Route path="/kennisbank/onderhoudsschema" element={<Onderhoudsschema />} />
+              <Route path="/kennisbank/koudemiddelen" element={<Koudemiddelen />} />
+              <Route path="/kennisbank/co2-reductie" element={<CO2Reductie />} />
             </Routes>
           </AnimatePresence>
         </main>
