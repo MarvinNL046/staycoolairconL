@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import MetaTags from './MetaTags';
+import Breadcrumbs from './Breadcrumbs';
 
 interface ArticleLayoutProps {
   children: ReactNode;
@@ -26,14 +27,19 @@ export default function ArticleLayout({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+      className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-32"
     >
       <MetaTags
         title={title}
         description={description}
       />
 
-      <header className="mb-8">
+      <Breadcrumbs items={[
+        { label: 'Kennisbank', path: '/kennisbank' },
+        { label: title, path: window.location.pathname }
+      ]} />
+      
+      <header className="mb-8 mt-6">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">{title}</h1>
         <p className="text-xl text-gray-600 mb-6">{description}</p>
         
