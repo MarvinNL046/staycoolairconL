@@ -84,6 +84,11 @@ export default function KnowledgeBase() {
           title: 'Wanneer onderhoud nodig?',
           description: 'Richtlijnen voor regelmatig onderhoud van uw systeem.',
           slug: 'onderhoudsschema'
+        },
+        {
+          title: 'Airco Storingscodes',
+          description: 'Complete gids voor het begrijpen en oplossen van storingscodes.',
+          slug: 'storingscodes'
         }
       ]
     },

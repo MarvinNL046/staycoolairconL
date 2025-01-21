@@ -38,6 +38,7 @@ const VeelvoorkendeProblemen = lazy(() => import('./pages/articles/Veelvoorkende
 const Onderhoudsschema = lazy(() => import('./pages/articles/Onderhoudsschema'));
 const Koudemiddelen = lazy(() => import('./pages/articles/Koudemiddelen'));
 const CO2Reductie = lazy(() => import('./pages/articles/CO2Reductie'));
+const StoringscodeGids = lazy(() => import('./pages/articles/StoringscodeGids'));
 
 // Loading fallback component
 const LoadingFallback = () => (
@@ -83,6 +84,7 @@ export default function App() {
               <Route path="/kennisbank/onderhoudsschema" element={<Onderhoudsschema />} />
               <Route path="/kennisbank/koudemiddelen" element={<Koudemiddelen />} />
               <Route path="/kennisbank/co2-reductie" element={<CO2Reductie />} />
+              <Route path="/kennisbank/storingscodes" element={<StoringscodeGids />} />
               </Routes>
             </Suspense>
           </AnimatePresence>
