@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollToTop from './components/ScrollToTop';
 import { Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { ErrorBoundary } from 'react-error-boundary';
@@ -40,6 +41,7 @@ export default function App() {
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <div className="min-h-screen bg-white">
+        <ScrollToTop />
         <SkipToContent />
         <Navbar />
         <main id="main-content" tabIndex={-1}>
