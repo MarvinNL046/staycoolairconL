@@ -41,7 +41,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/kennisbank/scop-seer-uitleg</loc>
+    <loc>https://staycoolairco.nl/kennisbank/scop-seer-waarden</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -56,7 +56,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/kennisbank/split-vs-mono</loc>
+    <loc>https://staycoolairco.nl/kennisbank/split-vs-mono-systemen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -66,7 +66,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/kennisbank/terugleverkosten</loc>
+    <loc>https://staycoolairco.nl/kennisbank/terugleverkosten-voorkomen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -81,12 +81,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/kennisbank/problemen</loc>
+    <loc>https://staycoolairco.nl/kennisbank/veelvoorkomende-problemen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/kennisbank/onderhoud-planning</loc>
+    <loc>https://staycoolairco.nl/kennisbank/onderhoudsschema</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -113,9 +113,64 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://staycoolairco.nl/products/daikin/ururu-sarara</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/daikin/sensira-ftxf</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/daikin/comfora</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/daikin/perfera-ftxm-r</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/daikin/stylish</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/daikin/perfera-vloermodel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/daikin/emura</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://staycoolairco.nl/products/lg</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/lg/dualcool-standaard-plus</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/lg/dualcool-premium</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/lg/artcool-mirror</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/lg/artcool-black</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/mitsubishi-heavy</loc>
@@ -123,13 +178,73 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://staycoolairco.nl/products/mitsubishi-heavy/zs-w</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/mitsubishi-heavy/zsx-w</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/mitsubishi-heavy/srf-zmx-s</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://staycoolairco.nl/products/toshiba</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://staycoolairco.nl/products/toshiba/haori</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/toshiba/kazumi-plus</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/toshiba/seiya-plus</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/toshiba/console</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/toshiba/daiseikai-10</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://staycoolairco.nl/products/tosot</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/tosot/cosmo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/tosot/pular</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/tosot/clivia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/tosot/console</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
