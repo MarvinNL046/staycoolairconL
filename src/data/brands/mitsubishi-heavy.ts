@@ -3,7 +3,7 @@ import { Brand } from '../../types/products';
 export const mitsubishiHeavyData: Brand = {
   name: 'Mitsubishi Heavy Industries',
   description: 'Hoogwaardige Japanse engineering met focus op duurzaamheid en betrouwbaarheid. Mitsubishi Heavy Industries staat bekend om hun robuuste en efficiënte airconditioners.',
-  imageUrl: '/images/products/Daiseikai 10-Wit-vooraanzicht_4_11zon.webp',
+  imageUrl: '/images/products/placeholder.txt',
   features: [
     'Allergeenfilter',
     'Silent Operation mode',
@@ -15,15 +15,11 @@ export const mitsubishiHeavyData: Brand = {
       name: 'ZS-W Serie',
       slug: 'zs-w',
       description: 'De ZS-W serie van Mitsubishi Heavy Industries biedt hoogwaardige wandunits die uitblinken in efficiëntie en betrouwbaarheid. Met geavanceerde features zoals de 3D Auto functie en allergeenfilter zorgen deze units voor optimaal comfort.',
-      imageUrl: '/images/products/Daiseikai 10-Wit-vooraanzicht_4_11zon.webp',
+      imageUrl: '/images/products/placeholder.txt',
       images: [
         {
-          url: '/images/products/Daiseikai 10-Wit-vooraanzicht_4_11zon.webp',
-          alt: 'Mitsubishi Heavy ZS-W - Vooraanzicht'
-        },
-        {
-          url: '/images/products/Daiseikai 10-Wit-rechts_3_11zon.webp',
-          alt: 'Mitsubishi Heavy ZS-W - Zijaanzicht'
+          url: '/images/products/placeholder.txt',
+          alt: 'Mitsubishi Heavy ZS-W - Foto binnenkort beschikbaar'
         }
       ],
       price: '€1.099,- inclusief standaard installatie',
@@ -53,15 +49,11 @@ export const mitsubishiHeavyData: Brand = {
       name: 'SRK-ZSX-W Premium',
       slug: 'zsx-w',
       description: 'De premium wandunit van Mitsubishi Heavy met maximale energie-efficiëntie en geavanceerde luchtreiniging. Perfect voor wie het beste van het beste zoekt.',
-      imageUrl: '/images/products/Daiseikai 10-Hout-vooraanzicht_2_11zon.webp',
+      imageUrl: '/images/products/placeholder.txt',
       images: [
         {
-          url: '/images/products/Daiseikai 10-Hout-vooraanzicht_2_11zon.webp',
-          alt: 'Mitsubishi Heavy ZSX-W - Vooraanzicht'
-        },
-        {
-          url: '/images/products/Daiseikai 10-Hout-links-open_5_11zon.webp',
-          alt: 'Mitsubishi Heavy ZSX-W - Zijaanzicht'
+          url: '/images/products/placeholder.txt',
+          alt: 'Mitsubishi Heavy ZSX-W - Foto binnenkort beschikbaar'
         }
       ],
       price: '€1.399,- inclusief standaard installatie',
@@ -90,15 +82,11 @@ export const mitsubishiHeavyData: Brand = {
       name: 'SRF-ZMX-S Vloermodel',
       slug: 'srf-zmx-s',
       description: 'Stijlvol vloermodel met dubbele luchtuitblaas voor optimale warmteverdeling. Ideaal voor onder het raam of op zolder.',
-      imageUrl: '/images/products/toshiba-console-vloermodel-wit_13_11zon.webp',
+      imageUrl: '/images/products/placeholder.txt',
       images: [
         {
-          url: '/images/products/toshiba-console-vloermodel-wit_13_11zon.webp',
-          alt: 'Mitsubishi Heavy SRF-ZMX-S - Vooraanzicht'
-        },
-        {
-          url: '/images/products/toshiba-console-vloermodel-wit-reacht_15_11zon.webp',
-          alt: 'Mitsubishi Heavy SRF-ZMX-S - Zijaanzicht'
+          url: '/images/products/placeholder.txt',
+          alt: 'Mitsubishi Heavy SRF-ZMX-S - Foto binnenkort beschikbaar'
         }
       ],
       price: '€1.599,- inclusief standaard installatie',
