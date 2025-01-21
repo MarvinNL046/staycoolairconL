@@ -1,6 +1,6 @@
 import React from 'react';
 import { m } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import MetaTags from '../../components/MetaTags';
 import { ArrowLeft, Leaf, LineChart, Sun, Zap, ThermometerSun, Battery, PiggyBank } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -30,17 +30,37 @@ export default function CO2Reduction() {
 
   return (
     <>
-      <Helmet>
-        <title>CO2-reductie met Airconditioning | StayCool Airco</title>
-        <meta 
-          name="description" 
-          content="Ontdek hoe airconditioning kan bijdragen aan CO2-reductie. Van efficiënt verwarmen tot slim koelen, alle mogelijkheden op een rij."
-        />
-        <meta 
-          name="keywords" 
-          content="CO2 reductie, duurzame airco, energiebesparing, klimaatneutraal, groene energie, warmtepomp airco"
-        />
-      </Helmet>
+      <MetaTags
+        title="CO2-reductie met Airconditioning | StayCool Airco"
+        description="Ontdek hoe airconditioning kan bijdragen aan CO2-reductie. Van efficiënt verwarmen tot slim koelen, alle mogelijkheden op een rij."
+        keywords="CO2 reductie, duurzame airco, energiebesparing, klimaatneutraal, groene energie, warmtepomp airco"
+        canonicalUrl="https://staycoolairco.nl/kennisbank/co2-reductie"
+        type="article"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "CO2-reductie met Airconditioning",
+          "description": "Ontdek hoe airconditioning kan bijdragen aan CO2-reductie. Van efficiënt verwarmen tot slim koelen, alle mogelijkheden op een rij.",
+          "author": {
+            "@type": "Organization",
+            "name": "StayCool Airco"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "StayCool Airco",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://staycoolairco.nl/images/logo.svg"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://staycoolairco.nl/kennisbank/co2-reductie"
+          },
+          "datePublished": "2024-01-01",
+          "dateModified": new Date().toISOString().split('T')[0]
+        }}
+      />
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

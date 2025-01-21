@@ -1,6 +1,6 @@
 import React from 'react';
 import { m } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import MetaTags from '../../components/MetaTags';
 import { BarChart, ThermometerSun, Zap, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -32,17 +32,37 @@ export default function ScopSeerArticle() {
 
   return (
     <>
-      <Helmet>
-        <title>SCOP en SEER Waarden Uitgelegd | StayCool Airco</title>
-        <meta 
-          name="description" 
-          content="Begrijp SCOP en SEER waarden van airconditioners. Leer hoe deze waarden de efficiëntie bepalen en help u de beste keuze te maken."
-        />
-        <meta 
-          name="keywords" 
-          content="SCOP waarde, SEER waarde, airco efficiëntie, energielabel airco, COP airco, EER airco"
-        />
-      </Helmet>
+      <MetaTags
+        title="SCOP en SEER Waarden Uitgelegd | StayCool Airco"
+        description="Begrijp SCOP en SEER waarden van airconditioners. Leer hoe deze waarden de efficiëntie bepalen en help u de beste keuze te maken."
+        keywords="SCOP waarde, SEER waarde, airco efficiëntie, energielabel airco, COP airco, EER airco"
+        canonicalUrl="https://staycoolairco.nl/kennisbank/scop-seer-waarden"
+        type="article"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "SCOP en SEER Waarden Uitgelegd",
+          "description": "Begrijp SCOP en SEER waarden van airconditioners. Leer hoe deze waarden de efficiëntie bepalen en help u de beste keuze te maken.",
+          "author": {
+            "@type": "Organization",
+            "name": "StayCool Airco"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "StayCool Airco",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://staycoolairco.nl/images/logo.svg"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://staycoolairco.nl/kennisbank/scop-seer-waarden"
+          },
+          "datePublished": "2024-01-01",
+          "dateModified": new Date().toISOString().split('T')[0]
+        }}
+      />
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
