@@ -119,6 +119,11 @@ export default function KnowledgeBase() {
           title: 'Airco Blaast Geen Warme Lucht',
           description: 'Ontdek waarom je airco geen warme lucht blaast en hoe je dit kunt oplossen.',
           slug: 'airco-blaast-geen-warme-lucht'
+        },
+        {
+          title: 'Airco Bevriest bij Verwarmen',
+          description: 'Leer waarom je airco bevriest tijdens het verwarmen en hoe je dit voorkomt.',
+          slug: 'airco-bevriest-bij-verwarmen'
         }
       ]
     },

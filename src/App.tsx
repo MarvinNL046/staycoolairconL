@@ -45,6 +45,7 @@ const VerwarmenMetAircoErvaring = lazy(() => import('./pages/articles/VerwarmenM
 const HoeVaakAircoOnderhoud = lazy(() => import('./pages/articles/HoeVaakAircoOnderhoud'));
 const AircoBlaastGeenWarmeLucht = lazy(() => import('./pages/articles/AircoBlaastGeenWarmeLucht'));
 const WatKostEenAircoPlaatsen = lazy(() => import('./pages/articles/WatKostEenAircoPlaatsen'));
+const AircoBevriesstBijVerwarmen = lazy(() => import('./pages/articles/AircoBevriesstBijVerwarmen'));
 
 // Loading fallback component
 const LoadingFallback = () => (
@@ -97,6 +98,7 @@ export default function App() {
               <Route path="/kennisbank/hoe-vaak-airco-onderhoud" element={<HoeVaakAircoOnderhoud />} />
               <Route path="/kennisbank/airco-blaast-geen-warme-lucht" element={<AircoBlaastGeenWarmeLucht />} />
               <Route path="/kennisbank/wat-kost-een-airco-plaatsen" element={<WatKostEenAircoPlaatsen />} />
+              <Route path="/kennisbank/airco-bevriest-bij-verwarmen" element={<AircoBevriesstBijVerwarmen />} />
               </Routes>
             </Suspense>
           </AnimatePresence>
