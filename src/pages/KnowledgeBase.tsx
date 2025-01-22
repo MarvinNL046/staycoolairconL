@@ -62,6 +62,11 @@ export default function KnowledgeBase() {
           title: 'Energielabels en verbruik',
           description: 'Alles over energielabels en het verbruik van aircosystemen.',
           slug: 'energielabels'
+        },
+        {
+          title: 'Elektrische Verwarming',
+          description: 'Ontdek de voordelen van elektrische verwarming en hoe je het kunt combineren met een airco warmtepomp.',
+          slug: 'elektrische-verwarming'
         }
       ]
     },
