@@ -46,6 +46,11 @@ const HoeVaakAircoOnderhoud = lazy(() => import('./pages/articles/HoeVaakAircoOn
 const AircoBlaastGeenWarmeLucht = lazy(() => import('./pages/articles/AircoBlaastGeenWarmeLucht'));
 const WatKostEenAircoPlaatsen = lazy(() => import('./pages/articles/WatKostEenAircoPlaatsen'));
 const AircoBevriesstBijVerwarmen = lazy(() => import('./pages/articles/AircoBevriesstBijVerwarmen'));
+const AircoInHerkenbosch = lazy(() => import('./pages/articles/AircoInHerkenbosch'));
+const MitsubishiVsLgAirco = lazy(() => import('./pages/articles/MitsubishiVsLgAirco'));
+const ToshibaVsTosotAirco = lazy(() => import('./pages/articles/ToshibaVsTosotAirco'));
+const AircoLuchtfilterOnderhoud = lazy(() => import('./pages/articles/AircoLuchtfilterOnderhoud'));
+const AircoBuitenunitPlaatsing = lazy(() => import('./pages/articles/AircoBuitenunitPlaatsing'));
 
 // Loading fallback component
 const LoadingFallback = () => (
@@ -99,6 +104,11 @@ export default function App() {
               <Route path="/kennisbank/airco-blaast-geen-warme-lucht" element={<AircoBlaastGeenWarmeLucht />} />
               <Route path="/kennisbank/wat-kost-een-airco-plaatsen" element={<WatKostEenAircoPlaatsen />} />
               <Route path="/kennisbank/airco-bevriest-bij-verwarmen" element={<AircoBevriesstBijVerwarmen />} />
+              <Route path="/kennisbank/airco-in-herkenbosch" element={<AircoInHerkenbosch />} />
+              <Route path="/kennisbank/mitsubishi-vs-lg-airco" element={<MitsubishiVsLgAirco />} />
+              <Route path="/kennisbank/toshiba-vs-tosot-airco" element={<ToshibaVsTosotAirco />} />
+              <Route path="/kennisbank/airco-luchtfilter-onderhoud" element={<AircoLuchtfilterOnderhoud />} />
+              <Route path="/kennisbank/airco-buitenunit-plaatsing" element={<AircoBuitenunitPlaatsing />} />
               </Routes>
             </Suspense>
           </AnimatePresence>

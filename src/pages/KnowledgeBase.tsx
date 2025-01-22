@@ -45,6 +45,21 @@ export default function KnowledgeBase() {
           title: 'Wat Kost een Airco Plaatsen?',
           description: 'Complete prijsgids met kosten en besparingstips voor airco installatie.',
           slug: 'wat-kost-een-airco-plaatsen'
+        },
+        {
+          title: 'Airco in Herkenbosch',
+          description: 'Lokale airco service en installatie in Herkenbosch.',
+          slug: 'airco-in-herkenbosch'
+        },
+        {
+          title: 'Mitsubishi vs LG Airco',
+          description: 'Vergelijking tussen Mitsubishi en LG airconditioners.',
+          slug: 'mitsubishi-vs-lg-airco'
+        },
+        {
+          title: 'Toshiba vs Tosot Airco',
+          description: 'Vergelijking tussen Toshiba en Tosot airconditioners.',
+          slug: 'toshiba-vs-tosot-airco'
         }
       ]
     },
@@ -124,6 +139,16 @@ export default function KnowledgeBase() {
           title: 'Airco Bevriest bij Verwarmen',
           description: 'Leer waarom je airco bevriest tijdens het verwarmen en hoe je dit voorkomt.',
           slug: 'airco-bevriest-bij-verwarmen'
+        },
+        {
+          title: 'Airco Luchtfilter Onderhoud',
+          description: 'Complete gids voor het onderhouden van je airco luchtfilters.',
+          slug: 'airco-luchtfilter-onderhoud'
+        },
+        {
+          title: 'Airco Buitenunit Plaatsing',
+          description: 'Alles over de juiste plaatsing van je airco buitenunit.',
+          slug: 'airco-buitenunit-plaatsing'
         }
       ]
     },
