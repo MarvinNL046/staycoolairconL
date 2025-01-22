@@ -111,6 +111,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://staycoolairco.nl/kennisbank/airco-blaast-geen-warme-lucht</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://staycoolairco.nl/kennisbank/koudemiddelen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

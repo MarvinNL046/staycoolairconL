@@ -109,6 +109,11 @@ export default function KnowledgeBase() {
           title: 'LG Storingscode CH 24',
           description: 'Wat betekent LG storingscode CH 24 en hoe los je het op?',
           slug: 'lg-airco-storingscodes'
+        },
+        {
+          title: 'Airco Blaast Geen Warme Lucht',
+          description: 'Ontdek waarom je airco geen warme lucht blaast en hoe je dit kunt oplossen.',
+          slug: 'airco-blaast-geen-warme-lucht'
         }
       ]
     },
