@@ -119,7 +119,7 @@ export default function Navbar() {
             </a>
           </div>
 
-          <div className="md:hidden flex items-center space-x-4">
+          <div className="md:hidden flex items-center space-x-4 relative z-50">
             <a 
               href="https://afspraken.staycoolairco.nl"
               target="_blank"
@@ -132,8 +132,8 @@ export default function Navbar() {
             </a>
             <button 
               onClick={() => setIsOpen(!isOpen)} 
-              className={`transition-colors duration-300 ${
-                isScrolled || !isHomePage || isOpen ? 'text-gray-700' : 'text-white'
+              className={`inline-flex items-center justify-center transition-colors duration-300 ${
+                isScrolled || !isHomePage || isOpen ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-white/90'
               }`}
               aria-label="Toggle menu"
             >
@@ -145,11 +145,11 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div 
-        className={`md:hidden fixed inset-x-0 top-[64px] transition-transform duration-200 ${
-          isOpen ? 'translate-y-0' : '-translate-y-full'
+        className={`md:hidden fixed inset-x-0 top-[64px] z-40 transition-all duration-200 ${
+          isOpen ? 'translate-y-0 opacity-100 visible' : 'translate-y-2 opacity-0 invisible'
         }`}
       >
-        <div className="px-4 pt-2 pb-3 space-y-2 bg-white/95 backdrop-blur-md shadow-lg">
+        <div className="px-4 pt-2 pb-3 space-y-2 bg-white shadow-lg">
           <Link 
             to="/"
             className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-blue-600 active:bg-gray-50"
