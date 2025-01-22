@@ -10,7 +10,8 @@ const ElektrischeVerwarming = () => {
       author="StayCool Airconditioning"
       tags={['Verwarming', 'Duurzaamheid', 'Energiebesparing', 'Warmtepomp']}
     >
-      <h2 id="inleiding">Inleiding</h2>
+      <section className="prose prose-lg max-w-none">
+        <h2 id="inleiding">Inleiding</h2>
       <p><strong>Elektrische verwarming</strong> is de laatste jaren steeds populairder geworden. Door de groeiende aandacht voor duurzaamheid en de energietransitie zoeken veel huishoudens naar alternatieven voor traditionele gasgestookte cv-ketels. Elektrisch verwarmen, eventueel in combinatie met een airco warmtepomp, biedt een efficiënte en toekomstbestendige oplossing. In dit artikel lees je waarom elektrisch verwarmen een slimme keuze is, wat de voordelen zijn en hoe je het kunt combineren met airconditioning.</p>
 
       <h2 id="wat-is-elektrische-verwarming">Wat is elektrische verwarming?</h2>
@@ -126,6 +127,7 @@ const ElektrischeVerwarming = () => {
       <h2 id="conclusie">Conclusie</h2>
       <p><strong>Elektrische verwarming</strong> is een toekomstgerichte keuze die goed past in de huidige energietransitie. Het is duurzaam, flexibel en kan – vooral wanneer je kiest voor een airco warmtepomp – een hoog rendement opleveren. Of je nu je huidige verwarmingssysteem wilt aanvullen of volledig wilt overstappen op elektrische verwarming: met de juiste airco kun je zowel koelen als verwarmen in één efficiënt systeem.</p>
       <p>Heb je vragen of wil je vrijblijvend advies? Bezoek onze <a href="/">homepage</a> voor meer informatie, bekijk ons aanbod op de <a href="/products">products-pagina</a> of neem direct <a href="/contact">contact</a> met ons op. Wij denken graag met je mee!</p>
+      </section>
     </ArticleLayout>
   );
 };
