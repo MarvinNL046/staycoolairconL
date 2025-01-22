@@ -40,6 +40,11 @@ export default function KnowledgeBase() {
           title: 'Het Coanda Effect',
           description: 'Hoe het Coanda effect zorgt voor optimale luchtverdeling.',
           slug: 'coanda-effect'
+        },
+        {
+          title: 'Wat Kost een Airco Plaatsen?',
+          description: 'Complete prijsgids met kosten en besparingstips voor airco installatie.',
+          slug: 'wat-kost-een-airco-plaatsen'
         }
       ]
     },
