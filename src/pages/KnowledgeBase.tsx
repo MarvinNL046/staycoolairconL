@@ -54,6 +54,11 @@ export default function KnowledgeBase() {
           slug: 'verwarmen-met-airco'
         },
         {
+          title: 'Verwarmen met Airco Ervaringen',
+          description: 'Ontdek echte ervaringen met het verwarmen met airco en wat je kunt verwachten.',
+          slug: 'verwarmen-met-airco-ervaring'
+        },
+        {
           title: 'Terugleverkosten voorkomen',
           description: 'Optimaal gebruik van zonnepanelen in combinatie met airco.',
           slug: 'terugleverkosten-voorkomen'

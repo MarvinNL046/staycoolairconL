@@ -76,6 +76,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://staycoolairco.nl/kennisbank/verwarmen-met-airco-ervaring</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://staycoolairco.nl/kennisbank/terugleverkosten-voorkomen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
