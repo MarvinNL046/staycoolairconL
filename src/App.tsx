@@ -42,6 +42,7 @@ const StoringscodeGids = lazy(() => import('./pages/articles/StoringscodeGids'))
 const LGStoringscode = lazy(() => import('./pages/articles/LGStoringscode'));
 const ElektrischeVerwarming = lazy(() => import('./pages/articles/ElektrischeVerwarming'));
 const VerwarmenMetAircoErvaring = lazy(() => import('./pages/articles/VerwarmenMetAircoErvaring'));
+const HoeVaakAircoOnderhoud = lazy(() => import('./pages/articles/HoeVaakAircoOnderhoud'));
 
 // Loading fallback component
 const LoadingFallback = () => (
@@ -91,6 +92,7 @@ export default function App() {
               <Route path="/lg-airco-storingscodes" element={<LGStoringscode />} />
               <Route path="/kennisbank/elektrische-verwarming" element={<ElektrischeVerwarming />} />
               <Route path="/kennisbank/verwarmen-met-airco-ervaring" element={<VerwarmenMetAircoErvaring />} />
+              <Route path="/kennisbank/hoe-vaak-airco-onderhoud" element={<HoeVaakAircoOnderhoud />} />
               </Routes>
             </Suspense>
           </AnimatePresence>

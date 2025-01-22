@@ -96,6 +96,11 @@ export default function KnowledgeBase() {
           slug: 'onderhoudsschema'
         },
         {
+          title: 'Hoe Vaak Airco Onderhoud?',
+          description: 'Complete gids over onderhoudsfrequentie en wat er bij komt kijken.',
+          slug: 'hoe-vaak-airco-onderhoud'
+        },
+        {
           title: 'Airco Storingscodes',
           description: 'Complete gids voor het begrijpen en oplossen van storingscodes.',
           slug: 'storingscodes'
