@@ -80,10 +80,10 @@ const WatKostEenAircoPlaatsen = () => {
 
   return (
     <ArticleLayout
-      title="Wat Kost een Airco Plaatsen? Complete Prijsgids 2024"
-      description="Ontdek wat een airco plaatsen kost in 2024. Van budget tot premium oplossingen - alle kosten en mogelijkheden op een rij."
-      publishDate="2024-01-17"
-      modifiedDate="2024-01-17"
+      title="Wat Kost een Airco Plaatsen? Complete Prijsgids 2025"
+      description="Ontdek wat een airco plaatsen kost in 2025. Van budget tot premium oplossingen - alle kosten en mogelijkheden op een rij."
+      publishDate="2025-01-22"
+      modifiedDate="2025-01-22"
       author="StayCool Airconditioning"
       tags={['Kosten', 'Installatie', 'Prijzen', 'Advies']}
     >
@@ -109,7 +109,7 @@ const WatKostEenAircoPlaatsen = () => {
           <div className="flex items-start">
             <Euro className="h-6 w-6 text-blue-600 mr-3 mt-1" />
             <div>
-              <h3 className="text-blue-900 mt-0 mb-2">Snelle Prijsindicatie 2024</h3>
+              <h3 className="text-blue-900 mt-0 mb-2">Snelle Prijsindicatie 2025</h3>
               <p className="m-0 text-blue-800">
                 Een complete airco-installatie kost gemiddeld tussen de €1.000 en €4.000, 
                 afhankelijk van type, merk en installatiewerk. Bekijk hieronder de 

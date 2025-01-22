@@ -72,8 +72,8 @@ const AircoBlaastGeenWarmeLucht = () => {
     <ArticleLayout
       title="Airco Blaast Geen Warme Lucht? Oorzaken & Oplossingen"
       description="Ontdek waarom je airco geen warme lucht blaast en hoe je dit kunt oplossen. Van snelle checks tot professionele diagnose - alle oplossingen op een rij."
-      publishDate="2024-01-17"
-      modifiedDate="2024-01-17"
+      publishDate="2025-01-22"
+      modifiedDate="2025-01-22"
       author="StayCool Airconditioning"
       tags={['Problemen', 'Verwarming', 'Onderhoud', 'Troubleshooting']}
     >
