@@ -70,6 +70,12 @@ export default function Navbar() {
               Producten
             </Link>
             <Link 
+              to="/capaciteit-calculator" 
+              className={`transition-colors duration-300 ${getLinkColor()}`}
+            >
+              Capaciteit Calculator
+            </Link>
+            <Link 
               to="/onderhoud" 
               className={`transition-colors duration-300 ${getLinkColor()}`}
             >
@@ -163,6 +169,13 @@ export default function Navbar() {
             onClick={() => setIsOpen(false)}
           >
             Producten
+          </Link>
+          <Link 
+            to="/capaciteit-calculator"
+            className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-blue-600 active:bg-gray-50"
+            onClick={() => setIsOpen(false)}
+          >
+            Capaciteit Calculator
           </Link>
           <Link 
             to="/onderhoud"

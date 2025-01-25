@@ -51,6 +51,7 @@ const MitsubishiVsLgAirco = lazy(() => import('./pages/articles/MitsubishiVsLgAi
 const ToshibaVsTosotAirco = lazy(() => import('./pages/articles/ToshibaVsTosotAirco'));
 const AircoLuchtfilterOnderhoud = lazy(() => import('./pages/articles/AircoLuchtfilterOnderhoud'));
 const AircoBuitenunitPlaatsing = lazy(() => import('./pages/articles/AircoBuitenunitPlaatsing'));
+const CapacityCalculator = lazy(() => import('./pages/CapacityCalculator'));
 
 // Loading fallback component
 const LoadingFallback = () => (
@@ -109,6 +110,7 @@ export default function App() {
               <Route path="/kennisbank/toshiba-vs-tosot-airco" element={<ToshibaVsTosotAirco />} />
               <Route path="/kennisbank/airco-luchtfilter-onderhoud" element={<AircoLuchtfilterOnderhoud />} />
               <Route path="/kennisbank/airco-buitenunit-plaatsing" element={<AircoBuitenunitPlaatsing />} />
+              <Route path="/capaciteit-calculator" element={<CapacityCalculator />} />
               </Routes>
             </Suspense>
           </AnimatePresence>
