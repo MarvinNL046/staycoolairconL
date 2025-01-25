@@ -21,8 +21,8 @@ export default function CapacityCalculator() {
   const [result, setResult] = useState<number | null>(null);
 
   const calculateCapacity = () => {
-    // Base calculation: 30W per m² (average)
-    let baseCapacity = inputs.roomSize * 30;
+    // Base calculation: 100W per m² (minimum requirement)
+    let baseCapacity = inputs.roomSize * 100;
 
     // Sun exposure adjustments
     const sunFactor = {
@@ -155,7 +155,7 @@ export default function CapacityCalculator() {
             <h3 className="text-lg font-semibold mb-2">Aanbevolen Capaciteit</h3>
             <p className="text-2xl font-bold text-blue-600">{result} kW</p>
             <p className="mt-2 text-sm text-gray-600">
-              Dit is een schatting gebaseerd op de ingevoerde gegevens. Voor een exacte berekening kunt u contact met ons opnemen.
+              Dit is een minimale schatting gebaseerd op 100 watt per vierkante meter. Voor een exacte berekening kunt u contact met ons opnemen.
             </p>
           </motion.div>
         )}
