@@ -123,6 +123,7 @@ export default function Navbar() {
             >
               <Calendar className="h-4 w-4 mr-2" />
               Plan afspraak
+              <span className="ml-2 text-sm opacity-75">(coming soon)</span>
             </a>
             <a 
               href="tel:0462021430" 
@@ -228,6 +229,7 @@ export default function Navbar() {
           >
             <Calendar className="h-4 w-4 inline mr-2" />
             Plan afspraak
+            <span className="ml-2 text-sm opacity-75">(coming soon)</span>
           </a>
           <a 
             href="tel:0462021430" 

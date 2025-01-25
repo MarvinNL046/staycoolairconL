@@ -88,6 +88,7 @@ export default function Hero() {
               >
                 <Calendar className="h-5 w-5 mr-2" />
                 Direct inplannen
+                <span className="ml-2 text-sm text-blue-700">(coming soon: zelf eenvoudig online inplannen)</span>
               </a>
               <a
                 href="tel:0462021430"
