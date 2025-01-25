@@ -65,23 +65,48 @@ function generateSitemap(files) {
       const isArticle = url.includes('/kennisbank/');
       // Remove domain from URL for main page check
       const urlPath = url.replace('https://staycoolairco.nl', '');
-      const isMainPage = ['/', '/products', '/airco-covers', '/contact'].includes(urlPath);
-      let priority = '0.8';
-      let changefreq = 'monthly';
-
-      if (isMainPage) {
-        priority = '0.9';
-        changefreq = 'weekly';
-      } else if (isArticle) {
-        priority = '0.7';
-        changefreq = 'monthly';
+      // Define main pages and pages to skip
+      const mainPages = ['/', '/products', '/airco-covers', '/werkgebied', '/contact'];
+      const isMainPage = mainPages.includes(urlPath);
+      
+      // Skip pages that don't exist
+      const skipPages = [
+        '/brand-detail',
+        '/common-problems',
+        '/home',
+        '/knowledge-base',
+        '/maintenance-procedures',
+        '/privacy',
+        '/product-detail',
+        '/product-example',
+        '/service-area',
+        '/terms'
+      ];
+      
+      // Handle path mapping
+      let finalPath = urlPath;
+      let finalUrl = url;
+      if (urlPath === '/service-area') {
+        finalPath = '/werkgebied';
+        finalUrl = 'https://staycoolairco.nl/werkgebied';
       }
 
-      // Skip dynamic route pages that shouldn't be in sitemap
-      if (!url.includes('[') && !url.includes(']')) {
+      // Only include if page exists and isn't dynamic
+      if ((!skipPages.includes(finalPath) || mainPages.includes(finalPath)) && !finalUrl.includes('[') && !finalUrl.includes(']')) {
+        let priority = '0.8';
+        let changefreq = 'monthly';
+
+        if (isMainPage) {
+          priority = '0.9';
+          changefreq = 'weekly';
+        } else if (isArticle) {
+          priority = '0.7';
+          changefreq = 'monthly';
+        }
+
         sitemap += `
   <url>
-    <loc>${url}</loc>
+    <loc>${finalUrl}</loc>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`;
