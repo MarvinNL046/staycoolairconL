@@ -5,7 +5,6 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
-Disallow: /onderhoud-procedures/
 
 # Allow CSS, JS, and Images
 Allow: /*.css$
@@ -22,3 +21,4 @@ Crawl-delay: 10
 
 # Sitemaps
 Sitemap: https://staycoolairco.nl/sitemap.xml
+Sitemap: https://staycoolairco.nl/service-areas-sitemap.xml
