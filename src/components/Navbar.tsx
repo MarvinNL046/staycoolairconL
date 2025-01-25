@@ -63,18 +63,30 @@ export default function Navbar() {
             >
               Home
             </Link>
-            <Link 
-              to="/products" 
-              className={`transition-colors duration-300 ${getLinkColor()}`}
-            >
-              Producten
-            </Link>
-            <Link 
-              to="/capaciteit-calculator" 
-              className={`transition-colors duration-300 ${getLinkColor()}`}
-            >
-              Capaciteit Calculator
-            </Link>
+            <div className="relative group">
+              <Link 
+                to="/products" 
+                className={`transition-colors duration-300 ${getLinkColor()}`}
+              >
+                Producten
+              </Link>
+              <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-lg shadow-lg">
+                <div className="py-2">
+                  <Link 
+                    to="/products"
+                    className="block px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  >
+                    Alle Producten
+                  </Link>
+                  <Link 
+                    to="/capaciteit-calculator"
+                    className="block px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  >
+                    Capaciteit Calculator
+                  </Link>
+                </div>
+              </div>
+            </div>
             <Link 
               to="/onderhoud" 
               className={`transition-colors duration-300 ${getLinkColor()}`}
@@ -163,20 +175,22 @@ export default function Navbar() {
           >
             Home
           </Link>
-          <Link 
-            to="/products"
-            className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-blue-600 active:bg-gray-50"
-            onClick={() => setIsOpen(false)}
-          >
-            Producten
-          </Link>
-          <Link 
-            to="/capaciteit-calculator"
-            className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-blue-600 active:bg-gray-50"
-            onClick={() => setIsOpen(false)}
-          >
-            Capaciteit Calculator
-          </Link>
+          <div className="space-y-1">
+            <Link 
+              to="/products"
+              className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-blue-600 active:bg-gray-50"
+              onClick={() => setIsOpen(false)}
+            >
+              Alle Producten
+            </Link>
+            <Link 
+              to="/capaciteit-calculator"
+              className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-blue-600 active:bg-gray-50 ml-4"
+              onClick={() => setIsOpen(false)}
+            >
+              Capaciteit Calculator
+            </Link>
+          </div>
           <Link 
             to="/onderhoud"
             className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-blue-600 active:bg-gray-50"
