@@ -37,8 +37,48 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="text-white text-lg font-semibold">Links</h3>
+            <h3 className="text-white text-lg font-semibold">Producten</h3>
             <ul className="mt-4 space-y-2">
+              <li>
+                <Link to="/products" className="text-gray-400 hover:text-white">
+                  Alle Airco's
+                </Link>
+              </li>
+              <li>
+                <Link to="/capaciteit-calculator" className="text-gray-400 hover:text-white">
+                  Capaciteit Calculator
+                </Link>
+              </li>
+              <li>
+                <Link to="/werkgebied" className="text-gray-400 hover:text-white">
+                  Werkgebied
+                </Link>
+              </li>
+              <li>
+                <Link to="/onderhoud" className="text-gray-400 hover:text-white">
+                  Onderhoud
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-white text-lg font-semibold">Informatie</h3>
+            <ul className="mt-4 space-y-2">
+              <li>
+                <Link to="/kennisbank" className="text-gray-400 hover:text-white">
+                  Kennisbank
+                </Link>
+              </li>
+              <li>
+                <Link to="/kennisbank/hoe-werkt-airco" className="text-gray-400 hover:text-white">
+                  Hoe werkt airco?
+                </Link>
+              </li>
+              <li>
+                <Link to="/kennisbank/verwarmen-met-airco" className="text-gray-400 hover:text-white">
+                  Verwarmen met airco
+                </Link>
+              </li>
               <li>
                 <Link to="/voorwaarden" className="text-gray-400 hover:text-white">
                   Algemene Voorwaarden
@@ -47,21 +87,6 @@ export default function Footer() {
               <li>
                 <Link to="/privacy" className="text-gray-400 hover:text-white">
                   Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link to="/kennisbank" className="text-gray-400 hover:text-white">
-                  Kennisbank
-                </Link>
-              </li>
-              <li>
-                <Link to="/onderhoud-procedures" className="text-gray-400 hover:text-white">
-                  Onderhoudsprocedures
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-400 hover:text-white">
-                  Contact
                 </Link>
               </li>
             </ul>
@@ -77,6 +102,7 @@ export default function Footer() {
               >
                 <Calendar className="h-5 w-5 mr-2" />
                 Direct inplannen
+                <span className="ml-2 text-sm opacity-75">(coming soon)</span>
               </a>
               <Link
                 to="/contact"
