@@ -39,9 +39,11 @@ function filePathToUrl(filePath) {
   // Convert PascalCase to kebab-case
   url = url.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
-  // Special handling for articles
+  // Special handling for articles and calculator
   if (url.startsWith('articles/')) {
     url = url.replace('articles/', 'kennisbank/');
+  } else if (url === 'capacity-calculator') {
+    url = 'capaciteit-calculator';
   }
 
   return `https://staycoolairco.nl/${url}`;
