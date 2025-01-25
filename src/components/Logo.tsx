@@ -9,7 +9,7 @@ interface LogoProps {
 export default function Logo({ className = "h-12 w-auto", style, inverted }: LogoProps) {
   return (
     <img 
-      src={inverted ? "/images/logo-white.svg" : "/images/logo.svg"}
+      src="/images/staycoolairco_logo.png"
       alt="StayCool Airconditioning" 
       className={className}
       style={{
