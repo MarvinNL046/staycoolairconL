@@ -10,17 +10,17 @@ const generateSrcSet = (src: string): string | undefined => {
   if (!src.includes('/images/')) return undefined;
 
   const sizes = [320, 640, 960, 1280];
-  const extension = src.split('.').pop();
+  const extension = src.split('.').pop() || '';
   const basePath = src.substring(0, src.lastIndexOf('.'));
 
   // Generate srcset with both original format and WebP
-  return sizes
-    .map(size => {
-      const originalSrc = `${basePath}-${size}.${extension} ${size}w`;
-      const webpSrc = `${basePath}-${size}.webp ${size}w`;
-      return `${originalSrc}, ${webpSrc}`;
-    })
-    .join(', ');
+  const srcSetParts = sizes.map(size => {
+    const originalSrc = `${basePath}-${size}.${extension}`;
+    const webpSrc = `${basePath}-${size}.webp`;
+    return `${originalSrc} ${size}w, ${webpSrc} ${size}w`;
+  });
+
+  return srcSetParts.join(', ');
 };
 
 // Helper function to generate sizes attribute
@@ -28,7 +28,7 @@ const generateSizes = (width: number | string): string => {
   if (typeof width === 'number') {
     return `(max-width: ${width}px) 100vw, ${width}px`;
   }
-  return '100vw';
+  return '(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw';
 };
 
 interface LazyImageProps {
@@ -37,7 +37,7 @@ interface LazyImageProps {
   className?: string;
   width: number | string;
   height: number | string;
-  priority?: boolean; // Add priority loading for above-the-fold images
+  priority?: boolean;
 }
 
 export default function LazyImage({ 
@@ -49,6 +49,8 @@ export default function LazyImage({
   priority = false
 }: LazyImageProps) {
   const [error, setError] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+
   // Handle different image sources
   const imageUrl = src.includes('unsplash.com')
     ? `${src}&auto=format&q=80&w=1280&fit=crop`
@@ -57,7 +59,7 @@ export default function LazyImage({
   // Generate tiny placeholder for blur effect
   const placeholderUrl = src.includes('unsplash.com')
     ? `${src}&auto=format&q=10&w=50&blur=20`
-    : `${src}?w=50&q=10`; // Assuming we have image processing setup for local images
+    : src; // Use original image as placeholder for local images
 
   // Generate srcset for responsive images
   const srcSet = generateSrcSet(src);
@@ -70,6 +72,7 @@ export default function LazyImage({
     display: 'block',
     backgroundColor: '#f3f4f6', // Light gray placeholder
     overflow: 'hidden',
+    position: 'relative',
   };
 
   return (
@@ -79,21 +82,29 @@ export default function LazyImage({
           <span className="text-sm">Afbeelding niet beschikbaar</span>
         </div>
       ) : (
-        <LazyLoadImage
-          src={imageUrl}
-          alt={alt}
-          effect="blur"
-          className={`${className} object-cover w-full h-full`}
-          loading={priority ? 'eager' : 'lazy'}
-          width="100%"
-          height="100%"
-          placeholderSrc={placeholderUrl}
-          wrapperClassName="w-full h-full"
-          srcSet={srcSet}
-          sizes={sizes}
-          onError={() => setError(true)}
-          threshold={300} // Start loading when image is 300px from viewport
-        />
+        <>
+          <LazyLoadImage
+            src={imageUrl}
+            alt={alt}
+            effect="blur"
+            className={`${className} object-cover w-full h-full transition-opacity duration-300 ${
+              loaded ? 'opacity-100' : 'opacity-0'
+            }`}
+            loading={priority ? 'eager' : 'lazy'}
+            width="100%"
+            height="100%"
+            placeholderSrc={placeholderUrl}
+            wrapperClassName="w-full h-full"
+            srcSet={srcSet}
+            sizes={sizes}
+            onError={() => setError(true)}
+            afterLoad={() => setLoaded(true)}
+            threshold={300}
+          />
+          {!loaded && !error && (
+            <div className="absolute inset-0 bg-gray-100 animate-pulse" />
+          )}
+        </>
       )}
     </div>
   );

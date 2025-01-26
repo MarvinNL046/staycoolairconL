@@ -1,47 +1,26 @@
 {
-  "name": "StayCool Airco - Airconditioning Specialist Limburg",
-  "short_name": "StayCool Airco",
-  "description": "Specialist in airco installatie en onderhoud in Limburg. Erkend F-gassen installateur voor Heerlen, Weert, Roermond en omgeving.",
+  "name": "StayCool Airco",
+  "short_name": "StayCool",
+  "description": "Airco specialist in Limburg voor installatie en onderhoud",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2563eb",
   "icons": [
     {
-      "src": "/images/favicon.png",
-      "sizes": "48x48",
-      "type": "image/png",
-      "purpose": "any"
+      "src": "/images/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
     },
     {
-      "src": "/images/favicon.png",
-      "sizes": "72x72",
-      "type": "image/png",
-      "purpose": "any"
+      "src": "/images/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
     },
     {
-      "src": "/images/favicon.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/images/favicon.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/images/favicon.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/images/favicon.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "any"
+      "src": "/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
     },
     {
       "src": "/images/favicon.png",
@@ -50,16 +29,23 @@
       "purpose": "any maskable"
     }
   ],
-  "content_security_policy": {
-    "default-src": ["'self'"],
-    "script-src": ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https://www.google-analytics.com", "https://www.googletagmanager.com"],
-    "style-src": ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-    "img-src": ["'self'", "data:", "https:", "blob:"],
-    "font-src": ["'self'", "data:", "https://fonts.gstatic.com"],
-    "connect-src": ["'self'", "https:"],
-    "frame-src": ["'self'", "https://www.google.com", "https://www.googletagmanager.com"],
-    "object-src": ["'none'"],
-    "worker-src": ["'self'", "blob:"],
-    "manifest-src": ["'self'"]
-  }
+  "orientation": "portrait",
+  "categories": ["business", "utilities"],
+  "lang": "nl",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "Capaciteit Calculator",
+      "url": "/capaciteit-calculator",
+      "description": "Bereken de benodigde airco capaciteit"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact",
+      "description": "Neem contact met ons op"
+    }
+  ]
 }

@@ -1,6 +1,6 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import ScrollToTop from './components/ScrollToTop';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { ErrorBoundary } from 'react-error-boundary';
 import Navbar from './components/Navbar';
@@ -10,6 +10,7 @@ import CookieConsent from './components/CookieConsent';
 import ErrorFallback from './components/ErrorFallback';
 import BackToTop from './components/BackToTop';
 import SkipToContent from './components/SkipToContent';
+import WebVitalsReporter from './components/WebVitalsReporter';
 
 // Lazy load all pages
 const Home = lazy(() => import('./pages/Home'));
@@ -53,16 +54,65 @@ const AircoLuchtfilterOnderhoud = lazy(() => import('./pages/articles/AircoLucht
 const AircoBuitenunitPlaatsing = lazy(() => import('./pages/articles/AircoBuitenunitPlaatsing'));
 const CapacityCalculator = lazy(() => import('./pages/CapacityCalculator'));
 
-// Loading fallback component
+// Loading fallback component with skeleton UI
 const LoadingFallback = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+  <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="space-y-8 w-full max-w-7xl mx-auto px-4">
+      {/* Skeleton header */}
+      <div className="h-8 bg-gray-200 rounded w-1/3 animate-pulse"></div>
+      {/* Skeleton content */}
+      <div className="space-y-4">
+        <div className="h-4 bg-gray-200 rounded w-full animate-pulse"></div>
+        <div className="h-4 bg-gray-200 rounded w-5/6 animate-pulse"></div>
+        <div className="h-4 bg-gray-200 rounded w-4/6 animate-pulse"></div>
+      </div>
+    </div>
   </div>
 );
 
+// Preload critical routes
+const preloadCriticalRoutes = () => {
+  // Preload home page
+  const preloadHome = () => import('./pages/Home');
+  // Preload products page
+  const preloadProducts = () => import('./pages/Products');
+  
+  // Start preloading after initial render
+  setTimeout(() => {
+    preloadHome();
+    preloadProducts();
+  }, 1000);
+};
+
 export default function App() {
+  const location = useLocation();
+
+  // Preload critical routes after initial render
+  useEffect(() => {
+    preloadCriticalRoutes();
+  }, []);
+
+  // Preload next likely routes based on current route
+  useEffect(() => {
+    const path = location.pathname;
+    
+    if (path === '/') {
+      // On home page, preload products and contact
+      import('./pages/Products');
+      import('./pages/Contact');
+    } else if (path.startsWith('/products')) {
+      // On products page, preload product detail
+      import('./pages/ProductDetail');
+    } else if (path.startsWith('/kennisbank')) {
+      // On knowledge base, preload common articles
+      import('./pages/articles/HoeWerktAirco');
+      import('./pages/articles/SoortenAirco');
+    }
+  }, [location]);
+
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <WebVitalsReporter />
       <div className="min-h-screen bg-white">
         <ScrollToTop />
         <SkipToContent />
@@ -71,46 +121,46 @@ export default function App() {
           <AnimatePresence mode="wait">
             <Suspense fallback={<LoadingFallback />}>
               <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/products" element={<Products />} />
-              <Route path="/products/airco-covers" element={<AircoCovers />} />
-              <Route path="/products/:brand" element={<BrandDetail />} />
-              <Route path="/products/:brand/:model" element={<ProductDetail />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/werkgebied" element={<ServiceArea />} />
-              <Route path="/kennisbank" element={<KnowledgeBase />} />
-              <Route path="/voorwaarden" element={<Terms />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/onderhoud" element={<MaintenanceProcedures />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/products" element={<Products />} />
+                <Route path="/products/airco-covers" element={<AircoCovers />} />
+                <Route path="/products/:brand" element={<BrandDetail />} />
+                <Route path="/products/:brand/:model" element={<ProductDetail />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/werkgebied" element={<ServiceArea />} />
+                <Route path="/kennisbank" element={<KnowledgeBase />} />
+                <Route path="/voorwaarden" element={<Terms />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/onderhoud" element={<MaintenanceProcedures />} />
 
-              {/* Knowledge Base Articles */}
-              <Route path="/kennisbank/hoe-werkt-airco" element={<HoeWerktAirco />} />
-              <Route path="/kennisbank/soorten-airco" element={<SoortenAirco />} />
-              <Route path="/kennisbank/split-vs-mono-systemen" element={<SplitVsMonoSystemen />} />
-              <Route path="/kennisbank/scop-seer-waarden" element={<ScopSeerWaarden />} />
-              <Route path="/kennisbank/coanda-effect" element={<CoandaEffect />} />
-              <Route path="/kennisbank/verwarmen-met-airco" element={<VerwarmenMetAirco />} />
-              <Route path="/kennisbank/terugleverkosten-voorkomen" element={<TerugleverKostenVoorkomen />} />
-              <Route path="/kennisbank/energielabels" element={<Energielabels />} />
-              <Route path="/kennisbank/onderhoudstips" element={<Onderhoudstips />} />
-              <Route path="/kennisbank/veelvoorkomende-problemen" element={<VeelvoorkendeProblemen />} />
-              <Route path="/kennisbank/onderhoudsschema" element={<Onderhoudsschema />} />
-              <Route path="/kennisbank/koudemiddelen" element={<Koudemiddelen />} />
-              <Route path="/kennisbank/co2-reductie" element={<CO2Reductie />} />
-              <Route path="/kennisbank/storingscodes" element={<StoringscodeGids />} />
-              <Route path="/lg-airco-storingscodes" element={<LGStoringscode />} />
-              <Route path="/kennisbank/elektrische-verwarming" element={<ElektrischeVerwarming />} />
-              <Route path="/kennisbank/verwarmen-met-airco-ervaring" element={<VerwarmenMetAircoErvaring />} />
-              <Route path="/kennisbank/hoe-vaak-airco-onderhoud" element={<HoeVaakAircoOnderhoud />} />
-              <Route path="/kennisbank/airco-blaast-geen-warme-lucht" element={<AircoBlaastGeenWarmeLucht />} />
-              <Route path="/kennisbank/wat-kost-een-airco-plaatsen" element={<WatKostEenAircoPlaatsen />} />
-              <Route path="/kennisbank/airco-bevriest-bij-verwarmen" element={<AircoBevriesstBijVerwarmen />} />
-              <Route path="/kennisbank/airco-in-herkenbosch" element={<AircoInHerkenbosch />} />
-              <Route path="/kennisbank/mitsubishi-vs-lg-airco" element={<MitsubishiVsLgAirco />} />
-              <Route path="/kennisbank/toshiba-vs-tosot-airco" element={<ToshibaVsTosotAirco />} />
-              <Route path="/kennisbank/airco-luchtfilter-onderhoud" element={<AircoLuchtfilterOnderhoud />} />
-              <Route path="/kennisbank/airco-buitenunit-plaatsing" element={<AircoBuitenunitPlaatsing />} />
-              <Route path="/capaciteit-calculator" element={<CapacityCalculator />} />
+                {/* Knowledge Base Articles */}
+                <Route path="/kennisbank/hoe-werkt-airco" element={<HoeWerktAirco />} />
+                <Route path="/kennisbank/soorten-airco" element={<SoortenAirco />} />
+                <Route path="/kennisbank/split-vs-mono-systemen" element={<SplitVsMonoSystemen />} />
+                <Route path="/kennisbank/scop-seer-waarden" element={<ScopSeerWaarden />} />
+                <Route path="/kennisbank/coanda-effect" element={<CoandaEffect />} />
+                <Route path="/kennisbank/verwarmen-met-airco" element={<VerwarmenMetAirco />} />
+                <Route path="/kennisbank/terugleverkosten-voorkomen" element={<TerugleverKostenVoorkomen />} />
+                <Route path="/kennisbank/energielabels" element={<Energielabels />} />
+                <Route path="/kennisbank/onderhoudstips" element={<Onderhoudstips />} />
+                <Route path="/kennisbank/veelvoorkomende-problemen" element={<VeelvoorkendeProblemen />} />
+                <Route path="/kennisbank/onderhoudsschema" element={<Onderhoudsschema />} />
+                <Route path="/kennisbank/koudemiddelen" element={<Koudemiddelen />} />
+                <Route path="/kennisbank/co2-reductie" element={<CO2Reductie />} />
+                <Route path="/kennisbank/storingscodes" element={<StoringscodeGids />} />
+                <Route path="/lg-airco-storingscodes" element={<LGStoringscode />} />
+                <Route path="/kennisbank/elektrische-verwarming" element={<ElektrischeVerwarming />} />
+                <Route path="/kennisbank/verwarmen-met-airco-ervaring" element={<VerwarmenMetAircoErvaring />} />
+                <Route path="/kennisbank/hoe-vaak-airco-onderhoud" element={<HoeVaakAircoOnderhoud />} />
+                <Route path="/kennisbank/airco-blaast-geen-warme-lucht" element={<AircoBlaastGeenWarmeLucht />} />
+                <Route path="/kennisbank/wat-kost-een-airco-plaatsen" element={<WatKostEenAircoPlaatsen />} />
+                <Route path="/kennisbank/airco-bevriest-bij-verwarmen" element={<AircoBevriesstBijVerwarmen />} />
+                <Route path="/kennisbank/airco-in-herkenbosch" element={<AircoInHerkenbosch />} />
+                <Route path="/kennisbank/mitsubishi-vs-lg-airco" element={<MitsubishiVsLgAirco />} />
+                <Route path="/kennisbank/toshiba-vs-tosot-airco" element={<ToshibaVsTosotAirco />} />
+                <Route path="/kennisbank/airco-luchtfilter-onderhoud" element={<AircoLuchtfilterOnderhoud />} />
+                <Route path="/kennisbank/airco-buitenunit-plaatsing" element={<AircoBuitenunitPlaatsing />} />
+                <Route path="/capaciteit-calculator" element={<CapacityCalculator />} />
               </Routes>
             </Suspense>
           </AnimatePresence>
