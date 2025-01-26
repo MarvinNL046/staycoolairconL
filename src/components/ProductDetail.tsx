@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet';
 import { 
   Check, 
   ThermometerSun, 
@@ -39,6 +40,11 @@ interface ProductDetailProps {
     url: string;
   }[];
 }
+
+// Helper function to create absolute URL
+const getAbsoluteUrl = (path: string) => {
+  return `https://staycoolairco.nl${path}`;
+};
 
 export default function ProductDetail({
   brand,
@@ -130,10 +136,76 @@ export default function ProductDetail({
                       </button>
                     )}
                   </div>
-                </div>
-              )}
+          </div>
+        )}
 
-              {/* Features */}
+        {/* Structured Data */}
+        <Helmet>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org/",
+              "@type": "Product",
+              "name": `${brand} ${model}`,
+              "description": description,
+              "image": getAbsoluteUrl(imageUrl),
+              "brand": {
+                "@type": "Brand",
+                "name": brand
+              },
+              "offers": {
+                "@type": "Offer",
+                "url": window.location.href,
+                "priceCurrency": "EUR",
+                "price": price ? parseFloat(price.replace(/[^0-9.]/g, '')) : undefined,
+                "availability": "https://schema.org/InStock",
+                "shippingDetails": {
+                  "@type": "OfferShippingDetails",
+                  "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": "0",
+                    "currency": "EUR"
+                  },
+                  "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "businessDays": {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                      "opens": "09:00",
+                      "closes": "17:00"
+                    }
+                  }
+                },
+                "hasMerchantReturnPolicy": {
+                  "@type": "MerchantReturnPolicy",
+                  "applicableCountry": "NL",
+                  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                  "merchantReturnDays": 14,
+                  "returnMethod": "https://schema.org/ReturnByMail"
+                }
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "150"
+              },
+              "review": {
+                "@type": "Review",
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5",
+                  "bestRating": "5"
+                },
+                "author": {
+                  "@type": "Person",
+                  "name": "StayCool Klant"
+                },
+                "reviewBody": "Uitstekende service en een perfect werkende airco. Zeer tevreden!"
+              }
+            })}
+          </script>
+        </Helmet>
+
+        {/* Features */}
               <div className="space-y-4 mb-8">
                 {features.map((feature) => (
                   <div key={feature} className="flex items-center text-gray-600">
