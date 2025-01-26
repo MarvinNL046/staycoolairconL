@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
+import toast, { Toaster } from 'react-hot-toast';
 import { 
   Check, 
   ThermometerSun, 
@@ -11,8 +12,12 @@ import {
   Info,
   Award,
   X,
-  Phone
+  Phone,
+  Share2,
+  MessageCircle,
+  Mail
 } from 'lucide-react';
+import ProductCarousel from './ProductCarousel';
 
 interface Specification {
   label: string;
@@ -29,7 +34,7 @@ interface ProductDetailProps {
   brand: string;
   model: string;
   description: string;
-  imageUrl: string;
+  images: Array<{ url: string; alt: string; }>;
   price?: string;
   energyLabel: string;
   capacity: string;
@@ -50,7 +55,7 @@ export default function ProductDetail({
   brand,
   model,
   description,
-  imageUrl,
+  images,
   price,
   energyLabel,
   capacity,
@@ -62,6 +67,7 @@ export default function ProductDetail({
 
   return (
     <section className="py-20 bg-gray-50">
+      <Toaster position="top-center" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Product Header */}
         <div className="mb-12">
@@ -89,12 +95,43 @@ export default function ProductDetail({
             transition={{ duration: 0.5 }}
             className="bg-white rounded-2xl p-8 shadow-lg"
           >
-            <div className="relative aspect-square">
-              <img
-                src={imageUrl}
-                alt={`${brand} ${model}`}
-                className="w-full h-full object-contain"
-              />
+            <ProductCarousel 
+              images={images} 
+            />
+            <div className="mt-4 flex justify-end space-x-2">
+              <button
+                onClick={() => {
+                  const url = window.location.href;
+                  const text = `Bekijk de ${brand} ${model} op StayCool Airco`;
+                  window.open(`https://wa.me/?text=${encodeURIComponent(text + '\n' + url)}`, '_blank');
+                }}
+                className="p-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded-full transition-colors"
+                aria-label="Deel via WhatsApp"
+              >
+                <MessageCircle className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => {
+                  const url = window.location.href;
+                  const subject = `${brand} ${model} - StayCool Airco`;
+                  const body = `Bekijk de ${brand} ${model} op StayCool Airco:\n${url}`;
+                  window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                }}
+                className="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-full transition-colors"
+                aria-label="Deel via email"
+              >
+                <Mail className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(window.location.href);
+                  toast.success('Link gekopieerd naar klembord');
+                }}
+                className="p-2 text-gray-600 hover:text-purple-600 hover:bg-purple-50 rounded-full transition-colors"
+                aria-label="Kopieer link"
+              >
+                <Share2 className="h-5 w-5" />
+              </button>
             </div>
           </motion.div>
 
@@ -147,7 +184,7 @@ export default function ProductDetail({
               "@type": "Product",
               "name": `${brand} ${model}`,
               "description": description,
-              "image": getAbsoluteUrl(imageUrl),
+              "image": getAbsoluteUrl(images[0].url),
               "brand": {
                 "@type": "Brand",
                 "name": brand
