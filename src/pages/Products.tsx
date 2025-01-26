@@ -53,11 +53,15 @@ export default function Products() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
               >
-                <div className="relative aspect-video">
+                <div className="relative">
                   <LazyImage
                     src={brand.imageUrl}
                     alt={`${brand.name} airconditioning`}
                     className="w-full h-full object-cover"
+                    width="100%"
+                    height="100%"
+                    aspectRatio={16/9}
+                    priority={index < 3}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                   <div className="absolute bottom-4 left-4">

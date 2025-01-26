@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { m, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import LazyImage from './LazyImage';
@@ -15,23 +15,6 @@ interface ProductCarouselProps {
 export default function ProductCarousel({ images }: ProductCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
-
-  // Preload images
-  useEffect(() => {
-    const imagePromises = images.map(image => {
-      return new Promise((resolve, reject) => {
-        const img = new Image();
-        img.src = image.url;
-        img.onload = resolve;
-        img.onerror = reject;
-      });
-    });
-
-    Promise.all(imagePromises)
-      .then(() => setIsLoading(false))
-      .catch(error => console.error('Error preloading images:', error));
-  }, [images]);
 
   const slideVariants = {
     enter: (direction: number) => ({
@@ -50,7 +33,7 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
     })
   };
 
-  const swipeConfidenceThreshold = 3000; // Reduced threshold for mobile
+  const swipeConfidenceThreshold = 3000;
   const swipePower = (offset: number, velocity: number) => {
     return Math.abs(offset) * velocity;
   };
@@ -72,11 +55,6 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
       role="region"
       aria-label="Product image carousel"
     >
-      {/* Loading state */}
-      {isLoading && (
-        <div className="absolute inset-0 bg-gray-100 animate-pulse" />
-      )}
-
       {/* Image container */}
       <div className="absolute inset-0">
         <AnimatePresence initial={false} custom={direction}>
@@ -96,7 +74,6 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
             dragElastic={0.7}
             onDragEnd={(e, { offset, velocity }) => {
               const swipe = swipePower(offset.x, velocity.x);
-
               if (swipe < -swipeConfidenceThreshold) {
                 paginate(1);
               } else if (swipe > swipeConfidenceThreshold) {
@@ -110,6 +87,8 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
               alt={images[currentIndex].alt}
               width="100%"
               height="100%"
+              aspectRatio={1}
+              priority={currentIndex === 0}
               className="object-contain"
             />
           </m.div>
@@ -117,45 +96,49 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
       </div>
 
       {/* Navigation Buttons */}
-      <button
-        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center shadow-lg transition-colors duration-200 z-10"
-        onClick={() => paginate(-1)}
-        aria-label="Previous image"
-      >
-        <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 text-gray-800" />
-      </button>
-      <button
-        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center shadow-lg transition-colors duration-200 z-10"
-        onClick={() => paginate(1)}
-        aria-label="Next image"
-      >
-        <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 text-gray-800" />
-      </button>
-
-      {/* Thumbnails */}
-      <div 
-        className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 sm:gap-2 z-10"
-        role="tablist"
-        aria-label="Product images"
-      >
-        {images.map((_, index) => (
+      {images.length > 1 && (
+        <>
           <button
-            key={index}
-            onClick={() => {
-              setDirection(index > currentIndex ? 1 : -1);
-              setCurrentIndex(index);
-            }}
-            className={`w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full transition-colors duration-200 ${
-              index === currentIndex 
-                ? 'bg-blue-600 w-3 sm:w-4' 
-                : 'bg-white/60 hover:bg-white'
-            }`}
-            role="tab"
-            aria-selected={index === currentIndex}
-            aria-label={`Image ${index + 1} of ${images.length}`}
-          />
-        ))}
-      </div>
+            className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center shadow-lg transition-colors duration-200 z-10"
+            onClick={() => paginate(-1)}
+            aria-label="Previous image"
+          >
+            <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 text-gray-800" />
+          </button>
+          <button
+            className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/80 hover:bg-white flex items-center justify-center shadow-lg transition-colors duration-200 z-10"
+            onClick={() => paginate(1)}
+            aria-label="Next image"
+          >
+            <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 text-gray-800" />
+          </button>
+
+          {/* Thumbnails */}
+          <div 
+            className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 sm:gap-2 z-10"
+            role="tablist"
+            aria-label="Product images"
+          >
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setDirection(index > currentIndex ? 1 : -1);
+                  setCurrentIndex(index);
+                }}
+                className={`w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full transition-colors duration-200 ${
+                  index === currentIndex 
+                    ? 'bg-blue-600 w-3 sm:w-4' 
+                    : 'bg-white/60 hover:bg-white'
+                }`}
+                role="tab"
+                aria-selected={index === currentIndex}
+                aria-label={`Image ${index + 1} of ${images.length}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }
