@@ -1,7 +1,7 @@
 import React from 'react';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { BookOpen, ThermometerSun, Zap, Leaf, Settings, HelpCircle, ChevronRight } from 'lucide-react';
+import { BookOpen, ThermometerSun, Zap, Leaf, Settings, HelpCircle, ChevronRight, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../components/Breadcrumbs';
 
@@ -11,6 +11,88 @@ export default function KnowledgeBase() {
   ];
 
   const categories = [
+    {
+      title: 'Airco in Limburg',
+      icon: MapPin,
+      description: 'Alles over airconditioning services in Limburg',
+      articles: [
+        {
+          title: 'Airco Specialist Limburg',
+          description: 'Professionele airconditioning services in heel Limburg.',
+          slug: 'aircospecialist-limburg'
+        },
+        {
+          title: 'Airco Venlo',
+          description: 'Specialistische airco services in Venlo en omgeving.',
+          slug: 'airco-venlo'
+        },
+        {
+          title: 'Airco Weert',
+          description: 'Expert airconditioning diensten in Weert.',
+          slug: 'airco-weert'
+        },
+        {
+          title: 'Airco Service Limburg',
+          description: 'Professionele airco service en onderhoud in Limburg.',
+          slug: 'airco-service-limburg'
+        },
+        {
+          title: 'Airco Installatie Limburg',
+          description: 'Vakkundige airco installatie in heel Limburg.',
+          slug: 'airco-installatie-limburg'
+        },
+        {
+          title: 'Airco Installateur Limburg',
+          description: 'Uw betrouwbare airco installateur in Limburg.',
+          slug: 'airco-installateur-limburg'
+        },
+        {
+          title: 'Airco Onderhoud Limburg',
+          description: 'Professioneel onderhoud voor uw airconditioning in Limburg.',
+          slug: 'airco-onderhoud-limburg'
+        },
+        {
+          title: 'Airco Installeren Limburg',
+          description: 'Vakkundige airco installatie door ervaren monteurs in Limburg.',
+          slug: 'airco-installeren-limburg'
+        },
+        {
+          title: 'Airco Installateur Roermond',
+          description: 'Specialist in airco installatie in Roermond en omgeving.',
+          slug: 'airco-installateur-roermond'
+        },
+        {
+          title: 'Airco Installateur Maastricht',
+          description: 'Expert in airco installatie voor monumentale en moderne panden in Maastricht.',
+          slug: 'airco-installateur-maastricht'
+        },
+        {
+          title: 'Airco Brunssum',
+          description: 'Professionele airconditioning services in Brunssum.',
+          slug: 'airco-brunssum'
+        },
+        {
+          title: 'Airco Sittard',
+          description: 'Specialist in airconditioning voor Sittard-Geleen.',
+          slug: 'airco-sittard'
+        },
+        {
+          title: 'Mitsubishi Airco Limburg',
+          description: 'Expert in Mitsubishi airconditioningsystemen in Limburg.',
+          slug: 'mitsubishi-airco-limburg'
+        },
+        {
+          title: 'Airconditioning Kerkrade',
+          description: 'Professionele airco services in Kerkrade en omgeving.',
+          slug: 'airconditioning-kerkrade'
+        },
+        {
+          title: 'Energiezuinige Airco Limburg',
+          description: 'Specialist in energiezuinige airconditioningsystemen in Limburg.',
+          slug: 'energiezuinige-airco-limburg'
+        }
+      ]
+    },
     {
       title: 'Airconditioning Basics',
       icon: ThermometerSun,

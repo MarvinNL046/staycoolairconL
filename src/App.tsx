@@ -54,6 +54,26 @@ const AircoLuchtfilterOnderhoud = lazy(() => import('./pages/articles/AircoLucht
 const AircoBuitenunitPlaatsing = lazy(() => import('./pages/articles/AircoBuitenunitPlaatsing'));
 const CapacityCalculator = lazy(() => import('./pages/CapacityCalculator'));
 
+// SEO Articles
+const AircoSpecialistLimburg = lazy(() => import('./pages/articles/aircospecialist-limburg'));
+const AircoVenlo = lazy(() => import('./pages/articles/airco-venlo'));
+const AircoWeert = lazy(() => import('./pages/articles/airco-weert'));
+const AircoServiceLimburg = lazy(() => import('./pages/articles/airco-service-limburg'));
+const AircoInstallatieLimburg = lazy(() => import('./pages/articles/airco-installatie-limburg'));
+const AircoInstallateurLimburg = lazy(() => import('./pages/articles/airco-installateur-limburg'));
+const Klimaatbeheersing = lazy(() => import('./pages/articles/klimaatbeheersing'));
+const Scop46 = lazy(() => import('./pages/articles/scop-4-6'));
+const AircoOnderhoudLimburg = lazy(() => import('./pages/articles/airco-onderhoud-limburg'));
+const AircoInstallerenLimburg = lazy(() => import('./pages/articles/airco-installeren-limburg'));
+const AircoInstallateurRoermond = lazy(() => import('./pages/articles/airco-installateur-roermond'));
+const AircoInstallateurMaastricht = lazy(() => import('./pages/articles/airco-installateur-maastricht'));
+const AircoBrunssum = lazy(() => import('./pages/articles/airco-brunssum'));
+const AircoSittard = lazy(() => import('./pages/articles/airco-sittard'));
+const MitsubishiAircoLimburg = lazy(() => import('./pages/articles/mitsubishi-airco-limburg'));
+const AirconditioningKerkrade = lazy(() => import('./pages/articles/airconditioning-kerkrade'));
+const AircoPlaatsenLimburg = lazy(() => import('./pages/articles/airco-plaatsen-limburg'));
+const EnergiezuinigeAircoLimburg = lazy(() => import('./pages/articles/energiezuinige-airco-limburg'));
+
 // Loading fallback component with skeleton UI
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-white">
@@ -161,6 +181,26 @@ export default function App() {
                 <Route path="/kennisbank/airco-luchtfilter-onderhoud" element={<AircoLuchtfilterOnderhoud />} />
                 <Route path="/kennisbank/airco-buitenunit-plaatsing" element={<AircoBuitenunitPlaatsing />} />
                 <Route path="/capaciteit-calculator" element={<CapacityCalculator />} />
+
+                {/* SEO Articles */}
+                <Route path="/kennisbank/aircospecialist-limburg" element={<AircoSpecialistLimburg />} />
+                <Route path="/kennisbank/airco-venlo" element={<AircoVenlo />} />
+                <Route path="/kennisbank/airco-weert" element={<AircoWeert />} />
+                <Route path="/kennisbank/airco-service-limburg" element={<AircoServiceLimburg />} />
+                <Route path="/kennisbank/airco-installatie-limburg" element={<AircoInstallatieLimburg />} />
+                <Route path="/kennisbank/airco-installateur-limburg" element={<AircoInstallateurLimburg />} />
+                <Route path="/kennisbank/klimaatbeheersing" element={<Klimaatbeheersing />} />
+                <Route path="/kennisbank/scop-4-6" element={<Scop46 />} />
+                <Route path="/kennisbank/airco-onderhoud-limburg" element={<AircoOnderhoudLimburg />} />
+                <Route path="/kennisbank/airco-installeren-limburg" element={<AircoInstallerenLimburg />} />
+                <Route path="/kennisbank/airco-installateur-roermond" element={<AircoInstallateurRoermond />} />
+                <Route path="/kennisbank/airco-installateur-maastricht" element={<AircoInstallateurMaastricht />} />
+                <Route path="/kennisbank/airco-brunssum" element={<AircoBrunssum />} />
+                <Route path="/kennisbank/airco-sittard" element={<AircoSittard />} />
+                <Route path="/kennisbank/mitsubishi-airco-limburg" element={<MitsubishiAircoLimburg />} />
+                <Route path="/kennisbank/airconditioning-kerkrade" element={<AirconditioningKerkrade />} />
+                <Route path="/kennisbank/airco-plaatsen-limburg" element={<AircoPlaatsenLimburg />} />
+                <Route path="/kennisbank/energiezuinige-airco-limburg" element={<EnergiezuinigeAircoLimburg />} />
               </Routes>
             </Suspense>
           </AnimatePresence>
