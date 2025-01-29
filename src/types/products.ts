@@ -28,6 +28,8 @@ export interface Brand {
   imageUrl: string;
   features: string[];
   models: Model[];
+  maxPrice?: number;
+  minPrice?: number;
 }
 
 export interface ProductData {

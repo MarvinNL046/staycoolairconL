@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import toast, { Toaster } from 'react-hot-toast';
+import SchemaMarkup from './SchemaMarkup';
 import { 
   Check, 
   ThermometerSun, 
@@ -176,71 +177,67 @@ export default function ProductDetail({
           </div>
         )}
 
-        {/* Structured Data */}
-        <Helmet>
-          <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org/",
-              "@type": "Product",
-              "name": `${brand} ${model}`,
-              "description": description,
-              "image": getAbsoluteUrl(images[0].url),
-              "brand": {
-                "@type": "Brand",
-                "name": brand
-              },
-              "offers": {
-                "@type": "Offer",
-                "url": window.location.href,
-                "priceCurrency": "EUR",
-                "price": price ? parseFloat(price.replace(/[^0-9.]/g, '')) : undefined,
-                "availability": "https://schema.org/InStock",
-                "shippingDetails": {
-                  "@type": "OfferShippingDetails",
-                  "shippingRate": {
-                    "@type": "MonetaryAmount",
-                    "value": "0",
-                    "currency": "EUR"
-                  },
-                  "deliveryTime": {
-                    "@type": "ShippingDeliveryTime",
-                    "businessDays": {
-                      "@type": "OpeningHoursSpecification",
-                      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                      "opens": "09:00",
-                      "closes": "17:00"
-                    }
-                  }
+        <SchemaMarkup 
+          type="Product"
+          data={{
+            name: `${brand} ${model}`,
+            description: description,
+            image: getAbsoluteUrl(images[0].url),
+            brand: {
+              "@type": "Brand",
+              name: brand
+            },
+            offers: {
+              "@type": "Offer",
+              url: window.location.href,
+              priceCurrency: "EUR",
+              price: price ? parseFloat(price.replace(/[^0-9.]/g, '')) : undefined,
+              availability: "https://schema.org/InStock",
+              shippingDetails: {
+                "@type": "OfferShippingDetails",
+                shippingRate: {
+                  "@type": "MonetaryAmount",
+                  value: "0",
+                  currency: "EUR"
                 },
-                "hasMerchantReturnPolicy": {
-                  "@type": "MerchantReturnPolicy",
-                  "applicableCountry": "NL",
-                  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-                  "merchantReturnDays": 14,
-                  "returnMethod": "https://schema.org/ReturnByMail"
+                deliveryTime: {
+                  "@type": "ShippingDeliveryTime",
+                  businessDays: {
+                    "@type": "OpeningHoursSpecification",
+                    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    opens: "09:00",
+                    closes: "17:00"
+                  }
                 }
               },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "reviewCount": "150"
-              },
-              "review": {
-                "@type": "Review",
-                "reviewRating": {
-                  "@type": "Rating",
-                  "ratingValue": "5",
-                  "bestRating": "5"
-                },
-                "author": {
-                  "@type": "Person",
-                  "name": "StayCool Klant"
-                },
-                "reviewBody": "Uitstekende service en een perfect werkende airco. Zeer tevreden!"
+              hasMerchantReturnPolicy: {
+                "@type": "MerchantReturnPolicy",
+                applicableCountry: "NL",
+                returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+                merchantReturnDays: 14,
+                returnMethod: "https://schema.org/ReturnByMail"
               }
-            })}
-          </script>
-        </Helmet>
+            },
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.8",
+              reviewCount: "150"
+            },
+            review: {
+              "@type": "Review",
+              reviewRating: {
+                "@type": "Rating",
+                ratingValue: "5",
+                bestRating: "5"
+              },
+              author: {
+                "@type": "Person",
+                name: "StayCool Klant"
+              },
+              reviewBody: "Uitstekende service en een perfect werkende airco. Zeer tevreden!"
+            }
+          }}
+        />
 
         {/* Features */}
               <div className="space-y-4 mb-8">

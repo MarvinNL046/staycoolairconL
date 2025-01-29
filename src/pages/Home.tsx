@@ -4,10 +4,69 @@ import Hero from '../components/Hero';
 import Services from '../components/Services';
 import WhyUs from '../components/WhyUs';
 import Contact from '../components/Contact';
+import SchemaMarkup from '../components/SchemaMarkup';
 
 export default function Home() {
+  const services = [
+    {
+      "@type": "Service",
+      name: "Airco Installatie",
+      description: "Professionele installatie van airconditioningsystemen in heel Limburg",
+      provider: {
+        "@type": "LocalBusiness",
+        name: "StayCool Airco"
+      },
+      areaServed: {
+        "@type": "State",
+        name: "Limburg"
+      }
+    },
+    {
+      "@type": "Service",
+      name: "Airco Onderhoud",
+      description: "Vakkundig onderhoud van uw airconditioning systeem",
+      provider: {
+        "@type": "LocalBusiness",
+        name: "StayCool Airco"
+      },
+      areaServed: {
+        "@type": "State",
+        name: "Limburg"
+      }
+    },
+    {
+      "@type": "Service",
+      name: "Airco Reparatie",
+      description: "Snelle en betrouwbare reparatie van airconditioningsystemen",
+      provider: {
+        "@type": "LocalBusiness",
+        name: "StayCool Airco"
+      },
+      areaServed: {
+        "@type": "State",
+        name: "Limburg"
+      }
+    }
+  ];
+
   return (
     <>
+      <SchemaMarkup 
+        type="LocalBusiness"
+        data={{
+          description: "Specialist in airco installatie en onderhoud in Limburg. Bespaar op terugleverkosten van zonnepanelen door slim te verwarmen met airco.",
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Airconditioning Services",
+            itemListElement: services
+          },
+          sameAs: [
+            "https://www.facebook.com/staycoolairco",
+            "https://www.instagram.com/staycoolairco",
+            "https://www.linkedin.com/company/staycoolairco"
+          ]
+        }}
+      />
       <Helmet>
         <title>Airco Installatie Limburg | StayCool Airco | Specialist in Heerlen, Weert</title>
         <meta 

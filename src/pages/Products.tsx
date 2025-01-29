@@ -6,6 +6,7 @@ import { productData } from '../data/products';
 import { Helmet } from 'react-helmet-async';
 import LazyImage from '../components/LazyImage';
 import Breadcrumbs from '../components/Breadcrumbs';
+import SchemaMarkup from '../components/SchemaMarkup';
 
 export default function Products() {
   const breadcrumbItems = [
@@ -14,6 +15,40 @@ export default function Products() {
 
   return (
     <>
+      <SchemaMarkup 
+        type="Product"
+        data={{
+          "@type": "ItemList",
+          itemListElement: productData.brands.map((brand, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            item: {
+              "@type": "Product",
+              name: brand.name,
+              description: brand.description,
+              image: brand.imageUrl,
+              brand: {
+                "@type": "Brand",
+                name: brand.name
+              },
+              offers: {
+                "@type": "AggregateOffer",
+                priceCurrency: "EUR",
+                availability: "https://schema.org/InStock",
+                highPrice: 3500,
+                lowPrice: 1200,
+                offerCount: brand.models?.length || 5,
+                priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString()
+              },
+              additionalProperty: brand.features.map(feature => ({
+                "@type": "PropertyValue",
+                name: "Feature",
+                value: feature
+              }))
+            }
+          }))
+        }}
+      />
       <Helmet>
         <title>Airco Merken | Airco Offerte Limburg</title>
         <meta 

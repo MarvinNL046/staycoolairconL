@@ -4,6 +4,7 @@ import Breadcrumbs from '../../components/Breadcrumbs';
 import { m } from 'framer-motion';
 import { Phone, Mail, MapPin, Leaf, Award, Calculator } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SchemaMarkup from '../../components/SchemaMarkup';
 
 export default function EnergiezuinigeAircoLimburg() {
   const breadcrumbItems = [
@@ -13,6 +14,37 @@ export default function EnergiezuinigeAircoLimburg() {
 
   return (
     <>
+      <SchemaMarkup 
+        type="Article"
+        data={{
+          headline: "Energiezuinige Airco Limburg: Bespaar op Uw Energiekosten",
+          description: "Op zoek naar een energiezuinige airco in Limburg? Ontdek alles over SCOP/SEER-waarden en bespaar op uw energiekosten. Erkend specialist in duurzame klimaatoplossingen.",
+          image: "https://staycoolairco.nl/images/logo.svg",
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": "https://staycoolairco.nl/kennisbank/energiezuinige-airco-limburg"
+          },
+          articleBody: `
+            Als specialist in klimaatbeheersing begrijpen we het belang van energiezuinige oplossingen. 
+            Een moderne airco met hoge SCOP-waarden kan significant bijdragen aan lagere energiekosten. 
+            Een energiezuinige airco met hoge SCOP-waarde kan tot wel 60% energie besparen vergeleken met traditionele systemen.
+            
+            Voordelen van energiezuinige airco's:
+            - Lagere energiekosten
+            - Milieuvriendelijk
+            - Toekomstbestendig
+            - A+++ classificatie
+            - Premium merken
+            - 5 jaar garantie
+            
+            Onze aanpak omvat expert advies, professionele installatie en regelmatig onderhoud voor optimale prestaties.
+          `,
+          keywords: "energiezuinige airco limburg, zuinige airconditioning, duurzame airco, scop seer waarden, energiebesparing airco",
+          articleSection: "Klimaatbeheersing",
+          wordCount: 1500,
+          inLanguage: "nl-NL"
+        }}
+      />
       <Helmet>
         <title>Energiezuinige Airco Limburg | Expert in Duurzame Klimaatbeheersing</title>
         <meta 
