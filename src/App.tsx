@@ -1,6 +1,12 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 import ScrollToTop from './components/ScrollToTop';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import UruruSararaPage from './pages/products/ururu-sarara';
+import StylishPage from './pages/products/stylish';
+import Daiseikai10Page from './pages/products/daiseikai-10';
+import UruruSararaPage from './pages/products/ururu-sarara';
+import StylishPage from './pages/products/stylish';
+import Daiseikai10Page from './pages/products/daiseikai-10';
 import { AnimatePresence } from 'framer-motion';
 import { ErrorBoundary } from 'react-error-boundary';
 import Navbar from './components/Navbar';
@@ -141,6 +147,12 @@ export default function App() {
           <AnimatePresence mode="wait">
             <Suspense fallback={<LoadingFallback />}>
               <Routes>
+                <Route path="/products/daikin/ururu-sarara" element={<UruruSararaPage />} />
+          <Route path="/products/daikin/stylish" element={<StylishPage />} />
+          <Route path="/products/mitsubishi/daiseikai-10" element={<Daiseikai10Page />} />
+                <Route path="/products/daikin/ururu-sarara" element={<UruruSararaPage />} />
+          <Route path="/products/daikin/stylish" element={<StylishPage />} />
+          <Route path="/products/mitsubishi/daiseikai-10" element={<Daiseikai10Page />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/airco-covers" element={<AircoCovers />} />

@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-icons.js && tsc && vite build && node scripts/generate-sitemap.js && node scripts/generate-service-areas-sitemap.js && node scripts/generate-products-sitemap.js",
+    "build": "node scripts/generate-icons.js && node scripts/generate-product-pages.js && tsc && vite build && node scripts/generate-sitemap.js && node scripts/generate-service-areas-sitemap.js && node scripts/generate-products-sitemap.js",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "typecheck": "tsc --noEmit",
     "generate-sitemap": "node scripts/generate-sitemap.js",
     "generate-service-areas-sitemap": "node scripts/generate-service-areas-sitemap.js",
-    "generate-icons": "node scripts/generate-icons.js"
+    "generate-icons": "node scripts/generate-icons.js",
+    "generate-product-pages": "node scripts/generate-product-pages.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
