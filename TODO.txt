@@ -30,11 +30,19 @@ STAYCOOL AIRCO WEBSITE - STATUS & TODO
 - Product afbeeldingen vervangen met echte foto's
 - Sitemap.xml gegenereerd
 - robots.txt geoptimaliseerd
+- Programmatische product pagina's geïmplementeerd
+- Rich snippets/Schema.org markup voor producten toegevoegd
+- SEO-geoptimaliseerde URL structuur voor producten
+- Automatische sitemap generatie voor product pagina's
+- Kennisbank artikelen voor zoekwoorden geïmplementeerd
 
 🚧 NOG TE DOEN:
 1. Content:
    - Resterende kennisbank artikelen schrijven
    - Video content optimaliseren
+   - Meer product-specifieke content toevoegen
+   - Product vergelijkingen schrijven
+   - Installatiehandleidingen per model maken
 
 2. Testing:
    - Cross-browser testing
@@ -49,6 +57,9 @@ STAYCOOL AIRCO WEBSITE - STATUS & TODO
    - Google Business Profile koppelen
    - Social media links toevoegen
    - Reviews/testimonials sectie toevoegen
+   - Google Search Console monitoren voor rich snippets
+   - Product schema markup valideren
+   - Meer interne links tussen product en kennisbank pagina's
 
 4. Documentatie:
    - Gebruikershandleiding maken
