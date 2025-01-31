@@ -174,6 +174,17 @@ export default function KnowledgeBase() {
           title: 'Elektrische Verwarming',
           description: 'Ontdek de voordelen van elektrische verwarming en hoe je het kunt combineren met een airco warmtepomp.',
           slug: 'elektrische-verwarming'
+        },
+        {
+          title: 'Voordelen van Airco Verwarming',
+          description: 'Ontdek alle voordelen en besparingen van verwarmen met een airco systeem.',
+          slug: 'airco-verwarming-voordelen'
+        },
+        {
+          title: 'Bespaar op Verwarmingskosten',
+          description: 'Ontdek hoe u tot 60% kunt besparen op uw verwarmingskosten met een moderne airco.',
+          slug: 'airco-verwarming-kosten-besparing',
+          fullPath: true
         }
       ]
     },
@@ -311,7 +322,7 @@ export default function KnowledgeBase() {
                     {category.articles.map((article) => (
                       <Link
                         key={article.slug}
-                        to={article.slug.startsWith('lg-') ? `/${article.slug}` : `/kennisbank/${article.slug}`}
+                        to={article.fullPath ? `/${article.slug}` : article.slug.startsWith('lg-') ? `/${article.slug}` : `/kennisbank/${article.slug}`}
                         className="block bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors duration-200"
                       >
                         <div className="flex items-center justify-between">

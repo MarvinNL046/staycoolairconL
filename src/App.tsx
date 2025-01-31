@@ -4,9 +4,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import UruruSararaPage from './pages/products/ururu-sarara';
 import StylishPage from './pages/products/stylish';
 import Daiseikai10Page from './pages/products/daiseikai-10';
-import UruruSararaPage from './pages/products/ururu-sarara';
-import StylishPage from './pages/products/stylish';
-import Daiseikai10Page from './pages/products/daiseikai-10';
 import { AnimatePresence } from 'framer-motion';
 import { ErrorBoundary } from 'react-error-boundary';
 import Navbar from './components/Navbar';
@@ -79,6 +76,8 @@ const MitsubishiAircoLimburg = lazy(() => import('./pages/articles/mitsubishi-ai
 const AirconditioningKerkrade = lazy(() => import('./pages/articles/airconditioning-kerkrade'));
 const AircoPlaatsenLimburg = lazy(() => import('./pages/articles/airco-plaatsen-limburg'));
 const EnergiezuinigeAircoLimburg = lazy(() => import('./pages/articles/energiezuinige-airco-limburg'));
+const AircoVerwarmingKostenBesparing = lazy(() => import('./pages/AircoVerwarmingKostenBesparing'));
+const AircoVerwarmingVoordelen = lazy(() => import('./pages/articles/airco-verwarming-voordelen'));
 
 // Loading fallback component with skeleton UI
 const LoadingFallback = () => (
@@ -150,9 +149,6 @@ export default function App() {
                 <Route path="/products/daikin/ururu-sarara" element={<UruruSararaPage />} />
           <Route path="/products/daikin/stylish" element={<StylishPage />} />
           <Route path="/products/mitsubishi/daiseikai-10" element={<Daiseikai10Page />} />
-                <Route path="/products/daikin/ururu-sarara" element={<UruruSararaPage />} />
-          <Route path="/products/daikin/stylish" element={<StylishPage />} />
-          <Route path="/products/mitsubishi/daiseikai-10" element={<Daiseikai10Page />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/airco-covers" element={<AircoCovers />} />
@@ -213,6 +209,8 @@ export default function App() {
                 <Route path="/kennisbank/airconditioning-kerkrade" element={<AirconditioningKerkrade />} />
                 <Route path="/kennisbank/airco-plaatsen-limburg" element={<AircoPlaatsenLimburg />} />
                 <Route path="/kennisbank/energiezuinige-airco-limburg" element={<EnergiezuinigeAircoLimburg />} />
+                <Route path="/airco-verwarming-kosten-besparing" element={<AircoVerwarmingKostenBesparing />} />
+                <Route path="/kennisbank/airco-verwarming-voordelen" element={<AircoVerwarmingVoordelen />} />
               </Routes>
             </Suspense>
           </AnimatePresence>

@@ -80,6 +80,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/airco-verwarming-kosten-besparing" className="text-gray-400 hover:text-white">
+                  Bespaar op Verwarmingskosten
+                </Link>
+              </li>
+              <li>
                 <Link to="/voorwaarden" className="text-gray-400 hover:text-white">
                   Algemene Voorwaarden
                 </Link>

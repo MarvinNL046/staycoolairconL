@@ -126,7 +126,11 @@ productData.brands.forEach(brand => {
 const appPath = path.join(process.cwd(), 'src', 'App.tsx');
 let appContent = fs.readFileSync(appPath, 'utf-8');
 
-// Generate route imports
+// Remove existing product imports and routes
+appContent = appContent.replace(/import \w+Page from '\.\/pages\/products\/[^']+';(\r?\n|\r)?/g, '');
+appContent = appContent.replace(/<Route path="\/products\/[^>]+\/[^>]+" element={<\w+Page \/>} \/>\s*/g, '');
+
+// Generate new imports and routes
 const routeImports = productData.brands
   .flatMap(brand => 
     brand.models?.map(model => 
