@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
+
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   future: {
@@ -65,9 +68,9 @@ export default {
     },
   },
   plugins: [
-    require('@tailwindcss/forms')({
+    forms({
       strategy: 'class',
     }),
-    require('@tailwindcss/typography'),
+    typography,
   ],
 };

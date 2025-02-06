@@ -7,33 +7,22 @@ import { Link } from 'react-router-dom';
 export default function MaintenanceProcedures() {
   const maintenancePackages = [
     {
-      icon: Check,
-      title: 'Basis Pakket',
-      price: '9,-',
+      icon: Star,
+      title: 'Premium Pakket',
+      price: '11,-',
       features: [
         'Jaarlijks onderhoud',
         'Reiniging van binnen- en buitenunit',
         'Controle koudemiddel en druk',
         'Inspectie elektrische aansluitingen',
-        'Controle condensafvoer'
-      ]
-    },
-    {
-      icon: Star,
-      title: 'Premium Pakket',
-      price: '11,-',
-      features: [
-        'Alles uit het Basis Pakket',
-        'Voorrang bij storingen',
-        'Uitgebreide systeemcheck',
-        'Gratis filters vervangen',
-        'Telefonische support'
+        'Controle condensafvoer',
+        'Voorrang bij storingen'
       ]
     },
     {
       icon: Crown,
       title: 'All-Inclusive Pakket',
-      price: '15,-',
+      price: '15,95',
       features: [
         'Alles uit het Premium Pakket',
         'Directe vervanging bij defecten',
@@ -104,7 +93,7 @@ export default function MaintenanceProcedures() {
         <title>Onderhoudspakketten | StayCool Airco</title>
         <meta 
           name="description" 
-          content="Bekijk onze onderhoudspakketten voor uw airconditioning. Kies uit Basis, Premium of All-Inclusive voor optimale zorg voor uw systeem."
+          content="Bekijk onze onderhoudspakketten voor uw airconditioning. Kies uit Premium of All-Inclusive voor optimale zorg voor uw systeem."
         />
       </Helmet>
 
@@ -144,7 +133,7 @@ export default function MaintenanceProcedures() {
           </motion.div>
 
           {/* Maintenance Packages */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {maintenancePackages.map((pkg, index) => (
               <motion.div
                 key={pkg.title}
