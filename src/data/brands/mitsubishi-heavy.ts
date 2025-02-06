@@ -3,7 +3,7 @@ import { Brand } from '../../types/products';
 export const mitsubishiHeavyData: Brand = {
   name: 'Mitsubishi Heavy Industries',
   description: 'Hoogwaardige Japanse engineering met focus op duurzaamheid en betrouwbaarheid. Mitsubishi Heavy Industries staat bekend om hun robuuste en efficiënte airconditioners.',
-  imageUrl: '/images/products/placeholder.txt',
+  imageUrl: '/images/products/Mitsubishi heavy indus/Mitsubishi-titanium-zs-wft-1.webp',
   features: [
     'Allergeenfilter',
     'Silent Operation mode',
@@ -12,19 +12,31 @@ export const mitsubishiHeavyData: Brand = {
   ],
   models: [
     {
-      name: 'ZS-W Serie',
+      name: 'ZS-WF Serie',
       slug: 'zs-w',
-      description: 'De ZS-W serie van Mitsubishi Heavy Industries biedt hoogwaardige wandunits die uitblinken in efficiëntie en betrouwbaarheid. Met geavanceerde features zoals de 3D Auto functie en allergeenfilter zorgen deze units voor optimaal comfort.',
-      imageUrl: '/images/products/placeholder.txt',
+      description: 'De ZS-WF serie van Mitsubishi Heavy Industries biedt hoogwaardige wandunits met ingebouwde wifi-besturing die uitblinken in efficiëntie en betrouwbaarheid. Met geavanceerde features zoals de 3D Auto functie en allergeenfilter zorgen deze units voor optimaal comfort.',
+      imageUrl: '/images/products/Mitsubishi heavy indus/Mitsubishi-titanium-zs-wft-1.webp',
       images: [
         {
-          url: '/images/products/placeholder.txt',
-          alt: 'Mitsubishi Heavy ZS-W - Foto binnenkort beschikbaar'
+          url: '/images/products/Mitsubishi heavy indus/Mitsubishi-titanium-zs-wft-1.webp',
+          alt: 'Mitsubishi Heavy ZS-WF Titanium Vooraanzicht'
+        },
+        {
+          url: '/images/products/Mitsubishi heavy indus/Mitsubishi-titanium-zs-wft-2.5-3.5-5.0kw-1-510x510.webp',
+          alt: 'Mitsubishi Heavy ZS-WF Titanium Zijaanzicht'
+        },
+        {
+          url: '/images/products/Mitsubishi heavy indus/srk50zs-wf-wit-single-split-airco-wandmodel-2.5-3.5-5kw-1.webp',
+          alt: 'Mitsubishi Heavy ZS-WF Wit Vooraanzicht'
+        },
+        {
+          url: '/images/products/Mitsubishi heavy indus/srk50zs-wf-wit-single-split-airco-wandmodel-2.5-3.5-5kw-510x510.webp',
+          alt: 'Mitsubishi Heavy ZS-WF Wit Zijaanzicht'
         }
       ],
       price: '€1.099,- inclusief standaard installatie',
       energyLabel: 'A+++',
-      capacity: '2,0 kW - 5,0 kW',
+      capacity: '2,5 kW - 8,0 kW',
       features: [
         'Allergeenfilter',
         'Silent Operation mode',
@@ -35,30 +47,34 @@ export const mitsubishiHeavyData: Brand = {
         'Self-cleaning functie'
       ],
       specifications: [
-        { label: 'Beschikbare modellen', value: 'SRK20ZS-W, SRK25ZS-W, SRK35ZS-W, SRK50ZS-W' },
-        { label: 'Koelcapaciteit', value: '2,0 - 5,0 kW' },
-        { label: 'Verwarmingscapaciteit', value: '2,5 - 6,0 kW' },
+        { label: 'Beschikbare modellen', value: 'SRK25ZS-W, SRK35ZS-W, SRK50ZS-W, SRK60ZS-W, SRK80ZS-W' },
+        { label: 'Koelcapaciteit', value: '2,5 - 8,0 kW' },
+        { label: 'Verwarmingscapaciteit', value: '3,0 - 9,0 kW' },
         { label: 'SEER', value: 'tot 8,7' },
         { label: 'SCOP', value: 'tot 5,2' },
         { label: 'Geluidsniveau binnen', value: 'vanaf 19 dB(A)' },
         { label: 'Koudemiddel', value: 'R32' },
-        { label: 'Wifi', value: 'Optioneel' }
+        { label: 'Wifi', value: 'Standaard ingebouwd' }
       ]
     },
     {
       name: 'SRK-ZSX-W Premium',
       slug: 'zsx-w',
       description: 'De premium wandunit van Mitsubishi Heavy met maximale energie-efficiëntie en geavanceerde luchtreiniging. Perfect voor wie het beste van het beste zoekt.',
-      imageUrl: '/images/products/placeholder.txt',
+      imageUrl: '/images/products/Mitsubishi heavy indus/Mitsubishi-titanium-zs-wft.webp',
       images: [
         {
-          url: '/images/products/placeholder.txt',
-          alt: 'Mitsubishi Heavy ZSX-W - Foto binnenkort beschikbaar'
+          url: '/images/products/Mitsubishi heavy indus/Mitsubishi-titanium-zs-wft.webp',
+          alt: 'Mitsubishi Heavy ZSX-W Premium Vooraanzicht'
+        },
+        {
+          url: '/images/products/Mitsubishi heavy indus/srk50zs-wf-wit-single-split-airco-wandmodel-2.5-3.5-5kw-1.webp',
+          alt: 'Mitsubishi Heavy ZSX-W Premium Zijaanzicht'
         }
       ],
       price: '€1.399,- inclusief standaard installatie',
       energyLabel: 'A+++',
-      capacity: '2,5 kW - 6,0 kW',
+      capacity: '2,5 kW - 8,0 kW',
       features: [
         'Premium allergeenfilter',
         'Ultra-silent operation',
@@ -69,8 +85,8 @@ export const mitsubishiHeavyData: Brand = {
         'Automatische filterreiniging'
       ],
       specifications: [
-        { label: 'Koelcapaciteit', value: '2,5 - 6,0 kW' },
-        { label: 'Verwarmingscapaciteit', value: '3,0 - 7,0 kW' },
+        { label: 'Koelcapaciteit', value: '2,5 - 8,0 kW' },
+        { label: 'Verwarmingscapaciteit', value: '3,0 - 9,0 kW' },
         { label: 'SEER', value: 'tot 9,5' },
         { label: 'SCOP', value: 'tot 5,4' },
         { label: 'Geluidsniveau binnen', value: '18 dB(A)' },
@@ -82,11 +98,15 @@ export const mitsubishiHeavyData: Brand = {
       name: 'SRF-ZMX-S Vloermodel',
       slug: 'srf-zmx-s',
       description: 'Stijlvol vloermodel met dubbele luchtuitblaas voor optimale warmteverdeling. Ideaal voor onder het raam of op zolder.',
-      imageUrl: '/images/products/placeholder.txt',
+      imageUrl: '/images/products/Mitsubishi heavy indus/Mitsubishi-aircowebwinkel-vloermodel.webp',
       images: [
         {
-          url: '/images/products/placeholder.txt',
-          alt: 'Mitsubishi Heavy SRF-ZMX-S - Foto binnenkort beschikbaar'
+          url: '/images/products/Mitsubishi heavy indus/Mitsubishi-aircowebwinkel-vloermodel.webp',
+          alt: 'Mitsubishi Heavy SRF-ZMX-S Vloermodel Vooraanzicht'
+        },
+        {
+          url: '/images/products/Mitsubishi heavy indus/Mitsubishi-Heavy-SRF-35-ZS-W-Vloer-unit-35-kW-Exclusief-buiten-unit.webp',
+          alt: 'Mitsubishi Heavy SRF-ZMX-S Vloermodel Zijaanzicht'
         }
       ],
       price: '€1.599,- inclusief standaard installatie',

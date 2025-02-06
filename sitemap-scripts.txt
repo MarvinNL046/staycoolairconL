@@ -1,0 +1,241 @@
+=== STAP 1: Package.json aanpassingen ===
+Voeg deze scripts toe aan je package.json:
+
+{
+  "scripts": {
+    "build": "... && node scripts/generate-sitemap.js && node scripts/generate-service-areas-sitemap.js && node scripts/generate-products-sitemap.js",
+    "generate-sitemap": "node scripts/generate-sitemap.js",
+    "generate-service-areas-sitemap": "node scripts/generate-service-areas-sitemap.js",
+    "generate-products-sitemap": "node scripts/generate-products-sitemap.js"
+  },
+  "dependencies": {
+    "papaparse": "^5.5.1"
+  }
+}
+
+=== STAP 2: Maak een scripts directory en voeg deze bestanden toe ===
+
+--- scripts/generate-sitemap.js ---
+import fs from 'fs';
+import path from 'path';
+
+// Function to get all TSX files from a directory recursively
+function getTsxFiles(dir) {
+  let results = [];
+  const files = fs.readdirSync(dir);
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      results = results.concat(getTsxFiles(filePath));
+    } else if (file.endsWith('.tsx') && !file.includes('[') && !file.includes(']')) {
+      results.push(filePath);
+    }
+  }
+  
+  return results;
+}
+
+// Convert file path to URL
+function filePathToUrl(filePath) {
+  // Convert Windows path separators to forward slashes
+  filePath = filePath.replace(/\\/g, '/');
+  
+  // Extract the relative path from src/pages
+  const pagesIndex = filePath.indexOf('src/pages/');
+  if (pagesIndex === -1) return null;
+  
+  let url = filePath.slice(pagesIndex + 'src/pages/'.length).replace('.tsx', '');
+
+  // Handle index files
+  if (url.endsWith('/index')) {
+    url = url.replace('/index', '');
+  }
+
+  // Convert PascalCase to kebab-case
+  url = url.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+
+  // Special handling for articles and calculator
+  if (url.startsWith('articles/')) {
+    url = url.replace('articles/', 'kennisbank/');
+  } else if (url === 'capacity-calculator') {
+    url = 'capaciteit-calculator';
+  }
+
+  return `https://jouwdomein.nl/${url}`; // Pas dit aan naar jouw domein
+}
+
+// Generate sitemap XML content
+function generateSitemap(files) {
+  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://jouwdomein.nl/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>`;
+
+  // Add all pages
+  for (const file of files) {
+    const url = filePathToUrl(file);
+    if (url) {
+      const isArticle = url.includes('/kennisbank/');
+      const urlPath = url.replace('https://jouwdomein.nl', '');
+      const mainPages = ['/', '/products', '/werkgebied', '/contact'];
+      const isMainPage = mainPages.includes(urlPath);
+      
+      // Skip pages that don't exist
+      const skipPages = [
+        '/brand-detail',
+        '/common-problems',
+        '/home',
+        '/knowledge-base',
+        '/maintenance-procedures',
+        '/privacy',
+        '/product-detail',
+        '/product-example',
+        '/service-area',
+        '/terms'
+      ];
+      
+      let finalPath = urlPath;
+      let finalUrl = url;
+
+      if (!skipPages.includes(finalPath) || mainPages.includes(finalPath)) {
+        let priority = '0.8';
+        let changefreq = 'monthly';
+
+        if (isMainPage) {
+          priority = '0.9';
+          changefreq = 'weekly';
+        } else if (isArticle) {
+          priority = '0.7';
+          changefreq = 'monthly';
+        }
+
+        sitemap += `
+  <url>
+    <loc>${finalUrl}</loc>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
+      }
+    }
+  }
+
+  sitemap += '\n</urlset>';
+  return sitemap;
+}
+
+// Main execution
+const pagesDir = path.join(process.cwd(), 'src', 'pages');
+const files = getTsxFiles(pagesDir);
+const sitemap = generateSitemap(files);
+
+// Write to both locations
+fs.writeFileSync('sitemap.xml', sitemap);
+fs.writeFileSync('public/sitemap.xml', sitemap);
+
+console.log('Sitemap generated successfully!');
+
+--- scripts/generate-products-sitemap.js ---
+import fs from 'fs';
+
+function generateProductsSitemap() {
+  // Definieer hier je producten
+  const products = {
+    categorie1: [
+      { slug: 'product-1' },
+      { slug: 'product-2' }
+    ],
+    categorie2: [
+      { slug: 'product-3' },
+      { slug: 'product-4' }
+    ]
+  };
+
+  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+
+  // Add products
+  for (const [category, items] of Object.entries(products)) {
+    for (const item of items) {
+      sitemap += `
+  <url>
+    <loc>https://jouwdomein.nl/products/${category}/${item.slug}</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`;
+    }
+  }
+
+  sitemap += '\n</urlset>';
+
+  // Write the sitemap
+  fs.writeFileSync('public/products-sitemap.xml', sitemap);
+  console.log('Products sitemap generated successfully!');
+}
+
+generateProductsSitemap();
+
+--- scripts/generate-service-areas-sitemap.js ---
+import fs from 'fs';
+import path from 'path';
+import pkg from 'papaparse';
+const { parse } = pkg;
+
+function generateServiceAreasSitemap() {
+  // Read the CSV file
+  const csvContent = fs.readFileSync(path.join(process.cwd(), 'public', 'service-areas.csv'), 'utf-8');
+  
+  // Parse CSV content
+  const { data } = parse(csvContent, {
+    header: true,
+    skipEmptyLines: true
+  });
+
+  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+
+  // Add each city
+  for (const row of data) {
+    const citySlug = row.city.toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+
+    sitemap += `
+  <url>
+    <loc>https://jouwdomein.nl/werkgebied/${citySlug}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`;
+  }
+
+  sitemap += '\n</urlset>';
+
+  // Write the sitemap
+  fs.writeFileSync('public/service-areas-sitemap.xml', sitemap);
+  console.log('Service areas sitemap generated successfully!');
+}
+
+generateServiceAreasSitemap();
+
+=== STAP 3: Als je service areas gebruikt, maak een CSV bestand ===
+Maak een bestand public/service-areas.csv met deze structuur:
+
+city,province
+Amsterdam,Noord-Holland
+Rotterdam,Zuid-Holland
+etc...
+
+=== STAP 4: Pas de domeinnaam aan ===
+Vervang in alle scripts 'jouwdomein.nl' door je eigen domeinnaam.
+
+=== STAP 5: Installeer dependencies ===
+npm install papaparse
+
+=== STAP 6: Run de build ===
+npm run build

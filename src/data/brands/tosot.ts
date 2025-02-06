@@ -3,7 +3,7 @@ import { Brand } from '../../types/products';
 export const tosotData: Brand = {
   name: 'Tosot by Gree',
   description: 'Moderne technologie voor optimaal comfort tegen een scherpe prijs. Tosot is het premium merk van GREE, één van de grootste airco fabrikanten ter wereld.',
-  imageUrl: '/images/products/724-clivia-wit-binnen-vooraanzicht.webp',
+  imageUrl: '/images/products/724-clivia-wit-vooraanzicht.webp',
   features: [
     'G-Tech Inverter technologie',
     'Wifi-ready modellen beschikbaar',
@@ -85,31 +85,33 @@ export const tosotData: Brand = {
       name: 'Clivia Design',
       slug: 'clivia',
       description: 'De Tosot Clivia is verkrijgbaar in stijlvol wit of zwart design. Perfect voor wie waarde hecht aan zowel prestaties als uitstraling.',
-      imageUrl: '/images/products/724-clivia-wit-binnen-vooraanzicht.webp',
+      imageUrl: '/images/products/724-clivia-wit-vooraanzicht.webp',
       images: [
+        // Wit model
         {
-          url: '/images/products/724-clivia-wit-binnen-vooraanzicht.webp',
-          alt: 'Tosot Clivia - Vooraanzicht wit'
+          url: '/images/products/724-clivia-wit-vooraanzicht.webp',
+          alt: 'Tosot Clivia Wit - Vooraanzicht'
         },
         {
-          url: '/images/products/723-cliva-wit-binnen-schuin-boven.webp',
-          alt: 'Tosot Clivia - Schuin boven wit'
+          url: '/images/products/723-clivia-wit-schuin.webp',
+          alt: 'Tosot Clivia Wit - Schuin'
         },
         {
-          url: '/images/products/727-clivia-wit-binnen-left.webp',
-          alt: 'Tosot Clivia - Links wit'
+          url: '/images/products/727-clivia-wit-zijkant.webp',
+          alt: 'Tosot Clivia Wit - Zijkant'
+        },
+        // Zwart model
+        {
+          url: '/images/products/712-clivia-zwart-vooraanzicht.webp',
+          alt: 'Tosot Clivia Zwart - Vooraanzicht'
         },
         {
-          url: '/images/products/712-clivia-black-indoor-vooraanzicht.webp',
-          alt: 'Tosot Clivia - Vooraanzicht zwart'
+          url: '/images/products/711-clivia-zwart-schuin.webp',
+          alt: 'Tosot Clivia Zwart - Schuin'
         },
         {
-          url: '/images/products/711-clivia-black-indoor-schuin-boven.webp',
-          alt: 'Tosot Clivia - Schuin boven zwart'
-        },
-        {
-          url: '/images/products/710-clivia-black-indoor-links.webp',
-          alt: 'Tosot Clivia - Links zwart'
+          url: '/images/products/710-clivia-zwart-zijkant.webp',
+          alt: 'Tosot Clivia Zwart - Zijkant'
         }
       ],
       price: '€1595,- inclusief standaard installatie',
