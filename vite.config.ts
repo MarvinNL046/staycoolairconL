@@ -5,7 +5,28 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
-    strictPort: true
+    strictPort: true,
+    headers: {
+      'Content-Security-Policy': `
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' 'unsafe-eval';
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data: blob: https:;
+        font-src 'self';
+        connect-src 'self' 
+          https://*.supabase.co 
+          https://api.emailjs.com 
+          https://*.google-analytics.com 
+          https://*.analytics.google.com 
+          https://*.doubleclick.net 
+          https://stats.g.doubleclick.net 
+          https://*.google.com 
+          https://*.stripe.com 
+          https://api.staycoolairco.nl
+          http://localhost:*;
+        frame-src 'self' https://*.stripe.com;
+      `.replace(/\s+/g, ' ').trim()
+    }
   },
   build: {
     rollupOptions: {
@@ -15,23 +36,39 @@ export default defineConfig({
           ui: ['framer-motion', 'react-hot-toast', 'lucide-react'],
           forms: ['@emailjs/browser', '@stripe/react-stripe-js'],
         },
-        // Optimize chunk names for better caching
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]'
       },
+      external: [
+        'fs',
+        'path',
+        'url',
+        'crypto',
+        'stream',
+        'util',
+        'events',
+        'http',
+        'https',
+        'net',
+        'tls',
+        'zlib',
+        'os',
+        'querystring',
+        'buffer',
+        'string_decoder',
+        'async_hooks'
+      ]
     },
     chunkSizeWarningLimit: 1000,
     assetsInlineLimit: 4096,
-    // Disable sourcemap in production
-    sourcemap: false,
+    sourcemap: process.env.NODE_ENV !== 'production',
     minify: 'esbuild',
-    // Add CSS optimization
     cssCodeSplit: true,
-    // Add target for better browser support
     target: 'es2015',
-    // Add reporting for better build insights
-    reportCompressedSize: true,
+    reportCompressedSize: process.env.NODE_ENV === 'production',
+    emptyOutDir: true,
+    outDir: 'dist',
   },
   optimizeDeps: {
     include: [
@@ -43,11 +80,24 @@ export default defineConfig({
       'react-hot-toast',
       'lucide-react'
     ],
-    // Add exclude patterns for better optimization
     exclude: ['@stripe/react-stripe-js'],
   },
   preview: {
-    port: 4173,
-    strictPort: true
+    port: 4174,
+    strictPort: true,
+    headers: {
+      'Content-Security-Policy': `
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' 'unsafe-eval';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        img-src 'self' data: blob: https:;
+        font-src 'self' data: https://fonts.gstatic.com;
+        connect-src 'self' https://*.supabase.co https://kxjksvmlvyazphrbqglz.supabase.co https://api.emailjs.com https://*.google-analytics.com https://*.analytics.google.com https://*.doubleclick.net https://stats.g.doubleclick.net https://*.google.com https://*.stripe.com http://localhost:*;
+        frame-src 'self' https://*.stripe.com
+      `.replace(/\s+/g, ' ').trim(),
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+    }
   }
 });

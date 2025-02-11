@@ -78,6 +78,7 @@ const AircoPlaatsenLimburg = lazy(() => import('./pages/articles/airco-plaatsen-
 const EnergiezuinigeAircoLimburg = lazy(() => import('./pages/articles/energiezuinige-airco-limburg'));
 const AircoVerwarmingKostenBesparing = lazy(() => import('./pages/AircoVerwarmingKostenBesparing'));
 const AircoVerwarmingVoordelen = lazy(() => import('./pages/articles/airco-verwarming-voordelen'));
+const CityDetail = lazy(() => import('./components/CityDetail'));
 
 // Loading fallback component with skeleton UI
 const LoadingFallback = () => (
@@ -156,6 +157,7 @@ export default function App() {
                 <Route path="/products/:brand/:model" element={<ProductDetail />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/werkgebied" element={<ServiceArea />} />
+                <Route path="/werkgebied/:city" element={<CityDetail />} />
                 <Route path="/kennisbank" element={<KnowledgeBase />} />
                 <Route path="/voorwaarden" element={<Terms />} />
                 <Route path="/privacy" element={<Privacy />} />

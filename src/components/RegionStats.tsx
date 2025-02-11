@@ -1,19 +1,16 @@
 import { motion as m } from 'framer-motion';
 import { MapPin } from 'lucide-react';
 
-interface RegionStatsData {
-  gemeenten: number;
-  inwoners: number;
-}
+import { City } from '../utils/cityService';
 
-export interface RegionStats {
-  'Noord-Limburg': RegionStatsData;
-  'Midden-Limburg': RegionStatsData;
-  'Zuid-Limburg': RegionStatsData;
+interface RegionStatsData {
+  totalCities: number;
+  totalPopulation: number;
+  cities: City[];
 }
 
 interface RegionStatsProps {
-  stats: RegionStats;
+  stats: { [key: string]: RegionStatsData };
 }
 
 export default function RegionStats({ stats }: RegionStatsProps) {
@@ -31,8 +28,8 @@ export default function RegionStats({ stats }: RegionStatsProps) {
             <MapPin className="h-6 w-6 text-blue-600" />
           </div>
           <div className="space-y-2">
-            <p className="text-gray-600">{data.gemeenten} gemeenten</p>
-            <p className="text-gray-600">{data.inwoners.toLocaleString()} inwoners</p>
+            <p className="text-gray-600">{data.totalCities} gemeenten</p>
+            <p className="text-gray-600">{data.totalPopulation.toLocaleString()} inwoners</p>
           </div>
         </m.div>
       ))}

@@ -1,12 +1,11 @@
 import fs from 'fs';
-import {
-  daikinData,
-  lgData,
-  mitsubishiHeavyData,
-  toshibaData,
-  tosotData,
-  aircoCoversData
-} from '../dist/brands-data.js';
+import { daikinData } from '../src/data/brands/daikin';
+import { lgData } from '../src/data/brands/lg';
+import { mitsubishiHeavyData } from '../src/data/brands/mitsubishi-heavy';
+import { toshibaData } from '../src/data/brands/toshiba';
+import { tosotData } from '../src/data/brands/tosot';
+import { aircoCoverData } from '../src/data/brands/airco-covers';
+import { Brand } from '../src/types/products';
 
 function generateProductsSitemap() {
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -14,7 +13,7 @@ function generateProductsSitemap() {
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">`;
 
   // Helper function to add a product to the sitemap
-  function addProductToSitemap(brand, model, brandSlug) {
+  function addProductToSitemap(brand: Brand, model: Brand['models'][0], brandSlug: string) {
     const url = `https://staycoolairco.nl/products/${brandSlug}/${model.slug}`;
     
     sitemap += `
@@ -75,7 +74,7 @@ function generateProductsSitemap() {
   });
 
   // Add Airco Covers
-  aircoCoversData.models.forEach(model => {
+  aircoCoverData.models.forEach(model => {
     const url = `https://staycoolairco.nl/airco-covers/${model.slug}`;
     
     sitemap += `

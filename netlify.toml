@@ -2,12 +2,6 @@
   command = "npm run build"
   publish = "dist"
   
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = true
-
 [[headers]]
   for = "/*"
   [headers.values]
@@ -21,7 +15,7 @@
       style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
       img-src 'self' data: https: blob:;
       font-src 'self' data: https://fonts.gstatic.com;
-      connect-src 'self' https://api.emailjs.com https://www.google-analytics.com https://region1.analytics.google.com https://*.analytics.google.com https://analytics.google.com https://www.google.com https://www.google.com/ccm/collect;
+      connect-src 'self' https://api.emailjs.com https://www.google-analytics.com https://region1.analytics.google.com https://*.analytics.google.com https://analytics.google.com https://www.google.com https://www.google.com/ccm/collect https://kxjksvmlvyazphrbqglz.supabase.co https://api.staycoolairco.nl;
       frame-src 'self' https://www.google.com https://www.googletagmanager.com https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com https://youtube-nocookie.com;
       object-src 'none';
       base-uri 'self';
@@ -58,6 +52,8 @@
   VITE_GA_TRACKING_ID = "G-8JJ3BRSW92"
   VITE_GOOGLE_ADS_ID = "AW-10789737434"
   VITE_GTM_ID = "GTM-K2B9M3S"
+  VITE_SUPABASE_URL = "https://kxjksvmlvyazphrbqglz.supabase.co"
+  VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt4amtzdm1sdnlhenBocmJxZ2x6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzkyOTIzNTgsImV4cCI6MjA1NDg2ODM1OH0.8mEUKfK1AQ16waaPtJC8LDNvMND10u0jmDcLrCc0f6U"
 
 [build.processing]
   skip_processing = false
