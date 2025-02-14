@@ -14,9 +14,10 @@ export const initGA = () => {
     document.head.appendChild(script);
 
     // Initialize dataLayer
-    window.dataLayer = window.dataLayer || [];
+    const w = window as any;
+    w.dataLayer = w.dataLayer || [];
     function gtag(...args: any[]) {
-      window.dataLayer.push(args);
+      w.dataLayer.push(args);
     }
     gtag('js', new Date());
 
@@ -61,6 +62,6 @@ export const initGTM = () => {
       j.async=true;
       j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
       f.parentNode?.insertBefore(j,f);
-    })(window,document,'script','dataLayer',GTM_ID);
+    })((window as any),document,'script','dataLayer',GTM_ID);
   }
 };
