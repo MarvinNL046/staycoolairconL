@@ -1,21 +1,51 @@
 // Google Analytics configuration
 export const GA_TRACKING_ID = import.meta.env.VITE_GA_TRACKING_ID;
+export const GA_TRACKING_ID_SECONDARY = import.meta.env.VITE_GA_TRACKING_ID_SECONDARY;
 export const GTM_ID = import.meta.env.VITE_GTM_ID;
 export const GOOGLE_ADS_ID = import.meta.env.VITE_GOOGLE_ADS_ID;
 
 // Initialize Google Analytics
 export const initGA = () => {
   if (typeof window !== 'undefined') {
-    // Google Analytics
+    // Load Google Analytics Script
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+    document.head.appendChild(script);
+
+    // Initialize dataLayer
     window.dataLayer = window.dataLayer || [];
     function gtag(...args: any[]) {
       window.dataLayer.push(args);
     }
     gtag('js', new Date());
-    gtag('config', GA_TRACKING_ID);
+
+    // Configure primary GA4 property
+    gtag('config', GA_TRACKING_ID, {
+      page_path: window.location.pathname,
+      send_page_view: true
+    });
+
+    // Configure secondary GA4 property
+    gtag('config', GA_TRACKING_ID_SECONDARY, {
+      page_path: window.location.pathname,
+      send_page_view: true
+    });
 
     // Google Ads
     gtag('config', GOOGLE_ADS_ID);
+
+    // Track route changes
+    if ('navigation' in window) {
+      (window.navigation as any).addEventListener('navigate', (event: any) => {
+        if (event.destination.url !== window.location.href) {
+          gtag('event', 'page_view', {
+            page_path: new URL(event.destination.url).pathname,
+            send_to: [GA_TRACKING_ID, GA_TRACKING_ID_SECONDARY]
+          });
+        }
+      });
+    }
   }
 };
 

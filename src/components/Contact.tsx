@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
 import { sendEmail } from '../utils/email';
-import { trackEvent } from '../utils/analytics';
+import { trackFormSubmission, trackInteraction } from '../utils/analytics';
 import toast, { Toaster } from 'react-hot-toast';
 
 interface FormData {
@@ -30,6 +30,13 @@ export default function Contact() {
       ...prev,
       [name]: value
     }));
+
+    // Track field interaction after user stops typing
+    const timeoutId = setTimeout(() => {
+      trackInteraction('contact_form', 'field_input', name);
+    }, 1000);
+
+    return () => clearTimeout(timeoutId);
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -43,10 +50,7 @@ export default function Contact() {
       await sendEmail(formData);
 
       // Track successful form submission
-      trackEvent('form_submission', {
-        form_name: 'contact_form',
-        form_type: 'contact'
-      });
+      trackFormSubmission('contact_form', true);
 
       toast.success('Bericht succesvol verzonden! We nemen zo spoedig mogelijk contact met u op.');
       
@@ -56,11 +60,8 @@ export default function Contact() {
       console.error('Form submission error:', error);
       toast.error('Er is iets misgegaan. Probeer het later opnieuw of neem telefonisch contact op.');
       
-      // Track error
-      trackEvent('form_error', {
-        form_name: 'contact_form',
-        error_type: 'submission_failed'
-      });
+      // Track form submission error
+      trackFormSubmission('contact_form', false);
     } finally {
       setIsSubmitting(false);
     }
@@ -84,15 +85,27 @@ export default function Contact() {
             <div className="px-6 py-8">
               <h3 className="text-2xl font-bold text-gray-900">Direct Contact</h3>
               <div className="mt-8 space-y-6">
-                <a href="tel:0462021430" className="flex items-center text-gray-600 hover:text-blue-600">
+                <a 
+                  href="tel:0462021430" 
+                  className="flex items-center text-gray-600 hover:text-blue-600"
+                  onClick={() => trackInteraction('contact', 'click_phone')}
+                >
                   <Phone className="h-6 w-6 mr-3" />
                   <span>046 202 1430</span>
                 </a>
-                <a href="https://wa.me/31636481054" className="flex items-center text-gray-600 hover:text-blue-600">
+                <a 
+                  href="https://wa.me/31636481054" 
+                  className="flex items-center text-gray-600 hover:text-blue-600"
+                  onClick={() => trackInteraction('contact', 'click_whatsapp')}
+                >
                   <MessageSquare className="h-6 w-6 mr-3" />
                   <span>WhatsApp: 06 36481054</span>
                 </a>
-                <a href="mailto:info@staycoolairco.nl" className="flex items-center text-gray-600 hover:text-blue-600">
+                <a 
+                  href="mailto:info@staycoolairco.nl" 
+                  className="flex items-center text-gray-600 hover:text-blue-600"
+                  onClick={() => trackInteraction('contact', 'click_email')}
+                >
                   <Mail className="h-6 w-6 mr-3" />
                   <span>info@staycoolairco.nl</span>
                 </a>

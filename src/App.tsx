@@ -1,6 +1,7 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 import ScrollToTop from './components/ScrollToTop';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { trackPageView, trackError, trackPerformance } from './utils/analytics';
 import UruruSararaPage from './pages/products/ururu-sarara';
 import StylishPage from './pages/products/stylish';
 import Daiseikai10Page from './pages/products/daiseikai-10';
@@ -113,6 +114,32 @@ const preloadCriticalRoutes = () => {
 export default function App() {
   const location = useLocation();
 
+  // Track page views
+  useEffect(() => {
+    trackPageView(location.pathname);
+  }, [location]);
+
+  // Track performance metrics
+  useEffect(() => {
+    const reportWebVitals = ({ name, value, rating }: { name: string; value: number; rating?: 'good' | 'needs-improvement' | 'poor' }) => {
+      trackPerformance({ name, value, rating });
+    };
+
+    // Listen for web vitals
+    if ('web-vital' in window) {
+      (window as any)['web-vital'].getCLS(reportWebVitals);
+      (window as any)['web-vital'].getFID(reportWebVitals);
+      (window as any)['web-vital'].getLCP(reportWebVitals);
+      (window as any)['web-vital'].getFCP(reportWebVitals);
+      (window as any)['web-vital'].getTTFB(reportWebVitals);
+    }
+  }, []);
+
+  // Error boundary handler
+  const handleError = (error: Error) => {
+    trackError('react_error_boundary', error.message);
+  };
+
   // Preload critical routes after initial render
   useEffect(() => {
     preloadCriticalRoutes();
@@ -137,7 +164,7 @@ export default function App() {
   }, [location]);
 
   return (
-    <ErrorBoundary FallbackComponent={ErrorFallback}>
+    <ErrorBoundary FallbackComponent={ErrorFallback} onError={handleError}>
       <WebVitalsReporter />
       <div className="min-h-screen bg-white">
         <ScrollToTop />

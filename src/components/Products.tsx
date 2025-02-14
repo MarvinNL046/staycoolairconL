@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Check, Award } from 'lucide-react';
+import { trackProductInteraction, trackInteraction } from '../utils/analytics';
 
 export default function Products() {
+  // Track product section view
+  useEffect(() => {
+    trackInteraction('products_section', 'view');
+  }, []);
+
   const brands = [
     {
       name: 'Daikin',
@@ -100,6 +106,14 @@ export default function Products() {
                     <a
                       href="#contact"
                       className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300"
+                      onClick={() => {
+                        trackProductInteraction('click', {
+                          id: brand.name.toLowerCase(),
+                          name: brand.name,
+                          category: 'brand'
+                        });
+                        trackInteraction('products', 'request_quote', brand.name);
+                      }}
                     >
                       Vraag offerte aan
                     </a>
@@ -112,6 +126,11 @@ export default function Products() {
                       src={brand.logo}
                       alt={`${brand.name} airconditioner`}
                       className="w-full h-full object-cover"
+                      onClick={() => trackProductInteraction('view', {
+                        id: brand.name.toLowerCase(),
+                        name: brand.name,
+                        category: 'brand'
+                      })}
                     />
                   </div>
                 </div>
@@ -127,6 +146,7 @@ export default function Products() {
           <a
             href="#contact"
             className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300"
+            onClick={() => trackInteraction('products', 'request_advice')}
           >
             Vraag gratis advies aan
           </a>
