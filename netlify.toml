@@ -11,14 +11,14 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Content-Security-Policy = """
       default-src 'self';
-      script-src 'self' https://*.google-analytics.com https://*.googletagmanager.com https://www.google.com;
+      script-src 'self' 'unsafe-inline' https://*.google-analytics.com https://*.googletagmanager.com https://www.google.com;
       style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
       img-src 'self' data: https: blob:;
       font-src 'self' data: https://fonts.gstatic.com;
       connect-src 'self' https://api.emailjs.com https://*.google-analytics.com https://*.analytics.google.com https://analytics.google.com https://www.google.com https://*.netlify.app https://kxjksvmlvyazphrbqglz.supabase.co https://api.staycoolairco.nl;
       frame-src 'self' https://www.google.com https://www.googletagmanager.com https://www.youtube.com https://youtube-nocookie.com;
-      trusted-types 'default' 'analytics-policy' 'goog#html';
       require-trusted-types-for 'script';
+      trusted-types * 'allow-duplicates';
       object-src 'none';
       base-uri 'self';
       form-action 'self';

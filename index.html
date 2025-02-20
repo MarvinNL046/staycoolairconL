@@ -25,49 +25,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
     
-    <!-- Analytics initialization -->
-    <script type="application/javascript">
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      
-      // Create trusted type policy for analytics
-      if (window.trustedTypes && window.trustedTypes.createPolicy) {
-        window.trustedTypes.createPolicy('analytics-policy', {
-          createHTML: (string) => string,
-          createScript: (string) => string,
-          createScriptURL: (url) => {
-            if (url.startsWith('https://www.googletagmanager.com/')) {
-              return url;
-            }
-            throw new Error('Rejected script URL: ' + url);
-          }
-        });
-      }
-
-      // Load analytics after page load
-      window.addEventListener('load', function() {
-        // Load GTM
-        const gtmUrl = 'https://www.googletagmanager.com/gtm.js?id=GTM-K2B9M3S';
-        const gtmScript = document.createElement('script');
-        gtmScript.async = true;
-        gtmScript.src = window.trustedTypes?.createPolicy('analytics-policy')?.createScriptURL(gtmUrl) || gtmUrl;
-        document.head.appendChild(gtmScript);
-
-        // Load GA
-        const gaUrl = 'https://www.googletagmanager.com/gtag/js?id=G-8JJ3BRSW92';
-        const gaScript = document.createElement('script');
-        gaScript.async = true;
-        gaScript.src = window.trustedTypes?.createPolicy('analytics-policy')?.createScriptURL(gaUrl) || gaUrl;
-        document.head.appendChild(gaScript);
-
-        gaScript.onload = function() {
-          gtag('js', new Date());
-          gtag('config', 'G-8JJ3BRSW92');
-          gtag('config', 'AW-10789737434');
-        };
-      });
-    </script>
-    
     <!-- Primary Meta Tags -->
     <title>Airco Installatie Limburg | Specialist in Heerlen, Weert, Maastricht</title>
     <meta name="title" content="Airco Installatie Limburg | Specialist in Heerlen, Weert, Maastricht" />
