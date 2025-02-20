@@ -7,6 +7,7 @@ export const trackEvent = (eventName: string, params?: Record<string, any>) => {
       ...params,
       send_to: [GA_TRACKING_ID, GA_TRACKING_ID_SECONDARY]
     };
+    console.log('Tracking event:', eventName, eventParams);
     (window as any).gtag('event', eventName, eventParams);
   }
 };
@@ -14,11 +15,13 @@ export const trackEvent = (eventName: string, params?: Record<string, any>) => {
 // Google Ads conversion tracking
 export const trackConversion = (value?: number) => {
   if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'conversion', {
+    const conversionParams = {
       'send_to': 'AW-10789737434/HcGCCP3ez6AaENqn-Zgo',
       'value': value || 1.0,
       'currency': 'EUR'
-    });
+    };
+    console.log('Tracking conversion:', conversionParams);
+    (window as any).gtag('event', 'conversion', conversionParams);
   }
 };
 
@@ -42,6 +45,8 @@ export const trackInteraction = (category: string, action: string, label?: strin
 
 // Track form submissions
 export const trackFormSubmission = (formName: string, success: boolean) => {
+  console.log('Form submission:', { formName, success });
+  
   // Track form submission event
   trackEvent('form_submission', {
     form_name: formName,
@@ -50,12 +55,15 @@ export const trackFormSubmission = (formName: string, success: boolean) => {
 
   // If form submission was successful, track as conversion
   if (success && formName === 'contact_form') {
+    console.log('Tracking contact form conversion');
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'conversion', {
+      const conversionParams = {
         'send_to': 'AW-10789737434/HcGCCP3ez6AaENqn-Zgo',
         'value': 1.0,
         'currency': 'EUR'
-      });
+      };
+      console.log('Conversion params:', conversionParams);
+      (window as any).gtag('event', 'conversion', conversionParams);
     }
   }
 };

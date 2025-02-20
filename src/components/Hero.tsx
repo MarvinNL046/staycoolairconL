@@ -2,6 +2,7 @@ import React, { useState, lazy, Suspense } from 'react';
 import { m } from 'framer-motion';
 import { Phone, Mail, Send, Calendar, Shield, Clock, Thermometer } from 'lucide-react';
 import { sendEmail } from '../utils/email';
+import { trackFormSubmission, trackInteraction } from '../utils/analytics';
 import toast, { Toaster } from 'react-hot-toast';
 
 const CompactGoogleReviews = lazy(() => import('./CompactGoogleReviews'));
@@ -24,6 +25,13 @@ export default function Hero() {
       ...prev,
       [name]: value
     }));
+
+    // Track field interaction after user stops typing
+    const timeoutId = setTimeout(() => {
+      trackInteraction('hero_form', 'field_input', name);
+    }, 1000);
+
+    return () => clearTimeout(timeoutId);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -32,6 +40,10 @@ export default function Hero() {
 
     try {
       await sendEmail(formData);
+      
+      // Track successful form submission
+      trackFormSubmission('hero_form', true);
+      
       toast.success('Bericht succesvol verzonden! We nemen zo spoedig mogelijk contact met u op.');
       setFormData({
         name: '',
@@ -41,7 +53,11 @@ export default function Hero() {
         message: ''
       });
     } catch (error) {
+      console.error('Form submission error:', error);
       toast.error('Er is iets misgegaan. Probeer het later opnieuw of neem telefonisch contact op.');
+      
+      // Track form submission error
+      trackFormSubmission('hero_form', false);
     } finally {
       setIsSubmitting(false);
     }
