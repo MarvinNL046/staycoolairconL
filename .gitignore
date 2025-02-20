@@ -26,8 +26,11 @@ dist-ssr
 
 # Environment files
 .env
-.env.*
+.env.local
+.env.development
+.env.test
 !.env.example
+!.env.production
 
 # Testing
 coverage

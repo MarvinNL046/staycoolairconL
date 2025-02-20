@@ -4,10 +4,10 @@ export const GA_TRACKING_ID_SECONDARY = import.meta.env.VITE_GA_TRACKING_ID_SECO
 export const GTM_ID = import.meta.env.VITE_GTM_ID;
 export const GOOGLE_ADS_ID = import.meta.env.VITE_GOOGLE_ADS_ID;
 
-// Initialize Google Analytics
+// Initialize Google Analytics and Google Ads
 export const initGA = () => {
   if (typeof window !== 'undefined') {
-    // Load Google Analytics Script
+    // Load Google tag (gtag.js)
     const script = document.createElement('script');
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
@@ -21,20 +21,29 @@ export const initGA = () => {
     }
     gtag('js', new Date());
 
-    // Configure primary GA4 property
+    // Configure GA4 properties
     gtag('config', GA_TRACKING_ID, {
       page_path: window.location.pathname,
       send_page_view: true
     });
-
-    // Configure secondary GA4 property
     gtag('config', GA_TRACKING_ID_SECONDARY, {
       page_path: window.location.pathname,
       send_page_view: true
     });
 
-    // Google Ads
+    // Configure Google Ads
     gtag('config', GOOGLE_ADS_ID);
+
+    // Add conversion tracking event
+    const conversionScript = document.createElement('script');
+    conversionScript.innerHTML = `
+      gtag('event', 'conversion', {
+        'send_to': 'AW-10789737434/HcGCCP3ez6AaENqn-Zgo',
+        'value': 1.0,
+        'currency': 'EUR'
+      });
+    `;
+    document.head.appendChild(conversionScript);
 
     // Track route changes
     if ('navigation' in window) {
