@@ -10,70 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
-    <!-- Preload critical assets -->
-    <link rel="preload" href="/images/favicon.png" as="image" type="image/png" />
+    <!-- Icons -->
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     
-    <!-- Font display optimization -->
-    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
-    <style>
-      /* Prevent layout shift from font loading */
-      @font-face {
-        font-family: 'Inter var';
-        font-weight: 100 900;
-        font-display: swap;
-        src: url('/fonts/inter-var.woff2') format('woff2');
-      }
-    </style>
     <meta name="theme-color" content="#2563eb" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="StayCool Airco" />
-    <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self';
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.google-analytics.com https://*.googletagmanager.com https://*.google.com https://*.stripe.com 'require-trusted-types-for';
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-      img-src 'self' data: https: blob:;
-      font-src 'self' data: https://fonts.gstatic.com;
-      connect-src 'self' 
-        https://api.emailjs.com 
-        https://*.google-analytics.com 
-        https://*.analytics.google.com 
-        https://*.doubleclick.net 
-        https://stats.g.doubleclick.net 
-        https://*.google.com 
-        https://*.stripe.com 
-        https://*.supabase.co
-        https://kxjksvmlvyazphrbqglz.supabase.co
-        http://localhost:*;
-      frame-src 'self' 
-        https://*.google.com 
-        https://*.googletagmanager.com 
-        https://*.youtube.com 
-        https://*.youtube-nocookie.com 
-        https://*.stripe.com;
-      object-src 'none';
-      base-uri 'self';
-      form-action 'self';
-      frame-ancestors 'self';
-      upgrade-insecure-requests;
-      trusted-types 'none';
-    " />
-
-    <!-- Trusted Types Policy -->
-    <script>
-      if (window.trustedTypes && window.trustedTypes.createPolicy) {
-        window.trustedTypes.createPolicy('default', {
-          createHTML: (string) => string,
-          createScript: (string) => string,
-          createScriptURL: (string) => string
-        });
-      }
-    </script>
-    <!-- Preload critical resources -->
-    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/images/favicon.png" as="image" type="image/png" />
     
     <!-- Manifest and icons -->
     <link rel="manifest" href="/manifest.json" crossorigin="use-credentials" />
