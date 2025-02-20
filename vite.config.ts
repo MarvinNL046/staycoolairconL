@@ -9,10 +9,10 @@ export default defineConfig({
     headers: {
       'Content-Security-Policy': `
         default-src 'self';
-        script-src 'self' 'unsafe-inline' 'unsafe-eval';
-        style-src 'self' 'unsafe-inline';
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
         img-src 'self' data: blob: https:;
-        font-src 'self';
+        font-src 'self' https://fonts.gstatic.com;
         connect-src 'self' 
           https://*.supabase.co 
           https://api.emailjs.com 
@@ -23,8 +23,9 @@ export default defineConfig({
           https://*.google.com 
           https://*.stripe.com 
           https://api.staycoolairco.nl
+          https://*.googletagmanager.com
           http://localhost:*;
-        frame-src 'self' https://*.stripe.com;
+        frame-src 'self' https://*.stripe.com https://*.youtube-nocookie.com https://*.googletagmanager.com;
       `.replace(/\s+/g, ' ').trim()
     }
   },
