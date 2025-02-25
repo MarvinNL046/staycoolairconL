@@ -41,10 +41,10 @@ export const lgData: Brand = {
         { label: 'SCOP', value: '4,1' },
         { label: 'Geluidsniveau binnen', value: '21 dB(A)' },
         { label: 'Koudemiddel', value: 'R-32' },
-        { label: 'Afmetingen binnendeel (2,5kW & 3,5kW)', value: '837 x 308 x 189 mm (HxBxD)' },
-        { label: 'Afmetingen buitendeel (2,5kW & 3,5kW)', value: '717 x 483 x 230 mm (HxBxD)' },
-        { label: 'Afmetingen binnendeel (5kW & 7kW)', value: '998 x 345 x 210 mm (HxBxD)' },
-        { label: 'Afmetingen buitendeel (5kW & 7kW)', value: '770 x 545 x 288 mm (HxBxD)' }
+        { label: 'Afmetingen binnendeel (2,5kW & 3,5kW)', value: '837 x 308 x 189mm (BxHxD)' },
+        { label: 'Afmetingen buitendeel (2,5kW & 3,5kW)', value: '717 x 483 x 230mm (BxHxD)' },
+        { label: 'Afmetingen binnendeel (5kW & 7kW)', value: '998 x 345 x 210mm (BxHxD)' },
+        { label: 'Afmetingen buitendeel (5kW & 7kW)', value: '770 x 545 x 288mm (BxHxD)' }
       ]
     },
     {
