@@ -50,7 +50,7 @@ export const lgData: Brand = {
     {
       name: 'DualCool Premium',
       slug: 'dualcool-premium',
-      description: 'Geavanceerde wandunit met superieure energiezuinigheid en uitgebreide functies voor optimaal comfort.',
+      description: 'Geavanceerde wandunit met superieure energiezuinigheid en uitgebreide functies voor optimaal comfort. Voorzien van AI air mode, allergiefilter en fluisterstille werking vanaf 19 dB. Bedien de unit eenvoudig via wifi of spraakbesturing met Google Assistant of Alexa.',
       imageUrl: '/images/products/rac-eu-lg-premium.webp',
       images: [
         {
@@ -59,24 +59,40 @@ export const lgData: Brand = {
         }
       ],
       price: '€2.060,- inclusief standaard installatie',
-      energyLabel: 'A+++',
+      energyLabel: 'A++',
       capacity: '2,5 kW - 6,6 kW',
       features: [
+        'AI air mode',
+        'Window open detecting',
+        'Allergie filter',
+        'Comfort humidity control',
+        'Voice-control (Google Assistant/Alexa)',
+        'Slaapfunctie (19 dB)',
         'UVnano technologie',
         'Dual Inverter Compressor',
         'ThinQ Smart Diagnosis',
         'Active Energy Control',
         'Ionizer',
         'Auto Clean',
-        '4-weg luchtstroom'
+        '4-weg luchtstroom',
+        'Wifi-besturing op afstand'
       ],
       specifications: [
         { label: 'Koelcapaciteit', value: '2,5 - 6,6 kW' },
         { label: 'Verwarmingscapaciteit', value: '3,2 - 7,5 kW' },
-        { label: 'SEER', value: '8,5' },
+        { label: 'SEER', value: '8,3' },
         { label: 'SCOP', value: '4,6' },
-        { label: 'Geluidsniveau binnen', value: '20 dB(A)' },
-        { label: 'Koudemiddel', value: 'R-32' }
+        { label: 'Geluidsniveau binnen (min)', value: '19 dB(A)' },
+        { label: 'Geluidsniveau binnen (max)', value: '48 dB(A)' },
+        { label: 'Koudemiddel', value: 'R-32' },
+        { label: 'Afmetingen binnendeel', value: '799 x 307 x 235mm (BxHxD)' },
+        { label: 'Afmetingen buitendeel', value: '717 x 495 x 230mm (BxHxD)' },
+        { label: 'Gewicht binnenunit', value: '10 kg' },
+        { label: 'Gewicht buitenunit', value: '25 kg' },
+        { label: 'Min. leidinglengte', value: '3 m' },
+        { label: 'Max. leidinglengte', value: '20 m' },
+        { label: 'Max. hoogteverschil', value: '10 m' },
+        { label: 'Garantie', value: '5 jaar' }
       ]
     },
     {
