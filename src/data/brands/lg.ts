@@ -98,7 +98,7 @@ export const lgData: Brand = {
     {
       name: 'ARTCOOL Mirror',
       slug: 'artcool-mirror',
-      description: 'Stijlvolle wandunit met spiegelend glazen frontpaneel dat naadloos integreert in moderne interieurs.',
+      description: 'Stijlvolle wandunit met spiegelend glazen frontpaneel dat naadloos integreert in moderne interieurs. Voorzien van Dual Inverter technologie voor snelle en efficiënte koeling en verwarming. Bedien de unit eenvoudig via wifi of spraakbesturing met Google Assistant of Alexa.',
       imageUrl: '/images/products/lg-artcool-mirror.webp',
       images: [
         {
@@ -111,6 +111,13 @@ export const lgData: Brand = {
       capacity: '2,5 kW - 6,6 kW',
       features: [
         'Spiegelend glazen frontpaneel',
+        'Extra stil (20 dB(A))',
+        'Snel koelen en verwarmen',
+        'Luchtreiniging met ionisatie',
+        'Slimme diagnoses',
+        'Wifi-besturing op afstand',
+        'Compatibel met Google Assistant en Amazon Alexa',
+        'Automatische reiniging',
         'UVnano technologie',
         'Dual Inverter Compressor',
         'ThinQ Smart Diagnosis',
@@ -119,12 +126,26 @@ export const lgData: Brand = {
         'Auto Clean'
       ],
       specifications: [
-        { label: 'Koelcapaciteit', value: '2,5 - 6,6 kW' },
-        { label: 'Verwarmingscapaciteit', value: '3,2 - 7,5 kW' },
-        { label: 'SEER', value: '7,6' },
+        { label: 'Koelcapaciteit (2,5kW)', value: '0,89 - 3,7 kW' },
+        { label: 'Koelcapaciteit (3,5kW)', value: '0,89 - 4,04 kW' },
+        { label: 'Verwarmingscapaciteit (2,5kW)', value: '0,89 - 4,1 kW' },
+        { label: 'Verwarmingscapaciteit (3,5kW)', value: '0,89 - 4,7 kW' },
+        { label: 'SEER (2,5kW)', value: '7,2' },
+        { label: 'SEER (3,5kW)', value: '6,9' },
         { label: 'SCOP', value: '4,3' },
-        { label: 'Geluidsniveau binnen', value: '21 dB(A)' },
-        { label: 'Koudemiddel', value: 'R-32' }
+        { label: 'Geluidsniveau binnen (min)', value: '20 dB(A)' },
+        { label: 'Geluidsniveau binnen (max)', value: '42 dB(A)' },
+        { label: 'Geluidsniveau buiten', value: '50 dB(A)' },
+        { label: 'Koudemiddel', value: 'R-32' },
+        { label: 'Afmetingen binnendeel', value: '652 x 652 x 158mm (BxHxD)' },
+        { label: 'Afmetingen buitendeel (2,5kW)', value: '770 x 545 x 288mm (BxHxD)' },
+        { label: 'Afmetingen buitendeel (3,5kW)', value: '770 x 545 x 288mm (BxHxD)' },
+        { label: 'Gewicht binnenunit', value: '20 kg' },
+        { label: 'Gewicht buitenunit', value: '33,4 kg' },
+        { label: 'Min. leidinglengte', value: '3 m' },
+        { label: 'Max. leidinglengte', value: '20 m' },
+        { label: 'Max. hoogteverschil', value: '10 m' },
+        { label: 'Garantie', value: '5 jaar' }
       ]
     },
     {
