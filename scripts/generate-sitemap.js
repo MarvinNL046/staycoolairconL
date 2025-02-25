@@ -39,11 +39,19 @@ function filePathToUrl(filePath) {
   // Convert PascalCase to kebab-case
   url = url.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
 
-  // Special handling for articles and calculator
+  // Special handling for articles, calculator, and landing pages
   if (url.startsWith('articles/')) {
     url = url.replace('articles/', 'kennisbank/');
   } else if (url === 'capacity-calculator') {
     url = 'capaciteit-calculator';
+  } else if (url.startsWith('landing/')) {
+    // Handle landing pages - remove the "landing" suffix from the filename
+    url = url.replace(/-landing$/, '');
+    
+    // Special case for LGLanding
+    if (url === 'landing/lglanding') {
+      url = 'landing/lg';
+    }
   }
 
   return `https://staycoolairco.nl/${url}`;

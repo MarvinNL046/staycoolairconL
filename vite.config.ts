@@ -10,7 +10,7 @@ export default defineConfig({
       'Content-Security-Policy': `
         default-src 'self';
         script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com data: blob:;
         img-src 'self' data: blob: https:;
         font-src 'self' https://fonts.gstatic.com;
         connect-src 'self' 

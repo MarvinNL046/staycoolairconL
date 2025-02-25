@@ -29,6 +29,13 @@ const Privacy = lazy(() => import('./pages/Privacy'));
 const MaintenanceProcedures = lazy(() => import('./pages/MaintenanceProcedures'));
 const AircoCovers = lazy(() => import('./pages/AircoCovers'));
 
+// Landing Pages
+const DaikinLanding = lazy(() => import('./pages/landing/DaikinLanding'));
+const LGLanding = lazy(() => import('./pages/landing/LGLanding'));
+const MitsubishiHeavyLanding = lazy(() => import('./pages/landing/MitsubishiHeavyLanding'));
+const ToshibaLanding = lazy(() => import('./pages/landing/ToshibaLanding'));
+const TosotLanding = lazy(() => import('./pages/landing/TosotLanding'));
+
 // Knowledge Base Articles
 const HoeWerktAirco = lazy(() => import('./pages/articles/HoeWerktAirco'));
 const SoortenAirco = lazy(() => import('./pages/articles/SoortenAirco'));
@@ -240,6 +247,13 @@ export default function App() {
                 <Route path="/kennisbank/energiezuinige-airco-limburg" element={<EnergiezuinigeAircoLimburg />} />
                 <Route path="/airco-verwarming-kosten-besparing" element={<AircoVerwarmingKostenBesparing />} />
                 <Route path="/kennisbank/airco-verwarming-voordelen" element={<AircoVerwarmingVoordelen />} />
+                
+                {/* Landing Pages */}
+                <Route path="/landing/daikin" element={<DaikinLanding />} />
+                <Route path="/landing/lg" element={<LGLanding />} />
+                <Route path="/landing/mitsubishi-heavy" element={<MitsubishiHeavyLanding />} />
+                <Route path="/landing/toshiba" element={<ToshibaLanding />} />
+                <Route path="/landing/tosot" element={<TosotLanding />} />
               </Routes>
             </Suspense>
           </AnimatePresence>

@@ -11,7 +11,11 @@ export default function ProductDetail() {
   const [showInstallationInfo, setShowInstallationInfo] = useState(false);
   
   // Find the product data
-  const brandData = productData.brands.find(b => b.name.toLowerCase() === brand);
+  const brandData = productData.brands.find(b => 
+    b.name.toLowerCase() === brand || 
+    b.name.toLowerCase().startsWith(brand || '') ||
+    b.name.toLowerCase().includes(brand || '')
+  );
   const modelData = brandData?.models.find(m => m.slug === model);
 
   if (!brandData || !modelData) {

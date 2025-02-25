@@ -12,7 +12,7 @@
     "build:brands": "node scripts/build-brands-data.js && node scripts/bundle-brands-data.js",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "generate-sitemaps": "node scripts/generate-products-sitemap.js && node scripts/generate-service-areas-sitemap.js && node scripts/generate-sitemap.js && cp public/*sitemap*.xml dist/"
+    "generate-sitemaps": "node scripts/generate-products-sitemap.js && node scripts/generate-service-areas-sitemap.js && node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

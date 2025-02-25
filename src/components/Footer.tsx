@@ -62,6 +62,36 @@ export default function Footer() {
             </ul>
           </div>
           <div>
+            <h3 className="text-white text-lg font-semibold">Merken</h3>
+            <ul className="mt-4 space-y-2">
+              <li>
+                <Link to="/landing/daikin" className="text-gray-400 hover:text-white">
+                  Daikin
+                </Link>
+              </li>
+              <li>
+                <Link to="/landing/lg" className="text-gray-400 hover:text-white">
+                  LG
+                </Link>
+              </li>
+              <li>
+                <Link to="/landing/mitsubishi-heavy" className="text-gray-400 hover:text-white">
+                  Mitsubishi Heavy
+                </Link>
+              </li>
+              <li>
+                <Link to="/landing/toshiba" className="text-gray-400 hover:text-white">
+                  Toshiba
+                </Link>
+              </li>
+              <li>
+                <Link to="/landing/tosot" className="text-gray-400 hover:text-white">
+                  Tosot
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
             <h3 className="text-white text-lg font-semibold">Informatie</h3>
             <ul className="mt-4 space-y-2">
               <li>

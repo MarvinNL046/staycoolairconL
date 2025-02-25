@@ -14,6 +14,7 @@ export interface EmailData {
   city: string;
   message: string;
   to_name?: string;
+  subject?: string;
 }
 
 export const sendEmail = async (data: EmailData): Promise<void> => {
@@ -31,7 +32,8 @@ export const sendEmail = async (data: EmailData): Promise<void> => {
         city: data.city,
         message: data.message,
         to_name: data.to_name || 'StayCool Airco',
-        reply_to: data.email
+        reply_to: data.email,
+        subject: data.subject || 'Nieuwe aanvraag via website'
       }
     );
 
