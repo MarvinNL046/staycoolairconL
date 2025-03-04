@@ -111,7 +111,11 @@ export default function Contact() {
                 </a>
                 <div className="flex items-center text-gray-600">
                   <MapPin className="h-6 w-6 mr-3" />
-                  <span>Werkgebied: Limburg, Nederland</span>
+                  <div>
+                    <p>Aan De Bogen 11</p>
+                    <p>6118AS Nieuwstadt</p>
+                    <p>Werkgebied: Limburg, Nederland</p>
+                  </div>
                 </div>
               </div>
             </div>

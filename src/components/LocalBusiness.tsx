@@ -17,15 +17,16 @@ export default function LocalBusiness({ city, region = "Limburg", postalCode }: 
     "priceRange": "€€",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": city,
-      "addressRegion": region,
-      "postalCode": postalCode,
+      "streetAddress": "Aan De Bogen 11",
+      "addressLocality": "Nieuwstadt",
+      "addressRegion": "Limburg",
+      "postalCode": "6118AS",
       "addressCountry": "NL"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "50.8882",
-      "longitude": "5.9765"
+      "latitude": "51.0419",
+      "longitude": "5.8614"
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
