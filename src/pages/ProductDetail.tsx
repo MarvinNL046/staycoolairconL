@@ -226,6 +226,23 @@ export default function ProductDetail() {
             </m.div>
           </div>
 
+          {/* Product Video (if available) */}
+          {modelData.videoUrl && (
+            <div className="mt-16">
+              <h2 className="text-2xl font-bold text-gray-900 mb-8">Product Video</h2>
+              <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                <video 
+                  controls 
+                  className="w-full h-auto"
+                  poster={productImages[0].url}
+                >
+                  <source src={modelData.videoUrl} type="video/mp4" />
+                  Uw browser ondersteunt geen video weergave.
+                </video>
+              </div>
+            </div>
+          )}
+
           {/* Technical Specifications */}
           <div className="mt-16">
             <h2 className="text-2xl font-bold text-gray-900 mb-8">Technische Specificaties</h2>
