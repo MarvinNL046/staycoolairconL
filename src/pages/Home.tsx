@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
 import WhyUs from '../components/WhyUs';
+import BrandLogos from '../components/BrandLogos';
 import Contact from '../components/Contact';
 import SchemaMarkup from '../components/SchemaMarkup';
 
@@ -83,6 +84,7 @@ export default function Home() {
       <Hero />
       <Services />
       <WhyUs />
+      <BrandLogos />
       <Contact />
     </>
   );
