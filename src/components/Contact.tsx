@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
 import { sendEmail } from '../utils/email';
 import { trackFormSubmission, trackInteraction } from '../utils/analytics';
+import { trackPixelFormSubmission } from '../utils/facebook';
 import toast, { Toaster } from 'react-hot-toast';
 
 interface FormData {
@@ -51,6 +52,9 @@ export default function Contact() {
 
       // Track successful form submission
       trackFormSubmission('contact_form', true);
+      
+      // Track Facebook Pixel conversion
+      trackPixelFormSubmission('contact_form', true);
 
       toast.success('Bericht succesvol verzonden! We nemen zo spoedig mogelijk contact met u op.');
       
