@@ -55,12 +55,12 @@ export default function BrandLogos() {
               to={`/products/${brand.name.toLowerCase()}`}
               className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:bg-blue-50 hover:scale-105"
             >
-              <div className="h-16 flex items-center justify-center">
+              <div className="h-20 w-full flex items-center justify-center">
                 {brandLogos[brand.name] ? (
                   <img 
                     src={brandLogos[brand.name]} 
                     alt={`${brand.name} logo`} 
-                    className="max-h-full max-w-full object-contain"
+                    className="max-h-16 max-w-[80%] object-contain"
                   />
                 ) : (
                   <span className="text-xl font-bold text-blue-600">{brand.name}</span>
