@@ -22,6 +22,9 @@ export default function BrandLogos() {
     'Tosot': '/images/brands/tosotbygree.png',
   };
 
+  // Debug: Log the brand names and their logo paths
+  console.log('Brand logos:', brandLogos);
+
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,11 +64,27 @@ export default function BrandLogos() {
             >
               <div className="h-20 w-full flex items-center justify-center">
                 {brandLogos[brand.name] ? (
-                  <img 
-                    src={brandLogos[brand.name]} 
-                    alt={`${brand.name} logo`} 
-                    className="max-h-16 max-w-[80%] object-contain"
-                  />
+                  <>
+                    <img 
+                      src={brandLogos[brand.name]} 
+                      alt={`${brand.name} logo`} 
+                      className="max-h-16 max-w-[80%] object-contain"
+                      onError={(e) => {
+                        console.error(`Failed to load logo for ${brand.name}:`, e);
+                        const imgElement = e.currentTarget as HTMLImageElement;
+                        imgElement.style.display = 'none';
+                        const nextElement = imgElement.nextElementSibling as HTMLElement;
+                        if (nextElement) {
+                          nextElement.style.display = 'block';
+                        }
+                      }}
+                    />
+                    <span 
+                      className="text-xl font-bold text-blue-600 hidden"
+                    >
+                      {brand.name}
+                    </span>
+                  </>
                 ) : (
                   <span className="text-xl font-bold text-blue-600">{brand.name}</span>
                 )}
