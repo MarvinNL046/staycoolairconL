@@ -5,8 +5,12 @@ import { productData } from '../data/products';
 import LazyImage from './LazyImage';
 
 export default function BrandLogos() {
-  // Filter out airco-covers as it's not a brand but a product category
-  const brands = productData.brands.filter(brand => brand.name !== 'Airco Covers');
+  // Filter out airco-covers and airco bescherming/omkasting as they are not brands but product categories
+  const brands = productData.brands.filter(brand => 
+    brand.name !== 'Airco Covers' && 
+    !brand.name.toLowerCase().includes('bescherming') && 
+    !brand.name.toLowerCase().includes('omkasting')
+  );
   
   // Map brand names to their logo files
   const brandLogos: Record<string, string> = {
