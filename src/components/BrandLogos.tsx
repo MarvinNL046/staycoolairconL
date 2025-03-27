@@ -2,10 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 import { productData } from '../data/products';
+import LazyImage from './LazyImage';
 
 export default function BrandLogos() {
   // Filter out airco-covers as it's not a brand but a product category
   const brands = productData.brands.filter(brand => brand.name !== 'Airco Covers');
+  
+  // Map brand names to their logo files
+  const brandLogos: Record<string, string> = {
+    'Daikin': '/images/brands/DAIKIN_logo.svg',
+    'LG': '/images/brands/LG_logo_(2014).svg',
+    'Mitsubishi Heavy': '/images/brands/mhi_logo_en.svg',
+    'Samsung': '/images/brands/Samsung_Logo.svg',
+    'Tosot': '/images/brands/tosotbygree.png',
+    // Fallback to text for any missing logos
+  };
 
   return (
     <section className="py-16 bg-gray-50">
@@ -45,7 +56,15 @@ export default function BrandLogos() {
               className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:bg-blue-50 hover:scale-105"
             >
               <div className="h-16 flex items-center justify-center">
-                <span className="text-xl font-bold text-blue-600">{brand.name}</span>
+                {brandLogos[brand.name] ? (
+                  <img 
+                    src={brandLogos[brand.name]} 
+                    alt={`${brand.name} logo`} 
+                    className="max-h-full max-w-full object-contain"
+                  />
+                ) : (
+                  <span className="text-xl font-bold text-blue-600">{brand.name}</span>
+                )}
               </div>
             </Link>
           ))}
