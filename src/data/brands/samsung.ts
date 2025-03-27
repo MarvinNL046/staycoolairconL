@@ -28,19 +28,24 @@ export const samsungData: Brand = {
       ],
       price: 'Prijs op aanvraag',
       energyLabel: 'A++',
-      capacity: '2,5 kW - 5,0 kW',
+      capacity: '2,5 kW - 7,0 kW',
       features: [
         'Wind-Free technologie voor comfort zonder directe luchtstroom',
         'AI Auto Comfort past automatisch aan op basis van omgevingscondities',
         'Tri-Care Filter voor verbeterde luchtkwaliteit',
         'SmartThings app-bediening',
-        'Energiezuinige prestaties'
+        'Energiezuinige prestaties met SEER tot 8,80 (A+++)'
       ],
       specifications: [
-        { label: 'Koelcapaciteit', value: '2,5 - 5,0 kW' },
-        { label: 'Verwarmingscapaciteit', value: '3,2 - 6,0 kW' },
-        { label: 'Geluidsniveau binnen', value: 'Nader te bepalen dB(A)' },
-        { label: 'Koudemiddel', value: 'R-32' }
+        { label: 'Beschikbare modellen', value: 'AR09TXCAAWKNEU (2,5kW), AR12TXCAAWKNEU (3,5kW), AR24TXEAWKNEU (7,0kW)' },
+        { label: 'Koelcapaciteit', value: '2,5 - 7,0 kW' },
+        { label: 'Verwarmingscapaciteit', value: '3,2 - 9,7 kW' },
+        { label: 'SEER (koeling)', value: '6,40 (A++) tot 8,80 (A+++)' },
+        { label: 'SCOP (verwarming)', value: '4,00 (A+) tot 5,10 (A+++)' },
+        { label: 'Geluidsniveau binnen', value: '16-27 dB(A) in stille modus, 38-45 dB(A) in normale modus' },
+        { label: 'Koudemiddel', value: 'R-32' },
+        { label: 'Max. leidinglengte', value: '15-30 meter' },
+        { label: 'Max. hoogteverschil', value: '8-15 meter' }
       ]
     },
     {
