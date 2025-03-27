@@ -16,7 +16,7 @@ export const trackEvent = (eventName: string, params?: Record<string, any>) => {
 export const trackConversion = (value?: number) => {
   if (typeof window !== 'undefined' && (window as any).gtag) {
     const conversionParams = {
-      'send_to': 'AW-10789737434/HcGCCP3ez6AaENqn-Zgo',
+      'send_to': 'AW-10789737434/E-FmCJ743ocYENqn-Zgo',
       'value': value || 1.0,
       'currency': 'EUR'
     };
@@ -58,7 +58,7 @@ export const trackFormSubmission = (formName: string, success: boolean) => {
     console.log('Tracking contact form conversion');
     if (typeof window !== 'undefined' && (window as any).gtag) {
       const conversionParams = {
-        'send_to': 'AW-10789737434/HcGCCP3ez6AaENqn-Zgo',
+        'send_to': 'AW-10789737434/E-FmCJ743ocYENqn-Zgo',
         'value': 1.0,
         'currency': 'EUR'
       };
