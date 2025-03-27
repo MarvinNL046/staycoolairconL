@@ -14,8 +14,8 @@ export default function BrandLogos() {
     'LG': '/images/brands/LG_logo_(2014).svg',
     'Mitsubishi Heavy': '/images/brands/mhi_logo_en.svg',
     'Samsung': '/images/brands/Samsung_Logo.svg',
+    'Toshiba': '/images/brands/Toshiba_logo.svg',
     'Tosot': '/images/brands/tosotbygree.png',
-    // Fallback to text for any missing logos
   };
 
   return (
