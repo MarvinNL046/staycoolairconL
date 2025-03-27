@@ -3,7 +3,7 @@ import { Brand } from '../../types/products';
 export const samsungData: Brand = {
   name: 'Samsung',
   description: 'Innovatieve airconditioners met geavanceerde technologie voor optimaal comfort en energiebesparing.',
-  imageUrl: '/images/products/samsung/windfreeElite/Wind-Free Elite_Front-Open_White2.png.png',
+  imageUrl: '/images/products/samsung/windfreeElite/Wind-Free Elite_Front-Open_White2.png.webp',
   features: [
     'Wind-Free technologie voor comfort zonder directe luchtstroom',
     'Energiezuinige prestaties',
@@ -15,14 +15,14 @@ export const samsungData: Brand = {
       name: 'Wind-Free Elite',
       slug: 'wind-free-elite',
       description: 'De Samsung Wind-Free Elite biedt superieur comfort met de innovatieve Wind-Free technologie die koele lucht gelijkmatig verspreidt zonder directe luchtstroom.',
-      imageUrl: '/images/products/samsung/windfreeElite/Wind-Free Elite_Front-Open_White2.png.png',
+      imageUrl: '/images/products/samsung/windfreeElite/Wind-Free Elite_Front-Open_White2.png.webp',
       images: [
         {
-          url: '/images/products/samsung/windfreeElite/Wind-Free Elite_Front-Open_White2.png.png',
+          url: '/images/products/samsung/windfreeElite/Wind-Free Elite_Front-Open_White2.png.webp',
           alt: 'Samsung Wind-Free Elite - Vooraanzicht'
         },
         {
-          url: '/images/products/samsung/windfreeElite/Wind-Free Elite_outdoor unit_2-5 and 3-5kW_Front.jpg.jpg',
+          url: '/images/products/samsung/windfreeElite/Wind-Free Elite_outdoor unit_2-5 and 3-5kW_Front.jpg.webp',
           alt: 'Samsung Wind-Free Elite - Buitenunit'
         }
       ],
@@ -47,26 +47,26 @@ export const samsungData: Brand = {
       name: 'Wind-Free Comfort',
       slug: 'wind-free-comfort',
       description: 'De Samsung Wind-Free Comfort biedt een perfecte balans tussen comfort en betaalbaarheid, met de innovatieve Wind-Free technologie voor een aangenaam binnenklimaat.',
-      imageUrl: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Front_WhiteWEB8.jpg.jpg',
+      imageUrl: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Front_WhiteWEB8.jpg.webp',
       images: [
         {
-          url: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Front_WhiteWEB8.jpg.jpg',
+          url: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Front_WhiteWEB8.jpg.webp',
           alt: 'Samsung Wind-Free Comfort - Vooraanzicht'
         },
         {
-          url: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Dynamic(L)_WhiteWEB.png.png',
+          url: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Dynamic(L)_WhiteWEB.png.webp',
           alt: 'Samsung Wind-Free Comfort - Linkerzijde'
         },
         {
-          url: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Dynamic(R)_WhiteWEB.png.png',
+          url: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Dynamic(R)_WhiteWEB.png.webp',
           alt: 'Samsung Wind-Free Comfort - Rechterzijde'
         },
         {
-          url: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Front-Open_WhiteWEB.png.png',
+          url: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Front-Open_WhiteWEB.png.webp',
           alt: 'Samsung Wind-Free Comfort - Vooraanzicht Open'
         },
         {
-          url: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_outdoor unit_2-5 and 3-5kW_FrontWEB.png.png',
+          url: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_outdoor unit_2-5 and 3-5kW_FrontWEB.png.webp',
           alt: 'Samsung Wind-Free Comfort - Buitenunit 2,5-3,5kW'
         }
       ],
@@ -91,26 +91,26 @@ export const samsungData: Brand = {
       name: 'Luzon',
       slug: 'luzon',
       description: 'De Samsung Luzon biedt betrouwbare klimaatbeheersing met een uitstekende prijs-kwaliteitverhouding. Deze wandunit combineert efficiënte prestaties met een stijlvol design.',
-      imageUrl: '/images/products/samsung/luzon/Luzon_Front_WhiteWEB.png.png',
+      imageUrl: '/images/products/samsung/luzon/Luzon_Front_WhiteWEB.png.webp',
       images: [
         {
-          url: '/images/products/samsung/luzon/Luzon_Front_WhiteWEB.png.png',
+          url: '/images/products/samsung/luzon/Luzon_Front_WhiteWEB.png.webp',
           alt: 'Samsung Luzon - Vooraanzicht'
         },
         {
-          url: '/images/products/samsung/luzon/Luzon_Dynamic(L)_WhiteWEB.png.png',
+          url: '/images/products/samsung/luzon/Luzon_Dynamic(L)_WhiteWEB.png.webp',
           alt: 'Samsung Luzon - Linkerzijde'
         },
         {
-          url: '/images/products/samsung/luzon/Luzon_Dynamic(R)_WhiteWEB.png.png',
+          url: '/images/products/samsung/luzon/Luzon_Dynamic(R)_WhiteWEB.png.webp',
           alt: 'Samsung Luzon - Rechterzijde'
         },
         {
-          url: '/images/products/samsung/luzon/Luzon_Front-Open_WhiteWEB.png.png',
+          url: '/images/products/samsung/luzon/Luzon_Front-Open_WhiteWEB.png.webp',
           alt: 'Samsung Luzon - Vooraanzicht Open'
         },
         {
-          url: '/images/products/samsung/luzon/Luzon_outdoor unit_2-5 and 3-5kW_FrontWEB.png.png',
+          url: '/images/products/samsung/luzon/Luzon_outdoor unit_2-5 and 3-5kW_FrontWEB.png.webp',
           alt: 'Samsung Luzon - Buitenunit 2,5-3,5kW'
         }
       ],
@@ -135,26 +135,26 @@ export const samsungData: Brand = {
       name: 'Cebu',
       slug: 'cebu',
       description: 'De Samsung Cebu is een compacte en efficiënte wandunit die betrouwbare klimaatbeheersing biedt voor kleinere ruimtes. Met zijn strakke design past deze unit in elk interieur.',
-      imageUrl: '/images/products/samsung/cebu/Cebu_Front_WhiteWEB.png.png',
+      imageUrl: '/images/products/samsung/cebu/Cebu_Front_WhiteWEB.png.webp',
       images: [
         {
-          url: '/images/products/samsung/cebu/Cebu_Front_WhiteWEB.png.png',
+          url: '/images/products/samsung/cebu/Cebu_Front_WhiteWEB.png.webp',
           alt: 'Samsung Cebu - Vooraanzicht'
         },
         {
-          url: '/images/products/samsung/cebu/Cebu_Dynamic(L)_WhiteWEB.png.png',
+          url: '/images/products/samsung/cebu/Cebu_Dynamic(L)_WhiteWEB.png.webp',
           alt: 'Samsung Cebu - Linkerzijde'
         },
         {
-          url: '/images/products/samsung/cebu/Cebu_Dynamic(R)_WhiteWEB.png.png',
+          url: '/images/products/samsung/cebu/Cebu_Dynamic(R)_WhiteWEB.png.webp',
           alt: 'Samsung Cebu - Rechterzijde'
         },
         {
-          url: '/images/products/samsung/cebu/Cebu_Front-Open_WhiteWEB.png.png',
+          url: '/images/products/samsung/cebu/Cebu_Front-Open_WhiteWEB.png.webp',
           alt: 'Samsung Cebu - Vooraanzicht Open'
         },
         {
-          url: '/images/products/samsung/cebu/Cebu_outdoor unit_2-5 and 3-5kW_FrontWEB.png.png',
+          url: '/images/products/samsung/cebu/Cebu_outdoor unit_2-5 and 3-5kW_FrontWEB.png.webp',
           alt: 'Samsung Cebu - Buitenunit'
         }
       ],
@@ -179,14 +179,14 @@ export const samsungData: Brand = {
       name: '360 Cassette',
       slug: '360-cassette',
       description: 'De Samsung 360 Cassette is een innovatieve plafondunit met een uniek rond design dat zorgt voor een gelijkmatige luchtverdeling in alle richtingen, zonder koude tocht.',
-      imageUrl: '/images/products/samsung/casette/360 Cassette - Rond - Front - Web.jpg',
+      imageUrl: '/images/products/samsung/casette/360 Cassette - Rond - Front - Web.webp',
       images: [
         {
-          url: '/images/products/samsung/casette/360 Cassette - Rond - Front - Web.jpg',
+          url: '/images/products/samsung/casette/360 Cassette - Rond - Front - Web.webp',
           alt: 'Samsung 360 Cassette - Vooraanzicht'
         },
         {
-          url: '/images/products/samsung/casette/360 Cassette - Rond - Angle - Web.jpg',
+          url: '/images/products/samsung/casette/360 Cassette - Rond - Angle - Web.webp',
           alt: 'Samsung 360 Cassette - Hoekzicht'
         }
       ],
