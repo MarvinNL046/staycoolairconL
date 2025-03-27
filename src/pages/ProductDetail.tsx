@@ -231,15 +231,30 @@ export default function ProductDetail() {
             <div className="mt-16">
               <h2 className="text-2xl font-bold text-gray-900 mb-8">Product Video</h2>
               <div className="bg-white rounded-xl shadow-md overflow-hidden">
-                <video 
-                  controls 
-                  className="w-full h-auto"
-                  poster={productImages[0].url}
-                  preload="none"
-                >
-                  <source src={modelData.videoUrl} type="video/mp4" />
-                  <p>Uw browser ondersteunt geen video weergave. <a href={modelData.videoUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Download de video</a></p>
-                </video>
+                {modelData.videoUrl.includes('youtu') ? (
+                  <div className="relative pb-[56.25%] h-0">
+                    <iframe 
+                      className="absolute top-0 left-0 w-full h-full"
+                      src={`https://www.youtube.com/embed/${modelData.videoUrl.includes('?') 
+                        ? modelData.videoUrl.split('?')[0].split('/').pop() 
+                        : modelData.videoUrl.split('/').pop()}`}
+                      title={`${modelData.name} video`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                ) : (
+                  <video 
+                    controls 
+                    className="w-full h-auto"
+                    poster={productImages[0].url}
+                    preload="none"
+                  >
+                    <source src={modelData.videoUrl} type="video/mp4" />
+                    <p>Uw browser ondersteunt geen video weergave. <a href={modelData.videoUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Download de video</a></p>
+                  </video>
+                )}
               </div>
             </div>
           )}
