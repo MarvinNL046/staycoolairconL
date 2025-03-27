@@ -20,6 +20,7 @@ export interface Model {
   features: string[];
   specifications: Specification[];
   stripeBuyUrl?: string;  // Added for Stripe buy button URL
+  videoUrl?: string;  // Added for product videos
 }
 
 export interface Brand {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import toast, { Toaster } from 'react-hot-toast';
 import SchemaMarkup from './SchemaMarkup';
 import { 
@@ -45,6 +45,7 @@ interface ProductDetailProps {
     label: string;
     url: string;
   }[];
+  videoUrl?: string;
 }
 
 // Helper function to create absolute URL
@@ -62,7 +63,8 @@ export default function ProductDetail({
   capacity,
   specifications,
   features,
-  documents
+  documents,
+  videoUrl
 }: ProductDetailProps) {
   const [showInstallationInfo, setShowInstallationInfo] = useState(false);
 
@@ -290,6 +292,23 @@ export default function ProductDetail({
                   <strong>Let op:</strong> Eventueel benodigde hoogwerker of steigerwerk is niet inbegrepen in de standaard installatie.
                 </p>
               </div>
+            </div>
+          </div>
+        )}
+
+        {/* Product Video (if available) */}
+        {videoUrl && (
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8">Product Video</h2>
+            <div className="bg-white rounded-xl shadow-md overflow-hidden">
+              <video 
+                controls 
+                className="w-full h-auto"
+                poster={images[0].url}
+              >
+                <source src={videoUrl} type="video/mp4" />
+                Uw browser ondersteunt geen video weergave.
+              </video>
             </div>
           </div>
         )}

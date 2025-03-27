@@ -16,6 +16,7 @@ export const samsungData: Brand = {
       slug: 'wind-free-elite',
       description: 'De Samsung Wind-Free Elite biedt superieur comfort met de innovatieve Wind-Free technologie die koele lucht gelijkmatig verspreidt zonder directe luchtstroom.',
       imageUrl: '/images/products/samsung/windfreeElite/Wind-Free Elite_Front-Open_White2.png.webp',
+      videoUrl: '/videos/3. Samsung WindFree‚Ñ¢ Digital Film Wall (20210219).mp4.MP4',
       images: [
         {
           url: '/images/products/samsung/windfreeElite/Wind-Free Elite_Front-Open_White2.png.webp',
@@ -61,6 +62,7 @@ export const samsungData: Brand = {
       slug: 'wind-free-comfort',
       description: 'De Samsung Wind-Free Comfort biedt een perfecte balans tussen comfort en betaalbaarheid, met de innovatieve Wind-Free technologie voor een aangenaam binnenklimaat.',
       imageUrl: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Front_WhiteWEB8.jpg.webp',
+      videoUrl: '/videos/3. Samsung WindFree‚Ñ¢ Digital Film Wall (20210219).mp4.MP4',
       images: [
         {
           url: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Front_WhiteWEB8.jpg.webp',
