@@ -129,7 +129,7 @@ export const samsungData: Brand = {
       ],
       price: 'Prijs op aanvraag',
       energyLabel: 'A++',
-      capacity: '2,5 kW - 6,8 kW',
+      capacity: '2,0 kW - 3,5 kW',
       features: [
         'Fast Cooling voor snelle temperatuurregeling',
         'Easy Filter voor eenvoudig onderhoud',
@@ -138,10 +138,20 @@ export const samsungData: Brand = {
         'Energiezuinige werking'
       ],
       specifications: [
-        { label: 'Koelcapaciteit', value: '2,5 - 6,8 kW' },
-        { label: 'Verwarmingscapaciteit', value: '3,2 - 8,0 kW' },
-        { label: 'Geluidsniveau binnen', value: 'Nader te bepalen dB(A)' },
-        { label: 'Koudemiddel', value: 'R-32' }
+        { label: 'Beschikbare modellen', value: 'AR07TXHZAWKNEU (2,0kW), AR09TXHZAWKNEU (2,5kW), AR12TXHZAWKNEU (3,5kW)' },
+        { label: 'Koelcapaciteit', value: '2,0 - 3,5 kW' },
+        { label: 'Verwarmingscapaciteit', value: '2,2 - 3,5 kW' },
+        { label: 'Geluidsniveau binnen', value: 'AR07: 36/19 dB(A), AR09: 37/19 dB(A), AR12: 38/19 dB(A) (normaal/stil)' },
+        { label: 'Geluidsvermogen', value: 'AR07: 54 dB(A), AR09: 54 dB(A), AR12: 56 dB(A)' },
+        { label: 'Koudemiddel', value: 'R-32 / R410A' },
+        { label: 'Luchtstroom koeling', value: 'AR07: 9,9/9,4/9,3/8,4 m³/min, AR09: 10,3/9,8/9,3/8,4 m³/min, AR12: 10,7/10,3/9,3/8,4 m³/min' },
+        { label: 'Luchtstroom verwarming', value: 'AR07: 10,8/10,4/10,3/9,3 m³/min, AR09: 11,2/10,7/10,3/9,3 m³/min, AR12: 11,7/11,2/10,3/9,3 m³/min' },
+        { label: 'Aansluitingen', value: 'Flare verbindingen, vloeistofleiding: 6,35 mm (1/4"), gasleiding: 9,52 mm (3/8")' },
+        { label: 'Voeding', value: '1,2,220-240,50 Hz' },
+        { label: 'Vermogen koeling', value: '30 W' },
+        { label: 'Vermogen verwarming', value: '30 W' },
+        { label: 'Warmtewisselaar', value: 'Aluminium vinnen, koperen buis, Green Hydrophile coating' },
+        { label: 'Ventilatormotor', value: 'BLDC, 27 x 1 W' }
       ]
     },
     {
