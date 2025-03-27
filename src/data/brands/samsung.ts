@@ -132,50 +132,6 @@ export const samsungData: Brand = {
       ]
     },
     {
-      name: 'Cebu',
-      slug: 'cebu',
-      description: 'De Samsung Cebu is een compacte en efficiënte wandunit die betrouwbare klimaatbeheersing biedt voor kleinere ruimtes. Met zijn strakke design past deze unit in elk interieur.',
-      imageUrl: '/images/products/samsung/cebu/Cebu_Front_WhiteWEB.png.webp',
-      images: [
-        {
-          url: '/images/products/samsung/cebu/Cebu_Front_WhiteWEB.png.webp',
-          alt: 'Samsung Cebu - Vooraanzicht'
-        },
-        {
-          url: '/images/products/samsung/cebu/Cebu_Dynamic(L)_WhiteWEB.png.webp',
-          alt: 'Samsung Cebu - Linkerzijde'
-        },
-        {
-          url: '/images/products/samsung/cebu/Cebu_Dynamic(R)_WhiteWEB.png.webp',
-          alt: 'Samsung Cebu - Rechterzijde'
-        },
-        {
-          url: '/images/products/samsung/cebu/Cebu_Front-Open_WhiteWEB.png.webp',
-          alt: 'Samsung Cebu - Vooraanzicht Open'
-        },
-        {
-          url: '/images/products/samsung/cebu/Cebu_outdoor unit_2-5 and 3-5kW_FrontWEB.png.webp',
-          alt: 'Samsung Cebu - Buitenunit'
-        }
-      ],
-      price: 'Prijs op aanvraag',
-      energyLabel: 'A++',
-      capacity: '2,5 kW - 3,5 kW',
-      features: [
-        'Compact en stijlvol design',
-        'Fast Cooling voor snelle temperatuurregeling',
-        'Easy Filter voor eenvoudig onderhoud',
-        'Auto Clean functie',
-        'Energiezuinige werking'
-      ],
-      specifications: [
-        { label: 'Koelcapaciteit', value: '2,5 - 3,5 kW' },
-        { label: 'Verwarmingscapaciteit', value: '3,2 - 4,0 kW' },
-        { label: 'Geluidsniveau binnen', value: 'Nader te bepalen dB(A)' },
-        { label: 'Koudemiddel', value: 'R-32' }
-      ]
-    },
-    {
       name: '360 Cassette',
       slug: '360-cassette',
       description: 'De Samsung 360 Cassette is een innovatieve plafondunit met een uniek rond design dat zorgt voor een gelijkmatige luchtverdeling in alle richtingen, zonder koude tocht.',
