@@ -7,6 +7,9 @@ const EMAILJS_CONFIG = {
   PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 };
 
+// Webhook configuration
+const WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/k90zUH3RgEQLfj7Yc55b/webhook-trigger/54670718-ea44-43a1-a81a-680ab3d5f67f";
+
 export interface EmailData {
   name: string;
   email: string;
@@ -17,7 +20,50 @@ export interface EmailData {
   subject?: string;
 }
 
-export const sendEmail = async (data: EmailData): Promise<void> => {
+/**
+ * Send data to the webhook
+ */
+const sendToWebhook = async (data: EmailData): Promise<boolean> => {
+  try {
+    // Create a simplified payload for the webhook
+    const webhookData = {
+      data: {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        city: data.city,
+        message: data.message
+      }
+    };
+
+    console.log('Sending data to webhook:', webhookData);
+
+    const response = await fetch(WEBHOOK_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(webhookData)
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error(`Webhook error (${response.status}):`, errorText);
+      return false;
+    }
+    
+    console.log('Webhook submission successful');
+    return true;
+  } catch (error) {
+    console.error('Webhook submission failed:', error);
+    return false;
+  }
+};
+
+/**
+ * Send email via EmailJS
+ */
+const sendViaEmailJS = async (data: EmailData): Promise<boolean> => {
   try {
     // Initialize EmailJS
     emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
@@ -38,10 +84,38 @@ export const sendEmail = async (data: EmailData): Promise<void> => {
     );
 
     if (response.status !== 200) {
-      throw new Error('Failed to send email');
+      console.error('EmailJS responded with non-200 status:', response);
+      return false;
     }
+    
+    console.log('EmailJS submission successful');
+    return true;
   } catch (error) {
-    console.error('Email send failed:', error);
-    throw error;
+    console.error('EmailJS submission failed:', error);
+    return false;
+  }
+};
+
+/**
+ * Send contact form data using both EmailJS and webhook as backup for each other
+ */
+export const sendEmail = async (data: EmailData): Promise<void> => {
+  // Try both methods and track success
+  const emailJSSuccess = await sendViaEmailJS(data);
+  const webhookSuccess = await sendToWebhook(data);
+  
+  // Only throw an error if both methods fail
+  if (!emailJSSuccess && !webhookSuccess) {
+    console.error('Both email and webhook submission failed');
+    throw new Error('Failed to send contact form data through any available method');
+  }
+  
+  // Log which methods succeeded
+  if (emailJSSuccess && webhookSuccess) {
+    console.log('Contact form submitted successfully via both EmailJS and webhook');
+  } else if (emailJSSuccess) {
+    console.log('Contact form submitted via EmailJS only (webhook failed)');
+  } else {
+    console.log('Contact form submitted via webhook only (EmailJS failed)');
   }
 };
