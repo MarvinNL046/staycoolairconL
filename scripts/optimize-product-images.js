@@ -13,19 +13,25 @@
  * node scripts/optimize-product-images.js
  */
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
+
+// Get __dirname equivalent in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Check if Sharp is installed
+let sharp;
 try {
-  require.resolve('sharp');
+  sharp = await import('sharp');
+  sharp = sharp.default;
 } catch (e) {
   console.log('Sharp is not installed. Installing...');
   execSync('npm install sharp --save-dev');
+  sharp = (await import('sharp')).default;
 }
-
-const sharp = require('sharp');
 
 // Configuration
 const config = {
