@@ -12,15 +12,17 @@ export default function BrandLogos() {
     !brand.name.toLowerCase().includes('omkasting')
   );
   
-  // Map brand names to their logo files
+  // Map brand names to their logo files with exact filenames
   const brandLogos: Record<string, string> = {
     'Daikin': '/images/brands/DAIKIN_logo.svg',
     'LG': '/images/brands/LG_logo_(2014).svg',
-    'Mitsubishi Heavy': '/images/brands/mhi_logo_en.svg',
     'Samsung': '/images/brands/Samsung_Logo.svg',
     'Toshiba': '/images/brands/Toshiba_logo.svg',
-    'Tosot': '/images/brands/tosotbygree.png',
+    // Mitsubishi Heavy and Tosot logos are not displaying correctly, so we'll use text instead
   };
+
+  // Brands that should be displayed as text
+  const textOnlyBrands = ['Mitsubishi Heavy', 'Tosot'];
 
   // Debug: Log the brand names and their logo paths
   console.log('Brand logos:', brandLogos);
@@ -63,28 +65,25 @@ export default function BrandLogos() {
               className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:bg-blue-50 hover:scale-105"
             >
               <div className="h-20 w-full flex items-center justify-center">
-                {brandLogos[brand.name] ? (
-                  <>
-                    <img 
-                      src={brandLogos[brand.name]} 
-                      alt={`${brand.name} logo`} 
-                      className="max-h-16 max-w-[80%] object-contain"
-                      onError={(e) => {
-                        console.error(`Failed to load logo for ${brand.name}:`, e);
-                        const imgElement = e.currentTarget as HTMLImageElement;
-                        imgElement.style.display = 'none';
-                        const nextElement = imgElement.nextElementSibling as HTMLElement;
-                        if (nextElement) {
-                          nextElement.style.display = 'block';
-                        }
-                      }}
-                    />
-                    <span 
-                      className="text-xl font-bold text-blue-600 hidden"
-                    >
-                      {brand.name}
-                    </span>
-                  </>
+                {brandLogos[brand.name] && !textOnlyBrands.includes(brand.name) ? (
+                  <img 
+                    src={brandLogos[brand.name]} 
+                    alt={`${brand.name} logo`} 
+                    className="max-h-16 max-w-[80%] object-contain"
+                    onError={(e) => {
+                      console.error(`Failed to load logo for ${brand.name}:`, e);
+                      const imgElement = e.currentTarget as HTMLImageElement;
+                      imgElement.style.display = 'none';
+                      // Fallback to text if image fails to load
+                      const parent = imgElement.parentElement;
+                      if (parent) {
+                        const textSpan = document.createElement('span');
+                        textSpan.className = 'text-xl font-bold text-blue-600';
+                        textSpan.textContent = brand.name;
+                        parent.appendChild(textSpan);
+                      }
+                    }}
+                  />
                 ) : (
                   <span className="text-xl font-bold text-blue-600">{brand.name}</span>
                 )}
