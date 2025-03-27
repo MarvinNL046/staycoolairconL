@@ -27,6 +27,7 @@ export default defineConfig({
           https://api.staycoolairco.nl
           https://*.googletagmanager.com
           https://*.make.com
+          https://*.leadconnectorhq.com
           http://localhost:*;
         frame-src 'self' https://*.stripe.com https://*.youtube-nocookie.com https://*.googletagmanager.com;
       `.replace(/\s+/g, ' ').trim()
@@ -111,6 +112,7 @@ export default defineConfig({
           https://api.staycoolairco.nl
           https://*.googletagmanager.com
           https://*.make.com
+          https://*.leadconnectorhq.com
           http://localhost:*;
         frame-src 'self' https://*.stripe.com https://*.youtube-nocookie.com https://*.googletagmanager.com
       `.replace(/\s+/g, ' ').trim(),
