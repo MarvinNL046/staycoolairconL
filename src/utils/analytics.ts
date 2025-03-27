@@ -18,7 +18,7 @@ export const trackConversion = (value?: number) => {
     // Track with first conversion ID
     const conversionParams1 = {
       'send_to': 'AW-10789737434/E-FmCJ743ocYENqn-Zgo',
-      'value': value || 1.0,
+      'value': value || 1650.0,
       'currency': 'EUR'
     };
     console.log('Tracking conversion (ID 1):', conversionParams1);
@@ -27,7 +27,7 @@ export const trackConversion = (value?: number) => {
     // Track with second conversion ID
     const conversionParams2 = {
       'send_to': 'AW-10789737434/HcGCCP3ez6AaENqn-Zgo',
-      'value': value || 1.0,
+      'value': value || 1650.0,
       'currency': 'EUR'
     };
     console.log('Tracking conversion (ID 2):', conversionParams2);
@@ -70,7 +70,7 @@ export const trackFormSubmission = (formName: string, success: boolean) => {
       // Track with first conversion ID
       const conversionParams1 = {
         'send_to': 'AW-10789737434/E-FmCJ743ocYENqn-Zgo',
-        'value': 1.0,
+        'value': 1650.0,
         'currency': 'EUR'
       };
       console.log('Conversion params (ID 1):', conversionParams1);
@@ -79,7 +79,7 @@ export const trackFormSubmission = (formName: string, success: boolean) => {
       // Track with second conversion ID
       const conversionParams2 = {
         'send_to': 'AW-10789737434/HcGCCP3ez6AaENqn-Zgo',
-        'value': 1.0,
+        'value': 1650.0,
         'currency': 'EUR'
       };
       console.log('Conversion params (ID 2):', conversionParams2);

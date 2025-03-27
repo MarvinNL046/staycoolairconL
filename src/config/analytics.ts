@@ -40,14 +40,14 @@ export const initGA = () => {
       // Track with first conversion ID
       gtag('event', 'conversion', {
         'send_to': 'AW-10789737434/E-FmCJ743ocYENqn-Zgo',
-        'value': 1.0,
+        'value': 1650.0,
         'currency': 'EUR'
       });
       
       // Track with second conversion ID
       gtag('event', 'conversion', {
         'send_to': 'AW-10789737434/HcGCCP3ez6AaENqn-Zgo',
-        'value': 1.0,
+        'value': 1650.0,
         'currency': 'EUR'
       });
     `;
