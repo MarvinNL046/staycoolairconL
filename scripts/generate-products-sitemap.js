@@ -3,6 +3,7 @@ import {
   daikinData,
   lgData,
   mitsubishiHeavyData,
+  samsungData,
   toshibaData,
   tosotData,
   aircoCoversData
@@ -72,6 +73,11 @@ function generateProductsSitemap() {
   // Add Tosot products
   tosotData.models.forEach(model => {
     addProductToSitemap(tosotData, model, 'tosot');
+  });
+
+  // Add Samsung products
+  samsungData.models.forEach(model => {
+    addProductToSitemap(samsungData, model, 'samsung');
   });
 
   // Add Airco Covers
