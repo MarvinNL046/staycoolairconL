@@ -235,9 +235,10 @@ export default function ProductDetail() {
                   controls 
                   className="w-full h-auto"
                   poster={productImages[0].url}
+                  preload="none"
                 >
                   <source src={modelData.videoUrl} type="video/mp4" />
-                  Uw browser ondersteunt geen video weergave.
+                  <p>Uw browser ondersteunt geen video weergave. <a href={modelData.videoUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Download de video</a></p>
                 </video>
               </div>
             </div>
