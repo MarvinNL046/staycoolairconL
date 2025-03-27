@@ -85,7 +85,7 @@ export const samsungData: Brand = {
       ],
       price: 'Prijs op aanvraag',
       energyLabel: 'A++',
-      capacity: '2,5 kW - 6,8 kW',
+      capacity: '2,5 kW - 7,6 kW',
       features: [
         'Wind-Free technologie voor comfort zonder directe luchtstroom',
         'Easy Filter Plus voor eenvoudig onderhoud',
@@ -94,10 +94,30 @@ export const samsungData: Brand = {
         'Stille werking voor ongestoorde rust'
       ],
       specifications: [
-        { label: 'Koelcapaciteit', value: '2,5 - 6,8 kW' },
-        { label: 'Verwarmingscapaciteit', value: '3,2 - 8,0 kW' },
-        { label: 'Geluidsniveau binnen', value: 'Nader te bepalen dB(A)' },
-        { label: 'Koudemiddel', value: 'R-32' }
+        { label: 'Beschikbare modellen', value: 'AR09TXFCAWKNEU (2,5kW), AR12TXFCAWKNEU (3,5kW), AR18TXFCAWKNEU (5,0kW), AR24TXFCAWKNEU (7,6kW)' },
+        { label: 'Koelcapaciteit', value: '2,5 - 7,6 kW' },
+        { label: 'Verwarmingscapaciteit', value: '3,2 - 9,4 kW' },
+        { label: 'SEER (koeling)', value: '6,10 (A++) tot 6,80 (A++)' },
+        { label: 'SCOP (verwarming)', value: '4,00 (A+) tot 4,60 (A++)' },
+        { label: 'Geluidsniveau binnen', value: 'AR09: 37/19 dB(A), AR12: 38/19 dB(A), AR18: 41/25 dB(A), AR24: 45/26 dB(A) (normaal/stil)' },
+        { label: 'Geluidsvermogen', value: 'AR09: 56 dB(A), AR12: 59 dB(A), AR18: 58 dB(A), AR24: 62 dB(A)' },
+        { label: 'Koudemiddel', value: 'R-32 (GWP=675)' },
+        { label: 'Luchtstroom koeling', value: 'AR09/AR12: 10,3-8,4 m³/min, AR18: 17,6-11,6 m³/min, AR24: 19,3-12,7 m³/min' },
+        { label: 'Max. leidinglengte', value: '15-30 meter' },
+        { label: 'Max. hoogteverschil', value: '8-15 meter' },
+        { label: 'Afmetingen binnenunit (BxHxD)', value: 'AR09/AR12: 820 x 299 x 215 mm, AR18/AR24: 1055 x 299 x 215 mm' },
+        { label: 'Gewicht binnenunit', value: 'AR09/AR12: 8,9 kg, AR18/AR24: 11,5 kg' },
+        { label: 'Afmetingen buitenunit (BxHxD)', value: 'AR09/AR12: 660 x 475 x 242 mm, AR18/AR24: 880 x 638 x 310 mm' },
+        { label: 'Gewicht buitenunit', value: 'AR09/AR12: 23,0 kg, AR18: 39,7 kg, AR24: 43,2 kg' },
+        { label: 'Materiaal binnenunit', value: 'HIPS (High Impact Polystyrene)' },
+        { label: 'Materiaal buitenunit', value: 'EGI Steel Plate / PP' },
+        { label: 'Afstandsbediening', value: 'Infrarood afstandsbediening inbegrepen' },
+        { label: 'Bedrade bediening', value: 'Optioneel: MWR-WE13N, MWR-WG00JN, MWR-WG00KN, MWR-SH11N' },
+        { label: 'Filters', value: 'Easy Filter Plus (uitneembaar/wasbaar)' },
+        { label: 'Testcondities koeling', value: 'Binnentemperatuur: 27°C DB, 19°C WB / Buitentemperatuur: 35°C DB, 24°C WB' },
+        { label: 'Testcondities verwarming', value: 'Binnentemperatuur: 20°C DB, 15°C WB / Buitentemperatuur: 7°C DB, 6°C WB' },
+        { label: 'Bedrijfstemperatuur koeling', value: '-10°C tot 46°C' },
+        { label: 'Bedrijfstemperatuur verwarming', value: '-15°C tot 24°C' }
       ]
     },
     {
@@ -143,7 +163,7 @@ export const samsungData: Brand = {
         { label: 'Verwarmingscapaciteit', value: '2,2 - 3,5 kW' },
         { label: 'Geluidsniveau binnen', value: 'AR07: 36/19 dB(A), AR09: 37/19 dB(A), AR12: 38/19 dB(A) (normaal/stil)' },
         { label: 'Geluidsvermogen', value: 'AR07: 54 dB(A), AR09: 54 dB(A), AR12: 56 dB(A)' },
-        { label: 'Koudemiddel', value: 'R-32 / R410A' },
+        { label: 'Koudemiddel', value: 'R-32 / R410A (GWP=675)' },
         { label: 'Luchtstroom koeling', value: 'AR07: 9,9/9,4/9,3/8,4 m³/min, AR09: 10,3/9,8/9,3/8,4 m³/min, AR12: 10,7/10,3/9,3/8,4 m³/min' },
         { label: 'Luchtstroom verwarming', value: 'AR07: 10,8/10,4/10,3/9,3 m³/min, AR09: 11,2/10,7/10,3/9,3 m³/min, AR12: 11,7/11,2/10,3/9,3 m³/min' },
         { label: 'Aansluitingen', value: 'Flare verbindingen, vloeistofleiding: 6,35 mm (1/4"), gasleiding: 9,52 mm (3/8")' },
@@ -151,7 +171,13 @@ export const samsungData: Brand = {
         { label: 'Vermogen koeling', value: '30 W' },
         { label: 'Vermogen verwarming', value: '30 W' },
         { label: 'Warmtewisselaar', value: 'Aluminium vinnen, koperen buis, Green Hydrophile coating' },
-        { label: 'Ventilatormotor', value: 'BLDC, 27 x 1 W' }
+        { label: 'Ventilatormotor', value: 'BLDC, 27 x 1 W' },
+        { label: 'Afmetingen (BxHxD)', value: '820 x 299 x 215 mm' },
+        { label: 'Gewicht', value: '9,0 kg' },
+        { label: 'Materiaal', value: 'HIPS (High Impact Polystyrene)' },
+        { label: 'Testcondities koeling', value: 'Binnentemperatuur: 27°C DB, 19°C WB / Buitentemperatuur: 35°C DB, 24°C WB' },
+        { label: 'Testcondities verwarming', value: 'Binnentemperatuur: 20°C DB, 15°C WB / Buitentemperatuur: 7°C DB, 6°C WB' },
+        { label: 'Geluidsmeting', value: 'Geluidsdrukniveau gemeten in een echovrije kamer op 1m afstand. Kan variëren afhankelijk van omgeving en bedrijfscondities.' }
       ]
     },
     {
