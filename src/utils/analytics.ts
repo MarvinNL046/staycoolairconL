@@ -15,13 +15,23 @@ export const trackEvent = (eventName: string, params?: Record<string, any>) => {
 // Google Ads conversion tracking
 export const trackConversion = (value?: number) => {
   if (typeof window !== 'undefined' && (window as any).gtag) {
-    const conversionParams = {
+    // Track with first conversion ID
+    const conversionParams1 = {
       'send_to': 'AW-10789737434/E-FmCJ743ocYENqn-Zgo',
       'value': value || 1.0,
       'currency': 'EUR'
     };
-    console.log('Tracking conversion:', conversionParams);
-    (window as any).gtag('event', 'conversion', conversionParams);
+    console.log('Tracking conversion (ID 1):', conversionParams1);
+    (window as any).gtag('event', 'conversion', conversionParams1);
+    
+    // Track with second conversion ID
+    const conversionParams2 = {
+      'send_to': 'AW-10789737434/HcGCCP3ez6AaENqn-Zgo',
+      'value': value || 1.0,
+      'currency': 'EUR'
+    };
+    console.log('Tracking conversion (ID 2):', conversionParams2);
+    (window as any).gtag('event', 'conversion', conversionParams2);
   }
 };
 
@@ -57,13 +67,23 @@ export const trackFormSubmission = (formName: string, success: boolean) => {
   if (success && formName === 'contact_form') {
     console.log('Tracking contact form conversion');
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      const conversionParams = {
+      // Track with first conversion ID
+      const conversionParams1 = {
         'send_to': 'AW-10789737434/E-FmCJ743ocYENqn-Zgo',
         'value': 1.0,
         'currency': 'EUR'
       };
-      console.log('Conversion params:', conversionParams);
-      (window as any).gtag('event', 'conversion', conversionParams);
+      console.log('Conversion params (ID 1):', conversionParams1);
+      (window as any).gtag('event', 'conversion', conversionParams1);
+      
+      // Track with second conversion ID
+      const conversionParams2 = {
+        'send_to': 'AW-10789737434/HcGCCP3ez6AaENqn-Zgo',
+        'value': 1.0,
+        'currency': 'EUR'
+      };
+      console.log('Conversion params (ID 2):', conversionParams2);
+      (window as any).gtag('event', 'conversion', conversionParams2);
     }
   }
 };
