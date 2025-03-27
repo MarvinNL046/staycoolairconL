@@ -37,12 +37,12 @@ export default function ContactWebhookTest() {
           <p className="text-blue-700">
             Deze pagina is alleen voor het testen van de Make.com webhook integratie.
           </p>
-          <div className="mt-2 p-2 bg-yellow-100 rounded-md inline-block">
-            <p className="text-yellow-800 font-medium">
-              ⚠️ Let op: De webhook is momenteel in simulatiemodus. Formulierinzendingen worden niet daadwerkelijk verzonden.
+          <div className="mt-2 p-2 bg-green-100 rounded-md inline-block">
+            <p className="text-green-800 font-medium">
+              ✅ De webhook is nu actief. Formulierinzendingen worden daadwerkelijk verzonden.
             </p>
-            <p className="text-yellow-700 text-sm mt-1">
-              Er is geen actief Make.com scenario dat luistert naar deze webhook. Neem contact op met de beheerder om dit te activeren.
+            <p className="text-green-700 text-sm mt-1">
+              Inzendingen worden verwerkt via de leadconnectorhq webhook integratie.
             </p>
           </div>
         </div>

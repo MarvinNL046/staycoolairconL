@@ -59,12 +59,7 @@ export default function ContactWebhook() {
 
         console.log('Sending data to webhook:', webhookData);
 
-        // Simulate successful submission for testing purposes
-        // In a production environment, you would uncomment the actual webhook call
-        // and remove this simulation
-        
-        /*
-        const response = await fetch("https://hook.eu1.make.com/hhbpb200s9nxwh90quxke7lqtzcegu7m", {
+        const response = await fetch("https://services.leadconnectorhq.com/hooks/k90zUH3RgEQLfj7Yc55b/webhook-trigger/54670718-ea44-43a1-a81a-680ab3d5f67f", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -83,10 +78,6 @@ export default function ContactWebhook() {
             
             throw new Error(`Webhook responded with status ${response.status}: ${errorText}`);
         }
-        */
-        
-        // Simulate a successful response
-        console.log('Simulating successful webhook submission');
         
         // Track successful form submission
         trackFormSubmission('contact_form', true);
