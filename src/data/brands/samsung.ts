@@ -197,19 +197,40 @@ export const samsungData: Brand = {
       ],
       price: 'Prijs op aanvraag',
       energyLabel: 'A++',
-      capacity: '7,1 kW - 14,0 kW',
+      capacity: '3,5 kW - 15,5 kW',
       features: [
         '360° luchtverdeling voor optimaal comfort',
         'Bladloos design voorkomt koude tocht',
-        'Booster fan voor snelle temperatuurregeling',
+        'Turbo fan voor snelle temperatuurregeling',
         'SmartThings app-bediening',
         'Geschikt voor commerciële toepassingen'
       ],
       specifications: [
-        { label: 'Koelcapaciteit', value: '7,1 - 14,0 kW' },
-        { label: 'Verwarmingscapaciteit', value: '8,0 - 16,0 kW' },
-        { label: 'Geluidsniveau binnen', value: 'Nader te bepalen dB(A)' },
-        { label: 'Koudemiddel', value: 'R-32' }
+        { label: 'Beschikbare modellen', value: 'AC07TRN4PKG/EU (1,5kW), AC100RN4PKG/EU (3,0kW), AC120RN4PKG/EU (3,5kW), AC140RN4PKG/EU (5,5kW)' },
+        { label: 'Koelcapaciteit', value: '1,5 - 15,5 kW' },
+        { label: 'Verwarmingscapaciteit', value: '1,9 - 18,0 kW' },
+        { label: 'SEER (koeling)', value: '6,10 (A++) tot 6,80 (A++)' },
+        { label: 'SCOP (verwarming)', value: '4,00 (A+) tot 4,30 (A+)' },
+        { label: 'Geluidsniveau binnen', value: 'AC07: 36/29/20 dB(A), AC100: 44/39/33 dB(A), AC120: 45/40/35 dB(A), AC140: 45/41/37 dB(A) (hoog/midden/laag)' },
+        { label: 'Geluidsniveau buiten', value: 'AC07: 49 dB(A), AC100: 52 dB(A), AC120: 54 dB(A), AC140: 53 dB(A)' },
+        { label: 'Geluidsvermogen', value: 'AC07: 53 dB(A), AC100: 61 dB(A), AC120: 61 dB(A), AC140: 61 dB(A)' },
+        { label: 'Koudemiddel', value: 'R-32 (GWP=675)' },
+        { label: 'Luchtstroom koeling', value: 'AC07: 17,5 m³/min, AC100: 31,2 m³/min, AC120: 32,5 m³/min, AC140: 32,4 m³/min' },
+        { label: 'Max. leidinglengte', value: '30-75 meter' },
+        { label: 'Max. hoogteverschil', value: '30 meter' },
+        { label: 'Afmetingen binnenunit (BxHxD)', value: '947 x 281 x 947 mm (AC07), 947 x 365 x 947 mm (AC100/120/140)' },
+        { label: 'Gewicht binnenunit', value: '20,2 kg (AC07), 23,5 kg (AC100/120/140)' },
+        { label: 'Afmetingen buitenunit (BxHxD)', value: '880 x 798 x 310 mm (AC07), 940 x 998 x 330 mm (AC100/120/140)' },
+        { label: 'Gewicht buitenunit', value: '51,0 kg (AC07), 74,0-81,0 kg (AC100/120/140)' },
+        { label: 'Materiaal binnenunit', value: 'HIPS (High Impact Polystyrene)' },
+        { label: 'Materiaal buitenunit', value: 'EGI Steel Plate' },
+        { label: 'Afstandsbediening', value: 'Infrarood afstandsbediening AR-EH03E inbegrepen' },
+        { label: 'Bedrade bediening', value: 'Optioneel: MWR-WE13N, MWR-WG00*N' },
+        { label: 'Paneel opties', value: 'Vierkant paneel (wit of zwart) of rond paneel (wit of zwart)' },
+        { label: 'Filters', value: 'Uitneembaar/wasbaar luchtfilter, optionele Virus Doctor' },
+        { label: 'Bedrijfstemperatuur koeling', value: '-15°C tot 50°C' },
+        { label: 'Bedrijfstemperatuur verwarming', value: '-20°C tot 24°C' },
+        { label: 'Condenspomp', value: 'Ingebouwd, max. opvoerhoogte 750/24 mm/Liter/h' }
       ]
     }
   ]
