@@ -10,6 +10,7 @@ interface LazyImageProps {
   height: number | string;
   priority?: boolean;
   aspectRatio?: number;
+  objectFit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
 }
 
 export default function LazyImage({ 
@@ -19,7 +20,8 @@ export default function LazyImage({
   width,
   height,
   priority = false,
-  aspectRatio
+  aspectRatio = 1, // Default to square aspect ratio
+  objectFit = 'contain' // Default to contain to ensure the entire image is visible
 }: LazyImageProps) {
   const [error, setError] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -46,7 +48,10 @@ export default function LazyImage({
     top: 0,
     left: 0,
     width: '100%',
-    height: '100%'
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
   };
 
   return (
@@ -61,7 +66,7 @@ export default function LazyImage({
             src={src}
             alt={alt}
             effect="blur"
-            className={`${className} object-cover w-full h-full transition-opacity duration-300 ${
+            className={`${className} object-${objectFit} w-full h-full transition-opacity duration-300 ${
               loaded ? 'opacity-100' : 'opacity-0'
             }`}
             loading={priority ? 'eager' : 'lazy'}
@@ -73,6 +78,15 @@ export default function LazyImage({
             placeholder={
               <div className="absolute inset-0 bg-gray-100 animate-pulse" />
             }
+            wrapperProps={{
+              style: {
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }
+            }}
           />
           {!loaded && !error && (
             <div className="absolute inset-0 bg-gray-100 animate-pulse">

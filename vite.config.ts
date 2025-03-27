@@ -9,7 +9,7 @@ export default defineConfig({
     headers: {
       'Content-Security-Policy': `
         default-src 'self';
-        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com;
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https://www.google.com;
         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com data: blob:;
         img-src 'self' data: blob: https:;
         font-src 'self' https://fonts.gstatic.com;
@@ -21,9 +21,12 @@ export default defineConfig({
           https://*.doubleclick.net 
           https://stats.g.doubleclick.net 
           https://*.google.com 
+          https://*.google.nl
+          https://*.googleadservices.com
           https://*.stripe.com 
           https://api.staycoolairco.nl
           https://*.googletagmanager.com
+          https://*.make.com
           http://localhost:*;
         frame-src 'self' https://*.stripe.com https://*.youtube-nocookie.com https://*.googletagmanager.com;
       `.replace(/\s+/g, ' ').trim()
@@ -89,12 +92,27 @@ export default defineConfig({
     headers: {
       'Content-Security-Policy': `
         default-src 'self';
-        script-src 'self' 'unsafe-inline' 'unsafe-eval';
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https://www.google.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com data: blob:;
         img-src 'self' data: blob: https:;
         font-src 'self' data: https://fonts.gstatic.com;
-        connect-src 'self' https://*.supabase.co https://kxjksvmlvyazphrbqglz.supabase.co https://api.emailjs.com https://*.google-analytics.com https://*.analytics.google.com https://*.doubleclick.net https://stats.g.doubleclick.net https://*.google.com https://*.stripe.com http://localhost:*;
-        frame-src 'self' https://*.stripe.com
+        connect-src 'self' 
+          https://*.supabase.co 
+          https://kxjksvmlvyazphrbqglz.supabase.co 
+          https://api.emailjs.com 
+          https://*.google-analytics.com 
+          https://*.analytics.google.com 
+          https://*.doubleclick.net 
+          https://stats.g.doubleclick.net 
+          https://*.google.com 
+          https://*.google.nl
+          https://*.googleadservices.com
+          https://*.stripe.com 
+          https://api.staycoolairco.nl
+          https://*.googletagmanager.com
+          https://*.make.com
+          http://localhost:*;
+        frame-src 'self' https://*.stripe.com https://*.youtube-nocookie.com https://*.googletagmanager.com
       `.replace(/\s+/g, ' ').trim(),
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',

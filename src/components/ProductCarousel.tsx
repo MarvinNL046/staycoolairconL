@@ -89,7 +89,8 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
               height="100%"
               aspectRatio={1}
               priority={currentIndex === 0}
-              className="object-contain"
+              objectFit="contain"
+              className=""
             />
           </m.div>
         </AnimatePresence>
