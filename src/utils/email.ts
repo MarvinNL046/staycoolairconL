@@ -65,8 +65,25 @@ const sendToWebhook = async (data: EmailData): Promise<boolean> => {
  */
 const sendViaEmailJS = async (data: EmailData): Promise<boolean> => {
   try {
-    // Initialize EmailJS
-    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+    // Check if PUBLIC_KEY is available
+    if (!EMAILJS_CONFIG.PUBLIC_KEY) {
+      console.error('EmailJS PUBLIC_KEY is missing');
+      return false;
+    }
+    
+    // Initialize EmailJS safely
+    try {
+      emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+    } catch (initError) {
+      console.error('EmailJS initialization failed:', initError);
+      return false;
+    }
+    
+    // Check if other required config is available
+    if (!EMAILJS_CONFIG.SERVICE_ID || !EMAILJS_CONFIG.TEMPLATE_ID) {
+      console.error('EmailJS SERVICE_ID or TEMPLATE_ID is missing');
+      return false;
+    }
     
     const response = await emailjs.send(
       EMAILJS_CONFIG.SERVICE_ID,
