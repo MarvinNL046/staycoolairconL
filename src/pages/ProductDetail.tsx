@@ -241,7 +241,7 @@ export default function ProductDetail() {
                           : modelData.videoUrl.includes('youtube.com/watch?v=')
                             ? modelData.videoUrl.split('v=')[1].split('&')[0]
                             : modelData.videoUrl.split('/').pop()?.split('?')[0]
-                      }?rel=0&modestbranding=1`}
+                      }?rel=0&modestbranding=1&enablejsapi=0`}
                       title={`${modelData.name} video`}
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
