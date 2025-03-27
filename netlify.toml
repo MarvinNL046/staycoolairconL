@@ -16,7 +16,7 @@
       img-src 'self' data: https: blob:;
       font-src 'self' data: https://fonts.gstatic.com;
       connect-src 'self' https://api.emailjs.com https://*.google-analytics.com https://*.analytics.google.com https://analytics.google.com https://www.google.com https://*.netlify.app https://kxjksvmlvyazphrbqglz.supabase.co https://api.staycoolairco.nl https://*.doubleclick.net https://www.googletagmanager.com https://www.google.nl https://*.leadconnectorhq.com https://*.facebook.com;
-      frame-src 'self' https://www.google.com https://www.googletagmanager.com https://www.youtube.com https://youtube-nocookie.com https://*.youtube-nocookie.com;
+      frame-src 'self' https://www.google.com https://www.googletagmanager.com https://www.youtube.com https://youtube-nocookie.com https://*.youtube-nocookie.com https://www.youtube-nocookie.com;
       object-src 'none';
       base-uri 'self';
       form-action 'self';

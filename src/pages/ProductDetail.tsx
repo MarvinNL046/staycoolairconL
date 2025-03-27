@@ -235,13 +235,18 @@ export default function ProductDetail() {
                   <div className="relative pb-[56.25%] h-0">
                     <iframe 
                       className="absolute top-0 left-0 w-full h-full"
-                      src={`https://www.youtube.com/embed/${modelData.videoUrl.includes('?') 
-                        ? modelData.videoUrl.split('?')[0].split('/').pop() 
-                        : modelData.videoUrl.split('/').pop()}`}
+                      src={`https://www.youtube-nocookie.com/embed/${
+                        modelData.videoUrl.includes('youtu.be') 
+                          ? modelData.videoUrl.split('youtu.be/')[1].split('?')[0] 
+                          : modelData.videoUrl.includes('youtube.com/watch?v=')
+                            ? modelData.videoUrl.split('v=')[1].split('&')[0]
+                            : modelData.videoUrl.split('/').pop()?.split('?')[0]
+                      }?rel=0&modestbranding=1`}
                       title={`${modelData.name} video`}
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
+                      loading="lazy"
                     ></iframe>
                   </div>
                 ) : (
