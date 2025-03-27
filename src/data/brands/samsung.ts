@@ -42,10 +42,18 @@ export const samsungData: Brand = {
         { label: 'Verwarmingscapaciteit', value: '3,2 - 9,7 kW' },
         { label: 'SEER (koeling)', value: '6,40 (A++) tot 8,80 (A+++)' },
         { label: 'SCOP (verwarming)', value: '4,00 (A+) tot 5,10 (A+++)' },
-        { label: 'Geluidsniveau binnen', value: '16-27 dB(A) in stille modus, 38-45 dB(A) in normale modus' },
+        { label: 'Geluidsniveau binnen', value: 'AR09: 38/16 dB(A), AR12: 40/16 dB(A), AR24: 45/27 dB(A) (normaal/stil)' },
+        { label: 'Geluidsvermogen', value: 'AR09: 56 dB(A), AR12: 58 dB(A), AR24: 62 dB(A)' },
         { label: 'Koudemiddel', value: 'R-32' },
         { label: 'Max. leidinglengte', value: '15-30 meter' },
-        { label: 'Max. hoogteverschil', value: '8-15 meter' }
+        { label: 'Max. hoogteverschil', value: '8-15 meter' },
+        { label: 'Afmetingen (BxHxD)', value: 'AR09/AR12: 889 x 299 x 215 mm, AR24: 1055 x 299 x 215 mm' },
+        { label: 'Gewicht', value: 'AR09/AR12: 10,6 kg, AR24: 12,5 kg' },
+        { label: 'Materiaal', value: 'HIPS (High Impact Polystyrene)' },
+        { label: 'Afstandsbediening', value: 'Infrarood afstandsbediening inbegrepen' },
+        { label: 'Bedrade bediening', value: 'Optioneel: MWR-WE13N, MWR-WG00JN, MWR-WG00KN, MWR-SH11N' },
+        { label: 'Filters', value: 'Easy Filter Plus (uitneembaar/wasbaar), Tri-Care Filter' },
+        { label: 'Smart functies', value: 'Wi-Fi, Motion Detect Sensor' }
       ]
     },
     {
