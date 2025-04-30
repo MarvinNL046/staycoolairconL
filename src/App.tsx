@@ -64,6 +64,7 @@ const MitsubishiVsLgAirco = lazy(() => import('./pages/articles/MitsubishiVsLgAi
 const ToshibaVsTosotAirco = lazy(() => import('./pages/articles/ToshibaVsTosotAirco'));
 const AircoLuchtfilterOnderhoud = lazy(() => import('./pages/articles/AircoLuchtfilterOnderhoud'));
 const AircoBuitenunitPlaatsing = lazy(() => import('./pages/articles/AircoBuitenunitPlaatsing'));
+const AircoLatenInstalleren = lazy(() => import('./pages/articles/AircoLatenInstalleren'));
 const CapacityCalculator = lazy(() => import('./pages/CapacityCalculator'));
 
 // SEO Articles
@@ -226,6 +227,7 @@ export default function App() {
                 <Route path="/kennisbank/toshiba-vs-tosot-airco" element={<ToshibaVsTosotAirco />} />
                 <Route path="/kennisbank/airco-luchtfilter-onderhoud" element={<AircoLuchtfilterOnderhoud />} />
                 <Route path="/kennisbank/airco-buitenunit-plaatsing" element={<AircoBuitenunitPlaatsing />} />
+                <Route path="/kennisbank/airco-laten-installeren" element={<AircoLatenInstalleren />} />
                 <Route path="/capaciteit-calculator" element={<CapacityCalculator />} />
 
                 {/* SEO Articles */}

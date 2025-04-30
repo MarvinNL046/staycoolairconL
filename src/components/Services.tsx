@@ -13,7 +13,7 @@ export default function Services() {
     {
       icon: ThermometerSun,
       title: 'Duurzaam Verwarmen',
-      description: 'Bespaar op teruglevering van zonne-energie door te verwarmen met uw airco in de winter.',
+      description: 'Bespaar op teruglevering van zonne-energie door efficiënt koelen in de zomer en verwarmen in de winter.',
       features: ['Voorkom terugleverkosten', 'Energiezuinig verwarmen', 'Optimaal gebruik zonnepanelen']
     },
     {
@@ -96,20 +96,20 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mt-16 bg-blue-50 rounded-2xl p-8"
+          className="mt-16 bg-orange-50 rounded-2xl p-8"
         >
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex-1">
-              <h3 className="text-2xl font-bold text-blue-900">
+              <h3 className="text-2xl font-bold text-orange-900">
                 Bespaar op Terugleverkosten
               </h3>
-              <p className="mt-4 text-blue-800">
+              <p className="mt-4 text-orange-800">
                 Heeft u zonnepanelen? Voorkom hoge terugleverkosten door uw airco te gebruiken voor verwarming in de winter. 
                 Zo benut u uw eigen opgewekte energie optimaal en bespaart u op energiekosten.
               </p>
             </div>
             <div className="flex-shrink-0">
-              <Banknote className="h-16 w-16 text-blue-600" />
+              <Banknote className="h-16 w-16 text-orange-500" />
             </div>
           </div>
           <div className="mt-8 text-center">

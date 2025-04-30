@@ -129,19 +129,9 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-lg font-semibold">Direct Regelen</h3>
             <div className="mt-4 space-y-4">
-              <a
-                href="https://afspraken.staycoolairco.nl"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-              >
-                <Calendar className="h-5 w-5 mr-2" />
-                Direct inplannen
-                <span className="ml-2 text-sm opacity-75">(coming soon)</span>
-              </a>
               <Link
                 to="/contact"
-                className="flex items-center justify-center px-4 py-2 border border-blue-600 text-blue-400 rounded-md hover:bg-blue-600/10 transition-colors"
+                className="flex items-center justify-center px-4 py-2 border border-transparent bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors"
               >
                 Offerte aanvragen
               </Link>

@@ -11,11 +11,16 @@ export default {
     extend: {
       animation: {
         'float': 'float 6s ease-in-out infinite',
+        'subtle-pulse': 'subtle-pulse 3s ease-in-out infinite',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-20px)' },
+        },
+        'subtle-pulse': {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.03)' },
         }
       },
       backgroundImage: {
@@ -25,6 +30,10 @@ export default {
         blue: {
           600: '#2563eb', // WCAG AA compliant
           700: '#1d4ed8', // WCAG AAA compliant
+        },
+        orange: {
+          500: '#F97316', // Main CTA color - WCAG AA compliant
+          600: '#EA580C', // Hover state - WCAG AAA compliant
         },
         gray: {
           600: '#4b5563', // WCAG AA compliant for large text

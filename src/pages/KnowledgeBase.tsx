@@ -142,6 +142,11 @@ export default function KnowledgeBase() {
           title: 'Toshiba vs Tosot Airco',
           description: 'Vergelijking tussen Toshiba en Tosot airconditioners.',
           slug: 'toshiba-vs-tosot-airco'
+        },
+        {
+          title: 'Airco Laten Installeren',
+          description: 'Complete gids voor het zorgeloos laten installeren van een airco.',
+          slug: 'airco-laten-installeren'
         }
       ]
     },

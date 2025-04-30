@@ -91,7 +91,7 @@ export default function Contact() {
               <div className="mt-8 space-y-6">
                 <a 
                   href="tel:0462021430" 
-                  className="flex items-center text-gray-600 hover:text-blue-600"
+                  className="flex items-center text-gray-600 hover:text-orange-500"
                   onClick={() => trackInteraction('contact', 'click_phone')}
                 >
                   <Phone className="h-6 w-6 mr-3" />
@@ -99,7 +99,7 @@ export default function Contact() {
                 </a>
                 <a 
                   href="https://wa.me/31636481054" 
-                  className="flex items-center text-gray-600 hover:text-blue-600"
+                  className="flex items-center text-gray-600 hover:text-orange-500"
                   onClick={() => trackInteraction('contact', 'click_whatsapp')}
                 >
                   <MessageSquare className="h-6 w-6 mr-3" />
@@ -107,7 +107,7 @@ export default function Contact() {
                 </a>
                 <a 
                   href="mailto:info@staycoolairco.nl" 
-                  className="flex items-center text-gray-600 hover:text-blue-600"
+                  className="flex items-center text-gray-600 hover:text-orange-500"
                   onClick={() => trackInteraction('contact', 'click_email')}
                 >
                   <Mail className="h-6 w-6 mr-3" />
@@ -140,7 +140,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     disabled={isSubmitting}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 disabled:opacity-50"
                   />
                 </div>
                 <div>
@@ -155,7 +155,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     disabled={isSubmitting}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 disabled:opacity-50"
                   />
                 </div>
                 <div>
@@ -170,7 +170,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     disabled={isSubmitting}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 disabled:opacity-50"
                   />
                 </div>
                 <div>
@@ -185,7 +185,7 @@ export default function Contact() {
                     value={formData.city}
                     onChange={handleChange}
                     disabled={isSubmitting}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 disabled:opacity-50"
                   />
                 </div>
                 <div>
@@ -200,13 +200,13 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     disabled={isSubmitting}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 disabled:opacity-50"
                   ></textarea>
                 </div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>

@@ -7,7 +7,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const CompactGoogleReviews = lazy(() => import('./CompactGoogleReviews'));
 
-const inputClasses = "mt-1 block w-full h-12 rounded-md bg-white/10 border-gray-300 text-white placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500";
+const inputClasses = "mt-1 block w-full h-12 rounded-md bg-white/10 border-gray-300 text-white placeholder-gray-400 shadow-sm focus:border-orange-500 focus:ring-orange-500";
 
 export default function Hero() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -97,21 +97,14 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="https://afspraken.staycoolairco.nl"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-transparent text-base sm:text-lg font-medium rounded-lg text-blue-600 bg-white hover:bg-blue-50 transition-colors duration-300"
-              >
-                <Calendar className="h-5 w-5 mr-2" />
-                Direct inplannen
-                <span className="ml-2 text-sm text-blue-700">(coming soon: zelf eenvoudig online inplannen)</span>
-              </a>
-              <a
                 href="tel:0462021430"
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-base sm:text-lg font-medium rounded-lg text-white hover:bg-white/10 transition-colors duration-300"
+                className="inline-flex flex-col items-center justify-center px-8 sm:px-10 py-4 sm:py-5 border border-transparent text-base font-medium rounded-lg text-white bg-orange-500 hover:bg-orange-600 shadow-lg hover:shadow-xl transition-colors duration-300"
               >
-                <Phone className="h-5 w-5 mr-2" />
-                046 202 1430
+                <div className="flex items-center">
+                  <Phone className="h-5 w-5 mr-3" />
+                  <span className="text-lg sm:text-xl font-bold">Gratis advies aan huis</span>
+                </div>
+                <span className="text-sm mt-1">Bel direct: 046 202 1430</span>
               </a>
             </div>
 
@@ -208,17 +201,17 @@ export default function Hero() {
                   required
                   value={formData.message}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md bg-white/10 border-gray-300 text-white placeholder-gray-400 shadow-sm focus:border-blue-500 focus:ring-blue-500 min-h-[120px]"
+                  className="mt-1 block w-full rounded-md bg-white/10 border-gray-300 text-white placeholder-gray-400 shadow-sm focus:border-orange-500 focus:ring-orange-500 min-h-[120px]"
                 ></textarea>
               </div>
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full h-12 flex justify-center items-center px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-300"
+                className="w-full h-12 flex justify-center items-center px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-300"
               >
                 {isSubmitting ? (
                   <>
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
