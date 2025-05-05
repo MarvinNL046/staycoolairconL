@@ -1,9 +1,9 @@
 import React from 'react';
 import { m } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 import { BookOpen, ThermometerSun, Zap, Leaf, Settings, HelpCircle, ChevronRight, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../components/Breadcrumbs';
+import MetaTags from '../components/MetaTags';
 
 export default function KnowledgeBase() {
   const breadcrumbItems = [
@@ -271,17 +271,31 @@ export default function KnowledgeBase() {
 
   return (
     <>
-      <Helmet>
-        <title>Kennisbank | StayCool Airco</title>
-        <meta 
-          name="description" 
-          content="Ontdek alles over airconditioning in onze uitgebreide kennisbank. Van basisprincipes tot energiebesparing en onderhoudstips."
-        />
-        <meta 
-          name="keywords" 
-          content="airco kennisbank, airconditioning informatie, SCOP SEER uitleg, airco onderhoud, energiebesparing airco"
-        />
-      </Helmet>
+      <MetaTags
+        title="Airco Kennisbank | Uitleg, Tips & Kosten | StayCool 2025"
+        description="Airco kennis: lees over energiebesparing, onderhoud & slimme verwarmingstips. Nu vrijblijvend advies voor uw situatie."
+        keywords="airco kennisbank, airconditioning informatie, SCOP SEER uitleg, airco onderhoud, energiebesparing airco"
+        canonicalUrl="https://staycoolairco.nl/kennisbank"
+        type="article"
+        faqs={[
+          {
+            question: "Wat is het verschil tussen SCOP en SEER bij airconditioning?",
+            answer: "SCOP (Seasonal Coefficient of Performance) meet de verwarmingsefficiëntie, terwijl SEER (Seasonal Energy Efficiency Ratio) de koelefficiëntie van een airco meet. Hoe hoger deze waarden, hoe energiezuiniger het systeem."
+          },
+          {
+            question: "Hoe vaak moet een airco onderhouden worden?",
+            answer: "Een airco dient minimaal één keer per jaar onderhouden te worden voor optimale prestaties. Bij intensief gebruik adviseren we twee keer per jaar onderhoud voor filters, koudemiddel en algemene werking."
+          },
+          {
+            question: "Kan ik mijn huis verwarmen met een airco?",
+            answer: "Ja, moderne airco's met warmtepompfunctie kunnen zeer efficiënt verwarmen. Ze zijn tot 60% zuiniger dan traditionele verwarmingssystemen en ideaal voor gebruik met zonnepanelen."
+          }
+        ]}
+        breadcrumbItems={[
+          { name: "Home", url: "https://staycoolairco.nl" },
+          { name: "Kennisbank", url: "https://staycoolairco.nl/kennisbank" }
+        ]}
+      />
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
