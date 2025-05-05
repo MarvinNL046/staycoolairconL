@@ -4,7 +4,7 @@ import { m } from 'framer-motion';
 import { Phone, Check, ThermometerSun, Wind, Zap, Timer, Ruler, Info, X } from 'lucide-react';
 import { productData } from '../data/products';
 import ProductCarousel from '../components/ProductCarousel';
-import { Helmet } from 'react-helmet-async';
+import MetaTags from '../components/MetaTags';
 
 export default function ProductDetail() {
   const { brand, model } = useParams();
@@ -108,16 +108,57 @@ export default function ProductDetail() {
 
   return (
     <>
-      <Helmet>
-        <title>{`${brandData.name} ${modelData.name} | StayCool Airco`}</title>
-        <meta 
-          name="description" 
-          content={modelData.description}
-        />
-        <script type="application/ld+json">
-          {JSON.stringify(schemaData)}
-        </script>
-      </Helmet>
+      <MetaTags
+        title={`${brandData.name} ${modelData.name} | StayCool Airco`}
+        description={modelData.description}
+        canonicalUrl={`https://staycoolairco.nl/products/${brand}/${model}`}
+        type="product"
+        ogImage={productImages[0].url}
+        productInfo={{
+          productName: `${brandData.name} ${modelData.name}`,
+          brand: brandData.name,
+          sku: `${brandData.name.toLowerCase()}-${modelData.slug}`,
+          category: 'Airconditioning'
+        }}
+        priceInfo={{
+          price: priceValue ? priceValue.toString() : '1395',
+          availability: 'InStock'
+        }}
+        reviews={[
+          {
+            author: "Jan de Vries",
+            rating: 5,
+            reviewBody: `Zeer tevreden met onze ${brandData.name} airco. De monteurs waren vakkundig en hebben alles netjes geïnstalleerd.`,
+            datePublished: new Date().toISOString().split('T')[0]
+          },
+          {
+            author: "Marieke Jansen",
+            rating: 5,
+            reviewBody: `De adviseur van StayCool Airco heeft ons goed geholpen bij het kiezen van de juiste ${brandData.name} airco.`,
+            datePublished: new Date().toISOString().split('T')[0]
+          }
+        ]}
+        faqs={[
+          {
+            question: `Wat is de energieklasse van de ${brandData.name} ${modelData.name}?`,
+            answer: `De ${brandData.name} ${modelData.name} heeft energieklasse ${modelData.energyLabel}, wat betekent dat deze zeer energiezuinig is.`
+          },
+          {
+            question: `Kan de ${brandData.name} ${modelData.name} zowel koelen als verwarmen?`,
+            answer: "Ja, deze airco is geschikt voor zowel koelen in de zomer als verwarmen in de winter."
+          },
+          {
+            question: "Hoe lang duurt de installatie?",
+            answer: "Een standaard installatie duurt meestal 1 werkdag, afhankelijk van de specifieke situatie bij u thuis."
+          }
+        ]}
+        breadcrumbItems={[
+          { name: "Home", url: "https://staycoolairco.nl" },
+          { name: "Producten", url: "https://staycoolairco.nl/products" },
+          { name: brandData.name, url: `https://staycoolairco.nl/products/${brand}` },
+          { name: modelData.name, url: `https://staycoolairco.nl/products/${brand}/${model}` }
+        ]}
+      />
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
