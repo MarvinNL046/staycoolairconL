@@ -90,7 +90,7 @@ export default function ProductDetail({
         </div>
 
         {/* Product Overview */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 relative">
           {/* Product Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -146,12 +146,68 @@ export default function ProductDetail({
             className="flex flex-col justify-between"
           >
             <div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              {/* Enhanced product title section */}
+              <div className="mb-2">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                  Bestseller
+                </span>
+              </div>
+              <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center">
                 {brand} {model}
+                <span className="ml-3 bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-1 rounded flex items-center">
+                  <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                  </svg>
+                  Voorradig
+                </span>
               </h1>
+              
+              {/* Average rating */}
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <svg key={star} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                  ))}
+                </div>
+                <span className="ml-2 text-gray-600">4.9/5 (150 reviews)</span>
+              </div>
+              
               <p className="text-xl text-gray-600 mb-8">{description}</p>
 
-              <div className="grid grid-cols-2 gap-6 mb-8">
+              {/* Key benefits box */}
+              <div className="bg-blue-50 p-4 rounded-lg mb-8">
+                <h3 className="font-semibold text-blue-900 mb-2">Belangrijkste voordelen:</h3>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-1">
+                  <li className="flex items-center text-blue-800">
+                    <svg className="h-5 w-5 text-blue-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Energiezuinig {energyLabel} label
+                  </li>
+                  <li className="flex items-center text-blue-800">
+                    <svg className="h-5 w-5 text-blue-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Hoog rendement
+                  </li>
+                  <li className="flex items-center text-blue-800">
+                    <svg className="h-5 w-5 text-blue-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Fluisterstille werking
+                  </li>
+                  <li className="flex items-center text-blue-800">
+                    <svg className="h-5 w-5 text-blue-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Incl. 5 jaar garantie
+                  </li>
+                </ul>
+              </div>
+
+              <div className="grid grid-cols-2 gap-6 mb-6">
                 <div className="bg-white p-4 rounded-lg shadow-md">
                   <div className="text-sm text-gray-600">Energielabel</div>
                   <div className="text-2xl font-bold text-blue-600">{energyLabel}</div>
@@ -252,19 +308,61 @@ export default function ProductDetail({
               </div>
             </div>
 
+            {/* Enhanced CTA buttons */}
             <div className="space-y-4">
               <a
                 href="#contact"
-                className="block w-full py-3 px-4 text-center text-white bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors duration-300"
+                className="group relative block w-full py-4 px-6 text-center text-white bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:translate-y-[-2px]"
               >
-                Offerte Aanvragen
+                <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+                <span className="relative flex items-center justify-center">
+                  <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                  </svg>
+                  <span className="text-base">Offerte Aanvragen</span>
+                </span>
+                <span className="absolute top-0 right-0 px-2 py-1 text-xs font-semibold bg-orange-500 rounded-bl-lg text-white">GRATIS</span>
               </a>
+              
+              <a
+                href="tel:0462021430"
+                className="group block w-full py-4 px-6 text-center text-blue-600 bg-white border-2 border-blue-600 hover:border-blue-700 hover:text-blue-700 rounded-lg font-medium transition-all duration-300 transform hover:translate-y-[-2px]"
+              >
+                <span className="flex items-center justify-center">
+                  <Phone className="h-5 w-5 mr-2 animate-pulse" />
+                  <span className="text-base">Direct Advies: 046 202 1430</span>
+                </span>
+              </a>
+              
               <a
                 href="#specifications"
-                className="block w-full py-3 px-4 text-center text-blue-600 bg-white border-2 border-blue-600 hover:bg-blue-50 rounded-lg font-medium transition-colors duration-300"
+                className="flex items-center justify-center w-full py-3 px-4 text-center text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors duration-300"
               >
-                Bekijk Specificaties
+                <Info className="h-4 w-4 mr-2" />
+                <span>Bekijk Specificaties</span>
               </a>
+            </div>
+            
+            {/* Trust badges */}
+            <div className="mt-6 flex flex-wrap justify-between items-center">
+              <div className="flex items-center text-sm text-gray-600 mr-4">
+                <svg className="h-5 w-5 text-green-500 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Op voorraad</span>
+              </div>
+              <div className="flex items-center text-sm text-gray-600 mr-4">
+                <svg className="h-5 w-5 text-green-500 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Snelle levering</span>
+              </div>
+              <div className="flex items-center text-sm text-gray-600">
+                <svg className="h-5 w-5 text-green-500 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <span>5 jaar garantie</span>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -376,28 +474,120 @@ export default function ProductDetail({
           </div>
         )}
 
-        {/* CTA Section */}
-        <div className="bg-blue-50 rounded-2xl p-8 text-center">
-          <h2 className="text-2xl font-bold text-blue-900 mb-4">
-            Interesse in deze {brand} {model}?
-          </h2>
-          <p className="text-blue-700 mb-8">
-            Onze experts helpen u graag met een persoonlijk advies en scherpe offerte
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-            >
-              Offerte Aanvragen
-            </a>
-            <a
-              href="tel:0462021430"
-              className="inline-flex items-center justify-center px-6 py-3 border-2 border-blue-600 text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Bel Direct
-            </a>
+        {/* Enhanced CTA Section */}
+        <div id="contact" className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-10 relative overflow-hidden shadow-xl">
+          {/* Background pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <defs>
+                <pattern id="grid-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" strokeWidth="1"/>
+                </pattern>
+              </defs>
+              <rect width="100" height="100" fill="url(#grid-pattern)" />
+            </svg>
+          </div>
+          
+          {/* Floating elements */}
+          <div className="absolute -top-12 -right-12 w-40 h-40 bg-blue-500 rounded-full opacity-20"></div>
+          <div className="absolute -bottom-12 -left-12 w-32 h-32 bg-blue-400 rounded-full opacity-20"></div>
+          
+          {/* Content */}
+          <div className="relative z-10 flex flex-col lg:flex-row items-center">
+            <div className="lg:w-2/3 mb-8 lg:mb-0 lg:pr-12 text-left">
+              <span className="inline-block px-4 py-2 rounded-full bg-blue-500/30 text-white text-sm font-medium mb-4">
+                ⚡ Actie: Gratis installatie-check bij offerte
+              </span>
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Interesse in deze {brand} {model}?
+              </h2>
+              <p className="text-blue-100 mb-6 max-w-3xl">
+                Onze experts helpen u graag met een persoonlijk advies en scherpe offerte. 
+                Wij staan voor kwaliteit, service en vakmanschap.
+              </p>
+              
+              {/* Testimonial */}
+              <div className="bg-white/10 p-4 rounded-lg mb-6 backdrop-blur-sm">
+                <div className="flex items-center mb-2">
+                  <div className="flex text-yellow-400">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <svg key={star} className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <span className="ml-2 text-white text-sm">5/5</span>
+                </div>
+                <p className="text-white text-sm italic">"Zeer tevreden met onze nieuwe {brand} airco. Professionele installatie en uitstekende service!" - Johan uit Rotterdam</p>
+              </div>
+              
+              {/* Trust badges */}
+              <div className="flex flex-wrap gap-4 text-white text-sm">
+                <div className="flex items-center">
+                  <svg className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                  <span>Garantie tot 5 jaar</span>
+                </div>
+                <div className="flex items-center">
+                  <svg className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  <span>500+ tevreden klanten</span>
+                </div>
+                <div className="flex items-center">
+                  <svg className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Reactie binnen 24 uur</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="lg:w-1/3 bg-white/10 backdrop-blur-sm p-6 rounded-xl shadow-lg">
+              <h3 className="text-xl font-bold text-white mb-4">Vraag direct een offerte aan</h3>
+              <form className="space-y-4">
+                <div>
+                  <input 
+                    type="text" 
+                    placeholder="Uw naam" 
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  />
+                </div>
+                <div>
+                  <input 
+                    type="email" 
+                    placeholder="E-mailadres" 
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  />
+                </div>
+                <div>
+                  <input 
+                    type="tel" 
+                    placeholder="Telefoonnummer" 
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  />
+                </div>
+                <button
+                  type="button"
+                  className="w-full py-3 px-4 bg-white text-blue-700 rounded-lg font-medium shadow-lg hover:bg-blue-50 transition-colors duration-300 flex items-center justify-center"
+                >
+                  <Mail className="h-5 w-5 mr-2" />
+                  <span>Aanvraag Versturen</span>
+                </button>
+              </form>
+              <p className="text-white/80 text-xs mt-4 text-center">Wij nemen binnen 24 uur contact met u op</p>
+              
+              <div className="mt-4 pt-4 border-t border-white/20">
+                <a
+                  href="tel:0462021430"
+                  className="flex items-center justify-center w-full py-3 px-4 border border-white text-white rounded-lg hover:bg-white/10 transition-colors duration-300"
+                >
+                  <Phone className="h-5 w-5 mr-2 animate-pulse" />
+                  <span>Bel Direct: 046 202 1430</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
