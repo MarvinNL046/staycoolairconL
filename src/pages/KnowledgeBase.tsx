@@ -144,6 +144,11 @@ export default function KnowledgeBase() {
           slug: 'toshiba-vs-tosot-airco'
         },
         {
+          title: 'Mobiele vs Split Airco',
+          description: 'Uitgebreide vergelijking tussen mobiele airco en split airco met buitenunit.',
+          slug: 'mobiele-vs-split-airco'
+        },
+        {
           title: 'Airco Laten Installeren',
           description: 'Complete gids voor het zorgeloos laten installeren van een airco.',
           slug: 'airco-laten-installeren'
@@ -273,7 +278,7 @@ export default function KnowledgeBase() {
     <>
       <MetaTags
         title="Airco Kennisbank | Uitleg, Tips & Kosten | StayCool 2025"
-        description="Airco kennis: lees over energiebesparing, onderhoud & slimme verwarmingstips. Nu vrijblijvend advies voor uw situatie."
+        description="Airco kennisbank: uitgebreide gids over energiebesparing, onderhoud, storingscodes & slimme verwarmingstips voor alle aircosystemen. Expert advies & troubleshooting voor uw situatie."
         keywords="airco kennisbank, airconditioning informatie, SCOP SEER uitleg, airco onderhoud, energiebesparing airco"
         canonicalUrl="https://staycoolairco.nl/kennisbank"
         type="article"
@@ -307,7 +312,7 @@ export default function KnowledgeBase() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Kennisbank
+              StayCool Airco Kennisbank: Complete Airconditioner Gids
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Ontdek alles over airconditioning, van basisprincipes tot geavanceerde tips voor optimaal gebruik

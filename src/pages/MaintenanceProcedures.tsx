@@ -27,7 +27,7 @@ export default function MaintenanceProcedures() {
         'Alles uit het Premium Pakket',
         'Directe vervanging bij defecten',
         'Geen onverwachte kosten',
-        '24/7 storingsdienst',
+        'Priority storingsdienst',
         'Garantie op onderdelen'
       ]
     }

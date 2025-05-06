@@ -83,7 +83,7 @@ export default function AircoZuidLimburg() {
                 </div>
                 <ul className="space-y-2">
                   <li>✓ Snelle responstijd</li>
-                  <li>✓ 24/7 storingsdienst</li>
+                  <li>✓ Priority storingsdienst</li>
                   <li>✓ Flexibele planning</li>
                   <li>✓ Lokale service</li>
                 </ul>

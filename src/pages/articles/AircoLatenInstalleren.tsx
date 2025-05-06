@@ -368,7 +368,7 @@ export default function AircoLatenInstalleren() {
                 <li>Gratis vooronderzoek en advies</li>
                 <li>5 jaar garantie op installatie</li>
                 <li>Jaarlijks onderhoudsplan beschikbaar</li>
-                <li>24/7 service bij storingen</li>
+                <li>Priority service bij storingen</li>
               </ul>
             </div>
 

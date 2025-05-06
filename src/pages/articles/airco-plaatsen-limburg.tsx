@@ -82,7 +82,7 @@ export default function AircoPlaatsenLimburg() {
                 </div>
                 <ul className="space-y-2">
                   <li>✓ <Link to="/kennisbank/airco-service-limburg" className="text-blue-600 hover:text-blue-700">Onderhoud & service</Link></li>
-                  <li>✓ 24/7 storingsdienst</li>
+                  <li>✓ Priority storingsdienst</li>
                   <li>✓ Flexibele planning</li>
                   <li>✓ Lokale service</li>
                 </ul>

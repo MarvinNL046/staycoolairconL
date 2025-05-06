@@ -5,8 +5,8 @@ import { AlertCircle, CheckCircle, Info } from 'lucide-react';
 export default function StoringscodeGids() {
   return (
     <ArticleLayout
-      title="Airco Storingscodes: Complete Gids voor Probleemoplossing"
-      description="Leer alles over airco storingscodes, wat ze betekenen en hoe je veel voorkomende problemen zelf kunt oplossen. Een complete gids voor LG, Toshiba, en Mitsubishi Heavy airconditioners."
+      title="Airco Storingscodes Gids: Snel Problemen Oplossen | StayCool"
+      description="Leer airco storingscodes begrijpen en los problemen zelf op. Complete gids voor LG, Toshiba en Mitsubishi airconditioners met troubleshooting tips."
       publishDate="2024-01-23"
       modifiedDate="2024-01-23"
       author="StayCool Airconditioning"
@@ -107,18 +107,23 @@ export default function StoringscodeGids() {
           <li>Elektrische problemen</li>
         </ul>
 
-        <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-          <h3 className="text-lg font-semibold mb-2">Hulp nodig?</h3>
-          <p>
-            Heeft u een storing die u niet zelf kunt oplossen? Neem contact met ons op voor professionele hulp. 
-            Onze gecertificeerde monteurs staan 24/7 voor u klaar.
+        <div className="bg-blue-50 p-6 rounded-lg my-8 shadow-sm">
+          <h3 className="text-xl font-bold text-blue-800 mb-3">Heeft u vragen over dit onderwerp?</h3>
+          <p className="text-blue-700 mb-4">
+            Onze airco-experts staan klaar om u te helpen met persoonlijk advies voor uw situatie.
           </p>
-          <div className="mt-4">
+          <div className="flex flex-wrap gap-3">
             <a
               href="/contact"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700"
+              className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
             >
-              Contact opnemen
+              Vraag vrijblijvend advies
+            </a>
+            <a
+              href="tel:0462021430"
+              className="inline-flex items-center px-4 py-2 border border-blue-600 rounded-md text-base font-medium text-blue-600 bg-white hover:bg-blue-50"
+            >
+              Bel direct: 046 202 1430
             </a>
           </div>
         </div>

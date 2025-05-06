@@ -59,7 +59,7 @@ export default function AirconditioningLimburg() {
                   <li>✓ <Link to="/kennisbank/airco-installatie-limburg" className="text-blue-600 hover:text-blue-700">Professionele installatie</Link></li>
                   <li>✓ <Link to="/kennisbank/airco-service-limburg" className="text-blue-600 hover:text-blue-700">Regelmatig onderhoud</Link></li>
                   <li>✓ Expert advies</li>
-                  <li>✓ 24/7 storingsdienst</li>
+                  <li>✓ Priority storingsdienst</li>
                 </ul>
               </div>
 

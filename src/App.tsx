@@ -29,6 +29,8 @@ const Terms = lazy(() => import('./pages/Terms'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const MaintenanceProcedures = lazy(() => import('./pages/MaintenanceProcedures'));
 const AircoCovers = lazy(() => import('./pages/AircoCovers'));
+const LGMobieleAircoPage = lazy(() => import('./pages/products/lg-mobiele-airco'));
+const TosotMobieleAircoPage = lazy(() => import('./pages/products/tosot-mobiele-airco'));
 
 // Landing Pages
 const DaikinLanding = lazy(() => import('./pages/landing/DaikinLanding'));
@@ -36,6 +38,11 @@ const LGLanding = lazy(() => import('./pages/landing/LGLanding'));
 const MitsubishiHeavyLanding = lazy(() => import('./pages/landing/MitsubishiHeavyLanding'));
 const ToshibaLanding = lazy(() => import('./pages/landing/ToshibaLanding'));
 const TosotLanding = lazy(() => import('./pages/landing/TosotLanding'));
+const MobieleAircoLanding = lazy(() => import('./pages/landing/MobieleAircoLanding'));
+const AircoMetBuitenunitLanding = lazy(() => import('./pages/landing/AircoMetBuitenunitLanding'));
+const AircoInstallatieLanding = lazy(() => import('./pages/landing/AircoInstallatieLanding'));
+const AircoOnderhoudLanding = lazy(() => import('./pages/landing/AircoOnderhoudLanding'));
+const AircoReparatieLanding = lazy(() => import('./pages/landing/AircoReparatieLanding'));
 
 // Knowledge Base Articles
 const HoeWerktAirco = lazy(() => import('./pages/articles/HoeWerktAirco'));
@@ -65,6 +72,7 @@ const ToshibaVsTosotAirco = lazy(() => import('./pages/articles/ToshibaVsTosotAi
 const AircoLuchtfilterOnderhoud = lazy(() => import('./pages/articles/AircoLuchtfilterOnderhoud'));
 const AircoBuitenunitPlaatsing = lazy(() => import('./pages/articles/AircoBuitenunitPlaatsing'));
 const AircoLatenInstalleren = lazy(() => import('./pages/articles/AircoLatenInstalleren'));
+const MobieleVsSplitAirco = lazy(() => import('./pages/articles/MobieleVsSplitAirco'));
 const CapacityCalculator = lazy(() => import('./pages/CapacityCalculator'));
 
 // SEO Articles
@@ -183,9 +191,11 @@ export default function App() {
           <AnimatePresence mode="wait">
             <Suspense fallback={<LoadingFallback />}>
               <Routes>
-                <Route path="/products/daikin/ururu-sarara" element={<UruruSararaPage />} />
+          <Route path="/products/daikin/ururu-sarara" element={<UruruSararaPage />} />
           <Route path="/products/daikin/stylish" element={<StylishPage />} />
           <Route path="/products/mitsubishi/daiseikai-10" element={<Daiseikai10Page />} />
+          <Route path="/products/lg-mobiele-airco" element={<LGMobieleAircoPage />} />
+          <Route path="/products/tosot-mobiele-airco" element={<TosotMobieleAircoPage />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/airco-covers" element={<AircoCovers />} />
@@ -228,6 +238,7 @@ export default function App() {
                 <Route path="/kennisbank/airco-luchtfilter-onderhoud" element={<AircoLuchtfilterOnderhoud />} />
                 <Route path="/kennisbank/airco-buitenunit-plaatsing" element={<AircoBuitenunitPlaatsing />} />
                 <Route path="/kennisbank/airco-laten-installeren" element={<AircoLatenInstalleren />} />
+                <Route path="/kennisbank/mobiele-vs-split-airco" element={<MobieleVsSplitAirco />} />
                 <Route path="/capaciteit-calculator" element={<CapacityCalculator />} />
 
                 {/* SEO Articles */}
@@ -258,6 +269,11 @@ export default function App() {
                 <Route path="/landing/mitsubishi-heavy" element={<MitsubishiHeavyLanding />} />
                 <Route path="/landing/toshiba" element={<ToshibaLanding />} />
                 <Route path="/landing/tosot" element={<TosotLanding />} />
+                <Route path="/mobiele-airco" element={<MobieleAircoLanding />} />
+                <Route path="/airco-met-buitenunit" element={<AircoMetBuitenunitLanding />} />
+                <Route path="/airco-installatie" element={<AircoInstallatieLanding />} />
+                <Route path="/airco-onderhoud" element={<AircoOnderhoudLanding />} />
+                <Route path="/airco-reparatie" element={<AircoReparatieLanding />} />
               </Routes>
             </Suspense>
           </AnimatePresence>

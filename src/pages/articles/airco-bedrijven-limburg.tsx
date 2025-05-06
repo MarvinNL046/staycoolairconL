@@ -83,7 +83,7 @@ export default function AircoBedrijvenLimburg() {
                 </div>
                 <ul className="space-y-2">
                   <li>✓ <Link to="/kennisbank/airco-installatie-limburg" className="text-blue-600 hover:text-blue-700">Professionele installatie</Link></li>
-                  <li>✓ <Link to="/kennisbank/airco-service-limburg" className="text-blue-600 hover:text-blue-700">24/7 service</Link></li>
+                  <li>✓ <Link to="/kennisbank/airco-service-limburg" className="text-blue-600 hover:text-blue-700">Priority service</Link></li>
                   <li>✓ Onderhoudscontracten</li>
                   <li>✓ Snelle responstijd</li>
                 </ul>
@@ -171,7 +171,7 @@ export default function AircoBedrijvenLimburg() {
                   <h3 className="font-semibold mb-2">Betrouwbaarheid</h3>
                   <p>
                     Met onze <Link to="/kennisbank/airco-installateur-limburg" className="text-blue-600 hover:text-blue-700">professionele installateurs</Link> en 
-                    24/7 service kunt u rekenen op een betrouwbare klimaatbeheersing.
+                    priority service kunt u rekenen op een betrouwbare klimaatbeheersing.
                   </p>
                 </div>
               </div>

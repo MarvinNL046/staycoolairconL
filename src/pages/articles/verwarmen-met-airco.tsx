@@ -115,7 +115,7 @@ export default function VerwarmenMetAirco() {
                 <ul className="space-y-2">
                   <li>✓ 5 jaar garantie</li>
                   <li>✓ Erkend installateur</li>
-                  <li>✓ 24/7 storingsdienst</li>
+                  <li>✓ Priority storingsdienst</li>
                   <li>✓ Professioneel advies</li>
                 </ul>
               </div>

@@ -84,6 +84,36 @@ export default function Navbar() {
                   >
                     Capaciteit Calculator
                   </Link>
+                  <Link 
+                    to="/mobiele-airco"
+                    className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-50"
+                  >
+                    Mobiele Airco
+                  </Link>
+                  <Link 
+                    to="/airco-met-buitenunit"
+                    className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-50"
+                  >
+                    Airco Met Buitenunit
+                  </Link>
+                  <Link 
+                    to="/airco-installatie"
+                    className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-50"
+                  >
+                    Airco Installatie
+                  </Link>
+                  <Link 
+                    to="/airco-onderhoud"
+                    className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-50"
+                  >
+                    Airco Onderhoud
+                  </Link>
+                  <Link 
+                    to="/airco-reparatie"
+                    className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-50"
+                  >
+                    Airco Reparatie
+                  </Link>
                 </div>
               </div>
             </div>
@@ -166,6 +196,41 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Capaciteit Calculator
+            </Link>
+            <Link 
+              to="/mobiele-airco"
+              className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50 ml-4"
+              onClick={() => setIsOpen(false)}
+            >
+              Mobiele Airco
+            </Link>
+            <Link 
+              to="/airco-met-buitenunit"
+              className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50 ml-4"
+              onClick={() => setIsOpen(false)}
+            >
+              Airco Met Buitenunit
+            </Link>
+            <Link 
+              to="/airco-installatie"
+              className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50 ml-4"
+              onClick={() => setIsOpen(false)}
+            >
+              Airco Installatie
+            </Link>
+            <Link 
+              to="/airco-onderhoud"
+              className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50 ml-4"
+              onClick={() => setIsOpen(false)}
+            >
+              Airco Onderhoud
+            </Link>
+            <Link 
+              to="/airco-reparatie"
+              className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50 ml-4"
+              onClick={() => setIsOpen(false)}
+            >
+              Airco Reparatie
             </Link>
           </div>
           <Link 

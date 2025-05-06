@@ -227,6 +227,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://staycoolairco.nl/kennisbank/mobiele-vs-split-airco</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://staycoolairco.nl/kennisbank/onderhoudsschema</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -277,6 +282,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://staycoolairco.nl/kennisbank/verwarmen-met-airco-ervaring</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://staycoolairco.nl/kennisbank/verwarmen-met-airco</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -312,6 +322,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://staycoolairco.nl/landing/airco-installatie</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/airco-met-buitenunit</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/airco-onderhoud</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/airco-reparatie</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://staycoolairco.nl/landing/daikin</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -323,6 +353,11 @@
   </url>
   <url>
     <loc>https://staycoolairco.nl/landing/mitsubishi-heavy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/mobiele-airco</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -342,7 +377,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://staycoolairco.nl/products/lg-mobiele-airco</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://staycoolairco.nl/products/stylish</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/tosot-mobiele-airco</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

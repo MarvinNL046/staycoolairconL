@@ -56,7 +56,7 @@ export default function AircoWeert() {
                   <li>✓ Onderhoud en service</li>
                   <li>✓ Reparatie en storingen</li>
                   <li>✓ Advies op locatie</li>
-                  <li>✓ 24/7 servicedienst</li>
+                  <li>✓ Priority servicedienst</li>
                 </ul>
               </div>
 

@@ -56,7 +56,7 @@ export default function AircoSpecialistLimburg() {
                   <li>✓ Regelmatig onderhoud</li>
                   <li>✓ Storingsdiagnose en reparatie</li>
                   <li>✓ Advies op maat</li>
-                  <li>✓ 24/7 storingsdienst</li>
+                  <li>✓ Priority storingsdienst</li>
                 </ul>
               </div>
 

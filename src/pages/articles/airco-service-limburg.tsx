@@ -17,7 +17,7 @@ export default function AircoServiceLimburg() {
         <title>Airco Service Limburg | Professioneel Onderhoud & Reparatie</title>
         <meta 
           name="description" 
-          content="Betrouwbare airco service in Limburg nodig? Onze experts staan klaar voor onderhoud, reparatie en storingen. 24/7 service beschikbaar in heel Limburg."
+          content="Betrouwbare airco service in Limburg nodig? Onze experts staan klaar voor onderhoud, reparatie en storingen. Priority service beschikbaar in heel Limburg."
         />
         <meta 
           name="keywords" 
@@ -43,7 +43,7 @@ export default function AircoServiceLimburg() {
               <p>
                 Bij StayCool bieden we complete airco service in heel Limburg. Van regulier 
                 onderhoud tot spoedservice bij storingen - onze gecertificeerde monteurs staan 
-                24/7 voor u klaar. Met onze jarenlange ervaring en technische expertise zorgen 
+                voor u klaar. Met onze jarenlange ervaring en technische expertise zorgen 
                 we ervoor dat uw airconditioning optimaal blijft functioneren.
               </p>
             </div>
@@ -65,7 +65,7 @@ export default function AircoServiceLimburg() {
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <div className="flex items-center mb-4">
                   <Clock className="h-6 w-6 text-blue-600 mr-3" />
-                  <h3 className="text-xl font-semibold">24/7 Service</h3>
+                  <h3 className="text-xl font-semibold">Priority Service</h3>
                 </div>
                 <ul className="space-y-2">
                   <li>✓ Snelle responstijd</li>
@@ -129,7 +129,7 @@ export default function AircoServiceLimburg() {
               <h2 className="text-2xl font-semibold mb-4">Airco Service Nodig?</h2>
               <p className="mb-6">
                 Neem direct contact op voor snelle en professionele airco service in Limburg. 
-                Onze experts staan 24/7 voor u klaar.
+                Onze experts staan voor u klaar.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link

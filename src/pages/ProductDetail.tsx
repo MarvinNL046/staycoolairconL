@@ -10,12 +10,25 @@ export default function ProductDetail() {
   const { brand, model } = useParams();
   const [showInstallationInfo, setShowInstallationInfo] = useState(false);
   
-  // Find the product data
-  const brandData = productData.brands.find(b => 
-    b.name.toLowerCase() === brand || 
-    b.name.toLowerCase().startsWith(brand || '') ||
-    b.name.toLowerCase().includes(brand || '')
-  );
+  // Find the product data with improved brand matching
+  const brandData = productData.brands.find(b => {
+    if (!brand) return false;
+    
+    // First try exact match with the URL slug format, which could be 'lg-mobiele-airco'
+    if (brand === 'lg-mobiele-airco' && b.name === 'LG Mobiele Airco') return true;
+    if (brand === 'tosot-mobiele-airco' && b.name === 'Tosot Mobiele Airco') return true;
+    
+    // Try with variations of the brand name
+    const brandLower = brand.toLowerCase();
+    const nameLower = b.name.toLowerCase();
+    
+    return nameLower === brandLower || 
+           nameLower.startsWith(brandLower) || 
+           nameLower.includes(brandLower) ||
+           // Handle spaces vs dashes in URLs
+           nameLower.replace(/ /g, '-') === brandLower ||
+           brandLower.replace(/-/g, ' ') === nameLower;
+  });
   const modelData = brandData?.models.find(m => m.slug === model);
 
   if (!brandData || !modelData) {
