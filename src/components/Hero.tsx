@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from 'react';
+import React, { useState, lazy, Suspense, useEffect } from 'react';
 import { m } from 'framer-motion';
 import { Phone, Mail, Send, Calendar, Shield, Clock, Thermometer } from 'lucide-react';
 import { sendEmail } from '../utils/email';
@@ -9,6 +9,40 @@ import CompactGoogleReviews from './CompactGoogleReviews';
 import { ArrowRight, Timer, ShieldCheck } from 'lucide-react';
 
 const inputClasses = "mt-1 block w-full h-12 rounded-md bg-white/10 border-gray-300 text-white placeholder-gray-400 shadow-sm focus:border-orange-500 focus:ring-orange-500";
+
+// Text carousel component for rotating headlines
+function TextCarousel() {
+  const headlineTexts = [
+    "Verwarm Duurzaam & Bespaar op Terugleverkosten",
+    "Versla de Zomerhitte met Efficiënt Koelen",
+    "Blijf Koel & Comfortabel Tijdens Hittegolven",
+    "Comfortabel de Winter Door met Duurzame Warmte",
+    "Zeg Vaarwel Tegen Kou met Efficiënte Verwarming"
+  ];
+
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+  // Auto-rotate text carousel
+  useEffect(() => {
+    const rotationInterval = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % headlineTexts.length);
+    }, 6000); // Change every 6 seconds
+
+    return () => clearInterval(rotationInterval);
+  }, []);
+
+  return (
+    <m.h1
+      key={currentTextIndex}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mt-4 max-w-[20ch]"
+    >
+      {headlineTexts[currentTextIndex]}
+    </m.h1>
+  );
+}
 
 export default function Hero() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -90,9 +124,8 @@ export default function Hero() {
                 ⚡ Bespaar tot 60% op verwarmingskosten
               </span>
             </div>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mt-4 max-w-[20ch]">
-              Verwarm Duurzaam & Bespaar op Terugleverkosten
-            </h1>
+            {/* Headline Text Carousel */}
+            <TextCarousel />
             <p className="mt-6 text-lg sm:text-xl text-gray-200 max-w-[45ch]">
               Voorkom hoge terugleverkosten van uw zonnepanelen door slim te verwarmen met een airco. 
               Efficiënt verwarmen én koelen met één systeem.
