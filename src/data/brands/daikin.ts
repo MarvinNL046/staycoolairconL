@@ -14,7 +14,7 @@ export const daikinData: Brand = {
     {
       name: 'Ururu Sarara',
       slug: 'ururu-sarara',
-      description: 'De Daikin Ururu Sarara is het meest geavanceerde model met unieke bevochtigings- en ontvochtigingsfuncties. Dit topmodel biedt optimale klimaatbeheersing met de hoogste energiezuinigheid.',
+      description: 'De Daikin Ururu Sarara is het enige klimaatregelingssysteem op de markt dat verwarming, koeling, bevochtiging, ontvochtiging en ventilatie combineert met innovatieve, geavanceerde technologie. Dit topmodel biedt totale klimaatbeheersing met de hoogste energiezuinigheid.',
       imageUrl: '/images/products/Ururu-Sarara-left.webp',
       images: [
         {
@@ -28,23 +28,29 @@ export const daikinData: Brand = {
       ],
       price: '€4.500,- inclusief standaard installatie',
       energyLabel: 'A+++',
-      capacity: '2,5 kW - 5,0 kW',
+      capacity: '5,0 kW koelen / 6,3 kW verwarmen',
       features: [
-        'Unieke bevochtigingsfunctie (Ururu)',
-        'Ontvochtigingsfunctie zonder temperatuurdaling (Sarara)',
+        'Uitmuntende technologie: 5 functies gecombineerd in 1 systeem',
+        'Totale klimaatbeheersing: verwarming, koeling, bevochtiging, ontvochtiging en luchtverversing',
+        'Unieke bevochtigingsfunctie (Ururu) en ontvochtigingsfunctie zonder temperatuurdaling (Sarara)',
         'Flash Streamer technologie voor superieure luchtzuivering',
-        'Zelfreinigend filter',
-        'Ingebouwde wifi-adapter voor smartphone bediening',
-        'Fluisterstille werking vanaf 19 dBA',
-        '3D luchtstroom voor optimale verdeling'
+        'Tijdbesparend, zelfreinigend filter',
+        'Bewegingssensor voor energiebesparing',
+        'Volledige bediening via smartphone, waar je ook bent',
+        'Fluisterstille werking vanaf slechts 19 dB(A)',
+        'Seizoensrendementswaarden: volledig bereik A+++ in koeling en verwarming'
       ],
       specifications: [
-        { label: 'Koelcapaciteit', value: '2,5 - 5,0 kW' },
-        { label: 'Verwarmingscapaciteit', value: '3,6 - 6,3 kW' },
+        { label: 'Koelcapaciteit', value: 'tot 5,0 kW' },
+        { label: 'Verwarmingscapaciteit', value: 'tot 6,3 kW' },
         { label: 'SEER', value: 'tot 9.54' },
         { label: 'SCOP', value: 'tot 5.90' },
-        { label: 'Geluidsniveau binnen', value: '19-38 dB(A)' },
-        { label: 'Koudemiddel', value: 'R-32' }
+        { label: 'Geluidsniveau binnen', value: 'vanaf 19 dB(A)' },
+        { label: 'Energielabel koelen', value: 'A+++ (A+++ tot G)' },
+        { label: 'Energielabel verwarmen', value: 'A+++ (A+++ tot G)' },
+        { label: 'Afmetingen binnendeel (hxbxd)', value: '295x798x372 mm' },
+        { label: 'Koudemiddel', value: 'R-32' },
+        { label: 'Aantal binnendelen per buitendeel', value: '1' }
       ]
     },
     {
