@@ -7,17 +7,17 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/Ururu-Sarara-left.webp</image:loc>
-      <image:title>Ururu Sarara</image:title>
+      <image:title>Ururu Sarara FTXZ + RXZ</image:title>
       <image:caption>De Daikin Ururu Sarara is het enige klimaatregelingssysteem op de markt dat verwarming, koeling, bevochtiging, ontvochtiging en ventilatie combineert met innovatieve, geavanceerde technologie. Dit topmodel biedt totale klimaatbeheersing met de hoogste energiezuinigheid.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/Ururu-Sarara-left.webp</image:loc>
-      <image:title>Ururu Sarara</image:title>
+      <image:title>Ururu Sarara FTXZ + RXZ</image:title>
       <image:caption>Daikin Ururu Sarara - Links</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/Ururu-Sarara-right.webp</image:loc>
-      <image:title>Ururu Sarara</image:title>
+      <image:title>Ururu Sarara FTXZ + RXZ</image:title>
       <image:caption>Daikin Ururu Sarara - Rechts</image:caption>
     </image:image>
   </url>
@@ -28,7 +28,7 @@
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-sensira-wit.webp</image:loc>
       <image:title>Sensira FTXF-A/B</image:title>
-      <image:caption>De Daikin Sensira biedt betrouwbare klimaatbeheersing voor een aantrekkelijke prijs. Deze wandunit combineert een modern design met efficiënte technologie.</image:caption>
+      <image:caption>De Daikin Sensira biedt betrouwbare klimaatbeheersing voor een aantrekkelijke prijs. Deze wandunit combineert een modern design met efficiënte technologie en is in verschillende capaciteiten beschikbaar voor elke ruimte.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-sensira-wit.webp</image:loc>
@@ -42,23 +42,38 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-comfora-left.webp</image:loc>
-      <image:title>Comfora FTXP-M</image:title>
-      <image:caption>De Daikin Comfora biedt een perfecte balans tussen comfort en efficiëntie. Met zijn stijlvolle design en geavanceerde functies zorgt deze wandunit voor een aangenaam binnenklimaat het hele jaar door.</image:caption>
+      <image:title>Comfora FTXP</image:title>
+      <image:caption>De Daikin Comfora biedt een perfecte balans tussen comfort en efficiëntie. Met zijn stijlvolle design en geavanceerde functies zorgt deze wandunit voor een aangenaam binnenklimaat het hele jaar door, met optimale prestaties in elk seizoen.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-comfora-left.webp</image:loc>
-      <image:title>Comfora FTXP-M</image:title>
+      <image:title>Comfora FTXP</image:title>
       <image:caption>Daikin Comfora - Links</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-comfora-right.webp</image:loc>
-      <image:title>Comfora FTXP-M</image:title>
+      <image:title>Comfora FTXP</image:title>
       <image:caption>Daikin Comfora - Rechts</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin comfora-onectaApp.webp</image:loc>
-      <image:title>Comfora FTXP-M</image:title>
+      <image:title>Comfora FTXP</image:title>
       <image:caption>Daikin Comfora - Onecta App</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/daikin/perfera-ftxm-a</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/daikin-perfera-wit.webp</image:loc>
+      <image:title>Perfera FTXM-A + RXM-A</image:title>
+      <image:caption>De Daikin Perfera FTXM-A is een hoogwaardige wandunit die zorgt voor optimaal comfort in uw woning. Met zijn uitstekende energiezuinigheid (tot A+++) en uitgebreide functionaliteiten biedt deze unit een perfecte balans tussen prestaties en comfort, beschikbaar in vijf verschillende capaciteiten.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/daikin-perfera-wit.webp</image:loc>
+      <image:title>Perfera FTXM-A + RXM-A</image:title>
+      <image:caption>Daikin Perfera FTXM-A - Wit</image:caption>
     </image:image>
   </url>
   <url>
@@ -82,22 +97,22 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-stylish-wit.webp</image:loc>
-      <image:title>Stylish FTXA-AW/BS/BB/BT</image:title>
-      <image:caption>De Daikin Stylish combineert een uniek design met innovatieve technologie. Het Coanda-effect zorgt voor een optimale verdeling van verwarmde en gekoelde lucht.</image:caption>
+      <image:title>Stylish FTXA + RXA</image:title>
+      <image:caption>De Daikin Stylish combineert een uniek design met innovatieve technologie en superieure prestaties. De ultradunne wandunit (slechts 189 mm diep) is verkrijgbaar in verschillende uitvoeringen en past in elk modern interieur, terwijl het revolutionaire Coanda-effect zorgt voor een optimale verdeling van verwarmde en gekoelde lucht.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-stylish-wit.webp</image:loc>
-      <image:title>Stylish FTXA-AW/BS/BB/BT</image:title>
+      <image:title>Stylish FTXA + RXA</image:title>
       <image:caption>Daikin Stylish - Wit</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-stylish-silver.webp</image:loc>
-      <image:title>Stylish FTXA-AW/BS/BB/BT</image:title>
+      <image:title>Stylish FTXA + RXA</image:title>
       <image:caption>Daikin Stylish - Zilver</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-stylish-zwart.webp</image:loc>
-      <image:title>Stylish FTXA-AW/BS/BB/BT</image:title>
+      <image:title>Stylish FTXA + RXA</image:title>
       <image:caption>Daikin Stylish - Zwart</image:caption>
     </image:image>
   </url>
@@ -108,7 +123,7 @@
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/Perfera-vloermodel-left.webp</image:loc>
       <image:title>Perfera Vloermodel FVXM-A</image:title>
-      <image:caption>Het Daikin Perfera vloermodel biedt optimaal comfort vanaf grondniveau. Deze stijlvolle vloerunit combineert krachtige prestaties met energiezuinige technologie voor een aangename temperatuur in elke ruimte.</image:caption>
+      <image:caption>Het Daikin Perfera vloermodel biedt optimaal comfort vanaf grondniveau. Deze stijlvolle vloerunit combineert krachtige prestaties met energiezuinige technologie voor een aangename temperatuur in elke ruimte, in drie capaciteitsklassen voor elke woning.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/Perfera-vloermodel-left.webp</image:loc>
@@ -127,22 +142,22 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-emura-wit.webp</image:loc>
-      <image:title>Emura FTXJ-AW/BS/BB</image:title>
-      <image:caption>De Daikin Emura is een premium wandmodel dat bekroond design combineert met geavanceerde technologie voor optimaal comfort.</image:caption>
+      <image:title>Emura FTXJ + RXJ</image:title>
+      <image:caption>De Daikin Emura is een premium wandmodel dat bekroond design combineert met geavanceerde technologie voor optimaal comfort. Met zijn elegante vormgeving en superieure energieprestaties zorgt deze unit voor een compromisloze combinatie van stijl en functionaliteit in vijf verschillende capaciteiten.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-emura-wit.webp</image:loc>
-      <image:title>Emura FTXJ-AW/BS/BB</image:title>
+      <image:title>Emura FTXJ + RXJ</image:title>
       <image:caption>Daikin Emura - Wit</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-emura-zilver.webp</image:loc>
-      <image:title>Emura FTXJ-AW/BS/BB</image:title>
+      <image:title>Emura FTXJ + RXJ</image:title>
       <image:caption>Daikin Emura - Zilver</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-emura-zwart.webp</image:loc>
-      <image:title>Emura FTXJ-AW/BS/BB</image:title>
+      <image:title>Emura FTXJ + RXJ</image:title>
       <image:caption>Daikin Emura - Zwart</image:caption>
     </image:image>
   </url>
@@ -453,7 +468,7 @@
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/787-cosmo-indoor-vooraanzicht.webp</image:loc>
       <image:title>Cosmo</image:title>
-      <image:caption>De Tosot Cosmo biedt betrouwbare klimaatbeheersing voor een zeer aantrekkelijke prijs. Perfect voor wie op zoek is naar een goede basis airco.</image:caption>
+      <image:caption>De TOSOT COSMO 3,2 kW R32 Inverter Airco Set by GREE is een krachtige en efficiënte airconditioningoplossing, ontworpen om betrouwbare koeling en verwarming te bieden met een capaciteit van 3,2 kW. Deze set maakt gebruik van het moderne R32 koelmiddel en Inverter-technologie, wat zorgt voor uitstekende energieprestaties en lage operationele kosten. Met een energielabel van A++ biedt dit systeem niet alleen uitstekende prestaties, maar ook een geluidsniveau van slechts 24 dB(A) voor de binnenunit.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/787-cosmo-indoor-vooraanzicht.webp</image:loc>
@@ -478,7 +493,7 @@
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/568-Pular-indoor-vooraanzicht.webp</image:loc>
       <image:title>Pular</image:title>
-      <image:caption>De Tosot Pular combineert moderne technologie met ingebouwde wifi-besturing. Een slimme keuze voor wie op zoek is naar extra functionaliteit.</image:caption>
+      <image:caption>De Tosot PULAR by GREE single split airco R32 2,2 kW set is een efficiënte en betrouwbare oplossing voor klimaatregeling, ontworpen voor zowel zakelijke als particuliere toepassingen. Met een koelcapaciteit van 2,2 kW en het milieuvriendelijke R32 koelmiddel, biedt deze airco uitstekende prestaties met een lage impact op het milieu. Deze airco combineert een laag energieverbruik met krachtige koeling en verwarming, wat ideaal is voor kleinere ruimtes zoals slaapkamers, kantoren of vergaderruimtes.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/568-Pular-indoor-vooraanzicht.webp</image:loc>
@@ -498,7 +513,7 @@
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/724-clivia-wit-vooraanzicht.webp</image:loc>
       <image:title>Clivia Design</image:title>
-      <image:caption>De Tosot Clivia is verkrijgbaar in stijlvol wit of zwart design. Perfect voor wie waarde hecht aan zowel prestaties als uitstraling.</image:caption>
+      <image:caption>De Tosot CLIVIA by GREE inverter is een airco set van hoogwaardige kwaliteit. Met een koelvermogen van 2,7 kW en de mogelijkheid om te verwarmen biedt deze airco veelzijdige klimaatregeling voor elke ruimte. De Clivia gebruikt R32 koelmiddel dat beter is voor het milieu en beschikt over een indrukwekkende SEER van 8,5 W/W en SCOP van 4,6 W/W, wat hem tot een van de meest energie-efficiënte modellen in zijn klasse maakt. Verkrijgbaar in stijlvol wit of zwart design.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/724-clivia-wit-vooraanzicht.webp</image:loc>
@@ -537,17 +552,17 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/374-WTS-indoor-console-vloernmodel-tosot.webp</image:loc>
-      <image:title>Console</image:title>
-      <image:caption>Het Tosot Console model is ideaal voor montage op of nabij de vloer. Standaard voorzien van wifi-besturing voor optimaal gebruiksgemak.</image:caption>
+      <image:title>Console WTS-12R</image:title>
+      <image:caption>De TOSOT CONSOLE WTS-12R 3,5 kW Inverter Set by GREE is een efficiënte en veelzijdige oplossing voor klimaatbeheersing in kleine tot middelgrote ruimtes. Met een koelvermogen van 3,5 kW en uitgerust met geavanceerde invertertechnologie, biedt deze console een betrouwbare en energiezuinige temperatuurregeling. De unit heeft een SEER van 7,2 en een SCOP van 4,1, wat zorgt voor uitstekende prestaties, zowel in de zomer als in de winter. Met energielabel A++ voor koelen en A+ voor verwarmen is dit systeem ontworpen om de energiekosten laag te houden en tegelijkertijd een hoog comfortniveau te handhaven.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/374-WTS-indoor-console-vloernmodel-tosot.webp</image:loc>
-      <image:title>Console</image:title>
+      <image:title>Console WTS-12R</image:title>
       <image:caption>Tosot Console - Vooraanzicht</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/375-WTS-remote-console-tosot.webp</image:loc>
-      <image:title>Console</image:title>
+      <image:title>Console WTS-12R</image:title>
       <image:caption>Tosot Console - Afstandsbediening</image:caption>
     </image:image>
   </url>

@@ -5,7 +5,7 @@ export default function UruruSararaPage() {
   return (
     <ProductModelTemplate
       brand="Daikin"
-      model="Ururu Sarara"
+      model="Ururu Sarara FTXZ + RXZ"
       description="De Daikin Ururu Sarara is het meest geavanceerde model met unieke bevochtigings- en ontvochtigingsfuncties."
       images={[{"url":"/images/products/Ururu-Sarara-left.webp","alt":"Daikin Ururu Sarara - Links"},{"url":"/images/products/Ururu-Sarara-right.webp","alt":"Daikin Ururu Sarara - Rechts"}]}
       price="€4.500,- inclusief standaard installatie"
