@@ -322,6 +322,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://staycoolairco.nl/kosten-airco-plaatsen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://staycoolairco.nl/landing/airco-installatie</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -368,6 +373,76 @@
   </url>
   <url>
     <loc>https://staycoolairco.nl/landing/tosot</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/beek</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/brunssum</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/geleen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/heerlen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/kerkrade</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/landgraaf</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/maastricht</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/meerssen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/roermond</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/sittard</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/stein</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/valkenburg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/venlo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/weert</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

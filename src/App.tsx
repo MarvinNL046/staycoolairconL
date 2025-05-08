@@ -43,6 +43,23 @@ const AircoMetBuitenunitLanding = lazy(() => import('./pages/landing/AircoMetBui
 const AircoInstallatieLanding = lazy(() => import('./pages/landing/AircoInstallatieLanding'));
 const AircoOnderhoudLanding = lazy(() => import('./pages/landing/AircoOnderhoudLanding'));
 const AircoReparatieLanding = lazy(() => import('./pages/landing/AircoReparatieLanding'));
+const KostenAircoPlaatsen = lazy(() => import('./pages/KostenAircoPlaatsen'));
+
+// Location Landing Pages
+const RoermondPage = lazy(() => import('./pages/locations/Roermond'));
+const MaastrichtPage = lazy(() => import('./pages/locations/Maastricht'));
+const HeerlenPage = lazy(() => import('./pages/locations/Heerlen'));
+const VenloPage = lazy(() => import('./pages/locations/Venlo'));
+const SittardPage = lazy(() => import('./pages/locations/Sittard'));
+const WeertPage = lazy(() => import('./pages/locations/Weert'));
+const MeerssenPage = lazy(() => import('./pages/locations/Meerssen'));
+const ValkenburgPage = lazy(() => import('./pages/locations/Valkenburg'));
+const KerkradePage = lazy(() => import('./pages/locations/Kerkrade'));
+const BrunssumPage = lazy(() => import('./pages/locations/Brunssum'));
+const GeleenPage = lazy(() => import('./pages/locations/Geleen'));
+const SteinPage = lazy(() => import('./pages/locations/Stein'));
+const BeekPage = lazy(() => import('./pages/locations/Beek'));
+const LandgraafPage = lazy(() => import('./pages/locations/Landgraaf'));
 
 // Knowledge Base Articles
 const HoeWerktAirco = lazy(() => import('./pages/articles/HoeWerktAirco'));
@@ -262,6 +279,7 @@ export default function App() {
                 <Route path="/kennisbank/energiezuinige-airco-limburg" element={<EnergiezuinigeAircoLimburg />} />
                 <Route path="/airco-verwarming-kosten-besparing" element={<AircoVerwarmingKostenBesparing />} />
                 <Route path="/kennisbank/airco-verwarming-voordelen" element={<AircoVerwarmingVoordelen />} />
+                <Route path="/kosten-airco-plaatsen" element={<KostenAircoPlaatsen />} />
                 
                 {/* Landing Pages */}
                 <Route path="/landing/daikin" element={<DaikinLanding />} />
@@ -274,6 +292,22 @@ export default function App() {
                 <Route path="/airco-installatie" element={<AircoInstallatieLanding />} />
                 <Route path="/airco-onderhoud" element={<AircoOnderhoudLanding />} />
                 <Route path="/airco-reparatie" element={<AircoReparatieLanding />} />
+                
+                {/* Location Pages */}
+                <Route path="/airco-installatie/roermond" element={<RoermondPage />} />
+                <Route path="/airco-installatie/maastricht" element={<MaastrichtPage />} />
+                <Route path="/airco-installatie/heerlen" element={<HeerlenPage />} />
+                <Route path="/airco-installatie/venlo" element={<VenloPage />} />
+                <Route path="/airco-installatie/sittard" element={<SittardPage />} />
+                <Route path="/airco-installatie/weert" element={<WeertPage />} />
+                <Route path="/airco-installatie/meerssen" element={<MeerssenPage />} />
+                <Route path="/airco-installatie/valkenburg" element={<ValkenburgPage />} />
+                <Route path="/airco-installatie/kerkrade" element={<KerkradePage />} />
+                <Route path="/airco-installatie/brunssum" element={<BrunssumPage />} />
+                <Route path="/airco-installatie/geleen" element={<GeleenPage />} />
+                <Route path="/airco-installatie/stein" element={<SteinPage />} />
+                <Route path="/airco-installatie/beek" element={<BeekPage />} />
+                <Route path="/airco-installatie/landgraaf" element={<LandgraafPage />} />
               </Routes>
             </Suspense>
           </AnimatePresence>
