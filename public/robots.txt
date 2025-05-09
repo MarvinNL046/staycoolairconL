@@ -21,3 +21,4 @@ Crawl-delay: 10
 
 # Sitemaps
 Sitemap: https://staycoolairco.nl/sitemap.xml
+Sitemap: https://staycoolairco.nl/blog-sitemap.xml

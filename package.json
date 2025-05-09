@@ -12,7 +12,7 @@
     "build:brands": "node scripts/build-brands-data.js && node scripts/bundle-brands-data.js",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "generate-sitemaps": "node scripts/generate-products-sitemap.js && node scripts/generate-service-areas-sitemap.js && node scripts/generate-sitemap.js",
+    "generate-sitemaps": "node scripts/generate-products-sitemap.js && node scripts/generate-service-areas-sitemap.js && node scripts/generate-sitemap.js && node scripts/update-sitemap-with-locations.js && node scripts/generate-blog-sitemap.js",
     "optimize-images": "node scripts/optimize-product-images.js"
   },
   "dependencies": {
@@ -28,11 +28,13 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^4.0.12",
+    "react-feather": "^2.0.10",
     "react-helmet-async": "^2.0.4",
     "react-hot-toast": "^2.5.1",
     "react-lazy-load-image-component": "^1.6.3",
     "react-router-dom": "^6.22.0",
-    "web-vitals": "^4.2.4"
+    "web-vitals": "^4.2.4",
+    "xmldom": "^0.6.0"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.10",

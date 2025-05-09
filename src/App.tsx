@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect, useCallback } from 'react';
 import ScrollToTop from './components/ScrollToTop';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { trackPageView, trackError, trackPerformance } from './utils/analytics';
@@ -6,6 +6,7 @@ import UruruSararaPage from './pages/products/ururu-sarara';
 import StylishPage from './pages/products/stylish';
 import Daiseikai10Page from './pages/products/daiseikai-10';
 import { AnimatePresence } from 'framer-motion';
+import { throttle } from './utils/helpers';
 import { ErrorBoundary } from 'react-error-boundary';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -60,6 +61,21 @@ const GeleenPage = lazy(() => import('./pages/locations/Geleen'));
 const SteinPage = lazy(() => import('./pages/locations/Stein'));
 const BeekPage = lazy(() => import('./pages/locations/Beek'));
 const LandgraafPage = lazy(() => import('./pages/locations/Landgraaf'));
+const VenrayPage = lazy(() => import('./pages/locations/Venray'));
+const HoensbroekPage = lazy(() => import('./pages/locations/Hoensbroek'));
+const GennepPage = lazy(() => import('./pages/locations/Gennep'));
+const EchtPage = lazy(() => import('./pages/locations/Echt'));
+const NederweertPage = lazy(() => import('./pages/locations/Nederweert'));
+const VaalsPage = lazy(() => import('./pages/locations/Vaals'));
+const PanningenPage = lazy(() => import('./pages/locations/Panningen'));
+const MaasbrachtPage = lazy(() => import('./pages/locations/Maasbracht'));
+
+// Blog
+const BlogPage = lazy(() => import('./pages/Blog'));
+const AircoOnderhoudLimburgBelangrijk = lazy(() => import('./pages/blog/AircoOnderhoudLimburgBelangrijk'));
+const AircoInstallateurLimburgKiezen = lazy(() => import('./pages/blog/AircoInstallateurLimburgKiezen'));
+const AircoOfferteLimburg = lazy(() => import('./pages/blog/AircoOfferteLimburg'));
+const AircoSpecialistLimburgBlog = lazy(() => import('./pages/blog/AircoSpecialistLimburg'));
 
 // Knowledge Base Articles
 const HoeWerktAirco = lazy(() => import('./pages/articles/HoeWerktAirco'));
@@ -115,48 +131,76 @@ const AircoVerwarmingKostenBesparing = lazy(() => import('./pages/AircoVerwarmin
 const AircoVerwarmingVoordelen = lazy(() => import('./pages/articles/airco-verwarming-voordelen'));
 const CityDetail = lazy(() => import('./components/CityDetail'));
 
-// Loading fallback component with skeleton UI
-const LoadingFallback = () => (
+// Loading fallback component with simplified skeleton UI (no animations)
+const LoadingFallback = React.memo(() => (
   <div className="min-h-screen flex items-center justify-center bg-white">
     <div className="space-y-8 w-full max-w-7xl mx-auto px-4">
-      {/* Skeleton header */}
-      <div className="h-8 bg-gray-200 rounded w-1/3 animate-pulse"></div>
-      {/* Skeleton content */}
+      {/* Skeleton header - static without animation */}
+      <div className="h-8 bg-gray-200 rounded w-1/3"></div>
+      {/* Skeleton content - static without animation */}
       <div className="space-y-4">
-        <div className="h-4 bg-gray-200 rounded w-full animate-pulse"></div>
-        <div className="h-4 bg-gray-200 rounded w-5/6 animate-pulse"></div>
-        <div className="h-4 bg-gray-200 rounded w-4/6 animate-pulse"></div>
+        <div className="h-4 bg-gray-200 rounded w-full"></div>
+        <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+        <div className="h-4 bg-gray-200 rounded w-4/6"></div>
       </div>
     </div>
   </div>
-);
+));
 
-// Preload critical routes
+// More efficient preloading with requestIdleCallback
 const preloadCriticalRoutes = () => {
-  // Preload home page
-  const preloadHome = () => import('./pages/Home');
-  // Preload products page
-  const preloadProducts = () => import('./pages/Products');
+  const criticalRoutes = [
+    () => import('./pages/Home'),
+    () => import('./pages/Products'),
+    () => import('./pages/Contact')
+  ];
   
-  // Start preloading after initial render
-  setTimeout(() => {
-    preloadHome();
-    preloadProducts();
-  }, 1000);
+  // Use requestIdleCallback for better timing
+  if ('requestIdleCallback' in window) {
+    // Queue preloads during idle time
+    window.requestIdleCallback(() => {
+      criticalRoutes.forEach(route => route());
+    }, { timeout: 2000 });
+  } else {
+    // Fallback for browsers without requestIdleCallback
+    setTimeout(() => {
+      criticalRoutes.forEach(route => route());
+    }, 1000);
+  }
 };
 
-export default function App() {
+const App = () => {
   const location = useLocation();
 
-  // Track page views
-  useEffect(() => {
-    trackPageView(location.pathname);
-  }, [location]);
+  // Throttled tracking function to avoid blocking main thread
+  const throttledTrackPageView = useCallback(
+    throttle((path: string) => {
+      trackPageView(path);
+    }, 100),
+    []
+  );
 
-  // Track performance metrics
+  // Track page views with throttling
+  useEffect(() => {
+    // Delay tracking until after animation completes
+    setTimeout(() => {
+      throttledTrackPageView(location.pathname);
+    }, 100);
+  }, [location, throttledTrackPageView]);
+
+  // Optimized performance metrics tracking with passive listeners
   useEffect(() => {
     const reportWebVitals = ({ name, value, rating }: { name: string; value: number; rating?: 'good' | 'needs-improvement' | 'poor' }) => {
-      trackPerformance({ name, value, rating });
+      // Use requestIdleCallback to report metrics during idle time
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(() => {
+          trackPerformance({ name, value, rating });
+        });
+      } else {
+        setTimeout(() => {
+          trackPerformance({ name, value, rating });
+        }, 0);
+      }
     };
 
     // Listen for web vitals
@@ -169,31 +213,56 @@ export default function App() {
     }
   }, []);
 
-  // Error boundary handler
-  const handleError = (error: Error) => {
-    trackError('react_error_boundary', error.message);
-  };
+  // Memoized error boundary handler
+  const handleError = useCallback((error: Error) => {
+    // Avoid blocking the main thread during error handling
+    setTimeout(() => {
+      trackError('react_error_boundary', error.message);
+    }, 0);
+  }, []);
 
   // Preload critical routes after initial render
   useEffect(() => {
     preloadCriticalRoutes();
   }, []);
 
-  // Preload next likely routes based on current route
+  // Smart preloading with requestIdleCallback to avoid blocking the main thread
   useEffect(() => {
     const path = location.pathname;
     
-    if (path === '/') {
-      // On home page, preload products and contact
-      import('./pages/Products');
-      import('./pages/Contact');
-    } else if (path.startsWith('/products')) {
-      // On products page, preload product detail
-      import('./pages/ProductDetail');
-    } else if (path.startsWith('/kennisbank')) {
-      // On knowledge base, preload common articles
-      import('./pages/articles/HoeWerktAirco');
-      import('./pages/articles/SoortenAirco');
+    const preloadRoutes = () => {
+      if (path === '/') {
+        return [
+          () => import('./pages/Products'),
+          () => import('./pages/Contact')
+        ];
+      } else if (path.startsWith('/products')) {
+        return [
+          () => import('./pages/ProductDetail')
+          // Removed dynamic import of ProductCarousel since it's statically imported elsewhere
+        ];
+      } else if (path.startsWith('/kennisbank')) {
+        return [
+          () => import('./pages/articles/HoeWerktAirco'),
+          () => import('./pages/articles/SoortenAirco')
+        ];
+      }
+      return [];
+    };
+    
+    const routes = preloadRoutes();
+    
+    if (routes.length > 0) {
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(() => {
+          routes.forEach(route => route());
+        }, { timeout: 1500 });
+      } else {
+        // Stagger imports to avoid blocking the main thread
+        routes.forEach((route, index) => {
+          setTimeout(() => route(), 300 * index);
+        });
+      }
     }
   }, [location]);
 
@@ -205,7 +274,8 @@ export default function App() {
         <SkipToContent />
         <Navbar />
         <main id="main-content" tabIndex={-1}>
-          <AnimatePresence mode="wait">
+          {/* Removed "wait" mode to improve performance - no need to wait for exit animations */}
+          <AnimatePresence mode="sync">
             <Suspense fallback={<LoadingFallback />}>
               <Routes>
           <Route path="/products/daikin/ururu-sarara" element={<UruruSararaPage />} />
@@ -308,6 +378,21 @@ export default function App() {
                 <Route path="/airco-installatie/stein" element={<SteinPage />} />
                 <Route path="/airco-installatie/beek" element={<BeekPage />} />
                 <Route path="/airco-installatie/landgraaf" element={<LandgraafPage />} />
+                <Route path="/airco-installatie/venray" element={<VenrayPage />} />
+                <Route path="/airco-installatie/hoensbroek" element={<HoensbroekPage />} />
+                <Route path="/airco-installatie/gennep" element={<GennepPage />} />
+                <Route path="/airco-installatie/echt" element={<EchtPage />} />
+                <Route path="/airco-installatie/nederweert" element={<NederweertPage />} />
+                <Route path="/airco-installatie/vaals" element={<VaalsPage />} />
+                <Route path="/airco-installatie/panningen" element={<PanningenPage />} />
+                <Route path="/airco-installatie/maasbracht" element={<MaasbrachtPage />} />
+                
+                {/* Blog Pages */}
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog/airco-onderhoud-limburg-belangrijk" element={<AircoOnderhoudLimburgBelangrijk />} />
+                <Route path="/blog/airco-installateur-limburg-kiezen" element={<AircoInstallateurLimburgKiezen />} />
+                <Route path="/blog/airco-offerte-limburg" element={<AircoOfferteLimburg />} />
+                <Route path="/blog/airco-specialist-limburg" element={<AircoSpecialistLimburgBlog />} />
               </Routes>
             </Suspense>
           </AnimatePresence>
@@ -319,4 +404,6 @@ export default function App() {
       </div>
     </ErrorBoundary>
   );
-}
+};
+
+export default React.memo(App);
