@@ -95,6 +95,11 @@ export default function Footer() {
             <h3 className="text-white text-lg font-semibold">Informatie</h3>
             <ul className="mt-4 space-y-2">
               <li>
+                <Link to="/blog" className="text-gray-400 hover:text-white">
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <Link to="/kennisbank" className="text-gray-400 hover:text-white">
                   Kennisbank
                 </Link>

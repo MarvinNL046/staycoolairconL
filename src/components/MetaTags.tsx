@@ -25,7 +25,7 @@ interface MetaTagsProps {
   keywords?: string;
   canonicalUrl?: string;
   ogImage?: string;
-  type?: 'website' | 'article' | 'product';
+  type?: 'website' | 'article' | 'product' | 'service';
   schema?: object;
   faqs?: FAQ[];
   reviews?: Review[];
@@ -37,6 +37,13 @@ interface MetaTagsProps {
     sku?: string;
     category?: string;
   };
+  locationInfo?: {
+    city?: string;
+    region?: string;
+    postalCode?: string;
+    neighborhood?: string;
+  };
+  serviceType?: string;
 }
 
 export default function MetaTags({ 
@@ -51,23 +58,51 @@ export default function MetaTags({
   reviews,
   priceInfo,
   breadcrumbItems,
-  productInfo
+  productInfo,
+  locationInfo,
+  serviceType
 }: MetaTagsProps) {
-  // Enhancement for Google search: Add action verbs and specific benefits to title if it's an article
+  // Enhance title with location information for better local SEO
   let enhancedTitle = title;
-  if (type === 'article' && !title.includes('|')) {
+  
+  if (locationInfo?.city) {
+    // If it's a service page with location info, format the title for local SEO
+    if (type === 'service' && serviceType && !title.includes(locationInfo.city)) {
+      enhancedTitle = `${serviceType} ${locationInfo.city} | StayCool Airco`;
+    } 
+    // For product pages with location, include both product and location
+    else if (type === 'product' && productInfo?.productName && !title.includes(locationInfo.city)) {
+      enhancedTitle = `${productInfo.productName} - ${locationInfo.city} | StayCool Airco`;
+    }
+    // For regular pages with location that don't already include city name
+    else if (!title.includes(locationInfo.city) && !title.includes('|')) {
+      enhancedTitle = `${title} ${locationInfo.city} | StayCool Airco`;
+    }
+  } else if (type === 'article' && !title.includes('|')) {
+    // Maintain existing enhancement for articles
     enhancedTitle = `${title} | Advies & Oplossingen 2025`;
   }
   
-  // Enhancement for Google search: Add urgency/CTA to description
+  // Enhancement for Google search: Add urgency/CTA and location information to description
   let enhancedDescription = description;
-  if (!description.includes('Nu')) {
-    enhancedDescription = description.endsWith('.') 
-      ? `${description.slice(0, -1)} | Nu vrijblijvend advies ontvangen.` 
-      : `${description} | Nu vrijblijvend advies ontvangen.`;
+  
+  // Add location information to description if available and not already included
+  if (locationInfo?.city && !description.includes(locationInfo.city)) {
+    enhancedDescription = `${description.replace(/\.$/, '')} in ${locationInfo.city}`;
+    if (locationInfo.region && !enhancedDescription.includes(locationInfo.region)) {
+      enhancedDescription += `, ${locationInfo.region}`;
+    }
+    enhancedDescription += '.';
   }
   
-  // Default schema for organization
+  // Add call-to-action if not already present
+  if (!enhancedDescription.includes('Nu')) {
+    enhancedDescription = enhancedDescription.endsWith('.') 
+      ? `${enhancedDescription.slice(0, -1)} | Nu vrijblijvend advies ontvangen.` 
+      : `${enhancedDescription} | Nu vrijblijvend advies ontvangen.`;
+  }
+  
+  // Default schema for organization with enhanced local information
   const defaultSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -78,7 +113,20 @@ export default function MetaTags({
       "@type": "ContactPoint",
       "telephone": "046-202-1430",
       "contactType": "customer service"
-    }
+    },
+    "areaServed": locationInfo?.city 
+      ? {
+          "@type": "City",
+          "name": locationInfo.city,
+          ...(locationInfo.region && { "containedIn": {
+            "@type": "AdministrativeArea",
+            "name": locationInfo.region
+          }}),
+        } 
+      : {
+          "@type": "State",
+          "name": "Limburg" 
+        }
   };
   
   // Prepare FAQ schema if FAQs provided
@@ -121,7 +169,7 @@ export default function MetaTags({
     }
   } : null;
   
-  // Prepare Product schema if it's a product page with price info
+  // Prepare Product schema if it's a product page with price info, enhanced with location
   const productSchema = type === 'product' && priceInfo && productInfo ? {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -138,7 +186,14 @@ export default function MetaTags({
       "url": canonicalUrl,
       "priceCurrency": priceInfo.currency || "EUR",
       "price": priceInfo.price,
-      "availability": `https://schema.org/${priceInfo.availability || 'InStock'}`
+      "availability": `https://schema.org/${priceInfo.availability || 'InStock'}`,
+      ...(locationInfo?.city && {
+        "areaServed": {
+          "@type": "City",
+          "name": locationInfo.city,
+          ...(locationInfo.region && { "containedIn": locationInfo.region })
+        }
+      })
     }
   } : null;
   
@@ -154,12 +209,46 @@ export default function MetaTags({
     }))
   } : null;
   
+  // Prepare Service schema if it's a service page with location
+  const serviceSchema = type === 'service' && serviceType ? {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": serviceType,
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "StayCool Airco",
+      "address": locationInfo?.city ? {
+        "@type": "PostalAddress",
+        "addressLocality": locationInfo.city,
+        ...(locationInfo.region && { "addressRegion": locationInfo.region }),
+        ...(locationInfo.postalCode && { "postalCode": locationInfo.postalCode }),
+        "addressCountry": "NL"
+      } : {
+        "@type": "PostalAddress",
+        "addressRegion": "Limburg",
+        "addressCountry": "NL"
+      }
+    },
+    "areaServed": locationInfo?.city 
+      ? {
+          "@type": "City",
+          "name": locationInfo.city,
+          ...(locationInfo.region && { "containedIn": locationInfo.region })
+        } 
+      : {
+          "@type": "State",
+          "name": "Limburg" 
+        },
+    "description": description
+  } : null;
+  
   // Combine all schemas
   const schemas = [
     schema || defaultSchema,
     faqSchema,
     reviewSchema,
     productSchema,
+    serviceSchema,
     breadcrumbSchema
   ].filter(Boolean);
 
@@ -180,6 +269,8 @@ export default function MetaTags({
       <meta property="og:title" content={enhancedTitle} />
       <meta property="og:description" content={enhancedDescription} />
       <meta property="og:image" content={ogImage} />
+      {locationInfo?.city && <meta property="og:locality" content={locationInfo.city} />}
+      {locationInfo?.region && <meta property="og:region" content={locationInfo.region} />}
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />

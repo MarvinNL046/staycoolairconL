@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, memo } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
@@ -13,7 +13,7 @@ interface LazyImageProps {
   objectFit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
 }
 
-export default function LazyImage({ 
+function LazyImageBase({
   src, 
   alt, 
   className = '', 
@@ -26,33 +26,36 @@ export default function LazyImage({
   const [error, setError] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
-  // Calculate dimensions
-  const widthStyle = typeof width === 'number' ? `${width}px` : width;
-  const heightStyle = typeof height === 'number' ? `${height}px` : height;
-
-  // Create wrapper style with aspect ratio if provided
-  const wrapperStyle: React.CSSProperties = {
-    width: widthStyle,
-    height: aspectRatio ? 'auto' : heightStyle,
-    position: 'relative',
-    backgroundColor: '#f3f4f6',
-    overflow: 'hidden',
-    ...(aspectRatio && {
-      paddingBottom: `${(1 / aspectRatio) * 100}%`
-    })
-  };
-
-  // Create image container style
-  const imageContainerStyle: React.CSSProperties = {
-    position: aspectRatio ? 'absolute' : 'relative',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  };
+  // Memoize styles to prevent recalculation on each render
+  const { wrapperStyle, imageContainerStyle } = useMemo(() => {
+    const widthStyle = typeof width === 'number' ? `${width}px` : width;
+    const heightStyle = typeof height === 'number' ? `${height}px` : height;
+    
+    return {
+      wrapperStyle: {
+        width: widthStyle,
+        height: aspectRatio ? 'auto' : heightStyle,
+        position: 'relative',
+        backgroundColor: '#f3f4f6',
+        overflow: 'hidden',
+        willChange: 'transform, opacity',
+        ...(aspectRatio && {
+          paddingBottom: `${(1 / aspectRatio) * 100}%`
+        })
+      } as React.CSSProperties,
+      
+      imageContainerStyle: {
+        position: aspectRatio ? 'absolute' : 'relative',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      } as React.CSSProperties
+    };
+  }, [width, height, aspectRatio]);
 
   return (
     <div style={wrapperStyle}>
@@ -66,7 +69,7 @@ export default function LazyImage({
             src={src}
             alt={alt}
             effect="blur"
-            className={`${className} object-${objectFit} w-full h-full transition-opacity duration-300 ${
+            className={`${className} object-${objectFit} w-full h-full transition-opacity duration-150 ${
               loaded ? 'opacity-100' : 'opacity-0'
             }`}
             loading={priority ? 'eager' : 'lazy'}
@@ -76,7 +79,7 @@ export default function LazyImage({
             afterLoad={() => setLoaded(true)}
             threshold={300}
             placeholder={
-              <div className="absolute inset-0 bg-gray-100 animate-pulse" />
+              <div className="absolute inset-0 bg-gray-100" />
             }
             wrapperProps={{
               style: {
@@ -89,17 +92,14 @@ export default function LazyImage({
             }}
           />
           {!loaded && !error && (
-            <div className="absolute inset-0 bg-gray-100 animate-pulse">
-              <div className="h-full w-full bg-gradient-to-r from-gray-100 to-gray-200 animate-shimmer" 
-                   style={{
-                     backgroundSize: '200% 100%',
-                     animation: 'shimmer 1.5s infinite'
-                   }}
-              />
-            </div>
+            <div className="absolute inset-0 bg-gray-100" />
           )}
         </div>
       )}
     </div>
   );
 }
+
+// Export memoized component to prevent unnecessary re-renders
+const LazyImage = memo(LazyImageBase);
+export default LazyImage;

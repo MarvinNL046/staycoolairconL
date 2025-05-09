@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, memo } from 'react';
 import { m, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import LazyImage from './LazyImage';
@@ -12,11 +12,8 @@ interface ProductCarouselProps {
   images: ProductImage[];
 }
 
-export default function ProductCarousel({ images }: ProductCarouselProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
-
-  const slideVariants = {
+// Memoized slide variants to prevent recreation on each render
+const slideVariants = {
     enter: (direction: number) => ({
       x: direction > 0 ? 300 : -300,
       opacity: 0
@@ -33,12 +30,18 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
     })
   };
 
-  const swipeConfidenceThreshold = 3000;
-  const swipePower = (offset: number, velocity: number) => {
-    return Math.abs(offset) * velocity;
-  };
+// Constants defined outside component to avoid recreation on each render
+const swipeConfidenceThreshold = 3000;
+const swipePower = (offset: number, velocity: number) => {
+  return Math.abs(offset) * velocity;
+};
 
-  const paginate = (newDirection: number) => {
+function ProductCarouselBase({ images }: ProductCarouselProps) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+
+  // Memoized pagination function to avoid recreation on each render
+  const paginate = useCallback((newDirection: number) => {
     setDirection(newDirection);
     setCurrentIndex((prevIndex) => {
       let newIndex = prevIndex + newDirection;
@@ -46,11 +49,17 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
       if (newIndex >= images.length) newIndex = 0;
       return newIndex;
     });
+  }, [images.length]);
+
+  // Using a lightweight transition preset for better performance
+  const optimizedTransition = {
+    x: { type: "tween", duration: 0.3, ease: "easeInOut" },
+    opacity: { duration: 0.2 }
   };
 
   return (
     <div 
-      className="relative w-full bg-white rounded-lg sm:rounded-2xl shadow-lg overflow-hidden"
+      className="relative w-full bg-white rounded-lg sm:rounded-2xl shadow-lg overflow-hidden will-change-transform"
       style={{ aspectRatio: '1/1' }}
       role="region"
       aria-label="Product image carousel"
@@ -65,10 +74,7 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{
-              x: { type: "spring", stiffness: 300, damping: 30 },
-              opacity: { duration: 0.2 }
-            }}
+            transition={optimizedTransition}
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.7}
@@ -121,12 +127,13 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
             aria-label="Product images"
           >
             {images.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  setDirection(index > currentIndex ? 1 : -1);
-                  setCurrentIndex(index);
-                }}
+            <button
+              key={index}
+              onClick={() => {
+                const newDirection = index > currentIndex ? 1 : -1;
+                setDirection(newDirection);
+                setCurrentIndex(index);
+              }}
                 className={`w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full transition-colors duration-200 ${
                   index === currentIndex 
                     ? 'bg-blue-600 w-3 sm:w-4' 
@@ -143,3 +150,7 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
     </div>
   );
 }
+
+// Export memoized component to prevent unnecessary re-renders
+const ProductCarousel = memo(ProductCarouselBase);
+export default ProductCarousel;
