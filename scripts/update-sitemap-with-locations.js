@@ -11,7 +11,8 @@ function updateSitemapWithLocations() {
     'roermond', 'maastricht', 'heerlen', 'venlo', 'sittard', 'weert',
     'meerssen', 'valkenburg', 'kerkrade', 'brunssum', 'geleen',
     'stein', 'beek', 'landgraaf', 'venray', 'hoensbroek', 'gennep', 'echt',
-    'nederweert', 'vaals', 'panningen', 'maasbracht'
+    'nederweert', 'vaals', 'panningen', 'maasbracht',
+    'eijsden-margraten', 'gulpen-wittem', 'voerendaal', 'simpelveld', 'nuth'
   ];
   
   // Read the existing sitemap

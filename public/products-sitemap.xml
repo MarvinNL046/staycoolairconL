@@ -571,19 +571,34 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeElite/Wind-Free Elite_Front-Open_White2.png.webp</image:loc>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeElite/WindFree Elite_S2_Front_Web_RGB.webp</image:loc>
       <image:title>Wind-Free Elite</image:title>
       <image:caption>De Samsung Wind-Free Elite biedt superieur comfort met de innovatieve Wind-Free technologie die koele lucht gelijkmatig verspreidt zonder directe luchtstroom.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeElite/Wind-Free Elite_Front-Open_White2.png.webp</image:loc>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeElite/WindFree Elite_S2_Front_Web_RGB.webp</image:loc>
       <image:title>Wind-Free Elite</image:title>
       <image:caption>Samsung Wind-Free Elite - Vooraanzicht</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeElite/Wind-Free Elite_outdoor unit_2-5 and 3-5kW_Front.jpg.webp</image:loc>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeElite/WindFree Elite_S2_Left_Web_RGB.webp</image:loc>
       <image:title>Wind-Free Elite</image:title>
-      <image:caption>Samsung Wind-Free Elite - Buitenunit</image:caption>
+      <image:caption>Samsung Wind-Free Elite - Linkerzijde</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeElite/WindFree Elite_S2_Right_Web_RGB.webp</image:loc>
+      <image:title>Wind-Free Elite</image:title>
+      <image:caption>Samsung Wind-Free Elite - Rechterzijde</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeElite/Samsung RAC WindFree Elite_Sfeerbeeld_001.webp</image:loc>
+      <image:title>Wind-Free Elite</image:title>
+      <image:caption>Samsung Wind-Free Elite - Sfeerbeeld 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeElite/Samsung RAC WindFree Elite_Sfeerbeeld_002.webp</image:loc>
+      <image:title>Wind-Free Elite</image:title>
+      <image:caption>Samsung Wind-Free Elite - Sfeerbeeld 2</image:caption>
     </image:image>
   </url>
   <url>
@@ -591,69 +606,69 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/Wind-Free Comfort_Front_WhiteWEB8.jpg.webp</image:loc>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/WindFree Comfort_S2_Front_Web_RGB.webp</image:loc>
       <image:title>Wind-Free Comfort</image:title>
       <image:caption>De Samsung Wind-Free Comfort biedt een perfecte balans tussen comfort en betaalbaarheid, met de innovatieve Wind-Free technologie voor een aangenaam binnenklimaat.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/Wind-Free Comfort_Front_WhiteWEB8.jpg.webp</image:loc>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/WindFree Comfort_S2_Front_Web_RGB.webp</image:loc>
       <image:title>Wind-Free Comfort</image:title>
       <image:caption>Samsung Wind-Free Comfort - Vooraanzicht</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/Wind-Free Comfort_Dynamic(L)_WhiteWEB.png.webp</image:loc>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/WindFree Comfort_S2_Left_Web_RGB.webp</image:loc>
       <image:title>Wind-Free Comfort</image:title>
       <image:caption>Samsung Wind-Free Comfort - Linkerzijde</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/Wind-Free Comfort_Dynamic(R)_WhiteWEB.png.webp</image:loc>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/WindFree Comfort_S2_Right_Web_RGB.webp</image:loc>
       <image:title>Wind-Free Comfort</image:title>
       <image:caption>Samsung Wind-Free Comfort - Rechterzijde</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/Wind-Free Comfort_Front-Open_WhiteWEB.png.webp</image:loc>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/Samsung RAC WindFree Comfort_Sfeerbeeld_001.webp</image:loc>
       <image:title>Wind-Free Comfort</image:title>
-      <image:caption>Samsung Wind-Free Comfort - Vooraanzicht Open</image:caption>
+      <image:caption>Samsung Wind-Free Comfort - Sfeerbeeld 1</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/Wind-Free Comfort_outdoor unit_2-5 and 3-5kW_FrontWEB.png.webp</image:loc>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/Samsung RAC WindFree Comfort_Sfeerbeeld_002.webp</image:loc>
       <image:title>Wind-Free Comfort</image:title>
-      <image:caption>Samsung Wind-Free Comfort - Buitenunit 2,5-3,5kW</image:caption>
+      <image:caption>Samsung Wind-Free Comfort - Sfeerbeeld 2</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/products/samsung/luzon</loc>
+    <loc>https://staycoolairco.nl/products/samsung/luzon-s2</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Luzon_Front_WhiteWEB.png.webp</image:loc>
-      <image:title>Luzon</image:title>
-      <image:caption>De Samsung Luzon biedt betrouwbare klimaatbeheersing met een uitstekende prijs-kwaliteitverhouding. Deze wandunit combineert efficiënte prestaties met een stijlvol design.</image:caption>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Luzon_S2_Front_Web_RGB.webp</image:loc>
+      <image:title>Luzon S2</image:title>
+      <image:caption>De Samsung Luzon S2 biedt betrouwbare klimaatbeheersing met een uitstekende prijs-kwaliteitverhouding. Deze wandunit combineert efficiënte prestaties met een stijlvol design en Wi-Fi connectiviteit.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Luzon_Front_WhiteWEB.png.webp</image:loc>
-      <image:title>Luzon</image:title>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Luzon_S2_Front_Web_RGB.webp</image:loc>
+      <image:title>Luzon S2</image:title>
       <image:caption>Samsung Luzon - Vooraanzicht</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Luzon_Dynamic(L)_WhiteWEB.png.webp</image:loc>
-      <image:title>Luzon</image:title>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Luzon_S2_Left_Web_RGB.webp</image:loc>
+      <image:title>Luzon S2</image:title>
       <image:caption>Samsung Luzon - Linkerzijde</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Luzon_Dynamic(R)_WhiteWEB.png.webp</image:loc>
-      <image:title>Luzon</image:title>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Luzon_S2_Right_Web_RGB.webp</image:loc>
+      <image:title>Luzon S2</image:title>
       <image:caption>Samsung Luzon - Rechterzijde</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Luzon_Front-Open_WhiteWEB.png.webp</image:loc>
-      <image:title>Luzon</image:title>
-      <image:caption>Samsung Luzon - Vooraanzicht Open</image:caption>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Samsung RAC Luzon_Sfeerbeeld_001.webp</image:loc>
+      <image:title>Luzon S2</image:title>
+      <image:caption>Samsung Luzon - Sfeerbeeld 1</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Luzon_outdoor unit_2-5 and 3-5kW_FrontWEB.png.webp</image:loc>
-      <image:title>Luzon</image:title>
-      <image:caption>Samsung Luzon - Buitenunit 2,5-3,5kW</image:caption>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Samsung RAC Luzon_Sfeerbeeld_002.webp</image:loc>
+      <image:title>Luzon S2</image:title>
+      <image:caption>Samsung Luzon - Sfeerbeeld 2</image:caption>
     </image:image>
   </url>
   <url>
@@ -674,6 +689,46 @@
       <image:loc>https://staycoolairco.nl/images/products/samsung/casette/360 Cassette - Rond - Angle - Web.webp</image:loc>
       <image:title>360 Cassette</image:title>
       <image:caption>Samsung 360 Cassette - Hoekzicht</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/samsung/wind-free-avant-black</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windreeAvantBlack/WindFree Avant Black_Front_Web_RGB.webp</image:loc>
+      <image:title>Wind-Free Avant Black</image:title>
+      <image:caption>De Samsung Wind-Free Avant Black combineert stijlvol zwart design met geavanceerde Wind-Free technologie voor zowel esthetische als functionele perfectie in elk interieur.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windreeAvantBlack/WindFree Avant Black_Front_Web_RGB.webp</image:loc>
+      <image:title>Wind-Free Avant Black</image:title>
+      <image:caption>Samsung Wind-Free Avant Black - Vooraanzicht</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windreeAvantBlack/WindFree Avant Black_Left_Web_RGB.webp</image:loc>
+      <image:title>Wind-Free Avant Black</image:title>
+      <image:caption>Samsung Wind-Free Avant Black - Linkerzijde</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windreeAvantBlack/WindFree Avant Black_Right_Web_RGB.webp</image:loc>
+      <image:title>Wind-Free Avant Black</image:title>
+      <image:caption>Samsung Wind-Free Avant Black - Rechterzijde</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windreeAvantBlack/Samsung RAC WindFree Avant Black_Sfeerbeeld_001.webp</image:loc>
+      <image:title>Wind-Free Avant Black</image:title>
+      <image:caption>Samsung Wind-Free Avant Black - Sfeerbeeld 1</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windreeAvantBlack/Samsung RAC WindFree Avant Black_Sfeerbeeld_002.webp</image:loc>
+      <image:title>Wind-Free Avant Black</image:title>
+      <image:caption>Samsung Wind-Free Avant Black - Sfeerbeeld 2</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/samsung/windreeAvantBlack/Samsung RAC WindFree Avant Black_Sfeerbeeld_003.webp</image:loc>
+      <image:title>Wind-Free Avant Black</image:title>
+      <image:caption>Samsung Wind-Free Avant Black - Sfeerbeeld 3</image:caption>
     </image:image>
   </url>
   <url>

@@ -6,6 +6,7 @@ import MetaTags from '../components/MetaTags';
 import SchemaMarkup from '../components/SchemaMarkup';
 import Contact from '../components/Contact';
 import { getUnsplashImageForCity } from '../utils/unsplashImages';
+import { getCoordinatesForCity } from '../data/geoCoordinates';
 
 interface FAQ {
   question: string;
@@ -51,6 +52,9 @@ export default function LocationLandingPage({
   // Get Unsplash image for this city or use provided image
   const unsplashImage = getUnsplashImageForCity(city.toLowerCase());
   
+  // Get geo coordinates for this city
+  const cityCoordinates = getCoordinatesForCity(city);
+  
   // Default values for SEO
   const serviceType = "Airco Installatie";
   // Use Unsplash image or provided location image
@@ -68,10 +72,10 @@ export default function LocationLandingPage({
   
   // Create SEO-optimized title and description
   const pageTitle = `${serviceType} ${city} | Airconditioning Specialist in ${region}`;
-  const pageDescription = `Professionele ${serviceType.toLowerCase()} in ${city}. Meer dan ${installationCount}+ tevreden klanten in ${region}. Bekijk onze diensten en vraag direct een offerte aan.`;
+  const pageDescription = `Zoekt u een airco installateur bij u in de buurt in ${city}? StayCool Airco is uw lokale specialist voor airconditioning. Meer dan ${installationCount}+ tevreden klanten in ${region}. Vraag direct een offerte aan.`;
   
-  // Keywords based on location
-  const keywords = `airco installatie ${city}, airconditioning ${city}, airco montage ${city}, klimaatbeheersing ${region}, ${city} airco specialist, ${region} airconditioning`;
+  // Keywords based on location - including "in de buurt" variations
+  const keywords = `airco installatie ${city}, airconditioning ${city}, airco montage ${city}, klimaatbeheersing ${region}, ${city} airco specialist, ${region} airconditioning, airco installateur bij mij in de buurt ${city}, airco ${city} in de buurt, airco specialist dichtbij ${city}`;
   
   // Prepare FAQ data for schema markup
   const faqSchemaData = {
@@ -117,7 +121,9 @@ export default function LocationLandingPage({
         location={{
           city,
           region,
-          postalCode: formattedPostalCodes
+          postalCode: formattedPostalCodes,
+          latitude: cityCoordinates?.latitude,
+          longitude: cityCoordinates?.longitude
         }}
       />
       
@@ -216,15 +222,14 @@ export default function LocationLandingPage({
               <div className="prose max-w-none">
                 <h2>Professionele Airco Installatie in {city}</h2>
                 <p>
-                  StayCool Airco is uw specialist voor professionele airconditioning installatie in {city} en omgeving. 
+                  <strong>Zoekt u een betrouwbare airco installateur bij u in de buurt in {city}?</strong> StayCool Airco is uw lokale specialist voor professionele airconditioning installatie in {city} en omgeving. 
                   Met jarenlange ervaring in {region} hebben wij de kennis en expertise om u te voorzien van de 
                   perfecte klimaatoplossing voor uw woning of bedrijf.
                 </p>
                 
                 <p>
-                  Als inwoner van {city} weet u dat het klimaat in {region} steeds meer warme dagen kent.
-                  Een betrouwbare airconditioning is daarom geen luxe meer, maar een noodzaak voor comfort en productiviteit.
-                  Wij helpen u graag bij het selecteren, installeren en onderhouden van de perfecte airco voor uw situatie.
+                  Als airco specialist dichtbij in {city} begrijpen wij de lokale behoeften perfect. Het klimaat in {region} kent steeds meer warme dagen, waardoor een betrouwbare airconditioning geen luxe meer is, maar een noodzaak voor comfort en productiviteit.
+                  Wij zijn uw airco monteur in de buurt die u graag helpt bij het selecteren, installeren en onderhouden van de perfecte airco voor uw situatie.
                 </p>
                 
                 <h3>Waarom kiezen voor een airco in {city}?</h3>
@@ -299,6 +304,51 @@ export default function LocationLandingPage({
             </div>
           </section>
           
+          {/* Airco in de buurt Section */}
+          <section className="mb-12 bg-blue-50 p-8 rounded-lg">
+            <h2 className="text-3xl font-bold mb-4">Uw Airco Specialist bij u in de Buurt</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <p className="text-lg mb-4">
+                  Als lokale airco installateur in {city} zijn wij altijd dichtbij. Of u nu zoekt naar "airco installateur bij mij in de buurt" of "airco monteur dichtbij", StayCool Airco staat voor u klaar met:
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <svg className="w-6 h-6 text-blue-600 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <span><strong>Snelle responstijd</strong> - Binnen 30 minuten bij u in {city} en omgeving</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-6 h-6 text-blue-600 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                    </svg>
+                    <span><strong>Gratis offerte</strong> - Vrijblijvend advies bij u thuis in {postalCodes || city}</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-6 h-6 text-blue-600 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span><strong>Snelle service</strong> - Meestal binnen 24-48 uur ter plaatse voor reparaties</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-semibold mb-3">Direct een airco specialist bij u in de buurt?</h3>
+                <p className="mb-4">
+                  Wij bedienen alle postcodes in {city} ({formattedPostalCodes || 'en omgeving'}). Waar u ook woont, wij zijn uw lokale airco expert.
+                </p>
+                <a href="tel:+31462021430" className="inline-block w-full text-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">
+                  Bel direct: 046-202-1430
+                </a>
+                <p className="text-sm text-gray-600 mt-3 text-center">
+                  Of vraag online een offerte aan
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Services Section */}
           <section className="mb-12">
             <h2 className="text-3xl font-bold mb-6">Onze Diensten in {city}</h2>
@@ -442,11 +492,12 @@ export default function LocationLandingPage({
           
           {/* Contact Form */}
           <section id="contact" className="mb-12">
-            <h2 className="text-3xl font-bold mb-6">Airco offerte aanvragen in {city}</h2>
+            <h2 className="text-3xl font-bold mb-6">Direct een Airco Installateur bij u in de Buurt in {city}</h2>
             <div className="bg-gray-50 p-6 rounded-lg shadow-md">
               <p className="mb-6">
-                Bent u geïnteresseerd in een vrijblijvende offerte voor airconditioning in {city}? 
-                Vul dan onderstaand formulier in en wij nemen binnen 24 uur contact met u op.
+                Zoekt u een airco installateur bij u in de buurt in {city}? Wij zijn uw lokale specialist voor airconditioning in {formattedPostalCodes || city} en omgeving. 
+                Vul onderstaand formulier in voor een vrijblijvende offerte en wij nemen binnen 24 uur contact met u op. 
+                Als airco monteur dichtbij in {city} kunnen wij snel bij u langskomen voor advies op maat.
               </p>
               <Contact />
             </div>

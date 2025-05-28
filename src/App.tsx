@@ -69,6 +69,11 @@ const NederweertPage = lazy(() => import('./pages/locations/Nederweert'));
 const VaalsPage = lazy(() => import('./pages/locations/Vaals'));
 const PanningenPage = lazy(() => import('./pages/locations/Panningen'));
 const MaasbrachtPage = lazy(() => import('./pages/locations/Maasbracht'));
+const EijsdenMargratenPage = lazy(() => import('./pages/locations/EijsdenMargraten'));
+const GulpenWittemPage = lazy(() => import('./pages/locations/GulpenWittem'));
+const VoerendaalPage = lazy(() => import('./pages/locations/Voerendaal'));
+const SimpelveldPage = lazy(() => import('./pages/locations/Simpelveld'));
+const NuthPage = lazy(() => import('./pages/locations/Nuth'));
 
 // Blog
 const BlogPage = lazy(() => import('./pages/Blog'));
@@ -386,6 +391,11 @@ const App = () => {
                 <Route path="/airco-installatie/vaals" element={<VaalsPage />} />
                 <Route path="/airco-installatie/panningen" element={<PanningenPage />} />
                 <Route path="/airco-installatie/maasbracht" element={<MaasbrachtPage />} />
+                <Route path="/airco-installatie/eijsden-margraten" element={<EijsdenMargratenPage />} />
+                <Route path="/airco-installatie/gulpen-wittem" element={<GulpenWittemPage />} />
+                <Route path="/airco-installatie/voerendaal" element={<VoerendaalPage />} />
+                <Route path="/airco-installatie/simpelveld" element={<SimpelveldPage />} />
+                <Route path="/airco-installatie/nuth" element={<NuthPage />} />
                 
                 {/* Blog Pages */}
                 <Route path="/blog" element={<BlogPage />} />

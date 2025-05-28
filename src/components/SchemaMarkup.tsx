@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { getCoordinatesForCity } from '../data/geoCoordinates';
 
 interface SchemaMarkupProps {
   type: 'LocalBusiness' | 'Service' | 'Product' | 'Article' | 'Review' | 'FAQPage' | 'HowTo' | 'CollectionPage';
@@ -20,9 +21,10 @@ export default function SchemaMarkup({ type, data, location }: SchemaMarkupProps
   };
 
   const getLocalBusinessSchema = () => {
-    // Default geo coordinates for Limburg if not provided
-    const latitude = location?.latitude || 51.0;
-    const longitude = location?.longitude || 5.9;
+    // Get accurate geo coordinates from database or use defaults
+    const cityCoordinates = location?.city ? getCoordinatesForCity(location.city) : null;
+    const latitude = location?.latitude || cityCoordinates?.latitude || 51.0;
+    const longitude = location?.longitude || cityCoordinates?.longitude || 5.9;
     
     // Determine postal address based on location data
     const postalAddress = location?.city ? {

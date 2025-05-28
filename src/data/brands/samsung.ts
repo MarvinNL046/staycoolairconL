@@ -3,7 +3,7 @@ import { Brand } from '../../types/products';
 export const samsungData: Brand = {
   name: 'Samsung',
   description: 'Innovatieve airconditioners met geavanceerde technologie voor optimaal comfort en energiebesparing.',
-  imageUrl: '/images/products/samsung/windfreeElite/Wind-Free Elite_Front-Open_White2.png.webp',
+  imageUrl: '/images/products/samsung/windfreeElite/WindFree Elite_S2_Front_Web_RGB.webp',
   features: [
     'Wind-Free technologie voor comfort zonder directe luchtstroom',
     'Energiezuinige prestaties',
@@ -15,21 +15,33 @@ export const samsungData: Brand = {
       name: 'Wind-Free Elite',
       slug: 'wind-free-elite',
       description: 'De Samsung Wind-Free Elite biedt superieur comfort met de innovatieve Wind-Free technologie die koele lucht gelijkmatig verspreidt zonder directe luchtstroom.',
-      imageUrl: '/images/products/samsung/windfreeElite/Wind-Free Elite_Front-Open_White2.png.webp',
+      imageUrl: '/images/products/samsung/windfreeElite/WindFree Elite_S2_Front_Web_RGB.webp',
       videoUrl: 'https://youtu.be/O9LskbMAbks?si=7MVKu9ScBqQN48HL',
       images: [
         {
-          url: '/images/products/samsung/windfreeElite/Wind-Free Elite_Front-Open_White2.png.webp',
+          url: '/images/products/samsung/windfreeElite/WindFree Elite_S2_Front_Web_RGB.webp',
           alt: 'Samsung Wind-Free Elite - Vooraanzicht'
         },
         {
-          url: '/images/products/samsung/windfreeElite/Wind-Free Elite_outdoor unit_2-5 and 3-5kW_Front.jpg.webp',
-          alt: 'Samsung Wind-Free Elite - Buitenunit'
+          url: '/images/products/samsung/windfreeElite/WindFree Elite_S2_Left_Web_RGB.webp',
+          alt: 'Samsung Wind-Free Elite - Linkerzijde'
+        },
+        {
+          url: '/images/products/samsung/windfreeElite/WindFree Elite_S2_Right_Web_RGB.webp',
+          alt: 'Samsung Wind-Free Elite - Rechterzijde'
+        },
+        {
+          url: '/images/products/samsung/windfreeElite/Samsung RAC WindFree Elite_Sfeerbeeld_001.webp',
+          alt: 'Samsung Wind-Free Elite - Sfeerbeeld 1'
+        },
+        {
+          url: '/images/products/samsung/windfreeElite/Samsung RAC WindFree Elite_Sfeerbeeld_002.webp',
+          alt: 'Samsung Wind-Free Elite - Sfeerbeeld 2'
         }
       ],
       price: 'Prijs op aanvraag',
       energyLabel: 'A++',
-      capacity: '2,5 kW - 7,0 kW',
+      capacity: '2,5 kW - 3,5 kW',
       features: [
         'Wind-Free technologie voor comfort zonder directe luchtstroom',
         'AI Auto Comfort past automatisch aan op basis van omgevingscondities',
@@ -38,51 +50,51 @@ export const samsungData: Brand = {
         'Energiezuinige prestaties met SEER tot 8,80 (A+++)'
       ],
       specifications: [
-        { label: 'Beschikbare modellen', value: 'AR09TXCAAWKNEU (2,5kW), AR12TXCAAWKNEU (3,5kW), AR24TXEAWKNEU (7,0kW)' },
-        { label: 'Koelcapaciteit', value: '2,5 - 7,0 kW' },
-        { label: 'Verwarmingscapaciteit', value: '3,2 - 9,7 kW' },
-        { label: 'SEER (koeling)', value: '6,40 (A++) tot 8,80 (A+++)' },
-        { label: 'SCOP (verwarming)', value: '4,00 (A+) tot 5,10 (A+++)' },
-        { label: 'Geluidsniveau binnen', value: 'AR09: 38/16 dB(A), AR12: 40/16 dB(A), AR24: 45/27 dB(A) (normaal/stil)' },
-        { label: 'Geluidsvermogen', value: 'AR09: 56 dB(A), AR12: 58 dB(A), AR24: 62 dB(A)' },
-        { label: 'Koudemiddel', value: 'R-32' },
-        { label: 'Max. leidinglengte', value: '15-30 meter' },
-        { label: 'Max. hoogteverschil', value: '8-15 meter' },
-        { label: 'Afmetingen (BxHxD)', value: 'AR09/AR12: 889 x 299 x 215 mm, AR24: 1055 x 299 x 215 mm' },
-        { label: 'Gewicht', value: 'AR09/AR12: 10,6 kg, AR24: 12,5 kg' },
-        { label: 'Materiaal', value: 'HIPS (High Impact Polystyrene)' },
-        { label: 'Afstandsbediening', value: 'Infrarood afstandsbediening inbegrepen' },
-        { label: 'Bedrade bediening', value: 'Optioneel: MWR-WE13N, MWR-WG00JN, MWR-WG00KN, MWR-SH11N' },
-        { label: 'Filters', value: 'Easy Filter Plus (uitneembaar/wasbaar), Tri-Care Filter' },
-        { label: 'Smart functies', value: 'Wi-Fi, Motion Detect Sensor' }
+        { label: 'Beschikbare modellen', value: 'AR09TXCAAWKNEU (2,5kW), AR12TXCAAWKNEU (3,5kW)' },
+        { label: 'Koelcapaciteit', value: '3,5 kW (12,000 BTU), bereik 3,071-12,284 BTU' },
+        { label: 'Verwarmingscapaciteit', value: '4,0 kW (13,600 BTU)' },
+        { label: 'SEER (koeling)', value: '8,8 (A+++)' },
+        { label: 'SCOP (verwarming)', value: '5,1 (A+++)' },
+        { label: 'Geluidsniveau binnen', value: 'Zo laag als 19 dB(A) in WindFree modus' },
+        { label: 'Koudemiddel', value: 'R-32 (milieuvriendelijk)' },
+        { label: 'Afmetingen (BxHxD)', value: '889 x 299 x 215 mm' },
+        { label: 'Gewicht', value: '12,5 kg' },
+        { label: 'WindFree™ Technologie', value: '23,000 microholes voor gelijkmatige, tocht-vrije koeling' },
+        { label: 'Motion Detection Sensor', value: 'Bespaart tot 22% energie door aanpassing op basis van kamergebruik' },
+        { label: 'Antibacteriële filter', value: 'Vangt stof, allergenen en micro-organismen' },
+        { label: 'Dry Comfort Mode', value: 'Handhaaft 60% vochtigheid tijdens koeling' },
+        { label: 'Auto Clean', value: 'Vermindert schimmel- en bacteriegroei door de unit na gebruik te drogen' },
+        { label: 'Slimme bediening', value: 'SmartThings app, Amazon Alexa en Samsung Bixby compatibel' },
+        { label: 'Bedieningsopties', value: 'Wi-Fi, app-bediening, spraakbesturing' },
+        { label: 'Dekking', value: 'Tot 40 m² ruimte' }
       ]
     },
     {
       name: 'Wind-Free Comfort',
       slug: 'wind-free-comfort',
       description: 'De Samsung Wind-Free Comfort biedt een perfecte balans tussen comfort en betaalbaarheid, met de innovatieve Wind-Free technologie voor een aangenaam binnenklimaat.',
-      imageUrl: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Front_WhiteWEB8.jpg.webp',
+      imageUrl: '/images/products/samsung/windfreeComfort/WindFree Comfort_S2_Front_Web_RGB.webp',
       videoUrl: 'https://youtu.be/O9LskbMAbks?si=7MVKu9ScBqQN48HL',
       images: [
         {
-          url: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Front_WhiteWEB8.jpg.webp',
+          url: '/images/products/samsung/windfreeComfort/WindFree Comfort_S2_Front_Web_RGB.webp',
           alt: 'Samsung Wind-Free Comfort - Vooraanzicht'
         },
         {
-          url: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Dynamic(L)_WhiteWEB.png.webp',
+          url: '/images/products/samsung/windfreeComfort/WindFree Comfort_S2_Left_Web_RGB.webp',
           alt: 'Samsung Wind-Free Comfort - Linkerzijde'
         },
         {
-          url: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Dynamic(R)_WhiteWEB.png.webp',
+          url: '/images/products/samsung/windfreeComfort/WindFree Comfort_S2_Right_Web_RGB.webp',
           alt: 'Samsung Wind-Free Comfort - Rechterzijde'
         },
         {
-          url: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_Front-Open_WhiteWEB.png.webp',
-          alt: 'Samsung Wind-Free Comfort - Vooraanzicht Open'
+          url: '/images/products/samsung/windfreeComfort/Samsung RAC WindFree Comfort_Sfeerbeeld_001.webp',
+          alt: 'Samsung Wind-Free Comfort - Sfeerbeeld 1'
         },
         {
-          url: '/images/products/samsung/windfreeComfort/Wind-Free Comfort_outdoor unit_2-5 and 3-5kW_FrontWEB.png.webp',
-          alt: 'Samsung Wind-Free Comfort - Buitenunit 2,5-3,5kW'
+          url: '/images/products/samsung/windfreeComfort/Samsung RAC WindFree Comfort_Sfeerbeeld_002.webp',
+          alt: 'Samsung Wind-Free Comfort - Sfeerbeeld 2'
         }
       ],
       price: 'Prijs op aanvraag',
@@ -123,63 +135,57 @@ export const samsungData: Brand = {
       ]
     },
     {
-      name: 'Luzon',
-      slug: 'luzon',
-      description: 'De Samsung Luzon biedt betrouwbare klimaatbeheersing met een uitstekende prijs-kwaliteitverhouding. Deze wandunit combineert efficiënte prestaties met een stijlvol design.',
-      imageUrl: '/images/products/samsung/luzon/Luzon_Front_WhiteWEB.png.webp',
+      name: 'Luzon S2',
+      slug: 'luzon-s2',
+      description: 'De Samsung Luzon S2 biedt betrouwbare klimaatbeheersing met een uitstekende prijs-kwaliteitverhouding. Deze wandunit combineert efficiënte prestaties met een stijlvol design en Wi-Fi connectiviteit.',
+      imageUrl: '/images/products/samsung/luzon/Luzon_S2_Front_Web_RGB.webp',
       images: [
         {
-          url: '/images/products/samsung/luzon/Luzon_Front_WhiteWEB.png.webp',
+          url: '/images/products/samsung/luzon/Luzon_S2_Front_Web_RGB.webp',
           alt: 'Samsung Luzon - Vooraanzicht'
         },
         {
-          url: '/images/products/samsung/luzon/Luzon_Dynamic(L)_WhiteWEB.png.webp',
+          url: '/images/products/samsung/luzon/Luzon_S2_Left_Web_RGB.webp',
           alt: 'Samsung Luzon - Linkerzijde'
         },
         {
-          url: '/images/products/samsung/luzon/Luzon_Dynamic(R)_WhiteWEB.png.webp',
+          url: '/images/products/samsung/luzon/Luzon_S2_Right_Web_RGB.webp',
           alt: 'Samsung Luzon - Rechterzijde'
         },
         {
-          url: '/images/products/samsung/luzon/Luzon_Front-Open_WhiteWEB.png.webp',
-          alt: 'Samsung Luzon - Vooraanzicht Open'
+          url: '/images/products/samsung/luzon/Samsung RAC Luzon_Sfeerbeeld_001.webp',
+          alt: 'Samsung Luzon - Sfeerbeeld 1'
         },
         {
-          url: '/images/products/samsung/luzon/Luzon_outdoor unit_2-5 and 3-5kW_FrontWEB.png.webp',
-          alt: 'Samsung Luzon - Buitenunit 2,5-3,5kW'
+          url: '/images/products/samsung/luzon/Samsung RAC Luzon_Sfeerbeeld_002.webp',
+          alt: 'Samsung Luzon - Sfeerbeeld 2'
         }
       ],
       price: 'Prijs op aanvraag',
       energyLabel: 'A++',
-      capacity: '2,0 kW - 3,5 kW',
+      capacity: '2,5 kW - 7,0 kW',
       features: [
         'Fast Cooling voor snelle temperatuurregeling',
-        'Easy Filter voor eenvoudig onderhoud',
-        'Auto Clean functie',
-        'Good Sleep modus voor comfortabele nachtrust',
-        'Energiezuinige werking'
+        'Eco Mode voor energiebesparing',
+        'Wi-Fi connectiviteit voor bediening op afstand',
+        'Auto-Changeover schakelt automatisch tussen koelen en verwarmen',
+        'Silver Nano Coated Filter tegen bacteriën en allergenen',
+        'Silent Mode voor stille werking (22 dB(A))'
       ],
       specifications: [
-        { label: 'Beschikbare modellen', value: 'AR07TXHZAWKNEU (2,0kW), AR09TXHZAWKNEU (2,5kW), AR12TXHZAWKNEU (3,5kW)' },
-        { label: 'Koelcapaciteit', value: '2,0 - 3,5 kW' },
-        { label: 'Verwarmingscapaciteit', value: '2,2 - 3,5 kW' },
-        { label: 'Geluidsniveau binnen', value: 'AR07: 36/19 dB(A), AR09: 37/19 dB(A), AR12: 38/19 dB(A) (normaal/stil)' },
-        { label: 'Geluidsvermogen', value: 'AR07: 54 dB(A), AR09: 54 dB(A), AR12: 56 dB(A)' },
-        { label: 'Koudemiddel', value: 'R-32 / R410A (GWP=675)' },
-        { label: 'Luchtstroom koeling', value: 'AR07: 9,9/9,4/9,3/8,4 m³/min, AR09: 10,3/9,8/9,3/8,4 m³/min, AR12: 10,7/10,3/9,3/8,4 m³/min' },
-        { label: 'Luchtstroom verwarming', value: 'AR07: 10,8/10,4/10,3/9,3 m³/min, AR09: 11,2/10,7/10,3/9,3 m³/min, AR12: 11,7/11,2/10,3/9,3 m³/min' },
-        { label: 'Aansluitingen', value: 'Flare verbindingen, vloeistofleiding: 6,35 mm (1/4"), gasleiding: 9,52 mm (3/8")' },
-        { label: 'Voeding', value: '1,2,220-240,50 Hz' },
-        { label: 'Vermogen koeling', value: '30 W' },
-        { label: 'Vermogen verwarming', value: '30 W' },
-        { label: 'Warmtewisselaar', value: 'Aluminium vinnen, koperen buis, Green Hydrophile coating' },
-        { label: 'Ventilatormotor', value: 'BLDC, 27 x 1 W' },
-        { label: 'Afmetingen (BxHxD)', value: '820 x 299 x 215 mm' },
-        { label: 'Gewicht', value: '9,0 kg' },
-        { label: 'Materiaal', value: 'HIPS (High Impact Polystyrene)' },
-        { label: 'Testcondities koeling', value: 'Binnentemperatuur: 27°C DB, 19°C WB / Buitentemperatuur: 35°C DB, 24°C WB' },
-        { label: 'Testcondities verwarming', value: 'Binnentemperatuur: 20°C DB, 15°C WB / Buitentemperatuur: 7°C DB, 6°C WB' },
-        { label: 'Geluidsmeting', value: 'Geluidsdrukniveau gemeten in een echovrije kamer op 1m afstand. Kan variëren afhankelijk van omgeving en bedrijfscondities.' }
+        { label: 'Beschikbare modellen', value: 'AR09TXHZAWKNEU (2,5kW), AR12TXHZAWKNEU (3,5kW), AR18TXHZAWKNEU (5,0kW), AR24TXHZAWKNEU (7,0kW/24,000 BTU)' },
+        { label: 'Koelcapaciteit', value: '5kW model: 1,6 - 6,7 kW, 7kW model: 6,500 W' },
+        { label: 'Verwarmingscapaciteit', value: '5kW model: tot 8,0 kW, 7kW model: 7,400 W' },
+        { label: 'SCoP (verwarming)', value: 'Tot 3,6' },
+        { label: 'Geluidsniveau binnen', value: 'Zo laag als 22 dB(A) in Silent Mode' },
+        { label: 'Koudemiddel', value: 'R-32 (milieuvriendelijk)' },
+        { label: 'Vermogen koeling (7kW model)', value: '1,710 W' },
+        { label: 'Vermogen verwarming (7kW model)', value: '1,710 W' },
+        { label: 'Design', value: 'Strak wit design met verborgen voorrooster' },
+        { label: 'Filtertechnologie', value: 'Silver Nano Coated Filter, Easy Filter Plus met reinigingsindicator' },
+        { label: 'Bedieningsopties', value: 'Infrarood afstandsbediening of gecentraliseerde bedrade systemen' },
+        { label: 'Smart functies', value: 'Auto-Changeover, Eco Mode, Quiet Mode' },
+        { label: 'Voeding', value: '220-240V, 50Hz' }
       ]
     },
     {
@@ -233,6 +239,76 @@ export const samsungData: Brand = {
         { label: 'Bedrijfstemperatuur koeling', value: '-15°C tot 50°C' },
         { label: 'Bedrijfstemperatuur verwarming', value: '-20°C tot 24°C' },
         { label: 'Condenspomp', value: 'Ingebouwd, max. opvoerhoogte 750/24 mm/Liter/h' }
+      ]
+    },
+    {
+      name: 'Wind-Free Avant Black',
+      slug: 'wind-free-avant-black',
+      description: 'De Samsung Wind-Free Avant Black combineert stijlvol zwart design met geavanceerde Wind-Free technologie voor zowel esthetische als functionele perfectie in elk interieur.',
+      imageUrl: '/images/products/samsung/windreeAvantBlack/WindFree Avant Black_Front_Web_RGB.webp',
+      images: [
+        {
+          url: '/images/products/samsung/windreeAvantBlack/WindFree Avant Black_Front_Web_RGB.webp',
+          alt: 'Samsung Wind-Free Avant Black - Vooraanzicht'
+        },
+        {
+          url: '/images/products/samsung/windreeAvantBlack/WindFree Avant Black_Left_Web_RGB.webp',
+          alt: 'Samsung Wind-Free Avant Black - Linkerzijde'
+        },
+        {
+          url: '/images/products/samsung/windreeAvantBlack/WindFree Avant Black_Right_Web_RGB.webp',
+          alt: 'Samsung Wind-Free Avant Black - Rechterzijde'
+        },
+        {
+          url: '/images/products/samsung/windreeAvantBlack/Samsung RAC WindFree Avant Black_Sfeerbeeld_001.webp',
+          alt: 'Samsung Wind-Free Avant Black - Sfeerbeeld 1'
+        },
+        {
+          url: '/images/products/samsung/windreeAvantBlack/Samsung RAC WindFree Avant Black_Sfeerbeeld_002.webp',
+          alt: 'Samsung Wind-Free Avant Black - Sfeerbeeld 2'
+        },
+        {
+          url: '/images/products/samsung/windreeAvantBlack/Samsung RAC WindFree Avant Black_Sfeerbeeld_003.webp',
+          alt: 'Samsung Wind-Free Avant Black - Sfeerbeeld 3'
+        }
+      ],
+      price: 'Prijs op aanvraag',
+      energyLabel: 'A+++',
+      capacity: '2,5 kW - 3,5 kW',
+      features: [
+        'Wind-Free technologie voor comfort zonder directe luchtstroom',
+        'Stijlvol zwart design voor moderne interieurs',
+        'AI Auto Cooling past zich aan op basis van gebruikersgedrag',
+        'SmartThings app-bediening en spraakbesturing',
+        'R1 Display voor intuïtieve bediening'
+      ],
+      specifications: [
+        { label: 'Beschikbare modellen', value: 'AR09BXCACWKNEU (2,5kW), AR12BXCACWKNEU (3,5kW)' },
+        { label: 'Koelcapaciteit', value: '2,5 - 6,5 kW' },
+        { label: 'Verwarmingscapaciteit', value: '3,2 - 7,5 kW' },
+        { label: 'SEER (koeling)', value: '8,5 (A+++) tot 9,0 (A+++)' },
+        { label: 'SCOP (verwarming)', value: '4,6 (A++) tot 5,2 (A+++)' },
+        { label: 'Geluidsniveau binnen', value: 'AR09: 35/16 dB(A), AR12: 38/16 dB(A), AR18: 42/25 dB(A), AR24: 45/26 dB(A) (normaal/stil)' },
+        { label: 'Geluidsvermogen', value: 'AR09: 54 dB(A), AR12: 57 dB(A), AR18: 59 dB(A), AR24: 62 dB(A)' },
+        { label: 'Koudemiddel', value: 'R-32 (GWP=675)' },
+        { label: 'Luchtstroom koeling', value: 'AR09/AR12: 11,0-8,7 m³/min, AR18: 18,0-12,0 m³/min, AR24: 20,0-13,0 m³/min' },
+        { label: 'Max. leidinglengte', value: '15-30 meter' },
+        { label: 'Max. hoogteverschil', value: '8-15 meter' },
+        { label: 'Afmetingen binnenunit (BxHxD)', value: 'AR09/AR12: 889 x 299 x 215 mm, AR18/AR24: 1055 x 299 x 215 mm' },
+        { label: 'Gewicht binnenunit', value: 'AR09/AR12: 10,8 kg, AR18/AR24: 14,0 kg' },
+        { label: 'Afmetingen buitenunit (BxHxD)', value: 'AR09/AR12: 720 x 548 x 265 mm, AR18/AR24: 880 x 638 x 310 mm' },
+        { label: 'Gewicht buitenunit', value: 'AR09/AR12: 26,5 kg, AR18: 40,5 kg, AR24: 46,0 kg' },
+        { label: 'Materiaal binnenunit', value: 'HIPS (High Impact Polystyrene) met premium zwarte afwerking' },
+        { label: 'Materiaal buitenunit', value: 'EGI Steel Plate / PP' },
+        { label: 'Afstandsbediening', value: 'Infrarood afstandsbediening inbegrepen' },
+        { label: 'Bedrade bediening', value: 'Optioneel: MWR-WE13N, MWR-WG00JN, MWR-WG00KN, MWR-SH11N' },
+        { label: 'Filters', value: 'PM1.0 filter, Easy Filter Plus (uitneembaar/wasbaar)' },
+        { label: 'Smart functies', value: 'Wi-Fi, SmartThings app, Spraakbesturing, AI Auto Cooling' },
+        { label: 'R1 Display', value: 'Intuïtieve LED indicator ingebouwd in het voorpaneel' },
+        { label: 'Testcondities koeling', value: 'Binnentemperatuur: 27°C DB, 19°C WB / Buitentemperatuur: 35°C DB, 24°C WB' },
+        { label: 'Testcondities verwarming', value: 'Binnentemperatuur: 20°C DB, 15°C WB / Buitentemperatuur: 7°C DB, 6°C WB' },
+        { label: 'Bedrijfstemperatuur koeling', value: '-15°C tot 50°C' },
+        { label: 'Bedrijfstemperatuur verwarming', value: '-25°C tot 24°C' }
       ]
     }
   ]
