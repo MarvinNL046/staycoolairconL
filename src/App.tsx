@@ -16,6 +16,7 @@ import ErrorFallback from './components/ErrorFallback';
 import BackToTop from './components/BackToTop';
 import SkipToContent from './components/SkipToContent';
 import WebVitalsReporter from './components/WebVitalsReporter';
+import { requestIdleCallbackPolyfill } from './utils/requestIdleCallback';
 
 // Lazy load all pages
 const Home = lazy(() => import('./pages/Home'));
@@ -82,6 +83,7 @@ const AircoOnderhoudLimburgBelangrijk = lazy(() => import('./pages/blog/AircoOnd
 const AircoInstallateurLimburgKiezen = lazy(() => import('./pages/blog/AircoInstallateurLimburgKiezen'));
 const AircoOfferteLimburg = lazy(() => import('./pages/blog/AircoOfferteLimburg'));
 const AircoSpecialistLimburgBlog = lazy(() => import('./pages/blog/AircoSpecialistLimburg'));
+const AircoInstallatieZuidLimburg = lazy(() => import('./pages/blog/AircoInstallatieZuidLimburg'));
 
 // Knowledge Base Articles
 const HoeWerktAirco = lazy(() => import('./pages/articles/HoeWerktAirco'));
@@ -161,18 +163,10 @@ const preloadCriticalRoutes = () => {
     () => import('./pages/Contact')
   ];
   
-  // Use requestIdleCallback for better timing
-  if ('requestIdleCallback' in window) {
-    // Queue preloads during idle time
-    window.requestIdleCallback(() => {
-      criticalRoutes.forEach(route => route());
-    }, { timeout: 2000 });
-  } else {
-    // Fallback for browsers without requestIdleCallback
-    setTimeout(() => {
-      criticalRoutes.forEach(route => route());
-    }, 1000);
-  }
+  // Use requestIdleCallback polyfill for better timing
+  requestIdleCallbackPolyfill(() => {
+    criticalRoutes.forEach(route => route());
+  }, { timeout: 2000 });
 };
 
 const App = () => {
@@ -197,16 +191,10 @@ const App = () => {
   // Optimized performance metrics tracking with passive listeners
   useEffect(() => {
     const reportWebVitals = ({ name, value, rating }: { name: string; value: number; rating?: 'good' | 'needs-improvement' | 'poor' }) => {
-      // Use requestIdleCallback to report metrics during idle time
-      if ('requestIdleCallback' in window) {
-        window.requestIdleCallback(() => {
-          trackPerformance({ name, value, rating });
-        });
-      } else {
-        setTimeout(() => {
-          trackPerformance({ name, value, rating });
-        }, 0);
-      }
+      // Use requestIdleCallback polyfill to report metrics during idle time
+      requestIdleCallbackPolyfill(() => {
+        trackPerformance({ name, value, rating });
+      });
     };
 
     // Listen for web vitals
@@ -259,16 +247,9 @@ const App = () => {
     const routes = preloadRoutes();
     
     if (routes.length > 0) {
-      if ('requestIdleCallback' in window) {
-        window.requestIdleCallback(() => {
-          routes.forEach(route => route());
-        }, { timeout: 1500 });
-      } else {
-        // Stagger imports to avoid blocking the main thread
-        routes.forEach((route, index) => {
-          setTimeout(() => route(), 300 * index);
-        });
-      }
+      requestIdleCallbackPolyfill(() => {
+        routes.forEach(route => route());
+      }, { timeout: 1500 });
     }
   }, [location]);
 
@@ -405,6 +386,7 @@ const App = () => {
                 <Route path="/blog/airco-installateur-limburg-kiezen" element={<AircoInstallateurLimburgKiezen />} />
                 <Route path="/blog/airco-offerte-limburg" element={<AircoOfferteLimburg />} />
                 <Route path="/blog/airco-specialist-limburg" element={<AircoSpecialistLimburgBlog />} />
+                <Route path="/blog/airco-installatie-zuid-limburg" element={<AircoInstallatieZuidLimburg />} />
               </Routes>
             </Suspense>
           </AnimatePresence>

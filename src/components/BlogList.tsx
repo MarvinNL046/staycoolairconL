@@ -13,6 +13,15 @@ interface BlogPostPreview {
 
 const blogPosts: BlogPostPreview[] = [
   {
+    slug: 'airco-installatie-zuid-limburg',
+    title: 'Airco Installatie in Zuid-Limburg: Van Maastricht tot Kerkrade',
+    description: 'Ontdek de voordelen van professionele airco installatie in Zuid-Limburg. Van Maastricht tot Kerkrade, wij installeren airconditioners in heel Zuid-Limburg met gratis onderhoud.',
+    date: '31 mei 2025',
+    imageUrl: '/images/blog/airco-installatie-zuid-limburg-hero.jpg',
+    readingTime: '8 min',
+    category: 'Installatie'
+  },
+  {
     slug: 'airco-specialist-limburg',
     title: 'Airco specialist Limburg – Jouw gids naar koele comfort',
     description: 'In Limburg zijn diverse erkende airco installateurs actief, maar een specialist als StayCool Airconditioning combineert vakkennis met persoonlijke service, scherpe prijzen en snelle plaatsing.',

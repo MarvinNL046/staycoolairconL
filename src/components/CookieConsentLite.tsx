@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Cookie } from 'lucide-react';
+import { requestIdleCallbackPolyfill } from '../utils/requestIdleCallback';
 
 // Lightweight cookie consent without animations for better INP
 export default function CookieConsentLite() {
@@ -10,7 +11,7 @@ export default function CookieConsentLite() {
     const consent = localStorage.getItem('cookie-consent');
     if (!consent) {
       // Delay showing to avoid blocking initial render
-      requestIdleCallback(() => {
+      requestIdleCallbackPolyfill(() => {
         setIsVisible(true);
       }, { timeout: 1000 });
     }

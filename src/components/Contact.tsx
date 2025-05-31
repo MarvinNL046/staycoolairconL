@@ -5,6 +5,7 @@ import { sendEmail } from '../utils/email';
 import { trackFormSubmission, trackInteraction } from '../utils/analytics';
 import { trackPixelFormSubmission } from '../utils/facebook';
 import toast, { Toaster } from 'react-hot-toast';
+import { requestIdleCallbackPolyfill } from '../utils/requestIdleCallback';
 
 interface FormData {
   name: string;
@@ -34,12 +35,10 @@ export default function Contact() {
       [name]: value
     }));
 
-    // Use requestIdleCallback for non-critical analytics to avoid blocking INP
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => {
-        trackInteraction('contact_form', 'field_input', name);
-      }, { timeout: 2000 });
-    }
+    // Use requestIdleCallback polyfill for non-critical analytics to avoid blocking INP
+    requestIdleCallbackPolyfill(() => {
+      trackInteraction('contact_form', 'field_input', name);
+    }, { timeout: 2000 });
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

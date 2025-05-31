@@ -4,6 +4,24 @@ import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { LazyMotion } from 'framer-motion';
 
+// Polyfill for requestIdleCallback - moet als eerste voor alle browsers
+if (!('requestIdleCallback' in window)) {
+  (window as any).requestIdleCallback = function(callback: any, options?: any) {
+    const timeout = options?.timeout || 1;
+    const start = Date.now();
+    return window.setTimeout(() => {
+      callback({
+        didTimeout: false,
+        timeRemaining: () => Math.max(0, 50 - (Date.now() - start))
+      });
+    }, timeout);
+  };
+  
+  (window as any).cancelIdleCallback = function(handle: number) {
+    window.clearTimeout(handle);
+  };
+}
+
 // Load only essential features for better performance
 const loadFeatures = () =>
   import('./utils/motionFeatures').then(res => res.default);

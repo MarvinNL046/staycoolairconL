@@ -312,6 +312,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://staycoolairco.nl/blog/airco-installatie-zuid-limburg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://staycoolairco.nl/blog/airco-offerte-limburg</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -460,6 +465,11 @@
   </url>
   <url>
     <loc>https://staycoolairco.nl/werkgebied</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/tot-snel</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
