@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Calendar, Clock, Tag, ChevronRight, Phone, Mail, CheckCircle, MapPin, Euro, Users } from 'lucide-react';
 import MetaTags from '../../components/MetaTags';
 import SchemaMarkup from '../../components/SchemaMarkup';
@@ -64,7 +64,7 @@ const AircoInstallatieZuidLimburg: React.FC = () => {
 
         {/* Article Header */}
         <header className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <m.div {...fadeInUp}>
+          <motion.div {...fadeInUp}>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Airco Installatie in Zuid-Limburg: Van Maastricht tot Kerkrade
             </h1>
@@ -83,11 +83,11 @@ const AircoInstallatieZuidLimburg: React.FC = () => {
                 <span>Airco Installatie</span>
               </div>
             </div>
-          </m.div>
+          </motion.div>
         </header>
 
         {/* Hero Image */}
-        <m.figure 
+        <motion.figure 
           className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -102,11 +102,11 @@ const AircoInstallatieZuidLimburg: React.FC = () => {
           <figcaption className="text-center text-sm text-gray-600 mt-4">
             StayCool Airco installeert airconditioners door heel Zuid-Limburg
           </figcaption>
-        </m.figure>
+        </motion.figure>
 
         {/* Article Content */}
         <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-          <m.div 
+          <motion.div 
             className="prose prose-lg max-w-none"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -409,7 +409,7 @@ const AircoInstallatieZuidLimburg: React.FC = () => {
                 </Link>
               </div>
             </div>
-          </m.div>
+          </motion.div>
         </article>
       </div>
     </>

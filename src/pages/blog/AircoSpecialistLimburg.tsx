@@ -58,6 +58,54 @@ export default function AircoSpecialistLimburg() {
                 In Limburg zijn diverse erkende airco installateurs actief, maar een specialist als StayCool Airconditioning combineert vakkennis met persoonlijke service, scherpe prijzen en snelle plaatsing. Van aankoop tot onderhoud, een goede specialist ontzorgt je volledig.
               </p>
             </header>
+
+            {/* Prijzen sectie direct na de header voor betere SEO/Rich Snippets */}
+            <div className="prose prose-lg max-w-none mb-8">
+              <h2>Prijzen en mogelijkheden in 2025</h2>
+              <p>
+                De gemiddelde prijs voor een 3,5 kW split airco inclusief montage is €2.000. Dit is geschikt voor ruimtes tot 35 m². Grotere systemen zoals multisplits starten vanaf €2.800.
+              </p>
+              
+              <table className="min-w-full border-collapse border border-gray-200 my-6">
+                <thead>
+                  <tr className="bg-gray-100">
+                    <th className="border border-gray-200 px-4 py-2 text-left">Type Airco</th>
+                    <th className="border border-gray-200 px-4 py-2 text-left">Capaciteit (kW)</th>
+                    <th className="border border-gray-200 px-4 py-2 text-left">Geschikt voor</th>
+                    <th className="border border-gray-200 px-4 py-2 text-left">Gem. prijs incl. installatie</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-200 px-4 py-2">Single split slaapkamer</td>
+                    <td className="border border-gray-200 px-4 py-2">2,5 kW</td>
+                    <td className="border border-gray-200 px-4 py-2">15-25 m²</td>
+                    <td className="border border-gray-200 px-4 py-2">€1.750</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-4 py-2">Single split woonkamer</td>
+                    <td className="border border-gray-200 px-4 py-2">3,5 kW</td>
+                    <td className="border border-gray-200 px-4 py-2">25-35 m²</td>
+                    <td className="border border-gray-200 px-4 py-2">€2.000</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-200 px-4 py-2">Multisplit 2 ruimtes</td>
+                    <td className="border border-gray-200 px-4 py-2">5,0 kW totaal</td>
+                    <td className="border border-gray-200 px-4 py-2">2x 25 m²</td>
+                    <td className="border border-gray-200 px-4 py-2">€2.800</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-4 py-2">Multisplit 3 ruimtes</td>
+                    <td className="border border-gray-200 px-4 py-2">6,8 kW totaal</td>
+                    <td className="border border-gray-200 px-4 py-2">3x 20 m²</td>
+                    <td className="border border-gray-200 px-4 py-2">€3.300</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p className="text-sm text-gray-600 italic">
+                *Prijzen zijn incl. btw, materialen en standaard montage.
+              </p>
+            </div>
             
             <figure className="mb-8">
               <img 
@@ -153,51 +201,6 @@ export default function AircoSpecialistLimburg() {
                 Lees meer over het belang van airco onderhoud in Limburg →
               </Link>
               
-              <h2>Prijzen en mogelijkheden in 2025</h2>
-              <p>
-                De gemiddelde prijs voor een 3,5 kW split airco inclusief montage is €2.000. Dit is geschikt voor ruimtes tot 35 m². Grotere systemen zoals multisplits starten vanaf €2.800.
-              </p>
-              
-              <table className="min-w-full border-collapse border border-gray-200 my-6">
-                <thead>
-                  <tr className="bg-gray-100">
-                    <th className="border border-gray-200 px-4 py-2 text-left">Type Airco</th>
-                    <th className="border border-gray-200 px-4 py-2 text-left">Capaciteit (kW)</th>
-                    <th className="border border-gray-200 px-4 py-2 text-left">Geschikt voor</th>
-                    <th className="border border-gray-200 px-4 py-2 text-left">Gem. prijs incl. installatie</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-gray-200 px-4 py-2">Single split slaapkamer</td>
-                    <td className="border border-gray-200 px-4 py-2">2,5 kW</td>
-                    <td className="border border-gray-200 px-4 py-2">15-25 m²</td>
-                    <td className="border border-gray-200 px-4 py-2">€1.750</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-4 py-2">Single split woonkamer</td>
-                    <td className="border border-gray-200 px-4 py-2">3,5 kW</td>
-                    <td className="border border-gray-200 px-4 py-2">25-35 m²</td>
-                    <td className="border border-gray-200 px-4 py-2">€2.000</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-200 px-4 py-2">Multisplit 2 ruimtes</td>
-                    <td className="border border-gray-200 px-4 py-2">5,0 kW totaal</td>
-                    <td className="border border-gray-200 px-4 py-2">2x 25 m²</td>
-                    <td className="border border-gray-200 px-4 py-2">€2.800</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-4 py-2">Multisplit 3 ruimtes</td>
-                    <td className="border border-gray-200 px-4 py-2">6,8 kW totaal</td>
-                    <td className="border border-gray-200 px-4 py-2">3x 20 m²</td>
-                    <td className="border border-gray-200 px-4 py-2">€3.300</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p className="text-sm text-gray-600 italic">
-                *Prijzen zijn incl. btw, materialen en standaard montage.
-              </p>
-
               <Link to="/blog/airco-offerte-limburg" className="text-blue-600 hover:underline">
                 Bekijk alle details over airco offertes in Limburg →
               </Link>
