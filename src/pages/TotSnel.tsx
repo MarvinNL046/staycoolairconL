@@ -115,7 +115,7 @@ const TotSnel: React.FC = () => {
                 </a>
               </p>
               <p className="mt-1">
-                Bereikbaar van maandag t/m zaterdag van 08:00 - 20:00
+                Bereikbaar van maandag t/m vrijdag van 09:00 - 17:00 uur
               </p>
             </div>
           </div>

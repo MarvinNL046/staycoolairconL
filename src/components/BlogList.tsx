@@ -17,7 +17,7 @@ const blogPosts: BlogPostPreview[] = [
     title: 'Airco Installatie in Zuid-Limburg: Van Maastricht tot Kerkrade',
     description: 'Ontdek de voordelen van professionele airco installatie in Zuid-Limburg. Van Maastricht tot Kerkrade, wij installeren airconditioners in heel Zuid-Limburg met gratis onderhoud.',
     date: '31 mei 2025',
-    imageUrl: '/images/blog/airco-installatie-zuid-limburg-hero.jpg',
+    imageUrl: '/images/blog/airco installatie in Zuid- Limburg.webp',
     readingTime: '8 min',
     category: 'Installatie'
   },
