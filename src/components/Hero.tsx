@@ -11,37 +11,62 @@ import { ArrowRight, Timer, ShieldCheck } from 'lucide-react';
 
 const inputClasses = "mt-1 block w-full h-12 rounded-md bg-white/10 border-gray-300 text-white placeholder-gray-400 shadow-sm focus:border-orange-500 focus:ring-orange-500";
 
-// Text carousel component for rotating headlines
+// Text carousel component for rotating headlines with typewriter effect
 function TextCarousel() {
-  const headlineTexts = [
-    "Verwarm Duurzaam & Bespaar op Terugleverkosten",
-    "Versla de Zomerhitte met Efficiënt Koelen",
-    "Blijf Koel & Comfortabel Tijdens Hittegolven",
-    "Comfortabel de Winter Door met Duurzame Warmte",
-    "Zeg Vaarwel Tegen Kou met Efficiënte Verwarming"
+  const headlines = [
+    { static: "Verwarm ", keyword: "Duurzaam", rest: " & Bespaar op Terugleverkosten" },
+    { static: "Versla de Zomerhitte met ", keyword: "Efficiënt", rest: " Koelen" },
+    { static: "Blijf ", keyword: "Koel & Comfortabel", rest: " Tijdens Hittegolven" },
+    { static: "Comfortabel de Winter Door met ", keyword: "Duurzame", rest: " Warmte" },
+    { static: "Zeg Vaarwel Tegen Kou met ", keyword: "Efficiënte", rest: " Verwarming" }
   ];
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [displayedKeyword, setDisplayedKeyword] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+
+  // Typewriter effect for keyword
+  useEffect(() => {
+    const currentHeadline = headlines[currentTextIndex];
+    let charIndex = 0;
+    setDisplayedKeyword("");
+    setIsTyping(true);
+
+    const typeInterval = setInterval(() => {
+      if (charIndex < currentHeadline.keyword.length) {
+        setDisplayedKeyword(currentHeadline.keyword.slice(0, charIndex + 1));
+        charIndex++;
+      } else {
+        setIsTyping(false);
+        clearInterval(typeInterval);
+      }
+    }, 100); // Type one character every 100ms
+
+    return () => clearInterval(typeInterval);
+  }, [currentTextIndex]);
 
   // Auto-rotate text carousel
   useEffect(() => {
     const rotationInterval = setInterval(() => {
-      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % headlineTexts.length);
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % headlines.length);
     }, 6000); // Change every 6 seconds
 
     return () => clearInterval(rotationInterval);
   }, []);
 
+  const currentHeadline = headlines[currentTextIndex];
+
   return (
-    <m.h1
-      key={currentTextIndex}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mt-4 max-w-[20ch]"
-    >
-      {headlineTexts[currentTextIndex]}
-    </m.h1>
+    <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mt-4 max-w-[20ch]">
+      <span>{currentHeadline.static}</span>
+      <span className="text-orange-400 relative">
+        {displayedKeyword}
+        {isTyping && (
+          <span className="absolute -right-1 top-0 h-full w-0.5 bg-orange-400 animate-pulse" />
+        )}
+      </span>
+      <span>{currentHeadline.rest}</span>
+    </h1>
   );
 }
 
