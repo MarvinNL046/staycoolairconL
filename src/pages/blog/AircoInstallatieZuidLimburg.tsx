@@ -6,7 +6,7 @@ import MetaTags from '../../components/MetaTags';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import AnnouncementBar from '../../components/AnnouncementBar';
 
-const AircoInstallatieZuidLimburg: React.FC = () => {
+export default function AircoInstallatieZuidLimburg() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -414,6 +414,4 @@ const AircoInstallatieZuidLimburg: React.FC = () => {
       </div>
     </>
   );
-};
-
-export default AircoInstallatieZuidLimburg;
+}
