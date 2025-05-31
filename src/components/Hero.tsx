@@ -1,6 +1,7 @@
 import React, { useState, lazy, Suspense, useEffect } from 'react';
 import { m } from 'framer-motion';
 import { Phone, Mail, Send, Calendar, Shield, Clock, Thermometer } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { sendEmail } from '../utils/email';
 import { trackFormSubmission, trackInteraction } from '../utils/analytics';
 import toast, { Toaster } from 'react-hot-toast';
@@ -53,6 +54,7 @@ export default function Hero() {
     city: '',
     message: ''
   });
+  const navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -79,7 +81,8 @@ export default function Hero() {
       // Track successful form submission
       trackFormSubmission('hero_form', true);
       
-      toast.success('Bericht succesvol verzonden! We nemen zo spoedig mogelijk contact met u op.');
+      // Show success message briefly before redirecting
+      toast.success('Bericht succesvol verzonden!');
       setFormData({
         name: '',
         email: '',
@@ -87,6 +90,11 @@ export default function Hero() {
         city: '',
         message: ''
       });
+      
+      // Redirect to thank you page after a short delay
+      setTimeout(() => {
+        navigate('/tot-snel');
+      }, 1000);
     } catch (error) {
       console.error('Form submission error:', error);
       toast.error('Er is iets misgegaan. Probeer het later opnieuw of neem telefonisch contact op.');

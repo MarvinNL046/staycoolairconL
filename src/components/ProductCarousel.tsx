@@ -53,8 +53,8 @@ function ProductCarouselBase({ images }: ProductCarouselProps) {
 
   // Using a lightweight transition preset for better performance
   const optimizedTransition = {
-    x: { type: "tween", duration: 0.3, ease: "easeInOut" },
-    opacity: { duration: 0.2 }
+    x: { type: "spring", stiffness: 300, damping: 30 },
+    opacity: { duration: 0.15 }
   };
 
   return (

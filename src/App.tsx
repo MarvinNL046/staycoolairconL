@@ -11,7 +11,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AnnouncementBar from './components/AnnouncementBar';
-import CookieConsent from './components/CookieConsent';
+import CookieConsentLite from './components/CookieConsentLite';
 import ErrorFallback from './components/ErrorFallback';
 import BackToTop from './components/BackToTop';
 import SkipToContent from './components/SkipToContent';
@@ -32,6 +32,7 @@ const MaintenanceProcedures = lazy(() => import('./pages/MaintenanceProcedures')
 const AircoCovers = lazy(() => import('./pages/AircoCovers'));
 const LGMobieleAircoPage = lazy(() => import('./pages/products/lg-mobiele-airco'));
 const TosotMobieleAircoPage = lazy(() => import('./pages/products/tosot-mobiele-airco'));
+const TotSnel = lazy(() => import('./pages/TotSnel'));
 
 // Landing Pages
 const DaikinLanding = lazy(() => import('./pages/landing/DaikinLanding'));
@@ -295,6 +296,7 @@ const App = () => {
                 <Route path="/products/:brand/:model" element={<ProductDetail />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/contact-webhook-test" element={<ContactWebhookTest />} />
+                <Route path="/tot-snel" element={<TotSnel />} />
                 <Route path="/werkgebied" element={<ServiceArea />} />
                 <Route path="/werkgebied/:city" element={<CityDetail />} />
                 <Route path="/kennisbank" element={<KnowledgeBase />} />
@@ -410,7 +412,7 @@ const App = () => {
         <BackToTop />
         <AnnouncementBar />
         <Footer />
-        <CookieConsent />
+        <CookieConsentLite />
       </div>
     </ErrorBoundary>
   );

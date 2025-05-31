@@ -2,7 +2,11 @@ import { StrictMode, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import { LazyMotion, domAnimation } from 'framer-motion';
+import { LazyMotion } from 'framer-motion';
+
+// Load only essential features for better performance
+const loadFeatures = () =>
+  import('./utils/motionFeatures').then(res => res.default);
 import App from './App';
 import { initAnalytics } from './utils/initAnalytics';
 import './index.css';
@@ -22,7 +26,7 @@ root.render(
   <StrictMode>
     <BrowserRouter>
       <HelmetProvider>
-        <LazyMotion features={domAnimation}>
+        <LazyMotion features={loadFeatures} strict>
           <App />
         </LazyMotion>
       </HelmetProvider>

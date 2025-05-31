@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { sendEmail } from '../utils/email';
 import { trackFormSubmission, trackInteraction } from '../utils/analytics';
 import { trackPixelFormSubmission } from '../utils/facebook';
@@ -24,6 +25,7 @@ const initialFormState: FormData = {
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormData>(initialFormState);
+  const navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -32,12 +34,12 @@ export default function Contact() {
       [name]: value
     }));
 
-    // Track field interaction after user stops typing
-    const timeoutId = setTimeout(() => {
-      trackInteraction('contact_form', 'field_input', name);
-    }, 1000);
-
-    return () => clearTimeout(timeoutId);
+    // Use requestIdleCallback for non-critical analytics to avoid blocking INP
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {
+        trackInteraction('contact_form', 'field_input', name);
+      }, { timeout: 2000 });
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -56,10 +58,16 @@ export default function Contact() {
       // Track Facebook Pixel conversion
       trackPixelFormSubmission('contact_form', true);
 
-      toast.success('Bericht succesvol verzonden! We nemen zo spoedig mogelijk contact met u op.');
+      // Show success message briefly before redirecting
+      toast.success('Bericht succesvol verzonden!');
       
       // Reset form
       setFormData(initialFormState);
+      
+      // Redirect to thank you page after a short delay
+      setTimeout(() => {
+        navigate('/tot-snel');
+      }, 1000);
     } catch (error) {
       console.error('Form submission error:', error);
       toast.error('Er is iets misgegaan. Probeer het later opnieuw of neem telefonisch contact op.');

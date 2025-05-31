@@ -1,24 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { throttle } from '../utils/helpers';
 
 const BackToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show button when page is scrolled up to given distance
-  const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
+  // Throttled scroll handler to improve performance
+  const toggleVisibility = useCallback(
+    throttle(() => {
+      // Use requestAnimationFrame for smooth updates
+      requestAnimationFrame(() => {
+        setIsVisible(window.pageYOffset > 300);
+      });
+    }, 100), // Throttle to max 10 times per second
+    []
+  );
 
-  // Set the scroll event listener
+  // Set the scroll event listener with passive flag
   useEffect(() => {
-    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
     return () => {
       window.removeEventListener('scroll', toggleVisibility);
     };
-  }, []);
+  }, [toggleVisibility]);
 
   // Scroll to top smoothly
   const scrollToTop = () => {

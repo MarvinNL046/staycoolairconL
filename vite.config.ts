@@ -38,8 +38,10 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
-          ui: ['framer-motion', 'react-hot-toast', 'lucide-react'],
-          forms: ['@emailjs/browser', '@stripe/react-stripe-js'],
+          'framer-motion': ['framer-motion'],
+          ui: ['react-hot-toast', 'lucide-react'],
+          forms: ['@emailjs/browser'],
+          stripe: ['@stripe/react-stripe-js'],
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
