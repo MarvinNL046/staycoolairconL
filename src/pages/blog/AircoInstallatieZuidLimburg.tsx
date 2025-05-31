@@ -81,11 +81,11 @@ export default function AircoInstallatieZuidLimburg() {
                   <svg className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Nu met GRATIS onderhoud bij installatie!
+                  Professionele installatie door F-gassen gecertificeerde monteurs
                 </h3>
                 <p className="mb-4">
-                  Bij installatie van een nieuwe airco in Zuid-Limburg ontvangt u het eerste jaar onderhoud volledig gratis. 
-                  Geen verborgen kosten, gewoon de beste service!
+                  Al onze monteurs zijn F-gassen gecertificeerd en installeren uw airco volgens de hoogste normen. 
+                  Binnen 2 dagen geïnstalleerd, inclusief garantie en de beste service in heel Zuid-Limburg!
                 </p>
                 <Link 
                   to="/contact"
