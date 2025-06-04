@@ -34,7 +34,7 @@ export const mitsubishiHeavyData: Brand = {
           alt: 'Mitsubishi Heavy ZS-WF Wit Zijaanzicht'
         }
       ],
-      price: '€1.099,- inclusief standaard installatie',
+      price: 'vanaf €1.950,- inclusief standaard installatie',
       energyLabel: 'A+++',
       capacity: '2,5 kW - 8,0 kW',
       features: [
@@ -47,9 +47,12 @@ export const mitsubishiHeavyData: Brand = {
         'Self-cleaning functie'
       ],
       specifications: [
-        { label: 'Beschikbare modellen', value: 'SRK25ZS-W, SRK35ZS-W, SRK50ZS-W, SRK60ZS-W, SRK80ZS-W' },
-        { label: 'Koelcapaciteit', value: '2,5 - 8,0 kW' },
-        { label: 'Verwarmingscapaciteit', value: '3,0 - 9,0 kW' },
+        { label: 'SRK25ZS-WF (2,5 kW)', value: '€1.950,- incl. installatie' },
+        { label: 'SRK35ZS-WF (3,5 kW)', value: '€2.050,- incl. installatie' },
+        { label: 'SRK50ZS-WF (5,0 kW)', value: '€2.595,- incl. installatie' },
+        { label: 'SRK63ZS-WF (6,3 kW)', value: '€2.950,- incl. installatie' },
+        { label: 'SRK71ZS-WF (7,1 kW)', value: '€3.350,- incl. installatie' },
+        { label: 'SRK80ZS-WF (8,0 kW)', value: '€3.550,- incl. installatie' },
         { label: 'SEER', value: 'tot 8,7' },
         { label: 'SCOP', value: 'tot 5,2' },
         { label: 'Geluidsniveau binnen', value: 'vanaf 19 dB(A)' },
@@ -72,7 +75,7 @@ export const mitsubishiHeavyData: Brand = {
           alt: 'Mitsubishi Heavy ZSX-W Premium Zijaanzicht'
         }
       ],
-      price: '€1.399,- inclusief standaard installatie',
+      price: 'vanaf €2.199,- inclusief standaard installatie',
       energyLabel: 'A+++',
       capacity: '2,5 kW - 8,0 kW',
       features: [
@@ -109,7 +112,7 @@ export const mitsubishiHeavyData: Brand = {
           alt: 'Mitsubishi Heavy SRF-ZMX-S Vloermodel Zijaanzicht'
         }
       ],
-      price: '€1.599,- inclusief standaard installatie',
+      price: 'vanaf €2.299,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,5 kW - 5,0 kW',
       features: [
