@@ -137,7 +137,6 @@ const AircoPlaatsenLimburg = lazy(() => import('./pages/articles/airco-plaatsen-
 const EnergiezuinigeAircoLimburg = lazy(() => import('./pages/articles/energiezuinige-airco-limburg'));
 const AircoVerwarmingKostenBesparing = lazy(() => import('./pages/AircoVerwarmingKostenBesparing'));
 const AircoVerwarmingVoordelen = lazy(() => import('./pages/articles/airco-verwarming-voordelen'));
-const CityDetail = lazy(() => import('./components/CityDetail'));
 
 // Loading fallback component with simplified skeleton UI (no animations)
 const LoadingFallback = React.memo(() => (
@@ -279,7 +278,6 @@ const App = () => {
                 <Route path="/contact-webhook-test" element={<ContactWebhookTest />} />
                 <Route path="/tot-snel" element={<TotSnel />} />
                 <Route path="/werkgebied" element={<ServiceArea />} />
-                <Route path="/werkgebied/:city" element={<CityDetail />} />
                 <Route path="/kennisbank" element={<KnowledgeBase />} />
                 <Route path="/voorwaarden" element={<Terms />} />
                 <Route path="/privacy" element={<Privacy />} />
