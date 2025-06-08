@@ -24,7 +24,7 @@ function generateServiceAreasSitemap() {
 
     sitemap += `
   <url>
-    <loc>https://staycoolairco.nl/werkgebied/${citySlug}</loc>
+    <loc>https://staycoolairco.nl/airco-installatie/${citySlug}</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>`;
