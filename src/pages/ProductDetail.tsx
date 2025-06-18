@@ -225,12 +225,18 @@ export default function ProductDetail() {
                 </div>
                 <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center">
                   {brandData.name} {modelData.name}
-                  <span className="ml-3 bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-1 rounded flex items-center">
-                    <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                    </svg>
-                    Voorradig
-                  </span>
+                  {modelData.availability ? (
+                    <span className="ml-3 bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-1 rounded">
+                      {modelData.availability}
+                    </span>
+                  ) : (
+                    <span className="ml-3 bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-1 rounded flex items-center">
+                      <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                      </svg>
+                      Voorradig
+                    </span>
+                  )}
                 </h1>
                 
                 {/* Energy label badges */}
@@ -411,7 +417,7 @@ export default function ProductDetail() {
                     <svg className="h-5 w-5 text-green-500 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Op voorraad</span>
+                    <span>{modelData.availability || 'Op voorraad'}</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-600">
                     <svg className="h-5 w-5 text-green-500 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -56,7 +56,7 @@ export default function MobieleAircoLanding() {
           "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "EUR",
-            "lowPrice": "399",
+            "lowPrice": "400",
             "highPrice": "899",
             "offerCount": "5",
             "availability": "https://schema.org/InStock"
@@ -328,7 +328,7 @@ export default function MobieleAircoLanding() {
                 </div>
 
                 <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-gray-900">€350,-</span>
+                  <span className="text-2xl font-bold text-gray-900">€400,-</span>
                   <Link to="/products/tosot-mobiele-airco/tosot-mona-mobiele-airco" className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
                     Bekijk details
                   </Link>
