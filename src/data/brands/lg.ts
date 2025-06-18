@@ -19,7 +19,7 @@ export const lgData: Brand = {
       images: [
         {
           url: '/images/products/rac-eu-standard-plus-.webp',
-          alt: 'LG DualCool Standaard Plus'
+          alt: 'LG DualCool Standaard Plus wandmodel airco wit 2.5-6.6kW - A++ ThinQ wifi besturing'
         }
       ],
       price: '€1.695,- inclusief standaard installatie',
@@ -55,7 +55,7 @@ export const lgData: Brand = {
       images: [
         {
           url: '/images/products/rac-eu-lg-premium.webp',
-          alt: 'LG DualCool Premium'
+          alt: 'LG DualCool Premium wandmodel airco wit 2.5-6.6kW - A++ UVnano AI technologie spraakbesturing'
         }
       ],
       price: '€2.060,- inclusief standaard installatie',
@@ -103,7 +103,7 @@ export const lgData: Brand = {
       images: [
         {
           url: '/images/products/lg-artcool-mirror.webp',
-          alt: 'LG ARTCOOL Mirror'
+          alt: 'LG ARTCOOL Mirror wandmodel airco spiegelglas design 2.5-6.6kW - premium glasfront UVnano'
         }
       ],
       price: '€2.289,- inclusief standaard installatie',

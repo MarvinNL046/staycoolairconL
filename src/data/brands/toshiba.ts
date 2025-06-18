@@ -19,31 +19,31 @@ export const toshibaData: Brand = {
       images: [
         {
           url: '/images/products/Haori-zwart-vooraanzicht_3_11zon.webp',
-          alt: 'Toshiba Haori - Vooraanzicht zwart'
+          alt: 'Toshiba Haori wandmodel airco zwart stoffen bekleding - A+++ premium design verwisselbaar'
         },
         {
           url: '/images/products/Haori-zwart-links_1_11zon.webp',
-          alt: 'Toshiba Haori - Links zwart'
+          alt: 'Toshiba Haori linker zijaanzicht zwart - unieke stof bekleding airco wandunit'
         },
         {
           url: '/images/products/Haori-zwart-rechts_2_11zon.webp',
-          alt: 'Toshiba Haori - Rechts zwart'
+          alt: 'Toshiba Haori rechter zijaanzicht zwart - premium Japanse airco design'
         },
         {
           url: '/images/products/Haori-blauw-links_16_11zon.webp',
-          alt: 'Toshiba Haori - Blauw'
+          alt: 'Toshiba Haori wandmodel airco blauw stoffen bekleding - designer interieur airco'
         },
         {
           url: '/images/products/Haori-bruin-links_17_11zon.webp',
-          alt: 'Toshiba Haori - Bruin'
+          alt: 'Toshiba Haori wandmodel airco bruin stoffen bekleding - natuurlijke interieur match'
         },
         {
           url: '/images/products/Haori-creme-links_18_11zon.webp',
-          alt: 'Toshiba Haori - Crème'
+          alt: 'Toshiba Haori wandmodel airco crème stoffen bekleding - elegante neutrale kleur'
         },
         {
           url: '/images/products/Haori-grijs-links_19_11zon.webp',
-          alt: 'Toshiba Haori - Grijs'
+          alt: 'Toshiba Haori wandmodel airco grijs stoffen bekleding - moderne minimalistisch design'
         }
       ],
       price: '€ Op aanvraag',

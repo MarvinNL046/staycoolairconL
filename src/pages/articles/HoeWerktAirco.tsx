@@ -13,6 +13,28 @@ export default function HowAircoWorks() {
         keywords="airco werking, airconditioner uitleg, warmte-uitwisseling, koudemiddel, compressor airco, verdamper airco, condensor airco"
         canonicalUrl="https://staycoolairco.nl/kennisbank/hoe-werkt-airco"
         type="article"
+        faqs={[
+          {
+            question: "Wat is het verschil tussen koelen en verwarmen met een airco?",
+            answer: "Bij koelen absorbeert de binnenunit warmte uit de ruimte en geeft deze af aan buiten. Bij verwarmen werkt het proces omgekeerd: de buitenunit absorbeert warmte uit de buitenlucht (zelfs bij vrieskou) en brengt deze naar binnen."
+          },
+          {
+            question: "Waarom is een airco energiezuiniger dan elektrische verwarming?",
+            answer: "Een airco verplaatst warmte in plaats van het opwekken. Door gebruik te maken van warmte-uitwisseling kan een airco 3-5 keer meer warmte produceren dan de elektrische energie die het verbruikt."
+          },
+          {
+            question: "Hoe lang gaat een airco mee?",
+            answer: "Een kwalitatieve airco gaat bij goed onderhoud 15-20 jaar mee. De compressor heeft meestal 10 jaar garantie van de fabrikant."
+          },
+          {
+            question: "Kan een airco ook luchtvochtigheid regelen?",
+            answer: "Ja, tijdens het koelen condenseert vocht uit de lucht, waardoor de luchtvochtigheid automatisch daalt. Sommige premium modellen kunnen ook actief bevochtiging."
+          },
+          {
+            question: "Waarom maakt mijn airco geluid?",
+            answer: "Geluid komt voornamelijk van de compressor en ventilatoren. Moderne units zijn zeer stil (19-25 dB). Abnormaal geluid kan duiden op onderhoudsbehoefte."
+          }
+        ]}
         schema={{
           "@context": "https://schema.org",
           "@type": "Article",
@@ -167,6 +189,63 @@ export default function HowAircoWorks() {
               <li>Jaarlijkse inspectie door een professional</li>
             </ul>
           </div>
+
+          {/* FAQ Section */}
+          <m.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16"
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Veelgestelde vragen over airco werking</h2>
+            
+            <div className="space-y-6">
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                  Wat is het verschil tussen koelen en verwarmen met een airco?
+                </h3>
+                <div className="px-6 py-4">
+                  <p>Bij koelen absorbeert de binnenunit warmte uit de ruimte en geeft deze af aan buiten. Bij verwarmen werkt het proces omgekeerd: de buitenunit absorbeert warmte uit de buitenlucht (zelfs bij vrieskou) en brengt deze naar binnen.</p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                  Waarom is een airco energiezuiniger dan elektrische verwarming?
+                </h3>
+                <div className="px-6 py-4">
+                  <p>Een airco verplaatst warmte in plaats van het opwekken. Door gebruik te maken van warmte-uitwisseling kan een airco 3-5 keer meer warmte produceren dan de elektrische energie die het verbruikt.</p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                  Hoe lang gaat een airco mee?
+                </h3>
+                <div className="px-6 py-4">
+                  <p>Een kwalitatieve airco gaat bij goed onderhoud 15-20 jaar mee. De compressor heeft meestal 10 jaar garantie van de fabrikant.</p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                  Kan een airco ook luchtvochtigheid regelen?
+                </h3>
+                <div className="px-6 py-4">
+                  <p>Ja, tijdens het koelen condenseert vocht uit de lucht, waardoor de luchtvochtigheid automatisch daalt. Sommige premium modellen kunnen ook actief bevochtiging.</p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                  Waarom maakt mijn airco geluid?
+                </h3>
+                <div className="px-6 py-4">
+                  <p>Geluid komt voornamelijk van de compressor en ventilatoren. Moderne units zijn zeer stil (19-25 dB). Abnormaal geluid kan duiden op onderhoudsbehoefte.</p>
+                </div>
+              </div>
+            </div>
+          </m.div>
 
           {/* CTA Section */}
           <m.div

@@ -19,11 +19,11 @@ export const daikinData: Brand = {
       images: [
         {
           url: '/images/products/Ururu-Sarara-left.webp',
-          alt: 'Daikin Ururu Sarara - Links'
+          alt: 'Daikin Ururu Sarara wandmodel airco 5.0kW wit - premium klimaatbeheersing met bevochtiging'
         },
         {
           url: '/images/products/Ururu-Sarara-right.webp',
-          alt: 'Daikin Ururu Sarara - Rechts'
+          alt: 'Daikin Ururu Sarara wandmodel airco zijaanzicht - A+++ energielabel 5-in-1 functionaliteit'
         }
       ],
       price: '€4.500,- inclusief standaard installatie',
@@ -104,15 +104,15 @@ export const daikinData: Brand = {
       images: [
         {
           url: '/images/products/daikin-comfora-left.webp',
-          alt: 'Daikin Comfora - Links'
+          alt: 'Daikin Comfora FTXP wandmodel airco wit 2.0-7.1kW - A++ energielabel fluisterstil'
         },
         {
           url: '/images/products/daikin-comfora-right.webp',
-          alt: 'Daikin Comfora - Rechts'
+          alt: 'Daikin Comfora wandunit zijaanzicht - smart home integratie met Onecta app'
         },
         {
           url: '/images/products/daikin comfora-onectaApp.webp',
-          alt: 'Daikin Comfora - Onecta App'
+          alt: 'Daikin Comfora Onecta smartphone app interface - remote airco bediening en planning'
         }
       ],
       price: '€2.155,- inclusief standaard installatie',
@@ -159,7 +159,7 @@ export const daikinData: Brand = {
       images: [
         {
           url: '/images/products/daikin-perfera-wit.webp',
-          alt: 'Daikin Perfera FTXM-A - Wit'
+          alt: 'Daikin Perfera FTXM-A wandmodel airco wit 2.0-5.0kW - A+++ energielabel 3D luchtstroom'
         }
       ],
       price: '€2.420,- inclusief standaard installatie',
@@ -208,7 +208,7 @@ export const daikinData: Brand = {
       images: [
         {
           url: '/images/products/daikin-perfera-wit.webp',
-          alt: 'Daikin Perfera - Wit'
+          alt: 'Daikin Perfera FTXM-R wandmodel airco wit 3.5kW - A+++ energielabel Flash Streamer'
         }
       ],
       price: '€2.420,- inclusief standaard installatie',
@@ -240,15 +240,15 @@ export const daikinData: Brand = {
       images: [
         {
           url: '/images/products/daikin-stylish-wit.webp',
-          alt: 'Daikin Stylish - Wit'
+          alt: 'Daikin Stylish FTXA wandmodel airco wit 1.3-5.3kW - ultradun design Coanda-effect'
         },
         {
           url: '/images/products/daikin-stylish-silver.webp',
-          alt: 'Daikin Stylish - Zilver'
+          alt: 'Daikin Stylish wandmodel airco zilver uitvoering - A+++ energielabel 189mm dun'
         },
         {
           url: '/images/products/daikin-stylish-zwart.webp',
-          alt: 'Daikin Stylish - Zwart'
+          alt: 'Daikin Stylish wandmodel airco zwart modern design - Flash Streamer luchtzuivering'
         }
       ],
       price: '€2.710,- inclusief standaard installatie',

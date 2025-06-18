@@ -19,15 +19,15 @@ export const lgMobieleAircoData: Brand = {
       images: [
         {
           url: '/images/products/mobiele airco/lg mobiele airco/lg-mobiele-airco-staycoolairco.webp',
-          alt: 'LG Mobiele Airco Dual Inverter Smart - Hoofdafbeelding'
+          alt: 'LG Mobiele Airco Dual Inverter Smart 11000BTU 2.5kW - A+ portable airconditioner wifi ThinQ'
         },
         {
           url: '/images/products/mobiele airco/lg mobiele airco/lg-mobiele-airco-staycoolairco-1.webp',
-          alt: 'LG Mobiele Airco Dual Inverter Smart - Vooraanzicht'
+          alt: 'LG Mobiele Airco vooraanzicht wit design - 43m² koeling dual inverter compressor'
         },
         {
           url: '/images/products/mobiele airco/lg mobiele airco/lg-mobiele-airco-staycoolairco-2.webp',
-          alt: 'LG Mobiele Airco Dual Inverter Smart - Zijaanzicht'
+          alt: 'LG Mobiele Airco zijaanzicht met wielen - verplaatsbare airconditioner voor elke ruimte'
         },
         {
           url: '/images/products/mobiele airco/lg mobiele airco/lg-mobiele-airco-staycoolairco-3.webp',

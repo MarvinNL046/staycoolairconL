@@ -38,6 +38,25 @@ export default function ScopSeerArticle() {
         keywords="SCOP waarde, SEER waarde, airco efficiëntie, energielabel airco, COP airco, EER airco"
         canonicalUrl="https://staycoolairco.nl/kennisbank/scop-seer-waarden"
         type="article"
+        faqs={[
+          {
+            question: "Wat is een goede SCOP waarde voor Nederland?",
+            answer: "Voor Nederland is een SCOP van minimaal 4.0 aanbevolen voor A+ label. Voor optimale efficiëntie kies voor SCOP ≥ 4.6 (A++) of hoger. Dit zorgt voor lage verwarmingskosten in ons klimaat."
+          },
+          {
+            question: "Waarom zijn SCOP en SEER belangrijker dan COP en EER?",
+            answer: "SCOP en SEER meten prestaties over een heel seizoen met verschillende temperaturen, terwijl COP en EER slechts één testpunt gebruiken. Dit geeft een realistischer beeld van jaarlijkse energiekosten."
+          },
+          {
+            question: "Hoeveel bespaar ik met een hoge SCOP waarde?",
+            answer: "Een airco met SCOP 5.0 bespaart ongeveer 25% vergeleken met SCOP 4.0. Bij jaarlijkse verwarmingskosten van €800 bespaart u dus ongeveer €200 per jaar."
+          },
+          {
+            question: "Wat betekent het energielabel bij deze waarden?",
+            answer: "Het energielabel (A+++ tot G) wordt bepaald door SCOP en SEER waarden. A+++ betekent zeer hoge efficiëntie en laagste energiekosten. A+ is het minimum voor moderne airconditioners."
+          }
+        ]}
+        type="article"
         schema={{
           "@context": "https://schema.org",
           "@type": "Article",
@@ -191,6 +210,54 @@ export default function ScopSeerArticle() {
               </li>
             </ol>
           </div>
+
+          {/* FAQ Section */}
+          <m.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16"
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Veelgestelde vragen over SCOP en SEER</h2>
+            
+            <div className="space-y-6">
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                  Wat is een goede SCOP waarde voor Nederland?
+                </h3>
+                <div className="px-6 py-4">
+                  <p>Voor Nederland is een SCOP van minimaal 4.0 aanbevolen voor A+ label. Voor optimale efficiëntie kies voor SCOP ≥ 4.6 (A++) of hoger. Dit zorgt voor lage verwarmingskosten in ons klimaat.</p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                  Waarom zijn SCOP en SEER belangrijker dan COP en EER?
+                </h3>
+                <div className="px-6 py-4">
+                  <p>SCOP en SEER meten prestaties over een heel seizoen met verschillende temperaturen, terwijl COP en EER slechts één testpunt gebruiken. Dit geeft een realistischer beeld van jaarlijkse energiekosten.</p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                  Hoeveel bespaar ik met een hoge SCOP waarde?
+                </h3>
+                <div className="px-6 py-4">
+                  <p>Een airco met SCOP 5.0 bespaart ongeveer 25% vergeleken met SCOP 4.0. Bij jaarlijkse verwarmingskosten van €800 bespaart u dus ongeveer €200 per jaar.</p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                  Wat betekent het energielabel bij deze waarden?
+                </h3>
+                <div className="px-6 py-4">
+                  <p>Het energielabel (A+++ tot G) wordt bepaald door SCOP en SEER waarden. A+++ betekent zeer hoge efficiëntie en laagste energiekosten. A+ is het minimum voor moderne airconditioners.</p>
+                </div>
+              </div>
+            </div>
+          </m.div>
 
           {/* CTA Section */}
           <m.div
