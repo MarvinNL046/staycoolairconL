@@ -42,7 +42,7 @@ export const tosotMobieleAircoData: Brand = {
           alt: 'Tosot MONA Mobiele Airco - In gebruik'
         }
       ],
-      price: '€350,-',
+      price: '€400,-',
       energyLabel: 'A+',
       capacity: '3,5 kW (12.000 BTU)',
       features: [

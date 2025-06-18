@@ -43,6 +43,7 @@ export const lgMobieleAircoData: Brand = {
         }
       ],
       price: '€749,-',
+      availability: 'Uitverkocht - Leverbaar vanaf 10 september 2025',
       energyLabel: 'A+',
       capacity: '2,5 kW (11.000 BTU)',
       features: [

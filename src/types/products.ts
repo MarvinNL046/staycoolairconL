@@ -15,6 +15,7 @@ export interface Model {
   imageUrl: string;
   images?: ProductImage[];
   price?: string;
+  availability?: string;  // Added for availability status
   energyLabel: string;
   capacity: string;
   features: string[];
