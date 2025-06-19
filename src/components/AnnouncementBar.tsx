@@ -3,6 +3,11 @@ import { Sun, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AnnouncementBar() {
+  // Zomeractie tijdelijk uitgeschakeld - kan later weer geactiveerd worden
+  return null;
+  
+  // Onderstaande code kan weer geactiveerd worden voor winter/zomer acties
+  /*
   return (
     <div className="bg-gradient-to-r from-orange-500 to-yellow-500 py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,4 +29,5 @@ export default function AnnouncementBar() {
       </div>
     </div>
   );
+  */
 }
