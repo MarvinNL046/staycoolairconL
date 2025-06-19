@@ -1,8 +1,7 @@
 import React from 'react';
-import { m } from 'framer-motion';
-import { Fan, Wrench, ThermometerSun, Banknote } from 'lucide-react';
+import { Fan, Wrench, ThermometerSun } from 'lucide-react';
 
-export default function Services() {
+export default function ServicesOptimized() {
   const services = [
     {
       icon: Fan,
@@ -20,7 +19,7 @@ export default function Services() {
       icon: Wrench,
       title: 'Onderhoud & Service',
       description: 'Regelmatig onderhoud voor optimale werking en langere levensduur van uw airconditioning.',
-      features: ['Preventief onderhoud', 'Snelle reparatie',]
+      features: ['Preventief onderhoud', 'Snelle reparatie']
     }
   ];
 
@@ -37,6 +36,7 @@ export default function Services() {
         </div>
 
         <div className="mt-20">
+          {/* Video container with aspect ratio */}
           <div className="relative w-full max-w-4xl mx-auto mb-20 rounded-2xl overflow-hidden shadow-2xl" style={{ paddingBottom: '56.25%' }}>
             <iframe
               width="100%"
@@ -52,13 +52,9 @@ export default function Services() {
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {services.map((service, index) => (
-              <m.div
+            {services.map((service) => (
+              <div
                 key={service.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
               >
                 <div className="absolute -top-10 left-1/2 -translate-x-1/2">
@@ -71,57 +67,27 @@ export default function Services() {
                 <p className="mt-4 text-gray-600">{service.description}</p>
 
                 <ul className="mt-6 space-y-3">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-gray-600">
-                      <svg className="h-5 w-5 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <svg 
+                        className="flex-shrink-0 h-5 w-5 text-green-500 mt-0.5" 
+                        fill="currentColor" 
+                        viewBox="0 0 20 20"
+                      >
+                        <path 
+                          fillRule="evenodd" 
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" 
+                          clipRule="evenodd" 
+                        />
                       </svg>
-                      {feature}
+                      <span className="ml-3 text-gray-600">{feature}</span>
                     </li>
                   ))}
                 </ul>
-
-                <a
-                  href="#contact"
-                  className="mt-8 inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-                >
-                  Vraag Offerte Aan
-                </a>
-              </m.div>
+              </div>
             ))}
           </div>
         </div>
-
-        <m.div 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mt-16 bg-orange-50 rounded-2xl p-8"
-        >
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="flex-1">
-              <h3 className="text-2xl font-bold text-orange-900">
-                Bespaar op Terugleverkosten
-              </h3>
-              <p className="mt-4 text-orange-800">
-                Heeft u zonnepanelen? Voorkom hoge terugleverkosten door uw airco te gebruiken voor verwarming in de winter. 
-                Zo benut u uw eigen opgewekte energie optimaal en bespaart u op energiekosten.
-              </p>
-            </div>
-            <div className="flex-shrink-0">
-              <Banknote className="h-16 w-16 text-orange-500" />
-            </div>
-          </div>
-          <div className="mt-8 text-center">
-            <a
-              href="#contact"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              Bereken uw Besparing
-            </a>
-          </div>
-        </m.div>
       </div>
     </section>
   );

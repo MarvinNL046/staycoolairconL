@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Hero from '../components/Hero';
-import Services from '../components/Services';
+import Hero from '../components/HeroOptimized';
+import Services from '../components/ServicesOptimized';
 import WhyUs from '../components/WhyUs';
 import BrandLogos from '../components/BrandLogos';
 import Contact from '../components/Contact';

@@ -69,7 +69,10 @@ export default function BrandLogos() {
                   <img 
                     src={brandLogos[brand.name]} 
                     alt={`${brand.name} logo`} 
+                    width="160"
+                    height="64"
                     className="max-h-16 max-w-[80%] object-contain"
+                    loading="lazy"
                     onError={(e) => {
                       console.error(`Failed to load logo for ${brand.name}:`, e);
                       const imgElement = e.currentTarget as HTMLImageElement;
