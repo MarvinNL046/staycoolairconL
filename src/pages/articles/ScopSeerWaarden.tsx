@@ -56,7 +56,6 @@ export default function ScopSeerArticle() {
             answer: "Het energielabel (A+++ tot G) wordt bepaald door SCOP en SEER waarden. A+++ betekent zeer hoge efficiëntie en laagste energiekosten. A+ is het minimum voor moderne airconditioners."
           }
         ]}
-        type="article"
         schema={{
           "@context": "https://schema.org",
           "@type": "Article",

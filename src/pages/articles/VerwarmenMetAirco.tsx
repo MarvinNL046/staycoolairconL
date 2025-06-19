@@ -160,6 +160,34 @@ export default function HeatingWithAirco() {
             </ol>
           </div>
 
+          {/* Related Articles Section */}
+          <m.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12 bg-blue-50 rounded-xl p-6"
+          >
+            <h3 className="text-xl font-semibold mb-4">Gerelateerde Artikelen</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Link to="/kennisbank/terugleverkosten-voorkomen" className="block p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+                <h4 className="font-medium text-blue-900">Terugleverkosten Voorkomen</h4>
+                <p className="text-sm text-gray-600">Optimaal gebruik van zonnepanelen</p>
+              </Link>
+              <Link to="/kennisbank/energielabels" className="block p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+                <h4 className="font-medium text-blue-900">Energielabels</h4>
+                <p className="text-sm text-gray-600">Begrijp het energieverbruik</p>
+              </Link>
+              <Link to="/products" className="block p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+                <h4 className="font-medium text-blue-900">Geschikte Airco's</h4>
+                <p className="text-sm text-gray-600">Bekijk warmtepomp airco's</p>
+              </Link>
+              <Link to="/capaciteit-calculator" className="block p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+                <h4 className="font-medium text-blue-900">Capaciteit Calculator</h4>
+                <p className="text-sm text-gray-600">Bereken het juiste vermogen</p>
+              </Link>
+            </div>
+          </m.div>
+
           {/* CTA Section */}
           <m.div
             initial={{ opacity: 0, y: 20 }}

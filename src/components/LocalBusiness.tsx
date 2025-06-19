@@ -1,4 +1,6 @@
 import React from 'react';
+import { OptimizedSchemaFactory } from '../utils/optimizedSchemas';
+import realReviewData from '../utils/realReviewData';
 
 interface LocalBusinessProps {
   city: string;
@@ -7,45 +9,47 @@ interface LocalBusinessProps {
 }
 
 export default function LocalBusiness({ city, region = "Limburg", postalCode }: LocalBusinessProps) {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "StayCool Airco",
+  const schema = OptimizedSchemaFactory.createLocalBusinessSchema({
+    name: "StayCool Airco",
+    alternateName: "StayCool Airconditioning",
+    url: "https://staycoolairco.nl",
+    telephone: "+31462021430",
+    email: "info@staycoolairco.nl",
+    address: {
+      streetAddress: realReviewData.companyInfo.operationalAddress.street,
+      addressLocality: realReviewData.companyInfo.operationalAddress.city,
+      addressRegion: realReviewData.companyInfo.operationalAddress.region,
+      postalCode: realReviewData.companyInfo.operationalAddress.postalCode,
+      addressCountry: "NL"
+    },
+    geo: {
+      latitude: "51.0419",
+      longitude: "5.8614"
+    },
+    city,
+    region
+  });
+
+  // Override with additional real company data
+  const enhancedSchema = {
+    ...schema,
     "@id": `https://staycoolairco.nl/werkgebied/${city.toLowerCase()}`,
-    "url": "https://staycoolairco.nl",
-    "telephone": "+31462021430",
-    "priceRange": "€€",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Aan De Bogen 11",
-      "addressLocality": "Nieuwstadt",
-      "addressRegion": "Limburg",
-      "postalCode": "6118AS",
-      "addressCountry": "NL"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "51.0419",
-      "longitude": "5.8614"
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday"
-      ],
-      "opens": "08:00",
-      "closes": "17:00"
-    }
+    "foundingDate": realReviewData.companyInfo.foundingDate,
+    "legalName": "Staycool Airconditioning",
+    "vatID": `NL${realReviewData.companyInfo.kvkNumber}`,
+    "taxID": realReviewData.companyInfo.kvkNumber,
+    "sameAs": [
+      "https://www.facebook.com/staycoolairco",
+      "https://www.linkedin.com/company/staycoolairco", 
+      "https://www.instagram.com/staycoolairco",
+      "https://www.trustpilot.com/review/staycoolairco.nl"
+    ]
   };
 
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(enhancedSchema) }}
     />
   );
 }

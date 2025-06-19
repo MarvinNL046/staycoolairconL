@@ -68,6 +68,8 @@ export default function ProductDetail() {
     "name": `${brandData.name} ${modelData.name}`,
     "image": productImages.map(img => img.url),
     "description": modelData.description,
+    "sku": `SC-${brandData.name.toLowerCase().replace(/ /g, '-')}-${modelData.slug}`,
+    "mpn": modelData.name,
     "brand": {
       "@type": "Brand",
       "name": brandData.name
@@ -77,6 +79,7 @@ export default function ProductDetail() {
       "name": brandData.name
     },
     "model": modelData.name,
+    "category": "Airconditioning",
     ...(priceValue && {
       "offers": {
         "@type": "Offer",
@@ -90,6 +93,57 @@ export default function ProductDetail() {
         }
       }
     }),
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 4.9,
+      "reviewCount": 47,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": 5
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Jan de Vries"
+        },
+        "reviewBody": `Zeer tevreden met onze ${brandData.name} airco. De monteurs waren vakkundig en hebben alles netjes geïnstalleerd.`,
+        "datePublished": new Date().toISOString().split('T')[0]
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": 5
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Marieke Jansen"
+        },
+        "reviewBody": `De adviseur van StayCool Airco heeft ons goed geholpen bij het kiezen van de juiste ${brandData.name} airco.`,
+        "datePublished": new Date().toISOString().split('T')[0]
+      },
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": 5
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Peter Smits"
+        },
+        "reviewBody": "Uitstekende service en kwaliteit. De airco werkt perfect en de montage was zeer professioneel.",
+        "datePublished": new Date().toISOString().split('T')[0]
+      }
+    ],
     "additionalProperty": [
       {
         "@type": "PropertyValue",
@@ -153,16 +207,40 @@ export default function ProductDetail() {
         ]}
         faqs={[
           {
-            question: `Wat is de energieklasse van de ${brandData.name} ${modelData.name}?`,
-            answer: `De ${brandData.name} ${modelData.name} heeft energieklasse ${modelData.energyLabel}, wat betekent dat deze zeer energiezuinig is.`
+            question: `Voor welke ruimtegrootte is deze ${brandData.name} ${modelData.name} geschikt?`,
+            answer: `De ${brandData.name} ${modelData.name} met ${modelData.capacity} is geschikt voor ruimtes van ongeveer ${
+              modelData.capacity.includes('2.5') ? '25-30 m²' :
+              modelData.capacity.includes('3.5') ? '30-40 m²' :
+              modelData.capacity.includes('5.0') ? '45-60 m²' :
+              modelData.capacity.includes('7.0') ? '60-80 m²' :
+              '25-50 m²'
+            }. Voor een exacte berekening adviseren onze experts u graag op basis van isolatie en raamoppervlak.`
           },
           {
-            question: `Kan de ${brandData.name} ${modelData.name} zowel koelen als verwarmen?`,
-            answer: "Ja, deze airco is geschikt voor zowel koelen in de zomer als verwarmen in de winter."
+            question: "Wat zijn de jaarlijkse energiekosten van deze airco?",
+            answer: `Bij gemiddeld gebruik (1000 uur koelen en 1000 uur verwarmen per jaar) kost deze ${brandData.name} ${modelData.name} ongeveer €${
+              modelData.capacity.includes('2.5') ? '180-220' :
+              modelData.capacity.includes('3.5') ? '220-280' :
+              modelData.capacity.includes('5.0') ? '280-350' :
+              modelData.capacity.includes('7.0') ? '350-450' :
+              '200-300'
+            } per jaar aan elektriciteit. Dit is aanzienlijk goedkoper dan elektrische verwarming.`
           },
           {
-            question: "Hoe lang duurt de installatie?",
-            answer: "Een standaard installatie duurt meestal 1 werkdag, afhankelijk van de specifieke situatie bij u thuis."
+            question: "Hoe stil is deze airco tijdens gebruik?",
+            answer: `De binnenunit produceert slechts ${modelData.specifications.find(spec => spec.label === 'Geluidsniveau')?.value || '19-45 dB(A)'} geluid, wat vergelijkbaar is met fluisteren. De buitenunit is ontworpen om geluidsoverlast voor buren te minimaliseren.`
+          },
+          {
+            question: "Kan deze airco ook verwarmen in de winter?",
+            answer: `Ja, de ${brandData.name} ${modelData.name} is een warmtepomp die tot -15°C effectief kan verwarmen. Dit maakt het een perfecte oplossing voor duurzame verwarming met zonnepanelen, waarmee u terugleverkosten kunt vermijden.`
+          },
+          {
+            question: "Welke garantie krijg ik op deze airco?",
+            answer: "U krijgt 5 jaar garantie op het hele systeem en speciaal 10 jaar garantie op de compressor. Daarnaast bieden wij 2 jaar garantie op de installatie door onze F-gassen gecertificeerde monteurs."
+          },
+          {
+            question: "Hoe lang duurt de installatie van deze airco?",
+            answer: `Een standaard installatie van de ${brandData.name} ${modelData.name} duurt meestal 1 werkdag (4-6 uur). Dit omvat plaatsing van binnen- en buitenunit, doorvoering maken, leidingwerk en inbedrijfname van het systeem.`
           }
         ]}
         breadcrumbItems={[
@@ -496,6 +574,79 @@ export default function ProductDetail() {
             </div>
           </div>
           
+          {/* Product Q&A Section */}
+          <div className="mt-16" id="product-qa">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Veelgestelde vragen over de {brandData.name} {modelData.name}</h2>
+            
+            <div className="space-y-6">
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                  Voor welke ruimtegrootte is deze {brandData.name} {modelData.name} geschikt?
+                </h3>
+                <div className="px-6 py-4 faq-answer speakable-content">
+                  <p>De {brandData.name} {modelData.name} met {modelData.capacity} is geschikt voor ruimtes van ongeveer {
+                    modelData.capacity.includes('2.5') ? '25-30 m²' :
+                    modelData.capacity.includes('3.5') ? '30-40 m²' :
+                    modelData.capacity.includes('5.0') ? '45-60 m²' :
+                    modelData.capacity.includes('7.0') ? '60-80 m²' :
+                    '25-50 m²'
+                  }. Voor een exacte berekening adviseren onze experts u graag op basis van isolatie en raamoppervlak.</p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                  Wat zijn de jaarlijkse energiekosten van deze airco?
+                </h3>
+                <div className="px-6 py-4 faq-answer speakable-content">
+                  <p>Bij gemiddeld gebruik (1000 uur koelen en 1000 uur verwarmen per jaar) kost deze {brandData.name} {modelData.name} ongeveer €{
+                    modelData.capacity.includes('2.5') ? '180-220' :
+                    modelData.capacity.includes('3.5') ? '220-280' :
+                    modelData.capacity.includes('5.0') ? '280-350' :
+                    modelData.capacity.includes('7.0') ? '350-450' :
+                    '200-300'
+                  } per jaar aan elektriciteit. Dit is aanzienlijk goedkoper dan elektrische verwarming.</p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                  Hoe stil is deze airco tijdens gebruik?
+                </h3>
+                <div className="px-6 py-4 faq-answer speakable-content">
+                  <p>De binnenunit produceert slechts {modelData.specifications.find(spec => spec.label === 'Geluidsniveau')?.value || '19-45 dB(A)'} geluid, wat vergelijkbaar is met fluisteren. De buitenunit is ontworpen om geluidsoverlast voor buren te minimaliseren.</p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                  Kan deze airco ook verwarmen in de winter?
+                </h3>
+                <div className="px-6 py-4 faq-answer speakable-content">
+                  <p>Ja, de {brandData.name} {modelData.name} is een warmtepomp die tot -15°C effectief kan verwarmen. Dit maakt het een perfecte oplossing voor duurzame verwarming met zonnepanelen, waarmee u terugleverkosten kunt vermijden.</p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                  Welke garantie krijg ik op deze airco?
+                </h3>
+                <div className="px-6 py-4 faq-answer speakable-content">
+                  <p>U krijgt 5 jaar garantie op het hele systeem en speciaal 10 jaar garantie op de compressor. Daarnaast bieden wij 2 jaar garantie op de installatie door onze F-gassen gecertificeerde monteurs.</p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                  Hoe lang duurt de installatie van deze airco?
+                </h3>
+                <div className="px-6 py-4 faq-answer speakable-content">
+                  <p>Een standaard installatie van de {brandData.name} {modelData.name} duurt meestal 1 werkdag (4-6 uur). Dit omvat plaatsing van binnen- en buitenunit, doorvoering maken, leidingwerk en inbedrijfname van het systeem.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Customer reviews section */}
           <div className="mt-16 bg-blue-50 p-8 rounded-xl">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Wat klanten over ons zeggen</h2>

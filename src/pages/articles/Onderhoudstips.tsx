@@ -1,6 +1,6 @@
 import React from 'react';
 import { m } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import MetaTags from '../../components/MetaTags';
 import { ArrowLeft, Wrench, Calendar, ThermometerSun, Filter, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -56,17 +56,54 @@ export default function MaintenanceTips() {
 
   return (
     <>
-      <Helmet>
-        <title>Onderhoudstips voor uw Airco | StayCool Airco</title>
-        <meta 
-          name="description" 
-          content="Praktische tips voor het onderhouden van uw airconditioner. Leer hoe u zelf eenvoudig onderhoud kunt uitvoeren voor optimale prestaties."
-        />
-        <meta 
-          name="keywords" 
-          content="airco onderhoud, airco schoonmaken, airco filters reinigen, airco tips, airco efficiency"
-        />
-      </Helmet>
+      <MetaTags
+        title="Onderhoudstips voor uw Airco | StayCool Airco"
+        description="Praktische tips voor het onderhouden van uw airconditioner. Leer hoe u zelf eenvoudig onderhoud kunt uitvoeren voor optimale prestaties."
+        keywords="airco onderhoud, airco schoonmaken, airco filters reinigen, airco tips, airco efficiency"
+        canonicalUrl="https://staycoolairco.nl/kennisbank/onderhoudstips"
+        type="article"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": ["HowTo", "Article"],
+          "name": "Onderhoudstips voor uw Airco",
+          "description": "Praktische tips voor het onderhouden van uw airconditioner",
+          "image": "https://staycoolairco.nl/images/blog/onderhoud-advies-staycoolairco.png",
+          "totalTime": "PT30M",
+          "estimatedCost": {
+            "@type": "MonetaryAmount",
+            "currency": "EUR",
+            "value": "0"
+          },
+          "supply": [
+            "Mild detergent",
+            "Schoon water",
+            "Zachte borstel",
+            "Droge doeken"
+          ],
+          "tool": [
+            "Geen speciale gereedschappen nodig"
+          ],
+          "step": tips.map((tip, index) => ({
+            "@type": "HowToStep",
+            "position": index + 1,
+            "name": tip.title,
+            "text": tip.steps.join('. ') + '.',
+            "image": "https://staycoolairco.nl/images/blog/onderhoud-advies-staycoolairco.png"
+          })),
+          "author": {
+            "@type": "Organization",
+            "name": "StayCool Airco"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "StayCool Airco",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://staycoolairco.nl/images/logo.svg"
+            }
+          }
+        }}
+      />
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

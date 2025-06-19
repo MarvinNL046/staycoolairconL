@@ -60,6 +60,18 @@ export default function HeerlenPage() {
       {
         question: "Kan een airco in Heerlen ook verwarmen in de winter?",
         answer: "Absoluut! De moderne aircosystemen die wij installeren in Heerlen zijn warmtepompen die zeer efficiënt kunnen verwarmen, zelfs bij lagere buitentemperaturen. Deze systemen kunnen tot 70% energiezuiniger zijn dan traditionele elektrische verwarming. Vooral in de voor- en najaar, wanneer het nog niet koud genoeg is om de centrale verwarming aan te zetten, kan een airco een zeer kosteneffectieve verwarmingsoplossing zijn."
+      },
+      {
+        question: "Zijn er speciale overwegingen voor airco installatie in hoogbouw in Heerlen?",
+        answer: "Ja, voor de hoogbouw in het centrum van Heerlen hebben we speciale expertise. We rekening houden met windbelasting op hogere verdiepingen, beperkte toegankelijkheid voor buitenunits, en eventuele VvE-regels. Vaak installeren we buitenunits op balkons of daken, en zorgen we voor discreet leidingwerk. Onze monteurs hebben ervaring met hoogwerkers en veiligheidsprotocollen voor installaties op hoogte."
+      },
+      {
+        question: "Hoe verhouden de kosten van airco verwarming zich tot stadsverwarming in Heerlen?",
+        answer: "In Heerlen, waar veel woningen aangesloten zijn op stadsverwarming, kan een airco een uitstekende aanvulling zijn. Voor tussenseizoenen (voorjaar/najaar) is airco verwarming vaak goedkoper dan stadsverwarming aanzetten. Ook voor extra koeling in specifieke ruimtes is een airco ideaal. We kunnen u helpen berekenen wanneer het voordeliger is om de airco of stadsverwarming te gebruiken, afhankelijk van de actuele tarieven."
+      },
+      {
+        question: "Wat zijn de mogelijkheden voor airco in mijnwerkerswoningen in Heerlen?",
+        answer: "De karakteristieke mijnwerkerswoningen in Heerlen hebben vaak stevige bakstenen muren en relatief kleine ruimtes, wat ze zeer geschikt maakt voor airco installatie. De dikke muren houden de koele lucht goed vast. We adviseren vaak compacte wandmodellen die goed passen bij de oorspronkelijke architectuur. Door de kleinere ruimtes zijn vaak units met lagere capaciteit voldoende, wat de installatiekosten beperkt houdt."
       }
     ],
     

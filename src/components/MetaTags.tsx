@@ -44,6 +44,7 @@ interface MetaTagsProps {
     neighborhood?: string;
   };
   serviceType?: string;
+  speakableContent?: string[];
 }
 
 export default function MetaTags({ 
@@ -60,7 +61,8 @@ export default function MetaTags({
   breadcrumbItems,
   productInfo,
   locationInfo,
-  serviceType
+  serviceType,
+  speakableContent = []
 }: MetaTagsProps) {
   // Enhance title with location information for better local SEO
   let enhancedTitle = title;
@@ -242,6 +244,18 @@ export default function MetaTags({
     "description": description
   } : null;
   
+  // Prepare Speakable schema for voice search optimization
+  const speakableSchema = speakableContent.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": title,
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".faq-answer", ".speakable-content"],
+      "xpath": ["//div[@class='faq-answer']", "//div[@class='speakable-content']"]
+    }
+  } : null;
+  
   // Combine all schemas
   const schemas = [
     schema || defaultSchema,
@@ -249,7 +263,8 @@ export default function MetaTags({
     reviewSchema,
     productSchema,
     serviceSchema,
-    breadcrumbSchema
+    breadcrumbSchema,
+    speakableSchema
   ].filter(Boolean);
 
   return (

@@ -1,58 +1,73 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import LocationLandingPage from '../../templates/LocationLandingPage';
 import { getLocalizedReviews } from '../../utils/googleReviews';
 
 export default function GeleenPage() {
   // Get real Google reviews localized for Geleen
   const realReviews = getLocalizedReviews("Geleen", 4);
-
+  
   // City-specific data
   const cityData = {
     city: "Geleen",
     region: "Zuid-Limburg",
-    postalCodes: "6163, 6164, 6165, 6166",
-    populationCount: 33200,
-    locationImage: "/images/locations/geleen.webp", // You may need to add this image to your assets
-    installationCount: 85,
+    postalCodes: "6161, 6162, 6163, 6164, 6165, 6166, 6167, 6168, 6169",
+    populationCount: 33500,
+    locationImage: "/images/locations/default-city-image.webp",
+    installationCount: 110,
     
     // Climate-specific information for Geleen
     climateFacts: [
-      "Geleen heeft gemiddeld 20-25 tropische dagen (30°C+) per jaar",
-      "Door de nabijheid van industriegebied Chemelot kan de luchtkwaliteit in Geleen tijdens warme dagen extra belastend zijn",
-      "De heuvelachtige omgeving van Geleen zorgt voor warmteverschillen tussen de wijken"
+      "Geleen heeft door de industriële geschiedenis en stedelijke bebouwing een uitgesproken hitte-eiland effect",
+      "De Chemelot-site en industrie zorgen voor extra warmte-ontwikkeling in de regio",
+      "Zuid-Limburg kent de warmste zomers van Nederland, met Geleen als geen uitzondering",
+      "De naoorlogse woonwijken in Geleen hebben vaak grote raampartijen die snel opwarmen"
     ],
     
     // Special features for Geleen installations
     specialFeatures: [
-      "Aangepaste airco-installaties voor woningen in de buurt van het Chemelot-terrein met extra luchtfiltering",
-      "Speciale aandacht voor geluidsisolatie bij installaties nabij industriële gebieden",
-      "Energiezuinige oplossingen voor de typische jaren '60/'70 woningen in Geleen-Zuid"
+      "Ervaring met airco installaties in industriële woonomgeving van Geleen",
+      "Specialistische kennis van verschillende woningtypes: van mijnwerkerswoningen tot moderne complexen",
+      "Oplossingen voor zowel gezinswoningen als appartementen in hoogbouw",
+      "Installaties die rekening houden met de industriële omgeving en luchtkwaliteit"
     ],
     
-    // Use real Google reviews
+    // Use real Google reviews localized for Geleen
     testimonials: realReviews,
     
     // FAQs specific to Geleen
     faqs: [
       {
         question: "Wat kost een airco installatie in Geleen gemiddeld?",
-        answer: "De gemiddelde kosten voor een airco installatie in Geleen liggen tussen €1.250 en €2.700, afhankelijk van het type systeem en de specifieke situatie van uw woning. Voor woningen in Geleen-Zuid, met typische jaren '60/'70 architectuur, bieden we vaak speciale oplossingen voor betere integratie. We maken graag een persoonlijke offerte op basis van uw specifieke wensen en situatie."
+        answer: "De kosten voor een airco installatie in Geleen liggen gemiddeld tussen €1.200 en €2.800, afhankelijk van het type systeem en de specifieke situatie van uw woning. Voor de diverse woningtypes in Geleen - van mijnwerkerswoningen tot moderne appartementen - hebben we verschillende oplossingen. We maken graag een persoonlijke offerte op basis van uw specifieke situatie in Geleen."
       },
       {
-        question: "Hebben jullie ervaring met airco installaties in de buurt van het Chemelot-terrein?",
-        answer: "Jazeker! We hebben ruime ervaring met het installeren van airconditioningsystemen in de wijken rondom Chemelot. Voor deze locaties adviseren we vaak systemen met verbeterde luchtfiltering om de luchtkwaliteit in huis te optimaliseren. Onze monteurs zijn bekend met de specifieke eisen en oplossingen voor deze omgeving."
+        question: "Hoe lang duurt een airco installatie in Geleen?",
+        answer: "Een standaard airco installatie in Geleen duurt meestal één werkdag. Bij complexere installaties, zoals in appartementen of woningen met specifieke uitdagingen, kan dit uitlopen tot twee dagen. Als ervaren installateur in Zuid-Limburg zorgen we altijd voor een professionele en tijdige afwerking."
       },
       {
-        question: "Hoe snel kunnen jullie een airco installeren in Geleen?",
-        answer: "Na uw aanvraag kunnen we doorgaans binnen 1-2 weken langskomen voor een vrijblijvend adviesgesprek. De installatie zelf kan, afhankelijk van het seizoen en onze planning, meestal binnen 2-3 weken worden uitgevoerd. We zorgen altijd voor een snelle maar zorgvuldige installatie door onze ervaren monteurs."
+        question: "Is airconditioning extra belangrijk in de industriële omgeving van Geleen?",
+        answer: "Ja, zeker! De industriële omgeving rond Chemelot en de stedelijke bebouwing van Geleen zorgen voor extra warmte-ontwikkeling. Airconditioning biedt niet alleen koeling, maar filtert ook de lucht, wat in een industriële omgeving extra comfort biedt. Moderne airco's hebben goede filters die de luchtkwaliteit in huis verbeteren."
       },
       {
-        question: "Zijn er speciale vergunningen nodig voor een airco in Geleen?",
-        answer: "In de meeste woonwijken van Geleen is geen speciale vergunning nodig voor het plaatsen van een airco, zolang de buitenunit niet aan de voorgevel wordt geplaatst en voldoet aan de geluidsnormen. In bepaalde beschermde wijken kunnen aanvullende regels gelden. We informeren u tijdens het adviesgesprek over de specifieke situatie voor uw woning."
+        question: "Welke airco is geschikt voor appartementen in Geleen?",
+        answer: "Voor appartementen in Geleen adviseren we compacte wandmodellen die weinig geluid produceren voor de buren. Merken als Daikin, Mitsubishi Electric en LG hebben speciale 'apartment-friendly' modellen met extra stille werking. We zorgen ook voor discrete plaatsing van buitenunits volgens VvE-regels en gemeentelijke voorschriften."
       },
       {
-        question: "Welke airco is het meest geschikt voor de oudere woningen in Geleen?",
-        answer: "Voor de typische oudere woningen in Geleen, met name in Geleen-Zuid en Kluis, raden we vaak split-unit systemen aan met een optimale balans tussen vermogen en energieverbruik. Merken als Daikin en Mitsubishi bieden modellen die zich goed laten integreren in deze woningen en voldoende vermogen hebben om de vaak grotere ruimtes te koelen. We kijken altijd naar de specifieke isolatiewaarden en indeling van uw woning voor een passend advies."
+        question: "Hebben jullie ervaring met mijnwerkerswoningen in Geleen?",
+        answer: "Absoluut! Geleen heeft veel karakteristieke mijnwerkerswoningen met dikke bakstenen muren. Deze woningen houden warmte goed vast, maar zijn ook goed te koelen met de juiste airco. De stevige constructie is ideaal voor airco installatie, en we hebben veel ervaring met het vakkundig wegwerken van leidingen in dit type woningen."
+      },
+      {
+        question: "Bieden jullie ook onderhoud voor airco's in Geleen?",
+        answer: "Ja, we bieden uitgebreide onderhoudsdiensten aan voor alle airco's in Geleen en omgeving. In een industriële omgeving zoals Geleen is regelmatig onderhoud extra belangrijk vanwege mogelijke vervuiling. We raden aan om de filters vaker te controleren en minimaal één keer per jaar professioneel onderhoud te laten uitvoeren."
+      },
+      {
+        question: "Kan een airco in Geleen ook efficient verwarmen?",
+        answer: "Zeker! Moderne airco warmtepompen zijn zeer geschikt voor Geleen. Ze kunnen tot 70% energiezuiniger zijn dan elektrische verwarming. Voor werknemers in de chemische industrie die vaak wisselende diensten draaien, biedt een airco flexibele klimaatbeheersing op elk moment van de dag. Perfect als aanvulling op bestaande verwarming."
+      },
+      {
+        question: "Welke garantie krijg ik op airco installatie in Geleen?",
+        answer: "Wij bieden 5 jaar garantie op het airco systeem en 2 jaar garantie op de installatie. Onze F-gassen gecertificeerde monteurs zorgen voor vakkundige installatie volgens alle veiligheidsnormen. Als lokale specialist in Zuid-Limburg zijn we altijd snel bereikbaar voor service en ondersteuning in Geleen."
       }
     ],
     
@@ -61,22 +76,22 @@ export default function GeleenPage() {
       {
         name: "Sittard",
         url: "/airco-installatie/sittard",
-        distance: "4 km"
-      },
-      {
-        name: "Beek",
-        url: "/airco-installatie/beek",
-        distance: "5 km"
+        distance: "8 km"
       },
       {
         name: "Stein",
         url: "/airco-installatie/stein",
-        distance: "6 km"
+        distance: "5 km"
       },
       {
-        name: "Maastricht",
-        url: "/airco-installatie/maastricht",
+        name: "Heerlen",
+        url: "/airco-installatie/heerlen",
         distance: "15 km"
+      },
+      {
+        name: "Roermond",
+        url: "/airco-installatie/roermond",
+        distance: "25 km"
       }
     ]
   };

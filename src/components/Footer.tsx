@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div>
             <Logo inverted className="h-10 w-auto mb-4" />
             <p className="text-gray-400">
@@ -127,6 +127,36 @@ export default function Footer() {
               <li>
                 <Link to="/privacy" className="text-gray-400 hover:text-white">
                   Privacy Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-white text-lg font-semibold">Populaire Locaties</h3>
+            <ul className="mt-4 space-y-2">
+              <li>
+                <Link to="/airco-installatie/maastricht" className="text-gray-400 hover:text-white">
+                  Airco Maastricht
+                </Link>
+              </li>
+              <li>
+                <Link to="/airco-installatie/roermond" className="text-gray-400 hover:text-white">
+                  Airco Roermond
+                </Link>
+              </li>
+              <li>
+                <Link to="/airco-installatie/venlo" className="text-gray-400 hover:text-white">
+                  Airco Venlo
+                </Link>
+              </li>
+              <li>
+                <Link to="/airco-installatie/heerlen" className="text-gray-400 hover:text-white">
+                  Airco Heerlen
+                </Link>
+              </li>
+              <li>
+                <Link to="/werkgebied" className="text-gray-400 hover:text-white">
+                  Alle Locaties
                 </Link>
               </li>
             </ul>

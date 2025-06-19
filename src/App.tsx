@@ -16,7 +16,10 @@ import ErrorFallback from './components/ErrorFallback';
 import BackToTop from './components/BackToTop';
 import SkipToContent from './components/SkipToContent';
 import WebVitalsReporter from './components/WebVitalsReporter';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import FeedbackRibbon from './components/FeedbackRibbon';
 import { requestIdleCallbackPolyfill } from './utils/requestIdleCallback';
+import PerformanceOptimizer from './utils/performanceOptimizations';
 
 // Lazy load all pages
 const Home = lazy(() => import('./pages/Home'));
@@ -170,6 +173,11 @@ const preloadCriticalRoutes = () => {
 
 const App = () => {
   const location = useLocation();
+
+  // Initialize performance optimizations
+  useEffect(() => {
+    PerformanceOptimizer.initializeOptimizations();
+  }, []);
 
   // Throttled tracking function to avoid blocking main thread
   const throttledTrackPageView = useCallback(
@@ -393,6 +401,8 @@ const App = () => {
         <AnnouncementBar />
         <Footer />
         <CookieConsentLite />
+        <FeedbackRibbon />
+        <PerformanceMonitor />
       </div>
     </ErrorBoundary>
   );

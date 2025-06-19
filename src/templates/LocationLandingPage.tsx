@@ -110,6 +110,13 @@ export default function LocationLandingPage({
         }}
         faqs={faqs}
         reviews={reviewsData}
+        speakableContent={[
+          `StayCool Airco is uw lokale airco specialist in ${city}`,
+          `Wij installeren airconditioners in ${region} sinds jaren`,
+          `Meer dan ${installationCount} tevreden klanten in de regio`,
+          `Snelle service en professionele installatie in ${city}`,
+          `Vraag direct een offerte aan voor airco installatie in ${city}`
+        ]}
       />
       
       <SchemaMarkup 
@@ -449,20 +456,13 @@ export default function LocationLandingPage({
               <h2 className="text-3xl font-bold mb-6">Veelgestelde vragen over Airco in {city}</h2>
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg">
-                    <details className="group">
-                      <summary className="flex justify-between items-center font-medium cursor-pointer list-none p-4">
-                        <span>{faq.question}</span>
-                        <span className="transition group-open:rotate-180">
-                          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">
-                            <path d="M6 9l6 6 6-6"></path>
-                          </svg>
-                        </span>
-                      </summary>
-                      <p className="text-gray-600 p-4 pt-0 group-open:animate-fadeIn">
-                        {faq.answer}
-                      </p>
-                    </details>
+                  <div key={index} className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                    <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                      {faq.question}
+                    </h3>
+                    <div className="px-6 py-4 faq-answer speakable-content">
+                      <p className="text-gray-700">{faq.answer}</p>
+                    </div>
                   </div>
                 ))}
               </div>

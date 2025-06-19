@@ -60,6 +60,18 @@ export default function MaastrichtPage() {
       {
         question: "Hoeveel energie verbruikt een airco in Maastricht?",
         answer: "Moderne airco's zijn veel energiezuiniger dan oudere modellen. Een gemiddeld A+++ model verbruikt ongeveer 0,25-0,5 kWh per uur, afhankelijk van de ingestelde temperatuur en de buitentemperatuur. In Maastricht, waar de zomers steeds warmer worden, is een energiezuinige airco een verstandige investering. We adviseren u graag over de meest efficiënte modellen voor uw specifieke situatie."
+      },
+      {
+        question: "Is het mogelijk om een airco te installeren in een studentenwoning in Maastricht?",
+        answer: "Ja, wij hebben veel ervaring met airco installaties in studentenwoningen in Maastricht. Voor huurwoningen is wel toestemming van de verhuurder nodig. We kunnen compacte, efficiënte units installeren die perfect passen bij studentenbudgets en vaak verplaatsbare of semi-permanente oplossingen bieden. Veel studentenwoningen in Maastricht hebben beperkte ruimte, daarom adviseren we wandmodellen die weinig plaats innemen."
+      },
+      {
+        question: "Kan ik een airco laten installeren tijdens de zomerperiode in Maastricht?",
+        answer: "Absoluut! Hoewel de zomer onze drukste periode is in Maastricht, proberen we altijd spoedinstallaties in te plannen. We raden wel aan om contact op te nemen zodra u merkt dat u een airco nodig heeft. Tijdens hittegolven in Maastricht kunnen wachttijden oplopen tot 1-2 weken, maar we doen ons best om zo snel mogelijk te helpen. Voor garantie van snelle service kunt u het beste uw airco laten installeren in het voorjaar."
+      },
+      {
+        question: "Welke subsidies zijn er beschikbaar voor airco installatie in Maastricht?",
+        answer: "In Maastricht kunt u mogelijk gebruik maken van de ISDE subsidie voor warmtepompen, aangezien moderne airco's ook als warmtepomp fungeren. Daarnaast biedt de gemeente Maastricht soms lokale energiesubsidies voor verduurzaming. Wij houden u graag op de hoogte van actuele subsidiemogelijkheden en helpen bij het aanvragen ervan. Ook kunt u de BTW-korting van 9% krijgen als uw woning ouder is dan 2 jaar."
       }
     ],
     
