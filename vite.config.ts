@@ -42,6 +42,12 @@ export default defineConfig({
           ui: ['react-hot-toast', 'lucide-react'],
           forms: ['@emailjs/browser'],
           stripe: ['@stripe/react-stripe-js'],
+          // Split large components
+          'lazy-components': [
+            'react-lazy-load-image-component',
+            'dompurify',
+            'html2canvas'
+          ]
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
