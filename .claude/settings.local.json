@@ -16,7 +16,9 @@
       "Bash(npx tsx:*)",
       "Bash(ls:*)",
       "Bash(npm run dev:*)",
-      "Bash(npm run typecheck:*)"
+      "Bash(npm run typecheck:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)"
     ],
     "deny": []
   },

@@ -12,7 +12,7 @@ export default defineConfig({
         script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https://www.google.com;
         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com data: blob:;
         img-src 'self' data: blob: https:;
-        font-src 'self' https://fonts.gstatic.com;
+        font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com;
         connect-src 'self' 
           https://*.supabase.co 
           https://api.emailjs.com 
@@ -104,7 +104,7 @@ export default defineConfig({
         script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https://www.google.com;
         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com data: blob:;
         img-src 'self' data: blob: https:;
-        font-src 'self' data: https://fonts.gstatic.com;
+        font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com;
         connect-src 'self' 
           https://*.supabase.co 
           https://kxjksvmlvyazphrbqglz.supabase.co 
