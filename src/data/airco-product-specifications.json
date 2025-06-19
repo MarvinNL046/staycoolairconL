@@ -1,0 +1,547 @@
+{
+  "brands": {
+    "daikin": {
+      "name": "Daikin",
+      "products": {
+        "ururu-sarara": {
+          "model": "FTXZ + RXZ",
+          "name": "Ururu Sarara",
+          "capacity": {
+            "cooling": "5.0 kW",
+            "heating": "6.3 kW"
+          },
+          "energy_label": "A+++",
+          "seer": "up to 9.54",
+          "scop": "up to 5.90",
+          "price_incl_installation": "€4,500",
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        },
+        "sensira": {
+          "model": "FTXF-A/B",
+          "name": "Sensira",
+          "capacity_range": "2.0 kW - 7.1 kW",
+          "energy_label": "A++",
+          "seer": "6.4 - 6.9",
+          "scop": "4.1 - 4.4",
+          "price_incl_installation": "€1,599",
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        },
+        "comfora": {
+          "model": "FTXP",
+          "name": "Comfora",
+          "capacity_range": "2.0 kW - 7.1 kW",
+          "energy_label": "A++",
+          "seer": "6.62 - 7.30",
+          "scop": "4.01 - 4.65",
+          "price_incl_installation": "€2,155",
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        },
+        "perfera": {
+          "model": "FTXM-A + RXM-A",
+          "name": "Perfera",
+          "capacity": {
+            "cooling": "2.0 kW - 5.0 kW",
+            "heating": "2.5 kW - 6.0 kW"
+          },
+          "energy_label": "A+++",
+          "seer": "up to 9.47",
+          "scop": "up to 5.20",
+          "price_incl_installation": "€2,420",
+          "features": [
+            "Heat boost - 14% faster heating",
+            "Sound levels as low as 19 dBA",
+            "Smart twin-flap design",
+            "Daikin Onecta app control",
+            "2-area motion detection sensor",
+            "3D airflow technology"
+          ],
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null,
+              "note": "Dimensions adjusted in 2024 model"
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        },
+        "stylish": {
+          "model": "FTXA + RXA",
+          "name": "Stylish",
+          "capacity": {
+            "cooling": "1.3 kW - 5.3 kW",
+            "heating": "1.3 kW - 6.5 kW"
+          },
+          "energy_label": "A+++",
+          "seer": "up to 8.75",
+          "scop": "up to 5.15",
+          "colors": ["white", "silver", "black", "blackwood"],
+          "price_incl_installation": "€2,710",
+          "features": [
+            "Coanda effect airflow",
+            "Intelligent thermal sensor",
+            "Practically inaudible operation",
+            "Flash Streamer air purification"
+          ],
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        },
+        "emura": {
+          "model": "FTXJ + RXJ",
+          "name": "Emura",
+          "capacity": {
+            "cooling": "1.3 kW - 5.3 kW",
+            "heating": "1.3 kW - 6.5 kW"
+          },
+          "energy_label": "A+++",
+          "seer": "up to 8.75",
+          "scop": "up to 5.15",
+          "colors": ["white", "silver", "black"],
+          "price_incl_installation": "€2,850",
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        }
+      }
+    },
+    "lg": {
+      "name": "LG",
+      "products": {
+        "dualcool-standard-plus": {
+          "model": "S3-W12JA2AA",
+          "name": "DualCool Standard Plus",
+          "capacity": "3.5 kW (12,000 BTU)",
+          "capacity_range": "2.5 kW - 6.6 kW",
+          "energy_label": "A++",
+          "seer": "7.0",
+          "scop": "4.1",
+          "price_incl_installation": "€1,695",
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": 308,
+              "width_mm": 837,
+              "depth_mm": 189,
+              "weight_kg": 8.7
+            },
+            "outdoor_unit": {
+              "height_mm": 495,
+              "width_mm": 717,
+              "depth_mm": 230,
+              "weight_kg": 25.1
+            }
+          }
+        },
+        "dualcool-premium": {
+          "model": null,
+          "name": "DualCool Premium",
+          "capacity_range": "2.5 kW - 6.6 kW",
+          "energy_label": "A++",
+          "seer": "8.3",
+          "scop": "4.6",
+          "price_incl_installation": "€2,060",
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        },
+        "artcool-mirror": {
+          "model": null,
+          "name": "ARTCOOL Mirror",
+          "capacity_range": "2.5 kW - 6.6 kW",
+          "energy_label": "A++",
+          "seer": "6.9 - 7.2",
+          "scop": "4.3",
+          "price_incl_installation": "€2,289",
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        },
+        "artcool-black": {
+          "model": null,
+          "name": "ARTCOOL Black",
+          "capacity_range": "2.5 kW - 6.6 kW",
+          "energy_label": "A++",
+          "seer": "7.6",
+          "scop": "4.3",
+          "price_incl_installation": "€2,530",
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        }
+      }
+    },
+    "mitsubishi_heavy": {
+      "name": "Mitsubishi Heavy Industries",
+      "products": {
+        "zs-wf": {
+          "model": "ZS-WF Series",
+          "name": "ZS-WF",
+          "capacity_range": "2.5 kW - 8.0 kW",
+          "energy_label": "A+++",
+          "seer": "up to 8.7",
+          "scop": "up to 5.2",
+          "price_incl_installation": "from €1,950",
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        },
+        "srk-zsx-w": {
+          "model": "SRK-ZSX-W Premium",
+          "name": "Premium ZSX",
+          "capacity_range": "2.5 kW - 8.0 kW",
+          "energy_label": "A+++",
+          "seer": "up to 9.5",
+          "scop": "up to 5.4",
+          "price_incl_installation": "from €2,199",
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        }
+      }
+    },
+    "samsung": {
+      "name": "Samsung",
+      "products": {
+        "wind-free-elite": {
+          "model": "Wind-Free Elite",
+          "name": "Wind-Free Elite",
+          "capacity_range": "2.5 kW - 3.5 kW",
+          "energy_label": "A++",
+          "seer": "up to 8.80 (A+++)",
+          "scop": "5.1 (A+++)",
+          "price_incl_installation": "Price on request",
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        },
+        "wind-free-comfort": {
+          "model": "Wind-Free Comfort",
+          "name": "Wind-Free Comfort",
+          "capacity_range": "2.5 kW - 7.6 kW",
+          "energy_label": "A++",
+          "seer": "6.10 - 6.80",
+          "scop": "4.00 - 4.60",
+          "price_incl_installation": "Price on request",
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        }
+      }
+    },
+    "toshiba": {
+      "name": "Toshiba",
+      "products": {
+        "haori": {
+          "model": "Haori",
+          "name": "Haori",
+          "capacity_range": "2.5 kW - 4.6 kW",
+          "energy_label": "A+++",
+          "seer": "up to 8.60",
+          "scop": "up to 5.10",
+          "colors": ["black", "blue", "brown", "cream", "gray"],
+          "price_incl_installation": "Price on request",
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        },
+        "daiseikai-10": {
+          "model": "Daiseikai 10",
+          "name": "Daiseikai 10",
+          "capacity_range": "2.5 kW - 5.0 kW",
+          "energy_label": "A+++",
+          "seer": "10.7",
+          "scop": "5.3",
+          "colors": ["white", "wood design"],
+          "price_incl_installation": "Price on request",
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        }
+      }
+    },
+    "tosot": {
+      "name": "Tosot by Gree",
+      "products": {
+        "cosmo": {
+          "model": "Cosmo",
+          "name": "Cosmo",
+          "capacity_range": "2.5 kW - 6.1 kW",
+          "energy_label": "A++",
+          "seer": "6.1",
+          "scop": "4.0",
+          "price_incl_installation": "€1,395",
+          "features": [
+            "SEER2 up to 22",
+            "Operating noise: 22dB to 36dB",
+            "Can cool up to 122°F (50°C)",
+            "Can heat as low as -13°F (-25°C)",
+            "R32 refrigerant",
+            "WiFi connectivity",
+            "Pipe sizes: 1/4-3/8"
+          ],
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null,
+              "note": "5kW model: 993×345×271mm"
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null,
+              "note": "5kW model: 675×550×285mm"
+            }
+          }
+        },
+        "pular": {
+          "model": "Pular",
+          "name": "Pular",
+          "capacity_range": "2.2 kW - 6.1 kW",
+          "energy_label": "A++",
+          "seer": "6.6",
+          "scop": "4.0",
+          "price_incl_installation": "€1,495",
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        },
+        "clivia": {
+          "model": "Clivia Design",
+          "name": "Clivia",
+          "capacity_range": "2.7 kW - 7.1 kW",
+          "energy_label": "A+++",
+          "seer": "8.5",
+          "scop": "4.6",
+          "colors": ["white", "black"],
+          "price_incl_installation": "€1,595",
+          "dimensions": {
+            "indoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            },
+            "outdoor_unit": {
+              "height_mm": null,
+              "width_mm": null,
+              "depth_mm": null
+            }
+          }
+        }
+      }
+    }
+  },
+  "mobile_airco": {
+    "lg_mobile": {
+      "brand": "LG",
+      "model": "Dual Inverter Smart",
+      "capacity": "2.5 kW (11,000 BTU)",
+      "energy_label": "A+",
+      "suitable_for": "up to 43 m²",
+      "price": "€749",
+      "availability": "Sold out - Available from September 10, 2025",
+      "dimensions": {
+        "unit": {
+          "height_mm": null,
+          "width_mm": null,
+          "depth_mm": null
+        }
+      }
+    },
+    "tosot_mobile": {
+      "brand": "Tosot",
+      "model": "MONA by GREE",
+      "capacity": "3.5 kW (12,000 BTU)",
+      "energy_label": "A+",
+      "suitable_for": "up to 58 m²",
+      "price": "€400",
+      "dimensions": {
+        "unit": {
+          "height_mm": null,
+          "width_mm": null,
+          "depth_mm": null
+        }
+      }
+    }
+  },
+  "airco_covers": {
+    "anthracite_medium": {
+      "name": "Anthracite Medium Cover",
+      "dimensions": "100×70×50 cm",
+      "color": "Anthracite RAL7024",
+      "price": "€269"
+    },
+    "anthracite_large": {
+      "name": "Anthracite Large Cover",
+      "dimensions": "110×85×60 cm",
+      "color": "Anthracite RAL7024",
+      "price": "€339"
+    },
+    "white_medium": {
+      "name": "White Medium Cover",
+      "dimensions": "100×70×50 cm",
+      "color": "White RAL9010",
+      "price": "€269"
+    },
+    "white_large": {
+      "name": "White Large Cover",
+      "dimensions": "110×85×60 cm",
+      "color": "White RAL9010",
+      "price": "€339"
+    }
+  },
+  "metadata": {
+    "last_updated": "2025-01-19",
+    "note": "Dimensions marked as null require further research. Contact manufacturers for exact specifications.",
+    "sources": [
+      "StayCool Airco product database",
+      "Manufacturer websites",
+      "Web search results"
+    ]
+  }
+}
