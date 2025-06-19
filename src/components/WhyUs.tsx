@@ -42,7 +42,7 @@ export default function WhyUs() {
             {reasons.map((reason) => (
               <div key={reason.title} className="relative">
                 <div className="flex flex-col items-center text-center">
-                  <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600">
+                  <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-800">
                     <reason.icon className="h-8 w-8" />
                   </div>
                   <h3 className="mt-6 text-lg font-medium text-gray-900">{reason.title}</h3>
@@ -55,7 +55,7 @@ export default function WhyUs() {
           <div className="mt-16 text-center">
             <a
               href="#contact"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-900"
             >
               Neem Contact Op
             </a>

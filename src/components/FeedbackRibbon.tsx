@@ -56,7 +56,7 @@ const FeedbackRibbon: React.FC = () => {
       {/* Feedback Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed right-0 top-1/2 -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-6 rounded-l-lg shadow-lg z-40 transition-all duration-300 hover:px-4"
+        className="fixed right-0 top-1/2 -translate-y-1/2 bg-blue-800 hover:bg-blue-900 text-white px-3 py-6 rounded-l-lg shadow-lg z-40 transition-all duration-300 hover:px-4"
         aria-label="Geef feedback"
       >
         <MessageSquare className="w-5 h-5" />
@@ -93,7 +93,7 @@ const FeedbackRibbon: React.FC = () => {
                     id="feedback-name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700"
                     required
                   />
                 </div>
@@ -107,7 +107,7 @@ const FeedbackRibbon: React.FC = () => {
                     id="feedback-email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700"
                     required
                   />
                 </div>
@@ -142,7 +142,7 @@ const FeedbackRibbon: React.FC = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     rows={4}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-700"
                     placeholder="Vertel ons wat u vindt van onze website..."
                     required
                   />
@@ -152,7 +152,7 @@ const FeedbackRibbon: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="flex-1 bg-blue-800 hover:bg-blue-900 text-white font-medium py-2 px-4 rounded-md transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? 'Verzenden...' : 'Verstuur Feedback'}
                   </button>

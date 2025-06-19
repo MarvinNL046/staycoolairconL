@@ -142,7 +142,7 @@ export default function CapacityCalculator() {
             min="0"
             value={inputs.roomSize || ''}
             onChange={(e) => setInputs({ ...inputs, roomSize: parseFloat(e.target.value) || 0 })}
-            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500"
+            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-700"
           />
         </div>
 
@@ -162,7 +162,7 @@ export default function CapacityCalculator() {
           <select
             value={inputs.sunExposure}
             onChange={(e) => setInputs({ ...inputs, sunExposure: e.target.value as 'low' | 'medium' | 'high' })}
-            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500"
+            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-700"
           >
             <option value="low">Weinig (noordzijde)</option>
             <option value="medium">Gemiddeld</option>
@@ -186,7 +186,7 @@ export default function CapacityCalculator() {
           <select
             value={inputs.insulation}
             onChange={(e) => setInputs({ ...inputs, insulation: e.target.value as 'poor' | 'average' | 'good' })}
-            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500"
+            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-700"
           >
             <option value="poor">Slecht (enkel glas, geen isolatie)</option>
             <option value="average">Gemiddeld (dubbel glas)</option>
@@ -212,7 +212,7 @@ export default function CapacityCalculator() {
             min="1"
             value={inputs.occupants}
             onChange={(e) => setInputs({ ...inputs, occupants: parseInt(e.target.value) || 1 })}
-            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500"
+            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-700"
           />
         </div>
 
@@ -224,7 +224,7 @@ export default function CapacityCalculator() {
                 type="checkbox"
                 checked={inputs.heatSources}
                 onChange={(e) => setInputs({ ...inputs, heatSources: e.target.checked })}
-                className="rounded text-blue-500 focus:ring-2 focus:ring-blue-500"
+                className="rounded text-blue-800 focus:ring-2 focus:ring-blue-700"
               />
               <span className="text-sm font-medium">
                 Warmtebronnen aanwezig (computers, apparatuur)
@@ -244,7 +244,7 @@ export default function CapacityCalculator() {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           onClick={calculateCapacity}
-          className="w-full py-3 px-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
+          className="w-full py-3 px-4 bg-blue-800 text-white rounded-lg font-medium hover:bg-blue-900 transition-colors"
         >
           Bereken Capaciteit
         </motion.button>
@@ -258,10 +258,10 @@ export default function CapacityCalculator() {
           >
             <h3 className="text-lg font-semibold mb-2">Aanbevolen Capaciteit</h3>
             <div className="flex items-center justify-between">
-              <p className="text-2xl font-bold text-blue-600">{result} kW</p>
+              <p className="text-2xl font-bold text-blue-800">{result} kW</p>
               <button
                 onClick={exportToPDF}
-                className="flex items-center px-3 py-2 text-sm text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded-lg transition-colors"
+                className="flex items-center px-3 py-2 text-sm text-blue-800 hover:text-blue-900 hover:bg-blue-50 rounded-lg transition-colors"
               >
                 <Download className="h-4 w-4 mr-2" />
                 Export PDF

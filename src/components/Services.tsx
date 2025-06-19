@@ -62,7 +62,7 @@ export default function Services() {
                 className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
               >
                 <div className="absolute -top-10 left-1/2 -translate-x-1/2">
-                  <div className="bg-blue-600 rounded-full p-4">
+                  <div className="bg-blue-800 rounded-full p-4">
                     <service.icon className="h-8 w-8 text-white" />
                   </div>
                 </div>
@@ -73,7 +73,7 @@ export default function Services() {
                 <ul className="mt-6 space-y-3">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center text-gray-600">
-                      <svg className="h-5 w-5 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="h-5 w-5 text-blue-800 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                       </svg>
                       {feature}
@@ -83,7 +83,7 @@ export default function Services() {
 
                 <a
                   href="#contact"
-                  className="mt-8 inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+                  className="mt-8 inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-900"
                 >
                   Vraag Offerte Aan
                 </a>
@@ -116,7 +116,7 @@ export default function Services() {
           <div className="mt-8 text-center">
             <a
               href="#contact"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-900 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Bereken uw Besparing
             </a>

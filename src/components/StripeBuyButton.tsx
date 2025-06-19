@@ -11,7 +11,7 @@ export default function StripeBuyButton({ url }: StripeBuyButtonProps) {
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="block w-full text-center py-3 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+        className="block w-full text-center py-3 px-4 bg-blue-800 text-white rounded-lg hover:bg-blue-900 transition-colors duration-300"
       >
         Koop nu
       </a>

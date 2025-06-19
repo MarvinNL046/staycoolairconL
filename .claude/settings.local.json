@@ -18,7 +18,8 @@
       "Bash(npm run dev:*)",
       "Bash(npm run typecheck:*)",
       "Bash(mkdir:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(ping:*)"
     ],
     "deny": []
   },

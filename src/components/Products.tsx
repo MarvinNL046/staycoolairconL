@@ -82,7 +82,7 @@ export default function Products() {
                       <ul className="space-y-2">
                         {brand.features.map((feature) => (
                           <li key={feature} className="flex items-center text-gray-600">
-                            <Check className="h-5 w-5 text-blue-600 mr-2" />
+                            <Check className="h-5 w-5 text-blue-800 mr-2" />
                             {feature}
                           </li>
                         ))}
@@ -94,7 +94,7 @@ export default function Products() {
                       <ul className="space-y-2">
                         {brand.popular.map((model) => (
                           <li key={model} className="flex items-center text-gray-600">
-                            <Award className="h-5 w-5 text-blue-600 mr-2" />
+                            <Award className="h-5 w-5 text-blue-800 mr-2" />
                             {model}
                           </li>
                         ))}
@@ -105,7 +105,7 @@ export default function Products() {
                   <div className="mt-8">
                     <a
                       href="#contact"
-                      className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300"
+                      className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-900 transition-colors duration-300"
                       onClick={() => {
                         trackProductInteraction('click', {
                           id: brand.name.toLowerCase(),
@@ -145,7 +145,7 @@ export default function Products() {
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300"
+            className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-blue-800 hover:bg-blue-900 shadow-lg hover:shadow-xl transition-all duration-300"
             onClick={() => trackInteraction('products', 'request_advice')}
           >
             Vraag gratis advies aan

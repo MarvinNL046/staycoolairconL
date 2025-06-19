@@ -50,7 +50,7 @@ export default function CookieConsent() {
           <div className="max-w-7xl mx-auto p-4">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-2">
-                <Cookie className="h-5 w-5 text-blue-600" />
+                <Cookie className="h-5 w-5 text-blue-800" />
                 <p className="text-gray-600 text-sm">
                   Wij gebruiken cookies om uw ervaring te verbeteren.
                 </p>
@@ -58,7 +58,7 @@ export default function CookieConsent() {
               <div className="flex gap-2">
                 <button
                   onClick={handleAccept}
-                  className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700"
+                  className="px-4 py-2 text-sm font-medium text-white bg-blue-800 rounded-md hover:bg-blue-900"
                 >
                   Accepteren
                 </button>

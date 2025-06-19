@@ -58,7 +58,7 @@ export default function ServicesOptimized() {
                 className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
               >
                 <div className="absolute -top-10 left-1/2 -translate-x-1/2">
-                  <div className="bg-blue-600 rounded-full p-4">
+                  <div className="bg-blue-800 rounded-full p-4">
                     <service.icon className="h-8 w-8 text-white" />
                   </div>
                 </div>
