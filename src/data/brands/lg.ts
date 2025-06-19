@@ -81,12 +81,14 @@ export const lgData: Brand = {
         'Wifi-besturing op afstand'
       ],
       specifications: [
+        { label: 'Model reference', value: 'PC12SK.NSK' },
         { label: 'Koelcapaciteit', value: '2,5 - 6,6 kW' },
         { label: 'Verwarmingscapaciteit', value: '3,2 - 7,5 kW' },
         { label: 'SEER', value: '8,3' },
         { label: 'SCOP', value: '4,6' },
         { label: 'Geluidsniveau binnen (min)', value: '19 dB(A)' },
         { label: 'Geluidsniveau binnen (max)', value: '48 dB(A)' },
+        { label: 'Geluidsniveau buiten', value: '52 dB(A)' },
         { label: 'Koudemiddel', value: 'R-32' },
         { label: 'Afmetingen binnendeel', value: '799 x 307 x 235mm (BxHxD)' },
         { label: 'Afmetingen buitendeel', value: '717 x 495 x 230mm (BxHxD)' },
@@ -95,6 +97,9 @@ export const lgData: Brand = {
         { label: 'Min. leidinglengte', value: '3 m' },
         { label: 'Max. leidinglengte', value: '20 m' },
         { label: 'Max. hoogteverschil', value: '10 m' },
+        { label: 'Werktemperatuur koelen', value: '-10°C ~ +48°C' },
+        { label: 'Werktemperatuur verwarmen', value: '-15°C ~ +24°C' },
+        { label: 'Luchtstroom binnen', value: '270 - 900 m³/h' },
         { label: 'Garantie', value: '5 jaar' }
       ]
     },
@@ -154,33 +159,52 @@ export const lgData: Brand = {
     {
       name: 'ARTCOOL Black',
       slug: 'artcool-black',
-      description: 'Elegante wandunit in stijlvol zwart design, perfect voor moderne interieurs waar een statement piece gewenst is.',
+      description: 'Elegante wandunit in stijlvol zwart design, perfect voor moderne interieurs waar een statement piece gewenst is. Premium afwerking met geavanceerde technologie voor optimale prestaties en stijl.',
       imageUrl: '/images/products/rac-eu-lg-artcool-black.webp',
       images: [
         {
           url: '/images/products/rac-eu-lg-artcool-black.webp',
-          alt: 'LG ARTCOOL Black'
+          alt: 'LG ARTCOOL Black wandmodel airco mat zwart design 2.5-6.6kW - premium afwerking UVnano'
         }
       ],
       price: '€2.530,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,5 kW - 6,6 kW',
       features: [
-        'Stijlvol zwart design',
-        'UVnano technologie',
+        'Premium mat zwart design',
+        'Verborgen LED display',
+        'UVnano technologie voor schone lucht',
         'Dual Inverter Compressor',
         'ThinQ Smart Diagnosis',
         'Active Energy Control',
-        'Ionizer',
-        'Auto Clean'
+        'PM 1.0 sensor en filter',
+        'Ionizer voor luchtzuivering',
+        'Auto Clean functie',
+        'Wifi-besturing via ThinQ app',
+        'Compatibel met Google Assistant en Amazon Alexa',
+        'Fluisterstille werking',
+        '3D luchtstroom voor optimale verdeling'
       ],
       specifications: [
+        { label: 'Beschikbare modellen', value: '2,5kW (09SK), 3,5kW (12SK), 5,0kW (18SK), 6,6kW (24SK)' },
         { label: 'Koelcapaciteit', value: '2,5 - 6,6 kW' },
         { label: 'Verwarmingscapaciteit', value: '3,2 - 7,5 kW' },
         { label: 'SEER', value: '7,6' },
         { label: 'SCOP', value: '4,3' },
-        { label: 'Geluidsniveau binnen', value: '21 dB(A)' },
-        { label: 'Koudemiddel', value: 'R-32' }
+        { label: 'Geluidsniveau binnen (min)', value: '21 dB(A)' },
+        { label: 'Geluidsniveau binnen (max)', value: '45 dB(A)' },
+        { label: 'Geluidsniveau buiten', value: '50 dB(A)' },
+        { label: 'Koudemiddel', value: 'R-32' },
+        { label: 'Afmetingen binnendeel', value: '950 x 335 x 185mm (BxHxD)' },
+        { label: 'Afmetingen buitendeel (2,5-3,5kW)', value: '717 x 495 x 230mm (BxHxD)' },
+        { label: 'Afmetingen buitendeel (5,0-6,6kW)', value: '770 x 545 x 288mm (BxHxD)' },
+        { label: 'Gewicht binnenunit', value: '12-14 kg (afhankelijk van model)' },
+        { label: 'Werktemperatuur koelen', value: '-10°C ~ +48°C' },
+        { label: 'Werktemperatuur verwarmen', value: '-15°C ~ +24°C' },
+        { label: 'Luchtstroom binnen', value: '240 - 960 m³/h' },
+        { label: 'Max. leidinglengte', value: '20 m' },
+        { label: 'Max. hoogteverschil', value: '10 m' },
+        { label: 'Garantie', value: '5 jaar op unit, 10 jaar op compressor' }
       ]
     }
   ]

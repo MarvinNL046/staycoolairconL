@@ -59,14 +59,25 @@ export const toshibaData: Brand = {
         'Fluisterstille werking vanaf 19 dB(A)'
       ],
       specifications: [
-        { label: 'Beschikbare capaciteiten', value: '2,5 kW, 3,5 kW, 4,6 kW' },
+        { label: 'Beschikbare capaciteiten', value: '2,5 kW (RAS-10PAVPG-E), 3,5 kW (RAS-13PAVPG-E), 4,6 kW (RAS-16PAVPG-E)' },
+        { label: 'Koelcapaciteit', value: '2,5 - 4,6 kW' },
+        { label: 'Verwarmingscapaciteit', value: '3,2 - 5,5 kW' },
         { label: 'SEER', value: 'tot 8,60' },
         { label: 'SCOP', value: 'tot 5,10' },
-        { label: 'Geluidsniveau binnen', value: '19-23-41 dB(A)' },
-        { label: 'Afmetingen (HxBxD)', value: '300 x 987 x 210 mm' },
-        { label: 'Gewicht', value: '11,0 kg' },
+        { label: 'Geluidsniveau binnen (min/nom/max)', value: '19/23/41 dB(A)' },
+        { label: 'Geluidsniveau buiten', value: '47-50 dB(A)' },
+        { label: 'Afmetingen binnenunit (HxBxD)', value: '300 x 987 x 210 mm' },
+        { label: 'Gewicht binnenunit', value: '11,0 kg' },
+        { label: 'Afmetingen buitenunit', value: '550 x 780 x 290 mm (2,5-3,5kW)' },
         { label: 'Koudemiddel', value: 'R32' },
-        { label: 'Beschikbare kleuren', value: 'Zwart, blauw, bruin, crème, grijs' }
+        { label: 'Werktemperatuur koelen', value: '-15°C ~ +46°C' },
+        { label: 'Werktemperatuur verwarmen', value: '-15°C ~ +24°C' },
+        { label: 'Luchtstroom binnen', value: '250 - 680 m³/h' },
+        { label: 'Max. leidinglengte', value: '20 m' },
+        { label: 'Max. hoogteverschil', value: '12 m' },
+        { label: 'Beschikbare kleuren', value: 'Zwart, blauw, bruin, crème, grijs' },
+        { label: 'Speciale features', value: 'Verwisselbare stoffen covers, 94% PM2.5 filtering' },
+        { label: 'Garantie', value: '5 jaar op unit, 5 jaar op compressor' }
       ]
     },
     {
@@ -242,14 +253,30 @@ export const toshibaData: Brand = {
         '43% gerecycled materiaal'
       ],
       specifications: [
-        { label: 'Beschikbare capaciteiten', value: '2,5 kW, 3,5 kW, 5,0 kW' },
+        { label: 'Beschikbare capaciteiten', value: '2,5 kW (RAS-10PKVPG-E), 3,5 kW (RAS-13PKVPG-E), 5,0 kW (RAS-18PKVPG-E)' },
+        { label: 'Koelcapaciteit', value: '2,5 - 5,0 kW' },
+        { label: 'Verwarmingscapaciteit', value: '3,2 - 6,0 kW' },
         { label: 'SEER', value: '10,7' },
         { label: 'SCOP', value: '5,3' },
-        { label: 'Energielabel', value: 'A+++' },
+        { label: 'Energielabel koelen', value: 'A+++' },
+        { label: 'Energielabel verwarmen', value: 'A+++' },
+        { label: 'Geluidsniveau binnen (min/nom/max)', value: '19/23/44 dB(A)' },
+        { label: 'Geluidsniveau buiten', value: '45-49 dB(A)' },
+        { label: 'Afmetingen binnenunit (HxBxD)', value: '320 x 1050 x 250 mm' },
+        { label: 'Gewicht binnenunit', value: '16,0 kg' },
+        { label: 'Afmetingen buitenunit (2,5-3,5kW)', value: '550 x 780 x 290 mm' },
+        { label: 'Afmetingen buitenunit (5,0kW)', value: '630 x 800 x 300 mm' },
         { label: 'Koudemiddel', value: 'R32' },
-        { label: 'Uitvoeringen', value: 'Wit of houten design' },
+        { label: 'Werktemperatuur koelen', value: '-15°C ~ +46°C' },
+        { label: 'Werktemperatuur verwarmen', value: '-27°C ~ +24°C' },
+        { label: 'Luchtstroom binnen', value: '210 - 720 m³/h' },
+        { label: 'Max. leidinglengte', value: '25 m' },
+        { label: 'Max. hoogteverschil', value: '12 m' },
+        { label: 'Uitvoeringen', value: 'Wit of houten design (PEFC gecertificeerd)' },
         { label: 'Smart Home', value: 'Compatible met Alexa en Google Assistant' },
-        { label: 'Fijnstof filtering', value: '94% PM2.5 absorptie' }
+        { label: 'Fijnstof filtering', value: '94% PM2.5 absorptie' },
+        { label: 'Speciale features', value: 'HaDa-care luchtstroom, Smart Sensing, 43% gerecycled materiaal' },
+        { label: 'Garantie', value: '7 jaar op compressor' }
       ]
     }
   ]

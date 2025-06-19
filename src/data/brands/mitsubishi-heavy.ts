@@ -47,17 +47,27 @@ export const mitsubishiHeavyData: Brand = {
         'Self-cleaning functie'
       ],
       specifications: [
-        { label: 'SRK25ZS-WF (2,5 kW)', value: '€1.950,- incl. installatie' },
-        { label: 'SRK35ZS-WF (3,5 kW)', value: '€2.050,- incl. installatie' },
-        { label: 'SRK50ZS-WF (5,0 kW)', value: '€2.595,- incl. installatie' },
-        { label: 'SRK63ZS-WF (6,3 kW)', value: '€2.950,- incl. installatie' },
-        { label: 'SRK71ZS-WF (7,1 kW)', value: '€3.350,- incl. installatie' },
-        { label: 'SRK80ZS-WF (8,0 kW)', value: '€3.550,- incl. installatie' },
+        { label: 'Beschikbare modellen', value: 'SRK25ZS-WF (2,5kW), SRK35ZS-WF (3,5kW), SRK50ZS-WF (5,0kW), SRK63ZS-WF (6,3kW), SRK71ZS-WF (7,1kW), SRK80ZS-WF (8,0kW)' },
+        { label: 'Prijzen inclusief installatie', value: '€1.950,- (2,5kW) tot €3.550,- (8,0kW)' },
+        { label: 'Koelcapaciteit', value: '2,5 - 8,0 kW' },
+        { label: 'Verwarmingscapaciteit', value: '3,0 - 9,0 kW' },
         { label: 'SEER', value: 'tot 8,7' },
         { label: 'SCOP', value: 'tot 5,2' },
-        { label: 'Geluidsniveau binnen', value: 'vanaf 19 dB(A)' },
-        { label: 'Koudemiddel', value: 'R32' },
-        { label: 'Wifi', value: 'Standaard ingebouwd' }
+        { label: 'Geluidsniveau binnen (min/nom/max)', value: '19/26/43 dB(A)' },
+        { label: 'Geluidsniveau buiten', value: '47-51 dB(A)' },
+        { label: 'Afmetingen binnenunit (HxBxD)', value: '280 x 838 x 221 mm' },
+        { label: 'Gewicht binnenunit', value: '9-11 kg (afhankelijk van model)' },
+        { label: 'Afmetingen buitenunit', value: 'Varieert per capaciteit' },
+        { label: 'Koudemiddel', value: 'R32 (GWP 675)' },
+        { label: 'Werktemperatuur koelen', value: '-15°C ~ +46°C' },
+        { label: 'Werktemperatuur verwarmen', value: '-15°C ~ +24°C' },
+        { label: 'Luchtstroom binnen', value: '450 - 1080 m³/h' },
+        { label: 'Max. leidinglengte', value: '20 m' },
+        { label: 'Max. hoogteverschil', value: '15 m' },
+        { label: 'Wifi', value: 'Standaard ingebouwd' },
+        { label: 'Luchtfilter', value: 'Allergeenfilter + Enzym Blauw Antiallergie filter' },
+        { label: 'Speciale features', value: '3D Auto functie, Jet Air, Self-cleaning' },
+        { label: 'Garantie', value: '3 jaar op unit, 5 jaar op compressor' }
       ]
     },
     {
@@ -88,13 +98,28 @@ export const mitsubishiHeavyData: Brand = {
         'Automatische filterreiniging'
       ],
       specifications: [
+        { label: 'Beschikbare modellen', value: 'SRK25ZSX-W (2,5kW), SRK35ZSX-W (3,5kW), SRK50ZSX-W (5,0kW), SRK60ZSX-W (6,0kW), SRK71ZSX-W (7,1kW), SRK80ZSX-W (8,0kW)' },
         { label: 'Koelcapaciteit', value: '2,5 - 8,0 kW' },
         { label: 'Verwarmingscapaciteit', value: '3,0 - 9,0 kW' },
         { label: 'SEER', value: 'tot 9,5' },
         { label: 'SCOP', value: 'tot 5,4' },
-        { label: 'Geluidsniveau binnen', value: '18 dB(A)' },
-        { label: 'Koudemiddel', value: 'R32' },
-        { label: 'Wifi', value: 'Standaard ingebouwd' }
+        { label: 'Geluidsniveau binnen (min/nom/max)', value: '18/25/42 dB(A)' },
+        { label: 'Geluidsniveau buiten', value: '45-50 dB(A)' },
+        { label: 'Afmetingen binnenunit (HxBxD)', value: '300 x 925 x 258 mm' },
+        { label: 'Gewicht binnenunit', value: '12-14 kg (afhankelijk van model)' },
+        { label: 'Koudemiddel', value: 'R32 (GWP 675)' },
+        { label: 'Werktemperatuur koelen', value: '-15°C ~ +46°C' },
+        { label: 'Werktemperatuur verwarmen', value: '-20°C ~ +24°C' },
+        { label: 'Luchtstroom binnen', value: '510 - 1140 m³/h' },
+        { label: 'Max. leidinglengte', value: '25 m' },
+        { label: 'Max. hoogteverschil', value: '20 m' },
+        { label: 'Wifi', value: 'Standaard ingebouwd' },
+        { label: 'Luchtfilter', value: 'Premium allergeenfilter + Plasma luchtreiniger' },
+        { label: 'Sensoren', value: '3D temperatuursensor, bewegingssensor' },
+        { label: 'Speciale features', value: 'Ultra-silent mode, Plasma luchtreiniging, Automatische filterreiniging' },
+        { label: 'Energieklasse koelen', value: 'A+++' },
+        { label: 'Energieklasse verwarmen', value: 'A++' },
+        { label: 'Garantie', value: '3 jaar op unit, 6 jaar op compressor' }
       ]
     },
     {
@@ -125,13 +150,26 @@ export const mitsubishiHeavyData: Brand = {
         'Compact design'
       ],
       specifications: [
+        { label: 'Beschikbare modellen', value: 'SRF25ZMX-S (2,5kW), SRF35ZMX-S (3,5kW), SRF50ZMX-S (5,0kW)' },
         { label: 'Koelcapaciteit', value: '2,5 - 5,0 kW' },
         { label: 'Verwarmingscapaciteit', value: '3,0 - 5,8 kW' },
         { label: 'SEER', value: '7,6' },
         { label: 'SCOP', value: '4,6' },
-        { label: 'Geluidsniveau binnen', value: '22 dB(A)' },
-        { label: 'Koudemiddel', value: 'R32' },
-        { label: 'Afmetingen (HxBxD)', value: '600 x 860 x 238 mm' }
+        { label: 'Geluidsniveau binnen (min/nom/max)', value: '22/32/45 dB(A)' },
+        { label: 'Geluidsniveau buiten', value: '48-52 dB(A)' },
+        { label: 'Afmetingen binnenunit (HxBxD)', value: '600 x 860 x 238 mm' },
+        { label: 'Gewicht binnenunit', value: '16-18 kg' },
+        { label: 'Koudemiddel', value: 'R32 (GWP 675)' },
+        { label: 'Werktemperatuur koelen', value: '-15°C ~ +46°C' },
+        { label: 'Werktemperatuur verwarmen', value: '-15°C ~ +24°C' },
+        { label: 'Luchtstroom binnen', value: '480 - 900 m³/h' },
+        { label: 'Luchtuitblaas', value: 'Dubbele uitblaas (boven en onder)' },
+        { label: 'Max. leidinglengte', value: '20 m' },
+        { label: 'Max. hoogteverschil', value: '15 m' },
+        { label: 'Wifi', value: 'Optioneel verkrijgbaar' },
+        { label: 'Installatie opties', value: 'Vloerstaand of halfhoge wandmontage' },
+        { label: 'Speciale features', value: 'Snelle opwarming dankzij dubbele uitblaas, ideaal voor onder ramen' },
+        { label: 'Garantie', value: '3 jaar op unit, 5 jaar op compressor' }
       ]
     }
   ]
