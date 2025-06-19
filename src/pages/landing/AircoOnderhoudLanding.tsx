@@ -325,6 +325,49 @@ export default function AircoOnderhoudLanding() {
         </div>
       </div>
 
+      {/* Important Notice Section */}
+      <div className="py-16 bg-orange-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-lg shadow-xl p-8 md:p-12">
+            <div className="flex items-start">
+              <div className="flex-shrink-0">
+                <AlertTriangle className="h-12 w-12 text-orange-500" />
+              </div>
+              <div className="ml-6">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                  Belangrijk: Onderhoudsbeleid StayCool Airco
+                </h2>
+                <div className="prose prose-lg text-gray-700">
+                  <p className="mb-4">
+                    Bij StayCool Airco streven we naar de hoogste kwaliteit en service voor onze klanten. 
+                    Om dit te kunnen garanderen, voeren wij <strong>uitsluitend onderhoud en reparaties</strong> uit 
+                    aan airconditioningsystemen die door ons zijn geleverd en geïnstalleerd.
+                  </p>
+                  <p className="mb-4">
+                    Dit beleid stelt ons in staat om:
+                  </p>
+                  <ul className="list-disc list-inside mb-4 space-y-2">
+                    <li>De volledige geschiedenis van uw systeem te kennen</li>
+                    <li>Garantie te bieden op onderdelen en arbeid</li>
+                    <li>Optimale service te verlenen aan onze bestaande klanten</li>
+                    <li>De kwaliteit van onze dienstverlening te waarborgen</li>
+                  </ul>
+                  <p className="mb-4">
+                    <strong>Heeft u een airco die niet door StayCool is geïnstalleerd?</strong><br />
+                    Wij adviseren u contact op te nemen met de oorspronkelijke installateur of een algemene 
+                    onderhoudspartij voor airconditioningsystemen.
+                  </p>
+                  <p className="text-sm text-gray-600 italic">
+                    Wij begrijpen dat dit mogelijk ongemak veroorzaakt en bieden hiervoor onze excuses aan. 
+                    Deze keuze is gemaakt om de beste service aan onze klanten te kunnen blijven bieden.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <ProductLandingContact 
         title="Vraag een Vrijblijvende Offerte Aan"
         subtitle="Ontvang persoonlijk advies en een scherpe prijsopgave voor uw airco onderhoud"

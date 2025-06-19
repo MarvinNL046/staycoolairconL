@@ -272,6 +272,68 @@ export default function MaintenanceProcedures() {
               </motion.div>
             ))}
           </div>
+
+          {/* Important Notice Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto mt-16 mb-16"
+          >
+            <div className="bg-orange-50 rounded-xl p-8 border-2 border-orange-200">
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <AlertTriangle className="h-8 w-8 text-orange-500 mt-1" />
+                </div>
+                <div className="ml-4">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                    Belangrijk: Onderhoudsbeleid StayCool Airco
+                  </h2>
+                  <div className="space-y-4 text-gray-700">
+                    <p>
+                      Bij StayCool Airco streven we naar de hoogste kwaliteit en service voor onze klanten. 
+                      Om dit te kunnen garanderen, voeren wij <strong className="text-gray-900">uitsluitend onderhoud en reparaties</strong> uit 
+                      aan airconditioningsystemen die door ons zijn geleverd en geïnstalleerd.
+                    </p>
+                    <div>
+                      <p className="font-semibold text-gray-900 mb-2">Dit beleid stelt ons in staat om:</p>
+                      <ul className="space-y-2 ml-4">
+                        <li className="flex items-start">
+                          <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                          <span>De volledige geschiedenis van uw systeem te kennen</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                          <span>Garantie te bieden op onderdelen en arbeid</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                          <span>Optimale service te verlenen aan onze bestaande klanten</span>
+                        </li>
+                        <li className="flex items-start">
+                          <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                          <span>De kwaliteit van onze dienstverlening te waarborgen</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="bg-white rounded-lg p-4 mt-4">
+                      <p className="font-semibold text-gray-900 mb-2">
+                        Heeft u een airco die niet door StayCool is geïnstalleerd?
+                      </p>
+                      <p>
+                        Wij adviseren u contact op te nemen met de oorspronkelijke installateur of een algemene 
+                        onderhoudspartij voor airconditioningsystemen.
+                      </p>
+                    </div>
+                    <p className="text-sm text-gray-600 italic mt-4">
+                      Wij begrijpen dat dit mogelijk ongemak veroorzaakt en bieden hiervoor onze excuses aan. 
+                      Deze keuze is gemaakt om de beste service aan onze klanten te kunnen blijven bieden.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </>
