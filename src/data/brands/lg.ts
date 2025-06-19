@@ -35,14 +35,17 @@ export const lgData: Brand = {
         'Dual Inverter Compressor'
       ],
       specifications: [
+        { label: 'Model reference', value: 'S3-W12JA2AA (3.5kW model)' },
         { label: 'Koelcapaciteit', value: '2,5 - 6,6 kW' },
         { label: 'Verwarmingscapaciteit', value: '3,2 - 7,5 kW' },
         { label: 'SEER', value: '7,0' },
         { label: 'SCOP', value: '4,1' },
         { label: 'Geluidsniveau binnen', value: '21 dB(A)' },
         { label: 'Koudemiddel', value: 'R-32' },
-        { label: 'Afmetingen binnendeel (2,5kW & 3,5kW)', value: '837 x 308 x 189mm (BxHxD)' },
-        { label: 'Afmetingen buitendeel (2,5kW & 3,5kW)', value: '717 x 483 x 230mm (BxHxD)' },
+        { label: 'Afmetingen binnendeel (3,5kW)', value: '837 x 308 x 189mm (BxHxD)' },
+        { label: 'Gewicht binnenunit (3,5kW)', value: '8,7 kg' },
+        { label: 'Afmetingen buitendeel (3,5kW)', value: '717 x 495 x 230mm (BxHxD)' },
+        { label: 'Gewicht buitenunit (3,5kW)', value: '25,1 kg' },
         { label: 'Afmetingen binnendeel (5kW & 7kW)', value: '998 x 345 x 210mm (BxHxD)' },
         { label: 'Afmetingen buitendeel (5kW & 7kW)', value: '770 x 545 x 288mm (BxHxD)' }
       ]

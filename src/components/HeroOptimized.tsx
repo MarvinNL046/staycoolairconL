@@ -104,6 +104,11 @@ export default function HeroOptimized() {
         city: '',
         message: ''
       });
+      
+      // Redirect to thank you page after a short delay
+      setTimeout(() => {
+        navigate('/tot-snel');
+      }, 1000);
     } catch (error) {
       console.error('Error sending email:', error);
       toast.error('Er ging iets mis. Probeer het opnieuw of bel ons direct.');
