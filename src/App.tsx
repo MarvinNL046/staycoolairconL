@@ -18,6 +18,7 @@ import SkipToContent from './components/SkipToContent';
 import WebVitalsReporter from './components/WebVitalsReporter';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import FeedbackRibbon from './components/FeedbackRibbon';
+import LoadingSkeleton from './components/LoadingSkeleton';
 import { requestIdleCallbackPolyfill } from './utils/requestIdleCallback';
 import PerformanceOptimizer from './utils/performanceOptimizations';
 
@@ -270,7 +271,7 @@ const App = () => {
         <main id="main-content" tabIndex={-1}>
           {/* Removed "wait" mode to improve performance - no need to wait for exit animations */}
           <AnimatePresence mode="sync">
-            <Suspense fallback={<LoadingFallback />}>
+            <Suspense fallback={<LoadingSkeleton />}>
               <Routes>
           <Route path="/products/daikin/ururu-sarara" element={<UruruSararaPage />} />
           <Route path="/products/daikin/stylish" element={<StylishPage />} />
