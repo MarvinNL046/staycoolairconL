@@ -22,7 +22,7 @@ export default function MaintenanceProcedures() {
     {
       icon: Crown,
       title: 'All-Inclusive Pakket',
-      price: '15,95',
+      price: '16,-',
       features: [
         'Alles uit het Premium Pakket',
         'Directe vervanging bij defecten',
@@ -229,7 +229,7 @@ export default function MaintenanceProcedures() {
                   </ul>
                   <div className="mt-8">
                     <a
-                      href="#contact"
+                      href="https://aanmelden.staycoolairco.nl/"
                       className="block w-full text-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-900 transition-colors duration-300"
                     >
                       Kies {pkg.title}
