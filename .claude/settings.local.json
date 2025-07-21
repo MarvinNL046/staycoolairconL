@@ -19,7 +19,14 @@
       "Bash(npm run typecheck:*)",
       "Bash(mkdir:*)",
       "Bash(cp:*)",
-      "Bash(ping:*)"
+      "Bash(ping:*)",
+      "Bash(pdftotext:*)",
+      "Bash(pdfinfo:*)",
+      "Bash(pkill:*)",
+      "Bash(true)",
+      "Bash(curl:*)",
+      "Bash(claude mcp add:*)",
+      "Bash(claude mcp:*)"
     ],
     "deny": []
   },

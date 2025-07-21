@@ -1,5 +1,5 @@
-// Service Worker for StayCool Airco - v2
-const CACHE_NAME = 'staycool-v2';
+// Service Worker for StayCool Airco - v3
+const CACHE_NAME = 'staycool-v3';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -39,7 +39,26 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // For internal requests, use cache-first strategy
+  // Skip caching for JavaScript chunks and other assets to avoid version conflicts
+  const isAsset = url.pathname.includes('/assets/') || 
+                  url.pathname.endsWith('.js') || 
+                  url.pathname.endsWith('.css');
+  
+  if (isAsset) {
+    // Network-first for assets to ensure latest version
+    event.respondWith(
+      fetch(event.request)
+        .catch(err => {
+          console.error('Asset fetch failed:', err);
+          // Try cache as fallback for assets
+          return caches.match(event.request)
+            .then(response => response || new Response('', { status: 404 }));
+        })
+    );
+    return;
+  }
+
+  // For other internal requests, use cache-first strategy
   event.respondWith(
     caches.match(event.request)
       .then(response => {
@@ -54,6 +73,15 @@ self.addEventListener('fetch', event => {
           .then(response => {
             // Check if valid response
             if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+            
+            // Don't cache HTML responses for non-root paths to avoid caching error pages
+            const contentType = response.headers.get('content-type');
+            const isHtml = contentType && contentType.includes('text/html');
+            const isRootPath = url.pathname === '/' || url.pathname === '/index.html';
+            
+            if (isHtml && !isRootPath) {
               return response;
             }
             

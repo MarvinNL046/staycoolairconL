@@ -39,6 +39,10 @@ const LGMobieleAircoPage = lazy(() => import('./pages/products/lg-mobiele-airco'
 const TosotMobieleAircoPage = lazy(() => import('./pages/products/tosot-mobiele-airco'));
 const TotSnel = lazy(() => import('./pages/TotSnel'));
 
+// Manual Pages
+const LGHandleiding = lazy(() => import('./pages/manuals/LGHandleiding'));
+const TosotHandleiding = lazy(() => import('./pages/manuals/TosotHandleiding'));
+
 // Landing Pages
 const DaikinLanding = lazy(() => import('./pages/landing/DaikinLanding'));
 const LGLanding = lazy(() => import('./pages/landing/LGLanding'));
@@ -291,6 +295,10 @@ const App = () => {
                 <Route path="/voorwaarden" element={<Terms />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/onderhoud" element={<MaintenanceProcedures />} />
+
+                {/* Manual Pages */}
+                <Route path="/handleidingen/lg" element={<LGHandleiding />} />
+                <Route path="/handleidingen/tosot" element={<TosotHandleiding />} />
 
                 {/* Knowledge Base Articles */}
                 <Route path="/kennisbank/hoe-werkt-airco" element={<HoeWerktAirco />} />

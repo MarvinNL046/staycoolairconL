@@ -90,6 +90,19 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
+            <h3 className="text-white text-lg font-semibold mt-6">Handleidingen</h3>
+            <ul className="mt-4 space-y-2">
+              <li>
+                <Link to="/handleidingen/lg" className="text-gray-400 hover:text-white">
+                  LG Handleiding
+                </Link>
+              </li>
+              <li>
+                <Link to="/handleidingen/tosot" className="text-gray-400 hover:text-white">
+                  Tosot Handleiding
+                </Link>
+              </li>
+            </ul>
           </div>
           <div>
             <h3 className="text-white text-lg font-semibold">Informatie</h3>

@@ -4,6 +4,13 @@ import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { LazyMotion } from 'framer-motion';
 
+// Import chunk error handler early
+import './utils/chunkErrorHandler';
+import { initFontOptimization } from './utils/fontLoader';
+
+// Initialize font optimization
+initFontOptimization();
+
 // Polyfill for requestIdleCallback - moet als eerste voor alle browsers
 if (!('requestIdleCallback' in window)) {
   (window as any).requestIdleCallback = function(callback: any, options?: any) {

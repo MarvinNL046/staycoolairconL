@@ -461,6 +461,16 @@
   
   
   <url>
+    <loc>https://staycoolairco.nl/manuals/lghandleiding</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/manuals/tosot-handleiding</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://staycoolairco.nl/products/daiseikai-10</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
