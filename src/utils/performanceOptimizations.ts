@@ -40,10 +40,10 @@ export class PerformanceOptimizer {
   static preloadCriticalResources(): void {
     if (typeof document === 'undefined') return;
 
+    // Only preload resources that actually exist and are used
     const criticalResources = [
-      { href: '/images/logo.svg', as: 'image' },
-      { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-      { href: '/css/critical.css', as: 'style' }
+      // Logo is used in navbar
+      { href: '/images/logo.svg', as: 'image' }
     ];
 
     criticalResources.forEach(resource => {

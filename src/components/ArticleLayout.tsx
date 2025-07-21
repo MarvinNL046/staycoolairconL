@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import MetaTags from './MetaTags';
 import Breadcrumbs from './Breadcrumbs';
 
@@ -10,7 +10,7 @@ interface ArticleLayoutProps {
   publishDate: string;
   modifiedDate: string;
   author: string;
-  tags: string[];
+  tags?: string[];
 }
 
 export default function ArticleLayout({ 
@@ -20,10 +20,10 @@ export default function ArticleLayout({
   publishDate,
   modifiedDate,
   author,
-  tags 
+  tags = [] 
 }: ArticleLayoutProps) {
   return (
-    <motion.article
+    <m.article
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -55,16 +55,18 @@ export default function ArticleLayout({
           <span>Door: {author}</span>
         </div>
 
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map(tag => (
-            <span
-              key={tag}
-              className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
+        {tags && tags.length > 0 && (
+          <div className="mt-4 flex flex-wrap gap-2">
+            {tags.map(tag => (
+              <span
+                key={tag}
+                className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
       </header>
 
       <div className="mt-8">
@@ -87,6 +89,6 @@ export default function ArticleLayout({
           </a>
         </div>
       </footer>
-    </motion.article>
+    </m.article>
   );
 }

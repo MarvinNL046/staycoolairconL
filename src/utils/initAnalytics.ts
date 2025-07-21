@@ -45,50 +45,57 @@ export function initAnalytics() {
       }, { force: true });
     }
 
-    // Load GTM
+    // Load GTM only if ID is available
     const gtmId = import.meta.env.VITE_GTM_ID;
-    const gtmUrl = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
-    const gtmScript = document.createElement('script');
-    gtmScript.async = true;
-    gtmScript.src = window.trustedTypes?.createPolicy('analytics-policy', {
-      createScriptURL: (url) => url
-    })?.createScriptURL(gtmUrl) || gtmUrl;
-    document.head.appendChild(gtmScript);
+    if (gtmId && gtmId !== 'your_gtm_id') {
+      const gtmUrl = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
+      const gtmScript = document.createElement('script');
+      gtmScript.async = true;
+      gtmScript.src = window.trustedTypes?.createPolicy('analytics-policy', {
+        createScriptURL: (url) => url
+      })?.createScriptURL(gtmUrl) || gtmUrl;
+      document.head.appendChild(gtmScript);
+    }
 
-    // Load GA
+    // Load GA only if ID is available
     const gaId = import.meta.env.VITE_GA_TRACKING_ID;
-    const gaUrl = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
-    const gaScript = document.createElement('script');
-    gaScript.async = true;
-    gaScript.src = window.trustedTypes?.createPolicy('analytics-policy', {
-      createScriptURL: (url) => url
-    })?.createScriptURL(gaUrl) || gaUrl;
-    document.head.appendChild(gaScript);
+    if (gaId && gaId !== 'your_ga_tracking_id') {
+      const gaUrl = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+      const gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = window.trustedTypes?.createPolicy('analytics-policy', {
+        createScriptURL: (url) => url
+      })?.createScriptURL(gaUrl) || gaUrl;
+      document.head.appendChild(gaScript);
 
-    gaScript.onload = function() {
-      const commonParams: GtagEventParams = {
-        event_category: 'initialization',
-        event_label: 'GA4',
-        non_interaction: true,
-        metric_id: 'init',
-        metric_value: 1
+      gaScript.onload = function() {
+        const commonParams: GtagEventParams = {
+          event_category: 'initialization',
+          event_label: 'GA4',
+          non_interaction: true,
+          metric_id: 'init',
+          metric_value: 1
+        };
+
+        window.gtag('js', new Date());
+        
+        // Initialize GA4
+        window.gtag('config', gaId, {
+          ...commonParams,
+          send_to: gaId
+        });
+
+        // Initialize Google Ads if ID is available
+        const adsId = import.meta.env.VITE_GOOGLE_ADS_ID;
+        if (adsId && adsId !== 'AW-10789737434') {
+          window.gtag('config', adsId, {
+            ...commonParams,
+            event_label: 'Ads',
+            send_to: adsId
+          });
+        }
       };
-
-      window.gtag('js', new Date());
-      
-      // Initialize GA4
-      window.gtag('config', gaId, {
-        ...commonParams,
-        send_to: gaId
-      });
-
-      // Initialize Google Ads
-      window.gtag('config', import.meta.env.VITE_GOOGLE_ADS_ID, {
-        ...commonParams,
-        event_label: 'Ads',
-        send_to: import.meta.env.VITE_GOOGLE_ADS_ID
-      });
-    };
+    }
   } catch (error) {
     console.error('Failed to initialize analytics:', error);
   }
