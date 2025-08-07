@@ -31,22 +31,14 @@ self.addEventListener('install', event => {
 
 // Fetch event with better error handling
 self.addEventListener('fetch', event => {
-  // Skip caching for external resources that might cause CSP issues
+  // Skip service worker for external resources completely
   const url = new URL(event.request.url);
   const isExternal = !url.hostname.includes('staycoolairco.nl') && 
                      !url.hostname.includes('localhost');
   
-  // For external requests, just fetch without caching
+  // Let browser handle external requests natively (don't intercept)
   if (isExternal) {
-    event.respondWith(
-      fetch(event.request)
-        .catch(err => {
-          console.error('External fetch failed:', err);
-          // Return a fallback response for external resources
-          return new Response('', { status: 200 });
-        })
-    );
-    return;
+    return; // Don't call event.respondWith() - let browser handle it
   }
 
   // Skip caching for JavaScript chunks and other assets to avoid version conflicts
@@ -58,13 +50,63 @@ self.addEventListener('fetch', event => {
     // Network-only for assets to prevent cached stale versions
     event.respondWith(
       fetch(event.request)
+        .then(response => {
+          // Check if we got HTML instead of the expected asset
+          const contentType = response.headers.get('content-type') || '';
+          
+          if (response.ok) {
+            // For JS files, ensure we got JavaScript not HTML
+            if (url.pathname.endsWith('.js') && contentType.includes('text/html')) {
+              console.warn('Got HTML instead of JS for:', url.pathname);
+              return new Response('/* Asset loading error - got HTML instead of JS */', {
+                status: 200,
+                headers: { 'Content-Type': 'application/javascript' }
+              });
+            }
+            
+            // For CSS files, ensure we got CSS not HTML  
+            if (url.pathname.endsWith('.css') && contentType.includes('text/html')) {
+              console.warn('Got HTML instead of CSS for:', url.pathname);
+              return new Response('/* Asset loading error - got HTML instead of CSS */', {
+                status: 200,
+                headers: { 'Content-Type': 'text/css' }
+              });
+            }
+            
+            return response;
+          }
+          
+          // If response not ok, return appropriate fallback
+          if (url.pathname.endsWith('.js')) {
+            return new Response('/* Asset not found */', { 
+              status: 200,
+              headers: { 'Content-Type': 'application/javascript' }
+            });
+          } else if (url.pathname.endsWith('.css')) {
+            return new Response('/* Asset not found */', {
+              status: 200, 
+              headers: { 'Content-Type': 'text/css' }
+            });
+          }
+          
+          return response;
+        })
         .catch(err => {
           console.error('Asset fetch failed:', err);
-          // Don't serve stale cached assets that cause errors
-          return new Response('/* Asset fetch failed */', { 
-            status: 200,
-            headers: { 'Content-Type': 'application/javascript' }
-          });
+          // Return appropriate content type based on file extension
+          if (url.pathname.endsWith('.js')) {
+            return new Response('/* Network error loading asset */', { 
+              status: 200,
+              headers: { 'Content-Type': 'application/javascript' }
+            });
+          } else if (url.pathname.endsWith('.css')) {
+            return new Response('/* Network error loading asset */', {
+              status: 200,
+              headers: { 'Content-Type': 'text/css' }
+            });
+          }
+          
+          return new Response('', { status: 404 });
         })
     );
     return;
