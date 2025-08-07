@@ -1,32 +1,29 @@
 import fs from 'fs';
-import path from 'path';
-import pkg from 'papaparse';
-const { parse } = pkg;
 
 function generateServiceAreasSitemap() {
-  // Read the CSV file
-  const csvContent = fs.readFileSync(path.join(process.cwd(), 'public', 'service-areas.csv'), 'utf-8');
-  
-  // Parse CSV content
-  const { data } = parse(csvContent, {
-    header: true,
-    skipEmptyLines: true
-  });
+  // Only include hand-written quality location pages
+  const qualityLocations = [
+    'roermond',
+    'maastricht', 
+    'heerlen',
+    'venlo',
+    'sittard',
+    'weert',
+    'geleen',
+    'stein',
+    'landgraaf'
+  ];
 
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
-  // Add each city
-  for (const row of data) {
-    const citySlug = row.city.toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-') // Replace non-alphanumeric chars with hyphens
-      .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
-
+  // Add each quality location page
+  for (const citySlug of qualityLocations) {
     sitemap += `
   <url>
     <loc>https://staycoolairco.nl/airco-installatie/${citySlug}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>`;
   }
 
@@ -34,7 +31,7 @@ function generateServiceAreasSitemap() {
 
   // Write the sitemap
   fs.writeFileSync('public/service-areas-sitemap.xml', sitemap);
-  console.log('Service areas sitemap generated successfully!');
+  console.log('Service areas sitemap generated successfully with quality locations only!');
 }
 
 generateServiceAreasSitemap();

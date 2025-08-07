@@ -1,66 +1,23 @@
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { City, loadCitiesFromCSV, calculateRegionStats } from '../utils/cityService';
-import CityCard from '../components/CityCard';
-import RegionStats from '../components/RegionStats';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 export default function ServiceArea() {
-  const [cities, setCities] = useState<City[]>([]);
-  const [selectedRegion, setSelectedRegion] = useState<string>('all');
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
   const breadcrumbItems = [
     { label: 'Werkgebied', path: '/werkgebied' }
   ];
 
-  useEffect(() => {
-    async function fetchCities() {
-      try {
-        const citiesData = await loadCitiesFromCSV();
-        setCities(citiesData);
-        setLoading(false);
-      } catch (err) {
-        setError('Error loading cities data');
-        setLoading(false);
-      }
-    }
-
-    fetchCities();
-  }, []);
-
-  const filteredCities = selectedRegion === 'all' 
-    ? cities 
-    : cities.filter(city => city.region === selectedRegion);
-
-  const stats = calculateRegionStats(cities);
-
-  if (loading) return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-    </div>
-  );
-
-  if (error) return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-red-600 text-center">
-        <p className="text-xl font-semibold mb-2">Error</p>
-        <p>{error}</p>
-      </div>
-    </div>
-  );
-
   return (
     <>
       <Helmet>
-        <title>Werkgebied | StayCool Airco</title>
+        <title>Werkgebied | StayCool Airco - Limburg</title>
         <meta 
           name="description" 
-          content="StayCool Airco is actief in heel Limburg. Bekijk hier alle steden en gemeenten waar wij onze airco diensten aanbieden."
+          content="StayCool Airco biedt professionele airco installatie en onderhoud in heel Limburg. Ontdek onze specialistische diensten per stad met lokale expertise."
         />
+        <meta name="keywords" content="airco limburg, werkgebied staycool, airco installateur limburg, airconditioning limburg" />
+        <link rel="canonical" href="https://staycoolairco.nl/werkgebied" />
       </Helmet>
       
       <motion.div
@@ -72,14 +29,21 @@ export default function ServiceArea() {
         <div className="max-w-7xl mx-auto">
           <Breadcrumbs items={breadcrumbItems} />
           
-          <h1 className="text-4xl font-bold mb-4">Werkgebied</h1>
-          <p className="text-gray-600 mb-4">
-            StayCool Airco is actief in heel Limburg. Bekijk hieronder alle steden en gemeenten waar wij onze diensten aanbieden.
-          </p>
+          <h1 className="text-4xl font-bold mb-6">Werkgebied Limburg</h1>
+          <div className="prose max-w-none mb-8">
+            <p className="text-xl text-gray-700 leading-relaxed mb-6">
+              StayCool Airco is uw specialist voor airconditioning in heel Limburg. Met jarenlange ervaring en lokale kennis 
+              bieden wij maatwerkoplossingen voor elke stad en gemeente in onze provincie.
+            </p>
+            <p className="text-gray-600 mb-6">
+              Onze gecertificeerde F-gassen installateurs kennen de specifieke uitdagingen van elke locatie - van historische 
+              panden in Maastricht tot moderne woningen in Venlo. Ontdek hieronder onze gespecialiseerde diensten per stad.
+            </p>
+          </div>
           
-          {/* Featured Locations */}
-          <div className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Uitgelichte Locaties</h2>
+          {/* Featured Locations with Enhanced Content */}
+          <div className="mb-12">
+            <h2 className="text-3xl font-semibold mb-6 text-center">Onze Specialistische Diensten per Stad</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <Link 
                 to="/airco-installatie/roermond"
@@ -164,39 +128,61 @@ export default function ServiceArea() {
             </div>
           </div>
           
-          {/* Region Filter */}
-          <div className="mb-8">
-            <label htmlFor="region" className="block text-sm font-medium mb-2">
-              Filter op regio:
-            </label>
-            <select
-              id="region"
-              value={selectedRegion}
-              onChange={(e) => setSelectedRegion(e.target.value)}
-              className="w-full md:w-64 p-2 border rounded shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            >
-              <option value="all">Alle regio's</option>
-              <option value="Noord-Limburg">Noord-Limburg</option>
-              <option value="Midden-Limburg">Midden-Limburg</option>
-              <option value="Zuid-Limburg">Zuid-Limburg</option>
-            </select>
-          </div>
-
-          {/* Region Statistics */}
-          <RegionStats stats={stats} />
-
-          {/* Cities Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredCities.map((city, index) => (
-              <motion.div
-                key={`${city.city}-${city.postal_codes}`}
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: index * 0.05 }}
+          {/* Call to Action Section */}
+          <div className="mt-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8 text-center text-white">
+            <h2 className="text-3xl font-bold mb-4">Uw stad niet gevonden?</h2>
+            <p className="text-blue-100 mb-6 max-w-3xl mx-auto">
+              StayCool Airco bedient heel Limburg en omliggende gemeenten. Staat uw locatie er niet bij? 
+              Neem contact met ons op voor een persoonlijk adviesgesprek.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link 
+                to="/contact"
+                className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 transition-colors"
               >
-                <CityCard city={city} />
-              </motion.div>
-            ))}
+                Neem Contact Op
+              </Link>
+              <a 
+                href="tel:0462021430"
+                className="inline-flex items-center justify-center px-8 py-3 border-2 border-white text-base font-medium rounded-md text-white hover:bg-blue-600 transition-colors"
+              >
+                Bel Direct: 046 202 1430
+              </a>
+            </div>
+          </div>
+          
+          {/* Local Expertise Section */}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6 bg-gray-50 rounded-lg">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Lokale Kennis</h3>
+              <p className="text-gray-600">Onze monteurs kennen de specifieke uitdagingen van elke Limburgse gemeente.</p>
+            </div>
+            
+            <div className="text-center p-6 bg-gray-50 rounded-lg">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">F-gassen Gecertificeerd</h3>
+              <p className="text-gray-600">Al onze installateurs zijn officieel gecertificeerd voor F-gassen werkzaamheden.</p>
+            </div>
+            
+            <div className="text-center p-6 bg-gray-50 rounded-lg">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Snelle Service</h3>
+              <p className="text-gray-600">Korte reistijden binnen Limburg betekenen snelle service en lagere kosten.</p>
+            </div>
           </div>
         </div>
       </motion.div>
