@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageSquare, Calendar, Clock, CheckCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { sendEmail } from '../utils/email';
 import { trackFormSubmission, trackInteraction } from '../utils/analytics';
@@ -89,6 +89,44 @@ export default function Contact() {
           <p className="mt-4 text-xl text-gray-600">
             Neem contact op voor een vrijblijvende offerte
           </p>
+        </div>
+
+        <div className="mt-12 mb-8">
+          <div className="bg-orange-500 rounded-lg shadow-xl overflow-hidden">
+            <div className="px-6 py-8 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                <Calendar className="h-8 w-8 inline mr-2" />
+                Direct Online een Afspraak Maken
+              </h3>
+              <p className="text-white/90 mb-6">
+                Kies zelf uw datum en tijd voor een gratis adviesgesprek aan huis
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+                <div className="flex items-center text-white">
+                  <CheckCircle className="h-5 w-5 mr-2" />
+                  <span>Direct bevestiging</span>
+                </div>
+                <div className="flex items-center text-white">
+                  <Clock className="h-5 w-5 mr-2" />
+                  <span>Kies uw eigen tijd</span>
+                </div>
+                <div className="flex items-center text-white">
+                  <Phone className="h-5 w-5 mr-2" />
+                  <span>Gratis advies</span>
+                </div>
+              </div>
+              <a
+                href="https://afspraken.staycoolairco.nl"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackInteraction('contact', 'click_appointment')}
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-lg font-medium rounded-md text-orange-500 bg-white hover:bg-gray-100 transition-colors duration-300"
+              >
+                <Calendar className="h-6 w-6 mr-3" />
+                Plan nu een afspraak
+              </a>
+            </div>
+          </div>
         </div>
 
         <div className="mt-20 grid grid-cols-1 gap-8 lg:grid-cols-2">

@@ -169,16 +169,18 @@ export default function HeroOptimized() {
             {/* Enhanced CTA section with dual buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="tel:0462021430"
-                onClick={() => trackInteraction('hero', 'click', 'call_button')}
+                href="https://afspraken.staycoolairco.nl"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackInteraction('hero', 'click', 'appointment_button')}
                 className="group inline-flex flex-col items-center justify-center px-8 sm:px-10 py-4 sm:py-5 border border-transparent text-base font-medium rounded-lg text-white bg-orange-500 hover:bg-orange-600 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10 flex items-center">
                   <Phone className="h-5 w-5 mr-3 animate-pulse" />
-                  <span className="text-lg sm:text-xl font-bold">Gratis Advies aan Huis</span>
+                  <span className="text-lg sm:text-xl font-bold">Plan Direct een Afspraak</span>
                 </div>
-                <span className="relative z-10 text-sm mt-1">Bel direct: 046 202 1430</span>
+                <span className="relative z-10 text-sm mt-1">Kies zelf uw datum & tijd</span>
               </a>
               
               <a

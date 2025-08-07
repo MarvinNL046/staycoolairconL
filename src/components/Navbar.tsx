@@ -141,17 +141,32 @@ export default function Navbar() {
             >
               Contact
             </Link>
-            <a 
-              href="tel:0462021430" 
-              className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md transition-colors duration-300 ${
-                isScrolled || !isHomePage || isOpen
-                  ? 'bg-orange-500 text-white hover:bg-orange-600'
-                  : 'bg-white text-orange-500 hover:bg-orange-50'
-              }`}
-            >
-              <Phone className="h-4 w-4 mr-2" />
-              046 202 1430
-            </a>
+            <div className="flex items-center space-x-3">
+              <a 
+                href="https://afspraken.staycoolairco.nl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md transition-colors duration-300 ${
+                  isScrolled || !isHomePage || isOpen
+                    ? 'bg-orange-500 text-white hover:bg-orange-600'
+                    : 'bg-white text-orange-500 hover:bg-orange-50'
+                }`}
+              >
+                <Calendar className="h-4 w-4 mr-2" />
+                Plan een afspraak
+              </a>
+              <a 
+                href="tel:0462021430" 
+                className={`inline-flex items-center px-4 py-2 border text-sm font-medium rounded-md transition-colors duration-300 ${
+                  isScrolled || !isHomePage || isOpen
+                    ? 'border-gray-300 text-gray-700 hover:text-orange-500 hover:border-orange-500'
+                    : 'border-white/50 text-white hover:bg-white/10'
+                }`}
+              >
+                <Phone className="h-4 w-4 mr-2" />
+                046 202 1430
+              </a>
+            </div>
           </div>
 
           <div className="md:hidden flex items-center space-x-4 relative z-50">
@@ -261,13 +276,25 @@ export default function Navbar() {
           >
             Contact
           </Link>
-          <a 
-            href="tel:0462021430" 
-            className="block px-4 py-2.5 rounded-md bg-orange-500 text-white hover:bg-orange-600 active:bg-orange-700"
-          >
-            <Phone className="h-4 w-4 inline mr-2" />
-            046 202 1430
-          </a>
+          <div className="space-y-2 pt-2">
+            <a 
+              href="https://afspraken.staycoolairco.nl"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block px-4 py-2.5 rounded-md bg-orange-500 text-white hover:bg-orange-600 active:bg-orange-700"
+              onClick={() => setIsOpen(false)}
+            >
+              <Calendar className="h-4 w-4 inline mr-2" />
+              Plan een afspraak
+            </a>
+            <a 
+              href="tel:0462021430" 
+              className="block px-4 py-2.5 rounded-md border border-gray-300 text-gray-700 hover:text-orange-500 hover:border-orange-500"
+            >
+              <Phone className="h-4 w-4 inline mr-2" />
+              046 202 1430
+            </a>
+          </div>
         </div>
       </div>
     </nav>
