@@ -1,5 +1,5 @@
-// Service Worker for StayCool Airco - v3
-const CACHE_NAME = 'staycool-v3';
+// Service Worker for StayCool Airco - v4 (Fixed)  
+const CACHE_NAME = 'staycool-v4';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -45,14 +45,16 @@ self.addEventListener('fetch', event => {
                   url.pathname.endsWith('.css');
   
   if (isAsset) {
-    // Network-first for assets to ensure latest version
+    // Network-only for assets to prevent cached stale versions
     event.respondWith(
       fetch(event.request)
         .catch(err => {
           console.error('Asset fetch failed:', err);
-          // Try cache as fallback for assets
-          return caches.match(event.request)
-            .then(response => response || new Response('', { status: 404 }));
+          // Don't serve stale cached assets that cause errors
+          return new Response('/* Asset fetch failed */', { 
+            status: 200,
+            headers: { 'Content-Type': 'application/javascript' }
+          });
         })
     );
     return;

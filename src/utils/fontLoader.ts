@@ -92,7 +92,11 @@ export function initFontOptimization() {
   if (typeof window !== 'undefined') {
     window.addEventListener('error', (event) => {
       // Suppress font decoding errors
-      if (event.message && event.message.includes('Failed to decode downloaded font')) {
+      if (event.message && (
+        event.message.includes('Failed to decode downloaded font') ||
+        event.message.includes('OTS parsing error') ||
+        event.message.includes('invalid sfntVersion')
+      )) {
         event.preventDefault();
         console.warn('Font decoding error suppressed:', event.message);
       }

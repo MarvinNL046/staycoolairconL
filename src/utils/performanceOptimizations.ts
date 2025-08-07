@@ -43,7 +43,7 @@ export class PerformanceOptimizer {
     // Only preload resources that actually exist and are used
     const criticalResources = [
       // Logo is used in navbar
-      { href: '/images/logo.svg', as: 'image' }
+      { href: '/images/staycoolairco_logo.png', as: 'image' }
     ];
 
     criticalResources.forEach(resource => {

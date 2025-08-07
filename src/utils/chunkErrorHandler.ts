@@ -16,11 +16,14 @@ const failedChunks = new Set<string>();
 // Handle chunk loading errors
 export function handleChunkError(error: Error): void {
   const chunkFailedMessage = /Loading chunk [\d]+ failed/;
+  const syntaxErrorMessage = /Unexpected token '<'/;
   const isChunkError = error.name === 'ChunkLoadError' || 
-                       chunkFailedMessage.test(error.message);
+                       chunkFailedMessage.test(error.message) ||
+                       syntaxErrorMessage.test(error.message);
 
   if (isChunkError) {
-    const chunkId = error.message.match(/chunk (\d+)/)?.[1] || 'unknown';
+    const chunkId = error.message.match(/chunk (\d+)/)?.[1] || 
+                    (syntaxErrorMessage.test(error.message) ? 'syntax-error' : 'unknown');
     
     // Check if we've already tried to recover from this chunk
     if (failedChunks.has(chunkId)) {

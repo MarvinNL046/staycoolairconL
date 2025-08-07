@@ -24,8 +24,6 @@ export default function BrandLogos() {
   // Brands that should be displayed as text
   const textOnlyBrands = ['Mitsubishi Heavy', 'Tosot'];
 
-  // Debug: Log the brand names and their logo paths
-  console.log('Brand logos:', brandLogos);
 
   return (
     <section className="py-16 bg-gray-50">
