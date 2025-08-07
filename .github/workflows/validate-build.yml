@@ -1,0 +1,50 @@
+name: Validate Build
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  validate-build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build project
+      run: npm run build
+      
+    - name: Validate build consistency
+      run: npm run validate:build
+      
+    - name: Check for cache issues
+      run: |
+        echo "Checking for potential cache issues..."
+        if grep -r "logo\.svg" dist/ --include="*.html" --include="*.js"; then
+          echo "❌ Found references to old logo.svg"
+          exit 1
+        fi
+        if find dist/assets -name "*.js" | wc -l | grep -q "^0$"; then
+          echo "❌ No JS files found in assets"
+          exit 1
+        fi
+        echo "✅ No cache issues detected"
+        
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-artifacts
+        path: dist/
+        retention-days: 1

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:brands && npm run optimize-images && npm run generate-sitemaps && npm run build:clean && npm run build:client",
+    "build": "npm run build:brands && npm run optimize-images && npm run generate-sitemaps && npm run build:clean && npm run build:client && npm run validate:build",
     "build:clean": "rimraf dist",
     "build:client": "tsc && vite build",
     "build:prod": "cross-env NODE_ENV=production npm run build",
@@ -16,7 +16,9 @@
     "optimize-images": "node scripts/optimize-product-images.js",
     "analyze-bundle": "npx tsx src/scripts/analyzeBundleSize.ts",
     "analyze-schema": "npx tsx src/scripts/runSchemaAudit.ts",
-    "performance-audit": "npm run analyze-bundle && npm run analyze-schema"
+    "performance-audit": "npm run analyze-bundle && npm run analyze-schema",
+    "validate:build": "node scripts/validate-build.cjs",
+    "cache:clear": "node scripts/clear-cache.cjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

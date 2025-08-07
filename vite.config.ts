@@ -7,6 +7,10 @@ export default defineConfig({
     port: 5173,
     strictPort: true,
     headers: {
+      // Prevent caching during development
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+      'Pragma': 'no-cache',
+      'Expires': '0',
       'Content-Security-Policy': `
         default-src 'self';
         script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https://www.google.com https://connect.facebook.net;

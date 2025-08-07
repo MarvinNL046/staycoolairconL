@@ -1,21 +1,31 @@
-// Service Worker for StayCool Airco - v4 (Fixed)  
-const CACHE_NAME = 'staycool-v4';
+// Service Worker for StayCool Airco - Auto-versioned
+const BUILD_VERSION = new Date().getTime(); // Auto-generated timestamp
+const CACHE_NAME = `staycool-v${BUILD_VERSION}`;
 const urlsToCache = [
   '/',
   '/index.html',
   '/manifest.json'
 ];
 
-// Install event - skip waiting to activate immediately
+// Install event with cache manifest validation
 self.addEventListener('install', event => {
   self.skipWaiting();
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('Opened cache');
+    Promise.all([
+      // Pre-cache core assets
+      caches.open(CACHE_NAME).then(cache => {
+        console.log('Opened cache:', CACHE_NAME);
         return cache.addAll(urlsToCache);
-      })
-      .catch(err => console.error('Cache open failed:', err))
+      }),
+      // Load and validate cache manifest
+      fetch('/cache-manifest.json')
+        .then(response => response.json())
+        .then(manifest => {
+          console.log('Cache manifest loaded:', manifest.buildVersion);
+          self.cacheManifest = manifest;
+        })
+        .catch(err => console.warn('Cache manifest not found:', err))
+    ])
   );
 });
 
