@@ -5,10 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:brands && npm run optimize-images && npm run generate-sitemaps && npm run build:clean && npm run update-sw-version && npm run build:client && npm run validate:build",
+    "build": "npm run build:brands && npm run optimize-images && npm run generate-sitemaps && npm run build:clean && npm run build:client && npm run validate:build",
     "build:clean": "rimraf dist",
     "build:client": "tsc && vite build",
-    "update-sw-version": "node scripts/update-sw-version.js",
     "build:prod": "cross-env NODE_ENV=production npm run build",
     "build:brands": "node scripts/build-brands-data.js && node scripts/bundle-brands-data.js",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",

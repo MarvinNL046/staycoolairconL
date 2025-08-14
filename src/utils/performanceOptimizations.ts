@@ -57,18 +57,15 @@ export class PerformanceOptimizer {
     });
   }
 
-  // Implement service worker for caching
-  static registerServiceWorker(): void {
+  // Unregister any existing service workers
+  static unregisterServiceWorker(): void {
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
 
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          console.log('SW registered: ', registration);
-        })
-        .catch(registrationError => {
-          console.log('SW registration failed: ', registrationError);
-        });
+    navigator.serviceWorker.getRegistrations().then(registrations => {
+      registrations.forEach(registration => {
+        registration.unregister();
+        console.log('Service Worker unregistered');
+      });
     });
   }
 
@@ -258,7 +255,7 @@ export class PerformanceOptimizer {
     this.optimizeFontLoading();
     this.deferNonCriticalJS();
     this.enableImageLazyLoading();
-    this.registerServiceWorker();
+    this.unregisterServiceWorker(); // Unregister instead of register
   }
 }
 
