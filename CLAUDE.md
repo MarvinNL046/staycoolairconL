@@ -19,13 +19,19 @@ npm run preview      # Preview production build locally
 ```bash
 npm run build        # Full production build (includes brands data, image optimization, sitemaps)
 npm run build:prod   # Production build with NODE_ENV=production
+npm run validate:build  # Validate build consistency and check for cache issues
 ```
 
 ### Performance Analysis
 ```bash
 npm run analyze-bundle      # Analyze bundle sizes
-npm run analyze-schema      # Audit schema markup
+npm run analyze-schema      # Audit schema markup  
 npm run performance-audit   # Run both analyses
+```
+
+### Cache Management
+```bash
+npm run cache:clear         # Clear all cache directories (Vite, TypeScript, dist)
 ```
 
 ### Individual Build Steps
@@ -42,6 +48,7 @@ npm run generate-sitemaps   # Generate all sitemaps
 - Routes organized by type: main pages, product details, knowledge base, location landing pages, blog
 - Smart route preloading based on current navigation context
 - AnimatePresence used for page transitions
+- Chunk error handler (`/src/utils/chunkErrorHandler.ts`) recovers from deployment mismatches
 
 ### Component Patterns
 - **Optimized Components**: Performance-critical components have "Optimized" versions (e.g., HeroOptimized)
@@ -57,9 +64,10 @@ npm run generate-sitemaps   # Generate all sitemaps
 
 ### API Integrations
 - **EmailJS**: Primary form submission with webhook backup to LeadConnectorHQ
-- **Google Analytics**: Dual tracking IDs with throttled event tracking
+- **Google Analytics**: Dual tracking IDs (GA4) with throttled event tracking
 - **Google Maps**: Interactive service area maps
 - **Stripe**: Payment processing (configured but limited usage)
+- **Facebook Pixel**: Conversion tracking
 - **Environment Variables**: All API keys stored in `.env` files
 
 ### Performance Optimizations
@@ -69,6 +77,7 @@ npm run generate-sitemaps   # Generate all sitemaps
 - Skeleton loaders without animations for better perceived performance
 - Image optimization pipeline in build process
 - Inline assets under 4KB
+- Service Worker with auto-versioning and intelligent caching strategies
 
 ### SEO Implementation
 - Dynamic meta tags based on page context (location, product, service)
@@ -76,6 +85,7 @@ npm run generate-sitemaps   # Generate all sitemaps
 - SEO-friendly URL structure with keywords
 - Automatic sitemap generation for all content types
 - Voice search optimization with speakable content
+- Quality-focused location pages (9 main cities) instead of mass-generated content
 
 ### Build Pipeline
 1. Compile TypeScript brand data to JavaScript
@@ -83,12 +93,20 @@ npm run generate-sitemaps   # Generate all sitemaps
 3. Optimize product images (WebP format)
 4. Generate sitemaps (products, service areas, blog, main)
 5. TypeScript compilation and Vite bundling
+6. Build validation to prevent cache issues
 
 ### Security
-- Comprehensive Content Security Policy headers
+- Comprehensive Content Security Policy headers configured in Vite
 - Environment variables for sensitive data
 - Input validation on all forms
 - No hardcoded credentials in source
+- Service Worker validates content types to prevent HTML-as-JS errors
+
+### CI/CD & Deployment
+- GitHub Actions workflow validates builds on push/PR
+- Automated build consistency checks
+- Deployed on Netlify with automatic builds
+- Cache manifest generation for version tracking
 
 ## Key Files & Directories
 
@@ -98,6 +116,8 @@ npm run generate-sitemaps   # Generate all sitemaps
 - `/src/data/` - Static data files (products, brands, service areas)
 - `/scripts/` - Build and optimization scripts
 - `/public/` - Static assets and sitemaps
+- `/public/sw.js` - Service Worker with auto-versioning
+- `/src/utils/chunkErrorHandler.ts` - Handles chunk loading errors
 
 ## Development Patterns
 
@@ -121,3 +141,4 @@ npm run generate-sitemaps   # Generate all sitemaps
 - Minimize bundle size by checking imports
 - Monitor performance with built-in tools
 - Test on slow connections and devices
+- Run `npm run validate:build` after builds to ensure cache consistency

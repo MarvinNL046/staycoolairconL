@@ -1,10 +1,17 @@
 // Service Worker for StayCool Airco - Auto-versioned
-const BUILD_VERSION = new Date().getTime(); // Auto-generated timestamp
+const BUILD_VERSION = 'BUILD_VERSION_PLACEHOLDER'; // Will be replaced during build
 const CACHE_NAME = `staycool-v${BUILD_VERSION}`;
 const urlsToCache = [
   '/',
   '/index.html',
   '/manifest.json'
+];
+
+// Network-first for HTML, cache-first for assets
+const NETWORK_FIRST_ROUTES = [
+  '/',
+  '/index.html',
+  /\/[^.]*$/, // All routes without file extension (SPA routes)
 ];
 
 // Install event with cache manifest validation
@@ -107,6 +114,36 @@ self.addEventListener('fetch', event => {
           }
           
           return new Response('', { status: 404 });
+        })
+    );
+    return;
+  }
+
+  // Check if this should be network-first
+  const shouldUseNetworkFirst = NETWORK_FIRST_ROUTES.some(route => {
+    if (route instanceof RegExp) {
+      return route.test(url.pathname);
+    }
+    return url.pathname === route;
+  });
+
+  // Network-first for HTML, cache-first for other assets
+  if (shouldUseNetworkFirst) {
+    event.respondWith(
+      fetch(event.request)
+        .then(response => {
+          // Only cache successful responses
+          if (response && response.status === 200 && response.type === 'basic') {
+            const responseToCache = response.clone();
+            caches.open(CACHE_NAME)
+              .then(cache => cache.put(event.request, responseToCache))
+              .catch(err => console.error('Cache put failed:', err));
+          }
+          return response;
+        })
+        .catch(() => {
+          // Fall back to cache if network fails
+          return caches.match(event.request);
         })
     );
     return;
