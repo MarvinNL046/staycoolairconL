@@ -7,9 +7,13 @@ import { LazyMotion } from 'framer-motion';
 // Import chunk error handler early
 import './utils/chunkErrorHandler';
 import { initFontOptimization } from './utils/fontLoader';
+import { AppRecovery } from './utils/appRecovery';
 
 // Initialize font optimization
 initFontOptimization();
+
+// Initialize app recovery mechanisms
+AppRecovery.initializeRecovery();
 
 // Polyfill for requestIdleCallback - moet als eerste voor alle browsers
 if (!('requestIdleCallback' in window)) {
@@ -47,14 +51,23 @@ if (!container) {
 
 const root = createRoot(container);
 
-root.render(
-  <StrictMode>
-    <BrowserRouter>
-      <HelmetProvider>
-        <LazyMotion features={loadFeatures} strict>
-          <App />
-        </LazyMotion>
-      </HelmetProvider>
-    </BrowserRouter>
-  </StrictMode>
-);
+// Wrap render in try-catch for additional safety
+try {
+  root.render(
+    <StrictMode>
+      <BrowserRouter>
+        <HelmetProvider>
+          <LazyMotion features={loadFeatures} strict>
+            <App />
+          </LazyMotion>
+        </HelmetProvider>
+      </BrowserRouter>
+    </StrictMode>
+  );
+  
+  // Reset retry count on successful render
+  AppRecovery.resetRetryCount();
+} catch (error) {
+  console.error('Failed to render app:', error);
+  AppRecovery.handleLoadingError();
+}

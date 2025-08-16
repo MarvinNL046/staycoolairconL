@@ -19,6 +19,7 @@ import WebVitalsReporter from './components/WebVitalsReporter';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import FeedbackRibbon from './components/FeedbackRibbon';
 import LoadingSkeleton from './components/LoadingSkeleton';
+import LoadingFallbackWithTimeout from './components/LoadingFallbackWithTimeout';
 import { requestIdleCallbackPolyfill } from './utils/requestIdleCallback';
 import PerformanceOptimizer from './utils/performanceOptimizations';
 
@@ -146,20 +147,18 @@ const EnergiezuinigeAircoLimburg = lazy(() => import('./pages/articles/energiezu
 const AircoVerwarmingKostenBesparing = lazy(() => import('./pages/AircoVerwarmingKostenBesparing'));
 const AircoVerwarmingVoordelen = lazy(() => import('./pages/articles/airco-verwarming-voordelen'));
 
-// Loading fallback component with simplified skeleton UI (no animations)
+// Loading fallback component with timeout and auto-reload
 const LoadingFallback = React.memo(() => (
-  <div className="min-h-screen flex items-center justify-center bg-white">
-    <div className="space-y-8 w-full max-w-7xl mx-auto px-4">
-      {/* Skeleton header - static without animation */}
-      <div className="h-8 bg-gray-200 rounded w-1/3"></div>
-      {/* Skeleton content - static without animation */}
-      <div className="space-y-4">
-        <div className="h-4 bg-gray-200 rounded w-full"></div>
-        <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-        <div className="h-4 bg-gray-200 rounded w-4/6"></div>
-      </div>
-    </div>
-  </div>
+  <LoadingFallbackWithTimeout 
+    timeout={5000}
+    onTimeout={() => {
+      console.warn('Page loading timeout - will auto-reload');
+      // Track this event for monitoring
+      if (typeof trackError === 'function') {
+        trackError('loading_timeout', 'Page took too long to load');
+      }
+    }}
+  />
 ));
 
 // More efficient preloading with requestIdleCallback

@@ -78,23 +78,70 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          flex-direction: column;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
-        .initial-loader::after {
-          content: '';
+        .loader-spinner {
           width: 40px;
           height: 40px;
           border: 4px solid #f3f3f3;
           border-top: 4px solid #2563eb;
           border-radius: 50%;
           animation: spin 1s linear infinite;
+          margin-bottom: 20px;
+        }
+        .loader-text {
+          color: #6b7280;
+          font-size: 14px;
+          margin-top: 10px;
+          display: none;
+        }
+        .loader-text.show {
+          display: block;
         }
         @keyframes spin {
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
         }
       </style>
-      <div class="initial-loader"></div>
+      <div class="initial-loader">
+        <div class="loader-spinner"></div>
+        <div class="loader-text" id="loader-text">Even geduld alstublieft...</div>
+      </div>
     </div>
+    
+    <!-- Inline script for immediate loading feedback -->
+    <script>
+      // Show loading text after 2 seconds
+      setTimeout(function() {
+        var loaderText = document.getElementById('loader-text');
+        if (loaderText) loaderText.classList.add('show');
+      }, 2000);
+      
+      // Auto-refresh after 10 seconds if app hasn't loaded
+      var loadTimeout = setTimeout(function() {
+        console.warn('App failed to load in time, reloading...');
+        
+        // Clear caches first
+        if ('caches' in window) {
+          caches.keys().then(function(names) {
+            return Promise.all(names.map(function(name) {
+              return caches.delete(name);
+            }));
+          }).then(function() {
+            window.location.reload(true);
+          });
+        } else {
+          window.location.reload(true);
+        }
+      }, 10000);
+      
+      // Clear timeout when app loads successfully
+      window.addEventListener('DOMContentLoaded', function() {
+        clearTimeout(loadTimeout);
+      });
+    </script>
+    
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
