@@ -22,6 +22,7 @@ import LoadingSkeleton from './components/LoadingSkeleton';
 import LoadingFallbackWithTimeout from './components/LoadingFallbackWithTimeout';
 import { requestIdleCallbackPolyfill } from './utils/requestIdleCallback';
 import PerformanceOptimizer from './utils/performanceOptimizations';
+import { Chatbot } from './components/Chatbot';
 
 // Lazy load all pages
 const Home = lazy(() => import('./pages/Home'));
@@ -406,6 +407,7 @@ const App = () => {
           </AnimatePresence>
         </main>
         <BackToTop />
+        <Chatbot />
         <AnnouncementBar />
         <Footer />
         <CookieConsentLite />
