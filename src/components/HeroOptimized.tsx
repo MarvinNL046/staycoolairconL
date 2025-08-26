@@ -4,6 +4,8 @@ import { sendEmail } from '../utils/email';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import { trackInteraction, trackEvent } from '../utils/analytics';
+import { trackPixelFormSubmission } from '../utils/facebook';
+import { trackAPIFormSubmission } from '../utils/conversionsAPI';
 
 // Text carousel component for rotating headlines with typewriter effect
 function TextCarousel() {
@@ -95,6 +97,13 @@ export default function HeroOptimized() {
         form_name: 'hero_form',
         form_location: 'hero_section'
       });
+      
+      // Track Facebook Pixel conversion (client-side) and get event ID
+      const eventId = trackPixelFormSubmission('hero_form', true);
+      
+      // Track with Conversions API (server-side) using same event ID for deduplication
+      console.log('Hero form: Tracking with Conversions API...');
+      trackAPIFormSubmission('hero_form', formData, 1650, eventId).catch(console.error);
 
       toast.success('Bedankt voor uw aanvraag! We nemen spoedig contact met u op.');
       setFormData({

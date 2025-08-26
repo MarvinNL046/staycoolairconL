@@ -3,6 +3,8 @@ import { m } from 'framer-motion';
 import { Phone, Mail, MapPin, MessageSquare, Send } from 'lucide-react';
 import { sendEmail } from '../../utils/email';
 import { trackFormSubmission, trackInteraction } from '../../utils/analytics';
+import { trackPixelFormSubmission } from '../../utils/facebook';
+import { trackAPIFormSubmission } from '../../utils/conversionsAPI';
 import toast, { Toaster } from 'react-hot-toast';
 
 interface FormData {
@@ -67,6 +69,13 @@ export default function ProductLandingContact({
 
       // Track successful form submission
       trackFormSubmission('landing_contact_form', true);
+      
+      // Track Facebook Pixel conversion (client-side) and get event ID
+      const eventId = trackPixelFormSubmission('landing_contact_form', true);
+      
+      // Track with Conversions API (server-side) using same event ID for deduplication
+      console.log('Landing form: Tracking with Conversions API...');
+      trackAPIFormSubmission('landing_contact_form', formData, 1650, eventId).catch(console.error);
 
       toast.success('Bericht succesvol verzonden! We nemen zo spoedig mogelijk contact met u op.');
       
