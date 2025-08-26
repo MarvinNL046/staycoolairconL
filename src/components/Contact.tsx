@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { sendEmail } from '../utils/email';
 import { trackFormSubmission, trackInteraction } from '../utils/analytics';
 import { trackPixelFormSubmission } from '../utils/facebook';
+import { trackAPIFormSubmission } from '../utils/conversionsAPI';
 import toast, { Toaster } from 'react-hot-toast';
 import { requestIdleCallbackPolyfill } from '../utils/requestIdleCallback';
 
@@ -54,8 +55,11 @@ export default function Contact() {
       // Track successful form submission
       trackFormSubmission('contact_form', true);
       
-      // Track Facebook Pixel conversion
+      // Track Facebook Pixel conversion (client-side)
       trackPixelFormSubmission('contact_form', true);
+      
+      // Track with Conversions API (server-side)
+      trackAPIFormSubmission('contact_form', formData).catch(console.error);
 
       // Show success message briefly before redirecting
       toast.success('Bericht succesvol verzonden!');
