@@ -46,21 +46,52 @@
   <div id="result"></div>
   
   <script>
+    // Calculate Event Match Quality score
+    function calculateEMQ(userData) {
+      let score = 0;
+      const weights = {
+        em: 2,      // email
+        ph: 2,      // phone
+        fn: 1,      // first name
+        ln: 1,      // last name
+        ct: 0.5,    // city
+        st: 0.5,    // state
+        zp: 0.5,    // zip
+        country: 0.5,
+        external_id: 1.5,
+        fbp: 0.5,   // browser ID
+        fbc: 1,     // click ID
+      };
+      
+      Object.entries(weights).forEach(([field, weight]) => {
+        if (userData[field]) {
+          score += weight;
+        }
+      });
+      
+      return Math.min(score, 10); // Cap at 10
+    }
+    
     async function sendTestEvent() {
       const resultDiv = document.getElementById('result');
       resultDiv.innerHTML = '<p>Sending test event...</p>';
       
+      // Generate test event with high quality data
+      const eventId = `test_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       const testData = {
         event_name: 'Lead',
         event_time: Math.floor(Date.now() / 1000),
-        event_id: `test_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        event_id: eventId,
         user_data: {
           em: 'f660ab912ec121d1b1e928a0bb4bc61b15f5ad44d5efdc4e1c92a25e99b8e44a', // test@example.com hashed
-          ph: '4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5', // test phone hashed
-          fn: '1a79a4d60de6718e8e5b326e338ae533c92fb05de7e57ecafbdd8b5c1e21b3e5', // test first name hashed
-          ln: '3b45c993ffed5587e9d60d88bd2c327d9c60fb3e0254a9e1a70e1c2d78e42485', // test last name hashed
-          ct: '65c74c15a686187bb6bbf9958f494fc6b80068034a659a9ad44991b08c58f2d2', // test city hashed
+          ph: '0c2f66a69420954c6b893c2afaae3dc3de0e5a4e7871026969ebcd637f0d3ab9', // +31612345678 hashed
+          fn: '0b14d501a594442a01c6859541bcb3e8164d183d32937b851835442f69d5c94e', // john hashed
+          ln: '96d9632f363564cc3032521409cf22a852f2032eec099ed5967c0d000cec607a', // doe hashed
+          ct: 'cc0dff72a14b80e4b32e387e1b917b8e4c2709b21c5cf5907cf5c962eebe70f2', // maastricht hashed
+          st: '4f877a042c6b5d6f15a69b4c4e95bd39f8863c0b6a3faea88bb088cf7cf30077', // limburg hashed
+          zp: '96821dc6c23bf916f51e821c64c8c046cbf9c03e659ad0a13c6f8a5afcd33275', // 6211 hashed
           country: '5f8dd236f4f71fa24c00f6e27623dc9b298fae2f8a640485cbf019de7b543f12', // nl hashed
+          external_id: '9b9c5b6bb6c7b1e3b9e0b1b7b5b1b5b9', // test external id hashed
           client_ip_address: '', // Will be set by server
           client_user_agent: navigator.userAgent,
           fbp: 'fb.1.1558571054389.1098115397',
@@ -75,6 +106,12 @@
         action_source: 'website',
         event_source_url: window.location.href
       };
+      
+      // Calculate Event Match Quality Score
+      const emqScore = calculateEMQ(testData.user_data);
+      
+      console.log('Test event data:', testData);
+      console.log('Event Match Quality Score:', emqScore);
       
       try {
         const response = await fetch('/.netlify/functions/facebook-conversion', {
@@ -93,7 +130,19 @@
             <p>Event sent successfully to Facebook Conversions API.</p>
             <h4>Response:</h4>
             <pre>${JSON.stringify(result, null, 2)}</pre>
-            <p>Now check Facebook Events Manager to see if the event was received.</p>
+            <h4>Event Quality Metrics:</h4>
+            <ul>
+              <li><strong>Event ID:</strong> ${eventId}</li>
+              <li><strong>Event Freshness:</strong> Real-time (0 seconds)</li>
+              <li><strong>Event Match Quality Score:</strong> ${emqScore}/10 ${emqScore >= 6 ? '✅' : '⚠️ (Target: 6.0+)'}</li>
+              <li><strong>User Data Fields:</strong> ${Object.keys(testData.user_data).filter(k => k !== 'client_ip_address' && k !== 'client_user_agent').length}</li>
+            </ul>
+            <p>Now check Facebook Events Manager to verify:</p>
+            <ol>
+              <li>Event was received in "Test Events" tab</li>
+              <li>Event Match Quality score in "Overview"</li>
+              <li>Deduplication rate if sending from both Pixel and API</li>
+            </ol>
           `;
         } else {
           resultDiv.innerHTML = `
