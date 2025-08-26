@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Facebook Conversions API</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+    button {
+      background: #1877f2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #166fe5;
+    }
+    pre {
+      background: #f3f4f6;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    .success {
+      color: #059669;
+    }
+    .error {
+      color: #dc2626;
+    }
+  </style>
+</head>
+<body>
+  <h1>Test Facebook Conversions API</h1>
+  <p>Click the button below to send a test event to the Conversions API:</p>
+  
+  <button onclick="sendTestEvent()">Send Test Event</button>
+  
+  <div id="result"></div>
+  
+  <script>
+    async function sendTestEvent() {
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = '<p>Sending test event...</p>';
+      
+      const testData = {
+        event_name: 'Lead',
+        event_time: Math.floor(Date.now() / 1000),
+        event_id: `test_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        user_data: {
+          em: 'f660ab912ec121d1b1e928a0bb4bc61b15f5ad44d5efdc4e1c92a25e99b8e44a', // test@example.com hashed
+          ph: '4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5', // test phone hashed
+          fn: '1a79a4d60de6718e8e5b326e338ae533c92fb05de7e57ecafbdd8b5c1e21b3e5', // test first name hashed
+          ln: '3b45c993ffed5587e9d60d88bd2c327d9c60fb3e0254a9e1a70e1c2d78e42485', // test last name hashed
+          ct: '65c74c15a686187bb6bbf9958f494fc6b80068034a659a9ad44991b08c58f2d2', // test city hashed
+          country: '5f8dd236f4f71fa24c00f6e27623dc9b298fae2f8a640485cbf019de7b543f12', // nl hashed
+          client_ip_address: '', // Will be set by server
+          client_user_agent: navigator.userAgent,
+          fbp: 'fb.1.1558571054389.1098115397',
+          fbc: 'fb.1.1554763741205.AbCdEfGhIjKlMnOpQrStUvWxYz1234567890'
+        },
+        custom_data: {
+          value: 1650.0,
+          currency: 'EUR',
+          content_name: 'test_form',
+          content_category: 'airco_installation'
+        },
+        action_source: 'website',
+        event_source_url: window.location.href
+      };
+      
+      try {
+        const response = await fetch('/.netlify/functions/facebook-conversion', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(testData)
+        });
+        
+        const result = await response.json();
+        
+        if (response.ok) {
+          resultDiv.innerHTML = `
+            <h3 class="success">✅ Success!</h3>
+            <p>Event sent successfully to Facebook Conversions API.</p>
+            <h4>Response:</h4>
+            <pre>${JSON.stringify(result, null, 2)}</pre>
+            <p>Now check Facebook Events Manager to see if the event was received.</p>
+          `;
+        } else {
+          resultDiv.innerHTML = `
+            <h3 class="error">❌ Error</h3>
+            <p>Failed to send event.</p>
+            <h4>Error Details:</h4>
+            <pre>${JSON.stringify(result, null, 2)}</pre>
+          `;
+        }
+      } catch (error) {
+        resultDiv.innerHTML = `
+          <h3 class="error">❌ Network Error</h3>
+          <p>Failed to connect to the function.</p>
+          <h4>Error:</h4>
+          <pre>${error.message}</pre>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>

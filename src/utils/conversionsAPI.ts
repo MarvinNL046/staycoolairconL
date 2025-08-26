@@ -4,6 +4,7 @@
 interface ConversionEvent {
   event_name: string;
   event_time: number;
+  event_id?: string;
   user_data: {
     email?: string;
     phone?: string;
@@ -98,7 +99,8 @@ export const sendConversionEvent = async (
     currency?: string;
     contentName?: string;
     contentCategory?: string;
-  }
+  },
+  providedEventId?: string
 ) => {
   console.log('Sending conversion event:', eventName, userData, customData);
   
@@ -119,9 +121,13 @@ export const sendConversionEvent = async (
       fbp,
     };
     
+    // Use provided event ID or generate unique event ID for deduplication
+    const eventId = providedEventId || `${eventName}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    
     const event: ConversionEvent = {
       event_name: eventName,
       event_time: Math.floor(Date.now() / 1000),
+      event_id: eventId,
       user_data: hashedUserData,
       custom_data: customData,
       action_source: 'website',
@@ -165,7 +171,8 @@ export const trackAPIFormSubmission = async (
     city: string;
     message?: string;
   },
-  value: number = 1650
+  value: number = 1650,
+  eventId?: string
 ) => {
   // Split name into first and last
   const nameParts = formData.name.trim().split(' ');
@@ -186,7 +193,8 @@ export const trackAPIFormSubmission = async (
       currency: 'EUR',
       contentName: formName,
       contentCategory: 'airco_installation',
-    }
+    },
+    eventId
   );
 };
 

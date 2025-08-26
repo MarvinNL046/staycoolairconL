@@ -55,11 +55,11 @@ export default function Contact() {
       // Track successful form submission
       trackFormSubmission('contact_form', true);
       
-      // Track Facebook Pixel conversion (client-side)
-      trackPixelFormSubmission('contact_form', true);
+      // Track Facebook Pixel conversion (client-side) and get event ID
+      const eventId = trackPixelFormSubmission('contact_form', true);
       
-      // Track with Conversions API (server-side)
-      trackAPIFormSubmission('contact_form', formData).catch(console.error);
+      // Track with Conversions API (server-side) using same event ID for deduplication
+      trackAPIFormSubmission('contact_form', formData, 1650, eventId).catch(console.error);
 
       // Show success message briefly before redirecting
       toast.success('Bericht succesvol verzonden!');

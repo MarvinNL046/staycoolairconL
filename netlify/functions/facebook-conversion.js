@@ -6,7 +6,7 @@ const crypto = require('crypto');
 // Facebook Conversions API configuration
 const FACEBOOK_PIXEL_ID = process.env.FACEBOOK_PIXEL_ID || '179700213744131';
 const FACEBOOK_ACCESS_TOKEN = process.env.FACEBOOK_ACCESS_TOKEN; // Set this in Netlify
-const FACEBOOK_API_VERSION = 'v18.0';
+const FACEBOOK_API_VERSION = 'v23.0'; // Latest version from docs
 const FACEBOOK_API_URL = `https://graph.facebook.com/${FACEBOOK_API_VERSION}/${FACEBOOK_PIXEL_ID}/events`;
 
 exports.handler = async (event, context) => {

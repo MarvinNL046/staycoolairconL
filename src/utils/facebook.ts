@@ -47,16 +47,20 @@ export const trackPixelPageView = () => {
  * @param success Whether the submission was successful
  * @param value Optional value of the conversion
  */
-export const trackPixelFormSubmission = (formName: string, success: boolean, value?: number) => {
+export const trackPixelFormSubmission = (formName: string, success: boolean, value?: number, eventId?: string) => {
   if (typeof window !== 'undefined' && window.fbq) {
     if (success) {
       console.log('Tracking Facebook Pixel form submission:', formName);
+      
+      // Generate event ID if not provided (for deduplication with Conversions API)
+      const pixelEventId = eventId || `Lead_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       
       // Track Lead event
       window.fbq('track', 'Lead', {
         content_name: formName,
         value: value || 1650.0,
-        currency: 'EUR'
+        currency: 'EUR',
+        eventID: pixelEventId // This is for deduplication with server events
       });
       
       // Also track a custom event for more detailed tracking
@@ -64,8 +68,12 @@ export const trackPixelFormSubmission = (formName: string, success: boolean, val
         form_name: formName,
         success: success,
         value: value || 1650.0,
-        currency: 'EUR'
+        currency: 'EUR',
+        eventID: pixelEventId
       });
+      
+      // Return the event ID for Conversions API to use
+      return pixelEventId;
     }
   }
 };
