@@ -10,6 +10,10 @@ const FACEBOOK_API_VERSION = 'v18.0';
 const FACEBOOK_API_URL = `https://graph.facebook.com/${FACEBOOK_API_VERSION}/${FACEBOOK_PIXEL_ID}/events`;
 
 exports.handler = async (event, context) => {
+  console.log('Facebook conversion function called');
+  console.log('Method:', event.httpMethod);
+  console.log('Headers:', JSON.stringify(event.headers));
+  
   // Only allow POST requests
   if (event.httpMethod !== 'POST') {
     return {
@@ -28,7 +32,9 @@ exports.handler = async (event, context) => {
   }
 
   try {
+    console.log('Body:', event.body);
     const data = JSON.parse(event.body);
+    console.log('Parsed data:', JSON.stringify(data));
     
     // Get client IP from Netlify headers
     const clientIp = event.headers['x-nf-client-connection-ip'] || 

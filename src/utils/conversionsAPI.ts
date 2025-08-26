@@ -100,6 +100,8 @@ export const sendConversionEvent = async (
     contentCategory?: string;
   }
 ) => {
+  console.log('Sending conversion event:', eventName, userData, customData);
+  
   try {
     const { fbc, fbp } = getFacebookCookies();
     
@@ -127,6 +129,8 @@ export const sendConversionEvent = async (
     };
     
     // Send to Netlify Function endpoint
+    console.log('Sending to Netlify function:', event);
+    
     const response = await fetch('/.netlify/functions/facebook-conversion', {
       method: 'POST',
       headers: {
@@ -135,8 +139,14 @@ export const sendConversionEvent = async (
       body: JSON.stringify(event),
     });
     
+    console.log('Response status:', response.status);
+    
     if (!response.ok) {
-      console.error('Failed to send conversion event:', response.statusText);
+      const errorText = await response.text();
+      console.error('Failed to send conversion event:', response.status, errorText);
+    } else {
+      const result = await response.json();
+      console.log('Conversion API response:', result);
     }
   } catch (error) {
     console.error('Error sending conversion event:', error);
