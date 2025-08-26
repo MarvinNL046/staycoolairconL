@@ -90,6 +90,7 @@ export default function ContactWebhook() {
         const eventId = trackPixelFormSubmission('contact_form', true);
         
         // Track with Conversions API (server-side) using same event ID for deduplication
+        console.log('Tracking with Conversions API...');
         trackAPIFormSubmission('contact_form', formData, 1650, eventId).catch(console.error);
 
         // Show success message briefly before redirecting
