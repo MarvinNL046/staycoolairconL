@@ -17,8 +17,9 @@ export const initGA = () => {
     const w = window as any;
     w.dataLayer = w.dataLayer || [];
     function gtag(...args: any[]) {
-      w.dataLayer.push(args);
+      w.dataLayer.push(arguments);
     }
+    w.gtag = gtag;
     gtag('js', new Date());
 
     // Configure GA4 properties

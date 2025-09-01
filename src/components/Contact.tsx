@@ -52,15 +52,26 @@ export default function Contact() {
     try {
       await sendEmail(formData);
 
-      // Track successful form submission
-      trackFormSubmission('contact_form', true);
+      // Track successful form submission with error handling
+      try {
+        trackFormSubmission('contact_form', true);
+      } catch (trackError) {
+        console.warn('Failed to track form submission:', trackError);
+      }
       
       // Track Facebook Pixel conversion (client-side) and get event ID
-      const eventId = trackPixelFormSubmission('contact_form', true);
+      let eventId;
+      try {
+        eventId = trackPixelFormSubmission('contact_form', true);
+      } catch (pixelError) {
+        console.warn('Failed to track Facebook Pixel:', pixelError);
+      }
       
       // Track with Conversions API (server-side) using same event ID for deduplication
       console.log('Tracking with Conversions API...');
-      trackAPIFormSubmission('contact_form', formData, 1650, eventId).catch(console.error);
+      trackAPIFormSubmission('contact_form', formData, 1650, eventId).catch(error => {
+        console.warn('Failed to track with Conversions API:', error);
+      });
 
       // Show success message briefly before redirecting
       toast.success('Bericht succesvol verzonden!');
@@ -124,7 +135,13 @@ export default function Contact() {
                 href="https://afspraken.staycoolairco.nl"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => trackInteraction('contact', 'click_appointment')}
+                onClick={() => {
+                  try {
+                    trackInteraction('contact', 'click_appointment');
+                  } catch (e) {
+                    console.warn('Tracking error:', e);
+                  }
+                }}
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-lg font-medium rounded-md text-orange-500 bg-white hover:bg-gray-100 transition-colors duration-300"
               >
                 <Calendar className="h-6 w-6 mr-3" />
@@ -142,7 +159,13 @@ export default function Contact() {
                 <a 
                   href="tel:0462021430" 
                   className="flex items-center text-gray-600 hover:text-orange-500"
-                  onClick={() => trackInteraction('contact', 'click_phone')}
+                  onClick={() => {
+                    try {
+                      trackInteraction('contact', 'click_phone');
+                    } catch (e) {
+                      console.warn('Tracking error:', e);
+                    }
+                  }}
                 >
                   <Phone className="h-6 w-6 mr-3" />
                   <span>046 202 1430</span>
@@ -150,7 +173,13 @@ export default function Contact() {
                 <a 
                   href="https://wa.me/31636481054" 
                   className="flex items-center text-gray-600 hover:text-orange-500"
-                  onClick={() => trackInteraction('contact', 'click_whatsapp')}
+                  onClick={() => {
+                    try {
+                      trackInteraction('contact', 'click_whatsapp');
+                    } catch (e) {
+                      console.warn('Tracking error:', e);
+                    }
+                  }}
                 >
                   <MessageSquare className="h-6 w-6 mr-3" />
                   <span>WhatsApp: 06 36481054</span>

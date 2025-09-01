@@ -130,9 +130,8 @@ export const sendConversionEvent = async (
   },
   providedEventId?: string
 ) => {
-  console.log('Sending conversion event:', eventName, userData, customData);
-  
   try {
+    console.log('Sending conversion event:', eventName, userData, customData);
     const { fbc, fbp } = getFacebookCookies();
     
     // Generate external ID for better matching
