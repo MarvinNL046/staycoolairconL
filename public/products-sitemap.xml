@@ -1,854 +1,368 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://staycoolairco.nl/products/daikin/ururu-sarara</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/Ururu-Sarara-left.webp</image:loc>
-      <image:title>Ururu Sarara FTXZ + RXZ</image:title>
-      <image:caption>De Daikin Ururu Sarara is het enige klimaatregelingssysteem op de markt dat verwarming, koeling, bevochtiging, ontvochtiging en ventilatie combineert met innovatieve, geavanceerde technologie. Dit topmodel biedt totale klimaatbeheersing met de hoogste energiezuinigheid.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Ururu-Sarara-left.webp</image:loc>
-      <image:title>Ururu Sarara FTXZ + RXZ</image:title>
-      <image:caption>Daikin Ururu Sarara wandmodel airco 5.0kW wit - premium klimaatbeheersing met bevochtiging</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Ururu-Sarara-right.webp</image:loc>
-      <image:title>Ururu Sarara FTXZ + RXZ</image:title>
-      <image:caption>Daikin Ururu Sarara wandmodel airco zijaanzicht - A+++ energielabel 5-in-1 functionaliteit</image:caption>
+      <image:title>Daikin Ururu Sarara FTXZ + RXZ Airco</image:title>
+      <image:caption>Professionele installatie van Daikin Ururu Sarara FTXZ + RXZ airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/daikin/sensira-ftxf</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-sensira-wit.webp</image:loc>
-      <image:title>Sensira FTXF-A/B</image:title>
-      <image:caption>De Daikin Sensira biedt betrouwbare klimaatbeheersing voor een aantrekkelijke prijs. Deze wandunit combineert een modern design met efficiënte technologie en is in verschillende capaciteiten beschikbaar voor elke ruimte.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/daikin-sensira-wit.webp</image:loc>
-      <image:title>Sensira FTXF-A/B</image:title>
-      <image:caption>Daikin Sensira - Wit</image:caption>
+      <image:title>Daikin Sensira FTXF-A/B Airco</image:title>
+      <image:caption>Professionele installatie van Daikin Sensira FTXF-A/B airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/daikin/comfora</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-comfora-left.webp</image:loc>
-      <image:title>Comfora FTXP</image:title>
-      <image:caption>De Daikin Comfora biedt een perfecte balans tussen comfort en efficiëntie. Met zijn stijlvolle design en geavanceerde functies zorgt deze wandunit voor een aangenaam binnenklimaat het hele jaar door, met optimale prestaties in elk seizoen.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/daikin-comfora-left.webp</image:loc>
-      <image:title>Comfora FTXP</image:title>
-      <image:caption>Daikin Comfora FTXP wandmodel airco wit 2.0-7.1kW - A++ energielabel fluisterstil</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/daikin-comfora-right.webp</image:loc>
-      <image:title>Comfora FTXP</image:title>
-      <image:caption>Daikin Comfora wandunit zijaanzicht - smart home integratie met Onecta app</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/daikin comfora-onectaApp.webp</image:loc>
-      <image:title>Comfora FTXP</image:title>
-      <image:caption>Daikin Comfora Onecta smartphone app interface - remote airco bediening en planning</image:caption>
+      <image:title>Daikin Comfora FTXP Airco</image:title>
+      <image:caption>Professionele installatie van Daikin Comfora FTXP airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/daikin/perfera-ftxm-a</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-perfera-wit.webp</image:loc>
-      <image:title>Perfera FTXM-A + RXM-A</image:title>
-      <image:caption>De Daikin Perfera FTXM-A is een hoogwaardige wandunit die zorgt voor optimaal comfort in uw woning. Met zijn uitstekende energiezuinigheid (tot A+++) en uitgebreide functionaliteiten biedt deze unit een perfecte balans tussen prestaties en comfort, beschikbaar in vijf verschillende capaciteiten.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/daikin-perfera-wit.webp</image:loc>
-      <image:title>Perfera FTXM-A + RXM-A</image:title>
-      <image:caption>Daikin Perfera FTXM-A wandmodel airco wit 2.0-5.0kW - A+++ energielabel 3D luchtstroom</image:caption>
+      <image:title>Daikin Perfera FTXM-A + RXM-A Airco</image:title>
+      <image:caption>Professionele installatie van Daikin Perfera FTXM-A + RXM-A airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/daikin/perfera-ftxm-r</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-perfera-wit.webp</image:loc>
-      <image:title>Perfera FTXM-R</image:title>
-      <image:caption>De Daikin Perfera is een hoogwaardige wandunit die zorgt voor optimaal comfort in uw woning. Met geavanceerde technologieën zoals de Flash Streamer en 3D luchtstroom biedt deze unit een perfecte balans tussen prestaties en comfort.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/daikin-perfera-wit.webp</image:loc>
-      <image:title>Perfera FTXM-R</image:title>
-      <image:caption>Daikin Perfera FTXM-R wandmodel airco wit 3.5kW - A+++ energielabel Flash Streamer</image:caption>
+      <image:title>Daikin Perfera FTXM-R Airco</image:title>
+      <image:caption>Professionele installatie van Daikin Perfera FTXM-R airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/daikin/stylish</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-stylish-wit.webp</image:loc>
-      <image:title>Stylish FTXA + RXA</image:title>
-      <image:caption>De Daikin Stylish combineert een uniek design met innovatieve technologie en superieure prestaties. De ultradunne wandunit (slechts 189 mm diep) is verkrijgbaar in verschillende uitvoeringen en past in elk modern interieur, terwijl het revolutionaire Coanda-effect zorgt voor een optimale verdeling van verwarmde en gekoelde lucht.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/daikin-stylish-wit.webp</image:loc>
-      <image:title>Stylish FTXA + RXA</image:title>
-      <image:caption>Daikin Stylish FTXA wandmodel airco wit 1.3-5.3kW - ultradun design Coanda-effect</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/daikin-stylish-silver.webp</image:loc>
-      <image:title>Stylish FTXA + RXA</image:title>
-      <image:caption>Daikin Stylish wandmodel airco zilver uitvoering - A+++ energielabel 189mm dun</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/daikin-stylish-zwart.webp</image:loc>
-      <image:title>Stylish FTXA + RXA</image:title>
-      <image:caption>Daikin Stylish wandmodel airco zwart modern design - Flash Streamer luchtzuivering</image:caption>
+      <image:title>Daikin Stylish FTXA + RXA Airco</image:title>
+      <image:caption>Professionele installatie van Daikin Stylish FTXA + RXA airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/daikin/perfera-vloermodel</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/Perfera-vloermodel-left.webp</image:loc>
-      <image:title>Perfera Vloermodel FVXM-A</image:title>
-      <image:caption>Het Daikin Perfera vloermodel biedt optimaal comfort vanaf grondniveau. Deze stijlvolle vloerunit combineert krachtige prestaties met energiezuinige technologie voor een aangename temperatuur in elke ruimte, in drie capaciteitsklassen voor elke woning.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Perfera-vloermodel-left.webp</image:loc>
-      <image:title>Perfera Vloermodel FVXM-A</image:title>
-      <image:caption>Daikin Perfera Vloermodel - Links</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Perfera vloermodel-right.webp</image:loc>
-      <image:title>Perfera Vloermodel FVXM-A</image:title>
-      <image:caption>Daikin Perfera Vloermodel - Rechts</image:caption>
+      <image:title>Daikin Perfera Vloermodel FVXM-A Airco</image:title>
+      <image:caption>Professionele installatie van Daikin Perfera Vloermodel FVXM-A airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/daikin/emura</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/daikin-emura-wit.webp</image:loc>
-      <image:title>Emura FTXJ + RXJ</image:title>
-      <image:caption>De Daikin Emura is een premium wandmodel dat bekroond design combineert met geavanceerde technologie voor optimaal comfort. Met zijn elegante vormgeving en superieure energieprestaties zorgt deze unit voor een compromisloze combinatie van stijl en functionaliteit in vijf verschillende capaciteiten.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/daikin-emura-wit.webp</image:loc>
-      <image:title>Emura FTXJ + RXJ</image:title>
-      <image:caption>Daikin Emura - Wit</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/daikin-emura-zilver.webp</image:loc>
-      <image:title>Emura FTXJ + RXJ</image:title>
-      <image:caption>Daikin Emura - Zilver</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/daikin-emura-zwart.webp</image:loc>
-      <image:title>Emura FTXJ + RXJ</image:title>
-      <image:caption>Daikin Emura - Zwart</image:caption>
+      <image:title>Daikin Emura FTXJ + RXJ Airco</image:title>
+      <image:caption>Professionele installatie van Daikin Emura FTXJ + RXJ airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/lg/dualcool-standaard-plus</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/rac-eu-standard-plus-.webp</image:loc>
-      <image:title>DualCool Standaard Plus</image:title>
-      <image:caption>Betrouwbare wandunit voor woonkamer of slaapkamer met uitstekende prijs-kwaliteitverhouding. Voorzien van comfort air, fast cooling en ingebouwde wifi.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/rac-eu-standard-plus-.webp</image:loc>
-      <image:title>DualCool Standaard Plus</image:title>
-      <image:caption>LG DualCool Standaard Plus wandmodel airco wit 2.5-6.6kW - A++ ThinQ wifi besturing</image:caption>
+      <image:title>LG DualCool Standaard Plus Airco</image:title>
+      <image:caption>Professionele installatie van LG DualCool Standaard Plus airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/lg/dualcool-premium</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/rac-eu-lg-premium.webp</image:loc>
-      <image:title>DualCool Premium</image:title>
-      <image:caption>Geavanceerde wandunit met superieure energiezuinigheid en uitgebreide functies voor optimaal comfort. Voorzien van AI air mode, allergiefilter en fluisterstille werking vanaf 19 dB. Bedien de unit eenvoudig via wifi of spraakbesturing met Google Assistant of Alexa.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/rac-eu-lg-premium.webp</image:loc>
-      <image:title>DualCool Premium</image:title>
-      <image:caption>LG DualCool Premium wandmodel airco wit 2.5-6.6kW - A++ UVnano AI technologie spraakbesturing</image:caption>
+      <image:title>LG DualCool Premium Airco</image:title>
+      <image:caption>Professionele installatie van LG DualCool Premium airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/lg/artcool-mirror</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/lg-artcool-mirror.webp</image:loc>
-      <image:title>ARTCOOL Mirror</image:title>
-      <image:caption>Stijlvolle wandunit met spiegelend glazen frontpaneel dat naadloos integreert in moderne interieurs. Voorzien van Dual Inverter technologie voor snelle en efficiënte koeling en verwarming. Bedien de unit eenvoudig via wifi of spraakbesturing met Google Assistant of Alexa.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/lg-artcool-mirror.webp</image:loc>
-      <image:title>ARTCOOL Mirror</image:title>
-      <image:caption>LG ARTCOOL Mirror wandmodel airco spiegelglas design 2.5-6.6kW - premium glasfront UVnano</image:caption>
+      <image:title>LG ARTCOOL Mirror Airco</image:title>
+      <image:caption>Professionele installatie van LG ARTCOOL Mirror airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/lg/artcool-black</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/rac-eu-lg-artcool-black.webp</image:loc>
-      <image:title>ARTCOOL Black</image:title>
-      <image:caption>Elegante wandunit in stijlvol zwart design, perfect voor moderne interieurs waar een statement piece gewenst is. Premium afwerking met geavanceerde technologie voor optimale prestaties en stijl.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/rac-eu-lg-artcool-black.webp</image:loc>
-      <image:title>ARTCOOL Black</image:title>
-      <image:caption>LG ARTCOOL Black wandmodel airco mat zwart design 2.5-6.6kW - premium afwerking UVnano</image:caption>
+      <image:title>LG ARTCOOL Black Airco</image:title>
+      <image:caption>Professionele installatie van LG ARTCOOL Black airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/products/mitsubishi-heavy/zs-w</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://staycoolairco.nl/products/mitsubishi-heavy-industries/zs-w</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/Mitsubishi heavy indus/Mitsubishi-titanium-zs-wft-1.webp</image:loc>
-      <image:title>ZS-WF Serie</image:title>
-      <image:caption>De ZS-WF serie van Mitsubishi Heavy Industries biedt hoogwaardige wandunits met ingebouwde wifi-besturing die uitblinken in efficiëntie en betrouwbaarheid. Met geavanceerde features zoals de 3D Auto functie en allergeenfilter zorgen deze units voor optimaal comfort.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Mitsubishi heavy indus/Mitsubishi-titanium-zs-wft-1.webp</image:loc>
-      <image:title>ZS-WF Serie</image:title>
-      <image:caption>Mitsubishi Heavy ZS-WF Titanium Vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Mitsubishi heavy indus/Mitsubishi-titanium-zs-wft-2.5-3.5-5.0kw-1-510x510.webp</image:loc>
-      <image:title>ZS-WF Serie</image:title>
-      <image:caption>Mitsubishi Heavy ZS-WF Titanium Zijaanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Mitsubishi heavy indus/srk50zs-wf-wit-single-split-airco-wandmodel-2.5-3.5-5kw-1.webp</image:loc>
-      <image:title>ZS-WF Serie</image:title>
-      <image:caption>Mitsubishi Heavy ZS-WF Wit Vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Mitsubishi heavy indus/srk50zs-wf-wit-single-split-airco-wandmodel-2.5-3.5-5kw-510x510.webp</image:loc>
-      <image:title>ZS-WF Serie</image:title>
-      <image:caption>Mitsubishi Heavy ZS-WF Wit Zijaanzicht</image:caption>
+      <image:title>Mitsubishi Heavy Industries ZS-WF Serie Airco</image:title>
+      <image:caption>Professionele installatie van Mitsubishi Heavy Industries ZS-WF Serie airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/products/mitsubishi-heavy/zsx-w</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://staycoolairco.nl/products/mitsubishi-heavy-industries/zsx-w</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/Mitsubishi heavy indus/Mitsubishi-titanium-zs-wft.webp</image:loc>
-      <image:title>SRK-ZSX-W Premium</image:title>
-      <image:caption>De premium wandunit van Mitsubishi Heavy met maximale energie-efficiëntie en geavanceerde luchtreiniging. Perfect voor wie het beste van het beste zoekt.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Mitsubishi heavy indus/Mitsubishi-titanium-zs-wft.webp</image:loc>
-      <image:title>SRK-ZSX-W Premium</image:title>
-      <image:caption>Mitsubishi Heavy ZSX-W Premium Vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Mitsubishi heavy indus/srk50zs-wf-wit-single-split-airco-wandmodel-2.5-3.5-5kw-1.webp</image:loc>
-      <image:title>SRK-ZSX-W Premium</image:title>
-      <image:caption>Mitsubishi Heavy ZSX-W Premium Zijaanzicht</image:caption>
+      <image:title>Mitsubishi Heavy Industries SRK-ZSX-W Premium Airco</image:title>
+      <image:caption>Professionele installatie van Mitsubishi Heavy Industries SRK-ZSX-W Premium airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/products/mitsubishi-heavy/srf-zmx-s</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://staycoolairco.nl/products/mitsubishi-heavy-industries/srf-zmx-s</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/Mitsubishi heavy indus/Mitsubishi-aircowebwinkel-vloermodel.webp</image:loc>
-      <image:title>SRF-ZMX-S Vloermodel</image:title>
-      <image:caption>Stijlvol vloermodel met dubbele luchtuitblaas voor optimale warmteverdeling. Ideaal voor onder het raam of op zolder.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Mitsubishi heavy indus/Mitsubishi-aircowebwinkel-vloermodel.webp</image:loc>
-      <image:title>SRF-ZMX-S Vloermodel</image:title>
-      <image:caption>Mitsubishi Heavy SRF-ZMX-S Vloermodel Vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Mitsubishi heavy indus/Mitsubishi-Heavy-SRF-35-ZS-W-Vloer-unit-35-kW-Exclusief-buiten-unit.webp</image:loc>
-      <image:title>SRF-ZMX-S Vloermodel</image:title>
-      <image:caption>Mitsubishi Heavy SRF-ZMX-S Vloermodel Zijaanzicht</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/products/toshiba/haori</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Haori-zwart-vooraanzicht_3_11zon.webp</image:loc>
-      <image:title>Haori</image:title>
-      <image:caption>De Toshiba Haori is een unieke designwandmodel met verwisselbare stoffen bekleding. Perfect voor wie een airconditioner zoekt die naadloos in het interieur past.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Haori-zwart-vooraanzicht_3_11zon.webp</image:loc>
-      <image:title>Haori</image:title>
-      <image:caption>Toshiba Haori wandmodel airco zwart stoffen bekleding - A+++ premium design verwisselbaar</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Haori-zwart-links_1_11zon.webp</image:loc>
-      <image:title>Haori</image:title>
-      <image:caption>Toshiba Haori linker zijaanzicht zwart - unieke stof bekleding airco wandunit</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Haori-zwart-rechts_2_11zon.webp</image:loc>
-      <image:title>Haori</image:title>
-      <image:caption>Toshiba Haori rechter zijaanzicht zwart - premium Japanse airco design</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Haori-blauw-links_16_11zon.webp</image:loc>
-      <image:title>Haori</image:title>
-      <image:caption>Toshiba Haori wandmodel airco blauw stoffen bekleding - designer interieur airco</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Haori-bruin-links_17_11zon.webp</image:loc>
-      <image:title>Haori</image:title>
-      <image:caption>Toshiba Haori wandmodel airco bruin stoffen bekleding - natuurlijke interieur match</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Haori-creme-links_18_11zon.webp</image:loc>
-      <image:title>Haori</image:title>
-      <image:caption>Toshiba Haori wandmodel airco crème stoffen bekleding - elegante neutrale kleur</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Haori-grijs-links_19_11zon.webp</image:loc>
-      <image:title>Haori</image:title>
-      <image:caption>Toshiba Haori wandmodel airco grijs stoffen bekleding - moderne minimalistisch design</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/products/toshiba/kazumi-plus</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Kazumi-plus-Black-vooraanzicht_6_11zon.webp</image:loc>
-      <image:title>Kazumi Plus</image:title>
-      <image:caption>De Toshiba Kazumi Plus combineert elegant design met geavanceerde technologie. Verkrijgbaar in stijlvol zwart of klassiek wit voor een perfecte match met elk interieur.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Kazumi-plus-Black-vooraanzicht_6_11zon.webp</image:loc>
-      <image:title>Kazumi Plus</image:title>
-      <image:caption>Toshiba Kazumi Plus - Vooraanzicht zwart</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Kazumi-plus-Black-links-open_4_11zon.webp</image:loc>
-      <image:title>Kazumi Plus</image:title>
-      <image:caption>Toshiba Kazumi Plus - Links open zwart</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Kazumi-plus-Black-rechts-open_5_11zon.webp</image:loc>
-      <image:title>Kazumi Plus</image:title>
-      <image:caption>Toshiba Kazumi Plus - Rechts open zwart</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Kazumi-plus-white-vooraanzicht_8_11zon.webp</image:loc>
-      <image:title>Kazumi Plus</image:title>
-      <image:caption>Toshiba Kazumi Plus - Vooraanzicht wit</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Kazumi-plus-white-rechts_7_11zon.webp</image:loc>
-      <image:title>Kazumi Plus</image:title>
-      <image:caption>Toshiba Kazumi Plus - Rechts wit</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/products/toshiba/seiya-plus</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Seiya-plus-wit-vooraanzicht_12_11zon.webp</image:loc>
-      <image:title>Seiya Plus</image:title>
-      <image:caption>De Toshiba Seiya Plus biedt betrouwbare prestaties voor een aantrekkelijke prijs. Perfect voor wie op zoek is naar een kwalitatieve basis airco.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Seiya-plus-wit-vooraanzicht_12_11zon.webp</image:loc>
-      <image:title>Seiya Plus</image:title>
-      <image:caption>Toshiba Seiya Plus - Vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Seiya-plus-wit-links_9_11zon.webp</image:loc>
-      <image:title>Seiya Plus</image:title>
-      <image:caption>Toshiba Seiya Plus - Links</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Seiya-plus-wit-rechts_11_11zon.webp</image:loc>
-      <image:title>Seiya Plus</image:title>
-      <image:caption>Toshiba Seiya Plus - Rechts</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Seiya-plus-wit-onderaanzicht-open_10_11zon.webp</image:loc>
-      <image:title>Seiya Plus</image:title>
-      <image:caption>Toshiba Seiya Plus - Onderaanzicht open</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/products/toshiba/console</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/toshiba-console-vloermodel-wit_13_11zon.webp</image:loc>
-      <image:title>Console</image:title>
-      <image:caption>De Toshiba Console is een veelzijdig vloermodel met dubbele luchtuitblaas. Ideaal voor montage onder het raam of op zolder.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/toshiba-console-vloermodel-wit_13_11zon.webp</image:loc>
-      <image:title>Console</image:title>
-      <image:caption>Toshiba Console - Vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/toshiba-console-vloermodel-wit-linksboven_14_11zon.webp</image:loc>
-      <image:title>Console</image:title>
-      <image:caption>Toshiba Console - Links boven</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/toshiba-console-vloermodel-wit-reacht_15_11zon.webp</image:loc>
-      <image:title>Console</image:title>
-      <image:caption>Toshiba Console - Rechts</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/products/toshiba/daiseikai-10</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Daiseikai 10-Hout-vooraanzicht_2_11zon.webp</image:loc>
-      <image:title>Daiseikai 10</image:title>
-      <image:caption>De Toshiba Daiseikai 10 is een high-end airconditioner met uitzonderlijke energie-efficiëntie en uniek design, verkrijgbaar in hout of wit.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Daiseikai 10-Hout-vooraanzicht_2_11zon.webp</image:loc>
-      <image:title>Daiseikai 10</image:title>
-      <image:caption>Toshiba Daiseikai 10 - Vooraanzicht hout</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Daiseikai 10-Hout-links-open_5_11zon.webp</image:loc>
-      <image:title>Daiseikai 10</image:title>
-      <image:caption>Toshiba Daiseikai 10 - Links open hout</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Daiseikai 10-Hout-sfeerfoto_1_11zon.webp</image:loc>
-      <image:title>Daiseikai 10</image:title>
-      <image:caption>Toshiba Daiseikai 10 - Sfeerbeeld hout</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Daiseikai 10-Wit-vooraanzicht_4_11zon.webp</image:loc>
-      <image:title>Daiseikai 10</image:title>
-      <image:caption>Toshiba Daiseikai 10 - Vooraanzicht wit</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/Daiseikai 10-Wit-rechts_3_11zon.webp</image:loc>
-      <image:title>Daiseikai 10</image:title>
-      <image:caption>Toshiba Daiseikai 10 - Rechts wit</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/products/tosot/cosmo</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/787-cosmo-indoor-vooraanzicht.webp</image:loc>
-      <image:title>Cosmo</image:title>
-      <image:caption>De TOSOT COSMO 3,2 kW R32 Inverter Airco Set by GREE is een krachtige en efficiënte airconditioningoplossing, ontworpen om betrouwbare koeling en verwarming te bieden met een capaciteit van 3,2 kW. Deze set maakt gebruik van het moderne R32 koelmiddel en Inverter-technologie, wat zorgt voor uitstekende energieprestaties en lage operationele kosten. Met een energielabel van A++ biedt dit systeem niet alleen uitstekende prestaties, maar ook een geluidsniveau van slechts 24 dB(A) voor de binnenunit.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/787-cosmo-indoor-vooraanzicht.webp</image:loc>
-      <image:title>Cosmo</image:title>
-      <image:caption>Tosot Cosmo - Vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/788-cosmo-indoor.webp</image:loc>
-      <image:title>Cosmo</image:title>
-      <image:caption>Tosot Cosmo - Zijaanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/789-cosmo-indoor.webp</image:loc>
-      <image:title>Cosmo</image:title>
-      <image:caption>Tosot Cosmo - Andere kant</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/products/tosot/pular</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/568-Pular-indoor-vooraanzicht.webp</image:loc>
-      <image:title>Pular</image:title>
-      <image:caption>De Tosot PULAR by GREE single split airco R32 2,2 kW set is een efficiënte en betrouwbare oplossing voor klimaatregeling, ontworpen voor zowel zakelijke als particuliere toepassingen. Met een koelcapaciteit van 2,2 kW en het milieuvriendelijke R32 koelmiddel, biedt deze airco uitstekende prestaties met een lage impact op het milieu. Deze airco combineert een laag energieverbruik met krachtige koeling en verwarming, wat ideaal is voor kleinere ruimtes zoals slaapkamers, kantoren of vergaderruimtes.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/568-Pular-indoor-vooraanzicht.webp</image:loc>
-      <image:title>Pular</image:title>
-      <image:caption>Tosot Pular - Vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/570-Pular-indoor-right.webp</image:loc>
-      <image:title>Pular</image:title>
-      <image:caption>Tosot Pular - Rechts</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/products/tosot/clivia</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/724-clivia-wit-vooraanzicht.webp</image:loc>
-      <image:title>Clivia Design</image:title>
-      <image:caption>De Tosot CLIVIA by GREE inverter is een airco set van hoogwaardige kwaliteit. Met een koelvermogen van 2,7 kW en de mogelijkheid om te verwarmen biedt deze airco veelzijdige klimaatregeling voor elke ruimte. De Clivia gebruikt R32 koelmiddel dat beter is voor het milieu en beschikt over een indrukwekkende SEER van 8,5 W/W en SCOP van 4,6 W/W, wat hem tot een van de meest energie-efficiënte modellen in zijn klasse maakt. Verkrijgbaar in stijlvol wit of zwart design.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/724-clivia-wit-vooraanzicht.webp</image:loc>
-      <image:title>Clivia Design</image:title>
-      <image:caption>Tosot Clivia Wit - Vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/723-clivia-wit-schuin.webp</image:loc>
-      <image:title>Clivia Design</image:title>
-      <image:caption>Tosot Clivia Wit - Schuin</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/727-clivia-wit-zijkant.webp</image:loc>
-      <image:title>Clivia Design</image:title>
-      <image:caption>Tosot Clivia Wit - Zijkant</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/712-clivia-zwart-vooraanzicht.webp</image:loc>
-      <image:title>Clivia Design</image:title>
-      <image:caption>Tosot Clivia Zwart - Vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/711-clivia-zwart-schuin.webp</image:loc>
-      <image:title>Clivia Design</image:title>
-      <image:caption>Tosot Clivia Zwart - Schuin</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/710-clivia-zwart-zijkant.webp</image:loc>
-      <image:title>Clivia Design</image:title>
-      <image:caption>Tosot Clivia Zwart - Zijkant</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/products/tosot/console</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/374-WTS-indoor-console-vloernmodel-tosot.webp</image:loc>
-      <image:title>Console WTS-12R</image:title>
-      <image:caption>De TOSOT CONSOLE WTS-12R 3,5 kW Inverter Set by GREE is een efficiënte en veelzijdige oplossing voor klimaatbeheersing in kleine tot middelgrote ruimtes. Met een koelvermogen van 3,5 kW en uitgerust met geavanceerde invertertechnologie, biedt deze console een betrouwbare en energiezuinige temperatuurregeling. De unit heeft een SEER van 7,2 en een SCOP van 4,1, wat zorgt voor uitstekende prestaties, zowel in de zomer als in de winter. Met energielabel A++ voor koelen en A+ voor verwarmen is dit systeem ontworpen om de energiekosten laag te houden en tegelijkertijd een hoog comfortniveau te handhaven.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/374-WTS-indoor-console-vloernmodel-tosot.webp</image:loc>
-      <image:title>Console WTS-12R</image:title>
-      <image:caption>Tosot Console - Vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/375-WTS-remote-console-tosot.webp</image:loc>
-      <image:title>Console WTS-12R</image:title>
-      <image:caption>Tosot Console - Afstandsbediening</image:caption>
+      <image:title>Mitsubishi Heavy Industries SRF-ZMX-S Vloermodel Airco</image:title>
+      <image:caption>Professionele installatie van Mitsubishi Heavy Industries SRF-ZMX-S Vloermodel airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/samsung/wind-free-elite</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeElite/WindFree Elite_S2_Front_Web_RGB.webp</image:loc>
-      <image:title>Wind-Free Elite</image:title>
-      <image:caption>De Samsung Wind-Free Elite biedt superieur comfort met de innovatieve Wind-Free technologie die koele lucht gelijkmatig verspreidt zonder directe luchtstroom.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeElite/WindFree Elite_S2_Front_Web_RGB.webp</image:loc>
-      <image:title>Wind-Free Elite</image:title>
-      <image:caption>Samsung Wind-Free Elite - Vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeElite/WindFree Elite_S2_Left_Web_RGB.webp</image:loc>
-      <image:title>Wind-Free Elite</image:title>
-      <image:caption>Samsung Wind-Free Elite - Linkerzijde</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeElite/WindFree Elite_S2_Right_Web_RGB.webp</image:loc>
-      <image:title>Wind-Free Elite</image:title>
-      <image:caption>Samsung Wind-Free Elite - Rechterzijde</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeElite/Samsung RAC WindFree Elite_Sfeerbeeld_001.webp</image:loc>
-      <image:title>Wind-Free Elite</image:title>
-      <image:caption>Samsung Wind-Free Elite - Sfeerbeeld 1</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeElite/Samsung RAC WindFree Elite_Sfeerbeeld_002.webp</image:loc>
-      <image:title>Wind-Free Elite</image:title>
-      <image:caption>Samsung Wind-Free Elite - Sfeerbeeld 2</image:caption>
+      <image:title>Samsung Wind-Free Elite Airco</image:title>
+      <image:caption>Professionele installatie van Samsung Wind-Free Elite airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/samsung/wind-free-comfort</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/WindFree Comfort_S2_Front_Web_RGB.webp</image:loc>
-      <image:title>Wind-Free Comfort</image:title>
-      <image:caption>De Samsung Wind-Free Comfort biedt een perfecte balans tussen comfort en betaalbaarheid, met de innovatieve Wind-Free technologie voor een aangenaam binnenklimaat.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/WindFree Comfort_S2_Front_Web_RGB.webp</image:loc>
-      <image:title>Wind-Free Comfort</image:title>
-      <image:caption>Samsung Wind-Free Comfort - Vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/WindFree Comfort_S2_Left_Web_RGB.webp</image:loc>
-      <image:title>Wind-Free Comfort</image:title>
-      <image:caption>Samsung Wind-Free Comfort - Linkerzijde</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/WindFree Comfort_S2_Right_Web_RGB.webp</image:loc>
-      <image:title>Wind-Free Comfort</image:title>
-      <image:caption>Samsung Wind-Free Comfort - Rechterzijde</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/Samsung RAC WindFree Comfort_Sfeerbeeld_001.webp</image:loc>
-      <image:title>Wind-Free Comfort</image:title>
-      <image:caption>Samsung Wind-Free Comfort - Sfeerbeeld 1</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windfreeComfort/Samsung RAC WindFree Comfort_Sfeerbeeld_002.webp</image:loc>
-      <image:title>Wind-Free Comfort</image:title>
-      <image:caption>Samsung Wind-Free Comfort - Sfeerbeeld 2</image:caption>
+      <image:title>Samsung Wind-Free Comfort Airco</image:title>
+      <image:caption>Professionele installatie van Samsung Wind-Free Comfort airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/samsung/luzon-s2</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Luzon_S2_Front_Web_RGB.webp</image:loc>
-      <image:title>Luzon S2</image:title>
-      <image:caption>De Samsung Luzon S2 biedt betrouwbare klimaatbeheersing met een uitstekende prijs-kwaliteitverhouding. Deze wandunit combineert efficiënte prestaties met een stijlvol design en Wi-Fi connectiviteit.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Luzon_S2_Front_Web_RGB.webp</image:loc>
-      <image:title>Luzon S2</image:title>
-      <image:caption>Samsung Luzon - Vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Luzon_S2_Left_Web_RGB.webp</image:loc>
-      <image:title>Luzon S2</image:title>
-      <image:caption>Samsung Luzon - Linkerzijde</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Luzon_S2_Right_Web_RGB.webp</image:loc>
-      <image:title>Luzon S2</image:title>
-      <image:caption>Samsung Luzon - Rechterzijde</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Samsung RAC Luzon_Sfeerbeeld_001.webp</image:loc>
-      <image:title>Luzon S2</image:title>
-      <image:caption>Samsung Luzon - Sfeerbeeld 1</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/luzon/Samsung RAC Luzon_Sfeerbeeld_002.webp</image:loc>
-      <image:title>Luzon S2</image:title>
-      <image:caption>Samsung Luzon - Sfeerbeeld 2</image:caption>
+      <image:title>Samsung Luzon S2 Airco</image:title>
+      <image:caption>Professionele installatie van Samsung Luzon S2 airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/samsung/360-cassette</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/samsung/casette/360 Cassette - Rond - Front - Web.webp</image:loc>
-      <image:title>360 Cassette</image:title>
-      <image:caption>De Samsung 360 Cassette is een innovatieve plafondunit met een uniek rond design dat zorgt voor een gelijkmatige luchtverdeling in alle richtingen, zonder koude tocht.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/casette/360 Cassette - Rond - Front - Web.webp</image:loc>
-      <image:title>360 Cassette</image:title>
-      <image:caption>Samsung 360 Cassette - Vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/casette/360 Cassette - Rond - Angle - Web.webp</image:loc>
-      <image:title>360 Cassette</image:title>
-      <image:caption>Samsung 360 Cassette - Hoekzicht</image:caption>
+      <image:title>Samsung 360 Cassette Airco</image:title>
+      <image:caption>Professionele installatie van Samsung 360 Cassette airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://staycoolairco.nl/products/samsung/wind-free-avant-black</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/samsung/windreeAvantBlack/WindFree Avant Black_Front_Web_RGB.webp</image:loc>
-      <image:title>Wind-Free Avant Black</image:title>
-      <image:caption>De Samsung Wind-Free Avant Black combineert stijlvol zwart design met geavanceerde Wind-Free technologie voor zowel esthetische als functionele perfectie in elk interieur.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windreeAvantBlack/WindFree Avant Black_Front_Web_RGB.webp</image:loc>
-      <image:title>Wind-Free Avant Black</image:title>
-      <image:caption>Samsung Wind-Free Avant Black - Vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windreeAvantBlack/WindFree Avant Black_Left_Web_RGB.webp</image:loc>
-      <image:title>Wind-Free Avant Black</image:title>
-      <image:caption>Samsung Wind-Free Avant Black - Linkerzijde</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windreeAvantBlack/WindFree Avant Black_Right_Web_RGB.webp</image:loc>
-      <image:title>Wind-Free Avant Black</image:title>
-      <image:caption>Samsung Wind-Free Avant Black - Rechterzijde</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windreeAvantBlack/Samsung RAC WindFree Avant Black_Sfeerbeeld_001.webp</image:loc>
-      <image:title>Wind-Free Avant Black</image:title>
-      <image:caption>Samsung Wind-Free Avant Black - Sfeerbeeld 1</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windreeAvantBlack/Samsung RAC WindFree Avant Black_Sfeerbeeld_002.webp</image:loc>
-      <image:title>Wind-Free Avant Black</image:title>
-      <image:caption>Samsung Wind-Free Avant Black - Sfeerbeeld 2</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/samsung/windreeAvantBlack/Samsung RAC WindFree Avant Black_Sfeerbeeld_003.webp</image:loc>
-      <image:title>Wind-Free Avant Black</image:title>
-      <image:caption>Samsung Wind-Free Avant Black - Sfeerbeeld 3</image:caption>
+      <image:title>Samsung Wind-Free Avant Black Airco</image:title>
+      <image:caption>Professionele installatie van Samsung Wind-Free Avant Black airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/airco-covers/airco-omkasting-antraciet-medium</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://staycoolairco.nl/products/toshiba/haori</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-antraciet.webp</image:loc>
-      <image:title>Airconditioner omkasting 100*70*50 RAL7024 Anthraciet</image:title>
-      <image:caption>Stijlvolle antracietkleurige beschermkap voor airco buitenunits. Afmetingen: 100*70*50 cm</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-antraciet.webp</image:loc>
-      <image:title>Airconditioner omkasting 100*70*50 RAL7024 Anthraciet</image:title>
-      <image:caption>Airco omkasting antraciet vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-antraciet-vooraanzicht.webp</image:loc>
-      <image:title>Airconditioner omkasting 100*70*50 RAL7024 Anthraciet</image:title>
-      <image:caption>Airco omkasting antraciet detail</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-antraciet-zijkant.webp</image:loc>
-      <image:title>Airconditioner omkasting 100*70*50 RAL7024 Anthraciet</image:title>
-      <image:caption>Airco omkasting antraciet zijkant</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-antraciet-binnenkant.webp</image:loc>
-      <image:title>Airconditioner omkasting 100*70*50 RAL7024 Anthraciet</image:title>
-      <image:caption>Airco omkasting antraciet binnenkant</image:caption>
+      <image:loc>https://staycoolairco.nl/images/products/Haori-zwart-vooraanzicht_3_11zon.webp</image:loc>
+      <image:title>Toshiba Haori Airco</image:title>
+      <image:caption>Professionele installatie van Toshiba Haori airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/airco-covers/airco-omkasting-antraciet-large</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://staycoolairco.nl/products/toshiba/kazumi-plus</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-antraciet.webp</image:loc>
-      <image:title>Airconditioner omkasting 110*85*60 RAL7024 Antraciet</image:title>
-      <image:caption>Stijlvolle antracietkleurige beschermkap voor grotere airco buitenunits. Afmetingen: 110*85*60 cm</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-antraciet.webp</image:loc>
-      <image:title>Airconditioner omkasting 110*85*60 RAL7024 Antraciet</image:title>
-      <image:caption>Airco omkasting antraciet vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-antraciet-vooraanzicht.webp</image:loc>
-      <image:title>Airconditioner omkasting 110*85*60 RAL7024 Antraciet</image:title>
-      <image:caption>Airco omkasting antraciet detail</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-antraciet-zijkant.webp</image:loc>
-      <image:title>Airconditioner omkasting 110*85*60 RAL7024 Antraciet</image:title>
-      <image:caption>Airco omkasting antraciet zijkant</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-antraciet-binnenkant.webp</image:loc>
-      <image:title>Airconditioner omkasting 110*85*60 RAL7024 Antraciet</image:title>
-      <image:caption>Airco omkasting antraciet binnenkant</image:caption>
+      <image:loc>https://staycoolairco.nl/images/products/Kazumi-plus-Black-vooraanzicht_6_11zon.webp</image:loc>
+      <image:title>Toshiba Kazumi Plus Airco</image:title>
+      <image:caption>Professionele installatie van Toshiba Kazumi Plus airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/airco-covers/airco-omkasting-wit-medium</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://staycoolairco.nl/products/toshiba/seiya-plus</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-wit.webp</image:loc>
-      <image:title>Airconditioner omkasting 100*70*50 RAL9010 Wit</image:title>
-      <image:caption>Elegante witte beschermkap voor airco buitenunits. Afmetingen: 100*70*50 cm</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-wit.webp</image:loc>
-      <image:title>Airconditioner omkasting 100*70*50 RAL9010 Wit</image:title>
-      <image:caption>Airco omkasting wit vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-wit-voorkant.webp</image:loc>
-      <image:title>Airconditioner omkasting 100*70*50 RAL9010 Wit</image:title>
-      <image:caption>Airco omkasting wit detail</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-wit-zijkant.webp</image:loc>
-      <image:title>Airconditioner omkasting 100*70*50 RAL9010 Wit</image:title>
-      <image:caption>Airco omkasting wit zijkant</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-wit-binnenkant.webp</image:loc>
-      <image:title>Airconditioner omkasting 100*70*50 RAL9010 Wit</image:title>
-      <image:caption>Airco omkasting wit binnenkant</image:caption>
+      <image:loc>https://staycoolairco.nl/images/products/Seiya-plus-wit-vooraanzicht_12_11zon.webp</image:loc>
+      <image:title>Toshiba Seiya Plus Airco</image:title>
+      <image:caption>Professionele installatie van Toshiba Seiya Plus airco in Limburg</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/airco-covers/airco-omkasting-wit-large</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://staycoolairco.nl/products/toshiba/console</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/toshiba-console-vloermodel-wit_13_11zon.webp</image:loc>
+      <image:title>Toshiba Console Airco</image:title>
+      <image:caption>Professionele installatie van Toshiba Console airco in Limburg</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/toshiba/daiseikai-10</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/Daiseikai 10-Hout-vooraanzicht_2_11zon.webp</image:loc>
+      <image:title>Toshiba Daiseikai 10 Airco</image:title>
+      <image:caption>Professionele installatie van Toshiba Daiseikai 10 airco in Limburg</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/tosot-by-gree/cosmo</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/787-cosmo-indoor-vooraanzicht.webp</image:loc>
+      <image:title>Tosot by Gree Cosmo Airco</image:title>
+      <image:caption>Professionele installatie van Tosot by Gree Cosmo airco in Limburg</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/tosot-by-gree/pular</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/568-Pular-indoor-vooraanzicht.webp</image:loc>
+      <image:title>Tosot by Gree Pular Airco</image:title>
+      <image:caption>Professionele installatie van Tosot by Gree Pular airco in Limburg</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/tosot-by-gree/clivia</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/724-clivia-wit-vooraanzicht.webp</image:loc>
+      <image:title>Tosot by Gree Clivia Design Airco</image:title>
+      <image:caption>Professionele installatie van Tosot by Gree Clivia Design airco in Limburg</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/tosot-by-gree/console</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/374-WTS-indoor-console-vloernmodel-tosot.webp</image:loc>
+      <image:title>Tosot by Gree Console WTS-12R Airco</image:title>
+      <image:caption>Professionele installatie van Tosot by Gree Console WTS-12R airco in Limburg</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/airco-bescherming/omkasting/airco-omkasting-antraciet-medium</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-antraciet.webp</image:loc>
+      <image:title>Airco Bescherming/Omkasting Airconditioner omkasting 100*70*50 RAL7024 Anthraciet Airco</image:title>
+      <image:caption>Professionele installatie van Airco Bescherming/Omkasting Airconditioner omkasting 100*70*50 RAL7024 Anthraciet airco in Limburg</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/airco-bescherming/omkasting/airco-omkasting-antraciet-large</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-antraciet.webp</image:loc>
+      <image:title>Airco Bescherming/Omkasting Airconditioner omkasting 110*85*60 RAL7024 Antraciet Airco</image:title>
+      <image:caption>Professionele installatie van Airco Bescherming/Omkasting Airconditioner omkasting 110*85*60 RAL7024 Antraciet airco in Limburg</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/airco-bescherming/omkasting/airco-omkasting-wit-medium</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-wit.webp</image:loc>
-      <image:title>Airconditioner omkasting 110*85*60 RAL9010 Wit</image:title>
-      <image:caption>Elegante witte beschermkap voor grotere airco buitenunits. Afmetingen: 110*85*60 cm</image:caption>
+      <image:title>Airco Bescherming/Omkasting Airconditioner omkasting 100*70*50 RAL9010 Wit Airco</image:title>
+      <image:caption>Professionele installatie van Airco Bescherming/Omkasting Airconditioner omkasting 100*70*50 RAL9010 Wit airco in Limburg</image:caption>
     </image:image>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/products/airco-bescherming/omkasting/airco-omkasting-wit-large</loc>
+    <lastmod>2025-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
     <image:image>
       <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-wit.webp</image:loc>
-      <image:title>Airconditioner omkasting 110*85*60 RAL9010 Wit</image:title>
-      <image:caption>Airco omkasting wit vooraanzicht</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-wit-voorkant.webp</image:loc>
-      <image:title>Airconditioner omkasting 110*85*60 RAL9010 Wit</image:title>
-      <image:caption>Airco omkasting wit detail</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-wit-zijkant.webp</image:loc>
-      <image:title>Airconditioner omkasting 110*85*60 RAL9010 Wit</image:title>
-      <image:caption>Airco omkasting wit zijkant</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://staycoolairco.nl/images/products/airco-covers/aircocover-wit-binnenkant.webp</image:loc>
-      <image:title>Airconditioner omkasting 110*85*60 RAL9010 Wit</image:title>
-      <image:caption>Airco omkasting wit binnenkant</image:caption>
+      <image:title>Airco Bescherming/Omkasting Airconditioner omkasting 110*85*60 RAL9010 Wit Airco</image:title>
+      <image:caption>Professionele installatie van Airco Bescherming/Omkasting Airconditioner omkasting 110*85*60 RAL9010 Wit airco in Limburg</image:caption>
     </image:image>
   </url>
 </urlset>

@@ -56,6 +56,11 @@ const AircoMetBuitenunitLanding = lazy(() => import('./pages/landing/AircoMetBui
 const AircoInstallatieLanding = lazy(() => import('./pages/landing/AircoInstallatieLanding'));
 const AircoOnderhoudLanding = lazy(() => import('./pages/landing/AircoOnderhoudLanding'));
 const AircoReparatieLanding = lazy(() => import('./pages/landing/AircoReparatieLanding'));
+const WatKostAircoInstallatieLanding = lazy(() => import('./pages/landing/WatKostAircoInstallatieLanding'));
+const AircoServiceLimburgLanding = lazy(() => import('./pages/landing/AircoServiceLimburgLanding'));
+const AircoVoorSlaapkamerLanding = lazy(() => import('./pages/landing/AircoVoorSlaapkamerLanding'));
+const AircoVoorWoonkamerLanding = lazy(() => import('./pages/landing/AircoVoorWoonkamerLanding'));
+const AircoVoorZolderLanding = lazy(() => import('./pages/landing/AircoVoorZolderLanding'));
 const KostenAircoPlaatsen = lazy(() => import('./pages/KostenAircoPlaatsen'));
 
 // Location Landing Pages
@@ -365,6 +370,11 @@ const App = () => {
                 <Route path="/airco-installatie" element={<AircoInstallatieLanding />} />
                 <Route path="/airco-onderhoud" element={<AircoOnderhoudLanding />} />
                 <Route path="/airco-reparatie" element={<AircoReparatieLanding />} />
+                <Route path="/wat-kost-airco-installatie" element={<WatKostAircoInstallatieLanding />} />
+                <Route path="/airco-service-limburg" element={<AircoServiceLimburgLanding />} />
+                <Route path="/airco-voor-slaapkamer" element={<AircoVoorSlaapkamerLanding />} />
+                <Route path="/airco-voor-woonkamer" element={<AircoVoorWoonkamerLanding />} />
+                <Route path="/airco-voor-zolder" element={<AircoVoorZolderLanding />} />
                 
                 {/* Location Pages */}
                 <Route path="/airco-installatie/roermond" element={<RoermondPage />} />
