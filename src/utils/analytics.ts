@@ -1,37 +1,46 @@
 import { GA_TRACKING_ID, GA_TRACKING_ID_SECONDARY } from '../config/analytics';
 
-// Google Analytics event tracking
+// Google Analytics event tracking with error handling
 export const trackEvent = (eventName: string, params?: Record<string, any>) => {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    const eventParams = {
-      ...params,
-      send_to: [GA_TRACKING_ID, GA_TRACKING_ID_SECONDARY]
-    };
-    console.log('Tracking event:', eventName, eventParams);
-    (window as any).gtag('event', eventName, eventParams);
+  try {
+    if (typeof window !== 'undefined' && (window as any).gtag && typeof (window as any).gtag === 'function') {
+      const eventParams = {
+        ...params,
+        send_to: [GA_TRACKING_ID, GA_TRACKING_ID_SECONDARY]
+      };
+      console.log('Tracking event:', eventName, eventParams);
+      (window as any).gtag('event', eventName, eventParams);
+    }
+  } catch (error) {
+    console.warn('Analytics tracking error:', error);
+    // Don't throw - analytics should never break the app
   }
 };
 
-// Google Ads conversion tracking
+// Google Ads conversion tracking with error handling
 export const trackConversion = (value?: number) => {
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    // Track with first conversion ID
-    const conversionParams1 = {
-      'send_to': 'AW-10789737434/E-FmCJ743ocYENqn-Zgo',
-      'value': value || 1650.0,
-      'currency': 'EUR'
-    };
-    console.log('Tracking conversion (ID 1):', conversionParams1);
-    (window as any).gtag('event', 'conversion', conversionParams1);
-    
-    // Track with second conversion ID
-    const conversionParams2 = {
-      'send_to': 'AW-10789737434/HcGCCP3ez6AaENqn-Zgo',
-      'value': value || 1650.0,
-      'currency': 'EUR'
-    };
-    console.log('Tracking conversion (ID 2):', conversionParams2);
-    (window as any).gtag('event', 'conversion', conversionParams2);
+  try {
+    if (typeof window !== 'undefined' && (window as any).gtag && typeof (window as any).gtag === 'function') {
+      // Track with first conversion ID
+      const conversionParams1 = {
+        'send_to': 'AW-10789737434/E-FmCJ743ocYENqn-Zgo',
+        'value': value || 1650.0,
+        'currency': 'EUR'
+      };
+      console.log('Tracking conversion (ID 1):', conversionParams1);
+      (window as any).gtag('event', 'conversion', conversionParams1);
+      
+      // Track with second conversion ID
+      const conversionParams2 = {
+        'send_to': 'AW-10789737434/HcGCCP3ez6AaENqn-Zgo',
+        'value': value || 1650.0,
+        'currency': 'EUR'
+      };
+      console.log('Tracking conversion (ID 2):', conversionParams2);
+      (window as any).gtag('event', 'conversion', conversionParams2);
+    }
+  } catch (error) {
+    console.warn('Conversion tracking error:', error);
   }
 };
 
@@ -53,38 +62,42 @@ export const trackInteraction = (category: string, action: string, label?: strin
   });
 };
 
-// Track form submissions
+// Track form submissions with error handling
 export const trackFormSubmission = (formName: string, success: boolean) => {
-  console.log('Form submission:', { formName, success });
-  
-  // Track form submission event
-  trackEvent('form_submission', {
-    form_name: formName,
-    success: success
-  });
+  try {
+    console.log('Form submission:', { formName, success });
+    
+    // Track form submission event
+    trackEvent('form_submission', {
+      form_name: formName,
+      success: success
+    });
 
-  // If form submission was successful, track as conversion
-  if (success && formName === 'contact_form') {
-    console.log('Tracking contact form conversion');
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      // Track with first conversion ID
-      const conversionParams1 = {
-        'send_to': 'AW-10789737434/E-FmCJ743ocYENqn-Zgo',
-        'value': 1650.0,
-        'currency': 'EUR'
-      };
-      console.log('Conversion params (ID 1):', conversionParams1);
-      (window as any).gtag('event', 'conversion', conversionParams1);
-      
-      // Track with second conversion ID
-      const conversionParams2 = {
-        'send_to': 'AW-10789737434/HcGCCP3ez6AaENqn-Zgo',
-        'value': 1650.0,
-        'currency': 'EUR'
-      };
-      console.log('Conversion params (ID 2):', conversionParams2);
-      (window as any).gtag('event', 'conversion', conversionParams2);
+    // If form submission was successful, track as conversion
+    if (success && formName === 'contact_form') {
+      console.log('Tracking contact form conversion');
+      if (typeof window !== 'undefined' && (window as any).gtag && typeof (window as any).gtag === 'function') {
+        // Track with first conversion ID
+        const conversionParams1 = {
+          'send_to': 'AW-10789737434/E-FmCJ743ocYENqn-Zgo',
+          'value': 1650.0,
+          'currency': 'EUR'
+        };
+        console.log('Conversion params (ID 1):', conversionParams1);
+        (window as any).gtag('event', 'conversion', conversionParams1);
+        
+        // Track with second conversion ID
+        const conversionParams2 = {
+          'send_to': 'AW-10789737434/HcGCCP3ez6AaENqn-Zgo',
+          'value': 1650.0,
+          'currency': 'EUR'
+        };
+        console.log('Conversion params (ID 2):', conversionParams2);
+        (window as any).gtag('event', 'conversion', conversionParams2);
+      }
     }
+  } catch (error) {
+    console.warn('Form submission tracking error:', error);
   }
 };
 

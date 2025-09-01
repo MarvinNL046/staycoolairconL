@@ -13,9 +13,14 @@ declare global {
  * @param params Optional parameters to include with the event
  */
 export const trackPixelEvent = (eventName: string, params?: Record<string, any>) => {
-  if (typeof window !== 'undefined' && window.fbq) {
-    console.log('Tracking Facebook Pixel event:', eventName, params);
-    window.fbq('track', eventName, params);
+  try {
+    if (typeof window !== 'undefined' && window.fbq && typeof window.fbq === 'function') {
+      console.log('Tracking Facebook Pixel event:', eventName, params);
+      window.fbq('track', eventName, params);
+    }
+  } catch (error) {
+    console.warn('Facebook Pixel tracking error:', error);
+    // Don't throw - tracking should never break the app
   }
 };
 
@@ -25,9 +30,13 @@ export const trackPixelEvent = (eventName: string, params?: Record<string, any>)
  * @param params Optional parameters to include with the event
  */
 export const trackPixelCustomEvent = (eventName: string, params?: Record<string, any>) => {
-  if (typeof window !== 'undefined' && window.fbq) {
-    console.log('Tracking Facebook Pixel custom event:', eventName, params);
-    window.fbq('trackCustom', eventName, params);
+  try {
+    if (typeof window !== 'undefined' && window.fbq && typeof window.fbq === 'function') {
+      console.log('Tracking Facebook Pixel custom event:', eventName, params);
+      window.fbq('trackCustom', eventName, params);
+    }
+  } catch (error) {
+    console.warn('Facebook Pixel custom event tracking error:', error);
   }
 };
 
@@ -35,9 +44,13 @@ export const trackPixelCustomEvent = (eventName: string, params?: Record<string,
  * Track a page view event to Facebook Pixel
  */
 export const trackPixelPageView = () => {
-  if (typeof window !== 'undefined' && window.fbq) {
-    console.log('Tracking Facebook Pixel page view');
-    window.fbq('track', 'PageView');
+  try {
+    if (typeof window !== 'undefined' && window.fbq && typeof window.fbq === 'function') {
+      console.log('Tracking Facebook Pixel page view');
+      window.fbq('track', 'PageView');
+    }
+  } catch (error) {
+    console.warn('Facebook Pixel page view tracking error:', error);
   }
 };
 
@@ -48,33 +61,38 @@ export const trackPixelPageView = () => {
  * @param value Optional value of the conversion
  */
 export const trackPixelFormSubmission = (formName: string, success: boolean, value?: number, eventId?: string) => {
-  if (typeof window !== 'undefined' && window.fbq) {
-    if (success) {
-      console.log('Tracking Facebook Pixel form submission:', formName);
-      
-      // Generate event ID if not provided (for deduplication with Conversions API)
-      const pixelEventId = eventId || `Lead_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      
-      // Track Lead event
-      window.fbq('track', 'Lead', {
-        content_name: formName,
-        value: value || 1650.0,
-        currency: 'EUR',
-        eventID: pixelEventId // This is for deduplication with server events
-      });
-      
-      // Also track a custom event for more detailed tracking
-      window.fbq('trackCustom', 'FormSubmission', {
-        form_name: formName,
-        success: success,
-        value: value || 1650.0,
-        currency: 'EUR',
-        eventID: pixelEventId
-      });
-      
-      // Return the event ID for Conversions API to use
-      return pixelEventId;
+  try {
+    if (typeof window !== 'undefined' && window.fbq && typeof window.fbq === 'function') {
+      if (success) {
+        console.log('Tracking Facebook Pixel form submission:', formName);
+        
+        // Generate event ID if not provided (for deduplication with Conversions API)
+        const pixelEventId = eventId || `Lead_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        
+        // Track Lead event
+        window.fbq('track', 'Lead', {
+          content_name: formName,
+          value: value || 1650.0,
+          currency: 'EUR',
+          eventID: pixelEventId // This is for deduplication with server events
+        });
+        
+        // Also track a custom event for more detailed tracking
+        window.fbq('trackCustom', 'FormSubmission', {
+          form_name: formName,
+          success: success,
+          value: value || 1650.0,
+          currency: 'EUR',
+          eventID: pixelEventId
+        });
+        
+        // Return the event ID for Conversions API to use
+        return pixelEventId;
+      }
     }
+  } catch (error) {
+    console.warn('Facebook Pixel form submission tracking error:', error);
+    return undefined;
   }
 };
 
@@ -91,14 +109,18 @@ export const trackPixelPurchase = (
   contentIds?: string[],
   contentName?: string
 ) => {
-  if (typeof window !== 'undefined' && window.fbq) {
-    console.log('Tracking Facebook Pixel purchase:', { value, currency, contentIds, contentName });
-    window.fbq('track', 'Purchase', {
-      value,
-      currency,
-      content_ids: contentIds,
-      content_name: contentName
-    });
+  try {
+    if (typeof window !== 'undefined' && window.fbq && typeof window.fbq === 'function') {
+      console.log('Tracking Facebook Pixel purchase:', { value, currency, contentIds, contentName });
+      window.fbq('track', 'Purchase', {
+        value,
+        currency,
+        content_ids: contentIds,
+        content_name: contentName
+      });
+    }
+  } catch (error) {
+    console.warn('Facebook Pixel purchase tracking error:', error);
   }
 };
 
@@ -109,9 +131,13 @@ export const trackPixelPurchase = (
  * @param pixelId The Facebook Pixel ID
  */
 export const initFacebookPixel = (pixelId: string = '179700213744131') => {
-  if (typeof window !== 'undefined' && window.fbq) {
-    console.log('Initializing Facebook Pixel with ID:', pixelId);
-    window.fbq('init', pixelId);
-    window.fbq('track', 'PageView');
+  try {
+    if (typeof window !== 'undefined' && window.fbq && typeof window.fbq === 'function') {
+      console.log('Initializing Facebook Pixel with ID:', pixelId);
+      window.fbq('init', pixelId);
+      window.fbq('track', 'PageView');
+    }
+  } catch (error) {
+    console.warn('Facebook Pixel initialization error:', error);
   }
 };

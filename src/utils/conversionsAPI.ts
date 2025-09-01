@@ -39,19 +39,24 @@ interface ConversionEvent {
 
 // Hash user data according to Facebook requirements
 const hashData = async (data: string): Promise<string> => {
-  if (!data) return '';
-  
-  // Normalize data (lowercase, trim, remove special characters)
-  const normalized = data.toLowerCase().trim();
-  
-  // Use Web Crypto API for SHA-256 hashing
-  const encoder = new TextEncoder();
-  const dataBuffer = encoder.encode(normalized);
-  const hashBuffer = await crypto.subtle.digest('SHA-256', dataBuffer);
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-  
-  return hashHex;
+  try {
+    if (!data) return '';
+    
+    // Normalize data (lowercase, trim, remove special characters)
+    const normalized = data.toLowerCase().trim();
+    
+    // Use Web Crypto API for SHA-256 hashing
+    const encoder = new TextEncoder();
+    const dataBuffer = encoder.encode(normalized);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', dataBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    
+    return hashHex;
+  } catch (error) {
+    console.warn('Error hashing data:', error);
+    return '';
+  }
 };
 
 // Get Facebook cookies for better matching

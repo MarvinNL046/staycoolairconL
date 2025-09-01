@@ -105,6 +105,29 @@ async function generateMainSitemap() {
     // Handle special cases
     if (url === 'home' || url === '') url = '';
     
+    // Handle specific landing pages that have different route mappings
+    const landingPageMappings = {
+      'landing/-wat-kost-airco-installatie-landing': 'wat-kost-airco-installatie',
+      'landing/-airco-service-limburg-landing': 'airco-service-limburg',
+      'landing/-airco-voor-slaapkamer-landing': 'airco-voor-slaapkamer',
+      'landing/-airco-voor-woonkamer-landing': 'airco-voor-woonkamer',
+      'landing/-airco-voor-zolder-landing': 'airco-voor-zolder',
+      'landing/-daikin-landing': 'landing/daikin',
+      'landing/-lg-landing': 'landing/lg',
+      'landing/-mitsubishi-heavy-landing': 'landing/mitsubishi-heavy',
+      'landing/-toshiba-landing': 'landing/toshiba',
+      'landing/-tosot-landing': 'landing/tosot',
+      'landing/-mobiele-airco-landing': 'mobiele-airco',
+      'landing/-airco-met-buitenunit-landing': 'airco-met-buitenunit',
+      'landing/-airco-installatie-landing': 'airco-installatie',
+      'landing/-airco-onderhoud-landing': 'airco-onderhoud',
+      'landing/-airco-reparatie-landing': 'airco-reparatie'
+    };
+    
+    if (landingPageMappings[url]) {
+      url = landingPageMappings[url];
+    }
+    
     const priority = url === '' ? '1.0' : 
                     url.includes('products') || url.includes('services') ? '0.9' : '0.7';
     const changefreq = url === '' ? 'daily' : 'weekly';
