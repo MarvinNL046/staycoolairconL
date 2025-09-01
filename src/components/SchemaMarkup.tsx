@@ -313,6 +313,12 @@ export default function SchemaMarkup({ type, data, location }: SchemaMarkupProps
     CollectionPage: getCollectionPageSchema
   };
 
+  // Check if the type exists in schemaMap
+  if (!schemaMap[type]) {
+    console.error(`Invalid schema type: ${type}. Available types: ${Object.keys(schemaMap).join(', ')}`);
+    return null;
+  }
+
   const schema = schemaMap[type]();
 
   return (

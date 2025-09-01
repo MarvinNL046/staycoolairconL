@@ -301,20 +301,15 @@ const AircoVoorZolderLanding: React.FC = () => {
   ];
 
   const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Airco voor Zolder",
-    "description": "Speciale airco oplossingen voor zolder. Van hete zolder naar comfortabele ruimte. Professionele installatie vanaf €2.199.",
-    "brand": {
-      "@type": "Brand",
-      "name": "StayCool Airco"
-    },
-    "offers": {
+    name: "Airco voor Zolder",
+    description: "Speciale airco oplossingen voor zolder. Van hete zolder naar comfortabele ruimte. Professionele installatie vanaf €2.199.",
+    brand: "StayCool Airco",
+    offers: {
       "@type": "AggregateOffer",
-      "lowPrice": "2199",
-      "highPrice": "3999",
-      "priceCurrency": "EUR",
-      "availability": "https://schema.org/InStock"
+      lowPrice: "2199",
+      highPrice: "3999",
+      priceCurrency: "EUR",
+      availability: "https://schema.org/InStock"
     }
   };
 
@@ -327,7 +322,7 @@ const AircoVoorZolderLanding: React.FC = () => {
         <link rel="canonical" href="https://staycoolairco.nl/airco-voor-zolder" />
       </Helmet>
 
-      <SchemaMarkup schema={schemaData} />
+      <SchemaMarkup type="Product" data={schemaData} />
 
       {/* Breadcrumbs */}
       <div className="bg-gray-50">

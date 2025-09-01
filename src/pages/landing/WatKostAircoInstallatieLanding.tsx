@@ -242,33 +242,6 @@ const WatKostAircoInstallatieLanding: React.FC = () => {
     }
   ];
 
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Airco Installatie",
-    "description": "Professionele airco installatie in Limburg. Complete installatie vanaf €2.498 inclusief montage. Vraag direct een offerte aan.",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "StayCool Airco",
-      "image": "https://staycoolairco.nl/images/logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "Limburg",
-        "addressCountry": "NL"
-      }
-    },
-    "areaServed": {
-      "@type": "State",
-      "name": "Limburg"
-    },
-    "priceRange": "€€",
-    "offers": {
-      "@type": "Offer",
-      "price": "2498",
-      "priceCurrency": "EUR",
-      "name": "Complete airco installatie"
-    }
-  };
 
   return (
     <>
@@ -279,7 +252,34 @@ const WatKostAircoInstallatieLanding: React.FC = () => {
         <link rel="canonical" href="https://staycoolairco.nl/wat-kost-airco-installatie" />
       </Helmet>
 
-      <SchemaMarkup schema={schemaData} />
+      <SchemaMarkup 
+        type="Service" 
+        data={{
+          name: "Airco Installatie",
+          description: "Professionele airco installatie in Limburg. Complete installatie vanaf €2.498 inclusief montage. Vraag direct een offerte aan.",
+          provider: {
+            "@type": "LocalBusiness",
+            "name": "StayCool Airco",
+            "image": "https://staycoolairco.nl/images/logo.png",
+            "address": {
+              "@type": "PostalAddress",
+              "addressRegion": "Limburg",
+              "addressCountry": "NL"
+            }
+          },
+          areaServed: {
+            "@type": "State",
+            "name": "Limburg"
+          },
+          priceRange: "€€",
+          offers: {
+            "@type": "Offer",
+            "price": "2498",
+            "priceCurrency": "EUR",
+            "name": "Complete airco installatie"
+          }
+        }} 
+      />
 
       {/* Breadcrumbs */}
       <div className="bg-gray-50">

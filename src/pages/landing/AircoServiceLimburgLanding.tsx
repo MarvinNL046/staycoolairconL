@@ -276,36 +276,34 @@ const AircoServiceLimburgLanding: React.FC = () => {
   ];
 
   const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "HVACBusiness",
-    "name": "StayCool Airco Service Limburg",
-    "description": "24/7 Airco service in heel Limburg. Onderhoud vanaf €119, reparaties met snelle responstijd. Alle merken.",
-    "url": "https://staycoolairco.nl/airco-service-limburg",
-    "telephone": "046-202-1430",
-    "address": {
+    name: "StayCool Airco Service Limburg",
+    description: "24/7 Airco service in heel Limburg. Onderhoud vanaf €119, reparaties met snelle responstijd. Alle merken.",
+    url: "https://staycoolairco.nl/airco-service-limburg",
+    telephone: "046-202-1430",
+    address: {
       "@type": "PostalAddress",
-      "addressRegion": "Limburg",
-      "addressCountry": "NL"
+      addressRegion: "Limburg",
+      addressCountry: "NL"
     },
-    "geo": {
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": "50.8514",
-      "longitude": "5.6910"
+      latitude: "50.8514",
+      longitude: "5.6910"
     },
-    "openingHoursSpecification": {
+    openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
+      dayOfWeek: [
         "Monday", "Tuesday", "Wednesday", "Thursday", 
         "Friday", "Saturday", "Sunday"
       ],
-      "opens": "00:00",
-      "closes": "23:59"
+      opens: "00:00",
+      closes: "23:59"
     },
-    "areaServed": {
+    areaServed: {
       "@type": "State",
-      "name": "Limburg"
+      name: "Limburg"
     },
-    "priceRange": "€€"
+    priceRange: "€€"
   };
 
   return (
@@ -317,7 +315,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
         <link rel="canonical" href="https://staycoolairco.nl/airco-service-limburg" />
       </Helmet>
 
-      <SchemaMarkup schema={schemaData} />
+      <SchemaMarkup type="LocalBusiness" data={schemaData} />
 
       {/* Breadcrumbs */}
       <div className="bg-gray-50">

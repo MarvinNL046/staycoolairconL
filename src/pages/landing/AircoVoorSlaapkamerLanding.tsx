@@ -283,27 +283,22 @@ const AircoVoorSlaapkamerLanding: React.FC = () => {
   ];
 
   const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Airco voor Slaapkamer",
-    "description": "Fluisterstille airco voor de slaapkamer. Verbeter uw nachtrust met de juiste temperatuur en gezonde lucht. Vanaf €1.799 inclusief installatie.",
-    "brand": {
-      "@type": "Brand",
-      "name": "StayCool Airco"
-    },
-    "offers": {
+    name: "Airco voor Slaapkamer",
+    description: "Fluisterstille airco voor de slaapkamer. Verbeter uw nachtrust met de juiste temperatuur en gezonde lucht. Vanaf €1.799 inclusief installatie.",
+    brand: "StayCool Airco",
+    offers: {
       "@type": "AggregateOffer",
-      "lowPrice": "1799",
-      "highPrice": "2499",
-      "priceCurrency": "EUR",
-      "availability": "https://schema.org/InStock",
-      "seller": {
+      lowPrice: "1799",
+      highPrice: "2499",
+      priceCurrency: "EUR",
+      availability: "https://schema.org/InStock",
+      seller: {
         "@type": "LocalBusiness",
-        "name": "StayCool Airco",
-        "address": {
+        name: "StayCool Airco",
+        address: {
           "@type": "PostalAddress",
-          "addressRegion": "Limburg",
-          "addressCountry": "NL"
+          addressRegion: "Limburg",
+          addressCountry: "NL"
         }
       }
     }
@@ -318,7 +313,7 @@ const AircoVoorSlaapkamerLanding: React.FC = () => {
         <link rel="canonical" href="https://staycoolairco.nl/airco-voor-slaapkamer" />
       </Helmet>
 
-      <SchemaMarkup schema={schemaData} />
+      <SchemaMarkup type="Product" data={schemaData} />
 
       {/* Breadcrumbs */}
       <div className="bg-gray-50">

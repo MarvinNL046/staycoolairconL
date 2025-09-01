@@ -304,20 +304,15 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
   };
 
   const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Airco voor Woonkamer",
-    "description": "Stijlvolle en krachtige airco voor de woonkamer. Design modellen die passen bij elk interieur. Vanaf €2.499 inclusief installatie.",
-    "brand": {
-      "@type": "Brand",
-      "name": "StayCool Airco"
-    },
-    "offers": {
+    name: "Airco voor Woonkamer",
+    description: "Stijlvolle en krachtige airco voor de woonkamer. Design modellen die passen bij elk interieur. Vanaf €2.499 inclusief installatie.",
+    brand: "StayCool Airco",
+    offers: {
       "@type": "AggregateOffer",
-      "lowPrice": "2499",
-      "highPrice": "3499",
-      "priceCurrency": "EUR",
-      "availability": "https://schema.org/InStock"
+      lowPrice: "2499",
+      highPrice: "3499",
+      priceCurrency: "EUR",
+      availability: "https://schema.org/InStock"
     }
   };
 
@@ -330,7 +325,7 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
         <link rel="canonical" href="https://staycoolairco.nl/airco-voor-woonkamer" />
       </Helmet>
 
-      <SchemaMarkup schema={schemaData} />
+      <SchemaMarkup type="Product" data={schemaData} />
 
       {/* Breadcrumbs */}
       <div className="bg-gray-50">
