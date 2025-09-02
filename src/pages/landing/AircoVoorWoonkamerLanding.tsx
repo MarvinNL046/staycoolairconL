@@ -91,7 +91,7 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
     {
       brand: 'Daikin',
       model: 'Emura FTXJ-MW',
-      price: '€2.299',
+      image: '/images/products/daikin-emura-wit.webp',
       power: '3.5kW',
       area: '25-35m²',
       features: ['Design bekroond', 'Fluisterstil 22dB', '3D luchtstroom', 'WiFi controle'],
@@ -100,7 +100,7 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
     {
       brand: 'Mitsubishi',
       model: 'Kirigamine Zen EF',
-      price: '€2.199',
+      image: '/images/products/Kazumi-plus-white-vooraanzicht_8_11zon.webp',
       power: '3.5kW',
       area: '25-35m²',
       features: ['Minimalistisch design', 'i-see sensor', 'Dual Barrier Coating', 'Week timer'],
@@ -109,7 +109,7 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
     {
       brand: 'LG',
       model: 'ARTCOOL Gallery',
-      price: '€2.499',
+      image: '/images/products/lg-artcool-mirror.webp',
       power: '3.5kW',
       area: '25-35m²',
       features: ['Aanpasbaar frame', 'ThinQ WiFi', 'Active Energy Control', 'Dual Inverter'],
@@ -118,7 +118,7 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
     {
       brand: 'Samsung',
       model: 'Wind-Free Elite',
-      price: '€2.099',
+      image: '/images/products/samsung/windfreeElite/WindFree Elite_S2_Front_Web_RGB.webp',
       power: '3.5kW',
       area: '25-35m²',
       features: ['Wind-Free koeling', 'AI Auto Comfort', 'PM 1.0 Filter', 'SmartThings'],
@@ -389,8 +389,8 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
             
             <div className="relative">
               <LazyImage
-                src="/images/living-room-airco-hero.jpg"
-                alt="Moderne woonkamer met design airco"
+                src="/images/onze_monteurs/O1V_9671.jpg"
+                alt="StayCool monteur installeert design airco in woonkamer"
                 className="rounded-xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-white text-gray-900 rounded-lg shadow-xl p-4">
@@ -491,9 +491,9 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
                 <div className="md:flex">
                   <div className="md:w-2/5 bg-gradient-to-br from-gray-100 to-gray-200 p-8 flex items-center justify-center">
                     <LazyImage
-                      src={`/images/airco-${model.brand.toLowerCase()}-${index}.jpg`}
+                      src={model.image}
                       alt={`${model.brand} ${model.model}`}
-                      className="rounded-lg"
+                      className="rounded-lg object-contain max-h-48"
                     />
                   </div>
                   <div className="md:w-3/5 p-6">
@@ -503,8 +503,10 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
                         <p className="text-gray-600">{model.model}</p>
                       </div>
                       <div className="text-right">
-                        <p className="text-2xl font-bold text-blue-600">{model.price}</p>
-                        <p className="text-xs text-gray-500">incl. installatie</p>
+                        <a href="#contact" className="inline-flex items-center gap-1 bg-green-100 text-green-700 px-3 py-2 rounded-full hover:bg-green-200 transition">
+                          <Phone className="w-4 h-4" />
+                          <span className="text-sm font-semibold">Vraag offerte</span>
+                        </a>
                       </div>
                     </div>
                     

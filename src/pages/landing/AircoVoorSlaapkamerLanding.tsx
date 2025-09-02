@@ -52,7 +52,7 @@ const AircoVoorSlaapkamerLanding: React.FC = () => {
   const [activeTab, setActiveTab] = useState('voordelen');
   const [showAllFAQ, setShowAllFAQ] = useState(false);
   const [activeFAQ, setActiveFAQ] = useState<number | null>(null);
-  const [selectedRoomSize, setSelectedRoomSize] = useState('15-20');
+  const [selectedRoomSize, setSelectedRoomSize] = useState('12-15');
 
   const breadcrumbItems = [
     { label: 'Airco voor Slaapkamer', path: '/airco-voor-slaapkamer' }
@@ -113,10 +113,10 @@ const AircoVoorSlaapkamerLanding: React.FC = () => {
   ];
 
   const roomSizeCalculator = {
-    '10-15': { power: '2.5kW', units: ['Daikin 25', 'Mitsubishi 25', 'LG 25'] },
-    '15-20': { power: '3.5kW', units: ['Daikin 35', 'Mitsubishi 35', 'LG 35'] },
-    '20-25': { power: '4.2kW', units: ['Daikin 42', 'Mitsubishi 42', 'LG 42'] },
-    '25-30': { power: '5.0kW', units: ['Daikin 50', 'Mitsubishi 50', 'LG 50'] }
+    '8-12': { power: '2.0kW', units: ['Daikin 20', 'Mitsubishi 20', 'LG S09'] },
+    '12-15': { power: '2.5kW', units: ['Daikin 25', 'Mitsubishi 25', 'LG S12'] },
+    '15-20': { power: '3.5kW', units: ['Daikin 35', 'Mitsubishi 35', 'LG S18'] },
+    '20-25': { power: '3.5kW', units: ['Daikin 35', 'Mitsubishi 35', 'LG S18'] }
   };
 
   const placementTips = [
@@ -250,7 +250,7 @@ const AircoVoorSlaapkamerLanding: React.FC = () => {
     },
     {
       question: 'Welk vermogen airco voor mijn slaapkamer?',
-      answer: 'Voor een slaapkamer van 15-20m² is 2.5-3.5kW voldoende. Voor 20-25m² adviseren wij 3.5-4.2kW. Wij berekenen graag het exacte vermogen op basis van isolatie, raamoppervlak en ligging. Een te zware airco is onnodig duur, te licht betekent onvoldoende comfort.'
+      answer: 'Voor een slaapkamer van 10-15m² is 2.0-2.5kW voldoende. Voor 15-20m² adviseren wij 2.5-3.5kW. Voor grotere slaapkamers tot 25m² is 3.5kW meestal het maximum dat nodig is. Wij berekenen graag het exacte vermogen op basis van isolatie, raamoppervlak en ligging. Een te zware airco is onnodig duur en maakt meer geluid.'
     },
     {
       question: 'Waar moet de airco in de slaapkamer hangen?',
@@ -377,8 +377,8 @@ const AircoVoorSlaapkamerLanding: React.FC = () => {
             
             <div className="relative">
               <LazyImage
-                src="/images/bedroom-airco-hero.jpg"
-                alt="Moderne slaapkamer met stille airco"
+                src="/images/onze_monteurs/O1V_9722.jpg"
+                alt="StayCool monteur installeert stille airco voor slaapkamer"
                 className="rounded-xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-white text-gray-900 rounded-lg shadow-xl p-4">
@@ -531,10 +531,10 @@ const AircoVoorSlaapkamerLanding: React.FC = () => {
                 onChange={(e) => setSelectedRoomSize(e.target.value)}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
               >
-                <option value="10-15">10-15 m² (kleine slaapkamer)</option>
-                <option value="15-20">15-20 m² (gemiddelde slaapkamer)</option>
-                <option value="20-25">20-25 m² (grote slaapkamer)</option>
-                <option value="25-30">25-30 m² (master bedroom)</option>
+                <option value="8-12">8-12 m² (kleine slaapkamer)</option>
+                <option value="12-15">12-15 m² (gemiddelde slaapkamer)</option>
+                <option value="15-20">15-20 m² (grote slaapkamer)</option>
+                <option value="20-25">20-25 m² (master bedroom)</option>
               </select>
             </div>
 

@@ -335,8 +335,8 @@ const WatKostAircoInstallatieLanding: React.FC = () => {
             </div>
             <div className="relative">
               <LazyImage
-                src="/images/airco-installation-hero.jpg"
-                alt="Professionele airco installatie"
+                src="/images/onze_monteurs/O1V_9719.jpg"
+                alt="StayCool monteur tijdens professionele airco installatie"
                 className="rounded-xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-white text-gray-900 rounded-lg shadow-xl p-4">

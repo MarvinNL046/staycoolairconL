@@ -382,8 +382,8 @@ const AircoVoorZolderLanding: React.FC = () => {
             
             <div className="relative">
               <LazyImage
-                src="/images/attic-airco-hero.jpg"
-                alt="Moderne zolder met airco installatie"
+                src="/images/onze_monteurs/O1V_9717.jpg"
+                alt="StayCool monteur installeert compacte airco op zolder"
                 className="rounded-xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-white text-gray-900 rounded-lg shadow-xl p-4">

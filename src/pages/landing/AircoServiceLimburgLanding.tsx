@@ -371,8 +371,8 @@ const AircoServiceLimburgLanding: React.FC = () => {
             
             <div className="relative">
               <LazyImage
-                src="/images/airco-service-hero.jpg"
-                alt="Airco service monteur aan het werk"
+                src="/images/onze_monteurs/O1V_9671.jpg"
+                alt="StayCool airco service monteur aan het werk"
                 className="rounded-xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-white text-gray-900 rounded-lg shadow-xl p-4">
@@ -467,8 +467,10 @@ const AircoServiceLimburgLanding: React.FC = () => {
               </div>
               <div>
                 <LazyImage
-                  src={`/images/service-${activeTab}.jpg`}
-                  alt={`${serviceTypes[activeTab as keyof typeof serviceTypes].name} service`}
+                  src={activeTab === 'onderhoud' ? '/images/onze_monteurs/O1V_9673.jpg' : 
+                       activeTab === 'reparatie' ? '/images/onze_monteurs/O1V_9717.jpg' : 
+                       '/images/onze_monteurs/O1V_9719.jpg'}
+                  alt={`StayCool ${serviceTypes[activeTab as keyof typeof serviceTypes].name} service`}
                   className="rounded-lg shadow-md"
                 />
               </div>
