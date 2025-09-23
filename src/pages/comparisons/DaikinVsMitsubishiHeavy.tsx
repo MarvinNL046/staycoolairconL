@@ -10,7 +10,7 @@ export default function DaikinVsMitsubishiHeavy() {
     product1: {
       name: 'Daikin Stylish',
       image: '/images/products/daikin-stylish-wit.webp',
-      price: 'vanaf €1.895,-',
+      price: 'Vraag offerte aan',
       link: '/products/daikin/stylish',
       pros: [
         'Beste energiezuinigheid (A+++)',
@@ -29,7 +29,7 @@ export default function DaikinVsMitsubishiHeavy() {
     product2: {
       name: 'Mitsubishi Heavy ZS-WF',
       image: '/images/products/Mitsubishi heavy indus/Mitsubishi-titanium-zs-wft-1.webp',
-      price: 'vanaf €1.550,-',
+      price: 'Vraag offerte aan',
       link: '/products/mitsubishi-heavy-industries/zs-w',
       pros: [
         'Zeer betrouwbaar en duurzaam',
@@ -60,7 +60,7 @@ export default function DaikinVsMitsubishiHeavy() {
     { feature: 'Zelfreinigend', product1: true, product2: true, highlight: 'both' },
     { feature: 'Garantie compressor', product1: '10 jaar', product2: '10 jaar', highlight: 'both' },
     { feature: 'Beschikbare kleuren', product1: '3 (wit, zilver, zwart)', product2: '2 (wit, titanium)', highlight: 'product1' },
-    { feature: 'Prijs vanaf', product1: '€1.895', product2: '€1.550', highlight: 'product2' }
+    { feature: 'Prijs', product1: 'Op aanvraag', product2: 'Op aanvraag', highlight: 'both' }
   ];
 
   const schemaData = {

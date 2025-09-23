@@ -56,12 +56,12 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ product1, product2, i
         <div className="bg-white rounded-lg shadow-lg p-6">
           <img src={product1.image} alt={product1.name} className="w-full h-48 object-contain mb-4" />
           <h3 className="text-xl font-bold text-gray-900 mb-2">{product1.name}</h3>
-          <p className="text-2xl font-bold text-blue-600 mb-4">{product1.price}</p>
+          <p className="text-lg font-semibold text-gray-700 mb-4">{product1.price}</p>
           <Link 
             to={product1.link} 
             className="block w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors text-center"
           >
-            Bekijk details
+            Vraag offerte aan
           </Link>
         </div>
         
@@ -69,12 +69,12 @@ const ComparisonTable: React.FC<ComparisonTableProps> = ({ product1, product2, i
         <div className="bg-white rounded-lg shadow-lg p-6">
           <img src={product2.image} alt={product2.name} className="w-full h-48 object-contain mb-4" />
           <h3 className="text-xl font-bold text-gray-900 mb-2">{product2.name}</h3>
-          <p className="text-2xl font-bold text-blue-600 mb-4">{product2.price}</p>
+          <p className="text-lg font-semibold text-gray-700 mb-4">{product2.price}</p>
           <Link 
             to={product2.link} 
             className="block w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors text-center"
           >
-            Bekijk details
+            Vraag offerte aan
           </Link>
         </div>
       </div>

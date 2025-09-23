@@ -10,7 +10,7 @@ export default function TosotVsLG() {
     product1: {
       name: 'Tosot Pular',
       image: '/images/products/tosot/Tosot-pular-wandmodel-airco-1-510x510.webp',
-      price: 'vanaf €1.195,-',
+      price: 'Vraag offerte aan',
       link: '/products/tosot/pular',
       pros: [
         'Uitstekende prijs-kwaliteitverhouding',
@@ -29,7 +29,7 @@ export default function TosotVsLG() {
     product2: {
       name: 'LG Deluxe',
       image: '/images/products/lg/lg-deluxe-dc24rq-airco-koeling-1.webp',
-      price: 'vanaf €1.595,-',
+      price: 'Vraag offerte aan',
       link: '/products/lg/deluxe',
       pros: [
         'Innovatieve technologie (Dual Inverter)',
@@ -59,7 +59,7 @@ export default function TosotVsLG() {
     { feature: 'Auto-cleaning', product1: true, product2: true, highlight: 'both' },
     { feature: 'Garantie compressor', product1: '10 jaar', product2: '10 jaar', highlight: 'both' },
     { feature: 'Smart home integratie', product1: 'Basis app', product2: 'ThinQ + Google/Alexa', highlight: 'product2' },
-    { feature: 'Prijs vanaf', product1: '€1.195', product2: '€1.595', highlight: 'product1' }
+    { feature: 'Prijs', product1: 'Op aanvraag', product2: 'Op aanvraag', highlight: 'both' }
   ];
 
   const schemaData = {
@@ -165,7 +165,7 @@ export default function TosotVsLG() {
                 <li>✓ Bewezen technologie zonder toeters en bellen</li>
               </ul>
               <div className="mt-4 p-3 bg-white rounded">
-                <p className="text-sm font-medium text-gray-900">Besparing: ±€400 op aanschaf</p>
+                <p className="text-sm font-medium text-gray-900">Voordeel: Scherpe prijs-kwaliteitverhouding</p>
               </div>
             </div>
             
@@ -179,7 +179,7 @@ export default function TosotVsLG() {
                 <li>✓ Premium design en gebruikerservaring</li>
               </ul>
               <div className="mt-4 p-3 bg-white rounded">
-                <p className="text-sm font-medium text-gray-900">Extra: ±€150/jaar energiebesparing</p>
+                <p className="text-sm font-medium text-gray-900">Extra: Aanzienlijke energiebesparing door A+++</p>
               </div>
             </div>
           </div>
@@ -273,64 +273,45 @@ export default function TosotVsLG() {
           {/* Total Cost of Ownership */}
           <div className="bg-gray-100 rounded-lg p-8 mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              Total Cost of Ownership (10 jaar)
+              Total Cost of Ownership Vergelijking
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-lg p-6">
-                <h3 className="font-bold text-lg mb-4 text-green-600">Tosot Pular 3.5kW</h3>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span>Aanschaf + installatie:</span>
-                    <span className="font-medium">€1.695</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Energiekosten (10 jaar):</span>
-                    <span className="font-medium">€2.500</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Onderhoud (10 jaar):</span>
-                    <span className="font-medium">€800</span>
-                  </div>
-                  <div className="border-t pt-2 mt-2">
-                    <div className="flex justify-between font-bold">
-                      <span>Totaal na 10 jaar:</span>
-                      <span className="text-green-600">€4.995</span>
-                    </div>
-                  </div>
+            <div className="bg-white rounded-lg p-6">
+              <h3 className="font-bold text-lg mb-4 text-center">Waarom een persoonlijke berekening?</h3>
+              <p className="text-gray-700 mb-6 text-center max-w-3xl mx-auto">
+                De totale kosten over 10 jaar zijn afhankelijk van veel factoren: uw woonsituatie, 
+                isolatie, gebruik, lokale energieprijzen en meer. Daarom maken wij graag een 
+                persoonlijke berekening voor u.
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="border rounded-lg p-4">
+                  <h4 className="font-semibold text-green-600 mb-2">Tosot Pular voordelen:</h4>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>• Lagere aanschafprijs</li>
+                    <li>• Uitstekend voor standaard gebruik</li>
+                    <li>• Betrouwbare prestaties</li>
+                  </ul>
+                </div>
+                
+                <div className="border rounded-lg p-4">
+                  <h4 className="font-semibold text-blue-600 mb-2">LG Deluxe voordelen:</h4>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>• Lager energieverbruik (A+++)</li>
+                    <li>• Lagere maandelijkse kosten</li>
+                    <li>• Snellere terugverdientijd</li>
+                  </ul>
                 </div>
               </div>
               
-              <div className="bg-white rounded-lg p-6">
-                <h3 className="font-bold text-lg mb-4 text-blue-600">LG Deluxe 3.5kW</h3>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span>Aanschaf + installatie:</span>
-                    <span className="font-medium">€2.095</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Energiekosten (10 jaar):</span>
-                    <span className="font-medium">€2.000</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Onderhoud (10 jaar):</span>
-                    <span className="font-medium">€800</span>
-                  </div>
-                  <div className="border-t pt-2 mt-2">
-                    <div className="flex justify-between font-bold">
-                      <span>Totaal na 10 jaar:</span>
-                      <span className="text-blue-600">€4.895</span>
-                    </div>
-                  </div>
-                </div>
+              <div className="mt-6 p-4 bg-blue-50 rounded-lg text-center">
+                <p className="font-semibold text-gray-900 mb-2">
+                  Vraag uw persoonlijke TCO-berekening aan!
+                </p>
+                <p className="text-sm text-gray-700">
+                  Onze experts berekenen exact wat de beste investering is voor uw situatie.
+                </p>
               </div>
-            </div>
-            
-            <div className="mt-6 p-4 bg-blue-50 rounded-lg text-center">
-              <p className="text-sm text-gray-700">
-                <strong>Conclusie:</strong> LG is duurder in aanschaf maar verdient zich terug 
-                door lager energieverbruik. Na 10 jaar zijn de totale kosten vergelijkbaar!
-              </p>
             </div>
           </div>
 

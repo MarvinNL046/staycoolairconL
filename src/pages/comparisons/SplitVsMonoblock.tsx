@@ -190,18 +190,18 @@ export default function SplitVsMonoblock() {
                 <tbody className="divide-y divide-gray-200">
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 font-medium">Aanschafprijs</td>
-                    <td className="px-6 py-4 text-center">€1.200 - €4.000</td>
-                    <td className="px-6 py-4 text-center">€300 - €800</td>
+                    <td className="px-6 py-4 text-center">Vraag offerte aan</td>
+                    <td className="px-6 py-4 text-center">Lagere aanschaf</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 font-medium">Installatiekosten</td>
-                    <td className="px-6 py-4 text-center">€500 - €1.000</td>
-                    <td className="px-6 py-4 text-center">€0 (zelf te doen)</td>
+                    <td className="px-6 py-4 text-center">Professionele installatie</td>
+                    <td className="px-6 py-4 text-center">Zelf te installeren</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 font-medium">Energieverbruik per jaar*</td>
-                    <td className="px-6 py-4 text-center bg-green-50">€150 - €250</td>
-                    <td className="px-6 py-4 text-center">€400 - €600</td>
+                    <td className="px-6 py-4 text-center bg-green-50">Zeer laag</td>
+                    <td className="px-6 py-4 text-center">Aanzienlijk hoger</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 font-medium">Geluidsniveau</td>
@@ -308,21 +308,27 @@ export default function SplitVsMonoblock() {
             </div>
             
             <div className="bg-blue-50 rounded-lg p-6 mb-6">
-              <div className="grid md:grid-cols-3 gap-4 text-center">
-                <div>
-                  <p className="text-sm text-gray-600 mb-1">Na 3 jaar</p>
-                  <p className="text-2xl font-bold text-gray-900">€450 voordeliger</p>
-                  <p className="text-sm text-gray-600">met split systeem</p>
-                </div>
-                <div>
-                  <p className="text-sm text-gray-600 mb-1">Na 5 jaar</p>
-                  <p className="text-2xl font-bold text-green-600">€1.250 voordeliger</p>
-                  <p className="text-sm text-gray-600">met split systeem</p>
-                </div>
-                <div>
-                  <p className="text-sm text-gray-600 mb-1">Na 10 jaar</p>
-                  <p className="text-2xl font-bold text-green-600">€3.500 voordeliger</p>
-                  <p className="text-sm text-gray-600">met split systeem</p>
+              <div className="text-center">
+                <p className="text-lg font-semibold text-gray-900 mb-2">
+                  Split systemen zijn op lange termijn veel voordeliger!
+                </p>
+                <p className="text-gray-700 mb-4">
+                  Door het lagere energieverbruik verdient een split systeem zich snel terug. 
+                  Vraag een persoonlijke berekening aan om te zien hoeveel u kunt besparen.
+                </p>
+                <div className="grid md:grid-cols-3 gap-4 text-center">
+                  <div className="bg-white rounded p-4">
+                    <p className="font-semibold text-blue-600">Korte termijn</p>
+                    <p className="text-sm text-gray-600">Monoblock lijkt voordeliger</p>
+                  </div>
+                  <div className="bg-white rounded p-4">
+                    <p className="font-semibold text-green-600">Middellange termijn</p>
+                    <p className="text-sm text-gray-600">Split wordt voordeliger</p>
+                  </div>
+                  <div className="bg-white rounded p-4">
+                    <p className="font-semibold text-green-700">Lange termijn</p>
+                    <p className="text-sm text-gray-600">Split aanzienlijk voordeliger</p>
+                  </div>
                 </div>
               </div>
             </div>
