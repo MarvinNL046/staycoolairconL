@@ -10,7 +10,7 @@
     "build:client": "tsc && vite build",
     "build:prod": "cross-env NODE_ENV=production npm run build",
     "build:brands": "node scripts/build-brands-data.js && node scripts/bundle-brands-data.js",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "generate-sitemaps": "node scripts/generate-sitemaps-unified.js",
     "generate-sitemaps-old": "node scripts/generate-products-sitemap.js && node scripts/generate-service-areas-sitemap.js && node scripts/generate-sitemap.js && node scripts/update-sitemap-with-locations.js && node scripts/generate-blog-sitemap.js",

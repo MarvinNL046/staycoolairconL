@@ -13,6 +13,10 @@ declare global {
         options?: { force?: boolean }
       ) => any;
     };
+    clarity?: {
+      (action: string, ...args: any[]): void;
+      q?: any[];
+    };
   }
 }
 
@@ -34,7 +38,8 @@ export function initAnalytics() {
           const allowedDomains = [
             'www.googletagmanager.com',
             'www.google-analytics.com',
-            'analytics.google.com'
+            'analytics.google.com',
+            'www.clarity.ms'
           ];
           const urlObj = new URL(url);
           if (allowedDomains.some(domain => urlObj.hostname.endsWith(domain))) {
@@ -95,6 +100,19 @@ export function initAnalytics() {
           });
         }
       };
+    }
+
+    // Initialize Microsoft Clarity
+    const clarityId = "tfbd5a2vc8"; // Your Clarity project ID
+    try {
+      // Create Clarity function
+      (function(c: any, l: any, a: string, r: string, i: string, t: any, y: any){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", clarityId);
+    } catch (error) {
+      console.error('Failed to initialize Microsoft Clarity:', error);
     }
   } catch (error) {
     console.error('Failed to initialize analytics:', error);
