@@ -17,7 +17,7 @@ Allow: /*.svg$
 Allow: /*.webp$
 
 # Crawl delay
-Crawl-delay: 10
+Crawl-delay: 1
 
 # Sitemaps
 Sitemap: https://staycoolairco.nl/sitemap-index.xml

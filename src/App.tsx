@@ -62,6 +62,12 @@ const AircoVoorSlaapkamerLanding = lazy(() => import('./pages/landing/AircoVoorS
 const AircoVoorWoonkamerLanding = lazy(() => import('./pages/landing/AircoVoorWoonkamerLanding'));
 const AircoVoorZolderLanding = lazy(() => import('./pages/landing/AircoVoorZolderLanding'));
 const KostenAircoPlaatsen = lazy(() => import('./pages/KostenAircoPlaatsen'));
+const NotFound = lazy(() => import('./pages/NotFound'));
+
+// Comparison Pages
+const DaikinVsMitsubishiHeavy = lazy(() => import('./pages/comparisons/DaikinVsMitsubishiHeavy'));
+const SplitVsMonoblock = lazy(() => import('./pages/comparisons/SplitVsMonoblock'));
+const TosotVsLG = lazy(() => import('./pages/comparisons/TosotVsLG'));
 
 // Location Landing Pages
 const RoermondPage = lazy(() => import('./pages/locations/Roermond'));
@@ -301,6 +307,11 @@ const App = () => {
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/onderhoud" element={<MaintenanceProcedures />} />
 
+                {/* Comparison Pages */}
+                <Route path="/vergelijkingen/daikin-vs-mitsubishi-heavy" element={<DaikinVsMitsubishiHeavy />} />
+                <Route path="/vergelijkingen/split-vs-monoblock" element={<SplitVsMonoblock />} />
+                <Route path="/vergelijkingen/tosot-vs-lg" element={<TosotVsLG />} />
+
                 {/* Manual Pages */}
                 <Route path="/handleidingen/lg" element={<LGHandleiding />} />
                 <Route path="/handleidingen/tosot" element={<TosotHandleiding />} />
@@ -412,6 +423,9 @@ const App = () => {
                 <Route path="/blog/airco-offerte-limburg" element={<AircoOfferteLimburg />} />
                 <Route path="/blog/airco-specialist-limburg" element={<AircoSpecialistLimburgBlog />} />
                 <Route path="/blog/airco-installatie-zuid-limburg" element={<AircoInstallatieZuidLimburg />} />
+                
+                {/* 404 Page - Catch all */}
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
           </AnimatePresence>

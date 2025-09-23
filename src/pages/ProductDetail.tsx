@@ -5,6 +5,7 @@ import { Phone, Check, ThermometerSun, Wind, Zap, Timer, Ruler, Info, X } from '
 import { productData } from '../data/products';
 import ProductCarousel from '../components/ProductCarousel';
 import MetaTags from '../components/MetaTags';
+import Breadcrumbs from '../components/SEO/Breadcrumbs';
 
 export default function ProductDetail() {
   const { brand, model } = useParams();
@@ -251,31 +252,17 @@ export default function ProductDetail() {
         ]}
       />
 
+      {/* Breadcrumbs */}
+      <Breadcrumbs 
+        items={[
+          { name: "Producten", path: "/products" },
+          { name: brandData.name, path: `/products/${brand}` },
+          { name: modelData.name, path: `/products/${brand}/${model}` }
+        ]}
+      />
+      
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumbs */}
-          <div className="mb-12">
-            <nav className="flex" aria-label="Breadcrumb">
-              <ol className="inline-flex items-center space-x-1 md:space-x-3">
-                <li>
-                  <Link to="/products" className="text-gray-500 hover:text-blue-600">
-                    Producten
-                  </Link>
-                </li>
-                <li className="flex items-center">
-                  <span className="mx-2 text-gray-400">/</span>
-                  <Link to={`/products/${brand}`} className="text-gray-500 hover:text-blue-600">
-                    {brandData.name}
-                  </Link>
-                </li>
-                <li className="flex items-center">
-                  <span className="mx-2 text-gray-400">/</span>
-                  <span className="text-gray-700">{modelData.name}</span>
-                </li>
-              </ol>
-            </nav>
-          </div>
-
           {/* Product Content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Product Image */}
