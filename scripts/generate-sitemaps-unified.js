@@ -97,10 +97,16 @@ async function generateMainSitemap() {
       .replace(/index$/, '')
       .replace(/([A-Z])/g, '-$1')
       .toLowerCase()
-      .replace(/^-/, '');
+      .replace(/^-/, '')
+      .replace(/\/-/g, '/');
     
     // Skip if it's a utility file
     if (url.includes('layout') || url.includes('error') || url.includes('not-found')) continue;
+    
+    // Handle comparisons pages
+    if (page.startsWith('comparisons/')) {
+      url = 'vergelijkingen/' + url.replace('comparisons/', '');
+    }
     
     // Handle special cases
     if (url === 'home' || url === '') url = '';
@@ -129,7 +135,7 @@ async function generateMainSitemap() {
     }
     
     const priority = url === '' ? '1.0' : 
-                    url.includes('products') || url.includes('services') ? '0.9' : '0.7';
+                    url.includes('products') || url.includes('services') || url.includes('vergelijkingen') ? '0.9' : '0.7';
     const changefreq = url === '' ? 'daily' : 'weekly';
     
     sitemap += `

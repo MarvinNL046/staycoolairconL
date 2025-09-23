@@ -146,337 +146,343 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/manuals/-tosot-handleiding</loc>
+    <loc>https://staycoolairco.nl/manuals/tosot-handleiding</loc>
     <lastmod>2025-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/manuals/-l-g-handleiding</loc>
+    <loc>https://staycoolairco.nl/manuals/l-g-handleiding</loc>
     <lastmod>2025-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/wat-kost-airco-installatie</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/landing/tosot</loc>
+    <loc>https://staycoolairco.nl/locations/weert</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/landing/toshiba</loc>
+    <loc>https://staycoolairco.nl/locations/voerendaal</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/mobiele-airco</loc>
+    <loc>https://staycoolairco.nl/locations/venray</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/venlo</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/valkenburg</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/vaals</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/tegelen</loc>
     <lastmod>2025-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/landing/mitsubishi-heavy</loc>
+    <loc>https://staycoolairco.nl/locations/stein</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/landing/-l-g-landing</loc>
+    <loc>https://staycoolairco.nl/locations/sittard</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/landing/daikin</loc>
+    <loc>https://staycoolairco.nl/locations/simpelveld</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/airco-voor-zolder</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/airco-voor-woonkamer</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/airco-voor-slaapkamer</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/airco-service-limburg</loc>
-    <lastmod>2025-09-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/airco-reparatie</loc>
+    <loc>https://staycoolairco.nl/locations/roermond</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/airco-onderhoud</loc>
+    <loc>https://staycoolairco.nl/locations/panningen</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/nuth</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/nederweert</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/meerssen</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/maastricht</loc>
+    <lastmod>2025-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/maasbracht</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/landgraaf</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/kerkrade</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/horst</loc>
+    <lastmod>2025-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/hoensbroek</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/heerlen</loc>
+    <lastmod>2025-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/gulpen-wittem</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/gennep</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/geleen</loc>
+    <lastmod>2025-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/eijsden-margraten</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/echt</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/brunssum</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/locations/beek</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/wat-kost-airco-installatie-landing</loc>
+    <lastmod>2025-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/tosot-landing</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/toshiba-landing</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/mobiele-airco-landing</loc>
+    <lastmod>2025-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/mitsubishi-heavy-landing</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/l-g-landing</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/daikin-landing</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/airco-voor-zolder-landing</loc>
+    <lastmod>2025-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/airco-voor-woonkamer-landing</loc>
+    <lastmod>2025-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/airco-voor-slaapkamer-landing</loc>
+    <lastmod>2025-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/airco-service-limburg-landing</loc>
+    <lastmod>2025-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/airco-reparatie-landing</loc>
+    <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/landing/airco-onderhoud-landing</loc>
     <lastmod>2025-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/airco-met-buitenunit</loc>
+    <loc>https://staycoolairco.nl/landing/airco-met-buitenunit-landing</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/airco-installatie</loc>
+    <loc>https://staycoolairco.nl/landing/airco-installatie-landing</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/locations/-weert</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-voerendaal</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-venray</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-venlo</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-valkenburg</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-vaals</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-tegelen</loc>
-    <lastmod>2025-06-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-stein</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-sittard</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-simpelveld</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-roermond</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-panningen</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-nuth</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-nederweert</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-meerssen</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-maastricht</loc>
-    <lastmod>2025-06-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-maasbracht</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-landgraaf</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-kerkrade</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-horst</loc>
-    <lastmod>2025-06-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-hoensbroek</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-heerlen</loc>
-    <lastmod>2025-06-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-gulpen-wittem</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-gennep</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-geleen</loc>
-    <lastmod>2025-06-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-eijsden-margraten</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-echt</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-brunssum</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/locations/-beek</loc>
-    <lastmod>2025-06-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/comparisons/-tosot-vs-l-g</loc>
+    <loc>https://staycoolairco.nl/vergelijkingen/</loc>
     <lastmod>2025-09-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/comparisons/-split-vs-monoblock</loc>
+    <loc>https://staycoolairco.nl/vergelijkingen/tosot-vs-l-g</loc>
     <lastmod>2025-09-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/comparisons/-daikin-vs-mitsubishi-heavy</loc>
+    <loc>https://staycoolairco.nl/vergelijkingen/split-vs-monoblock</loc>
     <lastmod>2025-09-23</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/blog/-airco-specialist-limburg</loc>
+    <loc>https://staycoolairco.nl/vergelijkingen/daikin-vs-mitsubishi-heavy</loc>
+    <lastmod>2025-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/blog/airco-specialist-limburg</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/blog/-airco-onderhoud-voor-de-zomer</loc>
+    <loc>https://staycoolairco.nl/blog/airco-onderhoud-voor-de-zomer</loc>
     <lastmod>2025-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/blog/-airco-onderhoud-limburg-belangrijk</loc>
+    <loc>https://staycoolairco.nl/blog/airco-onderhoud-limburg-belangrijk</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/blog/-airco-offerte-limburg</loc>
+    <loc>https://staycoolairco.nl/blog/airco-offerte-limburg</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/blog/-airco-installatie-zuid-limburg</loc>
+    <loc>https://staycoolairco.nl/blog/airco-installatie-zuid-limburg</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/blog/-airco-installateur-limburg-kiezen</loc>
+    <loc>https://staycoolairco.nl/blog/airco-installateur-limburg-kiezen</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/blog/-airco-in-de-winter</loc>
+    <loc>https://staycoolairco.nl/blog/airco-in-de-winter</loc>
     <lastmod>2025-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -662,169 +668,169 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-wat-kost-een-airco-plaatsen</loc>
+    <loc>https://staycoolairco.nl/articles/wat-kost-een-airco-plaatsen</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-verwarmen-met-airco-ervaring</loc>
+    <loc>https://staycoolairco.nl/articles/verwarmen-met-airco-ervaring</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-verwarmen-met-airco</loc>
+    <loc>https://staycoolairco.nl/articles/verwarmen-met-airco</loc>
     <lastmod>2025-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-veelvoorkende-problemen</loc>
+    <loc>https://staycoolairco.nl/articles/veelvoorkende-problemen</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-toshiba-vs-tosot-airco</loc>
+    <loc>https://staycoolairco.nl/articles/toshiba-vs-tosot-airco</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-teruglever-kosten-voorkomen</loc>
+    <loc>https://staycoolairco.nl/articles/teruglever-kosten-voorkomen</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-storingscode-gids</loc>
+    <loc>https://staycoolairco.nl/articles/storingscode-gids</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-split-vs-mono-systemen</loc>
+    <loc>https://staycoolairco.nl/articles/split-vs-mono-systemen</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-soorten-airco</loc>
+    <loc>https://staycoolairco.nl/articles/soorten-airco</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-scop-seer-waarden</loc>
+    <loc>https://staycoolairco.nl/articles/scop-seer-waarden</loc>
     <lastmod>2025-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-onderhoudstips</loc>
+    <loc>https://staycoolairco.nl/articles/onderhoudstips</loc>
     <lastmod>2025-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-onderhoudsschema</loc>
+    <loc>https://staycoolairco.nl/articles/onderhoudsschema</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-mobiele-vs-split-airco</loc>
+    <loc>https://staycoolairco.nl/articles/mobiele-vs-split-airco</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-mitsubishi-vs-lg-airco</loc>
+    <loc>https://staycoolairco.nl/articles/mitsubishi-vs-lg-airco</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-l-g-storingscode</loc>
+    <loc>https://staycoolairco.nl/articles/l-g-storingscode</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-koudemiddelen</loc>
+    <loc>https://staycoolairco.nl/articles/koudemiddelen</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-hoe-werkt-airco</loc>
+    <loc>https://staycoolairco.nl/articles/hoe-werkt-airco</loc>
     <lastmod>2025-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-hoe-vaak-airco-onderhoud</loc>
+    <loc>https://staycoolairco.nl/articles/hoe-vaak-airco-onderhoud</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-energielabels</loc>
+    <loc>https://staycoolairco.nl/articles/energielabels</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-elektrische-verwarming</loc>
+    <loc>https://staycoolairco.nl/articles/elektrische-verwarming</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-coanda-effect</loc>
+    <loc>https://staycoolairco.nl/articles/coanda-effect</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-c-o2-reductie</loc>
+    <loc>https://staycoolairco.nl/articles/c-o2-reductie</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-airco-luchtfilter-onderhoud</loc>
+    <loc>https://staycoolairco.nl/articles/airco-luchtfilter-onderhoud</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-airco-laten-installeren</loc>
+    <loc>https://staycoolairco.nl/articles/airco-laten-installeren</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-airco-in-herkenbosch</loc>
+    <loc>https://staycoolairco.nl/articles/airco-in-herkenbosch</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-airco-buitenunit-plaatsing</loc>
+    <loc>https://staycoolairco.nl/articles/airco-buitenunit-plaatsing</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-airco-blaast-geen-warme-lucht</loc>
+    <loc>https://staycoolairco.nl/articles/airco-blaast-geen-warme-lucht</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/articles/-airco-bevriesst-bij-verwarmen</loc>
+    <loc>https://staycoolairco.nl/articles/airco-bevriesst-bij-verwarmen</loc>
     <lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

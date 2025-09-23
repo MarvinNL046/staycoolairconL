@@ -65,6 +65,7 @@ const KostenAircoPlaatsen = lazy(() => import('./pages/KostenAircoPlaatsen'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Comparison Pages
+const ComparisonsIndex = lazy(() => import('./pages/comparisons/index'));
 const DaikinVsMitsubishiHeavy = lazy(() => import('./pages/comparisons/DaikinVsMitsubishiHeavy'));
 const SplitVsMonoblock = lazy(() => import('./pages/comparisons/SplitVsMonoblock'));
 const TosotVsLG = lazy(() => import('./pages/comparisons/TosotVsLG'));
@@ -308,6 +309,7 @@ const App = () => {
                 <Route path="/onderhoud" element={<MaintenanceProcedures />} />
 
                 {/* Comparison Pages */}
+                <Route path="/vergelijkingen" element={<ComparisonsIndex />} />
                 <Route path="/vergelijkingen/daikin-vs-mitsubishi-heavy" element={<DaikinVsMitsubishiHeavy />} />
                 <Route path="/vergelijkingen/split-vs-monoblock" element={<SplitVsMonoblock />} />
                 <Route path="/vergelijkingen/tosot-vs-lg" element={<TosotVsLG />} />
