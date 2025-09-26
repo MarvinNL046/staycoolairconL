@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Wrench, Calendar, ThermometerSun, Shield, AlertTriangle, Filter, Wind, Clock, ArrowLeft, Check, Star, Crown } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -147,7 +147,7 @@ export default function MaintenanceProcedures() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
           {/* Important Notice Section - Moved to top */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -206,12 +206,12 @@ export default function MaintenanceProcedures() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Maintenance Packages */}
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {maintenancePackages.map((pkg, index) => (
-              <motion.div
+              <m.div
                 key={pkg.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -250,7 +250,7 @@ export default function MaintenanceProcedures() {
                     </a>
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
@@ -276,7 +276,7 @@ export default function MaintenanceProcedures() {
           {/* Maintenance Procedures */}
           <div className="space-y-12">
             {procedures.map((procedure, index) => (
-              <motion.div
+              <m.div
                 key={procedure.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -345,7 +345,7 @@ export default function MaintenanceProcedures() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
