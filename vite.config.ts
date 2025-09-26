@@ -13,7 +13,7 @@ export default defineConfig({
       'Expires': '0',
       'Content-Security-Policy': `
         default-src 'self';
-        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https://www.google.com https://connect.facebook.net;
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https://www.google.com https://connect.facebook.net https://*.clarity.ms;
         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com data: blob:;
         img-src 'self' data: blob: https:;
         font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com;
@@ -34,6 +34,7 @@ export default defineConfig({
           https://*.leadconnectorhq.com
           https://connect.facebook.net
           https://*.facebook.com
+          https://*.clarity.ms
           http://localhost:*;
         frame-src 'self' https://*.stripe.com https://*.youtube-nocookie.com https://*.googletagmanager.com;
       `.replace(/\s+/g, ' ').trim()
@@ -107,7 +108,7 @@ export default defineConfig({
     headers: {
       'Content-Security-Policy': `
         default-src 'self';
-        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https://www.google.com https://connect.facebook.net;
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https://www.google.com https://connect.facebook.net https://*.clarity.ms;
         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com data: blob:;
         img-src 'self' data: blob: https:;
         font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com;
@@ -129,6 +130,7 @@ export default defineConfig({
           https://*.leadconnectorhq.com
           https://connect.facebook.net
           https://*.facebook.com
+          https://*.clarity.ms
           http://localhost:*;
         frame-src 'self' https://*.stripe.com https://*.youtube-nocookie.com https://*.googletagmanager.com
       `.replace(/\s+/g, ' ').trim(),
