@@ -3,7 +3,7 @@ import { Loader2 } from 'lucide-react';
 import type { ContactData } from './types';
 
 interface ContactFormProps {
-  onSubmit: (data: ContactData) => void;
+  onSubmit: (data: ContactData) => Promise<void>;
   isLoading: boolean;
   flow: 'sales' | 'support';
   initialData?: Partial<ContactData>;
@@ -15,6 +15,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
   flow,
   initialData = {} 
 }) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<ContactData>({
     name: initialData.name || '',
     email: initialData.email || '',
@@ -28,9 +29,25 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     problemDescription: initialData.problemDescription || ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit(formData);
+    if (isSubmitting || isLoading) return;
+    
+    // Validate required fields
+    if (!formData.name.trim() || !formData.email.trim() || !formData.phone.trim()) {
+      alert('Vul alstublieft alle verplichte velden in.');
+      return;
+    }
+    
+    setIsSubmitting(true);
+    try {
+      await onSubmit(formData);
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('Er ging iets mis bij het versturen. Probeer het opnieuw.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (field: keyof ContactData) => (
@@ -100,10 +117,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       
       <button
         type="submit"
-        disabled={isLoading}
+        disabled={isLoading || isSubmitting}
         className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
       >
-        {isLoading ? (
+        {(isLoading || isSubmitting) ? (
           <>
             <Loader2 className="animate-spin" size={20} />
             <span>Versturen...</span>
