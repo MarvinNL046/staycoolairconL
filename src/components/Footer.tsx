@@ -50,13 +50,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/werkgebied" className="text-gray-400 hover:text-white">
-                  Werkgebied
+                <Link to="/thuisbatterijen" className="text-gray-400 hover:text-white">
+                  Thuisbatterijen
                 </Link>
               </li>
               <li>
                 <Link to="/onderhoud" className="text-gray-400 hover:text-white">
                   Onderhoud
+                </Link>
+              </li>
+              <li>
+                <Link to="/werkgebied" className="text-gray-400 hover:text-white">
+                  Werkgebied
                 </Link>
               </li>
             </ul>

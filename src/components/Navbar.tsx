@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Calendar } from 'lucide-react';
+import { Menu, X, Phone, Calendar, Battery } from 'lucide-react';
 import Logo from './Logo';
 
 export default function Navbar() {
@@ -124,10 +124,11 @@ export default function Navbar() {
               Onderhoud
             </Link>
             <Link 
-              to="/werkgebied" 
-              className={`transition-colors duration-300 ${getLinkColor()}`}
+              to="/thuisbatterijen" 
+              className="inline-flex items-center px-3 py-1.5 bg-yellow-400 text-gray-900 font-medium rounded-md hover:bg-yellow-500 transition-colors duration-300"
             >
-              Werkgebied
+              <Battery className="h-4 w-4 mr-1.5" />
+              Thuisbatterijen
             </Link>
             <Link 
               to="/kennisbank" 
@@ -256,11 +257,12 @@ export default function Navbar() {
             Onderhoud
           </Link>
           <Link 
-            to="/werkgebied"
-            className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50"
+            to="/thuisbatterijen"
+            className="flex items-center px-4 py-2.5 rounded-md bg-yellow-400 text-gray-900 font-medium hover:bg-yellow-500 active:bg-yellow-600"
             onClick={() => setIsOpen(false)}
           >
-            Werkgebied
+            <Battery className="h-4 w-4 mr-2" />
+            Thuisbatterijen
           </Link>
           <Link 
             to="/kennisbank"
