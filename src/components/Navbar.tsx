@@ -85,6 +85,12 @@ export default function Navbar() {
                     Capaciteit Calculator
                   </Link>
                   <Link 
+                    to="/thuisbatterij-calculator"
+                    className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-50"
+                  >
+                    Thuisbatterij Calculator
+                  </Link>
+                  <Link 
                     to="/mobiele-airco"
                     className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-50"
                   >
@@ -212,6 +218,13 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Capaciteit Calculator
+            </Link>
+            <Link 
+              to="/thuisbatterij-calculator"
+              className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50 ml-4"
+              onClick={() => setIsOpen(false)}
+            >
+              Thuisbatterij Calculator
             </Link>
             <Link 
               to="/mobiele-airco"

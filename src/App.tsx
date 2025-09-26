@@ -40,6 +40,8 @@ const AircoCovers = lazy(() => import('./pages/AircoCovers'));
 const LGMobieleAircoPage = lazy(() => import('./pages/products/lg-mobiele-airco'));
 const TosotMobieleAircoPage = lazy(() => import('./pages/products/tosot-mobiele-airco'));
 const TotSnel = lazy(() => import('./pages/TotSnel'));
+const ThuisbatterijCalculator = lazy(() => import('./pages/ThuisbatterijCalculator'));
+const Thuisbatterijen = lazy(() => import('./pages/Thuisbatterijen'));
 
 // Manual Pages
 const LGHandleiding = lazy(() => import('./pages/manuals/LGHandleiding'));
@@ -348,6 +350,8 @@ const App = () => {
                 <Route path="/kennisbank/airco-laten-installeren" element={<AircoLatenInstalleren />} />
                 <Route path="/kennisbank/mobiele-vs-split-airco" element={<MobieleVsSplitAirco />} />
                 <Route path="/capaciteit-calculator" element={<CapacityCalculator />} />
+                <Route path="/thuisbatterij-calculator" element={<ThuisbatterijCalculator />} />
+                <Route path="/thuisbatterijen" element={<Thuisbatterijen />} />
 
                 {/* SEO Articles */}
                 <Route path="/kennisbank/aircospecialist-limburg" element={<AircoSpecialistLimburg />} />
