@@ -12,22 +12,22 @@ export default function Contact() {
 
   const voordelen = [
     {
-      icon: <Phone className="h-8 w-8 text-blue-500" />,
+      icon: <Phone className="h-8 w-8 text-sky-500" />,
       titel: "Direct contact",
       beschrijving: "Binnen 24 uur reactie op uw aanvraag"
     },
     {
-      icon: <Shield className="h-8 w-8 text-blue-500" />,
+      icon: <Shield className="h-8 w-8 text-sky-500" />,
       titel: "Vrijblijvend advies",
       beschrijving: "Gratis offerte en persoonlijk advies aan huis"
     },
     {
-      icon: <Clock className="h-8 w-8 text-blue-500" />,
+      icon: <Clock className="h-8 w-8 text-sky-500" />,
       titel: "Snelle service",
       beschrijving: "Vaak installatie binnen 2 weken mogelijk"
     },
     {
-      icon: <Star className="h-8 w-8 text-blue-500" />,
+      icon: <Star className="h-8 w-8 text-sky-500" />,
       titel: "5 sterren service",
       beschrijving: "Beoordeeld met 4.9/5 door onze klanten"
     }
@@ -45,7 +45,7 @@ export default function Contact() {
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+        <section className="bg-gradient-to-br from-sky-400 to-sky-500 text-white">
           <div className="container mx-auto px-4 py-16">
             <Breadcrumbs items={breadcrumbItems} className="text-white/70 mb-4" />
             

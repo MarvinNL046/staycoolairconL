@@ -11,22 +11,22 @@ export default function ServiceArea() {
 
   const voordelen = [
     {
-      icon: <MapPin className="h-8 w-8 text-blue-500" />,
+      icon: <MapPin className="h-8 w-8 text-sky-500" />,
       titel: "Lokale kennis",
       beschrijving: "Specifieke expertise per gemeente in Limburg"
     },
     {
-      icon: <Shield className="h-8 w-8 text-blue-500" />,
+      icon: <Shield className="h-8 w-8 text-sky-500" />,
       titel: "F-gassen gecertificeerd",
       beschrijving: "Officieel gecertificeerde installateurs"
     },
     {
-      icon: <Clock className="h-8 w-8 text-blue-500" />,
+      icon: <Clock className="h-8 w-8 text-sky-500" />,
       titel: "Snelle service",
       beschrijving: "Korte reistijden binnen Limburg"
     },
     {
-      icon: <Star className="h-8 w-8 text-blue-500" />,
+      icon: <Star className="h-8 w-8 text-sky-500" />,
       titel: "200+ reviews",
       beschrijving: "Beoordeeld met 4.7/5 door onze klanten"
     }
@@ -46,7 +46,7 @@ export default function ServiceArea() {
       
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+        <section className="bg-gradient-to-br from-sky-400 to-sky-500 text-white">
           <div className="container mx-auto px-4 py-16">
             <Breadcrumbs items={breadcrumbItems} className="text-white/70 mb-4" />
             

@@ -99,7 +99,7 @@ export default function MaintenanceProcedures() {
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+        <section className="bg-gradient-to-br from-sky-400 to-sky-500 text-white">
           <div className="container mx-auto px-4 py-16">
             {/* Breadcrumbs */}
             <nav className="mb-4">

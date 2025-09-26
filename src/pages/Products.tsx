@@ -15,22 +15,22 @@ export default function Products() {
 
   const voordelen = [
     {
-      icon: <Zap className="h-8 w-8 text-blue-500" />,
+      icon: <Zap className="h-8 w-8 text-sky-500" />,
       titel: "Tot 60% energiebesparing",
       beschrijving: "A+++ energielabels zorgen voor minimale operationele kosten"
     },
     {
-      icon: <Shield className="h-8 w-8 text-blue-500" />,
+      icon: <Shield className="h-8 w-8 text-sky-500" />,
       titel: "Tot 10 jaar garantie",
       beschrijving: "Uitgebreide fabrieksgarantie op alle premium merken"
     },
     {
-      icon: <Wind className="h-8 w-8 text-blue-500" />,
+      icon: <Wind className="h-8 w-8 text-sky-500" />,
       titel: "Superieure koeling",
       beschrijving: "Geavanceerde inverter technologie voor optimaal comfort"
     },
     {
-      icon: <CheckCircle className="h-8 w-8 text-blue-500" />,
+      icon: <CheckCircle className="h-8 w-8 text-sky-500" />,
       titel: "Professionele installatie",
       beschrijving: "Gecertificeerde monteurs en volledige service"
     }
@@ -80,7 +80,7 @@ export default function Products() {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+      <section className="bg-gradient-to-br from-sky-400 to-sky-500 text-white">
         <div className="container mx-auto px-4 py-16">
           <Breadcrumbs items={breadcrumbItems} className="text-white/70 mb-4" />
           

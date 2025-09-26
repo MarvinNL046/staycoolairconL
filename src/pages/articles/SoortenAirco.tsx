@@ -1,10 +1,17 @@
 import React from 'react';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
+import Breadcrumbs from '../../components/Breadcrumbs';
 import { ArrowLeft, Split, Box, Building2, Home, CheckCircle, XCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AircoTypes() {
+  const breadcrumbItems = [
+    { label: 'Home', path: '/' },
+    { label: 'Kennisbank', path: '/kennisbank' },
+    { label: 'Verschillende Soorten Aircosystemen' }
+  ];
+
   const systems = [
     {
       name: 'Split-unit Airco',
@@ -89,7 +96,10 @@ export default function AircoTypes() {
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumb */}
+          {/* Breadcrumbs */}
+          <Breadcrumbs items={breadcrumbItems} />
+          
+          {/* Back to Knowledge Base Link */}
           <nav className="mb-8">
             <Link 
               to="/kennisbank"

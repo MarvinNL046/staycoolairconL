@@ -1,10 +1,17 @@
 import React from 'react';
 import { m } from 'framer-motion';
 import MetaTags from '../../components/MetaTags';
+import Breadcrumbs from '../../components/Breadcrumbs';
 import { BarChart, ThermometerSun, Zap, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ScopSeerArticle() {
+  const breadcrumbItems = [
+    { label: 'Home', path: '/' },
+    { label: 'Kennisbank', path: '/kennisbank' },
+    { label: 'SCOP en SEER Waarden Uitgelegd' }
+  ];
+
   const values = [
     {
       type: 'SEER',
@@ -84,7 +91,10 @@ export default function ScopSeerArticle() {
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumb */}
+          {/* Breadcrumbs */}
+          <Breadcrumbs items={breadcrumbItems} />
+          
+          {/* Back to Knowledge Base Link */}
           <nav className="mb-8">
             <Link 
               to="/kennisbank"
