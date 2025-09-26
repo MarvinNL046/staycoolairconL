@@ -276,9 +276,16 @@ export const useChatbot = () => {
         }));
         
         setTimeout(() => {
-          const message = isBusinessOpen() 
-            ? "Top! Op basis van jouw wensen kunnen we een gratis adviesgesprek inplannen. Je kunt:"
-            : `Top! Op basis van jouw wensen kunnen we een gratis adviesgesprek inplannen. Let op: we zijn nu gesloten. We zijn weer bereikbaar ${getNextOpeningTime()}. Je kunt wel alvast online een afspraak inplannen!`;
+          let message = "";
+          
+          // Add specific info about home batteries if interested
+          if (value === 'battery' || value === 'both') {
+            message = "Uitstekende keuze! 🔋 Met een AlphaESS thuisbatterij kun je:\n\n• Tot 40% besparen op je energierekening\n• Profiteren van dynamische energieprijzen\n• 10 jaar garantie of 10.000 cycli\n• Terugverdientijd van 4-7 jaar\n• 21% BTW terugkrijgen met hulp van AlphaESS\n\n";
+          }
+          
+          message += isBusinessOpen() 
+            ? "Op basis van jouw wensen kunnen we een gratis adviesgesprek inplannen. Je kunt:"
+            : `Op basis van jouw wensen kunnen we een gratis adviesgesprek inplannen. Let op: we zijn nu gesloten. We zijn weer bereikbaar ${getNextOpeningTime()}. Je kunt wel alvast online een afspraak inplannen!`;
           
           addBotMessage(
             message,
@@ -463,11 +470,98 @@ export const useChatbot = () => {
             ]
           );
         }, 500);
+      } else if (value === 'battery_info') {
+        setState(prev => ({ 
+          ...prev, 
+          currentFlow: 'sales',
+          currentStep: 'battery_capacity',
+          contactData: { ...prev.contactData, productType: 'battery' }
+        }));
+        
+        setTimeout(() => {
+          addBotMessage(
+            "AlphaESS thuisbatterijen zijn de slimste keuze voor energieopslag! 🔋\n\nWe hebben modellen van 3,85 kWh tot 46,2 kWh. Voor welk type woning zoek je een thuisbatterij?",
+            [
+              { text: "🏠 Kleine woning/appartement", value: "small" },
+              { text: "🏘️ Gemiddelde woning", value: "medium" },
+              { text: "🏡 Grote woning/villa", value: "large" },
+              { text: "🏢 Bedrijfspand", value: "business_battery" }
+            ]
+          );
+        }, 500);
       } else {
         handleSalesFlow(state.currentStep as SalesStep, value);
       }
     } else if (state.currentFlow === 'sales') {
-      handleSalesFlow(state.currentStep as SalesStep, value);
+      // Handle battery capacity selection
+      if (state.currentStep === 'battery_capacity') {
+        setState(prev => ({ 
+          ...prev, 
+          currentStep: 'battery_phase',
+          contactData: { ...prev.contactData, batteryCapacity: value }
+        }));
+        
+        setTimeout(() => {
+          const capacityRecommendation = {
+            'small': '3,85 - 7,7 kWh',
+            'medium': '7,7 - 15,4 kWh',
+            'large': '15,4 - 30,8 kWh',
+            'business_battery': '23,1 - 46,2 kWh'
+          }[value] || '7,7 - 15,4 kWh';
+          
+          addBotMessage(
+            `Voor jouw situatie adviseren we een batterij van ${capacityRecommendation}. Heb je een 1-fase of 3-fase aansluiting?`,
+            [
+              { text: "⚡ 1-fase aansluiting", value: "1phase" },
+              { text: "⚡⚡⚡ 3-fase aansluiting", value: "3phase" },
+              { text: "❓ Weet ik niet zeker", value: "unknown_phase" }
+            ]
+          );
+        }, 500);
+      } else if (state.currentStep === 'battery_phase') {
+        setState(prev => ({ 
+          ...prev, 
+          currentStep: 'battery_solar',
+          contactData: { ...prev.contactData, batteryPhase: value }
+        }));
+        
+        setTimeout(() => {
+          addBotMessage(
+            "Heb je al zonnepanelen of ben je van plan ze te plaatsen?",
+            [
+              { text: "☀️ Ja, ik heb zonnepanelen", value: "has_solar" },
+              { text: "🌤️ Nog niet, maar wel van plan", value: "planning_solar" },
+              { text: "⚡ Nee, alleen batterij", value: "no_solar" }
+            ]
+          );
+        }, 500);
+      } else if (state.currentStep === 'battery_solar') {
+        setState(prev => ({ 
+          ...prev, 
+          currentStep: 'choose_contact_method',
+          contactData: { ...prev.contactData, solarStatus: value }
+        }));
+        
+        setTimeout(() => {
+          const solarMessage = value === 'no_solar' 
+            ? "Geen probleem! Een thuisbatterij werkt ook uitstekend zonder zonnepanelen door slim gebruik te maken van dynamische energieprijzen.\n\n"
+            : "";
+            
+          const message = solarMessage + (isBusinessOpen() 
+            ? "Op basis van jouw wensen kunnen we een gratis adviesgesprek inplannen voor een maatwerk offerte. Je kunt:"
+            : `Op basis van jouw wensen kunnen we een gratis adviesgesprek inplannen voor een maatwerk offerte. Let op: we zijn nu gesloten. We zijn weer bereikbaar ${getNextOpeningTime()}. Je kunt wel alvast online een afspraak inplannen!`);
+          
+          addBotMessage(
+            message,
+            [
+              { text: "📅 Direct online afspraak maken", value: "online_appointment" },
+              { text: "📧 Contactgegevens achterlaten", value: "contact_form" }
+            ]
+          );
+        }, 500);
+      } else {
+        handleSalesFlow(state.currentStep as SalesStep, value);
+      }
     } else if (state.currentFlow === 'support') {
       // Handle support flow routing
       if (state.currentStep === 'problem_type') {
@@ -502,17 +596,41 @@ export const useChatbot = () => {
       
       let salesMessage = '';
       if (state.currentFlow === 'sales') {
-        const interestText = {
-          'heating': 'Warmtepomp (verwarmen)',
-          'battery': 'Thuisbatterij',
-          'both': 'Warmtepomp + Thuisbatterij',
-          'none': 'Alleen airco'
-        }[state.contactData.additionalInterests || 'none'] || 'Alleen airco';
-
-        if (isBusinessCustomer) {
-          salesMessage = `Chatbot Sales Lead - ZAKELIJK:\n\nBedrijfstype: ${state.contactData.businessType}\nRuimtes: ${state.contactData.roomCount}\nBudget: ${state.contactData.budget}\nMerkvoorkeur: ${state.contactData.brandPreference || 'Geen voorkeur'}\nTimeline: ${state.contactData.timeline}\nExtra interesse: ${interestText}\n\nContactgegevens:\nNaam: ${formData.name}\nEmail: ${formData.email}\nTelefoon: ${formData.phone}\nPostcode: ${formData.postalCode || 'Niet opgegeven'}`;
+        // Check if this is a battery-specific inquiry
+        if (state.contactData.productType === 'battery') {
+          const capacityText = {
+            'small': 'Kleine woning/appartement (3,85 - 7,7 kWh)',
+            'medium': 'Gemiddelde woning (7,7 - 15,4 kWh)',
+            'large': 'Grote woning/villa (15,4 - 30,8 kWh)',
+            'business_battery': 'Bedrijfspand (23,1 - 46,2 kWh)'
+          }[state.contactData.batteryCapacity || ''] || 'Niet opgegeven';
+          
+          const phaseText = {
+            '1phase': '1-fase',
+            '3phase': '3-fase',
+            'unknown_phase': 'Onbekend'
+          }[state.contactData.batteryPhase || ''] || 'Niet opgegeven';
+          
+          const solarText = {
+            'has_solar': 'Heeft al zonnepanelen',
+            'planning_solar': 'Van plan zonnepanelen te plaatsen',
+            'no_solar': 'Geen zonnepanelen (alleen batterij)'
+          }[state.contactData.solarStatus || ''] || 'Niet opgegeven';
+          
+          salesMessage = `Chatbot Sales Lead - THUISBATTERIJ:\n\nProductinteresse: AlphaESS Thuisbatterij\nWoningtype: ${capacityText}\nAansluiting: ${phaseText}\nZonnepanelen: ${solarText}\n\nContactgegevens:\nNaam: ${formData.name}\nEmail: ${formData.email}\nTelefoon: ${formData.phone}\nPostcode: ${formData.postalCode || 'Niet opgegeven'}`;
         } else {
-          salesMessage = `Chatbot Sales Lead - PARTICULIER:\n\nWoningtype: ${state.contactData.propertyType}\nRuimtes: ${state.contactData.roomCount}\nBudget: ${state.contactData.budget}\nMerkvoorkeur: ${state.contactData.brandPreference || 'Geen voorkeur'}\nTimeline: ${state.contactData.timeline}\nExtra interesse: ${interestText}\n\nContactgegevens:\nNaam: ${formData.name}\nEmail: ${formData.email}\nTelefoon: ${formData.phone}\nPostcode: ${formData.postalCode || 'Niet opgegeven'}`;
+          const interestText = {
+            'heating': 'Warmtepomp (verwarmen)',
+            'battery': 'Thuisbatterij',
+            'both': 'Warmtepomp + Thuisbatterij',
+            'none': 'Alleen airco'
+          }[state.contactData.additionalInterests || 'none'] || 'Alleen airco';
+
+          if (isBusinessCustomer) {
+            salesMessage = `Chatbot Sales Lead - ZAKELIJK:\n\nBedrijfstype: ${state.contactData.businessType}\nRuimtes: ${state.contactData.roomCount}\nBudget: ${state.contactData.budget}\nMerkvoorkeur: ${state.contactData.brandPreference || 'Geen voorkeur'}\nTimeline: ${state.contactData.timeline}\nExtra interesse: ${interestText}\n\nContactgegevens:\nNaam: ${formData.name}\nEmail: ${formData.email}\nTelefoon: ${formData.phone}\nPostcode: ${formData.postalCode || 'Niet opgegeven'}`;
+          } else {
+            salesMessage = `Chatbot Sales Lead - PARTICULIER:\n\nWoningtype: ${state.contactData.propertyType}\nRuimtes: ${state.contactData.roomCount}\nBudget: ${state.contactData.budget}\nMerkvoorkeur: ${state.contactData.brandPreference || 'Geen voorkeur'}\nTimeline: ${state.contactData.timeline}\nExtra interesse: ${interestText}\n\nContactgegevens:\nNaam: ${formData.name}\nEmail: ${formData.email}\nTelefoon: ${formData.phone}\nPostcode: ${formData.postalCode || 'Niet opgegeven'}`;
+          }
         }
       }
       
@@ -549,12 +667,13 @@ export const useChatbot = () => {
     if (state.messages.length === 0) {
       const welcomeMessage: ChatbotMessage = {
         id: `bot-${Date.now()}-${Math.random()}`,
-        text: "Hoi! 👋 Ik ben de StayCool assistent. Ik help je graag met het vinden van de perfecte airco oplossing!",
+        text: "Hoi! 👋 Ik ben de StayCool assistent. Ik help je graag met het vinden van de perfecte airco of thuisbatterij oplossing!",
         sender: 'bot',
         timestamp: new Date(),
         quickReplies: [
           { text: "🏠 Airco voor thuis", value: "home" },
           { text: "🏢 Airco voor bedrijf", value: "business" },
+          { text: "🔋 Thuisbatterij informatie", value: "battery_info" },
           { text: "❄️ Ik heb een storing", value: "support" }
         ]
       };
@@ -579,7 +698,7 @@ export const useChatbot = () => {
     let previousContactData = { ...state.contactData };
     
     if (state.currentFlow === 'sales') {
-      const stepOrder = ['welcome', 'property_type', 'business_type', 'room_count', 'budget', 'brand_preference', 'timeline', 'additional_interests', 'contact'];
+      const stepOrder = ['welcome', 'property_type', 'business_type', 'room_count', 'budget', 'brand_preference', 'timeline', 'additional_interests', 'battery_capacity', 'battery_phase', 'battery_solar', 'contact'];
       const currentIndex = stepOrder.indexOf(state.currentStep as string);
       if (currentIndex > 0) {
         // Handle conditional steps
@@ -631,12 +750,13 @@ export const useChatbot = () => {
     setTimeout(() => {
       const welcomeMessage: ChatbotMessage = {
         id: `bot-${Date.now()}-${Math.random()}`,
-        text: "Hoi! 👋 Ik ben de StayCool assistent. Ik help je graag met het vinden van de perfecte airco oplossing!",
+        text: "Hoi! 👋 Ik ben de StayCool assistent. Ik help je graag met het vinden van de perfecte airco of thuisbatterij oplossing!",
         sender: 'bot',
         timestamp: new Date(),
         quickReplies: [
           { text: "🏠 Airco voor thuis", value: "home" },
           { text: "🏢 Airco voor bedrijf", value: "business" },
+          { text: "🔋 Thuisbatterij informatie", value: "battery_info" },
           { text: "❄️ Ik heb een storing", value: "support" }
         ]
       };

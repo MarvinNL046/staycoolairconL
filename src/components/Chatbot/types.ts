@@ -24,6 +24,9 @@ export type SalesStep =
   | 'brand_preference'
   | 'timeline'
   | 'additional_interests'
+  | 'battery_capacity'
+  | 'battery_phase'
+  | 'battery_solar'
   | 'choose_contact_method'
   | 'contact'
   | 'confirmation';
@@ -52,6 +55,10 @@ export interface ContactData {
   additionalInterests?: string;
   problemType?: string;
   problemDescription?: string;
+  productType?: string;
+  batteryCapacity?: string;
+  batteryPhase?: string;
+  solarStatus?: string;
 }
 
 export interface ChatbotState {
