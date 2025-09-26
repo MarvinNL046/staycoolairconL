@@ -20,6 +20,10 @@ export const alphaessData: Brand = {
         {
           url: '/images/products/thuisbatterij/alphaess/alpha-ess-thuisbatterij-3580x3580.webp',
           alt: 'AlphaESS SMILE G3-T10 thuisbatterij 11,55 kWh met 10 kW omvormer'
+        },
+        {
+          url: '/images/products/thuisbatterij/alphaess/alpha-ess-thuisbatterij-klein-groot1000x1000.webp',
+          alt: 'AlphaESS thuisbatterij capaciteiten overzicht - verschillende modellen'
         }
       ],
       price: 'Prijs op aanvraag - Plan een adviesgesprek',
