@@ -40,21 +40,21 @@ export default function Thuisbatterijen() {
       capaciteit: "3,85 kWh",
       vermogen: "3,0 kW",
       ideaalVoor: "Kleine huishoudens",
-      afbeelding: "/images/thuisbatterij/alphaess/alpha-ess-thuisbatterij-klein-groot1000x1000.webp"
+      afbeelding: "/images/products/thuisbatterij/alphaess/alpha-ess-thuisbatterij-klein-groot1000x1000.webp"
     },
     {
       naam: "SMILE5",
       capaciteit: "5,78 - 15,4 kWh",
       vermogen: "5,0 kW",
       ideaalVoor: "Gemiddelde huishoudens",
-      afbeelding: "/images/thuisbatterij/alphaess/alpha-ess-thuisbatterij-3580x3580.webp"
+      afbeelding: "/images/products/thuisbatterij/alphaess/alpha-ess-thuisbatterij-3580x3580.webp"
     },
     {
       naam: "SMILE-T10",
       capaciteit: "23,1 - 46,2 kWh",
       vermogen: "10,0 - 30,0 kW",
       ideaalVoor: "Grote huishoudens & bedrijven",
-      afbeelding: "/images/thuisbatterij/alphaess/alpha-ess-thuisbatterij-klein-groot1000x1000.webp"
+      afbeelding: "/images/products/thuisbatterij/alphaess/alpha-ess-thuisbatterij-klein-groot1000x1000.webp"
     }
   ];
 
@@ -110,9 +110,11 @@ export default function Thuisbatterijen() {
             
             <div className="relative">
               <LazyImage
-                src="/images/thuisbatterij/alphaess/alpha-ess-thuisbatterij-3580x3580.webp"
+                src="/images/products/thuisbatterij/alphaess/alpha-ess-thuisbatterij-3580x3580.webp"
                 alt="AlphaESS thuisbatterij"
                 className="rounded-2xl shadow-2xl w-full"
+                width="100%"
+                height="100%"
               />
               <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4">
                 <Battery className="h-12 w-12 text-yellow-500 mb-2" />
@@ -154,36 +156,51 @@ export default function Thuisbatterijen() {
           
           <div className="grid md:grid-cols-3 gap-8">
             {modellen.map((model, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                <div className="h-64 bg-gray-200 flex items-center justify-center">
-                  <LazyImage
+              <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 p-8">
+                  <img
                     src={model.afbeelding}
                     alt={model.naam}
-                    className="w-full h-full object-contain p-8"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-2">{model.naam}</h3>
-                  <div className="space-y-2 mb-4">
-                    <p className="flex justify-between">
+                  <h3 className="text-2xl font-bold mb-4">{model.naam}</h3>
+                  <div className="space-y-3 mb-4">
+                    <div className="flex justify-between items-center py-2 border-b border-gray-100">
                       <span className="text-gray-600">Capaciteit:</span>
                       <span className="font-semibold">{model.capaciteit}</span>
-                    </p>
-                    <p className="flex justify-between">
+                    </div>
+                    <div className="flex justify-between items-center py-2 border-b border-gray-100">
                       <span className="text-gray-600">Vermogen:</span>
                       <span className="font-semibold">{model.vermogen}</span>
-                    </p>
+                    </div>
                   </div>
-                  <p className="text-sm text-gray-600 mb-4">Ideaal voor: {model.ideaalVoor}</p>
+                  <p className="text-sm text-gray-600 mb-6">
+                    <span className="font-medium">Ideaal voor:</span><br />
+                    {model.ideaalVoor}
+                  </p>
                   <Link
                     to="/contact"
-                    className="block w-full text-center py-2 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition-colors"
+                    className="block w-full text-center py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition-colors"
                   >
                     Offerte aanvragen
                   </Link>
                 </div>
               </div>
             ))}
+          </div>
+          
+          <div className="text-center mt-8">
+            <Link
+              to="/products/alphaess"
+              className="inline-flex items-center px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition-colors"
+            >
+              Bekijk alle AlphaESS modellen
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>

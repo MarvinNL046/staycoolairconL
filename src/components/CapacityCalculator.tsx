@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Info, Download } from 'lucide-react';
 import { jsPDF } from 'jspdf';
 
@@ -240,18 +240,18 @@ export default function CapacityCalculator() {
         </div>
 
         {/* Calculate Button */}
-        <motion.button
+        <m.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           onClick={calculateCapacity}
           className="w-full py-3 px-4 bg-blue-800 text-white rounded-lg font-medium hover:bg-blue-900 transition-colors"
         >
           Bereken Capaciteit
-        </motion.button>
+        </m.button>
 
         {/* Result */}
         {result !== null && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="mt-6 p-4 bg-blue-50 rounded-lg"
@@ -270,7 +270,7 @@ export default function CapacityCalculator() {
             <p className="mt-2 text-sm text-gray-600">
               Dit is een minimale schatting gebaseerd op 100 watt per vierkante meter. Voor een exacte berekening kunt u contact met ons opnemen.
             </p>
-          </motion.div>
+          </m.div>
         )}
       </div>
     </div>

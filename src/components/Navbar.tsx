@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Calendar, Battery } from 'lucide-react';
+import { Menu, X, Phone, Calendar, Battery, Wind } from 'lucide-react';
 import Logo from './Logo';
 
 export default function Navbar() {
@@ -130,23 +130,18 @@ export default function Navbar() {
               Onderhoud
             </Link>
             <Link 
+              to="/aircos" 
+              className="inline-flex items-center px-3 py-1.5 bg-sky-500 text-white font-medium rounded-md hover:bg-sky-600 transition-colors duration-300"
+            >
+              <Wind className="h-4 w-4 mr-1.5" />
+              Airco's
+            </Link>
+            <Link 
               to="/thuisbatterijen" 
               className="inline-flex items-center px-3 py-1.5 bg-yellow-400 text-gray-900 font-medium rounded-md hover:bg-yellow-500 transition-colors duration-300"
             >
               <Battery className="h-4 w-4 mr-1.5" />
               Thuisbatterijen
-            </Link>
-            <Link 
-              to="/kennisbank" 
-              className={`transition-colors duration-300 ${getLinkColor()}`}
-            >
-              Kennisbank
-            </Link>
-            <Link 
-              to="/contact"
-              className={`transition-colors duration-300 ${getLinkColor()}`}
-            >
-              Contact
             </Link>
             <div className="flex items-center space-x-3">
               <a 
@@ -270,26 +265,20 @@ export default function Navbar() {
             Onderhoud
           </Link>
           <Link 
+            to="/products"
+            className="flex items-center px-4 py-2.5 rounded-md bg-sky-500 text-white font-medium hover:bg-sky-600 active:bg-sky-700"
+            onClick={() => setIsOpen(false)}
+          >
+            <Wind className="h-4 w-4 mr-2" />
+            Airco's
+          </Link>
+          <Link 
             to="/thuisbatterijen"
             className="flex items-center px-4 py-2.5 rounded-md bg-yellow-400 text-gray-900 font-medium hover:bg-yellow-500 active:bg-yellow-600"
             onClick={() => setIsOpen(false)}
           >
             <Battery className="h-4 w-4 mr-2" />
             Thuisbatterijen
-          </Link>
-          <Link 
-            to="/kennisbank"
-            className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50"
-            onClick={() => setIsOpen(false)}
-          >
-            Kennisbank
-          </Link>
-          <Link 
-            to="/contact"
-            className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50"
-            onClick={() => setIsOpen(false)}
-          >
-            Contact
           </Link>
           <div className="space-y-2 pt-2">
             <a 

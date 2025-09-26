@@ -99,7 +99,7 @@
   </url>
   <url>
     <loc>https://staycoolairco.nl/capacity-calculator</loc>
-    <lastmod>2025-06-13</lastmod>
+    <lastmod>2025-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -112,6 +112,12 @@
   <url>
     <loc>https://staycoolairco.nl/blog</loc>
     <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/aircos</loc>
+    <lastmod>2025-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

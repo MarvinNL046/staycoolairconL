@@ -64,6 +64,11 @@ export default function Footer() {
                   Werkgebied
                 </Link>
               </li>
+              <li>
+                <Link to="/kennisbank" className="text-gray-400 hover:text-white">
+                  Kennisbank
+                </Link>
+              </li>
             </ul>
           </div>
           <div>

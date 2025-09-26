@@ -42,6 +42,7 @@ const TosotMobieleAircoPage = lazy(() => import('./pages/products/tosot-mobiele-
 const TotSnel = lazy(() => import('./pages/TotSnel'));
 const ThuisbatterijCalculator = lazy(() => import('./pages/ThuisbatterijCalculator'));
 const Thuisbatterijen = lazy(() => import('./pages/Thuisbatterijen'));
+const Aircos = lazy(() => import('./pages/Aircos'));
 
 // Manual Pages
 const LGHandleiding = lazy(() => import('./pages/manuals/LGHandleiding'));
@@ -306,6 +307,9 @@ const App = () => {
                 <Route path="/tot-snel" element={<TotSnel />} />
                 <Route path="/werkgebied" element={<ServiceArea />} />
                 <Route path="/kennisbank" element={<KnowledgeBase />} />
+                <Route path="/aircos" element={<Aircos />} />
+                <Route path="/thuisbatterijen" element={<Thuisbatterijen />} />
+                <Route path="/thuisbatterij-calculator" element={<ThuisbatterijCalculator />} />
                 <Route path="/voorwaarden" element={<Terms />} />
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/onderhoud" element={<MaintenanceProcedures />} />
