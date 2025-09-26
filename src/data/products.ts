@@ -1,4 +1,5 @@
 import { ProductData } from '../types/products';
+import { alphaessData } from './brands/alphaess';
 import { daikinData } from './brands/daikin';
 import { lgData } from './brands/lg';
 import { lgMobieleAircoData } from './brands/lg-mobiele-airco';
@@ -19,6 +20,7 @@ export const productData: ProductData = {
     toshibaData,
     tosotData,
     tosotMobieleAircoData,
-    aircoCoverData
+    aircoCoverData,
+    alphaessData
   ]
 };

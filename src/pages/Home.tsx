@@ -4,6 +4,7 @@ import Hero from '../components/HeroOptimized';
 import Services from '../components/ServicesOptimized';
 import WhyUs from '../components/WhyUs';
 import BrandLogos from '../components/BrandLogos';
+import HomeBattery from '../components/HomeBattery';
 import Contact from '../components/Contact';
 import SchemaMarkup from '../components/SchemaMarkup';
 
@@ -83,6 +84,7 @@ export default function Home() {
 
       <Hero />
       <Services />
+      <HomeBattery />
       <WhyUs />
       <BrandLogos />
       <Contact />

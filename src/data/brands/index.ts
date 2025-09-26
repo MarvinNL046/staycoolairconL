@@ -1,4 +1,5 @@
 import { aircoCoverData as aircoCoversData } from './airco-covers'; export { aircoCoversData };
+export { alphaessData } from './alphaess';
 export { daikinData } from './daikin';
 export { lgMobieleAircoData } from './lg-mobiele-airco';
 export { lgData } from './lg';
