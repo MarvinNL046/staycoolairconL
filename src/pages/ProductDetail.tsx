@@ -604,71 +604,131 @@ export default function ProductDetail() {
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Veelgestelde vragen over de {brandData.name} {modelData.name}</h2>
             
             <div className="space-y-6">
-              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
-                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
-                  Voor welke ruimtegrootte is deze {brandData.name} {modelData.name} geschikt?
-                </h3>
-                <div className="px-6 py-4 faq-answer speakable-content">
-                  <p>De {brandData.name} {modelData.name} met {modelData.capacity} is geschikt voor ruimtes van ongeveer {
-                    modelData.capacity.includes('2.5') ? '25-30 m²' :
-                    modelData.capacity.includes('3.5') ? '30-40 m²' :
-                    modelData.capacity.includes('5.0') ? '45-60 m²' :
-                    modelData.capacity.includes('7.0') ? '60-80 m²' :
-                    '25-50 m²'
-                  }. Voor een exacte berekening adviseren onze experts u graag op basis van isolatie en raamoppervlak.</p>
-                </div>
-              </div>
+              {brand === 'alphaess' ? (
+                <>
+                  <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                    <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                      Wat is de terugverdientijd van de {brandData.name} {modelData.name} thuisbatterij?
+                    </h3>
+                    <div className="px-6 py-4 faq-answer speakable-content">
+                      <p>De terugverdientijd van de {brandData.name} {modelData.name} is gemiddeld 4-7 jaar, afhankelijk van uw energiecontract en verbruikspatroon. Met de huidige dynamische energieprijzen kunt u forse besparingen realiseren door slim in te kopen wanneer stroom goedkoop is.</p>
+                    </div>
+                  </div>
 
-              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
-                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
-                  Wat zijn de jaarlijkse energiekosten van deze airco?
-                </h3>
-                <div className="px-6 py-4 faq-answer speakable-content">
-                  <p>Bij gemiddeld gebruik (1000 uur koelen en 1000 uur verwarmen per jaar) kost deze {brandData.name} {modelData.name} ongeveer €{
-                    modelData.capacity.includes('2.5') ? '180-220' :
-                    modelData.capacity.includes('3.5') ? '220-280' :
-                    modelData.capacity.includes('5.0') ? '280-350' :
-                    modelData.capacity.includes('7.0') ? '350-450' :
-                    '200-300'
-                  } per jaar aan elektriciteit. Dit is aanzienlijk goedkoper dan elektrische verwarming.</p>
-                </div>
-              </div>
+                  <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                    <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                      Hoe werkt de slimme sturing van deze thuisbatterij?
+                    </h3>
+                    <div className="px-6 py-4 faq-answer speakable-content">
+                      <p>De {brandData.name} {modelData.name} maakt gebruik van de Frank app voor intelligent energiebeheer. Deze app handelt automatisch op de energiemarkt (EPEX) en benut ook onbalans- en congestiemarkten voor maximaal rendement. U hoeft zelf niets te doen - het systeem optimaliseert automatisch uw energiegebruik.</p>
+                    </div>
+                  </div>
 
-              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
-                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
-                  Hoe stil is deze airco tijdens gebruik?
-                </h3>
-                <div className="px-6 py-4 faq-answer speakable-content">
-                  <p>De binnenunit produceert slechts {modelData.specifications.find(spec => spec.label === 'Geluidsniveau')?.value || '19-45 dB(A)'} geluid, wat vergelijkbaar is met fluisteren. De buitenunit is ontworpen om geluidsoverlast voor buren te minimaliseren.</p>
-                </div>
-              </div>
+                  <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                    <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                      Kan ik deze batterij ook zonder zonnepanelen gebruiken?
+                    </h3>
+                    <div className="px-6 py-4 faq-answer speakable-content">
+                      <p>Ja, de {brandData.name} {modelData.name} werkt uitstekend zonder zonnepanelen. U kunt profiteren van dynamische energieprijzen door goedkoop in te kopen en duur terug te leveren. Met zonnepanelen heeft u wel extra voordeel door overdag gratis op te laden.</p>
+                    </div>
+                  </div>
 
-              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
-                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
-                  Kan deze airco ook verwarmen in de winter?
-                </h3>
-                <div className="px-6 py-4 faq-answer speakable-content">
-                  <p>Ja, de {brandData.name} {modelData.name} is een warmtepomp die tot -15°C effectief kan verwarmen. Dit maakt het een perfecte oplossing voor duurzame verwarming met zonnepanelen, waarmee u terugleverkosten kunt vermijden.</p>
-                </div>
-              </div>
+                  <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                    <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                      Welke garantie krijg ik op deze thuisbatterij?
+                    </h3>
+                    <div className="px-6 py-4 faq-answer speakable-content">
+                      <p>AlphaESS biedt 10 jaar garantie of 10.000 cycli op de {modelData.name}. Daarnaast krijgt u gratis 24/7 monitoring via AlphaCloud. Het systeem is VDE, IEC en UN38.3 gecertificeerd voor maximale veiligheid en betrouwbaarheid.</p>
+                    </div>
+                  </div>
 
-              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
-                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
-                  Welke garantie krijg ik op deze airco?
-                </h3>
-                <div className="px-6 py-4 faq-answer speakable-content">
-                  <p>U krijgt 5 jaar garantie op het hele systeem en speciaal 10 jaar garantie op de compressor. Daarnaast bieden wij 2 jaar garantie op de installatie door onze F-gassen gecertificeerde monteurs.</p>
-                </div>
-              </div>
+                  <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                    <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                      Hoeveel capaciteit heb ik nodig voor mijn huishouden?
+                    </h3>
+                    <div className="px-6 py-4 faq-answer speakable-content">
+                      <p>Voor een gemiddeld huishouden is {modelData.capacity} meestal voldoende. Dit dekt het dagelijkse verbruik en biedt ruimte voor handel op de energiemarkt. Onze adviseurs maken graag een berekening op maat op basis van uw verbruik en wensen.</p>
+                    </div>
+                  </div>
 
-              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
-                <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
-                  Hoe lang duurt de installatie van deze airco?
-                </h3>
-                <div className="px-6 py-4 faq-answer speakable-content">
-                  <p>Een standaard installatie van de {brandData.name} {modelData.name} duurt meestal 1 werkdag (4-6 uur). Dit omvat plaatsing van binnen- en buitenunit, doorvoering maken, leidingwerk en inbedrijfname van het systeem.</p>
-                </div>
-              </div>
+                  <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                    <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                      Hoe snel kan de thuisbatterij geïnstalleerd worden?
+                    </h3>
+                    <div className="px-6 py-4 faq-answer speakable-content">
+                      <p>De {brandData.name} {modelData.name} kan binnen 4 weken geïnstalleerd worden. De installatie zelf duurt ongeveer een halve dag. AlphaESS helpt ook met de BTW-teruggave van 21%, wat het netto nog voordeliger maakt.</p>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                    <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                      Voor welke ruimtegrootte is deze {brandData.name} {modelData.name} geschikt?
+                    </h3>
+                    <div className="px-6 py-4 faq-answer speakable-content">
+                      <p>De {brandData.name} {modelData.name} met {modelData.capacity} is geschikt voor ruimtes van ongeveer {
+                        modelData.capacity.includes('2.5') ? '25-30 m²' :
+                        modelData.capacity.includes('3.5') ? '30-40 m²' :
+                        modelData.capacity.includes('5.0') ? '45-60 m²' :
+                        modelData.capacity.includes('7.0') ? '60-80 m²' :
+                        '25-50 m²'
+                      }. Voor een exacte berekening adviseren onze experts u graag op basis van isolatie en raamoppervlak.</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                    <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                      Wat zijn de jaarlijkse energiekosten van deze airco?
+                    </h3>
+                    <div className="px-6 py-4 faq-answer speakable-content">
+                      <p>Bij gemiddeld gebruik (1000 uur koelen en 1000 uur verwarmen per jaar) kost deze {brandData.name} {modelData.name} ongeveer €{
+                        modelData.capacity.includes('2.5') ? '180-220' :
+                        modelData.capacity.includes('3.5') ? '220-280' :
+                        modelData.capacity.includes('5.0') ? '280-350' :
+                        modelData.capacity.includes('7.0') ? '350-450' :
+                        '200-300'
+                      } per jaar aan elektriciteit. Dit is aanzienlijk goedkoper dan elektrische verwarming.</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                    <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                      Hoe stil is deze airco tijdens gebruik?
+                    </h3>
+                    <div className="px-6 py-4 faq-answer speakable-content">
+                      <p>De binnenunit produceert slechts {modelData.specifications.find(spec => spec.label === 'Geluidsniveau')?.value || '19-45 dB(A)'} geluid, wat vergelijkbaar is met fluisteren. De buitenunit is ontworpen om geluidsoverlast voor buren te minimaliseren.</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                    <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                      Kan deze airco ook verwarmen in de winter?
+                    </h3>
+                    <div className="px-6 py-4 faq-answer speakable-content">
+                      <p>Ja, de {brandData.name} {modelData.name} is een warmtepomp die tot -15°C effectief kan verwarmen. Dit maakt het een perfecte oplossing voor duurzame verwarming met zonnepanelen, waarmee u terugleverkosten kunt vermijden.</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                    <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                      Welke garantie krijg ik op deze airco?
+                    </h3>
+                    <div className="px-6 py-4 faq-answer speakable-content">
+                      <p>U krijgt 5 jaar garantie op het hele systeem en speciaal 10 jaar garantie op de compressor. Daarnaast bieden wij 2 jaar garantie op de installatie door onze F-gassen gecertificeerde monteurs.</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
+                    <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
+                      Hoe lang duurt de installatie van deze airco?
+                    </h3>
+                    <div className="px-6 py-4 faq-answer speakable-content">
+                      <p>Een standaard installatie van de {brandData.name} {modelData.name} duurt meestal 1 werkdag (4-6 uur). Dit omvat plaatsing van binnen- en buitenunit, doorvoering maken, leidingwerk en inbedrijfname van het systeem.</p>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
 
