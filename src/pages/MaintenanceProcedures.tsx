@@ -97,40 +97,54 @@ export default function MaintenanceProcedures() {
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Breadcrumbs */}
-          <nav className="mb-8">
-            <ol className="flex items-center space-x-2 text-sm">
-              <li>
-                <Link to="/" className="text-gray-500 hover:text-blue-800">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <span className="text-gray-400">/</span>
-              </li>
-              <li>
-                <span className="text-gray-900">Onderhoudspakketten</span>
-              </li>
-            </ol>
-          </nav>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-12"
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <Wrench className="h-8 w-8 text-blue-800" />
-              <h1 className="text-4xl font-bold text-gray-900">
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+          <div className="container mx-auto px-4 py-16">
+            {/* Breadcrumbs */}
+            <nav className="mb-4">
+              <ol className="flex items-center space-x-2 text-sm text-white/70">
+                <li>
+                  <Link to="/" className="hover:text-white">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <span className="text-white/50">/</span>
+                </li>
+                <li>
+                  <span className="text-white">Onderhoudspakketten</span>
+                </li>
+              </ol>
+            </nav>
+            
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Onderhoudspakketten
               </h1>
+              <p className="text-xl text-blue-50 mb-8">
+                Kies het onderhoudspakket dat het beste bij u past en houd uw airco in optimale conditie
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  <Wrench className="h-8 w-8 mx-auto mb-2" />
+                  <p className="font-semibold text-sm">Professioneel Onderhoud</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  <Shield className="h-8 w-8 mx-auto mb-2" />
+                  <p className="font-semibold text-sm">Garantie & Service</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  <Clock className="h-8 w-8 mx-auto mb-2" />
+                  <p className="font-semibold text-sm">Snelle Response</p>
+                </div>
+              </div>
             </div>
-            <p className="text-xl text-gray-600">
-              Kies het onderhoudspakket dat het beste bij u past
-            </p>
-          </motion.div>
+          </div>
+        </section>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
           {/* Important Notice Section - Moved to top */}
           <motion.div
