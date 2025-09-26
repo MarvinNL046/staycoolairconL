@@ -255,6 +255,150 @@ export const tosotData: Brand = {
         { label: 'Wifi', value: 'Standaard ingebouwd' },
         { label: 'Smart home compatibiliteit', value: 'Google Assistant, Amazon Alexa' }
       ]
+    },
+    {
+      name: 'Vierkant 4-Weg Plafondunit',
+      slug: 'vierkant-4weg-plafondunit',
+      description: 'Krachtige vierkante plafondunit met 4-weg luchtverdeling voor commerciële en grote residentiële ruimtes. Perfect voor kantoren, winkels en showrooms waar een gelijkmatige temperatuurverdeling essentieel is.',
+      imageUrl: '/images/products/plafondunits/tosot/tosot-plafond-vierkant-4weg1.webp',
+      images: [
+        {
+          url: '/images/products/plafondunits/tosot/tosot-plafond-vierkant-4weg1.webp',
+          alt: 'Tosot vierkant 4-weg plafondunit airco'
+        },
+        {
+          url: '/images/products/plafondunits/tosot/tosot-plafond-vierkant-4weg2.webp',
+          alt: 'Tosot vierkant plafondunit installatie detail'
+        }
+      ],
+      price: 'Prijs op aanvraag',
+      energyLabel: 'A++',
+      capacity: '2,8 kW - 16,0 kW',
+      features: [
+        '4-weg luchtverdeling met instelbare lamellen',
+        'Geschikt voor systeemplafonds',
+        'Ingebouwde condenspomp (tot 750mm opvoerhoogte)',
+        'G-Tech Inverter technologie',
+        'Automatische swing functie',
+        'Optionele verse lucht toevoer',
+        'Fluisterstille werking',
+        'Timer en slaapstand functie',
+        'Geschikt voor grote commerciële ruimtes',
+        'Onderhoudsarm design'
+      ],
+      specifications: [
+        { label: 'Beschikbare capaciteiten', value: '2,8 / 3,6 / 5,0 / 7,1 / 10,0 / 12,5 / 14,0 / 16,0 kW' },
+        { label: 'Koelcapaciteit', value: '2,8 - 16,0 kW' },
+        { label: 'Verwarmingscapaciteit', value: '3,2 - 18,0 kW' },
+        { label: 'Luchtverdeling', value: '4-weg met automatische swing' },
+        { label: 'SEER', value: 'Tot 6,5' },
+        { label: 'SCOP', value: 'Tot 4,2' },
+        { label: 'Geluidsniveau binnen', value: 'Vanaf 29 dB(A)' },
+        { label: 'Koudemiddel', value: 'R32' },
+        { label: 'Afmetingen unit', value: '570x570 - 840x840 mm (afhankelijk van capaciteit)' },
+        { label: 'Hoogte unit', value: '250 - 350 mm (afhankelijk van capaciteit)' },
+        { label: 'Paneelafmetingen', value: '650x650 - 950x950 mm' },
+        { label: 'Condenspomp', value: 'Ingebouwd, 750mm opvoerhoogte' },
+        { label: 'Verse lucht aansluiting', value: 'Optioneel' },
+        { label: 'Garantie', value: '3 jaar op unit' }
+      ]
+    },
+    {
+      name: 'Kanaalunit',
+      slug: 'kanaalunit',
+      description: 'Discrete kanaalunit voor inbouw in verlaagde plafonds. Ideaal voor hotels, kantoren en woningen waar de unit volledig uit het zicht moet blijven. Flexibele installatie met aanpasbare statische druk.',
+      imageUrl: '/images/products/plafondunits/tosot/tosot-kanaalunit1.webp',
+      images: [
+        {
+          url: '/images/products/plafondunits/tosot/tosot-kanaalunit1.webp',
+          alt: 'Tosot kanaalunit airco voor verlaagd plafond'
+        },
+        {
+          url: '/images/products/plafondunits/tosot/tosot-kanaalunit2.webp',
+          alt: 'Tosot kanaalunit installatie voorbeeld'
+        },
+        {
+          url: '/images/products/plafondunits/tosot/tosot-kanaalunit-afmetingen.webp',
+          alt: 'Tosot kanaalunit technische afmetingen'
+        }
+      ],
+      price: 'Prijs op aanvraag',
+      energyLabel: 'A+',
+      capacity: '2,2 kW - 14,0 kW',
+      features: [
+        'Volledig onzichtbare installatie',
+        'Flexibele luchtkanaal aansluiting',
+        'Instelbare externe statische druk',
+        'Ultra stille werking',
+        'G-Tech Inverter technologie',
+        'Ingebouwde condenspomp',
+        'Geschikt voor multi-zone systemen',
+        'Optionele bedrade bediening',
+        'Ideaal voor hotels en kantoren',
+        'Compacte inbouwmaten'
+      ],
+      specifications: [
+        { label: 'Beschikbare capaciteiten', value: '2,2 / 2,8 / 3,6 / 5,0 / 7,1 / 10,0 / 12,5 / 14,0 kW' },
+        { label: 'Koelcapaciteit', value: '2,2 - 14,0 kW' },
+        { label: 'Verwarmingscapaciteit', value: '2,5 - 16,0 kW' },
+        { label: 'SEER', value: 'Tot 5,5' },
+        { label: 'SCOP', value: 'Tot 3,8' },
+        { label: 'Geluidsniveau binnen', value: 'Vanaf 25 dB(A)' },
+        { label: 'Externe statische druk', value: '10 - 50 Pa (instelbaar)' },
+        { label: 'Koudemiddel', value: 'R32' },
+        { label: 'Afmetingen unit', value: '200x700x450 - 260x1200x600 mm (HxBxD)' },
+        { label: 'Gewicht', value: '18 - 42 kg (afhankelijk van capaciteit)' },
+        { label: 'Luchtvolume', value: '400 - 2400 m³/h' },
+        { label: 'Condenspomp', value: 'Ingebouwd' },
+        { label: 'Installatie', value: 'Horizontaal in verlaagd plafond' },
+        { label: 'Garantie', value: '3 jaar op unit' }
+      ]
+    },
+    {
+      name: 'Onderbouw Plafondunit',
+      slug: 'onderbouw-plafondunit',
+      description: 'Veelzijdige onderbouw plafondunit voor ruimtes zonder verlaagd plafond. Uitstekende keuze voor winkels, showrooms en ruimtes met hoge plafonds. Krachtige luchtstroom met groot bereik.',
+      imageUrl: '/images/products/plafondunits/tosot/tosot-onderbouw-plafond1.webp',
+      images: [
+        {
+          url: '/images/products/plafondunits/tosot/tosot-onderbouw-plafond1.webp',
+          alt: 'Tosot onderbouw plafondunit airco'
+        },
+        {
+          url: '/images/products/plafondunits/tosot/tosot-onderbouw-plafond2.webp',
+          alt: 'Tosot onderbouw plafondunit geïnstalleerd'
+        }
+      ],
+      price: 'Prijs op aanvraag',
+      energyLabel: 'A+',
+      capacity: '4,5 kW - 14,0 kW',
+      features: [
+        'Geen verlaagd plafond nodig',
+        'Krachtige horizontale luchtstroom',
+        'Groot bereik tot 15 meter',
+        'Ideaal voor hoge ruimtes',
+        'G-Tech Inverter technologie',
+        'Robuuste constructie',
+        'Eenvoudige installatie',
+        'Optionele wifi-besturing',
+        'Geschikt voor commercieel gebruik',
+        'Onderhoudsarm design'
+      ],
+      specifications: [
+        { label: 'Beschikbare capaciteiten', value: '4,5 / 5,6 / 7,1 / 10,0 / 12,5 / 14,0 kW' },
+        { label: 'Koelcapaciteit', value: '4,5 - 14,0 kW' },
+        { label: 'Verwarmingscapaciteit', value: '5,0 - 16,0 kW' },
+        { label: 'SEER', value: 'Tot 5,2' },
+        { label: 'SCOP', value: 'Tot 3,6' },
+        { label: 'Geluidsniveau binnen', value: 'Vanaf 38 dB(A)' },
+        { label: 'Koudemiddel', value: 'R32' },
+        { label: 'Afmetingen unit', value: '235x1070x692 - 298x1590x698 mm (HxBxD)' },
+        { label: 'Gewicht', value: '31 - 52 kg (afhankelijk van capaciteit)' },
+        { label: 'Luchtvolume', value: '800 - 2600 m³/h' },
+        { label: 'Maximale worp', value: 'Tot 15 meter' },
+        { label: 'Installatie', value: 'Plafond- of wandmontage' },
+        { label: 'Garantie', value: '3 jaar op unit' }
+      ]
     }
   ]
 };
