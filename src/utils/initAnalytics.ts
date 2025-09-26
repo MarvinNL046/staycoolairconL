@@ -111,6 +111,7 @@ export function initAnalytics() {
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", clarityId);
+      console.log('Microsoft Clarity initialized with ID:', clarityId);
     } catch (error) {
       console.error('Failed to initialize Microsoft Clarity:', error);
     }
