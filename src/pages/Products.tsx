@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
-import { ArrowRight, Star, Award, ThermometerSun } from 'lucide-react';
+import { ArrowRight, Star, Award, ThermometerSun, CheckCircle, Shield, Zap, Wind } from 'lucide-react';
 import { productData } from '../data/products';
-import { Helmet } from 'react-helmet-async';
+import MetaTags from '../components/MetaTags';
 import LazyImage from '../components/LazyImage';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SchemaMarkup from '../components/SchemaMarkup';
@@ -13,8 +13,37 @@ export default function Products() {
     { label: 'Producten', path: '/products' }
   ];
 
+  const voordelen = [
+    {
+      icon: <Zap className="h-8 w-8 text-blue-500" />,
+      titel: "Tot 60% energiebesparing",
+      beschrijving: "A+++ energielabels zorgen voor minimale operationele kosten"
+    },
+    {
+      icon: <Shield className="h-8 w-8 text-blue-500" />,
+      titel: "Tot 10 jaar garantie",
+      beschrijving: "Uitgebreide fabrieksgarantie op alle premium merken"
+    },
+    {
+      icon: <Wind className="h-8 w-8 text-blue-500" />,
+      titel: "Superieure koeling",
+      beschrijving: "Geavanceerde inverter technologie voor optimaal comfort"
+    },
+    {
+      icon: <CheckCircle className="h-8 w-8 text-blue-500" />,
+      titel: "Professionele installatie",
+      beschrijving: "Gecertificeerde monteurs en volledige service"
+    }
+  ];
+
   return (
-    <>
+    <div className="min-h-screen bg-gray-50">
+      <MetaTags
+        title="Premium Airco Merken - Daikin, Mitsubishi & Meer | StayCool Airco"
+        description="Ontdek ons uitgebreide assortiment aan hoogwaardige airconditioning merken. Van Daikin tot Mitsubishi, wij bieden alleen de beste A-merken met professionele installatie."
+        keywords="airco merken, Daikin, Mitsubishi Electric, Samsung, LG, Tosot, Gree, airconditioning, klimaatbeheersing, Limburg"
+      />
+      
       <SchemaMarkup 
         type="Product"
         data={{
@@ -49,81 +78,62 @@ export default function Products() {
           }))
         }}
       />
-      <Helmet>
-        <title>Airco Merken | Airco Offerte Limburg</title>
-        <meta 
-          name="description" 
-          content="Ontdek ons uitgebreide assortiment aan hoogwaardige airconditioning merken. Van Daikin tot Mitsubishi, wij bieden alleen de beste kwaliteit."
-        />
-        <meta 
-          name="keywords" 
-          content="airco merken, Daikin, Mitsubishi Electric, Samsung, LG, Tosot, Gree, airconditioning, klimaatbeheersing, Limburg"
-        />
-        <link rel="canonical" href="https://staycoolairco.nl/products" />
-      </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs items={breadcrumbItems} />
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+        <div className="container mx-auto px-4 py-16">
+          <Breadcrumbs items={breadcrumbItems} className="text-white/70 mb-4" />
           
-          <m.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-8"
-          >
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Premium Airconditioning Merken
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Wij werken uitsluitend met A-merken voor de beste kwaliteit en betrouwbaarheid
+            <p className="text-xl text-blue-50 mb-8">
+              Wij werken uitsluitend met A-merken voor de beste kwaliteit, betrouwbaarheid en energiezuinigheid
             </p>
-          </m.div>
-          
-          {/* Enhanced brand intro section instead of filters */}
-          <div className="mb-16 bg-white rounded-xl p-6 shadow-lg">
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="md:w-1/3 flex justify-center">
-                <img
-                  src="/images/products/374-WTS-indoor-console-vloernmodel-tosot.webp"
-                  alt="Premium airconditioning"
-                  className="w-full max-w-[250px] h-auto rounded-lg shadow-md"
-                />
-              </div>
-              <div className="md:w-2/3">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Waarom een A-merk airco?</h2>
-                <p className="text-gray-600 mb-4">
-                  Bij StayCool werken we uitsluitend met de beste A-merken zoals Daikin, Mitsubishi en Tosot. Deze keuze garandeert niet alleen optimale prestaties, maar ook een langere levensduur, energiezuinigheid en uitzonderlijk comfort.
-                </p>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="flex items-center">
-                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">Tot 60% energiebesparing</span>
+            
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+              {voordelen.map((voordeel, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                  <div className="flex justify-center mb-2">
+                    {voordeel.icon}
                   </div>
-                  <div className="flex items-center">
-                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">Superieure koeling</span>
-                  </div>
-                  <div className="flex items-center">
-                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">Tot 5 jaar garantie</span>
-                  </div>
-                  <div className="flex items-center">
-                    <svg className="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-gray-700">Professionele installatie</span>
-                  </div>
+                  <p className="font-semibold text-sm">{voordeel.titel}</p>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
+        </div>
+      </section>
 
+      {/* Voordelen Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Waarom kiezen voor een A-merk airco?
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {voordelen.map((voordeel, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center">
+                <div className="flex justify-center mb-4">
+                  {voordeel.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-2">{voordeel.titel}</h3>
+                <p className="text-gray-600">{voordeel.beschrijving}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Merken Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Onze Premium Merken
+          </h2>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {productData.brands.map((brand, index) => (
               <m.div
@@ -215,119 +225,62 @@ export default function Products() {
               </m.div>
             ))}
           </div>
-
-          {/* USPs Section */}
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <m.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="bg-white p-6 rounded-xl shadow-md"
-            >
-              <Award className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Erkend Installateur</h3>
-              <p className="text-gray-600">F-gassen gecertificeerd en erkend installateur van alle grote merken</p>
-            </m.div>
-            <m.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="bg-white p-6 rounded-xl shadow-md"
-            >
-              <ThermometerSun className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Energiezuinig</h3>
-              <p className="text-gray-600">Alle systemen zijn zeer energiezuinig en geschikt voor verwarmen én koelen</p>
-            </m.div>
-            <m.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="bg-white p-6 rounded-xl shadow-md"
-            >
-              <Star className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Premium Service</h3>
-              <p className="text-gray-600">Gratis advies aan huis en professionele installatie door ervaren monteurs</p>
-            </m.div>
-          </div>
-
-          {/* Enhanced CTA section */}
-          <m.div 
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="mt-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 shadow-xl relative overflow-hidden"
-          >
-            {/* Background pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <defs>
-                  <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                    <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" strokeWidth="1"/>
-                  </pattern>
-                </defs>
-                <rect width="100" height="100" fill="url(#grid)" />
-              </svg>
-            </div>
-
-            <div className="relative z-10">
-              <div className="inline-block px-4 py-2 rounded-full bg-blue-500/40 text-white text-sm font-medium mb-6">
-                ⚡ Tijdelijke actie: Gratis installatiecheck bij offerte
-              </div>
-              
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Vind De Perfecte Airco Voor Uw Woning
-              </h2>
-              <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-                Onze experts helpen u graag bij het selecteren van de juiste airconditioning. 
-                Binnen 24 uur ontvangt u een vrijblijvende offerte op maat.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-                <Link
-                  to="/contact"
-                  className="group inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-lg text-blue-700 bg-white hover:bg-blue-50 shadow-lg hover:shadow-xl transform hover:translate-y-[-2px] transition-all duration-300"
-                >
-                  <span className="mr-2">Vraag Gratis Offerte Aan</span>
-                  <svg className="h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </Link>
-                <a
-                  href="tel:0462021430"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-lg font-medium rounded-lg text-white bg-transparent hover:bg-white/10 shadow-lg hover:shadow-xl transform hover:translate-y-[-2px] transition-all duration-300"
-                >
-                  <svg className="h-5 w-5 mr-2 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  <span>Bel Direct: 046 202 1430</span>
-                </a>
-              </div>
-              
-              {/* Trust badges */}
-              <div className="flex flex-wrap justify-center gap-6 text-white">
-                <div className="flex items-center">
-                  <svg className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                  <span>Geen verplichtingen</span>
-                </div>
-                <div className="flex items-center">
-                  <svg className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span>Snelle reactie</span>
-                </div>
-                <div className="flex items-center">
-                  <svg className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2z" />
-                  </svg>
-                  <span>Persoonlijk advies</span>
-                </div>
-              </div>
-            </div>
-          </m.div>
         </div>
-      </div>
-    </>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-orange-500 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4">
+            Klaar om de perfecte airco te vinden?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Onze experts helpen u graag bij het kiezen van de juiste airconditioning voor uw situatie. Vraag vandaag nog gratis advies aan!
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-3 bg-white text-orange-500 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              Gratis advies aanvragen
+            </Link>
+            <a
+              href="tel:0462021430"
+              className="inline-flex items-center px-8 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors"
+            >
+              Bel direct: 046 202 1430
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* USPs Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Waarom StayCool Airco?
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <Award className="h-12 w-12 text-blue-600 mb-4 mx-auto" />
+              <h3 className="text-xl font-bold mb-2">Erkend Installateur</h3>
+              <p className="text-gray-600">F-gassen gecertificeerd en erkend installateur van alle grote merken</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <ThermometerSun className="h-12 w-12 text-blue-600 mb-4 mx-auto" />
+              <h3 className="text-xl font-bold mb-2">Energiezuinig</h3>
+              <p className="text-gray-600">Alle systemen zijn zeer energiezuinig en geschikt voor verwarmen én koelen</p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <Star className="h-12 w-12 text-blue-600 mb-4 mx-auto" />
+              <h3 className="text-xl font-bold mb-2">Premium Service</h3>
+              <p className="text-gray-600">Gratis advies aan huis en professionele installatie door ervaren monteurs</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
