@@ -192,7 +192,20 @@ export default function ProductDetail() {
           price: priceValue ? priceValue.toString() : '1395',
           availability: 'InStock'
         }}
-        reviews={[
+        reviews={brand === 'alphaess' ? [
+          {
+            author: "Peter Hendriks",
+            rating: 5,
+            reviewBody: `Fantastisch systeem! Onze energierekening is met 40% gedaald sinds we de ${brandData.name} thuisbatterij hebben. De slimme sturing via Frank werkt perfect.`,
+            datePublished: new Date().toISOString().split('T')[0]
+          },
+          {
+            author: "Linda van den Berg",
+            rating: 5,
+            reviewBody: `StayCool Airco heeft de ${brandData.name} batterij vakkundig geïnstalleerd. Ze hebben ook geholpen met de BTW-teruggave aanvraag. Top service!`,
+            datePublished: new Date().toISOString().split('T')[0]
+          }
+        ] : [
           {
             author: "Jan de Vries",
             rating: 5,
@@ -206,7 +219,32 @@ export default function ProductDetail() {
             datePublished: new Date().toISOString().split('T')[0]
           }
         ]}
-        faqs={[
+        faqs={brand === 'alphaess' ? [
+          {
+            question: `Wat is de terugverdientijd van de ${brandData.name} ${modelData.name} thuisbatterij?`,
+            answer: `De terugverdientijd van de ${brandData.name} ${modelData.name} is gemiddeld 4-7 jaar, afhankelijk van uw energiecontract en verbruikspatroon. Met de huidige dynamische energieprijzen kunt u forse besparingen realiseren door slim in te kopen wanneer stroom goedkoop is.`
+          },
+          {
+            question: "Hoe werkt de slimme sturing van deze thuisbatterij?",
+            answer: `De ${brandData.name} ${modelData.name} maakt gebruik van de Frank app voor intelligent energiebeheer. Deze app handelt automatisch op de energiemarkt (EPEX) en benut ook onbalans- en congestiemarkten voor maximaal rendement. U hoeft zelf niets te doen - het systeem optimaliseert automatisch uw energiegebruik.`
+          },
+          {
+            question: "Kan ik deze batterij ook zonder zonnepanelen gebruiken?",
+            answer: `Ja, de ${brandData.name} ${modelData.name} werkt uitstekend zonder zonnepanelen. U kunt profiteren van dynamische energieprijzen door goedkoop in te kopen en duur terug te leveren. Met zonnepanelen heeft u wel extra voordeel door overdag gratis op te laden.`
+          },
+          {
+            question: "Welke garantie krijg ik op deze thuisbatterij?",
+            answer: `AlphaESS biedt 10 jaar garantie of 10.000 cycli op de ${modelData.name}. Daarnaast krijgt u gratis 24/7 monitoring via AlphaCloud. Het systeem is VDE, IEC en UN38.3 gecertificeerd voor maximale veiligheid en betrouwbaarheid.`
+          },
+          {
+            question: "Hoeveel capaciteit heb ik nodig voor mijn huishouden?",
+            answer: `Voor een gemiddeld huishouden is ${modelData.capacity} meestal voldoende. Dit dekt het dagelijkse verbruik en biedt ruimte voor handel op de energiemarkt. Onze adviseurs maken graag een berekening op maat op basis van uw verbruik en wensen.`
+          },
+          {
+            question: "Hoe snel kan de thuisbatterij geïnstalleerd worden?",
+            answer: `De ${brandData.name} ${modelData.name} kan binnen 4 weken geïnstalleerd worden. De installatie zelf duurt ongeveer een halve dag. AlphaESS helpt ook met de BTW-teruggave van 21%, wat het netto nog voordeliger maakt.`
+          }
+        ] : [
           {
             question: `Voor welke ruimtegrootte is deze ${brandData.name} ${modelData.name} geschikt?`,
             answer: `De ${brandData.name} ${modelData.name} met ${modelData.capacity} is geschikt voor ruimtes van ongeveer ${
@@ -647,8 +685,11 @@ export default function ProductDetail() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-700 italic mb-4">"Zeer tevreden met onze {brandData.name} airco. De monteurs waren vakkundig en hebben alles netjes geïnstalleerd. De airco werkt perfect en we merken nu al een flinke besparing op onze energierekening."</p>
-                <p className="text-gray-900 font-medium">Jan de Vries, Maastricht</p>
+                <p className="text-gray-700 italic mb-4">{brand === 'alphaess' 
+                  ? `"Fantastisch systeem! Onze energierekening is met 40% gedaald sinds we de ${brandData.name} thuisbatterij hebben. De slimme sturing via Frank werkt perfect."`
+                  : `"Zeer tevreden met onze ${brandData.name} airco. De monteurs waren vakkundig en hebben alles netjes geïnstalleerd. De airco werkt perfect en we merken nu al een flinke besparing op onze energierekening."`
+                }</p>
+                <p className="text-gray-900 font-medium">{brand === 'alphaess' ? 'Peter Hendriks, Sittard' : 'Jan de Vries, Maastricht'}</p>
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow-md">
@@ -659,8 +700,11 @@ export default function ProductDetail() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-700 italic mb-4">"De adviseur van StayCool Airco heeft ons goed geholpen bij het kiezen van de juiste airco. Het verschil met onze oude unit is enorm! Stiller, zuiniger en veel effectiever."</p>
-                <p className="text-gray-900 font-medium">Marieke Jansen, Roermond</p>
+                <p className="text-gray-700 italic mb-4">{brand === 'alphaess'
+                  ? `"StayCool Airco heeft de ${brandData.name} batterij vakkundig geïnstalleerd. Ze hebben ook geholpen met de BTW-teruggave aanvraag. Top service!"`
+                  : `"De adviseur van StayCool Airco heeft ons goed geholpen bij het kiezen van de juiste airco. Het verschil met onze oude unit is enorm! Stiller, zuiniger en veel effectiever."`
+                }</p>
+                <p className="text-gray-900 font-medium">{brand === 'alphaess' ? 'Linda van den Berg, Roermond' : 'Marieke Jansen, Roermond'}</p>
               </div>
             </div>
           </div>
