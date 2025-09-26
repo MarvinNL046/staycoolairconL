@@ -106,7 +106,7 @@ export default function HomeBattery() {
                 Plan vrijblijvend adviesgesprek
               </Link>
               <Link
-                to="/products/alphaess/smile-g3-t10"
+                to="/products/alphaess/smile-g3-t10-11-55kwh"
                 className="inline-flex items-center justify-center px-6 py-3 border border-orange-600 rounded-md shadow-sm text-base font-medium text-orange-600 bg-white hover:bg-orange-50"
               >
                 Bekijk specificaties
