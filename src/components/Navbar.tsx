@@ -56,7 +56,7 @@ export default function Navbar() {
             </Link>
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <Link 
               to="/"
               className={`transition-colors duration-300 ${getLinkColor()}`}
@@ -143,7 +143,7 @@ export default function Navbar() {
               <Battery className="h-4 w-4 mr-1.5" />
               Thuisbatterijen
             </Link>
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-4">
               <a 
                 href="https://afspraken.staycoolairco.nl"
                 target="_blank"
