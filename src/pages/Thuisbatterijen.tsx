@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Battery, Calculator, Shield, TrendingUp, Sun, Zap, Euro, Phone } from 'lucide-react';
+import { Battery, Calculator, Shield, TrendingUp, Sun, Zap, Euro, Phone, BookOpen } from 'lucide-react';
 import MetaTags from '../components/MetaTags';
 import Breadcrumbs from '../components/Breadcrumbs';
 import LazyImage from '../components/LazyImage';
@@ -310,6 +310,13 @@ export default function Thuisbatterijen() {
             >
               <Calculator className="h-5 w-5 mr-2" />
               Bereken uw besparing
+            </Link>
+            <Link
+              to="/kennisbank/thuisbatterijen"
+              className="inline-flex items-center px-8 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-lg hover:bg-yellow-500 transition-colors"
+            >
+              <BookOpen className="h-5 w-5 mr-2" />
+              Kennisbank Thuisbatterijen
             </Link>
             <a
               href="tel:0462021430"

@@ -1,9 +1,17 @@
 import React from 'react';
 import { m } from 'framer-motion';
-import { BookOpen, ThermometerSun, Zap, Leaf, Settings, HelpCircle, ChevronRight, MapPin } from 'lucide-react';
+import { BookOpen, ThermometerSun, Zap, Leaf, Settings, HelpCircle, ChevronRight, MapPin, Battery } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../components/Breadcrumbs';
 import MetaTags from '../components/MetaTags';
+
+interface Article {
+  title: string;
+  description: string;
+  slug: string;
+  fullPath?: boolean;
+  special?: boolean;
+}
 
 export default function KnowledgeBase() {
   const breadcrumbItems = [
@@ -152,6 +160,19 @@ export default function KnowledgeBase() {
           title: 'Airco Laten Installeren',
           description: 'Complete gids voor het zorgeloos laten installeren van een airco.',
           slug: 'airco-laten-installeren'
+        }
+      ]
+    },
+    {
+      title: 'Thuisbatterijen',
+      icon: Battery,
+      description: 'Alles over thuisbatterijen, eilandbedrijf en back-up systemen',
+      articles: [
+        {
+          title: 'Kennisbank Thuisbatterijen',
+          description: 'Complete gids over eilandbedrijf, anti-islanding beveiliging en EPS/back-up systemen.',
+          slug: 'thuisbatterijen',
+          special: true
         }
       ]
     },
@@ -346,7 +367,7 @@ export default function KnowledgeBase() {
                     {category.articles.map((article) => (
                       <Link
                         key={article.slug}
-                        to={article.fullPath ? `/${article.slug}` : article.slug.startsWith('lg-') ? `/${article.slug}` : `/kennisbank/${article.slug}`}
+                        to={article.fullPath ? `/${article.slug}` : article.special ? `/kennisbank/${article.slug}` : article.slug.startsWith('lg-') ? `/${article.slug}` : `/kennisbank/${article.slug}`}
                         className="block bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors duration-200"
                       >
                         <div className="flex items-center justify-between">

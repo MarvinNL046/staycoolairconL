@@ -140,6 +140,7 @@ const AircoBuitenunitPlaatsing = lazy(() => import('./pages/articles/AircoBuiten
 const AircoLatenInstalleren = lazy(() => import('./pages/articles/AircoLatenInstalleren'));
 const MobieleVsSplitAirco = lazy(() => import('./pages/articles/MobieleVsSplitAirco'));
 const CapacityCalculator = lazy(() => import('./pages/CapacityCalculator'));
+const KnowledgeBaseThuisbatterijen = lazy(() => import('./pages/KnowledgeBaseThuisbatterijen'));
 
 // SEO Articles
 const AircoSpecialistLimburg = lazy(() => import('./pages/articles/aircospecialist-limburg'));
@@ -356,6 +357,7 @@ const App = () => {
                 <Route path="/capaciteit-calculator" element={<CapacityCalculator />} />
                 <Route path="/thuisbatterij-calculator" element={<ThuisbatterijCalculator />} />
                 <Route path="/thuisbatterijen" element={<Thuisbatterijen />} />
+                <Route path="/kennisbank/thuisbatterijen" element={<KnowledgeBaseThuisbatterijen />} />
 
                 {/* SEO Articles */}
                 <Route path="/kennisbank/aircospecialist-limburg" element={<AircoSpecialistLimburg />} />
