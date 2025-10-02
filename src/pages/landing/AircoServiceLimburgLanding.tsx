@@ -54,27 +54,27 @@ const AircoServiceLimburgLanding: React.FC = () => {
 
   const serviceTypes = {
     onderhoud: {
-      name: 'Preventief Onderhoud',
+      name: 'Onderhoudscontract',
       icon: Settings,
-      description: 'Regelmatig onderhoud voorkomt storingen',
-      price: 'vanaf €119/jaar',
+      description: 'Zorgeloos en voordeliger dan losse beurten',
+      price: 'vanaf €11/maand (€132/jaar)',
       features: [
-        'Jaarlijkse inspectie',
-        'Filter reiniging',
-        'Koelvloeistof controle',
-        'Prestatie optimalisatie'
+        'Jaarlijkse onderhoudsbeurt',
+        'Geen voorrijkosten bij storing',
+        'Voorrang bij spoedreparaties',
+        'Premium: vervangend toestel'
       ]
     },
     reparatie: {
       name: 'Reparatie Service',
       icon: Wrench,
       description: 'Snelle storingsdienst in heel Limburg',
-      price: 'vanaf €89 voorrijkosten',
+      price: '€45 voorrijkosten + arbeid',
       features: [
         'Binnen 24u ter plaatse',
-        'Snelle response tijd',
+        'Met contract: geen voorrijkosten',
         'Ervaren monteurs',
-        'Garantie op reparaties'
+        '6 maanden garantie'
       ]
     },
     installatie: {
