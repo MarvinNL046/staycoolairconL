@@ -413,7 +413,7 @@ const LGHandleiding: React.FC = () => {
                 <ul className="space-y-2">
                   <li>✓ Professionele installatie</li>
                   <li>✓ Jaarlijks onderhoud</li>
-                  <li>✓ 24/7 storingsdienst</li>
+                  <li>✓ Snelle storingsdienst</li>
                   <li>✓ Garantieafhandeling</li>
                   <li>✓ Advies op maat</li>
                 </ul>

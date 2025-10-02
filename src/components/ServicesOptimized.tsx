@@ -119,7 +119,7 @@ export default function ServicesOptimized() {
             >
               <Wrench className="h-10 w-10 mb-4" />
               <h3 className="text-xl font-bold mb-2">Service Nodig?</h3>
-              <p className="text-green-100 mb-4">24/7 onderhoud & reparatie in Limburg</p>
+              <p className="text-green-100 mb-4">Snel onderhoud & reparatie in Limburg</p>
               <span className="inline-flex items-center text-white font-semibold group-hover:translate-x-2 transition-transform">
                 Plan service in →
               </span>

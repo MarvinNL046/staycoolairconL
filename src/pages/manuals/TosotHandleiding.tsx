@@ -513,7 +513,7 @@ const TosotHandleiding: React.FC = () => {
                 <ul className="space-y-2">
                   <li>✓ Vakkundige installatie</li>
                   <li>✓ Jaarlijks onderhoud vanaf €95</li>
-                  <li>✓ 24/7 storingsdienst</li>
+                  <li>✓ Snelle storingsdienst</li>
                   <li>✓ Garantieafhandeling</li>
                   <li>✓ Gratis advies</li>
                 </ul>
@@ -558,7 +558,7 @@ const TosotHandleiding: React.FC = () => {
             <div className="mt-6 text-center">
               <p className="font-semibold mb-2">Openingstijden</p>
               <p>Ma-Vr: 08:00 - 17:00 | Za: 09:00 - 14:00</p>
-              <p className="text-sm text-gray-600 mt-2">Storingsdienst 24/7 bereikbaar</p>
+              <p className="text-sm text-gray-600 mt-2">Storingsdienst: snelle responstijd</p>
             </div>
           </div>
         </section>
