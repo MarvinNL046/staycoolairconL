@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ShoppingCart, Wrench, Wind } from 'lucide-react';
 import Breadcrumbs from '../components/Breadcrumbs';
 import MetaTags from '../components/MetaTags';
 import SchemaMarkup from '../components/SchemaMarkup';
@@ -489,7 +491,48 @@ export default function LocationLandingPage({
               </div>
             </section>
           )}
-          
+
+          {/* Internal Links CTA Section */}
+          <section className="mb-16">
+            <div className="grid md:grid-cols-3 gap-6">
+              <Link
+                to="/airco-kopen-limburg"
+                className="group bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6 rounded-xl hover:shadow-xl transition-all"
+              >
+                <ShoppingCart className="h-10 w-10 mb-4" />
+                <h3 className="text-xl font-bold mb-2">Airco Kopen in {city}?</h3>
+                <p className="text-blue-100 mb-4">A+++ modellen vanaf €1.498 all-in</p>
+                <span className="inline-flex items-center text-white font-semibold group-hover:translate-x-2 transition-transform">
+                  Bekijk ons assortiment →
+                </span>
+              </Link>
+
+              <Link
+                to="/airco-service-limburg"
+                className="group bg-gradient-to-br from-green-600 to-green-700 text-white p-6 rounded-xl hover:shadow-xl transition-all"
+              >
+                <Wrench className="h-10 w-10 mb-4" />
+                <h3 className="text-xl font-bold mb-2">Service in {city}</h3>
+                <p className="text-green-100 mb-4">24/7 onderhoud & reparatie in Limburg</p>
+                <span className="inline-flex items-center text-white font-semibold group-hover:translate-x-2 transition-transform">
+                  Plan service in →
+                </span>
+              </Link>
+
+              <Link
+                to="/kennisbank/klimaatbeheersing"
+                className="group bg-gradient-to-br from-purple-600 to-purple-700 text-white p-6 rounded-xl hover:shadow-xl transition-all"
+              >
+                <Wind className="h-10 w-10 mb-4" />
+                <h3 className="text-xl font-bold mb-2">Klimaatbeheersing</h3>
+                <p className="text-purple-100 mb-4">Expert advies voor optimaal binnenklimaat</p>
+                <span className="inline-flex items-center text-white font-semibold group-hover:translate-x-2 transition-transform">
+                  Lees meer →
+                </span>
+              </Link>
+            </div>
+          </section>
+
           {/* Contact Form */}
           <section id="contact" className="mb-12">
             <h2 className="text-3xl font-bold mb-6">Direct een Airco Installateur bij u in de Buurt in {city}</h2>

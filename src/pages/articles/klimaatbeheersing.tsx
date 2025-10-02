@@ -14,15 +14,16 @@ export default function Klimaatbeheersing() {
   return (
     <>
       <Helmet>
-        <title>Klimaatbeheersing | Optimaal Binnenklimaat met StayCool</title>
-        <meta 
-          name="description" 
-          content="Alles over professionele klimaatbeheersing voor uw woning of bedrijf. Ontdek hoe u het perfecte binnenklimaat creëert met onze expertise."
+        <title>Klimaatbeheersing Limburg | Expert in Airco's en Klimaatoplossingen</title>
+        <meta
+          name="description"
+          content="✓ Klimaatbeheersing specialist in Limburg sinds 2021 ✓ Expert advies voor optimaal binnenklimaat ✓ A+++ airco's ✓ Professionele installatie. Bel 046 202 1430."
         />
-        <meta 
-          name="keywords" 
-          content="klimaatbeheersing, binnenklimaat, airconditioning, luchtvochtigheid, temperatuurregeling, duurzame klimaatoplossingen"
+        <meta
+          name="keywords"
+          content="klimaatbeheersing limburg, klimaatoplossingen limburg, airco specialist limburg, binnenklimaat expert, temperatuurregeling limburg, klimaatsystemen"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/klimaatbeheersing" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
@@ -35,17 +36,39 @@ export default function Klimaatbeheersing() {
             className="prose prose-lg max-w-none"
           >
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              Klimaatbeheersing: De Sleutel tot Comfort
+              Klimaatbeheersing Limburg: Expert in Airco's en Klimaatoplossingen
             </h1>
 
             <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <h2 className="text-2xl font-semibold mb-4">Wat is Klimaatbeheersing?</h2>
-              <p>
-                Klimaatbeheersing omvat meer dan alleen temperatuurregeling. Het gaat om het creëren 
-                van een optimaal binnenklimaat door het reguleren van temperatuur, luchtvochtigheid 
-                en luchtkwaliteit. Bij StayCool bieden we complete klimaatoplossingen die zorgen 
-                voor het perfecte binnenklimaat, het hele jaar door.
+              <div className="flex items-start gap-4 mb-6">
+                <div className="bg-blue-100 p-4 rounded-lg">
+                  <ThermometerSun className="h-8 w-8 text-blue-600" />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-semibold mb-2">Uw Specialist in Klimaatbeheersing sinds 2021</h2>
+                  <p className="text-gray-600">
+                    In heel Limburg helpen wij particulieren en bedrijven
+                    bij het creëren van het perfecte binnenklimaat met moderne A+++ klimaatsystemen.
+                  </p>
+                </div>
+              </div>
+
+              <h3 className="text-xl font-semibold mb-4">Wat is Professionele Klimaatbeheersing?</h3>
+              <p className="mb-4">
+                Klimaatbeheersing omvat meer dan alleen temperatuurregeling. Het gaat om het creëren
+                van een optimaal binnenklimaat door het intelligent reguleren van temperatuur, luchtvochtigheid
+                en luchtkwaliteit. Bij StayCool Airco bieden we complete klimaatoplossingen specifiek
+                afgestemd op het Limburgse klimaat - zowel voor koeling in warme zomers als efficiënte
+                verwarming in koude winters.
               </p>
+
+              <div className="bg-blue-50 rounded-lg p-4 mt-4">
+                <p className="text-blue-900 font-medium">
+                  <Leaf className="h-5 w-5 inline mr-2" />
+                  Onze A+++ klimaatsystemen besparen tot €650 per jaar op energiekosten vergeleken
+                  met traditionele verwarming en koeling.
+                </p>
+              </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -115,35 +138,50 @@ export default function Klimaatbeheersing() {
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <h2 className="text-2xl font-semibold mb-4">Toepassingen</h2>
-              <div className="grid md:grid-cols-3 gap-6">
+              <h2 className="text-2xl font-semibold mb-4">Klimaatoplossingen voor Heel Limburg</h2>
+              <div className="grid md:grid-cols-3 gap-6 mb-6">
                 <div>
-                  <h3 className="font-semibold mb-2">Woningen</h3>
+                  <h3 className="font-semibold mb-2 flex items-center gap-2">
+                    <MapPin className="h-5 w-5 text-blue-600" />
+                    Woningen
+                  </h3>
                   <ul className="space-y-1 text-gray-600">
-                    <li>• Woonkamers</li>
-                    <li>• Slaapkamers</li>
-                    <li>• Thuiskantoren</li>
-                    <li>• Zolderruimtes</li>
+                    <li>• Woonkamers & slaapkamers</li>
+                    <li>• Thuiskantoren & zolders</li>
+                    <li>• Complete woningverwarming</li>
+                    <li>• Multi-split systemen</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2">Kantoren</h3>
+                  <h3 className="font-semibold mb-2 flex items-center gap-2">
+                    <MapPin className="h-5 w-5 text-blue-600" />
+                    Zakelijk
+                  </h3>
                   <ul className="space-y-1 text-gray-600">
-                    <li>• Werkplekken</li>
-                    <li>• Vergaderruimtes</li>
-                    <li>• Serverruimtes</li>
-                    <li>• Recepties</li>
+                    <li>• Kantoren & werkplekken</li>
+                    <li>• Vergaderruimtes & recepties</li>
+                    <li>• Serverruimtes (precisie)</li>
+                    <li>• Open office klimaat</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2">Overige</h3>
+                  <h3 className="font-semibold mb-2 flex items-center gap-2">
+                    <MapPin className="h-5 w-5 text-blue-600" />
+                    Speciaal
+                  </h3>
                   <ul className="space-y-1 text-gray-600">
-                    <li>• Winkels</li>
-                    <li>• Horeca</li>
-                    <li>• Zorginstellingen</li>
-                    <li>• Scholen</li>
+                    <li>• Winkels & showrooms</li>
+                    <li>• Horeca & restaurants</li>
+                    <li>• Zorginstellingen & scholen</li>
+                    <li>• Praktijkruimtes</li>
                   </ul>
                 </div>
+              </div>
+
+              <div className="bg-green-50 rounded-lg p-4">
+                <p className="text-green-900 font-medium text-center">
+                  Service in heel Limburg: Maastricht • Roermond • Venlo • Heerlen • Sittard • Weert • Venray en omstreken
+                </p>
               </div>
             </div>
 

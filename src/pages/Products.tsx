@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
-import { ArrowRight, Star, Award, ThermometerSun, CheckCircle, Shield, Zap, Wind } from 'lucide-react';
+import { ArrowRight, Star, Award, ThermometerSun, CheckCircle, Shield, Zap, Wind, ShoppingCart } from 'lucide-react';
 import { productData } from '../data/products';
 import MetaTags from '../components/MetaTags';
 import LazyImage from '../components/LazyImage';
@@ -277,6 +277,39 @@ export default function Products() {
               <Star className="h-12 w-12 text-blue-600 mb-4 mx-auto" />
               <h3 className="text-xl font-bold mb-2">Premium Service</h3>
               <p className="text-gray-600">Gratis advies aan huis en professionele installatie door ervaren monteurs</p>
+            </div>
+          </div>
+
+          {/* CTA Section voor Airco Kopen */}
+          <div className="mt-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl shadow-xl p-8 md:p-12 text-white">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Klaar om uw Airco te Kopen?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8">
+                Bekijk ons complete assortiment met transparante prijzen vanaf €1.498 all-in.
+                Inclusief professionele installatie en volledige garantie.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/airco-kopen-limburg"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl"
+                >
+                  <ShoppingCart className="w-5 h-5 mr-2" />
+                  Bekijk Prijzen & Modellen
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-all"
+                >
+                  Gratis Adviesgesprek
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+              </div>
+              <p className="mt-6 text-sm text-blue-200">
+                ✓ Gratis vooronderzoek  ✓ All-in installatie  ✓ 2-5 jaar garantie  ✓ Specialist sinds 2021
+              </p>
             </div>
           </div>
         </div>

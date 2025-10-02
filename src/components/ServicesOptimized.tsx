@@ -1,5 +1,6 @@
 import React from 'react';
-import { Fan, Wrench, ThermometerSun } from 'lucide-react';
+import { Fan, Wrench, ThermometerSun, ShoppingCart, Wind } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function ServicesOptimized() {
   const services = [
@@ -7,19 +8,22 @@ export default function ServicesOptimized() {
       icon: Fan,
       title: 'Airco Installatie',
       description: 'Professionele installatie van verschillende typen airconditioners, perfect afgestemd op uw ruimte.',
-      features: ['Gratis vooronderzoek', 'Vakkundige montage', 'Netjes afgewerkt']
+      features: ['Gratis vooronderzoek', 'Vakkundige montage', 'Netjes afgewerkt'],
+      link: '/airco-installatie'
     },
     {
       icon: ThermometerSun,
       title: 'Duurzaam Verwarmen',
       description: 'Bespaar op teruglevering van zonne-energie door efficiënt koelen in de zomer en verwarmen in de winter.',
-      features: ['Voorkom terugleverkosten', 'Energiezuinig verwarmen', 'Optimaal gebruik zonnepanelen']
+      features: ['Voorkom terugleverkosten', 'Energiezuinig verwarmen', 'Optimaal gebruik zonnepanelen'],
+      link: '/kennisbank/verwarmen-met-airco'
     },
     {
       icon: Wrench,
       title: 'Onderhoud & Service',
       description: 'Regelmatig onderhoud voor optimale werking en langere levensduur van uw airconditioning.',
-      features: ['Preventief onderhoud', 'Snelle reparatie']
+      features: ['Preventief onderhoud', 'Snelle reparatie'],
+      link: '/airco-service-limburg'
     }
   ];
 
@@ -66,26 +70,72 @@ export default function ServicesOptimized() {
                 <h3 className="mt-8 text-xl font-semibold text-gray-900">{service.title}</h3>
                 <p className="mt-4 text-gray-600">{service.description}</p>
 
-                <ul className="mt-6 space-y-3">
+                <ul className="mt-6 space-y-3 mb-6">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <svg 
-                        className="flex-shrink-0 h-5 w-5 text-green-500 mt-0.5" 
-                        fill="currentColor" 
+                      <svg
+                        className="flex-shrink-0 h-5 w-5 text-green-500 mt-0.5"
+                        fill="currentColor"
                         viewBox="0 0 20 20"
                       >
-                        <path 
-                          fillRule="evenodd" 
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" 
-                          clipRule="evenodd" 
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
                         />
                       </svg>
                       <span className="ml-3 text-gray-600">{feature}</span>
                     </li>
                   ))}
                 </ul>
+
+                <Link
+                  to={service.link}
+                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+                >
+                  Meer info →
+                </Link>
               </div>
             ))}
+          </div>
+
+          {/* New CTA Section with key links */}
+          <div className="mt-16 grid md:grid-cols-3 gap-6">
+            <Link
+              to="/airco-kopen-limburg"
+              className="group bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6 rounded-xl hover:shadow-xl transition-all"
+            >
+              <ShoppingCart className="h-10 w-10 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Airco Kopen?</h3>
+              <p className="text-blue-100 mb-4">A+++ modellen vanaf €1.498 all-in</p>
+              <span className="inline-flex items-center text-white font-semibold group-hover:translate-x-2 transition-transform">
+                Bekijk ons assortiment →
+              </span>
+            </Link>
+
+            <Link
+              to="/airco-service-limburg"
+              className="group bg-gradient-to-br from-green-600 to-green-700 text-white p-6 rounded-xl hover:shadow-xl transition-all"
+            >
+              <Wrench className="h-10 w-10 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Service Nodig?</h3>
+              <p className="text-green-100 mb-4">24/7 onderhoud & reparatie in Limburg</p>
+              <span className="inline-flex items-center text-white font-semibold group-hover:translate-x-2 transition-transform">
+                Plan service in →
+              </span>
+            </Link>
+
+            <Link
+              to="/kennisbank/klimaatbeheersing"
+              className="group bg-gradient-to-br from-purple-600 to-purple-700 text-white p-6 rounded-xl hover:shadow-xl transition-all"
+            >
+              <Wind className="h-10 w-10 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Klimaatbeheersing</h3>
+              <p className="text-purple-100 mb-4">Expert advies voor optimaal binnenklimaat</p>
+              <span className="inline-flex items-center text-white font-semibold group-hover:translate-x-2 transition-transform">
+                Lees meer →
+              </span>
+            </Link>
           </div>
         </div>
       </div>
