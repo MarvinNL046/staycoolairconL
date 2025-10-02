@@ -192,10 +192,12 @@ export default function LocationLandingPage({
                 </div>
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="#contact"
+                    href="https://afspraken.staycoolairco.nl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300"
                   >
-                    Offerte Aanvragen
+                    Gratis Adviesgesprek
                   </a>
                   <a
                     href="tel:+31462021430"

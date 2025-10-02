@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fan, Wrench, ThermometerSun, ShoppingCart, Wind } from 'lucide-react';
+import { Fan, Wrench, ThermometerSun, ShoppingCart, Wind, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ServicesOptimized() {
@@ -125,17 +125,19 @@ export default function ServicesOptimized() {
               </span>
             </Link>
 
-            <Link
-              to="/kennisbank/klimaatbeheersing"
+            <a
+              href="https://afspraken.staycoolairco.nl/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group bg-gradient-to-br from-purple-600 to-purple-700 text-white p-6 rounded-xl hover:shadow-xl transition-all"
             >
-              <Wind className="h-10 w-10 mb-4" />
-              <h3 className="text-xl font-bold mb-2">Klimaatbeheersing</h3>
-              <p className="text-purple-100 mb-4">Expert advies voor optimaal binnenklimaat</p>
+              <Calendar className="h-10 w-10 mb-4" />
+              <h3 className="text-xl font-bold mb-2">Gratis Adviesgesprek</h3>
+              <p className="text-purple-100 mb-4">Plan direct een afspraak met onze specialisten</p>
               <span className="inline-flex items-center text-white font-semibold group-hover:translate-x-2 transition-transform">
-                Lees meer →
+                Plan afspraak →
               </span>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

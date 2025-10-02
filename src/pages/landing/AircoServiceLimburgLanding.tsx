@@ -130,34 +130,34 @@ const AircoServiceLimburgLanding: React.FC = () => {
 
   const pricingTable = [
     {
-      service: 'Onderhoudsbeurt',
-      residential: '€119',
-      commercial: '€149',
+      service: 'Onderhoudsbeurt (eenmalig)',
+      residential: '€179',
+      commercial: '€199',
       includes: 'Inspectie, reiniging, rapportage'
     },
     {
+      service: 'Onderhoudscontract Basis',
+      residential: '€11/mnd (€132/jaar)',
+      commercial: '€149/jaar',
+      includes: 'Jaarlijks onderhoud + voorrang + geen voorrijkosten'
+    },
+    {
+      service: 'Onderhoudscontract Premium',
+      residential: '€16/mnd (€192/jaar)',
+      commercial: '€199/jaar',
+      includes: 'Basis + alle onderdelen + vervangend toestel'
+    },
+    {
       service: 'Storing verhelpen',
-      residential: '€89 + €79/uur',
+      residential: '€45 voorrijkosten + arbeid',
       commercial: '€109 + €89/uur',
-      includes: 'Voorrijkosten + arbeid'
+      includes: 'Met contract: geen voorrijkosten'
     },
     {
-      service: 'Spoedreparatie',
-      residential: '€149 + €119/uur',
-      commercial: '€189 + €139/uur',
-      includes: 'Weekend/avond tarief (meerprijs)'
-    },
-    {
-      service: 'Filter vervangen',
-      residential: '€49',
-      commercial: '€69',
-      includes: 'Inclusief nieuwe filters'
-    },
-    {
-      service: 'Koelvloeistof bijvullen',
-      residential: 'vanaf €199',
-      commercial: 'vanaf €249',
-      includes: 'Incl. lekdetectie'
+      service: 'Extra binnendeel (multi-split)',
+      residential: '+€7/mnd (Basis)',
+      commercial: '+€11/mnd (Premium)',
+      includes: 'Per extra binnenunit bovenop contract'
     }
   ];
 
@@ -191,7 +191,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
   const faqItems = [
     {
       question: 'Wat kost airco service in Limburg?',
-      answer: 'Een standaard onderhoudsbeurt kost €119 voor particulieren en €149 voor zakelijke klanten. Reparaties starten vanaf €89 voorrijkosten plus €79 per uur arbeid. Voor spoedreparaties buiten kantooruren gelden hogere tarieven. Wij hanteren transparante prijzen zonder verborgen kosten.'
+      answer: 'Een eenmalige onderhoudsbeurt kost €179. Voordeliger zijn onze onderhoudscontracten: Basis pakket €11/maand (€132/jaar) of Premium pakket €16/maand (€192/jaar). Met een contract bespaart u €47 op onderhoud en heeft u geen voorrijkosten bij storing. Storing verhelpen zonder contract: €45 voorrijkosten + arbeid.'
     },
     {
       question: 'Hoe snel kunnen jullie ter plaatse zijn?',
@@ -492,8 +492,8 @@ const AircoServiceLimburgLanding: React.FC = () => {
               <Calendar className="w-10 h-10 text-green-500 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Onderhoudscontract</h3>
               <p className="text-gray-600 mb-4">Zorgeloos genieten vanaf €11/maand</p>
-              <a href="#contact" className="text-green-500 font-semibold flex items-center gap-2 hover:text-green-600">
-                Meer Info <ArrowRight className="w-4 h-4" />
+              <a href="https://aanmelden.staycoolairco.nl/" target="_blank" rel="noopener noreferrer" className="text-green-500 font-semibold flex items-center gap-2 hover:text-green-600">
+                Direct Aanmelden <ArrowRight className="w-4 h-4" />
               </a>
             </div>
             
@@ -722,7 +722,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
             <div className="bg-red-50 rounded-xl p-6 text-center">
               <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-3">Spoedeisende Storing?</h3>
@@ -733,16 +733,27 @@ const AircoServiceLimburgLanding: React.FC = () => {
               </a>
               <p className="text-sm text-gray-500 mt-3">Snel bereikbaar</p>
             </div>
-            
-            <div className="bg-green-50 rounded-xl p-6 text-center">
-              <Calendar className="w-12 h-12 text-green-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Onderhoud Plannen?</h3>
-              <p className="text-gray-600 mb-4">Vraag online een afspraak aan</p>
-              <a href="#contactform" className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition inline-flex items-center gap-2">
-                <Mail className="w-5 h-5" />
-                Online Aanvragen
+
+            <div className="bg-blue-50 rounded-xl p-6 text-center">
+              <Calendar className="w-12 h-12 text-blue-500 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Adviesgesprek?</h3>
+              <p className="text-gray-600 mb-4">Plan gratis adviesgesprek in</p>
+              <a href="https://afspraken.staycoolairco.nl/" target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition inline-flex items-center gap-2">
+                <Calendar className="w-5 h-5" />
+                Plan Afspraak
               </a>
-              <p className="text-sm text-gray-500 mt-3">Reactie binnen 24 uur</p>
+              <p className="text-sm text-gray-500 mt-3">Direct online inplannen</p>
+            </div>
+
+            <div className="bg-green-50 rounded-xl p-6 text-center">
+              <Settings className="w-12 h-12 text-green-500 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold mb-3">Onderhoudscontract?</h3>
+              <p className="text-gray-600 mb-4">Vanaf €11/mnd all-in</p>
+              <a href="https://aanmelden.staycoolairco.nl/" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition inline-flex items-center gap-2">
+                <FileText className="w-5 h-5" />
+                Meld Je Aan
+              </a>
+              <p className="text-sm text-gray-500 mt-3">Direct aanmelden</p>
             </div>
           </div>
 
