@@ -68,10 +68,10 @@ const AircoServiceLimburgLanding: React.FC = () => {
     reparatie: {
       name: 'Reparatie Service',
       icon: Wrench,
-      description: '24/7 storingsdienst in heel Limburg',
+      description: 'Snelle storingsdienst in heel Limburg',
       price: 'vanaf €89 voorrijkosten',
       features: [
-        '24/7 bereikbaar',
+        'Binnen 24u ter plaatse',
         'Snelle response tijd',
         'Ervaren monteurs',
         'Garantie op reparaties'
@@ -142,10 +142,10 @@ const AircoServiceLimburgLanding: React.FC = () => {
       includes: 'Voorrijkosten + arbeid'
     },
     {
-      service: 'Spoedreparatie (24/7)',
+      service: 'Spoedreparatie',
       residential: '€149 + €119/uur',
       commercial: '€189 + €139/uur',
-      includes: 'Weekend/avond tarief'
+      includes: 'Weekend/avond tarief (meerprijs)'
     },
     {
       service: 'Filter vervangen',
@@ -211,7 +211,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
     },
     {
       question: 'Werken jullie in het weekend?',
-      answer: 'Ja, onze storingsdienst is 24/7 bereikbaar, ook in weekenden en op feestdagen. Voor regulier onderhoud plannen we afspraken van maandag t/m zaterdag. Spoedservice is altijd beschikbaar tegen een meerprijs.'
+      answer: 'Voor regulier onderhoud plannen we afspraken van maandag t/m zaterdag. Bij spoedreparaties in het weekend streven we naar een snelle response tijd, meestal binnen 2-4 uur. Weekend service is beschikbaar tegen een meerprijs.'
     },
     {
       question: 'Servicen jullie ook bedrijfsairco\'s?',
@@ -227,7 +227,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
     },
     {
       question: 'Kan ik online een afspraak maken?',
-      answer: 'Ja, via ons contactformulier kunt u 24/7 een serviceafspraak aanvragen. Voor spoedreparaties raden we aan te bellen op 046 202 1430 voor de snelste service.'
+      answer: 'Ja, via ons contactformulier kunt u altijd een serviceafspraak aanvragen. We reageren binnen 24 uur. Voor spoedreparaties raden we aan te bellen op 046 202 1430 voor de snelste service.'
     }
   ];
 
@@ -245,8 +245,8 @@ const AircoServiceLimburgLanding: React.FC = () => {
   const whyChooseUs = [
     {
       icon: Clock,
-      title: '24/7 Service',
-      description: 'Dag en nacht bereikbaar voor spoedreparaties'
+      title: 'Snelle Service',
+      description: 'Binnen 24u ter plaatse, ook in weekenden'
     },
     {
       icon: MapPin,
@@ -255,7 +255,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
     },
     {
       icon: Award,
-      title: '15+ jaar ervaring',
+      title: 'Specialist sinds 2021',
       description: 'Gecertificeerde monteurs met ruime ervaring'
     },
     {
@@ -277,7 +277,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
 
   const schemaData = {
     name: "StayCool Airco Service Limburg",
-    description: "24/7 Airco service in heel Limburg. Onderhoud vanaf €119, reparaties met snelle responstijd. Alle merken.",
+    description: "Airco service in heel Limburg met snelle responstijd. Onderhoud vanaf €119, binnen 24u ter plaatse. Alle merken.",
     url: "https://staycoolairco.nl/airco-service-limburg",
     telephone: "046-202-1430",
     address: {
@@ -293,11 +293,11 @@ const AircoServiceLimburgLanding: React.FC = () => {
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: [
-        "Monday", "Tuesday", "Wednesday", "Thursday", 
-        "Friday", "Saturday", "Sunday"
+        "Monday", "Tuesday", "Wednesday", "Thursday",
+        "Friday", "Saturday"
       ],
-      opens: "00:00",
-      closes: "23:59"
+      opens: "08:00",
+      closes: "18:00"
     },
     areaServed: {
       "@type": "State",
@@ -309,8 +309,8 @@ const AircoServiceLimburgLanding: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Airco Service Limburg 24/7 | Onderhoud & Reparatie | StayCool</title>
-        <meta name="description" content="Airco service in heel Limburg. ✓ 24/7 storingsdienst ✓ Onderhoud vanaf €119 ✓ Alle merken ✓ Binnen 24u ter plaatse. Bel 046 202 1430." />
+        <title>Airco Service Limburg | Onderhoud & Reparatie | StayCool</title>
+        <meta name="description" content="Airco service in heel Limburg. ✓ Snelle service ✓ Onderhoud vanaf €119 ✓ Alle merken ✓ Binnen 24u ter plaatse. Bel 046 202 1430." />
         <meta name="keywords" content="airco service limburg, airconditioning service limburg, airco onderhoud limburg, airco reparatie limburg, airco storing limburg" />
         <link rel="canonical" href="https://staycoolairco.nl/airco-service-limburg" />
       </Helmet>
@@ -331,7 +331,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <Shield className="w-5 h-5" />
-                <span className="text-sm font-medium">Gecertificeerd • 24/7 Bereikbaar • Heel Limburg</span>
+                <span className="text-sm font-medium">Gecertificeerd • Snelle Service • Heel Limburg</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Airco Service Limburg
@@ -344,8 +344,8 @@ const AircoServiceLimburgLanding: React.FC = () => {
               {/* Quick Stats */}
               <div className="grid grid-cols-3 gap-4 mb-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold">24/7</div>
-                  <div className="text-sm opacity-90">Storingsdienst</div>
+                  <div className="text-2xl font-bold">&lt;24u</div>
+                  <div className="text-sm opacity-90">Ter plaatse</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
                   <div className="text-2xl font-bold">&lt;2u</div>
@@ -692,16 +692,16 @@ const AircoServiceLimburgLanding: React.FC = () => {
           <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <div className="grid md:grid-cols-4 gap-6 text-center">
               <div>
-                <div className="text-3xl font-bold mb-2">15+</div>
-                <div className="opacity-90">Jaar ervaring</div>
+                <div className="text-3xl font-bold mb-2">4+ jaar</div>
+                <div className="opacity-90">Specialist sinds 2021</div>
               </div>
               <div>
                 <div className="text-3xl font-bold mb-2">2.500+</div>
                 <div className="opacity-90">Tevreden klanten</div>
               </div>
               <div>
-                <div className="text-3xl font-bold mb-2">24/7</div>
-                <div className="opacity-90">Bereikbaar</div>
+                <div className="text-3xl font-bold mb-2">&lt;24u</div>
+                <div className="opacity-90">Ter plaatse</div>
               </div>
               <div>
                 <div className="text-3xl font-bold mb-2">4.8/5</div>
@@ -731,7 +731,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
                 <Phone className="w-5 h-5" />
                 046 202 1430
               </a>
-              <p className="text-sm text-gray-500 mt-3">24/7 bereikbaar</p>
+              <p className="text-sm text-gray-500 mt-3">Snel bereikbaar</p>
             </div>
             
             <div className="bg-green-50 rounded-xl p-6 text-center">
@@ -861,7 +861,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
       <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">
-            24/7 Airco Service in Heel Limburg
+            Snelle Airco Service in Heel Limburg
           </h2>
           <p className="text-lg mb-8 opacity-90">
             Van spoedreparatie tot onderhoudscontract - wij staan voor u klaar
@@ -885,7 +885,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm opacity-90">
             <div className="flex items-center gap-2">
               <CheckCircle className="w-5 h-5" />
-              24/7 Bereikbaar
+              Binnen 24u Ter Plaatse
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
