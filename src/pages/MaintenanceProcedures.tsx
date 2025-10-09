@@ -146,6 +146,71 @@ export default function MaintenanceProcedures() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
+          {/* Image Gallery Section */}
+          <m.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Ons Professioneel Onderhoud in Beeld
+              </h2>
+              <p className="text-xl text-gray-600">
+                Bekijk hoe onze gecertificeerde monteurs uw airco vakkundig onderhouden
+              </p>
+            </div>
+
+            {/* Featured Image */}
+            <div className="mb-8 max-w-4xl mx-auto">
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/images/onderhoud/onderhoudairco1.webp"
+                  alt="Professioneel airco onderhoud door StayCool Airco"
+                  className="w-full h-auto"
+                  loading="eager"
+                />
+              </div>
+            </div>
+
+            {/* Image Grid */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+              <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img
+                  src="/images/onderhoud/onderhoudairco2.webp"
+                  alt="Airco onderhoud werkzaamheden"
+                  className="w-full h-48 object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img
+                  src="/images/onderhoud/onderhoudairco3.webp"
+                  alt="Professionele airco service"
+                  className="w-full h-48 object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img
+                  src="/images/onderhoud/onderhoudairco4.webp"
+                  alt="Airco reiniging en controle"
+                  className="w-full h-48 object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <img
+                  src="/images/onderhoud/onderhoudairco5.webp"
+                  alt="StayCool Airco monteur aan het werk"
+                  className="w-full h-48 object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </m.div>
+
           {/* Important Notice Section - Moved to top */}
           <m.div
             initial={{ opacity: 0, y: 20 }}

@@ -66,6 +66,7 @@ const AircoVoorSlaapkamerLanding = lazy(() => import('./pages/landing/AircoVoorS
 const AircoVoorWoonkamerLanding = lazy(() => import('./pages/landing/AircoVoorWoonkamerLanding'));
 const AircoVoorZolderLanding = lazy(() => import('./pages/landing/AircoVoorZolderLanding'));
 const KostenAircoPlaatsen = lazy(() => import('./pages/KostenAircoPlaatsen'));
+const OnderhoudLanding = lazy(() => import('./pages/OnderhoudLanding'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Comparison Pages
@@ -393,6 +394,7 @@ const App = () => {
                 <Route path="/airco-met-buitenunit" element={<AircoMetBuitenunitLanding />} />
                 <Route path="/airco-installatie" element={<AircoInstallatieLanding />} />
                 <Route path="/airco-onderhoud" element={<AircoOnderhoudLanding />} />
+                <Route path="/onderhoud-email" element={<OnderhoudLanding />} />
                 <Route path="/airco-reparatie" element={<AircoReparatieLanding />} />
                 <Route path="/wat-kost-airco-installatie" element={<WatKostAircoInstallatieLanding />} />
                 <Route path="/airco-service-limburg" element={<AircoServiceLimburgLanding />} />
