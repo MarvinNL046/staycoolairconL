@@ -15,7 +15,7 @@ export default function OnderhoudLanding() {
         <link rel="canonical" href="https://staycoolairco.nl/onderhoud-email" />
       </Helmet>
 
-      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 pt-[64px] sm:pt-[80px]">
         <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
