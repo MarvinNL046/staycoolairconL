@@ -53,7 +53,7 @@ function TextCarousel() {
   const currentHeadline = headlines[currentTextIndex];
 
   return (
-    <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mt-4 min-h-[180px] sm:min-h-[192px] lg:min-h-[144px]">
+    <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mt-4 min-h-[180px] sm:min-h-[192px] lg:min-h-[144px]">
       <span className="block">{currentHeadline.static}</span>
       <span className="text-orange-400 relative inline-block min-w-[240px] sm:min-w-[280px]">
         {displayedKeyword}
@@ -62,7 +62,7 @@ function TextCarousel() {
         )}
       </span>
       <span className="block">{currentHeadline.rest}</span>
-    </h1>
+    </h2>
   );
 }
 
