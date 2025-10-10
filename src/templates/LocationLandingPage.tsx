@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ShoppingCart, Wrench, Wind } from 'lucide-react';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -73,11 +73,8 @@ export default function LocationLandingPage({
     : '';
   
   // Create SEO-optimized title and description
-  const pageTitle = `${serviceType} ${city} | Airconditioning Specialist in ${region}`;
-  const pageDescription = `Zoekt u een airco installateur bij u in de buurt in ${city}? StayCool Airco is uw lokale specialist voor airconditioning. Meer dan ${installationCount}+ tevreden klanten in ${region}. Vraag direct een offerte aan.`;
-  
-  // Keywords based on location - including "in de buurt" variations
-  const keywords = `airco installatie ${city}, airconditioning ${city}, airco montage ${city}, klimaatbeheersing ${region}, ${city} airco specialist, ${region} airconditioning, airco installateur bij mij in de buurt ${city}, airco ${city} in de buurt, airco specialist dichtbij ${city}`;
+  const pageTitle = `Airco Installateur ${city} | Bij u in de Buurt | StayCool Airco`;
+  const pageDescription = `Erkend airco installateur ${city} ✓ Gratis advies ✓ F-gassen gecertificeerd ✓ ${installationCount}+ klanten in ${region}. Nu offerte!`;
   
   // Prepare FAQ data for schema markup
   const faqSchemaData = {
@@ -100,7 +97,6 @@ export default function LocationLandingPage({
       <MetaTags
         title={pageTitle}
         description={pageDescription}
-        keywords={keywords}
         canonicalUrl={`https://staycoolairco.nl/airco-installatie/${city.toLowerCase().replace(/\s+/g, '-')}`}
         ogImage={imageUrl}
         type="service"
@@ -148,7 +144,7 @@ export default function LocationLandingPage({
         />
       )}
       
-      <motion.div
+      <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -167,9 +163,9 @@ export default function LocationLandingPage({
           <section className="mb-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
+                <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
                   {serviceType} {city}
-                </h1>
+                </h2>
                 <p className="text-xl text-gray-600 mb-6">
                   De beste keuze voor airconditioning in {city}, {region}
                 </p>
@@ -226,7 +222,43 @@ export default function LocationLandingPage({
               </div>
             </div>
           </section>
-          
+
+          {/* Static H1 Section - Critical for SEO with beautiful sky gradient! ☁️ */}
+          <section className="py-16 mb-12 -mx-4 px-4 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl">
+            <div className="max-w-5xl mx-auto text-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+                Airco Installateur bij u in de Buurt in {city}
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-500 mt-2">
+                  Professionele Installatie in {region}
+                </span>
+              </h1>
+              <p className="text-xl sm:text-2xl text-gray-700 max-w-4xl mx-auto mb-8">
+                StayCool Airco is uw erkende airco specialist dichtbij in {city}.
+                <strong className="text-blue-600"> Meer dan {installationCount}+ tevreden klanten</strong> in {region} vertrouwen op onze service.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4 text-gray-600">
+                <div className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="font-medium">F-gassen gecertificeerd</span>
+                </div>
+                <div className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="font-medium">Gratis advies aan huis</span>
+                </div>
+                <div className="flex items-center">
+                  <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span className="font-medium">Lokale airco monteur dichtbij</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Main Content */}
           <section className="mb-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
@@ -548,7 +580,7 @@ export default function LocationLandingPage({
             </div>
           </section>
         </div>
-      </motion.div>
+      </m.div>
     </>
   );
 }

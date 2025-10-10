@@ -1,8 +1,10 @@
-import React from 'react';
-import { Fan, Wrench, ThermometerSun, ShoppingCart, Wind, Calendar } from 'lucide-react';
+import React, { useState } from 'react';
+import { Fan, Wrench, ThermometerSun, ShoppingCart, Wind, Calendar, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ServicesOptimized() {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
   const services = [
     {
       icon: Fan,
@@ -28,7 +30,7 @@ export default function ServicesOptimized() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-gradient-to-br from-sky-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -40,19 +42,50 @@ export default function ServicesOptimized() {
         </div>
 
         <div className="mt-20">
-          {/* Video container with aspect ratio */}
+          {/* Video container with lazy load - Performance Optimized */}
           <div className="relative w-full max-w-4xl mx-auto mb-20 rounded-2xl overflow-hidden shadow-2xl" style={{ paddingBottom: '56.25%' }}>
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube-nocookie.com/embed/9m-jkGgfLog?mute=1"
-              title="StayCool Airco Promotional Video"
-              frameBorder="0"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute top-0 left-0 w-full h-full"
-            ></iframe>
+            {!videoLoaded ? (
+              // YouTube thumbnail with play button overlay
+              <div
+                onClick={() => setVideoLoaded(true)}
+                className="absolute inset-0 cursor-pointer group"
+              >
+                <img
+                  src="https://img.youtube.com/vi/9m-jkGgfLog/maxresdefault.jpg"
+                  alt="StayCool Airco Promotional Video - Klik om af te spelen"
+                  className="absolute top-0 left-0 w-full h-full object-cover"
+                  loading="lazy"
+                />
+                {/* Dark overlay on hover */}
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300" />
+
+                {/* Play button */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-full p-6 shadow-2xl transform group-hover:scale-110 transition-transform duration-300">
+                    <Play className="h-12 w-12 text-white fill-white" />
+                  </div>
+                </div>
+
+                {/* Call to action text */}
+                <div className="absolute bottom-8 left-0 right-0 text-center">
+                  <span className="bg-white/90 backdrop-blur-sm text-gray-900 px-6 py-3 rounded-full font-semibold shadow-lg inline-block">
+                    🎥 Bekijk onze video - Klik om af te spelen
+                  </span>
+                </div>
+              </div>
+            ) : (
+              // Load iframe only when clicked
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube-nocookie.com/embed/9m-jkGgfLog?autoplay=1&mute=0"
+                title="StayCool Airco Promotional Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full"
+              ></iframe>
+            )}
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">

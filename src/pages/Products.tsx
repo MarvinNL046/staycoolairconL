@@ -39,9 +39,8 @@ export default function Products() {
   return (
     <div className="min-h-screen bg-gray-50">
       <MetaTags
-        title="Premium Airco Merken - Daikin, Mitsubishi & Meer | StayCool Airco"
-        description="Ontdek ons uitgebreide assortiment aan hoogwaardige airconditioning merken. Van Daikin tot Mitsubishi, wij bieden alleen de beste A-merken met professionele installatie."
-        keywords="airco merken, Daikin, Mitsubishi Electric, Samsung, LG, Tosot, Gree, airconditioning, klimaatbeheersing, Limburg"
+        title="Airco Kopen Limburg | Premium Merken | StayCool Airco"
+        description="Premium airco merken ✓ Daikin, Mitsubishi, Samsung ✓ A+++ energiezuinig ✓ Vanaf €1.498 all-in ✓ Professionele installatie. Nu offerte!"
       />
       
       <SchemaMarkup 
@@ -85,9 +84,9 @@ export default function Products() {
           <Breadcrumbs items={breadcrumbItems} className="text-white/70 mb-4" />
           
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Premium Airconditioning Merken
-            </h1>
+            </h2>
             <p className="text-xl text-blue-50 mb-8">
               Wij werken uitsluitend met A-merken voor de beste kwaliteit, betrouwbaarheid en energiezuinigheid
             </p>
@@ -101,6 +100,44 @@ export default function Products() {
                   <p className="font-semibold text-sm">{voordeel.titel}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Static H1 Section - Critical for SEO with beautiful sky gradient! ☁️ */}
+      <section className="py-16 bg-gradient-to-br from-sky-50 to-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto text-center">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+              Airco Kopen in Limburg
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-500 mt-2">
+                Premium A-Merken vanaf €1.498 All-in
+              </span>
+            </h1>
+            <p className="text-xl sm:text-2xl text-gray-700 max-w-4xl mx-auto mb-8">
+              Bij StayCool Airco vindt u alleen <strong className="text-blue-600">hoogwaardige A-merken</strong> zoals Daikin, Mitsubishi en Samsung.
+              Inclusief professionele installatie en volledige garantie.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-gray-600">
+              <div className="flex items-center">
+                <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="font-medium">A+++ Energiezuinig</span>
+              </div>
+              <div className="flex items-center">
+                <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="font-medium">Tot 10 jaar garantie</span>
+              </div>
+              <div className="flex items-center">
+                <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="font-medium">Professionele installatie</span>
+              </div>
             </div>
           </div>
         </div>
@@ -147,7 +184,7 @@ export default function Products() {
                   <div className="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
                   <LazyImage
                     src={brand.imageUrl}
-                    alt={`${brand.name} airconditioning`}
+                    alt={`${brand.name} airco kopen - Premium A-merk airconditioner StayCool Airco Limburg`}
                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                     width="100%"
                     height="100%"
@@ -169,7 +206,7 @@ export default function Products() {
                   )}
                   
                   <div className="absolute bottom-4 left-4">
-                    <h2 className="text-2xl font-bold text-white">{brand.name}</h2>
+                    <h3 className="text-2xl font-bold text-white">{brand.name}</h3>
                   </div>
                 </div>
                 <div className="p-6">

@@ -7,10 +7,10 @@ export default function OnderhoudLanding() {
   return (
     <>
       <Helmet>
-        <title>Airco Onderhoud | StayCool Airco | Professioneel & Betrouwbaar</title>
+        <title>Airco Onderhoud Limburg | Professioneel & Betrouwbaar | StayCool</title>
         <meta
           name="description"
-          content="Professioneel airco onderhoud in Limburg. Houd uw airconditioning in topconditie voor optimale prestaties en een langere levensduur."
+          content="Airco onderhoud Limburg ✓ F-gassen gecertificeerd ✓ Snelle service ✓ Voorkom storingen ✓ Langere levensduur. Nu inplannen!"
         />
         <link rel="canonical" href="https://staycoolairco.nl/onderhoud-email" />
       </Helmet>
@@ -21,9 +21,9 @@ export default function OnderhoudLanding() {
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Heading */}
           <div className="mb-8 text-center">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
               Professioneel Airco <span className="text-orange-400">Onderhoud</span>
-            </h1>
+            </h2>
             <p className="text-xl sm:text-2xl text-gray-200 max-w-2xl mx-auto">
               Houd uw airconditioning in topconditie voor optimale prestaties en een langere levensduur
             </p>
@@ -34,7 +34,7 @@ export default function OnderhoudLanding() {
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="/images/onderhoud/onderhoudairco1.webp"
-                alt="Professioneel airco onderhoud door StayCool Airco"
+                alt="Professioneel airco onderhoud Limburg - F-gassen gecertificeerd monteur StayCool Airco"
                 className="w-full h-auto"
                 loading="eager"
               />
@@ -89,7 +89,7 @@ export default function OnderhoudLanding() {
               <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                 <img
                   src="/images/onderhoud/onderhoudairco2.webp"
-                  alt="Airco onderhoud werkzaamheden"
+                  alt="Airco onderhoud werkzaamheden Limburg - Filter reiniging preventief onderhoud"
                   className="w-full h-48 object-cover"
                   loading="lazy"
                 />
@@ -97,7 +97,7 @@ export default function OnderhoudLanding() {
               <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                 <img
                   src="/images/onderhoud/onderhoudairco3.webp"
-                  alt="Professionele airco service"
+                  alt="Professionele airco service Limburg - Vakkundig onderhoud StayCool monteur"
                   className="w-full h-48 object-cover"
                   loading="lazy"
                 />
@@ -105,7 +105,7 @@ export default function OnderhoudLanding() {
               <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                 <img
                   src="/images/onderhoud/onderhoudairco4.webp"
-                  alt="Airco reiniging en controle"
+                  alt="Airco reiniging en controle Limburg - Preventief onderhoud F-gassen specialist"
                   className="w-full h-48 object-cover"
                   loading="lazy"
                 />
@@ -113,7 +113,7 @@ export default function OnderhoudLanding() {
               <div className="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
                 <img
                   src="/images/onderhoud/onderhoudairco5.webp"
-                  alt="StayCool Airco monteur aan het werk"
+                  alt="StayCool Airco monteur aan het werk - Professioneel onderhoud Limburg"
                   className="w-full h-48 object-cover"
                   loading="lazy"
                 />
@@ -160,6 +160,42 @@ export default function OnderhoudLanding() {
           <div className="text-gray-300 text-sm max-w-2xl mx-auto text-center">
             <p className="mb-2">✓ Snelle reactie binnen 24 uur</p>
             <p>✓ Professioneel advies en service in heel Limburg</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Static H1 Section - Critical for SEO with beautiful sky gradient! ☁️ */}
+      <section className="py-16 bg-gradient-to-br from-sky-50 to-blue-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+            Airco Onderhoud Limburg
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-500 mt-2">
+              Professioneel & Betrouwbaar Service
+            </span>
+          </h1>
+          <p className="text-xl sm:text-2xl text-gray-700 max-w-4xl mx-auto mb-8">
+            StayCool Airco is uw <strong className="text-blue-600">F-gassen gecertificeerde specialist</strong> voor professioneel airco onderhoud.
+            Voorkom storingen en verleng de levensduur van uw airconditioning.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 text-gray-600">
+            <div className="flex items-center">
+              <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span className="font-medium">F-gassen gecertificeerd</span>
+            </div>
+            <div className="flex items-center">
+              <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span className="font-medium">Snelle service (24-48 uur)</span>
+            </div>
+            <div className="flex items-center">
+              <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span className="font-medium">Voorkom storingen</span>
+            </div>
           </div>
         </div>
       </section>

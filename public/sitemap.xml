@@ -9,7 +9,7 @@
   </url>
   <url>
     <loc>https://staycoolairco.nl/thuisbatterijen</loc>
-    <lastmod>2025-09-26</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -33,7 +33,7 @@
   </url>
   <url>
     <loc>https://staycoolairco.nl/products</loc>
-    <lastmod>2025-10-02</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://staycoolairco.nl/onderhoud-landing</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -87,7 +87,7 @@
   </url>
   <url>
     <loc>https://staycoolairco.nl</loc>
-    <lastmod>2025-09-26</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -129,7 +129,7 @@
   </url>
   <url>
     <loc>https://staycoolairco.nl/aircos</loc>
-    <lastmod>2025-09-26</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -454,6 +454,12 @@
   <url>
     <loc>https://staycoolairco.nl/landing/airco-installatie-landing</loc>
     <lastmod>2025-06-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/examples/optimal-keyword-example</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

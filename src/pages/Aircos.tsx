@@ -76,9 +76,8 @@ export default function Aircos() {
   return (
     <div className="min-h-screen bg-gray-50">
       <MetaTags
-        title="Airco Systemen - Koelen & Verwarmen | StayCool Airco"
-        description="Ontdek onze airco systemen van Daikin, Mitsubishi en meer. Tot 60% energiebesparing, 7 jaar garantie, professionele installatie. Vraag gratis advies aan!"
-        keywords="airco, airconditioner, warmtepomp, koelen, verwarmen, Daikin, Mitsubishi, energie besparen"
+        title="Airco Kopen Limburg | Koelen & Verwarmen | StayCool Airco"
+        description="Airco kopen? ✓ Daikin, Mitsubishi, Tosot ✓ Tot 60% besparing ✓ 10 jaar garantie ✓ Koelen én verwarmen. Gratis advies!"
       />
 
       {/* Hero Section */}
@@ -88,9 +87,9 @@ export default function Aircos() {
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Premium Airco Systemen
-              </h1>
+              </h2>
               <p className="text-xl mb-6 text-sky-50">
                 Jaar rond comfort met energiezuinige warmtepompen. Koelen in de zomer, verwarmen in de winter.
               </p>
@@ -126,7 +125,7 @@ export default function Aircos() {
             <div className="relative">
               <LazyImage
                 src="/images/products/daikin-stylish-wit.webp"
-                alt="Daikin Stylish airco"
+                alt="Daikin Stylish airco kopen - Premium warmtepomp koelen en verwarmen StayCool Airco Limburg"
                 className="rounded-2xl shadow-2xl w-full"
                 width="100%"
                 height="100%"
@@ -135,6 +134,44 @@ export default function Aircos() {
                 <Wind className="h-12 w-12 text-sky-500 mb-2" />
                 <p className="font-bold">Officieel dealer</p>
                 <p className="text-sm text-gray-600">Daikin, Mitsubishi & Tosot</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Static H1 Section - Critical for SEO with beautiful sky gradient! ☁️ */}
+      <section className="py-16 bg-gradient-to-br from-sky-50 to-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto text-center">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+              Airco Kopen Limburg
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-500 mt-2">
+                Koelen én Verwarmen met Één Systeem
+              </span>
+            </h1>
+            <p className="text-xl sm:text-2xl text-gray-700 max-w-4xl mx-auto mb-8">
+              Bij StayCool Airco vindt u <strong className="text-blue-600">premium warmtepompen</strong> die zowel koelen als verwarmen.
+              Tot 60% energiebesparing en 10 jaar garantie op topmerken.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-gray-600">
+              <div className="flex items-center">
+                <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="font-medium">Tot 60% besparing</span>
+              </div>
+              <div className="flex items-center">
+                <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="font-medium">Koelen én verwarmen</span>
+              </div>
+              <div className="flex items-center">
+                <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span className="font-medium">10 jaar garantie (LG)</span>
               </div>
             </div>
           </div>
@@ -175,7 +212,7 @@ export default function Aircos() {
                 <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 p-8">
                   <img
                     src={model.afbeelding}
-                    alt={model.naam}
+                    alt={`${model.naam} airco kopen - ${model.type} warmtepomp ${model.capaciteit} StayCool Airco`}
                     className="w-full h-full object-contain"
                   />
                 </div>

@@ -61,9 +61,8 @@ export default function Thuisbatterijen() {
   return (
     <div className="min-h-screen bg-gray-50">
       <MetaTags
-        title="AlphaESS Thuisbatterijen - Energieopslag voor Thuis | StayCool Airco"
-        description="Ontdek AlphaESS thuisbatterijen voor slimme energieopslag. Tot 40% besparing, 10 jaar garantie, BTW-teruggave mogelijk. Vraag gratis advies aan!"
-        keywords="thuisbatterij, AlphaESS, energieopslag, thuisaccu, zonnepanelen batterij, energie besparen"
+        title="AlphaESS Thuisbatterijen Limburg | Energieopslag | StayCool Airco"
+        description="AlphaESS thuisbatterij ✓ Tot 40% besparing ✓ 10 jaar garantie ✓ 21% BTW terug ✓ Limburg. Gratis advies!"
       />
 
       {/* Hero Section */}
@@ -111,7 +110,7 @@ export default function Thuisbatterijen() {
             <div className="relative">
               <LazyImage
                 src="/images/products/thuisbatterij/alphaess/alpha-ess-thuisbatterij-3580x3580.webp"
-                alt="AlphaESS thuisbatterij"
+                alt="AlphaESS thuisbatterij kopen - Energieopslag met 10 jaar garantie StayCool Airco Limburg"
                 className="rounded-2xl shadow-2xl w-full"
                 width="100%"
                 height="100%"
@@ -160,7 +159,7 @@ export default function Thuisbatterijen() {
                 <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 p-8">
                   <img
                     src={model.afbeelding}
-                    alt={model.naam}
+                    alt={`${model.naam} AlphaESS thuisbatterij ${model.capaciteit} - ${model.ideaalVoor} energieopslag`}
                     className="w-full h-full object-contain"
                   />
                 </div>

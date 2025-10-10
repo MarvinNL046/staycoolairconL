@@ -26,7 +26,7 @@ export default function BrandLogos() {
 
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gradient-to-br from-sky-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <m.h2 
@@ -64,9 +64,9 @@ export default function BrandLogos() {
             >
               <div className="h-20 w-full flex items-center justify-center">
                 {brandLogos[brand.name] && !textOnlyBrands.includes(brand.name) ? (
-                  <img 
-                    src={brandLogos[brand.name]} 
-                    alt={`${brand.name} logo`} 
+                  <img
+                    src={brandLogos[brand.name]}
+                    alt={`${brand.name} airco - Officiële dealer StayCool Airco Limburg`}
                     width="160"
                     height="64"
                     className="max-h-16 max-w-[80%] object-contain"
