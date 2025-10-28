@@ -166,6 +166,76 @@ const EnergiezuinigeAircoLimburg = lazy(() => import('./pages/articles/energiezu
 const AircoVerwarmingKostenBesparing = lazy(() => import('./pages/AircoVerwarmingKostenBesparing'));
 const AircoVerwarmingVoordelen = lazy(() => import('./pages/articles/airco-verwarming-voordelen'));
 
+// SEO Landing Pages - Pillar 1: Installatie Services
+const SEOAircoInstallatieWoonkamer = lazy(() => import('./pages/seo/pillar-1-installatie-services/airco-installatie-woonkamer'));
+const SEOAircoInstallatieSlaapkamer = lazy(() => import('./pages/seo/pillar-1-installatie-services/airco-installatie-slaapkamer'));
+const SEOAircoInstallatieKantoor = lazy(() => import('./pages/seo/pillar-1-installatie-services/airco-installatie-kantoor'));
+const SEOAircoInstallatieBedrijfspand = lazy(() => import('./pages/seo/pillar-1-installatie-services/airco-installatie-bedrijfspand'));
+const SEOMultiSplitAircoInstallatie = lazy(() => import('./pages/seo/pillar-1-installatie-services/multi-split-airco-installatie'));
+
+// SEO Landing Pages - Pillar 2: Onderhoud & Service
+const SEOJaarlijksAircoOnderhoud = lazy(() => import('./pages/seo/pillar-2-onderhoud-service/jaarlijks-airco-onderhoud'));
+const SEOAircoReparatieService = lazy(() => import('./pages/seo/pillar-2-onderhoud-service/airco-reparatie-service'));
+const SEOAircoFilterReiniging = lazy(() => import('./pages/seo/pillar-2-onderhoud-service/airco-filter-reiniging'));
+const SEOAircoKoudemiddelBijvullen = lazy(() => import('./pages/seo/pillar-2-onderhoud-service/airco-koudemiddel-bijvullen'));
+const SEOAircoStoringOplossen = lazy(() => import('./pages/seo/pillar-2-onderhoud-service/airco-storing-oplossen'));
+
+// SEO Landing Pages - Pillar 3: Merken & Modellen
+const SEODaikinAircoModellen = lazy(() => import('./pages/seo/pillar-3-merken-modellen/daikin-airco-modellen'));
+const SEOMitsubishiHeavyAirco = lazy(() => import('./pages/seo/pillar-3-merken-modellen/mitsubishi-heavy-airco'));
+const SEOLGAircoSystemen = lazy(() => import('./pages/seo/pillar-3-merken-modellen/lg-airco-systemen'));
+const SEOTosotGreeAirco = lazy(() => import('./pages/seo/pillar-3-merken-modellen/tosot-gree-airco'));
+const SEOSamsungAirco = lazy(() => import('./pages/seo/pillar-3-merken-modellen/samsung-airco'));
+
+// SEO Landing Pages - Pillar 4: Energie Besparen
+const SEOVerwarmenMetAirco = lazy(() => import('./pages/seo/pillar-4-energie-besparen/verwarmen-met-airco'));
+const SEOTerugleverkostenVoorkomen = lazy(() => import('./pages/seo/pillar-4-energie-besparen/terugleverkosten-voorkomen'));
+const SEOSCOPWaardeUitgelegd = lazy(() => import('./pages/seo/pillar-4-energie-besparen/scop-waarde-uitgelegd'));
+const SEOEnergielabelAirco = lazy(() => import('./pages/seo/pillar-4-energie-besparen/energielabel-airco'));
+const SEOStroomverbruikAirco = lazy(() => import('./pages/seo/pillar-4-energie-besparen/stroomverbruik-airco'));
+
+// SEO Landing Pages - Pillar 5: AlphaESS Thuisbatterijen
+const SEOThuisbatterijSMILEB3 = lazy(() => import('./pages/seo/pillar-5-thuisbatterijen/thuisbatterij-smile-b3'));
+const SEOThuisbatterijSMILE5 = lazy(() => import('./pages/seo/pillar-5-thuisbatterijen/thuisbatterij-smile5'));
+const SEOThuisbatterijSMILET10 = lazy(() => import('./pages/seo/pillar-5-thuisbatterijen/thuisbatterij-smile-t10'));
+const SEOThuisbatterijBTWTeruggave = lazy(() => import('./pages/seo/pillar-5-thuisbatterijen/thuisbatterij-btw-teruggave'));
+const SEOThuisbatterijTerugverdientijd = lazy(() => import('./pages/seo/pillar-5-thuisbatterijen/thuisbatterij-terugverdientijd'));
+
+// SEO Landing Pages - Pillar 6: Limburg Steden
+const SEOAircoInstallatieMaastricht = lazy(() => import('./pages/seo/pillar-6-limburg-steden/airco-installatie-maastricht'));
+const SEOAircoInstallatieRoermond = lazy(() => import('./pages/seo/pillar-6-limburg-steden/airco-installatie-roermond'));
+const SEOAircoServiceHeerlen = lazy(() => import('./pages/seo/pillar-6-limburg-steden/airco-service-heerlen'));
+const SEOAircoMonteurSittardGeleen = lazy(() => import('./pages/seo/pillar-6-limburg-steden/airco-monteur-sittard-geleen'));
+const SEOAircoPlaatsenVenlo = lazy(() => import('./pages/seo/pillar-6-limburg-steden/airco-plaatsen-venlo'));
+
+// SEO Landing Pages - Pillar 7: Technische Gidsen
+const SEOAircoCapaciteitBerekenen = lazy(() => import('./pages/seo/pillar-7-technische-gidsen/airco-capaciteit-berekenen'));
+const SEOAircoBuitenunitPlaatsing = lazy(() => import('./pages/seo/pillar-7-technische-gidsen/airco-buitenunit-plaatsing'));
+const SEOAircoBinnenunitPositie = lazy(() => import('./pages/seo/pillar-7-technische-gidsen/airco-binnenunit-positie'));
+const SEOAircoLeidingwerk = lazy(() => import('./pages/seo/pillar-7-technische-gidsen/airco-leidingwerk'));
+const SEOAircoWiFiBediening = lazy(() => import('./pages/seo/pillar-7-technische-gidsen/airco-wifi-bediening'));
+
+// SEO Landing Pages - Pillar 8: Vergelijkingen
+const SEOSplitUnitVsMobieleAirco = lazy(() => import('./pages/seo/pillar-8-vergelijkingen/split-unit-vs-mobiele-airco'));
+const SEOMonoSplitVsMultiSplit = lazy(() => import('./pages/seo/pillar-8-vergelijkingen/mono-split-vs-multi-split'));
+const SEOInverterVsOnOffAirco = lazy(() => import('./pages/seo/pillar-8-vergelijkingen/inverter-vs-on-off-airco'));
+const SEODaikinVsMitsubishi = lazy(() => import('./pages/seo/pillar-8-vergelijkingen/daikin-vs-mitsubishi'));
+const SEOAircoVsVentilator = lazy(() => import('./pages/seo/pillar-8-vergelijkingen/airco-vs-ventilator'));
+
+// SEO Landing Pages - Pillar 9: Kosten & Prijzen
+const SEOKostenAircoPlaatsen = lazy(() => import('./pages/seo/pillar-9-kosten-prijzen/kosten-airco-plaatsen'));
+const SEOAircoSubsidiesLimburg = lazy(() => import('./pages/seo/pillar-9-kosten-prijzen/airco-subsidies-limburg'));
+const SEOAircoFinanciering = lazy(() => import('./pages/seo/pillar-9-kosten-prijzen/airco-financiering'));
+const SEOAircoOnderhoudKosten = lazy(() => import('./pages/seo/pillar-9-kosten-prijzen/airco-onderhoud-kosten'));
+const SEOAircoVerbruikskosten = lazy(() => import('./pages/seo/pillar-9-kosten-prijzen/airco-verbruikskosten'));
+
+// SEO Landing Pages - Pillar 10: Duurzaamheid & Milieu
+const SEOKoudemiddelR32 = lazy(() => import('./pages/seo/pillar-10-duurzaamheid/koudemiddel-r32'));
+const SEOCO2ReductieWarmtepomp = lazy(() => import('./pages/seo/pillar-10-duurzaamheid/co2-reductie-warmtepomp'));
+const SEODuurzameVerwarming = lazy(() => import('./pages/seo/pillar-10-duurzaamheid/duurzame-verwarming'));
+const SEOEnergielabelVerbetering = lazy(() => import('./pages/seo/pillar-10-duurzaamheid/energielabel-verbetering'));
+const SEOCirculaireAirco = lazy(() => import('./pages/seo/pillar-10-duurzaamheid/circulaire-airco'));
+
 // Loading fallback component with timeout and auto-reload
 const LoadingFallback = React.memo(() => (
   <LoadingFallbackWithTimeout 
@@ -439,7 +509,77 @@ const App = () => {
                 <Route path="/blog/airco-offerte-limburg" element={<AircoOfferteLimburg />} />
                 <Route path="/blog/airco-specialist-limburg" element={<AircoSpecialistLimburgBlog />} />
                 <Route path="/blog/airco-installatie-zuid-limburg" element={<AircoInstallatieZuidLimburg />} />
-                
+
+                {/* SEO Landing Pages - Pillar 1: Installatie Services */}
+                <Route path="/seo/pillar-1-installatie-services/airco-installatie-woonkamer" element={<SEOAircoInstallatieWoonkamer />} />
+                <Route path="/seo/pillar-1-installatie-services/airco-installatie-slaapkamer" element={<SEOAircoInstallatieSlaapkamer />} />
+                <Route path="/seo/pillar-1-installatie-services/airco-installatie-kantoor" element={<SEOAircoInstallatieKantoor />} />
+                <Route path="/seo/pillar-1-installatie-services/airco-installatie-bedrijfspand" element={<SEOAircoInstallatieBedrijfspand />} />
+                <Route path="/seo/pillar-1-installatie-services/multi-split-airco-installatie" element={<SEOMultiSplitAircoInstallatie />} />
+
+                {/* SEO Landing Pages - Pillar 2: Onderhoud & Service */}
+                <Route path="/seo/pillar-2-onderhoud-service/jaarlijks-airco-onderhoud" element={<SEOJaarlijksAircoOnderhoud />} />
+                <Route path="/seo/pillar-2-onderhoud-service/airco-reparatie-service" element={<SEOAircoReparatieService />} />
+                <Route path="/seo/pillar-2-onderhoud-service/airco-filter-reiniging" element={<SEOAircoFilterReiniging />} />
+                <Route path="/seo/pillar-2-onderhoud-service/airco-koudemiddel-bijvullen" element={<SEOAircoKoudemiddelBijvullen />} />
+                <Route path="/seo/pillar-2-onderhoud-service/airco-storing-oplossen" element={<SEOAircoStoringOplossen />} />
+
+                {/* SEO Landing Pages - Pillar 3: Merken & Modellen */}
+                <Route path="/seo/pillar-3-merken-modellen/daikin-airco-modellen" element={<SEODaikinAircoModellen />} />
+                <Route path="/seo/pillar-3-merken-modellen/mitsubishi-heavy-airco" element={<SEOMitsubishiHeavyAirco />} />
+                <Route path="/seo/pillar-3-merken-modellen/lg-airco-systemen" element={<SEOLGAircoSystemen />} />
+                <Route path="/seo/pillar-3-merken-modellen/tosot-gree-airco" element={<SEOTosotGreeAirco />} />
+                <Route path="/seo/pillar-3-merken-modellen/samsung-airco" element={<SEOSamsungAirco />} />
+
+                {/* SEO Landing Pages - Pillar 4: Energie Besparen */}
+                <Route path="/seo/pillar-4-energie-besparen/verwarmen-met-airco" element={<SEOVerwarmenMetAirco />} />
+                <Route path="/seo/pillar-4-energie-besparen/terugleverkosten-voorkomen" element={<SEOTerugleverkostenVoorkomen />} />
+                <Route path="/seo/pillar-4-energie-besparen/scop-waarde-uitgelegd" element={<SEOSCOPWaardeUitgelegd />} />
+                <Route path="/seo/pillar-4-energie-besparen/energielabel-airco" element={<SEOEnergielabelAirco />} />
+                <Route path="/seo/pillar-4-energie-besparen/stroomverbruik-airco" element={<SEOStroomverbruikAirco />} />
+
+                {/* SEO Landing Pages - Pillar 5: AlphaESS Thuisbatterijen */}
+                <Route path="/seo/pillar-5-thuisbatterijen/thuisbatterij-smile-b3" element={<SEOThuisbatterijSMILEB3 />} />
+                <Route path="/seo/pillar-5-thuisbatterijen/thuisbatterij-smile5" element={<SEOThuisbatterijSMILE5 />} />
+                <Route path="/seo/pillar-5-thuisbatterijen/thuisbatterij-smile-t10" element={<SEOThuisbatterijSMILET10 />} />
+                <Route path="/seo/pillar-5-thuisbatterijen/thuisbatterij-btw-teruggave" element={<SEOThuisbatterijBTWTeruggave />} />
+                <Route path="/seo/pillar-5-thuisbatterijen/thuisbatterij-terugverdientijd" element={<SEOThuisbatterijTerugverdientijd />} />
+
+                {/* SEO Landing Pages - Pillar 6: Limburg Steden */}
+                <Route path="/seo/pillar-6-limburg-steden/airco-installatie-maastricht" element={<SEOAircoInstallatieMaastricht />} />
+                <Route path="/seo/pillar-6-limburg-steden/airco-installatie-roermond" element={<SEOAircoInstallatieRoermond />} />
+                <Route path="/seo/pillar-6-limburg-steden/airco-service-heerlen" element={<SEOAircoServiceHeerlen />} />
+                <Route path="/seo/pillar-6-limburg-steden/airco-monteur-sittard-geleen" element={<SEOAircoMonteurSittardGeleen />} />
+                <Route path="/seo/pillar-6-limburg-steden/airco-plaatsen-venlo" element={<SEOAircoPlaatsenVenlo />} />
+
+                {/* SEO Landing Pages - Pillar 7: Technische Gidsen */}
+                <Route path="/seo/pillar-7-technische-gidsen/airco-capaciteit-berekenen" element={<SEOAircoCapaciteitBerekenen />} />
+                <Route path="/seo/pillar-7-technische-gidsen/airco-buitenunit-plaatsing" element={<SEOAircoBuitenunitPlaatsing />} />
+                <Route path="/seo/pillar-7-technische-gidsen/airco-binnenunit-positie" element={<SEOAircoBinnenunitPositie />} />
+                <Route path="/seo/pillar-7-technische-gidsen/airco-leidingwerk" element={<SEOAircoLeidingwerk />} />
+                <Route path="/seo/pillar-7-technische-gidsen/airco-wifi-bediening" element={<SEOAircoWiFiBediening />} />
+
+                {/* SEO Landing Pages - Pillar 8: Vergelijkingen */}
+                <Route path="/seo/pillar-8-vergelijkingen/split-unit-vs-mobiele-airco" element={<SEOSplitUnitVsMobieleAirco />} />
+                <Route path="/seo/pillar-8-vergelijkingen/mono-split-vs-multi-split" element={<SEOMonoSplitVsMultiSplit />} />
+                <Route path="/seo/pillar-8-vergelijkingen/inverter-vs-on-off-airco" element={<SEOInverterVsOnOffAirco />} />
+                <Route path="/seo/pillar-8-vergelijkingen/daikin-vs-mitsubishi" element={<SEODaikinVsMitsubishi />} />
+                <Route path="/seo/pillar-8-vergelijkingen/airco-vs-ventilator" element={<SEOAircoVsVentilator />} />
+
+                {/* SEO Landing Pages - Pillar 9: Kosten & Prijzen */}
+                <Route path="/seo/pillar-9-kosten-prijzen/kosten-airco-plaatsen" element={<SEOKostenAircoPlaatsen />} />
+                <Route path="/seo/pillar-9-kosten-prijzen/airco-subsidies-limburg" element={<SEOAircoSubsidiesLimburg />} />
+                <Route path="/seo/pillar-9-kosten-prijzen/airco-financiering" element={<SEOAircoFinanciering />} />
+                <Route path="/seo/pillar-9-kosten-prijzen/airco-onderhoud-kosten" element={<SEOAircoOnderhoudKosten />} />
+                <Route path="/seo/pillar-9-kosten-prijzen/airco-verbruikskosten" element={<SEOAircoVerbruikskosten />} />
+
+                {/* SEO Landing Pages - Pillar 10: Duurzaamheid & Milieu */}
+                <Route path="/seo/pillar-10-duurzaamheid/koudemiddel-r32" element={<SEOKoudemiddelR32 />} />
+                <Route path="/seo/pillar-10-duurzaamheid/co2-reductie-warmtepomp" element={<SEOCO2ReductieWarmtepomp />} />
+                <Route path="/seo/pillar-10-duurzaamheid/duurzame-verwarming" element={<SEODuurzameVerwarming />} />
+                <Route path="/seo/pillar-10-duurzaamheid/energielabel-verbetering" element={<SEOEnergielabelVerbetering />} />
+                <Route path="/seo/pillar-10-duurzaamheid/circulaire-airco" element={<SEOCirculaireAirco />} />
+
                 {/* 404 Page - Catch all */}
                 <Route path="*" element={<NotFound />} />
               </Routes>

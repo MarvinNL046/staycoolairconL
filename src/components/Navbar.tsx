@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Calendar, Battery, Wind } from 'lucide-react';
+import { Menu, X, Phone, Calendar, Battery, Wind, ChevronDown } from 'lucide-react';
 import Logo from './Logo';
+import { seoNavigation } from '../data/seoNavigation';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -123,12 +124,61 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-            <Link 
-              to="/onderhoud" 
+            <Link
+              to="/onderhoud"
               className={`transition-colors duration-300 ${getLinkColor()}`}
             >
               Onderhoud
             </Link>
+            <div className="relative group">
+              <button
+                className={`flex items-center transition-colors duration-300 ${getLinkColor()}`}
+              >
+                Info
+                <ChevronDown className="h-4 w-4 ml-1" />
+              </button>
+              <div className="absolute left-0 mt-2 w-[800px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-lg shadow-xl z-50">
+                <div className="grid grid-cols-3 gap-6 p-6">
+                  {seoNavigation.slice(0, 9).map((pillar) => (
+                    <div key={pillar.slug}>
+                      <h4 className="font-semibold text-gray-900 mb-2 text-sm">{pillar.name}</h4>
+                      <ul className="space-y-1">
+                        {pillar.subpillars.map((subpillar) => (
+                          <li key={subpillar.slug}>
+                            <Link
+                              to={subpillar.path}
+                              className="block text-xs text-gray-600 hover:text-orange-500 py-1"
+                            >
+                              {subpillar.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+                {/* Show 10th pillar separately if needed */}
+                <div className="border-t border-gray-100 p-4 bg-gray-50">
+                  <div className="grid grid-cols-3 gap-4">
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2 text-sm">{seoNavigation[9].name}</h4>
+                      <ul className="space-y-1">
+                        {seoNavigation[9].subpillars.map((subpillar) => (
+                          <li key={subpillar.slug}>
+                            <Link
+                              to={subpillar.path}
+                              className="block text-xs text-gray-600 hover:text-orange-500 py-1"
+                            >
+                              {subpillar.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <Link 
               to="/aircos" 
               className="inline-flex items-center px-3 py-1.5 bg-sky-500 text-white font-medium rounded-md hover:bg-sky-600 transition-colors duration-300"

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Calendar } from 'lucide-react';
 import Logo from './Logo';
+import { seoNavigation } from '../data/seoNavigation';
 
 export default function Footer() {
   return (
@@ -203,6 +204,30 @@ export default function Footer() {
                 Offerte aanvragen
               </Link>
             </div>
+          </div>
+        </div>
+
+        {/* SEO Navigation Section */}
+        <div className="mt-12 border-t border-gray-800 pt-8">
+          <h3 className="text-white text-lg font-semibold mb-6">Onze Diensten & Informatie</h3>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+            {seoNavigation.map((pillar) => (
+              <div key={pillar.slug}>
+                <h4 className="text-white text-sm font-semibold mb-3">{pillar.name}</h4>
+                <ul className="space-y-1.5">
+                  {pillar.subpillars.map((subpillar) => (
+                    <li key={subpillar.slug}>
+                      <Link
+                        to={subpillar.path}
+                        className="text-gray-400 hover:text-white text-xs"
+                      >
+                        {subpillar.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
         <div className="mt-8 border-t border-gray-800 pt-8">
