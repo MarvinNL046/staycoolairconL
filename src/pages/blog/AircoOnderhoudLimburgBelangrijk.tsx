@@ -148,7 +148,7 @@ export default function AircoOnderhoudLimburgBelangrijk() {
               <div className="not-prose bg-orange-50 rounded-lg p-6 my-8">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Actie: Gratis onderhoud</h3>
                 <p className="text-gray-700 mb-4">
-                  Bereid je airco voor op de warme maanden. Bij aanschaf van een complete airco installatie: gratis onderhoudsbeurt t.w.v. €149,-!
+                  Bereid je airco voor op de warme maanden. Bij aanschaf van een complete airco installatie: gratis onderhoudsbeurt t.w.v. €179,-!
                 </p>
                 <Link 
                   to="/contact" 

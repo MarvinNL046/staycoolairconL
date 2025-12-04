@@ -277,7 +277,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
 
   const schemaData = {
     name: "StayCool Airco Service Limburg",
-    description: "Airco service in heel Limburg met snelle responstijd. Onderhoud vanaf €119, binnen 24u ter plaatse. Alle merken.",
+    description: "Airco service in heel Limburg met snelle responstijd. Onderhoudscontract vanaf €11/maand, binnen 24u ter plaatse. Alle merken.",
     url: "https://staycoolairco.nl/airco-service-limburg",
     telephone: "046-202-1430",
     address: {
@@ -310,7 +310,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
     <>
       <Helmet>
         <title>Airco Service Limburg | Onderhoud & Reparatie | StayCool</title>
-        <meta name="description" content="Airco service in heel Limburg. ✓ Snelle service ✓ Onderhoud vanaf €119 ✓ Alle merken ✓ Binnen 24u ter plaatse. Bel 046 202 1430." />
+        <meta name="description" content="Airco service in heel Limburg. ✓ Snelle service ✓ Onderhoudscontract vanaf €11/maand ✓ Alle merken ✓ Binnen 24u ter plaatse. Bel 046 202 1430." />
         <meta name="keywords" content="airco service limburg, airconditioning service limburg, airco onderhoud limburg, airco reparatie limburg, airco storing limburg" />
         <link rel="canonical" href="https://staycoolairco.nl/airco-service-limburg" />
       </Helmet>
@@ -352,8 +352,8 @@ const AircoServiceLimburgLanding: React.FC = () => {
                   <div className="text-sm opacity-90">Response tijd</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold">€119</div>
-                  <div className="text-sm opacity-90">Onderhoud</div>
+                  <div className="text-2xl font-bold">€11/mnd</div>
+                  <div className="text-sm opacity-90">Contract</div>
                 </div>
               </div>
 

@@ -162,7 +162,7 @@ const WatKostAircoInstallatieLanding: React.FC = () => {
     },
     {
       question: 'Hoeveel kost het onderhoud van een airco?',
-      answer: 'Jaarlijks onderhoud kost €119 - €169 per unit. Dit omvat reiniging filters, controle koelvloeistof, desinfectie en algemene inspectie. Een onderhoudscontract is vaak voordeliger en garandeert optimale werking.'
+      answer: 'Een losse onderhoudsbeurt kost €179. Voordeliger is een onderhoudscontract: Standaard €11/maand (€132/jaar) of Premium €16/maand (€192/jaar). Dit omvat reiniging filters, controle koelvloeistof, desinfectie en algemene inspectie. Met een contract krijgt u ook voorrang bij storingen.'
     },
     {
       question: 'Wat kost een multi-split airco installatie?',
@@ -201,8 +201,8 @@ const WatKostAircoInstallatieLanding: React.FC = () => {
     },
     {
       feature: 'Onderhoudskosten/jaar',
-      split: '€119',
-      multi: '€169 - €249',
+      split: '€132 (contract)',
+      multi: '€179 - €249',
       mobiel: '€49'
     },
     {

@@ -155,7 +155,7 @@ export default function AircoSpecialistLimburg() {
               <div className="not-prose bg-orange-50 rounded-lg p-6 my-8">
                 <h3 className="text-xl font-bold text-gray-800 mb-4">Actie: Gratis onderhoud</h3>
                 <p className="text-gray-700 mb-4">
-                  Profiteer nu van onze actie: gratis onderhoudsbeurt t.w.v. €149,- bij aanschaf van een complete airco installatie. Geldig in heel Limburg en bij installatie voor 1 juli 2025.
+                  Profiteer nu van onze actie: gratis onderhoudsbeurt t.w.v. €179,- bij aanschaf van een complete airco installatie. Geldig in heel Limburg en bij installatie voor 1 juli 2025.
                 </p>
                 <Link 
                   to="/contact" 

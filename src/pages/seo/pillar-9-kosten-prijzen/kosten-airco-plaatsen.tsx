@@ -159,7 +159,7 @@ const KostenAircoPlaatsen: React.FC = () => {
     },
     {
       question: "Wat zijn de jaarlijkse kosten na installatie?",
-      answer: "Na installatie heeft u: onderhoudskosten (€75-€125 per jaar voor jaarlijkse servicebeurt), elektriciteitskosten (€150-€400 per jaar afhankelijk van gebruik, sterk gereduceerd door warmtepompfunctie), en eventuele reparaties (gedekt door garantie eerste 5-10 jaar). Met een onderhoudscontract bij ons voorkomt u storingen en blijft de garantie geldig. Totale jaarlijkse kosten zijn €225-€525, ruimschoots gecompenseerd door energiebesparing van €400-€800."
+      answer: "Na installatie heeft u: onderhoudscontract (€132-€192 per jaar voor Standaard of Premium pakket), elektriciteitskosten (€150-€400 per jaar afhankelijk van gebruik, sterk gereduceerd door warmtepompfunctie), en eventuele reparaties (gedekt door garantie eerste 5-10 jaar). Met een onderhoudscontract vanaf €11/maand voorkomt u storingen en blijft de garantie geldig. Totale jaarlijkse kosten zijn €282-€592, ruimschoots gecompenseerd door energiebesparing van €400-€800."
     }
   ];
 

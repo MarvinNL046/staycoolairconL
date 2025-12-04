@@ -67,7 +67,7 @@ const JaarlijksAircoOnderhoud: React.FC = () => {
     },
     {
       question: "Wat kost een jaarlijks onderhoudscontract?",
-      answer: "De kosten voor een jaarlijks onderhoudscontract variëren afhankelijk van het type airco, het aantal units en de complexiteit van het systeem. Voor een standaard split-unit systeem beginnen contracten vanaf €149,- per jaar inclusief één uitgebreide onderhoudsbeurt. Multi-split systemen en grotere installaties hebben aangepaste tarieven. Vraag een vrijblijvende offerte aan voor een precies prijsopgave."
+      answer: "Wij bieden twee onderhoudscontracten: Standaard €11/maand (€132/jaar) en Premium €16/maand (€192/jaar). Beide inclusief jaarlijkse onderhoudsbeurt, voorrang bij storingen en geen voorrijkosten. Premium biedt ook 15% korting op reparaties en een vervangend toestel bij langdurige reparatie. Een losse onderhoudsbeurt zonder contract kost €179."
     },
     {
       question: "Wat houdt een onderhoudsbeurt precies in?",
