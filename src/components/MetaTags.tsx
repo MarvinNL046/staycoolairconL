@@ -45,11 +45,12 @@ interface MetaTagsProps {
   };
   serviceType?: string;
   speakableContent?: string[];
+  noIndex?: boolean;
 }
 
-export default function MetaTags({ 
-  title, 
-  description, 
+export default function MetaTags({
+  title,
+  description,
   keywords,
   canonicalUrl = "https://staycoolairco.nl",
   ogImage = "https://staycoolairco.nl/og-image.jpg",
@@ -62,7 +63,8 @@ export default function MetaTags({
   productInfo,
   locationInfo,
   serviceType,
-  speakableContent = []
+  speakableContent = [],
+  noIndex = false
 }: MetaTagsProps) {
   // Enhance title with location information for better local SEO
   let enhancedTitle = title;
@@ -274,6 +276,13 @@ export default function MetaTags({
       <meta name="description" content={enhancedDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={canonicalUrl} />
+
+      {/* Robots directive - noindex but follow links for SEO link juice */}
+      {noIndex ? (
+        <meta name="robots" content="noindex, follow" />
+      ) : (
+        <meta name="robots" content="index, follow" />
+      )}
 
       {/* Language */}
       <meta property="og:locale" content="nl_NL" />
