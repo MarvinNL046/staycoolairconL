@@ -350,12 +350,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/examples\-optimal-keyword-example</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://staycoolairco.nl/landing\-wat-kost-airco-installatie-landing</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -452,6 +446,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://staycoolairco.nl/manuals\-tosot-handleiding</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/manuals\-l-g-handleiding</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/examples\-optimal-keyword-example</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://staycoolairco.nl/comparisons\-tosot-vs-l-g</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -513,18 +525,6 @@
   </url>
   <url>
     <loc>https://staycoolairco.nl/blog\-airco-in-de-winter</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/manuals\-tosot-handleiding</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/manuals\-l-g-handleiding</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -908,66 +908,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/seo\pillar-8-vergelijkingen\split-unit-vs-mobiele-airco</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-8-vergelijkingen\mono-split-vs-multi-split</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-8-vergelijkingen\inverter-vs-on-off-airco</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-8-vergelijkingen\daikin-vs-mitsubishi</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-8-vergelijkingen\airco-vs-ventilator</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-7-technische-gidsen\airco-wifi-bediening</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-7-technische-gidsen\airco-leidingwerk</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-7-technische-gidsen\airco-capaciteit-berekenen</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-7-technische-gidsen\airco-buitenunit-plaatsing</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-7-technische-gidsen\airco-binnenunit-positie</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://staycoolairco.nl/seo\pillar-5-thuisbatterijen\thuisbatterij-zonnepanelen</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -1196,6 +1136,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://staycoolairco.nl/seo\pillar-8-vergelijkingen\split-unit-vs-mobiele-airco</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-8-vergelijkingen\mono-split-vs-multi-split</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-8-vergelijkingen\inverter-vs-on-off-airco</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-8-vergelijkingen\daikin-vs-mitsubishi</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-8-vergelijkingen\airco-vs-ventilator</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://staycoolairco.nl/seo\pillar-4-energie-besparen\verwarmen-met-airco</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -1221,6 +1191,66 @@
   </url>
   <url>
     <loc>https://staycoolairco.nl/seo\pillar-4-energie-besparen\energielabel-airco</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-7-technische-gidsen\airco-wifi-bediening</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-7-technische-gidsen\airco-leidingwerk</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-7-technische-gidsen\airco-capaciteit-berekenen</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-7-technische-gidsen\airco-buitenunit-plaatsing</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-7-technische-gidsen\airco-binnenunit-positie</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-3-merken-modellen\tosot-gree-airco</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-3-merken-modellen\samsung-airco</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-3-merken-modellen\mitsubishi-heavy-airco</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-3-merken-modellen\lg-airco-systemen</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-3-merken-modellen\daikin-airco-modellen</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1274,31 +1304,31 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/seo\pillar-3-merken-modellen\tosot-gree-airco</loc>
+    <loc>https://staycoolairco.nl/seo\pillar-10-duurzaamheid\koudemiddel-r32</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/seo\pillar-3-merken-modellen\samsung-airco</loc>
+    <loc>https://staycoolairco.nl/seo\pillar-10-duurzaamheid\energielabel-verbetering</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/seo\pillar-3-merken-modellen\mitsubishi-heavy-airco</loc>
+    <loc>https://staycoolairco.nl/seo\pillar-10-duurzaamheid\duurzame-verwarming</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/seo\pillar-3-merken-modellen\lg-airco-systemen</loc>
+    <loc>https://staycoolairco.nl/seo\pillar-10-duurzaamheid\co2-reductie-warmtepomp</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/seo\pillar-3-merken-modellen\daikin-airco-modellen</loc>
+    <loc>https://staycoolairco.nl/seo\pillar-10-duurzaamheid\circulaire-airco</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1329,36 +1359,6 @@
   </url>
   <url>
     <loc>https://staycoolairco.nl/seo\pillar-2-onderhoud-service\airco-filter-reiniging</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-10-duurzaamheid\koudemiddel-r32</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-10-duurzaamheid\energielabel-verbetering</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-10-duurzaamheid\duurzame-verwarming</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-10-duurzaamheid\co2-reductie-warmtepomp</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-10-duurzaamheid\circulaire-airco</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1407,42 +1407,6 @@
   </url>
   <url>
     <loc>https://staycoolairco.nl/seo\pillar-9-kosten-prijzen\noindex\airco-investering-terugverdienen</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-8-vergelijkingen\noindex\split-vs-mobiel-wat-kiezen</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-8-vergelijkingen\noindex\airco-vergelijking-checklist</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-8-vergelijkingen\noindex\airco-types-vergelijken-gids</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-7-technische-gidsen\noindex\airco-technische-specificaties-uitleg</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-7-technische-gidsen\noindex\airco-installatie-technische-eisen</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://staycoolairco.nl/seo\pillar-7-technische-gidsen\noindex\airco-capaciteit-berekening-tool</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1538,19 +1502,37 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/seo\pillar-3-merken-modellen\noindex\airco-modellen-overzicht-2025</loc>
+    <loc>https://staycoolairco.nl/seo\pillar-8-vergelijkingen\noindex\split-vs-mobiel-wat-kiezen</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-8-vergelijkingen\noindex\airco-vergelijking-checklist</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-8-vergelijkingen\noindex\airco-types-vergelijken-gids</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-7-technische-gidsen\noindex\airco-technische-specificaties-uitleg</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/seo\pillar-3-merken-modellen\noindex\airco-merken-keuzehulp</loc>
+    <loc>https://staycoolairco.nl/seo\pillar-7-technische-gidsen\noindex\airco-installatie-technische-eisen</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://staycoolairco.nl/seo\pillar-3-merken-modellen\noindex\airco-merk-vergelijking-tips</loc>
+    <loc>https://staycoolairco.nl/seo\pillar-7-technische-gidsen\noindex\airco-capaciteit-berekening-tool</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -1569,6 +1551,24 @@
   </url>
   <url>
     <loc>https://staycoolairco.nl/seo\pillar-3-energiebesparing\noindex\airco-energielabel-uitgelegd</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-3-merken-modellen\noindex\airco-modellen-overzicht-2025</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-3-merken-modellen\noindex\airco-merken-keuzehulp</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://staycoolairco.nl/seo\pillar-3-merken-modellen\noindex\airco-merk-vergelijking-tips</loc>
     <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

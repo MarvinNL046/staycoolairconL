@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Battery, MapPin, ArrowRight, Phone, CheckCircle, Euro, Zap, Home, Building, TrendingDown, Shield, Clock } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
+import HowToSchema from '../../../../components/SEO/HowToSchema';
 
 const ThuisbatterijGidsLimburg = () => {
   const breadcrumbItems = [
@@ -81,6 +82,15 @@ const ThuisbatterijGidsLimburg = () => {
         canonicalUrl="https://staycoolairco.nl/seo/pillar-5-thuisbatterijen/noindex/thuisbatterij-gids-limburg"
         noIndex={true}
         locationInfo={{ city: 'Limburg', region: 'Limburg' }}
+      />
+      <HowToSchema
+        name="Thuisbatterij Installeren in Limburg: 4 Stappen"
+        description="Van energieverbruik analyseren tot genieten van besparing: het complete proces om een thuisbatterij te laten installeren in Limburg."
+        totalTime="PT336H"
+        steps={stappen.map(stap => ({
+          name: stap.titel,
+          text: stap.beschrijving
+        }))}
       />
       <Breadcrumbs items={breadcrumbItems} />
 

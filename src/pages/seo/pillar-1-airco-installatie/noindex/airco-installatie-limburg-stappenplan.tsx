@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, Clock, Wrench, Phone, ArrowRight, Calendar, Home, FileText, ClipboardCheck, Users, Zap, ThermometerSun, Shield, AlertCircle } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
+import HowToSchema from '../../../../components/SEO/HowToSchema';
 
 const AircoInstallatieLimburgStappenplanPage = () => {
   const breadcrumbItems = [
@@ -273,6 +274,15 @@ const AircoInstallatieLimburgStappenplanPage = () => {
         description="Complete gids voor airco installatie in Limburg. Ontdek alle stappen van eerste contact tot werkende airconditioning. Inclusief tijdlijn en voorbereiding tips."
         canonicalUrl="https://staycoolairco.nl/airco-installatie/noindex/stappenplan-limburg"
         noIndex={true}
+      />
+      <HowToSchema
+        name="Airco Installatie Stappenplan Limburg"
+        description="Complete gids voor airco installatie in Limburg: van eerste contact tot werkende airconditioning in 10 stappen. Ontdek alle stappen, tijdlijn en voorbereiding tips."
+        totalTime="PT840H"
+        steps={stappen.map(stap => ({
+          name: stap.titel,
+          text: stap.beschrijving
+        }))}
       />
       <Breadcrumbs items={breadcrumbItems} />
 

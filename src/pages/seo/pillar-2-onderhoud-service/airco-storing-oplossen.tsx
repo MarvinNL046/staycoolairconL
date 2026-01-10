@@ -5,6 +5,7 @@ import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
+import HowToSchema from '../../../components/SEO/HowToSchema';
 import LazyImage from '../../../components/LazyImage';
 
 const AircoStoringOplossen: React.FC = () => {
@@ -242,6 +243,16 @@ const AircoStoringOplossen: React.FC = () => {
       />
 
       <FAQSchema faqs={faqItems} />
+
+      <HowToSchema
+        name="Airco Storing Diagnosticeren: 8-Stappen Methode"
+        description="Systematisch diagnoseproces voor airco storingen. Van symptomen inventariseren tot herstel en verificatie."
+        totalTime="PT2H"
+        steps={diagnosestappen.map(stap => ({
+          name: stap.stap,
+          text: stap.beschrijving
+        }))}
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-sky-400 to-sky-500 text-white">

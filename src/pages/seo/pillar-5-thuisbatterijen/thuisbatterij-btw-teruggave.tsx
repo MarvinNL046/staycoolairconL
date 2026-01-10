@@ -5,6 +5,7 @@ import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
+import HowToSchema from '../../../components/SEO/HowToSchema';
 
 const ThuisbatterijBtwTeruggavePage = () => {
   const breadcrumbItems = [
@@ -181,6 +182,16 @@ const ThuisbatterijBtwTeruggavePage = () => {
       />
 
       <FAQSchema faqs={faqs} />
+
+      <HowToSchema
+        name="BTW-Vrijstelling Thuisbatterij: 5 Stappen Procedure"
+        description="Het complete proces om te profiteren van 0% BTW op uw thuisbatterij: van offerte aanvragen tot BTW-correcte factuur ontvangen."
+        totalTime="PT168H"
+        steps={steps.map(step => ({
+          name: step.title,
+          text: step.description
+        }))}
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-yellow-400 to-yellow-500 text-gray-900">

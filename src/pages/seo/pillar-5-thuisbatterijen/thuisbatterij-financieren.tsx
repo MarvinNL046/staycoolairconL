@@ -5,6 +5,7 @@ import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
+import HowToSchema from '../../../components/SEO/HowToSchema';
 
 const ThuisbatterijFinancierenPage = () => {
   const breadcrumbItems = [
@@ -347,6 +348,16 @@ const ThuisbatterijFinancierenPage = () => {
       />
 
       <FAQSchema faqs={faqs} />
+
+      <HowToSchema
+        name="Thuisbatterij Financieren: 6 Stappen naar Uw Gefinancierde Batterij"
+        description="Van gratis adviesgesprek tot subsidies ontvangen: het complete proces om uw thuisbatterij te financieren."
+        totalTime="PT720H"
+        steps={steps.map(step => ({
+          name: step.title,
+          text: step.description
+        }))}
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-yellow-400 to-yellow-500 text-gray-900">

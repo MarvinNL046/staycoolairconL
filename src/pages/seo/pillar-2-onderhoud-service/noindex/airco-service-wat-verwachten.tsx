@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Shield, Clock, Phone, CheckCircle, Wrench, FileText, AlertCircle, ThermometerSun, Droplets, Zap, Filter, Search } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
+import HowToSchema from '../../../../components/SEO/HowToSchema';
 
 const AircoServiceWatVerwachtenPage = () => {
   const breadcrumbItems = [
@@ -141,6 +142,15 @@ const AircoServiceWatVerwachtenPage = () => {
         description="Ontdek stap voor stap wat er gebeurt tijdens een airco servicebeurt in Limburg. Van inspectie tot testen - transparant proces door StayCool vakspecialisten."
         canonicalUrl="https://staycoolairco.nl/airco-service/noindex/wat-verwachten"
         noIndex={true}
+      />
+      <HowToSchema
+        name="Airco Servicebeurt: Het Complete Proces in 6 Stappen"
+        description="Transparant overzicht van alle stappen tijdens een professionele airco servicebeurt: van aankomst en inspectie tot rapportage en advies."
+        totalTime="PT90M"
+        steps={servicestappen.map(stap => ({
+          name: stap.titel,
+          text: stap.activiteiten.join('. ')
+        }))}
       />
       <Breadcrumbs items={breadcrumbItems} />
 

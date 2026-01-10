@@ -5,6 +5,7 @@ import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
+import HowToSchema from '../../../components/SEO/HowToSchema';
 import LazyImage from '../../../components/LazyImage';
 
 const AircoFilterReiniging: React.FC = () => {
@@ -164,6 +165,18 @@ const AircoFilterReiniging: React.FC = () => {
       />
 
       <FAQSchema faqs={faqItems} />
+
+      <HowToSchema
+        name="Airco Filter Reinigen: Stap-voor-Stap Handleiding"
+        description="Leer hoe u zelf uw airco filters veilig en effectief reinigt. Dit bespaart energie en verbetert de luchtkwaliteit in uw woning."
+        totalTime="PT30M"
+        steps={reinigingsstappen.map((stap, index) => ({
+          name: `Stap ${index + 1}`,
+          text: stap
+        }))}
+        tools={['Stofzuiger', 'Schone doek']}
+        supplies={['Lauw water', 'Milde zeep (optioneel)']}
+      />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-sky-400 to-sky-500 text-white">
