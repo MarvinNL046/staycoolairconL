@@ -189,7 +189,7 @@ const AircoBuitenunitPlaatsing = () => {
     <>
       <MetaTags
         title="Airco Buitenunit Plaatsing Limburg | Optimale Locatie Kiezen | StayCool Airco"
-        description="Airco buitenunit plaatsing ✓ Optimale locatie voor prestaties ✓ Voorkom geluidsoverlast ✓ Professionele installatie ✓ F-gassen gecertificeerd. Gratis advies!"
+        description="Airco buitenunit plaatsing ✓ Optimale locatie ✓ Voorkom geluidsoverlast ✓ F-gassen gecertificeerd ✓ Gratis advies Limburg!"
       />
 
       <SchemaMarkup

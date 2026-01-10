@@ -7,7 +7,7 @@ export default function MilieuvriendelijkeKoelingTips() {
     <>
       <MetaTags
         title="15 Tips voor Milieuvriendelijke Koeling | StayCool Airco"
-        description="Praktische tips om uw airconditioning milieuvriendelijker te gebruiken. Bespaar energie, verlaag kosten en verklein uw ecologische voetafdruk met slimme koeltechnieken."
+        description="Praktische tips voor milieuvriendelijke airco. Bespaar energie, verlaag kosten en verklein uw ecologische voetafdruk."
         noIndex={true}
       />
 

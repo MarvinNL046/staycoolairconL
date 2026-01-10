@@ -116,7 +116,7 @@ const AircoServiceHeerlen = () => {
     <>
       <MetaTags
         title="Airco Service Heerlen | Onderhoud & Reparatie Parkstad Limburg | StayCool"
-        description="Airco service Heerlen ✓ 24/7 storing service ✓ Jaarlijks onderhoud ✓ Alle merken ✓ F-gassen gecertificeerd ✓ Parkstad Limburg. Binnen 24 uur ter plaatse!"
+        description="Airco service Heerlen ✓ 24/7 storingsdienst ✓ Jaarlijks onderhoud ✓ Alle merken ✓ F-gassen gecertificeerd ✓ Binnen 24 uur Limburg!"
       />
 
       <SchemaMarkup

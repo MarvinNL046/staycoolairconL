@@ -36,9 +36,9 @@ export default function AircoOnderhoudLanding() {
     <>
       <Helmet>
         <title>Airco Onderhoud | Vakkundig & Betaalbaar | StayCool Airco</title>
-        <meta 
-          name="description" 
-          content="Professioneel airco onderhoud door gecertificeerde monteurs. Verleng de levensduur van uw airco, bespaar energie en voorkom dure reparaties met regelmatig onderhoud."
+        <meta
+          name="description"
+          content="Airco onderhoud: F-gassen gecertificeerd | Vanaf 11/mnd contract | Verleng levensduur | Voorkom storingen. Limburg. Gratis advies!"
         />
         <meta 
           name="keywords" 

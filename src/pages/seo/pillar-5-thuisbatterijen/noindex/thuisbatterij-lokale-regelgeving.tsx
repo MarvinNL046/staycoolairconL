@@ -160,7 +160,7 @@ const ThuisbatterijLokaleRegelgeving = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Thuisbatterij Regelgeving Limburg - Vergunning & Voorschriften 2026"
-        description="Alles over regelgeving voor thuisbatterijen in Limburg. Geen vergunning nodig, maar wel NEN 1010 en melding bij Enexis verplicht. Complete gids per gemeente."
+        description="Regelgeving thuisbatterijen in Limburg. Geen vergunning nodig, wel NEN 1010 en melding bij Enexis verplicht. Per gemeente."
         canonicalUrl="https://staycoolairco.nl/seo/pillar-5-thuisbatterijen/noindex/thuisbatterij-lokale-regelgeving"
         noIndex={true}
         locationInfo={{ city: 'Limburg', region: 'Limburg' }}

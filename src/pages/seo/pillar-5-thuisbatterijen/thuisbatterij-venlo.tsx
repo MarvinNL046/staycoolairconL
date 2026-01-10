@@ -88,7 +88,7 @@ const ThuisbatterijVenloPage = () => {
     <>
       <MetaTags
         title="Thuisbatterij Venlo | AlphaESS Installatie & Service | 0% BTW | StayCool Airco"
-        description="Thuisbatterij installatie Venlo ✓ AlphaESS dealer ✓ Blerick, Tegelen, Hagerhof ✓ Ook Deutsch möglich ✓ 0% BTW ✓ 10 jaar garantie ✓ Installatie in 1 dag ✓ Lokale service"
+        description="Thuisbatterij Venlo ✓ AlphaESS dealer ✓ 0% BTW ✓ 10 jaar garantie ✓ Installatie in 1 dag ✓ Lokale service Limburg"
       />
 
       <SchemaMarkup

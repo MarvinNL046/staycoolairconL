@@ -36,9 +36,9 @@ export default function MobieleAircoLanding() {
     <>
       <Helmet>
         <title>Mobiele Airco | LG & Tosot | Direct Verkoeling | StayCool Airco</title>
-        <meta 
-          name="description" 
-          content="Hoogwaardige mobiele airco's van LG en Tosot - direct verkoeling zonder vaste installatie. Energiezuinige A+ modellen met wifi-besturing en tot 58m² bereik. Inclusief gratis verzending."
+        <meta
+          name="description"
+          content="Mobiele airco LG & Tosot: Direct verkoeling | Geen installatie | A+ energielabel | Tot 58m² | Wifi-besturing. Gratis verzending!"
         />
         <meta 
           name="keywords" 

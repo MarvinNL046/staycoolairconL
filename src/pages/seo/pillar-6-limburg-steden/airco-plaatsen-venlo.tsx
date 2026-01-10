@@ -116,7 +116,7 @@ const AircoPlaatsenVenlo = () => {
     <>
       <MetaTags
         title="Airco Plaatsen Venlo | Grensstreek Specialist | StayCool Airco"
-        description="Airco plaatsen Venlo ✓ F-gassen gecertificeerd ✓ Ook service in Duitsland ✓ Vanaf €1.800 ✓ 10 jaar garantie ✓ Centrum, Blerick, Tegelen. Gratis offerte!"
+        description="Airco plaatsen Venlo ✓ F-gassen gecertificeerd ✓ Vanaf €1.800 ✓ 10 jaar garantie ✓ Centrum, Blerick, Tegelen ✓ Gratis offerte!"
       />
 
       <SchemaMarkup

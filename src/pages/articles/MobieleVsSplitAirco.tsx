@@ -21,7 +21,7 @@ export default function MobieleVsSplitAirco() {
 
       <ArticleLayout
         title="Mobiele Airco vs. Split Airco: Een Uitgebreide Vergelijking"
-        description="Vergelijk mobiele airco en split airco met buitenunit: kosten, installatie, energieverbruik, prestaties en meer. Ontdek welk systeem het beste past bij uw situatie."
+        description="Vergelijk mobiele airco vs split airco: kosten, installatie en energieverbruik. Ontdek welk systeem bij u past."
         publishDate="2025-05-06"
         modifiedDate="2025-05-06"
         author="Team StayCool"

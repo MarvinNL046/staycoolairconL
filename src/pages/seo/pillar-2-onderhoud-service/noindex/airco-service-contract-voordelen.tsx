@@ -245,7 +245,7 @@ const AircoServiceContractVoordelenPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Airco Servicecontract Voordelen | Bespaar met Contract | StayCool"
-        description="Ontdek de voordelen van een airco servicecontract in Limburg. Bespaar geld, krijg voorrang en zorgeloos onderhoud. Vanaf €11/maand voor compleet onderhoud."
+        description="Voordelen airco servicecontract in Limburg. Bespaar geld, krijg voorrang en zorgeloos onderhoud. Vanaf €11/maand."
         canonicalUrl="https://staycoolairco.nl/airco-service/noindex/contract-voordelen"
         noIndex={true}
       />

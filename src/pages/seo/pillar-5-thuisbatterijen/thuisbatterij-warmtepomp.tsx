@@ -235,7 +235,7 @@ const ThuisbatterijWarmtepompPage = () => {
     <>
       <MetaTags
         title="Thuisbatterij + Warmtepomp/Airco | €800-1.400/Jaar Besparing | StayCool Totaaloplossing"
-        description="Warmtepomp + thuisbatterij = perfecte match ✓ Verwarm/koel met zonnestroom ✓ €1.000/jaar besparing ✓ Bufferpieken ✓ AlphaESS batterij ✓ StayCool installeert beide ✓ Limburg"
+        description="Warmtepomp + thuisbatterij ✓ Verwarm/koel met zonnestroom ✓ €1.000/jaar besparing ✓ AlphaESS ✓ StayCool installeert beide ✓ Limburg"
       />
 
       <SchemaMarkup

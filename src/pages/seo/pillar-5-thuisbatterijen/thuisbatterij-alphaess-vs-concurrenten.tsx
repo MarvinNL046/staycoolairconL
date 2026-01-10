@@ -287,7 +287,7 @@ const ThuisbatterijAlphaESSVsConcurrentenPage = () => {
     <>
       <MetaTags
         title="AlphaESS vs Tesla, Huawei, BYD, LG | Beste Thuisbatterij 2024 | StayCool Airco"
-        description="AlphaESS vs concurrenten ✓ Beste EPEX resultaten ✓ €150-400/jaar extra ✓ Tesla Powerwall 3 vergelijking ✓ Huawei LUNA2000 ✓ BYD & LG review ✓ Limburg!"
+        description="AlphaESS vs Tesla, Huawei, BYD, LG ✓ Beste EPEX resultaten ✓ €150-400/jaar extra ✓ Complete vergelijking 2024 ✓ Limburg"
       />
 
       <SchemaMarkup

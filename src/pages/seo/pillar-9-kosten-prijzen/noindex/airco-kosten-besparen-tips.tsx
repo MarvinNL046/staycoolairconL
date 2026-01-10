@@ -156,7 +156,7 @@ const AircoKostenBesparenTips = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="12 Tips Om Te Besparen Op Airco Kosten [2024] | StayCool Airco"
-        description="Bespaar €500-€1.500 op je airco met deze praktische tips. Van slimme timing tot subsidies en energie-efficiëntie. Bewezen methoden om kosten te verlagen."
+        description="Bespaar tot €1.500 op je airco met praktische tips. Slimme timing, subsidies en energie-efficiëntie. Bewezen methoden om kosten te verlagen."
         canonicalUrl="https://staycoolairco.nl/airco-kosten/noindex/airco-kosten-besparen-tips"
         noIndex={true}
       />

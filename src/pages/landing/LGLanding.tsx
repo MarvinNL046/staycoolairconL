@@ -40,9 +40,9 @@ export default function LGLanding() {
     <>
       <Helmet>
         <title>LG Airconditioning | Innovatieve Aircosystemen | StayCool Airco</title>
-        <meta 
-          name="description" 
-          content="Ontdek de innovatieve LG airconditioners met Dual Inverter technologie. Energiezuinig, fluisterstil en met ThinQ smart technologie. Vraag nu een vrijblijvende offerte aan bij StayCool Airco."
+        <meta
+          name="description"
+          content="LG airco: 70% energiebesparing | 10 jaar garantie op compressor | ThinQ smart | Stil vanaf 20dB. Erkend installateur Limburg. Gratis offerte!"
         />
         <meta 
           name="keywords" 

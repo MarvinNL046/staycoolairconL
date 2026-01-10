@@ -139,7 +139,7 @@ const AircoServiceWatVerwachtenPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Wat Gebeurt Er Tijdens Airco Servicebeurt? | StayCool Airco"
-        description="Ontdek stap voor stap wat er gebeurt tijdens een airco servicebeurt in Limburg. Van inspectie tot testen - transparant proces door StayCool vakspecialisten."
+        description="Wat gebeurt er tijdens een airco servicebeurt in Limburg? Van inspectie tot testen - transparant proces door StayCool."
         canonicalUrl="https://staycoolairco.nl/airco-service/noindex/wat-verwachten"
         noIndex={true}
       />

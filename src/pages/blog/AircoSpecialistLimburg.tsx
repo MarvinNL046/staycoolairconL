@@ -10,7 +10,7 @@ export default function AircoSpecialistLimburg() {
     <>
       <MetaTags
         title="Airco specialist Limburg – Jouw gids naar koele comfort | StayCool"
-        description="Zoek je een ervaren airco specialist in Limburg? Ontdek hoe je een betrouwbare installateur vindt, wat de prijzen zijn en hoe je jarenlang profiteert van koele comfort."
+        description="Ontdek hoe je een betrouwbare airco specialist in Limburg vindt. Prijzen, tips en advies voor koele comfort."
         keywords="airco specialist limburg, airco installateur, airconditioning specialist, airco monteur, airco vakman, airco service limburg"
         canonicalUrl="https://staycoolairco.nl/blog/airco-specialist-limburg"
         type="article"

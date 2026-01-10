@@ -88,7 +88,7 @@ const ThuisbatterijMaastrichtPage = () => {
     <>
       <MetaTags
         title="Thuisbatterij Maastricht | AlphaESS Installatie & Service | 0% BTW | StayCool Airco"
-        description="Thuisbatterij installatie Maastricht ✓ AlphaESS dealer ✓ Wyck, Randwyck, Malberg ✓ Ook monumentale panden ✓ 0% BTW ✓ 10 jaar garantie ✓ Installatie in 1 dag ✓ Lokale service"
+        description="Thuisbatterij Maastricht ✓ AlphaESS dealer ✓ 0% BTW ✓ 10 jaar garantie ✓ Installatie in 1 dag ✓ Lokale service Limburg"
       />
 
       <SchemaMarkup

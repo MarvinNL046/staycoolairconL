@@ -40,9 +40,9 @@ export default function MitsubishiHeavyLanding() {
     <>
       <Helmet>
         <title>Mitsubishi Heavy Industries Airconditioning | Japanse Kwaliteit | StayCool Airco</title>
-        <meta 
-          name="description" 
-          content="Ontdek de hoogwaardige Mitsubishi Heavy Industries airconditioners. Japanse engineering met focus op duurzaamheid en betrouwbaarheid. Vraag nu een vrijblijvende offerte aan bij StayCool Airco."
+        <meta
+          name="description"
+          content="Mitsubishi Heavy airco: Allergeenfilter | Stil vanaf 18dB | A+++ | 3D Auto luchtverdeling. Erkend installateur Limburg. Gratis advies!"
         />
         <meta 
           name="keywords" 

@@ -116,7 +116,7 @@ const MonoSplitVsMultiSplit = () => {
     <>
       <MetaTags
         title="Mono-split vs Multi-split Airco | Wanneer Welk Systeem? | StayCool"
-        description="Mono-split vs multi-split airco vergelijking ✓ Kosten per scenario ✓ Voor- en nadelen ✓ Expert advies ✓ 30-40% besparing mogelijk ✓ Gratis offerte Limburg"
+        description="Mono-split vs multi-split airco vergelijking ✓ Kosten per scenario ✓ Voor- en nadelen ✓ 30-40% besparing ✓ Gratis offerte Limburg"
       />
 
       <SchemaMarkup

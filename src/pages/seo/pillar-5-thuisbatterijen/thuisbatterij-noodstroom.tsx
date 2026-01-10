@@ -216,7 +216,7 @@ const ThuisbatterijNoodstroomPage = () => {
     <>
       <MetaTags
         title="Thuisbatterij Noodstroom | 2-7 Dagen Overbrugging Stroomuitval | Backup Power | StayCool"
-        description="Thuisbatterij als noodstroom ✓ 2-7 dagen overbrugging black-out ✓ &lt;20ms automatisch schakelen ✓ Onbeperkt met zonnepanelen ✓ Voorkom €500-5.000 schade ✓ Limburg"
+        description="Thuisbatterij noodstroom ✓ 2-7 dagen overbrugging ✓ Automatisch schakelen ✓ Voorkom €500-5.000 schade ✓ Limburg"
       />
 
       <SchemaMarkup

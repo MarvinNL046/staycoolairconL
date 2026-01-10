@@ -111,7 +111,7 @@ const MitsubishiVsLgAirco = () => {
   return (
     <ArticleLayout
       title="Mitsubishi vs LG Airco: Complete Vergelijking 2025"
-      description="Uitgebreide vergelijking tussen Mitsubishi en LG airconditioners. Ontdek de verschillen in prestaties, functies en prijs om de beste keuze te maken voor jouw situatie."
+      description="Vergelijk Mitsubishi vs LG airco: prestaties, functies en prijs. Ontdek welke airconditioner het beste past."
       publishDate="2025-01-22"
       modifiedDate="2025-01-22"
       author="StayCool Airconditioning"

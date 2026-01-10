@@ -76,7 +76,7 @@ const VerwarmenMetAirco: React.FC = () => {
     <>
       <MetaTags
         title="Verwarmen met Airco - 60% Besparing | Warmtepomp Limburg | StayCool"
-        description="Verwarmen met airco ✓ Tot 60% lagere kosten ✓ Warmtepomp efficiency ✓ Ideaal met zonnepanelen ✓ SCOP 4.0-5.0 ✓ F-gassen gecertificeerd ✓ Gratis advies Limburg!"
+        description="Verwarmen met airco ✓ Tot 60% lagere kosten ✓ Warmtepomp efficiency ✓ Ideaal met zonnepanelen ✓ F-gassen gecertificeerd ✓ Gratis advies Limburg!"
       />
 
       <SchemaMarkup

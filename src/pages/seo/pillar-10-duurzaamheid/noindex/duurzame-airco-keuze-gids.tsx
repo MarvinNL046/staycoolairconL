@@ -7,7 +7,7 @@ export default function DuurzameAircoKeuzeGids() {
     <>
       <MetaTags
         title="Duurzame Airco Keuze Gids | StayCool Airco"
-        description="Ontdek hoe u de meest duurzame airconditioning kiest. Complete gids over energielabels, R32 koudemiddel, inverter technologie en milieuvriendelijke koeling."
+        description="Kies de meest duurzame airco. Gids over energielabels, R32 koudemiddel, inverter technologie en milieuvriendelijke koeling."
         noIndex={true}
       />
 

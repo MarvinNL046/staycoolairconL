@@ -7,7 +7,7 @@ export default function LGStoringscode() {
   return (
     <ArticleLayout
       title="LG Airco Storingscode CH 24: Wat Betekent Het en Hoe Los Je Het Op?"
-      description="Leer wat LG airco storingscode CH 24 betekent, wat de mogelijke oorzaken zijn en hoe je deze fout kunt oplossen. Een complete gids voor het verhelpen van lage en hoge drukbeveiligingsproblemen."
+      description="Leer wat LG airco storingscode CH 24 betekent en hoe je deze oplost. Complete gids voor drukbeveiligingsproblemen."
       publishDate="2024-01-23"
       modifiedDate="2024-01-23"
       author="StayCool Airconditioning"

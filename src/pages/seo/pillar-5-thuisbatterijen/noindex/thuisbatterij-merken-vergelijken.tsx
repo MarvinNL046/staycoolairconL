@@ -166,7 +166,7 @@ const ThuisbatterijMerkenVergelijken = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Thuisbatterij Merken Vergelijken 2025 | AlphaESS vs Tesla vs LG | StayCool"
-        description="Vergelijk alle thuisbatterij merken: AlphaESS, Tesla Powerwall, LG Chem, Huawei, BYD en Sonnen. Objectieve specificaties, prijzen en advies voor de beste keuze."
+        description="Vergelijk thuisbatterij merken: AlphaESS, Tesla, LG Chem, Huawei, BYD en Sonnen. Specificaties, prijzen en advies."
         canonicalUrl="https://staycoolairco.nl/seo/pillar-5-thuisbatterijen/noindex/thuisbatterij-merken-vergelijken"
         noIndex={true}
       />

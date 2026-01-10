@@ -227,7 +227,7 @@ const ThuisbatterijDynamischEnergieConcractPage = () => {
     <>
       <MetaTags
         title="Thuisbatterij met Dynamisch Energiecontract | EPEX Handelen & Geld Verdienen | StayCool Airco"
-        description="Verdien €500-1.500/jaar met thuisbatterij + dynamisch contract ✓ EPEX handelen ✓ AlphaESS beste resultaten ✓ Automatisch optimaliseren ✓ Tibber, Frank Energie ✓ Limburg"
+        description="Verdien €500-1.500/jaar met thuisbatterij + dynamisch contract ✓ EPEX handelen ✓ AlphaESS ✓ Automatisch optimaliseren ✓ Limburg"
       />
 
       <SchemaMarkup

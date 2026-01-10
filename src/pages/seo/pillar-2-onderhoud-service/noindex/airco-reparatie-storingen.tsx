@@ -153,7 +153,7 @@ const AircoReparatieStoringen = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Airco Storingen Herkennen & Oplossen | StayCool Limburg"
-        description="Veelvoorkomende airco storingen in Limburg. Leer symptomen herkennen en wanneer professionele reparatie nodig is. Spoedservice beschikbaar. ☎ 046-202-1430"
+        description="Veelvoorkomende airco storingen in Limburg. Herken symptomen en wanneer reparatie nodig is. Spoedservice beschikbaar."
         canonicalUrl="https://staycoolairco.nl/airco-reparatie/noindex/storingen"
         noIndex={true}
       />

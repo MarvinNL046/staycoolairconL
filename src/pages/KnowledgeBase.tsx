@@ -299,7 +299,7 @@ export default function KnowledgeBase() {
     <>
       <MetaTags
         title="Airco Kennisbank | Uitleg, Tips & Kosten | StayCool 2025"
-        description="Airco kennisbank: uitgebreide gids over energiebesparing, onderhoud, storingscodes & slimme verwarmingstips voor alle aircosystemen. Expert advies & troubleshooting voor uw situatie."
+        description="Airco kennisbank: gids over energiebesparing, onderhoud, storingscodes & verwarmingstips. Expert advies voor uw situatie."
         keywords="airco kennisbank, airconditioning informatie, SCOP SEER uitleg, airco onderhoud, energiebesparing airco"
         canonicalUrl="https://staycoolairco.nl/kennisbank"
         type="article"

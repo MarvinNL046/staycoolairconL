@@ -140,7 +140,7 @@ const AircoPrijzenVergelijken = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Airco Prijzen Vergelijken 2024 - Budget vs Premium | StayCool Airco"
-        description="Vergelijk airco prijzen van verschillende merken en segmenten. Ontdek waar je voor betaalt en welke airco het beste bij jouw budget past. Incl. totaaloverzicht."
+        description="Vergelijk airco prijzen van verschillende merken. Ontdek welke airco bij jouw budget past. Inclusief totaaloverzicht."
         canonicalUrl="https://staycoolairco.nl/airco-kosten/noindex/airco-prijzen-vergelijken"
         noIndex={true}
       />

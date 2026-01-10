@@ -122,7 +122,7 @@ const ThuisbatterijInstallateursRegio = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Thuisbatterij Installateurs Limburg - Erkende Bedrijven 2026 | StayCool"
-        description="Vind de beste thuisbatterij installateur in Limburg. Vergelijk gecertificeerde bedrijven, lees reviews en vraag offertes aan van erkende NEN 1010 installateurs."
+        description="Vind de beste thuisbatterij installateur in Limburg. Vergelijk gecertificeerde bedrijven en vraag offertes aan."
         canonicalUrl="https://staycoolairco.nl/seo/pillar-5-thuisbatterijen/noindex/thuisbatterij-installateurs-regio"
         noIndex={true}
         locationInfo={{ city: 'Limburg', region: 'Limburg' }}

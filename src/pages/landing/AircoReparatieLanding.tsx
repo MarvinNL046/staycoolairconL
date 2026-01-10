@@ -36,9 +36,9 @@ export default function AircoReparatieLanding() {
     <>
       <Helmet>
         <title>Airco Reparatie | Professionele Storingsservice | StayCool Airco</title>
-        <meta 
-          name="description" 
-          content="Professionele airco reparatie door F-gassen gecertificeerde monteurs. Spoedservice beschikbaar, transparante tarieven en garantie op alle reparaties."
+        <meta
+          name="description"
+          content="Airco reparatie: F-gassen gecertificeerd | Spoedservice | Alle merken | Garantie op reparaties | Transparante tarieven. Gratis advies!"
         />
         <meta 
           name="keywords" 

@@ -225,7 +225,7 @@ const AircoServiceLimburgRegioPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Airco Service Limburg per Regio | Responstijden & Dekking | StayCool"
-        description="Ontdek onze servicedekking in Limburg. Van Maastricht tot Venlo - responstijden, spoedservice en lokale expertise per stad. 24-48 uur service in heel Limburg."
+        description="Servicedekking in heel Limburg. Van Maastricht tot Venlo - responstijden, spoedservice en lokale expertise. 24-48 uur service."
         canonicalUrl="https://staycoolairco.nl/airco-service/noindex/limburg-regio"
         noIndex={true}
       />

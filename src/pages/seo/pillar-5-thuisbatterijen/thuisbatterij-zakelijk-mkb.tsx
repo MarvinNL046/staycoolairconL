@@ -235,7 +235,7 @@ const ThuisbatterijZakelijkMKBPage = () => {
     <>
       <MetaTags
         title="Zakelijke Thuisbatterij MKB | €7.000-16.000/Jaar Besparing | Peak Shaving | KIA/EIA 73% Aftrek"
-        description="Thuisbatterij zakelijk = €7.000-16.000/jaar besparing ✓ Peak shaving 40% lagere netkosten ✓ KIA/EIA 73% fiscaal aftrek ✓ ROI 2-4 jaar ✓ Noodstroom ✓ StayCool Limburg"
+        description="Thuisbatterij zakelijk ✓ €7.000-16.000/jaar besparing ✓ Peak shaving 40% lagere netkosten ✓ KIA/EIA 73% aftrek ✓ Limburg"
       />
 
       <SchemaMarkup

@@ -10,7 +10,7 @@ export default function AircoInstallateurLimburgKiezen() {
     <>
       <MetaTags
         title="Hoe kies je de juiste airco installateur in Limburg? | StayCool"
-        description="De juiste installateur bepaalt het verschil tussen jarenlang comfort of frustratie. Ontdek waar je op moet letten bij het kiezen van een airco installateur in Limburg."
+        description="Ontdek waar je op moet letten bij het kiezen van een airco installateur in Limburg. Tips voor jarenlang comfort."
         keywords="airco installateur, airconditioning installatie Limburg, STEK-certificaat, airco monteur, airco garantie, StayCool Airco, betrouwbare airco installateur"
         canonicalUrl="https://staycoolairco.nl/blog/airco-installateur-limburg-kiezen"
         type="article"

@@ -111,7 +111,7 @@ const ToshibaVsTosotAirco = () => {
   return (
     <ArticleLayout
       title="Toshiba vs Tosot Airco: Complete Vergelijking 2025"
-      description="Uitgebreide vergelijking tussen Toshiba en Tosot airconditioners. Ontdek de verschillen in prestaties, functies en prijs om de beste keuze te maken voor jouw situatie."
+      description="Vergelijk Toshiba vs Tosot airco: prestaties, functies en prijs. Ontdek welke airconditioner het beste past."
       publishDate="2025-01-22"
       modifiedDate="2025-01-22"
       author="StayCool Airconditioning"

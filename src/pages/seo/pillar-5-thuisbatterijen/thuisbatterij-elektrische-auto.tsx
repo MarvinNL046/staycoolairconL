@@ -231,7 +231,7 @@ const ThuisbatterijElektrischeAutoPage = () => {
     <>
       <MetaTags
         title="Thuisbatterij + Elektrische Auto | €1.200-2.000/Jaar Besparing | V2H Ready | StayCool Airco"
-        description="Laad je EV met zonnestroom via thuisbatterij ✓ 60-80% groene kilometers ✓ €1.200-2.000/jaar goedkoper dan net ✓ V2H ready ✓ AlphaESS 10-15 kWh ✓ Limburg"
+        description="Laad je EV met zonnestroom via thuisbatterij ✓ €1.200-2.000/jaar besparing ✓ V2H ready ✓ AlphaESS installatie Limburg"
       />
 
       <SchemaMarkup

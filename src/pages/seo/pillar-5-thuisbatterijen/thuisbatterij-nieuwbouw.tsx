@@ -239,7 +239,7 @@ const ThuisbatterijNieuwbouwPage = () => {
     <>
       <MetaTags
         title="Thuisbatterij Nieuwbouw | BENG-Eisen Halen | €1.000-2.000 Goedkoper Direct Meenemen | StayCool"
-        description="Thuisbatterij direct in nieuwbouw = €1.000-2.000 goedkoper ✓ BENG-score +15-25% ✓ Optimale integratie ✓ 0% BTW ✓ Hypotheek meefinancieren ✓ Toekomst-proof ✓ Limburg"
+        description="Thuisbatterij nieuwbouw = €1.000-2.000 goedkoper ✓ BENG-score +15-25% ✓ 0% BTW ✓ Hypotheek meefinancieren ✓ Limburg"
       />
 
       <SchemaMarkup

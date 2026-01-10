@@ -10,7 +10,7 @@ export default function AircoInstallatieZuidLimburg() {
     <>
       <MetaTags
         title="Airco Installatie Zuid-Limburg: Maastricht, Heerlen & Meer | StayCool"
-        description="Professionele airco installatie in heel Zuid-Limburg. Van Maastricht tot Kerkrade, van Heerlen tot Sittard. ✓ Gratis onderhoud ✓ Binnen 2 dagen geïnstalleerd ✓ Lokale service"
+        description="Airco installatie Zuid-Limburg: Maastricht, Heerlen, Sittard & Kerkrade. Gratis onderhoud, binnen 2 dagen geplaatst."
         keywords="airco installatie zuid-limburg, airco maastricht, airco heerlen, airco sittard, airco kerkrade, airconditioner installeren limburg"
         canonicalUrl="https://staycoolairco.nl/blog/airco-installatie-zuid-limburg"
         type="article"

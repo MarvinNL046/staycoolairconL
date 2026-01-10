@@ -16,7 +16,7 @@ export default function HowAircoWorks() {
     <>
       <MetaTags
         title="Hoe werkt een airco? | StayCool Airco Kennisbank"
-        description="Leer hoe een airconditioner precies werkt. Ontdek het proces van warmte-uitwisseling, de rol van het koudemiddel en de verschillende componenten van een airco."
+        description="Leer hoe een airco werkt: warmte-uitwisseling, koudemiddel en de componenten. Begrijpelijke uitleg."
         keywords="airco werking, airconditioner uitleg, warmte-uitwisseling, koudemiddel, compressor airco, verdamper airco, condensor airco"
         canonicalUrl="https://staycoolairco.nl/kennisbank/hoe-werkt-airco"
         type="article"

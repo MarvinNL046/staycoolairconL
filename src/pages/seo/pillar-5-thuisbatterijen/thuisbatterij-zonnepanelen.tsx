@@ -269,7 +269,7 @@ const ThuisbatterijZonnepanelenPage = () => {
     <>
       <MetaTags
         title="Thuisbatterij met Zonnepanelen | 90% Zelfvoorziening & Terugleverkosten Vermijden | StayCool Airco"
-        description="Thuisbatterij + zonnepanelen = perfecte combi ✓ 70-90% zelfvoorziening ✓ €640/jaar extra door geen teruglevering ✓ AlphaESS 0% BTW ✓ Complete installatie ✓ Limburg"
+        description="Thuisbatterij + zonnepanelen ✓ 70-90% zelfvoorziening ✓ €640/jaar extra besparing ✓ AlphaESS 0% BTW ✓ Complete installatie Limburg"
       />
 
       <SchemaMarkup

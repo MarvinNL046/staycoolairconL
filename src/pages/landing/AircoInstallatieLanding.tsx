@@ -36,9 +36,9 @@ export default function AircoInstallatieLanding() {
     <>
       <Helmet>
         <title>Airco Installatie | Inclusief Montage | Door Gecertificeerde Monteurs | StayCool Airco</title>
-        <meta 
-          name="description" 
-          content="Professionele airco installatie inclusief montage door F-gassen gecertificeerde monteurs. Behoud van fabrieksgarantie, nette afwerking en 5 jaar installatiegarantie."
+        <meta
+          name="description"
+          content="Airco installatie: F-gassen gecertificeerd | 5 jaar garantie | Behoud fabrieksgarantie | Nette afwerking. Erkend Limburg. Gratis offerte!"
         />
         <meta 
           name="keywords" 

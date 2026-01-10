@@ -7,7 +7,7 @@ export default function AircoCO2FootprintVerlagen() {
     <>
       <MetaTags
         title="CO2-Footprint van Uw Airco Verlagen | StayCool Airco"
-        description="Ontdek hoe u de CO2-uitstoot van uw airconditioning drastisch kunt verlagen. Praktische tips over energiebesparing, R32 koudemiddel en groene stroom voor klimaatvriendelijke koeling."
+        description="Verlaag de CO2-uitstoot van uw airco. Tips over energiebesparing, R32 koudemiddel en groene stroom voor klimaatvriendelijke koeling."
         noIndex={true}
       />
 

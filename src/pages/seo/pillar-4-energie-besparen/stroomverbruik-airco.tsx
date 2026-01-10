@@ -75,7 +75,7 @@ const StroomverbruikAirco: React.FC = () => {
     <>
       <MetaTags
         title="Stroomverbruik Airco Berekenen - Kosten per Maand | Limburg"
-        description="Stroomverbruik airco berekenen ✓ Kosten per uur/dag/maand ✓ Inverter vs on/off ✓ Koelen vs verwarmen ✓ Besparingstips ✓ Gratis calculator ✓ Expert advies Limburg!"
+        description="Stroomverbruik airco berekenen ✓ Kosten per uur/dag/maand ✓ Inverter vs on/off ✓ Besparingstips ✓ Gratis calculator Limburg!"
       />
 
       <SchemaMarkup

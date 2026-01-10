@@ -259,7 +259,7 @@ const ThuisbatterijPrijzen2025 = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Thuisbatterij Prijzen 2025 | Actueel Overzicht & Vergelijking | StayCool"
-        description="Complete prijsoverzicht thuisbatterijen 2025: AlphaESS vanaf €4.545. Inclusief subsidies, terugverdientijd en kosten-batenanalyse. Transparante prijzen zonder verrassingen."
+        description="Prijsoverzicht thuisbatterijen 2025: AlphaESS vanaf €4.545. Subsidies, terugverdientijd en kosten-batenanalyse."
         canonicalUrl="https://staycoolairco.nl/seo/pillar-5-thuisbatterijen/noindex/thuisbatterij-prijzen-2025"
         noIndex={true}
       />

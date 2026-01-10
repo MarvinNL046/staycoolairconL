@@ -262,7 +262,7 @@ const ThuisbatterijInstallatieLimburgPage = () => {
     <>
       <MetaTags
         title="Thuisbatterij Installatie Limburg | AlphaESS Dealer & Installateur | StayCool Airco"
-        description="Thuisbatterij installatie in Limburg ✓ AlphaESS dealer ✓ Installatie in 1 dag ✓ 10 jaar garantie ✓ 0% BTW ✓ Maastricht, Heerlen, Sittard, Roermond ✓ Lokale service"
+        description="Thuisbatterij installatie Limburg ✓ AlphaESS dealer ✓ 0% BTW ✓ 10 jaar garantie ✓ Installatie in 1 dag ✓ Lokale service"
       />
 
       <SchemaMarkup

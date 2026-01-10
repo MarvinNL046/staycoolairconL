@@ -40,9 +40,9 @@ export default function ToshibaLanding() {
     <>
       <Helmet>
         <title>Toshiba Airconditioning | Premium Japanse Technologie | StayCool Airco</title>
-        <meta 
-          name="description" 
-          content="Ontdek de premium Toshiba airconditioners met Ultra Pure filtertechnologie en uniek design. Japanse kwaliteit met focus op duurzaamheid en innovatie. Vraag nu een vrijblijvende offerte aan bij StayCool Airco."
+        <meta
+          name="description"
+          content="Toshiba airco: Ultra Pure filter (94% PM2.5) | Plasma Ionizer | A+++ energielabel | Uniek Haori design. Erkend installateur Limburg. Gratis offerte!"
         />
         <meta 
           name="keywords" 

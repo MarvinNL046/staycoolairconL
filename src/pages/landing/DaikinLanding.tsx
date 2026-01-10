@@ -40,9 +40,9 @@ export default function DaikinLanding() {
     <>
       <Helmet>
         <title>Daikin Airconditioning | Topkwaliteit Aircosystemen | StayCool Airco</title>
-        <meta 
-          name="description" 
-          content="Ontdek de premium Daikin airconditioners. Energiezuinig, fluisterstil en met smart home integratie. Vraag nu een vrijblijvende offerte aan bij StayCool Airco."
+        <meta
+          name="description"
+          content="Daikin airco: Marktleider klimaatbeheersing | A+++ energiezuinig | 60% besparing | 5 jaar garantie. Erkend installateur Limburg. Gratis advies!"
         />
         <meta 
           name="keywords" 

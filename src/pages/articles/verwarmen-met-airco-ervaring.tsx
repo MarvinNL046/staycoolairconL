@@ -85,7 +85,7 @@ export default function VerwarmenMetAircoErvaring() {
     <>
       <MetaTags
         title="Verwarmen Met Airco Ervaringen & Resultaten | StayCool Airco"
-        description="Ontdek echte ervaringen met verwarmen via airco in Nederlandse woningen. Lees over energiebesparingen tot 60%, comfort en gebruikerstevredenheid ✓ Praktijkresultaten"
+        description="Echte ervaringen met verwarmen via airco. Energiebesparing tot 60%, comfort en praktijkresultaten uit Nederland."
         keywords="verwarmen met airco ervaring, airco verwarming ervaringen, warmtepomp airco reviews, energiebesparing airco, klantervaring airco verwarming"
         canonicalUrl="https://staycoolairco.nl/kennisbank/verwarmen-met-airco-ervaring"
         type="article"

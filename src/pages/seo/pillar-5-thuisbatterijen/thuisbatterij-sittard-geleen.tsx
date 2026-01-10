@@ -88,7 +88,7 @@ const ThuisbatterijSittardGeleenPage = () => {
     <>
       <MetaTags
         title="Thuisbatterij Sittard-Geleen | AlphaESS Installatie | 0% BTW | StayCool Airco"
-        description="Thuisbatterij installatie Sittard-Geleen ✓ AlphaESS dealer ✓ Chemelot, Born, Obbicht ✓ Ook oude meterkasten ✓ 0% BTW ✓ 10 jaar garantie ✓ Lokale service"
+        description="Thuisbatterij Sittard-Geleen ✓ AlphaESS dealer ✓ 0% BTW ✓ 10 jaar garantie ✓ Installatie in 1 dag ✓ Limburg"
       />
 
       <SchemaMarkup

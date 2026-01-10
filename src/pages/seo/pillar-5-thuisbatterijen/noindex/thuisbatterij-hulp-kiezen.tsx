@@ -240,7 +240,7 @@ const ThuisbatterijHulpKiezen = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Thuisbatterij Keuzehulp - Vind de Perfecte Batterij | StayCool Airco"
-        description="Interactieve keuzehulp voor thuisbatterijen. Beantwoord 5 vragen en ontdek welke capaciteit, merk en prijs het beste bij u past. Gratis advies op maat."
+        description="Keuzehulp voor thuisbatterijen. Beantwoord 5 vragen en ontdek welke capaciteit, merk en prijs bij u past. Gratis advies."
         canonicalUrl="https://staycoolairco.nl/thuisbatterijen/noindex/thuisbatterij-hulp-kiezen"
         noIndex={true}
       />

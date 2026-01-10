@@ -276,7 +276,7 @@ const ThuisbatterijKopenOfHurenPage = () => {
     <>
       <MetaTags
         title="Thuisbatterij Kopen of Huren? Complete Vergelijking 2024 | StayCool Airco"
-        description="Thuisbatterij kopen of huren? ✓ Complete kostenvergelijking ✓ Kopen €11.000+ voordeliger ✓ 0% BTW alleen bij kopen ✓ Lease opties ✓ Persoonlijk advies ✓ Limburg!"
+        description="Thuisbatterij kopen of huren? ✓ Kopen €11.000+ voordeliger ✓ 0% BTW alleen bij kopen ✓ Complete vergelijking ✓ Limburg"
       />
 
       <SchemaMarkup

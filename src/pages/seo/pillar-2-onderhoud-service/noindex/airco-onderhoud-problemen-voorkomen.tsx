@@ -159,7 +159,7 @@ const AircoProblemenVoorkomen = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Airco Problemen Voorkomen - Preventie & Tips | StayCool Airco"
-        description="Voorkom veelvoorkomende airco problemen door slecht onderhoud. Ontdek preventieve maatregelen, waarschuwingssignalen en wanneer u een expert moet inschakelen."
+        description="Voorkom airco problemen door goed onderhoud. Ontdek preventieve maatregelen en waarschuwingssignalen. Expert tips."
         canonicalUrl="https://staycoolairco.nl/airco-onderhoud/noindex/problemen-voorkomen"
         noIndex={true}
       />

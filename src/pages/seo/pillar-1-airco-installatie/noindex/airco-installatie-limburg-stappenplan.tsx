@@ -271,13 +271,13 @@ const AircoInstallatieLimburgStappenplanPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Airco Installatie Stappenplan Limburg | Van Offerte tot Installatie"
-        description="Complete gids voor airco installatie in Limburg. Ontdek alle stappen van eerste contact tot werkende airconditioning. Inclusief tijdlijn en voorbereiding tips."
+        description="Complete gids voor airco installatie in Limburg. Alle stappen van offerte tot werkende airco. Inclusief tijdlijn en tips."
         canonicalUrl="https://staycoolairco.nl/airco-installatie/noindex/stappenplan-limburg"
         noIndex={true}
       />
       <HowToSchema
         name="Airco Installatie Stappenplan Limburg"
-        description="Complete gids voor airco installatie in Limburg: van eerste contact tot werkende airconditioning in 10 stappen. Ontdek alle stappen, tijdlijn en voorbereiding tips."
+        description="Complete gids voor airco installatie in Limburg: van contact tot werkende airco in 10 stappen. Tijdlijn en tips."
         totalTime="PT840H"
         steps={stappen.map(stap => ({
           name: stap.titel,

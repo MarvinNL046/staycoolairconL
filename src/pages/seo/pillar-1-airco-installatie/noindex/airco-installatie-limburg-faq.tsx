@@ -184,7 +184,7 @@ const AircoInstallatieLimburgFAQPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Veelgestelde Vragen Airco Installatie Limburg | FAQ StayCool"
-        description="Antwoorden op alle vragen over airco installatie in Limburg. Van voorbereiding tot onderhoud, kosten tot technische specificaties - compleet overzicht voor installatie."
+        description="Antwoorden op alle vragen over airco installatie in Limburg. Van voorbereiding tot kosten en technische specificaties."
         canonicalUrl="https://staycoolairco.nl/airco-installatie/noindex/faq-limburg"
         noIndex={true}
       />

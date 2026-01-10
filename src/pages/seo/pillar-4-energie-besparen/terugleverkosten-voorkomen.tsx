@@ -76,7 +76,7 @@ const TerugleverKostenVoorkomen: React.FC = () => {
     <>
       <MetaTags
         title="Terugleverkosten Voorkomen met Airco | Bespaar tot €800 | Limburg"
-        description="Terugleverkosten voorkomen ✓ Slim verwarmen met zonnepanelen ✓ Tot €800 besparing per jaar ✓ Warmtepomp airco + thuisbatterij ✓ Gratis advies Limburg!"
+        description="Terugleverkosten voorkomen ✓ Slim verwarmen met zonnepanelen ✓ Tot €800 besparing per jaar ✓ Warmtepomp airco ✓ Gratis advies Limburg!"
       />
 
       <SchemaMarkup

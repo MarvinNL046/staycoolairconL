@@ -97,7 +97,7 @@ const ThuisbatterijVeelgesteldeVragen = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Thuisbatterij Veelgestelde Vragen | StayCool Airco"
-        description="Alle antwoorden op uw vragen over thuisbatterijen: kosten, capaciteit, merken, subsidie, veiligheid en meer. Onafhankelijk advies van StayCool Airco experts."
+        description="Antwoorden op vragen over thuisbatterijen: kosten, capaciteit, merken, subsidie en veiligheid. Onafhankelijk advies."
         canonicalUrl="https://staycoolairco.nl/thuisbatterijen/noindex/thuisbatterij-veelgestelde-vragen"
         noIndex={true}
       />

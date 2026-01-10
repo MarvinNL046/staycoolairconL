@@ -10,7 +10,7 @@ export default function AircoOnderhoudLimburgBelangrijk() {
     <>
       <MetaTags
         title="Waarom regelmatig airco onderhoud in Limburg essentieel is | StayCool"
-        description="Een goed onderhouden airco werkt zuiniger, gaat langer mee en voorkomt storingen. Ontdek waarom airco onderhoud in Limburg zo belangrijk is en wat het jou oplevert."
+        description="Ontdek waarom airco onderhoud in Limburg essentieel is. Zuiniger werken, langer meegaan en storingen voorkomen."
         keywords="airco onderhoud, airconditioning onderhoud Limburg, airco service, airco efficiency, STEK-certificaat, energie besparen airco"
         canonicalUrl="https://staycoolairco.nl/blog/airco-onderhoud-limburg-belangrijk"
         type="article"

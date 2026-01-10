@@ -88,7 +88,7 @@ const ThuisbatterijHeerlenPage = () => {
     <>
       <MetaTags
         title="Thuisbatterij Heerlen & Parkstad | AlphaESS Installatie | 0% BTW | StayCool Airco"
-        description="Thuisbatterij installatie Heerlen & Parkstad ✓ AlphaESS dealer ✓ Energietransitie mijnstreek ✓ Ook oude meterkasten ✓ 0% BTW ✓ 10 jaar garantie ✓ Lokale service"
+        description="Thuisbatterij Heerlen & Parkstad ✓ AlphaESS dealer ✓ 0% BTW ✓ 10 jaar garantie ✓ Installatie in 1 dag ✓ Limburg"
       />
 
       <SchemaMarkup

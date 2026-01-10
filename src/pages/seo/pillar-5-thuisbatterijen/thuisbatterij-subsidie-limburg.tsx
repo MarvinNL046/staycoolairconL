@@ -349,7 +349,7 @@ const ThuisbatterijSubsidieLimburgPage = () => {
     <>
       <MetaTags
         title="Thuisbatterij Subsidie Limburg 2024 | ISDE & Gemeenten | StayCool Airco"
-        description="Thuisbatterij subsidie Limburg ✓ €900-4.000 voordeel ✓ 0% BTW + ISDE + gemeentelijk ✓ Aanvraag hulp gratis ✓ Alle regelingen op rij ✓ Direct aanvragen!"
+        description="Thuisbatterij subsidie Limburg ✓ €900-4.000 voordeel ✓ 0% BTW + ISDE + gemeentelijk ✓ Gratis aanvraag hulp ✓ Direct aanvragen"
       />
 
       <SchemaMarkup

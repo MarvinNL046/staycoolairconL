@@ -40,9 +40,9 @@ export default function TosotLanding() {
     <>
       <Helmet>
         <title>Tosot Airconditioning | Premium Kwaliteit, Scherpe Prijs | StayCool Airco</title>
-        <meta 
-          name="description" 
-          content="Ontdek de Tosot airconditioners met G-Tech Inverter technologie. Moderne technologie voor optimaal comfort tegen een scherpe prijs. Vraag nu een vrijblijvende offerte aan bij StayCool Airco."
+        <meta
+          name="description"
+          content="Tosot airco: G-Tech Inverter | A++ energielabel | Premium GREE kwaliteit | Beste prijs-kwaliteit. Erkend installateur Limburg. Gratis offerte!"
         />
         <meta 
           name="keywords" 

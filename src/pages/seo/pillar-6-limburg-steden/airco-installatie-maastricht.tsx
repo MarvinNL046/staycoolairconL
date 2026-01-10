@@ -83,7 +83,7 @@ const AircoInstallatieMaastricht = () => {
     <>
       <MetaTags
         title="Airco Installatie Maastricht | Klimaatbeheersing Hoofdstad Limburg | StayCool"
-        description="Airco installatie Maastricht ✓ F-gassen gecertificeerd ✓ 60% besparing ✓ 10 jaar garantie ✓ Premium A-merken ✓ Centrum, Wyck, Jekerkwartier. Gratis offerte!"
+        description="Airco installatie Maastricht ✓ F-gassen gecertificeerd ✓ 60% besparing ✓ 10 jaar garantie ✓ Centrum, Wyck ✓ Gratis offerte!"
       />
 
       <SchemaMarkup

@@ -68,7 +68,7 @@ const HoeVaakAircoOnderhoud = () => {
   return (
     <ArticleLayout
       title="Hoe Vaak Airco Onderhoud? Complete Onderhoudsgids"
-      description="Ontdek hoe vaak je airco onderhoud nodig heeft en wat de beste intervallen zijn voor verschillende onderhoudstaken. Inclusief praktische tips en kostenbesparende adviezen."
+      description="Ontdek hoe vaak je airco onderhoud nodig heeft. Beste intervallen, praktische tips en kostenbesparend advies."
       publishDate="2025-01-22"
       modifiedDate="2025-01-22"
       author="StayCool Airconditioning"

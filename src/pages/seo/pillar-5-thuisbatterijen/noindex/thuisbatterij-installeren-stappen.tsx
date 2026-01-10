@@ -170,7 +170,7 @@ const ThuisbatterijInstallerenStappen = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Thuisbatterij Installeren: Stap-voor-Stap Installatieproces | StayCool Airco"
-        description="Complete handleiding voor het installeren van een thuisbatterij. Van locatie kiezen tot inbedrijfstelling - alle 7 stappen uitgelegd door professionals."
+        description="Handleiding thuisbatterij installeren. Van locatie kiezen tot inbedrijfstelling - alle 7 stappen door professionals."
         canonicalUrl="https://staycoolairco.nl/thuisbatterijen/noindex/thuisbatterij-installeren-stappen"
         noIndex={true}
       />

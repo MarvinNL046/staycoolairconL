@@ -187,7 +187,7 @@ const ThuisbatterijWerkingUitgelegd = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Hoe Werkt een Thuisbatterij? Complete Uitleg voor Beginners | StayCool Airco"
-        description="Begrijpelijke uitleg over hoe een thuisbatterij werkt: van energieopslag tot slimme functies. Alles wat u moet weten over de werking van thuisbatterijen."
+        description="Uitleg hoe een thuisbatterij werkt: van energieopslag tot slimme functies. Alles over de werking van thuisbatterijen."
         canonicalUrl="https://staycoolairco.nl/thuisbatterijen/noindex/thuisbatterij-werking-uitgelegd"
         noIndex={true}
       />

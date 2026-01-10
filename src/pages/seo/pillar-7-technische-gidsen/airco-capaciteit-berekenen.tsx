@@ -126,7 +126,7 @@ const AircoCapaciteitBerekenen = () => {
     <>
       <MetaTags
         title="Airco Capaciteit Berekenen Limburg | Juiste kW-waarde bepalen | StayCool Airco"
-        description="Airco capaciteit berekenen ✓ Gratis online calculator ✓ Professioneel advies ✓ Voorkom te klein of te groot systeem ✓ Optimaal comfort & besparing. Bereken nu!"
+        description="Airco capaciteit berekenen ✓ Gratis calculator ✓ Professioneel advies ✓ Voorkom te klein of te groot systeem ✓ Optimaal comfort Limburg!"
       />
 
       <SchemaMarkup

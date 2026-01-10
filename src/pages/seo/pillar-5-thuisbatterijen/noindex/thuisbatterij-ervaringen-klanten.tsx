@@ -332,7 +332,7 @@ const ThuisbatterijErvaringenKlanten = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Thuisbatterij Ervaringen van Klanten 2025 | AlphaESS Reviews | StayCool"
-        description="Lees echte ervaringen van 500+ klanten met AlphaESS thuisbatterijen. Gemiddeld 4.8 sterren, €1.620 besparing per jaar en 3.4 jaar terugverdientijd. Eerlijke reviews."
+        description="Echte ervaringen van 500+ klanten met AlphaESS thuisbatterijen. 4.8 sterren, €1.620 besparing/jaar, 3.4 jaar terugverdientijd."
         canonicalUrl="https://staycoolairco.nl/seo/pillar-5-thuisbatterijen/noindex/thuisbatterij-ervaringen-klanten"
         noIndex={true}
       />
