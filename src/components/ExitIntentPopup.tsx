@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { X, Gift, Phone, Mail, ArrowRight } from 'lucide-react';
+import { X, Gift, Phone, Mail, ArrowRight, Loader2 } from 'lucide-react';
 import { trackEvent } from '../utils/analytics';
+import { sendEmail } from '../utils/email';
 
 interface ExitIntentPopupProps {
   onClose?: () => void;
@@ -10,6 +11,7 @@ export default function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [hasShown, setHasShown] = useState(false);
   const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleClose = useCallback(() => {
     setIsVisible(false);
@@ -18,15 +20,36 @@ export default function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
     onClose?.();
   }, [onClose]);
 
-  const handleSubmit = useCallback((e: React.FormEvent) => {
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
-    trackEvent('exit_intent_popup', {
-      action: 'email_submitted',
-      email_provided: !!email
-    });
-    handleClose();
-    // Navigate to contact or show success message
-    window.location.href = `/contact?email=${encodeURIComponent(email)}&source=exit-popup`;
+    setIsSubmitting(true);
+
+    try {
+      // Send to all webhooks (EmailJS, LeadConnector, Leadflow)
+      await sendEmail({
+        name: 'Exit Popup Lead',
+        email: email,
+        phone: '',
+        city: '',
+        message: 'Lead via exit-intent popup - alleen email opgegeven'
+      });
+
+      trackEvent('exit_intent_popup', {
+        action: 'email_submitted',
+        email_provided: !!email
+      });
+
+      handleClose();
+      // Navigate to contact page with pre-filled email
+      window.location.href = `/contact?email=${encodeURIComponent(email)}&source=exit-popup`;
+    } catch (error) {
+      console.error('Failed to submit exit popup email:', error);
+      // Still redirect even if webhook fails
+      handleClose();
+      window.location.href = `/contact?email=${encodeURIComponent(email)}&source=exit-popup`;
+    } finally {
+      setIsSubmitting(false);
+    }
   }, [email, handleClose]);
 
   useEffect(() => {
@@ -144,10 +167,20 @@ export default function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
             </div>
             <button
               type="submit"
-              className="w-full flex items-center justify-center px-4 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors"
+              disabled={isSubmitting}
+              className="w-full flex items-center justify-center px-4 py-3 bg-orange-500 hover:bg-orange-600 disabled:bg-orange-400 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors"
             >
-              Ontvang Gratis Advies
-              <ArrowRight className="ml-2 h-5 w-5" />
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                  Verzenden...
+                </>
+              ) : (
+                <>
+                  Ontvang Gratis Advies
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </>
+              )}
             </button>
           </form>
 
