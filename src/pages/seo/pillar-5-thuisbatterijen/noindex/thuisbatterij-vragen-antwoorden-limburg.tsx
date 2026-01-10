@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Battery, MapPin, Phone, ChevronDown, ChevronUp, Home, Zap, Euro } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
+import FAQSchema from '../../../../components/SEO/FAQSchema';
 
 const ThuisbatterijVragenAntwoordenLimburg = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -130,6 +131,7 @@ const ThuisbatterijVragenAntwoordenLimburg = () => {
         canonicalUrl="https://staycoolairco.nl/thuisbatterijen/noindex/thuisbatterij-vragen-antwoorden-limburg"
         noIndex={true}
       />
+      <FAQSchema faqs={faqItems.map(item => ({ question: item.question, answer: item.answer }))} />
       <Breadcrumbs items={breadcrumbItems} />
 
       {/* Hero Section */}

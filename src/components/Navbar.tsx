@@ -7,8 +7,23 @@ import { seoNavigation } from '../data/seoNavigation';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isBannerVisible, setIsBannerVisible] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return !sessionStorage.getItem('urgencyBannerDismissed');
+    }
+    return true;
+  });
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+
+  // Listen for banner dismissal
+  useEffect(() => {
+    const handleBannerDismiss = () => {
+      setIsBannerVisible(false);
+    };
+    window.addEventListener('urgencyBannerDismissed', handleBannerDismiss);
+    return () => window.removeEventListener('urgencyBannerDismissed', handleBannerDismiss);
+  }, []);
 
   useEffect(() => {
     // Throttle scroll handler to run at most every 100ms
@@ -46,8 +61,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav 
-      className={`fixed w-full z-50 transition-colors duration-300 h-[64px] sm:h-[80px] ${getNavBackground()}`}
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 h-[64px] sm:h-[80px] ${getNavBackground()} ${isBannerVisible ? 'top-10' : 'top-0'}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex justify-between h-full">
@@ -236,8 +251,10 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div 
-        className={`md:hidden fixed inset-x-0 top-[64px] z-40 transition-all duration-200 ${
+      <div
+        className={`md:hidden fixed inset-x-0 z-40 transition-all duration-200 ${
+          isBannerVisible ? 'top-[104px]' : 'top-[64px]'
+        } ${
           isOpen ? 'translate-y-0 opacity-100 visible' : 'translate-y-2 opacity-0 invisible'
         }`}
       >

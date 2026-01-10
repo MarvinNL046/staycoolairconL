@@ -23,6 +23,10 @@ import LoadingFallbackWithTimeout from './components/LoadingFallbackWithTimeout'
 import { requestIdleCallbackPolyfill } from './utils/requestIdleCallback';
 import PerformanceOptimizer from './utils/performanceOptimizations';
 import { Chatbot } from './components/Chatbot';
+import ExitIntentPopup from './components/ExitIntentPopup';
+import MobileStickyCTA from './components/MobileStickyCTA';
+import FloatingReviewBadge from './components/FloatingReviewBadge';
+import UrgencyBanner from './components/UrgencyBanner';
 
 // Lazy load all pages
 const Home = lazy(() => import('./pages/Home'));
@@ -467,6 +471,7 @@ const App = () => {
       <div className="min-h-screen bg-white">
         <ScrollToTop />
         <SkipToContent />
+        <UrgencyBanner variant="seasonal" />
         <Navbar />
         <main id="main-content" tabIndex={-1}>
           {/* Removed "wait" mode to improve performance - no need to wait for exit animations */}
@@ -804,8 +809,13 @@ const App = () => {
         </main>
         <BackToTop />
         <Chatbot />
-        <AnnouncementBar />
         <Footer />
+
+        {/* CTR Enhancement Components */}
+        <ExitIntentPopup />
+        <MobileStickyCTA />
+        <FloatingReviewBadge />
+
         <CookieConsentLite />
         <FeedbackRibbon />
         <PerformanceMonitor />

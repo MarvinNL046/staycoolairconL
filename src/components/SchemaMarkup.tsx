@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { getCoordinatesForCity } from '../data/geoCoordinates';
+import { aggregateReviews, getAggregateRatingSchema } from '../data/reviews';
 
 interface SchemaMarkupProps {
   type: 'LocalBusiness' | 'Service' | 'Product' | 'Article' | 'Review' | 'FAQPage' | 'HowTo' | 'CollectionPage';
@@ -83,13 +84,7 @@ export default function SchemaMarkup({ type, data, location }: SchemaMarkupProps
       paymentAccepted: ["Cash", "Credit Card", "Debit Card", "Bank Transfer"],
       priceRange: "€€",
       currenciesAccepted: "EUR",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.8",
-        reviewCount: "150",
-        bestRating: "5",
-        worstRating: "1"
-      },
+      aggregateRating: getAggregateRatingSchema(),
       ...data
     };
   };
@@ -129,9 +124,14 @@ export default function SchemaMarkup({ type, data, location }: SchemaMarkupProps
         "@type": "LocalBusiness",
         name: "StayCool Airco",
         url: "https://staycoolairco.nl",
-        address
+        address,
+        aggregateRating: getAggregateRatingSchema()
       },
       areaServed,
+      // Add aggregate rating for service itself
+      ...(!data.aggregateRating && {
+        aggregateRating: getAggregateRatingSchema()
+      }),
       ...data
     };
   };
@@ -196,13 +196,17 @@ export default function SchemaMarkup({ type, data, location }: SchemaMarkupProps
       ...baseSchema,
       ...data,
       // Ensure brand is properly formatted
-      brand: data.brand && typeof data.brand === 'string' 
+      brand: data.brand && typeof data.brand === 'string'
         ? { "@type": "Brand", name: data.brand }
         : data.brand,
       // Replace offers with our enhanced version
-      offers
+      offers,
+      // Add aggregate rating if not provided (for rich snippets)
+      ...(!data.aggregateRating && {
+        aggregateRating: getAggregateRatingSchema()
+      })
     };
-    
+
     return schema;
   };
 

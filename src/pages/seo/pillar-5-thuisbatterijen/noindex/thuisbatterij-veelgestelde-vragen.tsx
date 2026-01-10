@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Battery, HelpCircle, Phone, ChevronDown, ChevronUp, CheckCircle, AlertCircle } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
+import FAQSchema from '../../../../components/SEO/FAQSchema';
 
 const ThuisbatterijVeelgesteldeVragen = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -100,6 +101,7 @@ const ThuisbatterijVeelgesteldeVragen = () => {
         canonicalUrl="https://staycoolairco.nl/thuisbatterijen/noindex/thuisbatterij-veelgestelde-vragen"
         noIndex={true}
       />
+      <FAQSchema faqs={faqItems} />
       <Breadcrumbs items={breadcrumbItems} />
 
       {/* Hero Section */}

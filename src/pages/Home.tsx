@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Hero from '../components/HeroOptimized';
+import HeroRedesign from '../components/HeroRedesign';
 import Services from '../components/ServicesOptimized';
 import WhyUs from '../components/WhyUs';
 import BrandLogos from '../components/BrandLogos';
@@ -92,7 +92,7 @@ export default function Home() {
         <meta name="twitter:image" content="https://staycoolairco.nl/og-image.jpg" />
       </Helmet>
 
-      <Hero />
+      <HeroRedesign />
 
       {/* Static H1 Section - Critical for SEO */}
       <section className="py-16 bg-gradient-to-br from-sky-50 to-blue-50">

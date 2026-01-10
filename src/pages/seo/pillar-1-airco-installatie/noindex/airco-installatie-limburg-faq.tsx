@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { HelpCircle, ChevronDown, ChevronUp, Phone, ArrowRight, CheckCircle, Clock, Euro, Wrench, Shield } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
+import FAQSchema from '../../../../components/SEO/FAQSchema';
 
 const AircoInstallatieLimburgFAQPage = () => {
   const breadcrumbItems = [
@@ -171,6 +172,14 @@ const AircoInstallatieLimburgFAQPage = () => {
     { title: "Showroom Bezoeken", href: "/contact", desc: "Maak een afspraak in Maastricht", color: "purple" }
   ];
 
+  // Extract all FAQs for schema
+  const schemaFAQs = faqCategories.flatMap(category =>
+    category.questions.map(q => ({
+      question: q.q,
+      answer: q.a
+    }))
+  );
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
@@ -179,6 +188,7 @@ const AircoInstallatieLimburgFAQPage = () => {
         canonicalUrl="https://staycoolairco.nl/airco-installatie/noindex/faq-limburg"
         noIndex={true}
       />
+      <FAQSchema faqs={schemaFAQs} />
       <Breadcrumbs items={breadcrumbItems} />
 
       {/* Hero Section */}
