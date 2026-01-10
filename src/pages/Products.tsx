@@ -7,6 +7,7 @@ import MetaTags from '../components/MetaTags';
 import LazyImage from '../components/LazyImage';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SchemaMarkup from '../components/SchemaMarkup';
+import { aggregateReviews } from '../data/reviews';
 
 export default function Products() {
   const breadcrumbItems = [
@@ -43,7 +44,7 @@ export default function Products() {
         description="Premium airco merken ✓ Daikin, Mitsubishi, Samsung ✓ A+++ energiezuinig ✓ Vanaf €1.498 all-in ✓ Professionele installatie. Nu offerte!"
       />
       
-      <SchemaMarkup 
+      <SchemaMarkup
         type="Product"
         data={{
           "@type": "ItemList",
@@ -58,6 +59,13 @@ export default function Products() {
               brand: {
                 "@type": "Brand",
                 name: brand.name
+              },
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: aggregateReviews.averageRating,
+                reviewCount: aggregateReviews.totalReviews,
+                bestRating: 5,
+                worstRating: 1
               },
               offers: {
                 "@type": "AggregateOffer",

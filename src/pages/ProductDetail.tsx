@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { m } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { Phone, Check, ThermometerSun, Wind, Zap, Timer, Ruler, Info, X } from 'lucide-react';
 import { productData } from '../data/products';
 import ProductCarousel from '../components/ProductCarousel';
@@ -289,6 +290,13 @@ export default function ProductDetail() {
           { name: modelData.name, url: `https://staycoolairco.nl/products/${brand}/${model}` }
         ]}
       />
+
+      {/* Enhanced Product Schema for Rich Snippets */}
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(schemaData)}
+        </script>
+      </Helmet>
 
       {/* Breadcrumbs */}
       <Breadcrumbs 
