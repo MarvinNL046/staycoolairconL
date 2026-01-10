@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Battery, HelpCircle, Phone, CheckCircle, ArrowRight, Home, Zap, Users, Euro, Calendar } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
+import FAQSchema from '../../../../components/SEO/FAQSchema';
 
 const ThuisbatterijHulpKiezen = () => {
   const [step, setStep] = useState(1);
@@ -244,6 +245,8 @@ const ThuisbatterijHulpKiezen = () => {
         noIndex={true}
       />
       <Breadcrumbs items={breadcrumbItems} />
+
+      <FAQSchema faqs={faqItems} />
 
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">

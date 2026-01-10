@@ -4,6 +4,7 @@ import { CheckCircle, XCircle, Euro, ThermometerSun, Wind, Droplets, Phone, Calc
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 
 const AircoVsVentilator = () => {
   const breadcrumbItems = [
@@ -138,6 +139,7 @@ const AircoVsVentilator = () => {
           }
         }}
       />
+      <FAQSchema faqs={faqs} />
 
       <Breadcrumbs items={breadcrumbItems} className="container mx-auto px-4 py-4" />
 

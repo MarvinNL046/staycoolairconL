@@ -4,6 +4,7 @@ import { ThermometerSun, CheckCircle, Shield, Leaf, TrendingDown, Wind, Phone, C
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 
 const DuurzameVerwarmingPage = () => {
   const breadcrumbItems = [
@@ -192,6 +193,7 @@ const DuurzameVerwarmingPage = () => {
           }
         }}
       />
+      <FAQSchema faqs={faqs} />
 
       <Breadcrumbs items={breadcrumbItems} className="container mx-auto px-4 py-4" />
 

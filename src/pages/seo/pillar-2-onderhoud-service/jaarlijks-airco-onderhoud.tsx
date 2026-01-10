@@ -4,6 +4,7 @@ import { CheckCircle, Shield, Calendar, Wrench, ThermometerSun, Phone, Mail, Cal
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 import LazyImage from '../../../components/LazyImage';
 
 const JaarlijksAircoOnderhoud: React.FC = () => {
@@ -126,6 +127,8 @@ const JaarlijksAircoOnderhoud: React.FC = () => {
           serviceType: "Airconditioning Onderhoud"
         }}
       />
+
+      <FAQSchema faqs={faqItems} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-sky-400 to-sky-500 text-white">

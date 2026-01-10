@@ -4,6 +4,7 @@ import { CheckCircle, Shield, Droplets, AlertTriangle, Phone, Thermometer, Wind,
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 import LazyImage from '../../../components/LazyImage';
 
 const AircoKoudemiddelBijvullen: React.FC = () => {
@@ -173,6 +174,8 @@ const AircoKoudemiddelBijvullen: React.FC = () => {
           serviceType: "Koudemiddel Service"
         }}
       />
+
+      <FAQSchema faqs={faqItems} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-sky-400 to-sky-500 text-white">

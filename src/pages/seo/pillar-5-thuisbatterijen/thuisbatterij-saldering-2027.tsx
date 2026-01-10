@@ -4,6 +4,7 @@ import { AlertCircle, CheckCircle, TrendingDown, Zap, Euro, Phone, Calculator, A
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 
 const ThuisbatterijSaldering2027Page = () => {
   const breadcrumbItems = [
@@ -283,6 +284,8 @@ const ThuisbatterijSaldering2027Page = () => {
           }))
         }}
       />
+
+      <FAQSchema faqs={faqs} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-orange-500 to-red-600 text-white">

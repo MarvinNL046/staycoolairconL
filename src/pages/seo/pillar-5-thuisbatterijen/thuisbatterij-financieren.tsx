@@ -4,6 +4,7 @@ import { Euro, CheckCircle, CreditCard, FileText, Calculator, Phone, TrendingUp,
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 
 const ThuisbatterijFinancierenPage = () => {
   const breadcrumbItems = [
@@ -344,6 +345,8 @@ const ThuisbatterijFinancierenPage = () => {
           }))
         }}
       />
+
+      <FAQSchema faqs={faqs} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-yellow-400 to-yellow-500 text-gray-900">

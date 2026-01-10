@@ -4,6 +4,7 @@ import { CheckCircle, Shield, Euro, Zap, Wind, ThermometerSun, Phone, Calculator
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 import LazyImage from '../../../components/LazyImage';
 
 const AircoInstallatieWoonkamer: React.FC = () => {
@@ -100,6 +101,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
           }
         }}
       />
+      <FAQSchema faqs={faqs} />
 
       <div className="min-h-screen bg-white">
         <Breadcrumbs items={breadcrumbItems} className="container mx-auto px-4 py-4" />

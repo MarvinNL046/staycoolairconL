@@ -4,6 +4,7 @@ import { Shield, CheckCircle, Home, AlertCircle, FileText, Calculator, Phone, Tr
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 
 const ThuisbatterijVerzekeringPage = () => {
   const breadcrumbItems = [
@@ -267,6 +268,8 @@ const ThuisbatterijVerzekeringPage = () => {
           }))
         }}
       />
+
+      <FAQSchema faqs={faqs} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-yellow-400 to-yellow-500 text-gray-900">

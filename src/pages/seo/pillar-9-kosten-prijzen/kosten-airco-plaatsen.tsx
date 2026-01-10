@@ -4,6 +4,7 @@ import { Calculator, CheckCircle, Euro, Phone, Mail, Zap, Shield, ThermometerSun
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 import LazyImage from '../../../components/LazyImage';
 
 const KostenAircoPlaatsen: React.FC = () => {
@@ -204,6 +205,7 @@ const KostenAircoPlaatsen: React.FC = () => {
           }
         }}
       />
+      <FAQSchema faqs={faqs} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-sky-400 to-sky-500 text-white">

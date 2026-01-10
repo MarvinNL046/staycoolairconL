@@ -4,6 +4,7 @@ import { CheckCircle, Shield, Euro, Zap, Wind, ThermometerSun, Phone, Mail, Calc
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 import LazyImage from '../../../components/LazyImage';
 
 const AircoInstallatieMaastricht = () => {
@@ -133,6 +134,8 @@ const AircoInstallatieMaastricht = () => {
           }
         }}
       />
+
+      <FAQSchema faqs={faqs} />
 
       <div className="min-h-screen bg-white">
         {/* Hero Section */}

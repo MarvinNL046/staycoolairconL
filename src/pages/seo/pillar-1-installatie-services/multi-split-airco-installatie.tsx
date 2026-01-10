@@ -4,6 +4,7 @@ import { CheckCircle, Shield, Euro, Home, Wind, Zap, Phone, Calculator, Award, T
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 
 const MultiSplitAircoInstallatie: React.FC = () => {
   const breadcrumbItems = [
@@ -99,6 +100,7 @@ const MultiSplitAircoInstallatie: React.FC = () => {
           }
         }}
       />
+      <FAQSchema faqs={faqs} />
 
       <div className="min-h-screen bg-white">
         <Breadcrumbs items={breadcrumbItems} className="container mx-auto px-4 py-4" />

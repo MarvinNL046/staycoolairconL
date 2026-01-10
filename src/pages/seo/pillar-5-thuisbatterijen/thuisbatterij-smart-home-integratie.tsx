@@ -4,6 +4,7 @@ import { Smartphone, CheckCircle, Wifi, Phone, Home, Zap, Settings, ArrowRight, 
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 
 const ThuisbatterijSmartHomeIntegratiePage = () => {
   const breadcrumbItems = [
@@ -343,6 +344,8 @@ const ThuisbatterijSmartHomeIntegratiePage = () => {
           }
         }}
       />
+
+      <FAQSchema faqs={faqs} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-yellow-400 to-yellow-500 text-gray-900">

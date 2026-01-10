@@ -31,6 +31,7 @@ import {
   Leaf
 } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
+import FAQSchema from '../../components/SEO/FAQSchema';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import ContactForm from '../../components/Contact';
 import LazyImage from '../../components/LazyImage';
@@ -361,6 +362,7 @@ const AircoKopenLimburg: React.FC = () => {
       </Helmet>
 
       <SchemaMarkup type="Store" data={schemaData} />
+      <FAQSchema faqs={faqItems} />
 
       {/* Breadcrumbs */}
       <div className="bg-gray-50">

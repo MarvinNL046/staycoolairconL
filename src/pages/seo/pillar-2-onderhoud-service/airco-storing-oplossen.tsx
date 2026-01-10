@@ -4,6 +4,7 @@ import { CheckCircle, AlertCircle, Phone, Wrench, Clock, Shield, Settings, Trend
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 import LazyImage from '../../../components/LazyImage';
 
 const AircoStoringOplossen: React.FC = () => {
@@ -239,6 +240,8 @@ const AircoStoringOplossen: React.FC = () => {
           serviceType: "Airconditioning Reparatie"
         }}
       />
+
+      <FAQSchema faqs={faqItems} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-sky-400 to-sky-500 text-white">

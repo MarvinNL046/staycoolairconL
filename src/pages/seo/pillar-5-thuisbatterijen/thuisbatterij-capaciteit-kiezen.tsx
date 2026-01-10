@@ -4,6 +4,7 @@ import { Battery, CheckCircle, Calculator, Phone, Zap, Home, TrendingUp, ArrowRi
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 
 const ThuisbatterijCapaciteitKiezenPage = () => {
   const breadcrumbItems = [
@@ -275,6 +276,8 @@ const ThuisbatterijCapaciteitKiezenPage = () => {
           }))
         }}
       />
+
+      <FAQSchema faqs={faqs} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-yellow-400 to-yellow-500 text-gray-900">

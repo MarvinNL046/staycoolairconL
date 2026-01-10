@@ -4,6 +4,7 @@ import { CheckCircle, XCircle, Euro, Home, Users, Zap, Phone, Calculator, Settin
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 
 const MonoSplitVsMultiSplit = () => {
   const breadcrumbItems = [
@@ -138,6 +139,7 @@ const MonoSplitVsMultiSplit = () => {
           }
         }}
       />
+      <FAQSchema faqs={faqs} />
 
       <Breadcrumbs items={breadcrumbItems} className="container mx-auto px-4 py-4" />
 

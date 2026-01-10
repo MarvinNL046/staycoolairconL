@@ -4,6 +4,7 @@ import { CheckCircle, Zap, Euro, TrendingUp, Battery, Phone, Calculator, Sun, Ho
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 import LazyImage from '../../../components/LazyImage';
 
 const TerugleverKostenVoorkomen: React.FC = () => {
@@ -96,6 +97,8 @@ const TerugleverKostenVoorkomen: React.FC = () => {
           }
         }}
       />
+
+      <FAQSchema faqs={faqs} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-500 to-emerald-600 text-white">

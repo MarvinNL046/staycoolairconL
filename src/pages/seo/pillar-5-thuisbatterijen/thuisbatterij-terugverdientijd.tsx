@@ -4,6 +4,7 @@ import { TrendingUp, CheckCircle, Euro, Calculator, Phone, Zap, Battery, ArrowRi
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 
 const ThuisbatterijTerugverdientijdPage = () => {
   const breadcrumbItems = [
@@ -243,6 +244,8 @@ const ThuisbatterijTerugverdientijdPage = () => {
           }
         }}
       />
+
+      <FAQSchema faqs={faqs} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-yellow-400 to-yellow-500 text-gray-900">

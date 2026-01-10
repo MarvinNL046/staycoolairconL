@@ -4,6 +4,7 @@ import { MapPin, CheckCircle, Euro, Phone, Battery, ArrowRight, Clock, Shield, H
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 
 const ThuisbatterijMaastrichtPage = () => {
   const breadcrumbItems = [
@@ -111,6 +112,8 @@ const ThuisbatterijMaastrichtPage = () => {
           }
         }}
       />
+
+      <FAQSchema faqs={faqs} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-yellow-400 to-yellow-500 text-gray-900">

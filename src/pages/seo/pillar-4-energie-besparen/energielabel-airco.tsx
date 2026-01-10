@@ -4,6 +4,7 @@ import { CheckCircle, Award, TrendingUp, Zap, Euro, Phone, Calculator, Info, Sta
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 
 const EnergielabelAirco: React.FC = () => {
   const breadcrumbItems = [
@@ -95,6 +96,8 @@ const EnergielabelAirco: React.FC = () => {
           }
         }}
       />
+
+      <FAQSchema faqs={faqs} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-500 to-emerald-600 text-white">

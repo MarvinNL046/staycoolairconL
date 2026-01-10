@@ -4,6 +4,7 @@ import { CheckCircle, Zap, TrendingUp, ThermometerSun, Award, Phone, Calculator,
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 
 const SCOPWaardeUitgelegd: React.FC = () => {
   const breadcrumbItems = [
@@ -93,6 +94,8 @@ const SCOPWaardeUitgelegd: React.FC = () => {
           }
         }}
       />
+
+      <FAQSchema faqs={faqs} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-500 to-indigo-600 text-white">

@@ -4,6 +4,7 @@ import { Battery, CheckCircle, Shield, Euro, Zap, TrendingUp, Phone, Calculator,
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 import LazyImage from '../../../components/LazyImage';
 
 const ThuisbatterijSmile5Page = () => {
@@ -146,6 +147,8 @@ const ThuisbatterijSmile5Page = () => {
           }
         }}
       />
+
+      <FAQSchema faqs={faqs} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-yellow-400 to-yellow-500 text-gray-900">

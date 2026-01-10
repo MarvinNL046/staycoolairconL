@@ -4,6 +4,7 @@ import { Home, Battery, CheckCircle, Euro, TrendingUp, Phone, Zap, Sun, Building
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 
 const ThuisbatterijNieuwbouwPage = () => {
   const breadcrumbItems = [
@@ -254,6 +255,8 @@ const ThuisbatterijNieuwbouwPage = () => {
           areaServed: "Limburg, Nederland"
         }}
       />
+
+      <FAQSchema faqs={faqs} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-yellow-400 to-yellow-500 text-gray-900">

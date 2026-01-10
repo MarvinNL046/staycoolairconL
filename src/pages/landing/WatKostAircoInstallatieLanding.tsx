@@ -28,6 +28,7 @@ import {
   Check
 } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
+import FAQSchema from '../../components/SEO/FAQSchema';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import CallToAction from '../../components/CallToAction';
 import ContactForm from '../../components/Contact';
@@ -252,8 +253,8 @@ const WatKostAircoInstallatieLanding: React.FC = () => {
         <link rel="canonical" href="https://staycoolairco.nl/wat-kost-airco-installatie" />
       </Helmet>
 
-      <SchemaMarkup 
-        type="Service" 
+      <SchemaMarkup
+        type="Service"
         data={{
           name: "Airco Installatie",
           description: "Professionele airco installatie in Limburg. Complete installatie vanaf €2.498 inclusief montage. Vraag direct een offerte aan.",
@@ -278,8 +279,9 @@ const WatKostAircoInstallatieLanding: React.FC = () => {
             "priceCurrency": "EUR",
             "name": "Complete airco installatie"
           }
-        }} 
+        }}
       />
+      <FAQSchema faqs={faqItems} />
 
       {/* Breadcrumbs */}
       <div className="bg-gray-50">

@@ -6,6 +6,7 @@ import { ShoppingCart, Wrench, Wind } from 'lucide-react';
 import Breadcrumbs from '../components/Breadcrumbs';
 import MetaTags from '../components/MetaTags';
 import SchemaMarkup from '../components/SchemaMarkup';
+import FAQSchema from '../components/SEO/FAQSchema';
 import Contact from '../components/Contact';
 import { getUnsplashImageForCity } from '../utils/unsplashImages';
 import { getCoordinatesForCity } from '../data/geoCoordinates';
@@ -134,7 +135,7 @@ export default function LocationLandingPage({
       
       {/* FAQ Schema */}
       {faqs.length > 0 && (
-        <SchemaMarkup 
+        <SchemaMarkup
           type="FAQPage"
           data={faqSchemaData}
           location={{
@@ -143,7 +144,10 @@ export default function LocationLandingPage({
           }}
         />
       )}
-      
+
+      {/* Dedicated FAQ Schema for rich snippets */}
+      {faqs.length > 0 && <FAQSchema faqs={faqs} />}
+
       <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

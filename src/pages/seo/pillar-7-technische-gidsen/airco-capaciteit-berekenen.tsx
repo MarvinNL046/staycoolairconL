@@ -4,6 +4,7 @@ import { Calculator, CheckCircle, ThermometerSun, Home, Wind, Zap, TrendingUp, P
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
+import FAQSchema from '../../../components/SEO/FAQSchema';
 import LazyImage from '../../../components/LazyImage';
 
 const AircoCapaciteitBerekenen = () => {
@@ -144,6 +145,8 @@ const AircoCapaciteitBerekenen = () => {
           }
         }}
       />
+
+      <FAQSchema faqs={faqs} />
 
       <Breadcrumbs items={breadcrumbItems} className="container mx-auto px-4 py-4" />
 
