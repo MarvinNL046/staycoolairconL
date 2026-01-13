@@ -1,7 +1,7 @@
 import emailjs from '@emailjs/browser';
 
 // Set to true to enable debug logging
-const DEBUG_MODE = false;
+const DEBUG_MODE = true;
 
 // Helper function for conditional logging
 const debugLog = (...args: any[]) => {
@@ -58,7 +58,10 @@ const sendToLeadflow = async (data: EmailData): Promise<boolean> => {
       phone: data.phone,
       message: data.message,
       source: 'website-contact',
-      city: data.city
+      customFields: {
+        city: data.city,
+        woonplaats: data.city
+      }
     };
 
     debugLog('Sending data to Leadflow CRM:', leadflowData);
