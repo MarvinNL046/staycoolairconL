@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import HeroRedesign from '../components/HeroRedesign';
 import Services from '../components/ServicesOptimized';
+import ProductGrid from '../components/ProductGrid';
 import WhyUs from '../components/WhyUs';
 import BrandLogos from '../components/BrandLogos';
 import HomeBattery from '../components/HomeBattery';
@@ -93,6 +94,13 @@ export default function Home() {
       </Helmet>
 
       <HeroRedesign />
+
+      {/* Product Grid - Direct onder hero voor maximale conversie */}
+      <ProductGrid
+        maxProducts={8}
+        title="Populaire Airco Systemen"
+        subtitle="Bekijk onze bestsellers - complete sets inclusief binnen- en buitenunit"
+      />
 
       {/* Static H1 Section - Critical for SEO */}
       <section className="py-16 bg-gradient-to-br from-sky-50 to-blue-50">

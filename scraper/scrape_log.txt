@@ -1,0 +1,1440 @@
+============================================================
+  MAXICOOL PRODUCT SCRAPER
+============================================================
+  Mode: FULL
+  Images: YES
+============================================================
+
+
+[1/8] Category: LG Single-split
+--------------------------------------------------
+
+  Page 1:
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/lg-single-split-airco-sets/4086/ (attempt 1/3)
+    Found 24 products
+
+  Total products in category: 24
+
+  [1/24] LG ARTCOOL AI AIR Mirror airco R32 2,5 kW Dual Inverter Set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-artcool-ai-air-mirror-airco-r32-25-kw-dual-inverter-set/37335/ (attempt 1/3)
+    Name: LG ARTCOOL AI AIR Mirror airco R32 2,5 kW Dual Inverter Set
+    Brand: 
+    SKU: 81002212
+    Specs: 0
+    Images: 9
+    [Image] Downloaded: sk21290_81002214_main.webp
+    [Image] Downloaded: sk21315_82002260_EU_Energy_Label.jpg
+    [Image] Downloaded: sk21311_81002214_dimensions.jpg
+    [Image] Downloaded: sk21282_82002260_dimensions.webp
+    [Image] Downloaded: sk21291_81002214_other1-1.webp
+    [Image] Downloaded: sk21283_82002260_other1.webp
+    [Image] Downloaded: sk21284_82002260_other2.webp
+    [Image] Downloaded: sk21285_82002260_other3.webp
+    [Image] Downloaded: sk21286_82002260_other4.webp
+
+  [2/24] LG ARTCOOL AI AIR Mirror airco R32 3,5 kW Dual Inverter Set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-artcool-ai-air-mirror-airco-r32-35-kw-dual-inverter-set/37336/ (attempt 1/3)
+    Name: LG ARTCOOL AI AIR Mirror airco R32 3,5 kW Dual Inverter Set
+    Brand: 
+    SKU: 81002213
+    Specs: 0
+    Images: 9
+    [Image] Downloaded: sk21290_81002214_main.webp
+    [Image] Downloaded: sk21320_82002262_EU_Energy_Label+Energy.jpg
+    [Image] Downloaded: sk21291_81002214_other1-1.webp
+    [Image] Downloaded: sk21311_81002214_dimensions.jpg
+    [Image] Downloaded: sk21282_82002260_dimensions.webp
+    [Image] Downloaded: sk21283_82002260_other1.webp
+    [Image] Downloaded: sk21284_82002260_other2.webp
+    [Image] Downloaded: sk21285_82002260_other3.webp
+    [Image] Downloaded: sk21286_82002260_other4.webp
+
+  [3/24] LG ARTCOOL AI AIR Mirror airco R32 5,0 kW Dual Inverter Set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-artcool-ai-air-mirror-airco-r32-50-kw-dual-inverter-set/37339/ (attempt 1/3)
+    Name: LG ARTCOOL AI AIR Mirror airco R32 5,0 kW Dual Inverter Set
+    Brand: 
+    SKU: 81002214
+    Specs: 0
+    Images: 9
+    [Image] Downloaded: sk21290_81002214_main.webp
+    [Image] Downloaded: sk21326_82002264_EU_Energy_Label.jpg
+    [Image] Downloaded: sk21311_81002214_dimensions.jpg
+    [Image] Downloaded: sk21282_82002260_dimensions.webp
+    [Image] Downloaded: sk21291_81002214_other1-1.webp
+    [Image] Downloaded: sk21283_82002260_other1.webp
+    [Image] Downloaded: sk21284_82002260_other2.webp
+    [Image] Downloaded: sk21285_82002260_other3.webp
+    [Image] Downloaded: sk21286_82002260_other4.webp
+
+  [4/24] LG DUALCOOL AI AIR Special Smart Inverter airco 2,5 kW Set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-dualcool-ai-air-special-smart-inverter-airco-25-kw-set/35350/ (attempt 1/3)
+    Name: LG DUALCOOL AI AIR Special Smart Inverter airco 2,5 kW Set
+    Brand: 
+    SKU: 81002172
+    Specs: 0
+    Images: 8
+    [Image] Downloaded: sk17143_81002172_Main.jpg
+    [Image] Downloaded: sk16873_81002172_EnergyLabel.webp
+    [Image] Downloaded: sk17203_81002172_dimensions_1.webp
+    [Image] Downloaded: sk17202_81002172_dimensions_2.webp
+    [Image] Downloaded: sk17144_81002172_other1.webp
+    [Image] Downloaded: sk17145_81002172_other2.webp
+    [Image] Downloaded: sk16869_81002172_other2.webp
+    [Image] Downloaded: sk17147_81002172_other4.webp
+
+  [5/24] LG DUALCOOL AI AIR Special Smart Inverter airco 3,5 kW Set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-dualcool-ai-air-special-smart-inverter-airco-35-kw-set/35349/ (attempt 1/3)
+    Name: LG DUALCOOL AI AIR Special Smart Inverter airco 3,5 kW Set
+    Brand: 
+    SKU: 81002173
+    Specs: 0
+    Images: 8
+    [Image] Downloaded: sk17143_81002172_Main.jpg
+    [Image] Downloaded: sk16879_81002173_EneryLabel.webp
+    [Image] Downloaded: sk17202_81002172_dimensions_2.webp
+    [Image] Downloaded: sk17203_81002172_dimensions_1.webp
+    [Image] Downloaded: sk17144_81002172_other1.webp
+    [Image] Downloaded: sk17145_81002172_other2.webp
+    [Image] Downloaded: sk16882_81002173_other2.webp
+    [Image] Downloaded: sk17147_81002172_other4.webp
+
+  [6/24] LG Air Purifying Inverter airco R32 2,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-air-purifying-inverter-airco-r32-25-kw-set/29397/ (attempt 1/3)
+    Name: LG Air Purifying Inverter airco R32 2,5 kW set
+    Brand: 
+    SKU: 81001933
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81001932_main.webp
+    [Image] Downloaded: 81001933_energy.webp
+    [Image] Downloaded: 81001932_dimensions.webp
+    [Image] Downloaded: 81001932_dimensions2.webp
+    [Image] Downloaded: 81001932_other1.webp
+    [Image] Downloaded: 81001932_other2.webp
+    [Image] Downloaded: 81001932_other3.webp
+    [Image] Downloaded: 81001932_other4.webp
+    [Image] Downloaded: 81001932_other5.webp
+    [Image] Downloaded: 81001932_other6.webp
+
+  [7/24] LG Air Purifying Inverter airco R32 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-air-purifying-inverter-airco-r32-35-kw-set/29398/ (attempt 1/3)
+    Name: LG Air Purifying Inverter airco R32 3,5 kW set
+    Brand: 
+    SKU: 81001932
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81001932_main.webp
+    [Image] Downloaded: 81001932_energy.webp
+    [Image] Downloaded: 81001932_dimensions.webp
+    [Image] Downloaded: 81001932_dimensions2.webp
+    [Image] Downloaded: 81001932_other1.webp
+    [Image] Downloaded: 81001932_other2.webp
+    [Image] Downloaded: 81001932_other3.webp
+    [Image] Downloaded: 81001932_other4.webp
+    [Image] Downloaded: 81001932_other5.webp
+    [Image] Downloaded: 81001932_other6.webp
+
+  [8/24] LG Standard Plus Smart Inverter airco R32 2,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-standard-plus-smart-inverter-airco-r32-25-kw-set/29404/ (attempt 1/3)
+    Name: LG Standard Plus Smart Inverter airco R32 2,5 kW set
+    Brand: 
+    SKU: 81001886
+    Specs: 0
+    Images: 9
+    [Image] Downloaded: 81001886_main.webp
+    [Image] Downloaded: 81001886_energy.webp
+    [Image] Downloaded: 81001886_dimensions.webp
+    [Image] Downloaded: 81001627_dimensions2.webp
+    [Image] Downloaded: 81001886_other1.webp
+    [Image] Downloaded: 81001627_other3.webp
+    [Image] Downloaded: 81001627_other2.webp
+    [Image] Downloaded: 81001627_other4.webp
+    [Image] Downloaded: 81001410_other3.webp
+
+  [9/24] LG Standard Plus Smart Inverter airco R32 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-standard-plus-smart-inverter-airco-r32-35-kw-set/29403/ (attempt 1/3)
+    Name: LG Standard Plus Smart Inverter airco R32 3,5 kW set
+    Brand: 
+    SKU: 81001889
+    Specs: 0
+    Images: 9
+    [Image] Downloaded: 81001886_main.webp
+    [Image] Downloaded: 81001889_energy.webp
+    [Image] Downloaded: 81001627_dimensions2.webp
+    [Image] Downloaded: 81001886_dimensions.webp
+    [Image] Downloaded: 81001627_other2.webp
+    [Image] Downloaded: 81001627_other3.webp
+    [Image] Downloaded: 81001627_other4.webp
+    [Image] Downloaded: 81001410_other3.webp
+    [Image] Downloaded: 81001886_other1.webp
+
+  [10/24] LG Standard Plus Smart Inverter airco R32 5,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-standard-plus-smart-inverter-airco-r32-50-kw-set/29402/ (attempt 1/3)
+    Name: LG Standard Plus Smart Inverter airco R32 5,0 kW set
+    Brand: 
+    SKU: 81001892
+    Specs: 0
+    Images: 9
+    [Image] Downloaded: 81001886_main.webp
+    [Image] Downloaded: 81001892_energy.webp
+    [Image] Downloaded: 81001627_dimensions2.webp
+    [Image] Downloaded: 81001886_dimensions.webp
+    [Image] Downloaded: 81001627_other2.webp
+    [Image] Downloaded: 81001627_other3.webp
+    [Image] Downloaded: 81001627_other4.webp
+    [Image] Downloaded: 81001410_other3.webp
+    [Image] Downloaded: 81001886_other1.webp
+
+  [11/24] LG Standard Plus Smart Inverter airco R32 7,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-standard-plus-smart-inverter-airco-r32-70-kw-set/29401/ (attempt 1/3)
+    Name: LG Standard Plus Smart Inverter airco R32 7,0 kW set
+    Brand: 
+    SKU: 81001895
+    Specs: 0
+    Images: 9
+    [Image] Downloaded: 81001886_main.webp
+    [Image] Downloaded: 81001895_energy.webp
+    [Image] Downloaded: 81001627_dimensions2.webp
+    [Image] Downloaded: 81001886_dimensions.webp
+    [Image] Downloaded: 81001627_other2.webp
+    [Image] Downloaded: 81001627_other3.webp
+    [Image] Downloaded: 81001627_other4.webp
+    [Image] Downloaded: 81001410_other3.webp
+    [Image] Downloaded: 81001886_other1.webp
+
+  [12/24] LG Artcool Beige Inverter airco R32 2,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-artcool-beige-inverter-airco-r32-25-kw-set/29392/ (attempt 1/3)
+    Name: LG Artcool Beige Inverter airco R32 2,5 kW set
+    Brand: 
+    SKU: 81001948
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81001948_main.webp
+    [Image] Downloaded: 81001948_energy.webp
+    [Image] Downloaded: 81001948_dimensions.webp
+    [Image] Downloaded: 81001948_dimensions2.webp
+    [Image] Downloaded: 81001948_other5.webp
+    [Image] Downloaded: 81001948_other1.webp
+    [Image] Downloaded: 81001948_other2.webp
+    [Image] Downloaded: 81001948_other3.webp
+    [Image] Downloaded: 81001948_other4.webp
+    [Image] Downloaded: 81001948_other6.webp
+
+  [13/24] LG Artcool Beige Inverter airco R32 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-artcool-beige-inverter-airco-r32-35-kw-set/29391/ (attempt 1/3)
+    Name: LG Artcool Beige Inverter airco R32 3,5 kW set
+    Brand: 
+    SKU: 81001951
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81001948_main.webp
+    [Image] Downloaded: 81001951_energy.webp
+    [Image] Downloaded: 81001948_dimensions2.webp
+    [Image] Downloaded: 81001948_dimensions.webp
+    [Image] Downloaded: 81001948_other5.webp
+    [Image] Downloaded: 81001948_other1.webp
+    [Image] Downloaded: 81001948_other2.webp
+    [Image] Downloaded: 81001948_other3.webp
+    [Image] Downloaded: 81001948_other4.webp
+    [Image] Downloaded: 81001948_other6.webp
+
+  [14/24] LG Artcool Beige Inverter airco R32 5,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-artcool-beige-inverter-airco-r32-50-kw-set/29390/ (attempt 1/3)
+    Name: LG Artcool Beige Inverter airco R32 5,0 kW set
+    Brand: 
+    SKU: 81001954
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81001948_main.webp
+    [Image] Downloaded: 81001954_energy.webp
+    [Image] Downloaded: 81001948_dimensions2.webp
+    [Image] Downloaded: 81001948_dimensions.webp
+    [Image] Downloaded: 81001948_other5.webp
+    [Image] Downloaded: 81001948_other1.webp
+    [Image] Downloaded: 81001948_other2.webp
+    [Image] Downloaded: 81001948_other3.webp
+    [Image] Downloaded: 81001948_other4.webp
+    [Image] Downloaded: 81001948_other6.webp
+
+  [15/24] LG Artcool Beige Inverter airco R32 7,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-artcool-beige-inverter-airco-r32-70-kw-set/29389/ (attempt 1/3)
+    Name: LG Artcool Beige Inverter airco R32 7,0 kW set
+    Brand: 
+    SKU: 81001957
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81001948_main.webp
+    [Image] Downloaded: 81001957_energy.webp
+    [Image] Downloaded: 81001948_dimensions2.webp
+    [Image] Downloaded: 81001948_dimensions.webp
+    [Image] Downloaded: 81001948_other1.webp
+    [Image] Downloaded: 81001948_other2.webp
+    [Image] Downloaded: 81001948_other3.webp
+    [Image] Downloaded: 81001948_other4.webp
+    [Image] Downloaded: 81001948_other5.webp
+    [Image] Downloaded: 81001948_other6.webp
+
+  [16/24] LG Dualcool Deluxe Dual Inverter airco R32 2,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-dualcool-deluxe-dual-inverter-airco-r32-25-kw-set/29632/ (attempt 1/3)
+    Name: LG Dualcool Deluxe Dual Inverter airco R32 2,5 kW set
+    Brand: 
+    SKU: 81001916
+    Specs: 0
+    Images: 8
+    [Image] Downloaded: 81001910_main.webp
+    [Image] Downloaded: 81001914_energy.webp
+    [Image] Downloaded: 81001916_dimensions.webp
+    [Image] Downloaded: 81001910_other1.webp
+    [Image] Downloaded: 81001910_other2.webp
+    [Image] Downloaded: 81001910_other3.webp
+    [Image] Downloaded: 81001910_other4.webp
+    [Image] Downloaded: 81001910_other5.webp
+
+  [17/24] LG Dualcool Deluxe Dual Inverter airco R32 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-dualcool-deluxe-dual-inverter-airco-r32-35-kw-set/29634/ (attempt 1/3)
+    Name: LG Dualcool Deluxe Dual Inverter airco R32 3,5 kW set
+    Brand: 
+    SKU: 81001919
+    Specs: 0
+    Images: 9
+    [Image] Downloaded: 81001910_main.webp
+    [Image] Downloaded: 81001917_energy.webp
+    [Image] Downloaded: 81001910_dimensions.webp
+    [Image] Downloaded: 81001910_dimensions2.webp
+    [Image] Downloaded: 81001910_other1.webp
+    [Image] Downloaded: 81001910_other2.webp
+    [Image] Downloaded: 81001910_other3.webp
+    [Image] Downloaded: 81001910_other4.webp
+    [Image] Downloaded: 81001910_other5.webp
+
+  [18/24] LG Dualcool Deluxe Dual Inverter airco R32 5,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-dualcool-deluxe-dual-inverter-airco-r32-50-kw-set/29631/ (attempt 1/3)
+    Name: LG Dualcool Deluxe Dual Inverter airco R32 5,0 kW set
+    Brand: 
+    SKU: 81001922
+    Specs: 0
+    Images: 9
+    [Image] Downloaded: 81001910_main.webp
+    [Image] Downloaded: 81001922_energy.webp
+    [Image] Downloaded: 81001922_dimensions.webp
+    [Image] Downloaded: 81001922_dimensions2.webp
+    [Image] Downloaded: 81001910_other1.webp
+    [Image] Downloaded: 81001910_other2.webp
+    [Image] Downloaded: 81001910_other5.webp
+    [Image] Downloaded: 81001910_other3.webp
+    [Image] Downloaded: 81001910_other4.webp
+
+  [19/24] LG Dualcool Deluxe Dual Inverter airco R32 7,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-dualcool-deluxe-dual-inverter-airco-r32-70-kw-set/29633/ (attempt 1/3)
+    Name: LG Dualcool Deluxe Dual Inverter airco R32 7,0 kW set
+    Brand: 
+    SKU: 81001925
+    Specs: 0
+    Images: 9
+    [Image] Downloaded: 81001910_main.webp
+    [Image] Downloaded: 81001923_energy.webp
+    [Image] Downloaded: 81001922_dimensions.webp
+    [Image] Downloaded: 81001922_dimensions2.webp
+    [Image] Downloaded: 81001910_other1.webp
+    [Image] Downloaded: 81001910_other2.webp
+    [Image] Downloaded: 81001910_other3.webp
+    [Image] Downloaded: 81001910_other4.webp
+    [Image] Downloaded: 81001910_other5.webp
+
+  [20/24] LG F09MT Prestige Dual Inverter airco 2,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-f09mt-prestige-dual-inverter-airco-25-kw-set/29411/ (attempt 1/3)
+    Name: LG F09MT Prestige Dual Inverter airco 2,5 kW set
+    Brand: 
+    SKU: 81001865
+    Specs: 0
+    Images: 8
+    [Image] Downloaded: 81001864_main.webp
+    [Image] Downloaded: 81001865_energy.webp
+    [Image] Downloaded: 81001864_dimensions.webp
+    [Image] Downloaded: 81001864_dimensions2.webp
+    [Image] Downloaded: 81001864_other3.webp
+    [Image] Downloaded: 81001864_other4.webp
+    [Image] Downloaded: 81001864_other5.webp
+    [Image] Downloaded: 81001864_other7.webp
+
+  [21/24] LG F12MT  Prestige Dual Inverter airco 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-f12mt-prestige-dual-inverter-airco-35-kw-set/29412/ (attempt 1/3)
+    Name: LG F12MT  Prestige Dual Inverter airco 3,5 kW set
+    Brand: 
+    SKU: 81001864
+    Specs: 0
+    Images: 9
+    [Image] Downloaded: 81001864_main.webp
+    [Image] Downloaded: 81001864_Energy_label.webp
+    [Image] Downloaded: 81001864_dimensions.webp
+    [Image] Downloaded: 81001864_dimensions2.webp
+    [Image] Downloaded: 81001864_other3.webp
+    [Image] Downloaded: 81001864_other4.webp
+    [Image] Downloaded: 81001864_other5.webp
+    [Image] Downloaded: 81001864_other6.webp
+    [Image] Downloaded: 81001864_other7.webp
+
+  [22/24] LG Dualcool Premium Dual Inverter airco R32 2,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-dualcool-premium-dual-inverter-airco-r32-25-kw-set/29399/ (attempt 1/3)
+    Name: LG Dualcool Premium Dual Inverter airco R32 2,5 kW set
+    Brand: 
+    SKU: 81001910
+    Specs: 0
+    Images: 9
+    [Image] Downloaded: 81001910_main.webp
+    [Image] Downloaded: 81001910_energy.webp
+    [Image] Downloaded: 81001910_dimensions.webp
+    [Image] Downloaded: 81001910_dimensions2.webp
+    [Image] Downloaded: 81001910_other1.webp
+    [Image] Downloaded: 81001910_other2.webp
+    [Image] Downloaded: 81001910_other3.webp
+    [Image] Downloaded: 81001910_other4.webp
+    [Image] Downloaded: 81001910_other5.webp
+
+  [23/24] LG Dualcool Premium Dual Inverter airco R32 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-dualcool-premium-dual-inverter-airco-r32-35-kw-set/29635/ (attempt 1/3)
+    Name: LG Dualcool Premium Dual Inverter airco R32 3,5 kW set
+    Brand: 
+    SKU: 81001913
+    Specs: 0
+    Images: 9
+    [Image] Downloaded: 81001910_main.webp
+    [Image] Downloaded: 81001911_energy.webp
+    [Image] Downloaded: 81001910_dimensions.webp
+    [Image] Downloaded: 81001910_dimensions2.webp
+    [Image] Downloaded: 81001910_other1.webp
+    [Image] Downloaded: 81001910_other2.webp
+    [Image] Downloaded: 81001910_other3.webp
+    [Image] Downloaded: 81001910_other4.webp
+    [Image] Downloaded: 81001910_other5.webp
+
+  [24/24] LG Gallery Special Dual Inverter airco R32 2,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-gallery-special-dual-inverter-airco-r32-25-kw-set/29638/ (attempt 1/3)
+    Name: LG Gallery Special Dual Inverter airco R32 2,5 kW set
+    Brand: 
+    SKU: 81001898
+    Specs: 0
+    Images: 11
+    [Image] Downloaded: 81001898_main.webp
+    [Image] Downloaded: 81001898_energy.webp
+    [Image] Downloaded: 81001898_dimensions.webp
+    [Image] Downloaded: 81001898_dimensions2.webp
+    [Image] Downloaded: 81001898_other1.webp
+    [Image] Downloaded: 81001898_other2.webp
+    [Image] Downloaded: 81001898_other3.webp
+    [Image] Downloaded: 81001898_other4.webp
+    [Image] Downloaded: sk17555_81001898-other8.webp
+    [Image] Downloaded: sk17556_81001898-other9.webp
+    [Image] Downloaded: sk17560_81001898-other10.webp
+
+  Waiting before next category...
+
+[2/8] Category: Tosot Single-split
+--------------------------------------------------
+
+  Page 1:
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/tosot-by-gree-single-split-airco-sets/4087/ (attempt 1/3)
+    Found 15 products
+
+  Total products in category: 15
+
+  [1/15] Tosot PULAR by GREE single split airco R32 2,2 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-pular-by-gree-single-split-airco-r32-22-kw-set/29375/ (attempt 1/3)
+    Name: Tosot PULAR by GREE single split airco R32 2,2 kW set
+    Brand: 
+    SKU: 81002011
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81002011_main.webp
+    [Image] Downloaded: 81002011_energy.webp
+    [Image] Downloaded: 81002011_dimensions.webp
+    [Image] Downloaded: 81002011_dimensions2.webp
+    [Image] Downloaded: 81002011_other1.webp
+    [Image] Downloaded: 81001690_other2.webp
+    [Image] Downloaded: 81002011_other3.webp
+    [Image] Downloaded: 81001460_other3.webp
+    [Image] Downloaded: 81002011_other5.webp
+    [Image] Downloaded: 81002011_other6.webp
+
+  [2/15] Tosot PULAR by GREE single split airco R32 2,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-pular-by-gree-single-split-airco-r32-25-kw-set/28588/ (attempt 1/3)
+    Name: Tosot PULAR by GREE single split airco R32 2,5 kW set
+    Brand: 
+    SKU: 81002012
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81002011_main.webp
+    [Image] Downloaded: 81002012_energy.webp
+    [Image] Downloaded: 81002012_dimensions.webp
+    [Image] Downloaded: PULAR-GWH24AGD2-I-R32-1.webp
+    [Image] Downloaded: 81002003_other1.webp
+    [Image] Downloaded: 81002003_other3.webp
+    [Image] Downloaded: 81002012_other4.webp
+    [Image] Downloaded: 81002012_other5.webp
+    [Image] Downloaded: 81002003_other2.webp
+    [Image] Downloaded: 81002012_other7.webp
+
+  [3/15] Tosot PULAR by GREE single split airco R32 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-pular-by-gree-single-split-airco-r32-35-kw-set/28585/ (attempt 1/3)
+    Name: Tosot PULAR by GREE single split airco R32 3,5 kW set
+    Brand: 
+    SKU: 81002013
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81002011_main.webp
+    [Image] Downloaded: 81002013_energy.webp
+    [Image] Downloaded: 81002013_dimensions.webp
+    [Image] Downloaded: PULAR-GWH24AGD2-I-R32-1.webp
+    [Image] Downloaded: 81002003_other1.webp
+    [Image] Downloaded: 81002003_other3.webp
+    [Image] Downloaded: 81002013_other4.webp
+    [Image] Downloaded: 81002012_other5.webp
+    [Image] Downloaded: 81002003_other2.webp
+    [Image] Downloaded: 81002012_other7.webp
+
+  [4/15] Tosot PULAR by GREE single split airco R32 5,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-pular-by-gree-single-split-airco-r32-50-kw-set/28586/ (attempt 1/3)
+    Name: Tosot PULAR by GREE single split airco R32 5,0 kW set
+    Brand: 
+    SKU: 81002014
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81002011_main.webp
+    [Image] Downloaded: 81002014_energy.webp
+    [Image] Downloaded: 81002014_dimensions.webp
+    [Image] Downloaded: PULAR-GWH24AGD2-I-R32-1.webp
+    [Image] Downloaded: 81002003_other1.webp
+    [Image] Downloaded: 81002014_other3.webp
+    [Image] Downloaded: 81002003_other3.webp
+    [Image] Downloaded: 81002012_other5.webp
+    [Image] Downloaded: 81002003_other2.webp
+    [Image] Downloaded: 81002012_other7.webp
+
+  [5/15] Tosot PULAR by GREE single split airco R32 7,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-pular-by-gree-single-split-airco-r32-70-kw-set/28587/ (attempt 1/3)
+    Name: Tosot PULAR by GREE single split airco R32 7,0 kW set
+    Brand: 
+    SKU: 81002015
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81002011_main.webp
+    [Image] Downloaded: 81002015_energy.webp
+    [Image] Downloaded: 81002015_dimensions.webp
+    [Image] Downloaded: PULAR-GWH24AGD2-I-R32-1.webp
+    [Image] Downloaded: 81002003_other1.webp
+    [Image] Downloaded: 81002015_other3.webp
+    [Image] Downloaded: 81002012_other5.webp
+    [Image] Downloaded: 81002003_other3.webp
+    [Image] Downloaded: 81002003_other2.webp
+    [Image] Downloaded: 81002012_other7.webp
+
+  [6/15] Tosot CLIVIA by GREE Inverter airco Black R32 2,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-clivia-by-gree-inverter-airco-black-r32-25-kw-set/29374/ (attempt 1/3)
+    Name: Tosot CLIVIA by GREE Inverter airco Black R32 2,5 kW set
+    Brand: 
+    SKU: 81002032
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81002032_main.webp
+    [Image] Downloaded: 81002032_energy.webp
+    [Image] Downloaded: 81002032_dimensions.webp
+    [Image] Downloaded: 81002032_dimensions2.webp
+    [Image] Downloaded: 81002032_other1.webp
+    [Image] Downloaded: 81002032_other2.webp
+    [Image] Downloaded: 81002032_other3.webp
+    [Image] Downloaded: 81002032_other4.webp
+    [Image] Downloaded: 81002032_other5.webp
+    [Image] Downloaded: 81002032_other6.webp
+
+  [7/15] Tosot CLIVIA by GREE Inverter airco Black R32 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-clivia-by-gree-inverter-airco-black-r32-35-kw-set/29373/ (attempt 1/3)
+    Name: Tosot CLIVIA by GREE Inverter airco Black R32 3,5 kW set
+    Brand: 
+    SKU: 81002033
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81002032_main.webp
+    [Image] Downloaded: 81002033_energy.webp
+    [Image] Downloaded: 81002032_dimensions.webp
+    [Image] Downloaded: 81002032_dimensions2.webp
+    [Image] Downloaded: 81002032_other1.webp
+    [Image] Downloaded: 81002032_other2.webp
+    [Image] Downloaded: 81002032_other3.webp
+    [Image] Downloaded: 81002032_other4.webp
+    [Image] Downloaded: 81002032_other5.webp
+    [Image] Downloaded: 81002032_other6.webp
+
+  [8/15] Tosot CLIVIA by GREE Inverter airco Black R32 5,3 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-clivia-by-gree-inverter-airco-black-r32-53-kw-set/29372/ (attempt 1/3)
+    Name: Tosot CLIVIA by GREE Inverter airco Black R32 5,3 kW set
+    Brand: 
+    SKU: 81002034
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81002032_main.webp
+    [Image] Downloaded: 81002034_energy.webp
+    [Image] Downloaded: 81002032_dimensions.webp
+    [Image] Downloaded: 81002032_dimensions2.webp
+    [Image] Downloaded: 81002032_other1.webp
+    [Image] Downloaded: 81002032_other2.webp
+    [Image] Downloaded: 81002032_other3.webp
+    [Image] Downloaded: 81002032_other4.webp
+    [Image] Downloaded: 81002032_other5.webp
+    [Image] Downloaded: 81002032_other6.webp
+
+  [9/15] Tosot CLIVIA by GREE Inverter airco Black R32 7,7 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-clivia-by-gree-inverter-airco-black-r32-77-kw-set/29371/ (attempt 1/3)
+    Name: Tosot CLIVIA by GREE Inverter airco Black R32 7,7 kW set
+    Brand: 
+    SKU: 81002035
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81002032_main.webp
+    [Image] Downloaded: 81002035_energy.webp
+    [Image] Downloaded: 81002032_dimensions.webp
+    [Image] Downloaded: 81002032_dimensions2.webp
+    [Image] Downloaded: 81002032_other1.webp
+    [Image] Downloaded: 81002032_other2.webp
+    [Image] Downloaded: 81002032_other3.webp
+    [Image] Downloaded: 81002032_other4.webp
+    [Image] Downloaded: 81002032_other5.webp
+    [Image] Downloaded: 81002032_other6.webp
+
+  [10/15] Tosot CLIVIA by GREE Inverter airco White R32 2,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-clivia-by-gree-inverter-airco-white-r32-25-kw-set/29370/ (attempt 1/3)
+    Name: Tosot CLIVIA by GREE Inverter airco White R32 2,5 kW set
+    Brand: 
+    SKU: 81002036
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81002036_main.webp
+    [Image] Downloaded: 81002036_energy.webp
+    [Image] Downloaded: 81002036_dimensions.webp
+    [Image] Downloaded: 81002036_dimensions2.webp
+    [Image] Downloaded: 81002032_other1.webp
+    [Image] Downloaded: 81002036_other2.webp
+    [Image] Downloaded: 81002036_other3.webp
+    [Image] Downloaded: 81002036_other4.webp
+    [Image] Downloaded: 81002036_other5.webp
+    [Image] Downloaded: 81002036_other6.webp
+
+  [11/15] Tosot CLIVIA by GREE Inverter airco White R32 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-clivia-by-gree-inverter-airco-white-r32-35-kw-set/29369/ (attempt 1/3)
+    Name: Tosot CLIVIA by GREE Inverter airco White R32 3,5 kW set
+    Brand: 
+    SKU: 81002037
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81002036_main.webp
+    [Image] Downloaded: 81002037_energy.webp
+    [Image] Downloaded: 81002036_dimensions.webp
+    [Image] Downloaded: 81002036_dimensions2.webp
+    [Image] Downloaded: 81002032_other1.webp
+    [Image] Downloaded: 81002036_other2.webp
+    [Image] Downloaded: 81002036_other3.webp
+    [Image] Downloaded: 81002036_other4.webp
+    [Image] Downloaded: 81002036_other5.webp
+    [Image] Downloaded: 81002036_other6.webp
+
+  [12/15] Tosot CLIVIA by GREE Inverter airco White R32 5,3 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-clivia-by-gree-inverter-airco-white-r32-53-kw-set/29368/ (attempt 1/3)
+    Name: Tosot CLIVIA by GREE Inverter airco White R32 5,3 kW set
+    Brand: 
+    SKU: 81002038
+    Specs: 0
+    Images: 9
+    [Image] Downloaded: 81002036_main.webp
+    [Image] Downloaded: sk22563_81002038_energy.webp
+    [Image] Downloaded: sk22564_81002038_dimensions.webp
+    [Image] Downloaded: 81002032_other1.webp
+    [Image] Downloaded: 81002036_other2.webp
+    [Image] Downloaded: 81002036_other3.webp
+    [Image] Downloaded: 81002036_other4.webp
+    [Image] Downloaded: 81002036_other5.webp
+    [Image] Downloaded: 81002036_other6.webp
+
+  [13/15] Tosot CLIVIA by GREE Inverter airco White R32 7,7 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-clivia-by-gree-inverter-airco-white-r32-77-kw-set/29366/ (attempt 1/3)
+    Name: Tosot CLIVIA by GREE Inverter airco White R32 7,7 kW set
+    Brand: 
+    SKU: 81002039
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81002036_main.webp
+    [Image] Downloaded: 81002039_energy.webp
+    [Image] Downloaded: 81002036_dimensions2.webp
+    [Image] Downloaded: 81002036_dimensions.webp
+    [Image] Downloaded: 81002032_other1.webp
+    [Image] Downloaded: 81002036_other2.webp
+    [Image] Downloaded: 81002036_other3.webp
+    [Image] Downloaded: 81002036_other4.webp
+    [Image] Downloaded: 81002036_other5.webp
+    [Image] Downloaded: 81002036_other6.webp
+
+  [14/15] Tosot CONSOLE by GREE Inverter airco R32 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-console-by-gree-inverter-airco-r32-35-kw-set/29367/ (attempt 1/3)
+    Name: Tosot CONSOLE by GREE Inverter airco R32 3,5 kW set
+    Brand: 
+    SKU: 81002042
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81002042_main.webp
+    [Image] Downloaded: 81002042_energy.webp
+    [Image] Downloaded: 81002042_dimensions.webp
+    [Image] Downloaded: 81002042_dimensions2.webp
+    [Image] Downloaded: 81002042_other1.webp
+    [Image] Downloaded: 81002042_other2.webp
+    [Image] Downloaded: 81002042_other3.webp
+
+  [15/15] Tosot CONSOLE by GREE Inverter airco R32 5,2 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-console-by-gree-inverter-airco-r32-52-kw-set/30113/ (attempt 1/3)
+    Name: Tosot CONSOLE by GREE Inverter airco R32 5,2 kW set
+    Brand: 
+    SKU: 81002043
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81002043_main.webp
+    [Image] Downloaded: 81002043_energy.webp
+    [Image] Downloaded: 81002043_dimensions.webp
+    [Image] Downloaded: 81002043_dimensions2.webp
+    [Image] Downloaded: 81002042_other1.webp
+    [Image] Downloaded: 81002042_other3.webp
+    [Image] Downloaded: 81002043_other3.webp
+
+  Waiting before next category...
+
+[3/8] Category: MaxiCool Single-split
+--------------------------------------------------
+
+  Page 1:
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/maxicool-single-split-airco-sets/4088/ (attempt 1/3)
+    Found 9 products
+
+  Total products in category: 9
+
+  [1/9] MaxiCool INFINI 2,5 kW R32 Invertor airco 09HDI met WIFI set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/maxicool-infini-25-kw-r32-invertor-airco-09hdi-met-wifi-set/30173/ (attempt 1/3)
+    Name: MaxiCool INFINI 2,5 kW R32 Invertor airco 09HDI met WIFI set
+    Brand: 
+    SKU: 81002062
+    Specs: 0
+    Images: 9
+    [Image] Downloaded: sk21947_MaxiCool_infini_main.webp
+    [Image] Downloaded: sk17398_81002062_dimensions.webp
+    [Image] Downloaded: sk17399_81002062_dimensions_2.webp
+    [Image] Downloaded: sk21953_MaxiCool_infini_other6.webp
+    [Image] Downloaded: sk21952_MaxiCool_infini_other5.webp
+    [Image] Downloaded: sk21951_MaxiCool_infini_other4.webp
+    [Image] Downloaded: sk21950_MaxiCool_infini_other3.webp
+    [Image] Downloaded: sk21949_MaxiCool_infini_other2.webp
+    [Image] Downloaded: sk21948_MaxiCool_infini_other1.webp
+
+  [2/9] MaxiCool INFINI 3,5 kW R32 Inverter airco 12HDI met WIFI set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/maxicool-infini-35-kw-r32-inverter-airco-12hdi-met-wifi-set/30172/ (attempt 1/3)
+    Name: MaxiCool INFINI 3,5 kW R32 Inverter airco 12HDI met WIFI set
+    Brand: 
+    SKU: 81002063
+    Specs: 0
+    Images: 9
+    [Image] Downloaded: sk21947_MaxiCool_infini_main.webp
+    [Image] Downloaded: sk17398_81002062_dimensions.webp
+    [Image] Downloaded: sk17399_81002062_dimensions_2.webp
+    [Image] Downloaded: sk21953_MaxiCool_infini_other6.webp
+    [Image] Downloaded: sk21952_MaxiCool_infini_other5.webp
+    [Image] Downloaded: sk21951_MaxiCool_infini_other4.webp
+    [Image] Downloaded: sk21950_MaxiCool_infini_other3.webp
+    [Image] Downloaded: sk21949_MaxiCool_infini_other2.webp
+    [Image] Downloaded: sk21948_MaxiCool_infini_other1.webp
+
+  [3/9] MaxiCool INFINI 5 kW R32 Inverter airco 18HDI met WIFI set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/maxicool-infini-5-kw-r32-inverter-airco-18hdi-met-wifi-set/30174/ (attempt 1/3)
+    Name: MaxiCool INFINI 5 kW R32 Inverter airco 18HDI met WIFI set
+    Brand: 
+    SKU: 81002064
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: sk21947_MaxiCool_infini_main.webp
+    [Image] Downloaded: sk17396_81002064_Energielabel.webp
+    [Image] Downloaded: sk17398_81002062_dimensions.webp
+    [Image] Downloaded: sk17399_81002062_dimensions_2.webp
+    [Image] Downloaded: sk21948_MaxiCool_infini_other1.webp
+    [Image] Downloaded: sk21949_MaxiCool_infini_other2.webp
+    [Image] Downloaded: sk21950_MaxiCool_infini_other3.webp
+    [Image] Downloaded: sk21951_MaxiCool_infini_other4.webp
+    [Image] Downloaded: sk21952_MaxiCool_infini_other5.webp
+    [Image] Downloaded: sk21953_MaxiCool_infini_other6.webp
+
+  [4/9] MaxiCool INFINI 7 kW R32 Inverter airco 24HDI met WIFI set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/maxicool-infini-7-kw-r32-inverter-airco-24hdi-met-wifi-set/30175/ (attempt 1/3)
+    Name: MaxiCool INFINI 7 kW R32 Inverter airco 24HDI met WIFI set
+    Brand: 
+    SKU: 81002065
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: sk21947_MaxiCool_infini_main.webp
+    [Image] Downloaded: sk17397_81002065_Energielabel.webp
+    [Image] Downloaded: sk17398_81002062_dimensions.webp
+    [Image] Downloaded: sk17399_81002062_dimensions_2.webp
+    [Image] Downloaded: sk21953_MaxiCool_infini_other6.webp
+    [Image] Downloaded: sk21952_MaxiCool_infini_other5.webp
+    [Image] Downloaded: sk21951_MaxiCool_infini_other4.webp
+    [Image] Downloaded: sk21950_MaxiCool_infini_other3.webp
+    [Image] Downloaded: sk21949_MaxiCool_infini_other2.webp
+    [Image] Downloaded: sk21948_MaxiCool_infini_other1.webp
+
+  [5/9] Maxicool Inverter Console airco R32 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/maxicool-inverter-console-airco-r32-35-kw-set/29381/ (attempt 1/3)
+    Name: Maxicool Inverter Console airco R32 3,5 kW set
+    Brand: 
+    SKU: 81001987
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81001987_main.webp
+    [Image] Downloaded: 81001987_energy.webp
+    [Image] Downloaded: 81001987_dimensions.webp
+    [Image] Downloaded: 81001987_dimensions2.webp
+    [Image] Downloaded: 81001987_dimensions3.webp
+    [Image] Downloaded: 81001987_other1.webp
+    [Image] Downloaded: 81001987_other2.webp
+    [Image] Downloaded: 81001987_other3.webp
+    [Image] Downloaded: 81001987_other4.webp
+    [Image] Downloaded: 81001987_other5.webp
+
+  [6/9] Maxicool Inverter Console airco R32 5,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/maxicool-inverter-console-airco-r32-50-kw-set/29380/ (attempt 1/3)
+    Name: Maxicool Inverter Console airco R32 5,0 kW set
+    Brand: 
+    SKU: 81001988
+    Specs: 0
+    Images: 10
+    [Image] Downloaded: 81001987_main.webp
+    [Image] Downloaded: 81001988_energy.webp
+    [Image] Downloaded: 81001987_dimensions.webp
+    [Image] Downloaded: 81001987_dimensions2.webp
+    [Image] Downloaded: 81001987_dimensions3.webp
+    [Image] Downloaded: 81001987_other2.webp
+    [Image] Downloaded: 81001987_other1.webp
+    [Image] Downloaded: 81001987_other3.webp
+    [Image] Downloaded: 81001987_other4.webp
+    [Image] Downloaded: 81001987_other5.webp
+
+  [7/9] MaxiCool AURORA Inverter airco R32 2,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/maxicool-aurora-inverter-airco-r32-25-kw-set/29388/ (attempt 1/3)
+    Name: MaxiCool AURORA Inverter airco R32 2,5 kW set
+    Brand: 
+    SKU: 81001970
+    Specs: 0
+    Images: 8
+    [Image] Downloaded: 81001970_main.webp
+    [Image] Downloaded: 81001970_energy.webp
+    [Image] Downloaded: 81001666_dimensions2.webp
+    [Image] Downloaded: 81001970_dimensions2.webp
+    [Image] Downloaded: 81001666_other2.webp
+    [Image] Downloaded: 81001666_other3.webp
+    [Image] Downloaded: 81001970_other3.webp
+    [Image] Downloaded: 81001666_other4.webp
+
+  [8/9] MaxiCool AURORA Inverter airco R32 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/maxicool-aurora-inverter-airco-r32-35-kw-set/29387/ (attempt 1/3)
+    Name: MaxiCool AURORA Inverter airco R32 3,5 kW set
+    Brand: 
+    SKU: 81001971
+    Specs: 0
+    Images: 8
+    [Image] Downloaded: 81001970_main.webp
+    [Image] Downloaded: 81001971_energy.webp
+    [Image] Downloaded: 81001666_dimensions2.webp
+    [Image] Downloaded: 81001970_dimensions2.webp
+    [Image] Downloaded: 81001666_other2.webp
+    [Image] Downloaded: 81001666_other3.webp
+    [Image] Downloaded: 81001970_other3.webp
+    [Image] Downloaded: 81001666_other4.webp
+
+  [9/9] MaxiCool AURORA Inverter airco R32 7,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/maxicool-aurora-inverter-airco-r32-70-kw-set/29385/ (attempt 1/3)
+    Name: MaxiCool AURORA Inverter airco R32 7,0 kW set
+    Brand: 
+    SKU: 81001973
+    Specs: 0
+    Images: 8
+    [Image] Downloaded: 81001970_main.webp
+    [Image] Downloaded: 81001973_energy.webp
+    [Image] Downloaded: 81001973_dimensions.webp
+    [Image] Downloaded: 81001973_dimensions2.webp
+    [Image] Downloaded: 81001666_other2.webp
+    [Image] Downloaded: 81001666_other3.webp
+    [Image] Downloaded: 81001970_other3.webp
+    [Image] Downloaded: 81001666_other4.webp
+
+  Waiting before next category...
+
+[4/8] Category: LG Multi-split
+--------------------------------------------------
+
+  Page 1:
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/lg-multi-split-airco/4089/ (attempt 1/3)
+    Found 0 products
+
+  Total products in category: 0
+
+  Waiting before next category...
+
+[5/8] Category: Tosot Multi-split
+--------------------------------------------------
+
+  Page 1:
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/tosot-by-gree-multi-split-airco/4090/ (attempt 1/3)
+    Found 0 products
+
+  Total products in category: 0
+
+  Waiting before next category...
+
+[6/8] Category: MaxiCool Multi-split
+--------------------------------------------------
+
+  Page 1:
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/maxicool-multi-split-airco/4091/ (attempt 1/3)
+    Found 0 products
+
+  Total products in category: 0
+
+  Waiting before next category...
+
+[7/8] Category: LG Commercieel
+--------------------------------------------------
+
+  Page 1:
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/lg-commerciele-airco/4095/ (attempt 1/3)
+    Found 24 products
+
+  Total products in category: 24
+
+  [1/24] LG Low static Inverter kanaal airco CL09F-S R32 2,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-low-static-inverter-kanaal-airco-cl09f-s-r32-25-kw-set/29582/ (attempt 1/3)
+    Name: LG Low static Inverter kanaal airco CL09F-S R32 2,5 kW set
+    Brand: 
+    SKU: 81001391
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001385_main.webp
+    [Image] Downloaded: 81001391_energy.webp
+    [Image] Downloaded: 81001385_dimensions.webp
+    [Image] Downloaded: 81001385_dimensions2.webp
+    [Image] Downloaded: 81001363_other2.webp
+    [Image] Downloaded: 81001385_other2.webp
+    [Image] Downloaded: 81001363_other3.webp
+
+  [2/24] LG Low static Inverter kanaal airco CL12F-S R32 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-low-static-inverter-kanaal-airco-cl12f-s-r32-35-kw-set/29581/ (attempt 1/3)
+    Name: LG Low static Inverter kanaal airco CL12F-S R32 3,5 kW set
+    Brand: 
+    SKU: 81001392
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001385_main.webp
+    [Image] Downloaded: 81001392_energy.webp
+    [Image] Downloaded: 81001385_dimensions.webp
+    [Image] Downloaded: 81001385_dimensions2.webp
+    [Image] Downloaded: 81001367_other3.webp
+    [Image] Downloaded: 81001392_other2.webp
+    [Image] Downloaded: 81001392_other3.webp
+
+  [3/24] LG Inverter CL18F-Compact Kanaal airco R32 5,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-inverter-cl18f-compact-kanaal-airco-r32-50-kw-set/29588/ (attempt 1/3)
+    Name: LG Inverter CL18F-Compact Kanaal airco R32 5,0 kW set
+    Brand: 
+    SKU: 81001385
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001385_main.webp
+    [Image] Downloaded: 81001385_energy.webp
+    [Image] Downloaded: 81001385_dimensions.webp
+    [Image] Downloaded: 81001385_dimensions2.webp
+    [Image] Downloaded: 81001363_other2.webp
+    [Image] Downloaded: 81001385_other2.webp
+    [Image] Downloaded: 81001363_other3.webp
+
+  [4/24] LG Low static Inverter kanaal airco CL18F-S R32 5,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-low-static-inverter-kanaal-airco-cl18f-s-r32-50-kw-set/29580/ (attempt 1/3)
+    Name: LG Low static Inverter kanaal airco CL18F-S R32 5,0 kW set
+    Brand: 
+    SKU: 81001393
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001385_main.webp
+    [Image] Downloaded: 81001385_energy.webp
+    [Image] Downloaded: 81001385_dimensions.webp
+    [Image] Downloaded: 81001385_dimensions2.webp
+    [Image] Downloaded: 81001386_other1.webp
+    [Image] Downloaded: 81001386_other2.webp
+    [Image] Downloaded: 81001363_other3.webp
+
+  [5/24] LG Low static Inverter kanaal airco CL24F-Compact R32 6,8 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-low-static-inverter-kanaal-airco-cl24f-compact-r32-68-kw-set/29587/ (attempt 1/3)
+    Name: LG Low static Inverter kanaal airco CL24F-Compact R32 6,8 kW set
+    Brand: 
+    SKU: 81001386
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001385_main.webp
+    [Image] Downloaded: 81001386_energy.webp
+    [Image] Downloaded: 81001385_dimensions.webp
+    [Image] Downloaded: 81001385_dimensions2.webp
+    [Image] Downloaded: 81001386_other1.webp
+    [Image] Downloaded: 81001386_other2.webp
+    [Image] Downloaded: 81001363_other3.webp
+
+  [6/24] LG Low static Inverter kanaal airco CL24F-S R32 6,8 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-low-static-inverter-kanaal-airco-cl24f-s-r32-68-kw-set/29579/ (attempt 1/3)
+    Name: LG Low static Inverter kanaal airco CL24F-S R32 6,8 kW set
+    Brand: 
+    SKU: 81001394
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001385_main.webp
+    [Image] Downloaded: 81001386_energy.webp
+    [Image] Downloaded: 81001385_dimensions.webp
+    [Image] Downloaded: 81001385_dimensions2.webp
+    [Image] Downloaded: 81001363_other2.webp
+    [Image] Downloaded: 81001385_other2.webp
+    [Image] Downloaded: 81001363_other3.webp
+
+  [7/24] LG Mid static Inverter kanaal airco CM18F-Compact R32 5,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-mid-static-inverter-kanaal-airco-cm18f-compact-r32-50-kw-set/29586/ (attempt 1/3)
+    Name: LG Mid static Inverter kanaal airco CM18F-Compact R32 5,0 kW set
+    Brand: 
+    SKU: 81001387
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001385_main.webp
+    [Image] Downloaded: 81001387_energy.webp
+    [Image] Downloaded: 81001385_dimensions.webp
+    [Image] Downloaded: 81001385_dimensions2.webp
+    [Image] Downloaded: 81001363_other2.webp
+    [Image] Downloaded: 81001387_other2.webp
+    [Image] Downloaded: 81001363_other3.webp
+
+  [8/24] LG Mid static Inverter kanaal airco CM18F-S R32 5,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-mid-static-inverter-kanaal-airco-cm18f-s-r32-50-kw-set/29578/ (attempt 1/3)
+    Name: LG Mid static Inverter kanaal airco CM18F-S R32 5,0 kW set
+    Brand: 
+    SKU: 81001395
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001385_main.webp
+    [Image] Downloaded: 81001395_energy.webp
+    [Image] Downloaded: 81001385_dimensions.webp
+    [Image] Downloaded: 81001385_dimensions2.webp
+    [Image] Downloaded: 81001386_other1.webp
+    [Image] Downloaded: 81001387_other2.webp
+    [Image] Downloaded: 81001388_other3.webp
+
+  [9/24] LG Mid static Inverter kanaal airco CM24F-Compact R32 6,8 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-mid-static-inverter-kanaal-airco-cm24f-compact-r32-68-kw-set/29585/ (attempt 1/3)
+    Name: LG Mid static Inverter kanaal airco CM24F-Compact R32 6,8 kW set
+    Brand: 
+    SKU: 81001388
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001388_main.webp
+    [Image] Downloaded: 81001388_energy.webp
+    [Image] Downloaded: 81001388_dimensions.webp
+    [Image] Downloaded: 81001385_dimensions.webp
+    [Image] Downloaded: 81001386_other1.webp
+    [Image] Downloaded: 81001387_other2.webp
+    [Image] Downloaded: 81001388_other3.webp
+
+  [10/24] LG Mid static Inverter kanaal airco CM24F-S R32 6,8 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-mid-static-inverter-kanaal-airco-cm24f-s-r32-68-kw-set/29577/ (attempt 1/3)
+    Name: LG Mid static Inverter kanaal airco CM24F-S R32 6,8 kW set
+    Brand: 
+    SKU: 81001396
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001388_main.webp
+    [Image] Downloaded: 81001396_energy.webp
+    [Image] Downloaded: 81001385_dimensions2.webp
+    [Image] Downloaded: 81001385_dimensions.webp
+    [Image] Downloaded: 81001386_other1.webp
+    [Image] Downloaded: 81001387_other2.webp
+    [Image] Downloaded: 81001388_other3.webp
+
+  [11/24] LG Cassette airco met afdekplaat CT09F-S R32 2,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-cassette-airco-met-afdekplaat-ct09f-s-r32-25-kw-set/29606/ (attempt 1/3)
+    Name: LG Cassette airco met afdekplaat CT09F-S R32 2,5 kW set
+    Brand: 
+    SKU: 81001367
+    Specs: 0
+    Images: 8
+    [Image] Downloaded: 81001367_main.webp
+    [Image] Downloaded: 81001367_energy.webp
+    [Image] Downloaded: 81001367_dimensions.webp
+    [Image] Downloaded: 81001367_dimensions2.webp
+    [Image] Downloaded: 81001367_dimensions3.webp
+    [Image] Downloaded: 81001367_other1.webp
+    [Image] Downloaded: 81001367_other2.webp
+    [Image] Downloaded: 81001367_other3.webp
+
+  [12/24] LG Cassette airco met afdekplaat CT12F-S R32 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-cassette-airco-met-afdekplaat-ct12f-s-r32-35-kw-set/29605/ (attempt 1/3)
+    Name: LG Cassette airco met afdekplaat CT12F-S R32 3,5 kW set
+    Brand: 
+    SKU: 81001368
+    Specs: 0
+    Images: 8
+    [Image] Downloaded: 81001367_main.webp
+    [Image] Downloaded: 81001368_energy.webp
+    [Image] Downloaded: 81001367_dimensions2.webp
+    [Image] Downloaded: 81001367_dimensions.webp
+    [Image] Downloaded: 81001367_dimensions3.webp
+    [Image] Downloaded: 81001367_other1.webp
+    [Image] Downloaded: 81001367_other3.webp
+    [Image] Downloaded: 81001367_other2.webp
+
+  [13/24] LG Cassette airco met afdekplaat CT18F-Compact R32 5,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-cassette-airco-met-afdekplaat-ct18f-compact-r32-50-kw-set/29610/ (attempt 1/3)
+    Name: LG Cassette airco met afdekplaat CT18F-Compact R32 5,0 kW set
+    Brand: 
+    SKU: 81001363
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001363_main.webp
+    [Image] Downloaded: 81001363_energy.webp
+    [Image] Downloaded: 81001363_dimensions.webp
+    [Image] Downloaded: 81001363_dimensions2.webp
+    [Image] Downloaded: 81001363_other1.webp
+    [Image] Downloaded: 81001363_other2.webp
+    [Image] Downloaded: 81001363_other3.webp
+
+  [14/24] LG Cassette airco met afdekplaat CT18F-S R32 5,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-cassette-airco-met-afdekplaat-ct18f-s-r32-50-kw-set/29603/ (attempt 1/3)
+    Name: LG Cassette airco met afdekplaat CT18F-S R32 5,0 kW set
+    Brand: 
+    SKU: 81001369
+    Specs: 0
+    Images: 8
+    [Image] Downloaded: 81001367_main.webp
+    [Image] Downloaded: 81001369_energy.webp
+    [Image] Downloaded: 81001367_dimensions2.webp
+    [Image] Downloaded: 81001367_dimensions3.webp
+    [Image] Downloaded: 81001367_dimensions.webp
+    [Image] Downloaded: 81001367_other1.webp
+    [Image] Downloaded: 81001367_other3.webp
+    [Image] Downloaded: 81001367_other2.webp
+
+  [15/24] LG Cassette airco met afdekplaat CT24F-Compact R32 6,8 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-cassette-airco-met-afdekplaat-ct24f-compact-r32-68-kw-set/29609/ (attempt 1/3)
+    Name: LG Cassette airco met afdekplaat CT24F-Compact R32 6,8 kW set
+    Brand: 
+    SKU: 81001364
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001363_main.webp
+    [Image] Downloaded: 81001364_energy.webp
+    [Image] Downloaded: 81001364_dimensions.webp
+    [Image] Downloaded: 81001364_dimensions2.webp
+    [Image] Downloaded: 81001364_other1.webp
+    [Image] Downloaded: 81001364_other2.webp
+    [Image] Downloaded: 81001364_other3.webp
+
+  [16/24] LG Cassette airco met afdekplaat CT24F-S R32 7,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-cassette-airco-met-afdekplaat-ct24f-s-r32-70-kw-set/29604/ (attempt 1/3)
+    Name: LG Cassette airco met afdekplaat CT24F-S R32 7,0 kW set
+    Brand: 
+    SKU: 81001370
+    Specs: 0
+    Images: 8
+    [Image] Downloaded: 81001367_main.webp
+    [Image] Downloaded: 81001370_energy.webp
+    [Image] Downloaded: 81001370_dimensions.webp
+    [Image] Downloaded: 81001370_dimensions2.webp
+    [Image] Downloaded: 81001370_dimensions3.webp
+    [Image] Downloaded: 81001367_other1.webp
+    [Image] Downloaded: 81001367_other3.webp
+    [Image] Downloaded: 81001367_other2.webp
+
+  [17/24] LG Mid static Inverter kanaal airco UM30F-Compact R32 8,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-mid-static-inverter-kanaal-airco-um30f-compact-r32-80-kw-set/29584/ (attempt 1/3)
+    Name: LG Mid static Inverter kanaal airco UM30F-Compact R32 8,0 kW set
+    Brand: 
+    SKU: 81001389
+    Specs: 0
+    Images: 6
+    [Image] Downloaded: 81001388_main.webp
+    [Image] Downloaded: 81001389_energy.webp
+    [Image] Downloaded: 81001389_dimensions.webp
+    [Image] Downloaded: 81001386_other1.webp
+    [Image] Downloaded: 81001387_other2.webp
+    [Image] Downloaded: 81001388_other3.webp
+
+  [18/24] LG Mid static Inverter kanaal airco UM30F-S R32 8,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-mid-static-inverter-kanaal-airco-um30f-s-r32-80-kw-set/29576/ (attempt 1/3)
+    Name: LG Mid static Inverter kanaal airco UM30F-S R32 8,0 kW set
+    Brand: 
+    SKU: 81001397
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001390_main.webp
+    [Image] Downloaded: 81001397_energy.webp
+    [Image] Downloaded: 81001389_dimensions.webp
+    [Image] Downloaded: 81001397_other1.webp
+    [Image] Downloaded: 81001397_other2.webp
+    [Image] Downloaded: 81001397_other3.webp
+    [Image] Downloaded: 81001397_other4.webp
+
+  [19/24] LG Mid static Inverter kanaal airco UM36F-Compact R32 9,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-mid-static-inverter-kanaal-airco-um36f-compact-r32-95-kw-set/29583/ (attempt 1/3)
+    Name: LG Mid static Inverter kanaal airco UM36F-Compact R32 9,5 kW set
+    Brand: 
+    SKU: 81001390
+    Specs: 0
+    Images: 5
+    [Image] Downloaded: 81001390_main.webp
+    [Image] Downloaded: 81001390_dimensions.webp
+    [Image] Downloaded: 81001390_other1.webp
+    [Image] Downloaded: 81001390_other2.webp
+    [Image] Downloaded: 81001390_other3.webp
+
+  [20/24] LG Mid static Inverter kanaal airco UM36F-S R32 9,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-mid-static-inverter-kanaal-airco-um36f-s-r32-95-kw-set/29575/ (attempt 1/3)
+    Name: LG Mid static Inverter kanaal airco UM36F-S R32 9,5 kW set
+    Brand: 
+    SKU: 81001398
+    Specs: 0
+    Images: 5
+    [Image] Downloaded: 81001398_main.webp
+    [Image] Downloaded: 81001398_dimensions.webp
+    [Image] Downloaded: 81001372_other2.webp
+    [Image] Downloaded: 81001397_other3.webp
+    [Image] Downloaded: 81001397_other2.webp
+
+  [21/24] LG Mid static Inverter kanaal airco UM42F-S R32 12,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-mid-static-inverter-kanaal-airco-um42f-s-r32-120-kw-set/29574/ (attempt 1/3)
+    Name: LG Mid static Inverter kanaal airco UM42F-S R32 12,0 kW set
+    Brand: 
+    SKU: 81001399
+    Specs: 0
+    Images: 4
+    [Image] Downloaded: 81001398_main.webp
+    [Image] Downloaded: 81001397_other2.webp
+    [Image] Downloaded: 81001397_other3.webp
+    [Image] Downloaded: 81001372_other2.webp
+
+  [22/24] LG Mid static Inverter kanaal airco UM48F-S R32 13,4 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-mid-static-inverter-kanaal-airco-um48f-s-r32-134-kw-set/29573/ (attempt 1/3)
+    Name: LG Mid static Inverter kanaal airco UM48F-S R32 13,4 kW set
+    Brand: 
+    SKU: 81001400
+    Specs: 0
+    Images: 4
+    [Image] Downloaded: 81001398_main.webp
+    [Image] Downloaded: 81001372_other2.webp
+    [Image] Downloaded: 81001397_other2.webp
+    [Image] Downloaded: 81001397_other3.webp
+
+  [23/24] LG Mid static Inverter kanaal airco UM60F-S R32 14,6 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-mid-static-inverter-kanaal-airco-um60f-s-r32-146-kw-set/29572/ (attempt 1/3)
+    Name: LG Mid static Inverter kanaal airco UM60F-S R32 14,6 kW set
+    Brand: 
+    SKU: 81001401
+    Specs: 0
+    Images: 4
+    [Image] Downloaded: 81001398_main.webp
+    [Image] Downloaded: 81001372_other2.webp
+    [Image] Downloaded: 81001397_other2.webp
+    [Image] Downloaded: 81001397_other3.webp
+
+  [24/24] LG Console Inverter wand airco UQ09-S R32 2,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/lg-console-inverter-wand-airco-uq09-s-r32-25-kw-set/29571/ (attempt 1/3)
+    Name: LG Console Inverter wand airco UQ09-S R32 2,5 kW set
+    Brand: 
+    SKU: 81001402
+    Specs: 0
+    Images: 8
+    [Image] Downloaded: 81001402_main.webp
+    [Image] Downloaded: 81001402_energy.webp
+    [Image] Downloaded: 81001402_dimensions.webp
+    [Image] Downloaded: 81001367_dimensions3.webp
+    [Image] Downloaded: 81001367_dimensions.webp
+    [Image] Downloaded: 81001402_other1.webp
+    [Image] Downloaded: 81001367_other3.webp
+    [Image] Downloaded: 81001402_other3.webp
+
+  Waiting before next category...
+
+[8/8] Category: Tosot Commercieel
+--------------------------------------------------
+
+  Page 1:
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/tosot-by-gree-commerciele-airco/4096/ (attempt 1/3)
+    Found 10 products
+
+  Total products in category: 10
+
+  [1/10] Tosot by GREE Inverter Cassette airco CTS-12R R32 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-by-gree-inverter-cassette-airco-cts-12r-r32-35-kw-set/29626/ (attempt 1/3)
+    Name: Tosot by GREE Inverter Cassette airco CTS-12R R32 3,5 kW set
+    Brand: 
+    SKU: 81001460
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001460_main.webp
+    [Image] Downloaded: 81001460_energy.webp
+    [Image] Downloaded: 81001460_dimensions.webp
+    [Image] Downloaded: 81001460_dimensions2.webp
+    [Image] Downloaded: 81001460_other1.webp
+    [Image] Downloaded: 81001460_other2.webp
+    [Image] Downloaded: 81001460_other3.webp
+
+  [2/10] Tosot by GREE Inverter Cassette airco CTS-18R R32 5,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-by-gree-inverter-cassette-airco-cts-18r-r32-50-kw-set/29553/ (attempt 1/3)
+    Name: Tosot by GREE Inverter Cassette airco CTS-18R R32 5,0 kW set
+    Brand: 
+    SKU: 81001461
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001460_main.webp
+    [Image] Downloaded: 81001461_energy.webp
+    [Image] Downloaded: 81001460_dimensions.webp
+    [Image] Downloaded: 81001460_dimensions2.webp
+    [Image] Downloaded: 81001460_other1.webp
+    [Image] Downloaded: 81001460_other2.webp
+    [Image] Downloaded: 81001460_other3.webp
+
+  [3/10] Tosot by GREE Inverter Cassette airco CTS-24R R32 7,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-by-gree-inverter-cassette-airco-cts-24r-r32-70-kw-set/29552/ (attempt 1/3)
+    Name: Tosot by GREE Inverter Cassette airco CTS-24R R32 7,0 kW set
+    Brand: 
+    SKU: 81001462
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001460_main.webp
+    [Image] Downloaded: 81001462_energy.webp
+    [Image] Downloaded: 81001462_dimensions1.webp
+    [Image] Downloaded: 81001460_dimensions2.webp
+    [Image] Downloaded: 81001460_other1.webp
+    [Image] Downloaded: 81001460_other2.webp
+    [Image] Downloaded: 81001460_other3.webp
+
+  [4/10] Tosot by GREE Inverter Cassette airco CTS-42R R32 12,1 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-by-gree-inverter-cassette-airco-cts-42r-r32-121-kw-set/29551/ (attempt 1/3)
+    Name: Tosot by GREE Inverter Cassette airco CTS-42R R32 12,1 kW set
+    Brand: 
+    SKU: 81001463
+    Specs: 0
+    Images: 6
+    [Image] Downloaded: 81001460_main.webp
+    [Image] Downloaded: 81001462_dimensions1.webp
+    [Image] Downloaded: 81001460_dimensions2.webp
+    [Image] Downloaded: 81001460_other1.webp
+    [Image] Downloaded: 81001460_other2.webp
+    [Image] Downloaded: 81001460_other3.webp
+
+  [5/10] Tosot by GREE Inverter Vloer/Plafond airco FTS-12R R32 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-by-gree-inverter-vloer-plafond-airco-fts-12r-r32-35-kw-set/29550/ (attempt 1/3)
+    Name: Tosot by GREE Inverter Vloer/Plafond airco FTS-12R R32 3,5 kW set
+    Brand: 
+    SKU: 81001467
+    Specs: 0
+    Images: 8
+    [Image] Downloaded: 81001467_main.webp
+    [Image] Downloaded: 81001467_energy.webp
+    [Image] Downloaded: 81001467_dimensions.webp
+    [Image] Downloaded: 81001460_dimensions2.webp
+    [Image] Downloaded: 81001467_other1.webp
+    [Image] Downloaded: 81001467_other2.webp
+    [Image] Downloaded: 81001460_other3.webp
+    [Image] Downloaded: 81001460_other1.webp
+
+  [6/10] Tosot by GREE Inverter Vloer/Plafond airco FTS-18R R32 5,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-by-gree-inverter-vloer-plafond-airco-fts-18r-r32-50-kw-set/29549/ (attempt 1/3)
+    Name: Tosot by GREE Inverter Vloer/Plafond airco FTS-18R R32 5,0 kW set
+    Brand: 
+    SKU: 81001468
+    Specs: 0
+    Images: 8
+    [Image] Downloaded: 81001467_main.webp
+    [Image] Downloaded: 81001468_energy.webp
+    [Image] Downloaded: 81001467_dimensions.webp
+    [Image] Downloaded: 81001460_dimensions2.webp
+    [Image] Downloaded: 81001467_other1.webp
+    [Image] Downloaded: 81001467_other2.webp
+    [Image] Downloaded: 81001460_other1.webp
+    [Image] Downloaded: 81001460_other3.webp
+
+  [7/10] Tosot by GREE Inverter Vloer/Plafond airco FTS-24R R32 7,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-by-gree-inverter-vloer-plafond-airco-fts-24r-r32-70-kw-set/29548/ (attempt 1/3)
+    Name: Tosot by GREE Inverter Vloer/Plafond airco FTS-24R R32 7,0 kW set
+    Brand: 
+    SKU: 81001469
+    Specs: 0
+    Images: 8
+    [Image] Downloaded: 81001467_main.webp
+    [Image] Downloaded: 81001469_energy.webp
+    [Image] Downloaded: 81001467_dimensions.webp
+    [Image] Downloaded: 81001460_dimensions2.webp
+    [Image] Downloaded: 81001467_other1.webp
+    [Image] Downloaded: 81001467_other2.webp
+    [Image] Downloaded: 81001460_other3.webp
+    [Image] Downloaded: 81001460_other1.webp
+
+  [8/10] Tosot by GREE Inverter Kanaal airco DTS-12R R32 3,5 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-by-gree-inverter-kanaal-airco-dts-12r-r32-35-kw-set/29547/ (attempt 1/3)
+    Name: Tosot by GREE Inverter Kanaal airco DTS-12R R32 3,5 kW set
+    Brand: 
+    SKU: 81001473
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001473_main.webp
+    [Image] Downloaded: 81001473_energy.webp
+    [Image] Downloaded: 81001473_dimensions.webp
+    [Image] Downloaded: 81001460_dimensions2.webp
+    [Image] Downloaded: 81001473_other1.webp
+    [Image] Downloaded: 81001473_other2.webp
+    [Image] Downloaded: 81001460_other1.webp
+
+  [9/10] Tosot by GREE Inverter Kanaal airco DTS-18R R32 5,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-by-gree-inverter-kanaal-airco-dts-18r-r32-50-kw-set/29546/ (attempt 1/3)
+    Name: Tosot by GREE Inverter Kanaal airco DTS-18R R32 5,0 kW set
+    Brand: 
+    SKU: 81001474
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001473_main.webp
+    [Image] Downloaded: 81001474_energy.webp
+    [Image] Downloaded: 81001473_dimensions.webp
+    [Image] Downloaded: 81001460_dimensions2.webp
+    [Image] Downloaded: 81001473_other1.webp
+    [Image] Downloaded: 81001473_other2.webp
+    [Image] Downloaded: 81001460_other1.webp
+
+  [10/10] Tosot by GREE Inverter Kanaal airco DTS-24R R32 7,0 kW set
+  [Bright Data] Fetching: https://www.maxicool.nl/nl_NL/p/tosot-by-gree-inverter-kanaal-airco-dts-24r-r32-70-kw-set/29545/ (attempt 1/3)
+    Name: Tosot by GREE Inverter Kanaal airco DTS-24R R32 7,0 kW set
+    Brand: 
+    SKU: 81001475
+    Specs: 0
+    Images: 7
+    [Image] Downloaded: 81001473_main.webp
+    [Image] Downloaded: 81001475_energy.webp
+    [Image] Downloaded: 81001473_dimensions.webp
+    [Image] Downloaded: 81001460_dimensions2.webp
+    [Image] Downloaded: 81001473_other1.webp
+    [Image] Downloaded: 81001473_other2.webp
+    [Image] Downloaded: 81001460_other1.webp
+
+
+============================================================
+  SCRAPING COMPLETE
+============================================================
+  Duration:           782 seconds
+  Categories:         8
+  Products found:     82
+  Products scraped:   82
+  Images downloaded:  676
+  Errors:             0
+============================================================
+
+Data saved to: /home/marvin/Documenten/staycoolairconL/scraper/data
+Images saved to: /home/marvin/Documenten/staycoolairconL/scraper/images
