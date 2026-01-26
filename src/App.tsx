@@ -33,6 +33,7 @@ const Home = lazy(() => import('./pages/Home'));
 const Products = lazy(() => import('./pages/Products'));
 const BrandDetail = lazy(() => import('./pages/BrandDetail'));
 const ProductDetail = lazy(() => import('./pages/ProductDetail'));
+const ScrapedProductDetail = lazy(() => import('./pages/ScrapedProductDetail'));
 const Contact = lazy(() => import('./pages/Contact'));
 const ContactWebhookTest = lazy(() => import('./pages/ContactWebhookTest'));
 const ServiceArea = lazy(() => import('./pages/ServiceArea'));
@@ -486,6 +487,7 @@ const App = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/airco-covers" element={<AircoCovers />} />
+                <Route path="/products/airco/:productId" element={<ScrapedProductDetail />} />
                 <Route path="/products/:brand" element={<BrandDetail />} />
                 <Route path="/products/:brand/:model" element={<ProductDetail />} />
                 <Route path="/contact" element={<Contact />} />
@@ -494,6 +496,7 @@ const App = () => {
                 <Route path="/werkgebied" element={<ServiceArea />} />
                 <Route path="/kennisbank" element={<KnowledgeBase />} />
                 <Route path="/aircos" element={<Aircos />} />
+                <Route path="/aircos/:productId" element={<ScrapedProductDetail />} />
                 <Route path="/thuisbatterijen" element={<Thuisbatterijen />} />
                 <Route path="/thuisbatterij-calculator" element={<ThuisbatterijCalculator />} />
                 <Route path="/voorwaarden" element={<Terms />} />
