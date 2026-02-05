@@ -26,7 +26,6 @@ import { Chatbot } from './components/Chatbot';
 import ExitIntentPopup from './components/ExitIntentPopup';
 import MobileStickyCTA from './components/MobileStickyCTA';
 import FloatingReviewBadge from './components/FloatingReviewBadge';
-import UrgencyBanner from './components/UrgencyBanner';
 
 // Lazy load all pages
 const Home = lazy(() => import('./pages/Home'));
@@ -239,6 +238,13 @@ const SEOThuisbatterijHeerlen = lazy(() => import('./pages/seo/pillar-5-thuisbat
 const SEOThuisbatterijVenlo = lazy(() => import('./pages/seo/pillar-5-thuisbatterijen/thuisbatterij-venlo'));
 const SEOThuisbatterijSittardGeleen = lazy(() => import('./pages/seo/pillar-5-thuisbatterijen/thuisbatterij-sittard-geleen'));
 
+// SEO Advice Pages ("Best of")
+const AdviesIndex = lazy(() => import('./pages/AdviesIndex'));
+const BesteAircoSlaapkamer = lazy(() => import('./pages/advies/BesteAircoSlaapkamer'));
+const Top10StilleAircos = lazy(() => import('./pages/advies/Top10StilleAircos'));
+const Top5EnergiezuinigeAircos = lazy(() => import('./pages/advies/Top5EnergiezuinigeAircos'));
+const BesteMultiSplitAircos = lazy(() => import('./pages/advies/BesteMultiSplitAircos'));
+
 // Noindex thuisbatterij pages
 const SEOThuisbatterijErvaringenKlanten = lazy(() => import('./pages/seo/pillar-5-thuisbatterijen/noindex/thuisbatterij-ervaringen-klanten'));
 const SEOThuisbatterijGidsLimburg = lazy(() => import('./pages/seo/pillar-5-thuisbatterijen/noindex/thuisbatterij-gids-limburg'));
@@ -351,7 +357,7 @@ const SEOAircoCO2FootprintVerlagen = lazy(() => import('./pages/seo/pillar-10-du
 
 // Loading fallback component with timeout and auto-reload
 const LoadingFallback = React.memo(() => (
-  <LoadingFallbackWithTimeout 
+  <LoadingFallbackWithTimeout
     timeout={5000}
     onTimeout={() => {
       console.warn('Page loading timeout - will auto-reload');
@@ -370,7 +376,7 @@ const preloadCriticalRoutes = () => {
     () => import('./pages/Products'),
     () => import('./pages/Contact')
   ];
-  
+
   // Use requestIdleCallback polyfill for better timing
   requestIdleCallbackPolyfill(() => {
     criticalRoutes.forEach(route => route());
@@ -436,7 +442,7 @@ const App = () => {
   // Smart preloading with requestIdleCallback to avoid blocking the main thread
   useEffect(() => {
     const path = location.pathname;
-    
+
     const preloadRoutes = () => {
       if (path === '/') {
         return [
@@ -456,9 +462,9 @@ const App = () => {
       }
       return [];
     };
-    
+
     const routes = preloadRoutes();
-    
+
     if (routes.length > 0) {
       requestIdleCallbackPolyfill(() => {
         routes.forEach(route => route());
@@ -472,18 +478,17 @@ const App = () => {
       <div className="min-h-screen bg-white">
         <ScrollToTop />
         <SkipToContent />
-        <UrgencyBanner variant="seasonal" />
         <Navbar />
         <main id="main-content" tabIndex={-1}>
           {/* Removed "wait" mode to improve performance - no need to wait for exit animations */}
           <AnimatePresence mode="sync">
             <Suspense fallback={<LoadingSkeleton />}>
               <Routes>
-          <Route path="/products/daikin/ururu-sarara" element={<UruruSararaPage />} />
-          <Route path="/products/daikin/stylish" element={<StylishPage />} />
-          <Route path="/products/mitsubishi/daiseikai-10" element={<Daiseikai10Page />} />
-          <Route path="/products/lg-mobiele-airco" element={<LGMobieleAircoPage />} />
-          <Route path="/products/tosot-mobiele-airco" element={<TosotMobieleAircoPage />} />
+                <Route path="/products/daikin/ururu-sarara" element={<UruruSararaPage />} />
+                <Route path="/products/daikin/stylish" element={<StylishPage />} />
+                <Route path="/products/mitsubishi/daiseikai-10" element={<Daiseikai10Page />} />
+                <Route path="/products/lg-mobiele-airco" element={<LGMobieleAircoPage />} />
+                <Route path="/products/tosot-mobiele-airco" element={<TosotMobieleAircoPage />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/airco-covers" element={<AircoCovers />} />
@@ -569,7 +574,7 @@ const App = () => {
                 <Route path="/airco-verwarming-kosten-besparing" element={<AircoVerwarmingKostenBesparing />} />
                 <Route path="/kennisbank/airco-verwarming-voordelen" element={<AircoVerwarmingVoordelen />} />
                 <Route path="/kosten-airco-plaatsen" element={<KostenAircoPlaatsen />} />
-                
+
                 {/* Landing Pages */}
                 <Route path="/landing/daikin" element={<DaikinLanding />} />
                 <Route path="/landing/lg" element={<LGLanding />} />
@@ -588,7 +593,7 @@ const App = () => {
                 <Route path="/airco-voor-slaapkamer" element={<AircoVoorSlaapkamerLanding />} />
                 <Route path="/airco-voor-woonkamer" element={<AircoVoorWoonkamerLanding />} />
                 <Route path="/airco-voor-zolder" element={<AircoVoorZolderLanding />} />
-                
+
                 {/* Location Pages */}
                 <Route path="/airco-installatie/roermond" element={<RoermondPage />} />
                 <Route path="/airco-installatie/maastricht" element={<MaastrichtPage />} />
@@ -617,7 +622,7 @@ const App = () => {
                 <Route path="/airco-installatie/voerendaal" element={<VoerendaalPage />} />
                 <Route path="/airco-installatie/simpelveld" element={<SimpelveldPage />} />
                 <Route path="/airco-installatie/nuth" element={<NuthPage />} />
-                
+
                 {/* Blog Pages */}
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/blog/airco-onderhoud-limburg-belangrijk" element={<AircoOnderhoudLimburgBelangrijk />} />
@@ -625,6 +630,13 @@ const App = () => {
                 <Route path="/blog/airco-offerte-limburg" element={<AircoOfferteLimburg />} />
                 <Route path="/blog/airco-specialist-limburg" element={<AircoSpecialistLimburgBlog />} />
                 <Route path="/blog/airco-installatie-zuid-limburg" element={<AircoInstallatieZuidLimburg />} />
+
+                {/* SEO Advice Pages */}
+                <Route path="/advies" element={<AdviesIndex />} />
+                <Route path="/advies/beste-airco-slaapkamer" element={<BesteAircoSlaapkamer />} />
+                <Route path="/advies/top-10-stille-aircos" element={<Top10StilleAircos />} />
+                <Route path="/advies/top-5-energiezuinige-aircos" element={<Top5EnergiezuinigeAircos />} />
+                <Route path="/advies/beste-multi-split-aircos" element={<BesteMultiSplitAircos />} />
 
                 {/* SEO Landing Pages - Pillar 1: Installatie Services */}
                 <Route path="/seo/pillar-1-installatie-services/airco-installatie-woonkamer" element={<SEOAircoInstallatieWoonkamer />} />

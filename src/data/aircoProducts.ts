@@ -36,6 +36,7 @@ export interface AircoProduct {
   images: ProductImage[];
   url: string;
   documents: ProductDocument[];
+  price?: number;
 }
 
 export const aircoProducts: AircoProduct[] = [
@@ -43,6 +44,7 @@ export const aircoProducts: AircoProduct[] = [
     "id": "81002212",
     "sku": "LG-AA09SP-SET",
     "name": "LG ARTCOOL AI AIR Mirror airco R32 2,5 kW Dual Inverter Set",
+    "price": 1695,
     "brand": "LG",
     "type": "single-split",
     "category": "LG Single-split",
@@ -178,6 +180,7 @@ export const aircoProducts: AircoProduct[] = [
     "id": "81002213",
     "sku": "LG-AA12SP-SET",
     "name": "LG ARTCOOL AI AIR Mirror airco R32 3,5 kW Dual Inverter Set",
+    "price": 1895,
     "brand": "LG",
     "type": "single-split",
     "category": "LG Single-split",
@@ -307,6 +310,7 @@ export const aircoProducts: AircoProduct[] = [
     "id": "81002214",
     "sku": "LG-AA18SP-SET",
     "name": "LG ARTCOOL AI AIR Mirror airco R32 5,0 kW Dual Inverter Set",
+    "price": 2295,
     "brand": "LG",
     "type": "single-split",
     "category": "LG Single-split",
@@ -432,6 +436,7 @@ export const aircoProducts: AircoProduct[] = [
     "id": "81002172",
     "sku": "AKTIE-P09SND-SET",
     "name": "LG DUALCOOL AI AIR Special Smart Inverter airco 2,5 kW Set",
+    "price": 1495,
     "brand": "LG",
     "type": "single-split",
     "category": "LG Single-split",
@@ -573,6 +578,7 @@ export const aircoProducts: AircoProduct[] = [
     "id": "81002173",
     "sku": "AKTIE-P12SND-SET",
     "name": "LG DUALCOOL AI AIR Special Smart Inverter airco 3,5 kW Set",
+    "price": 1695,
     "brand": "LG",
     "type": "single-split",
     "category": "LG Single-split",
@@ -714,6 +720,7 @@ export const aircoProducts: AircoProduct[] = [
     "id": "81001933",
     "sku": "LG-AP09RK-SET",
     "name": "LG Air Purifying Inverter airco R32 2,5 kW set",
+    "price": 1595,
     "brand": "LG",
     "type": "single-split",
     "category": "LG Single-split",

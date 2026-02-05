@@ -30,7 +30,7 @@ export const tosotData: Brand = {
           alt: 'Tosot Cosmo - Andere kant'
         }
       ],
-      price: '€1395,- inclusief standaard installatie',
+      price: 'Vanaf €1.395,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,5 kW - 6,1 kW',
       features: [
@@ -54,7 +54,8 @@ export const tosotData: Brand = {
         { label: 'Koudemiddel', value: 'R32' },
         { label: 'Energielabel', value: 'A++' },
         { label: 'Type', value: 'Wandmodel' },
-        { label: 'Garantie', value: '3 jaar' }
+        { label: 'Garantie', value: '3 jaar' },
+        { label: 'Prijzen (incl. montage)', value: '2,5kW: €1.395,-, 3,5kW: €1.495,-, 5,0kW: €1.795,-, 7,0kW: €2.275,-' }
       ]
     },
     {
@@ -72,7 +73,7 @@ export const tosotData: Brand = {
           alt: 'Tosot Pular - Rechts'
         }
       ],
-      price: '€1495,- inclusief standaard installatie',
+      price: 'Vanaf €1.495,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,2 kW - 6,1 kW',
       features: [
@@ -115,7 +116,8 @@ export const tosotData: Brand = {
         { label: 'Min. leidinglengte', value: '3 m' },
         { label: 'Max. leidinglengte', value: '15 m' },
         { label: 'Max. hoogteverschil', value: '10 m' },
-        { label: 'Smart home compatibiliteit', value: 'Google Assistant, Amazon Alexa' }
+        { label: 'Smart home compatibiliteit', value: 'Google Assistant, Amazon Alexa' },
+        { label: 'Prijzen (incl. montage)', value: '2,5kW: €1.495,-, 3,5kW: €1.595,-, 5,0kW: €1.895,-, 7,0kW: €2.495,-' }
       ]
     },
     {
@@ -151,7 +153,7 @@ export const tosotData: Brand = {
           alt: 'Tosot Clivia Zwart - Zijkant'
         }
       ],
-      price: '€1595,- inclusief standaard installatie',
+      price: 'Vanaf €1.595,- inclusief standaard installatie',
       energyLabel: 'A+++',
       capacity: '2,7 kW - 7,1 kW',
       features: [
@@ -195,7 +197,8 @@ export const tosotData: Brand = {
         { label: 'Min. leidinglengte', value: '3 m' },
         { label: 'Max. leidinglengte', value: '15 m' },
         { label: 'Max. hoogteverschil', value: '10 m' },
-        { label: 'Smart home compatibiliteit', value: 'Google Assistant, Amazon Alexa' }
+        { label: 'Smart home compatibiliteit', value: 'Google Assistant, Amazon Alexa' },
+        { label: 'Prijzen (incl. montage)', value: '2,5kW: €1.595,-, 3,5kW: €1.695,-, 5,0kW: €1.995,-, 7,0kW: €2.495,- (Geldt voor Wit en Zwart)' }
       ]
     },
     {
@@ -213,7 +216,7 @@ export const tosotData: Brand = {
           alt: 'Tosot Console - Afstandsbediening'
         }
       ],
-      price: '€1.845,- inclusief standaard installatie',
+      price: 'Vanaf €1.845,- inclusief standaard installatie',
       energyLabel: 'A++/A+',
       capacity: '3,5 kW - 3,8 kW',
       features: [
@@ -253,7 +256,8 @@ export const tosotData: Brand = {
         { label: 'Energielabel verwarmen', value: 'A+' },
         { label: 'Type', value: 'Vloermodel/Console' },
         { label: 'Wifi', value: 'Standaard ingebouwd' },
-        { label: 'Smart home compatibiliteit', value: 'Google Assistant, Amazon Alexa' }
+        { label: 'Smart home compatibiliteit', value: 'Google Assistant, Amazon Alexa' },
+        { label: 'Prijzen (incl. montage)', value: '3,5kW: €1.845,-, 5,0kW: €2.125,-' }
       ]
     },
     {

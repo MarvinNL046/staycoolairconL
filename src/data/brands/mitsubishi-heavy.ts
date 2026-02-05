@@ -48,7 +48,7 @@ export const mitsubishiHeavyData: Brand = {
       ],
       specifications: [
         { label: 'Beschikbare modellen', value: 'SRK25ZS-WF (2,5kW), SRK35ZS-WF (3,5kW), SRK50ZS-WF (5,0kW), SRK63ZS-WF (6,3kW), SRK71ZS-WF (7,1kW), SRK80ZS-WF (8,0kW)' },
-        { label: 'Prijzen inclusief installatie', value: '€1.950,- (2,5kW) tot €3.550,- (8,0kW)' },
+        { label: 'Prijzen inclusief installatie', value: '€1.950,- (2,5kW), €2.050,- (3,5kW), €2.595,- (5,0kW), €2.950,- (6,3kW), €3.350,- (7,1kW), €3.550,- (8,0kW)' },
         { label: 'Koelcapaciteit', value: '2,5 - 8,0 kW' },
         { label: 'Verwarmingscapaciteit', value: '3,0 - 9,0 kW' },
         { label: 'SEER', value: 'tot 8,7' },

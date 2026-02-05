@@ -1,0 +1,170 @@
+functionsDirectory = "/home/marvin/Documenten/staycoolairconL/netlify/functions"
+functionsDirectoryOrigin = "config-v1"
+headersOrigin = "config"
+redirectsOrigin = "config"
+
+[build]
+publish = "/home/marvin/Documenten/staycoolairconL/dist"
+publishOrigin = "config"
+commandOrigin = "config"
+command = "npm run build"
+functions = "/home/marvin/Documenten/staycoolairconL/netlify/functions"
+
+[build.environment]
+NODE_VERSION = "20"
+NPM_FLAGS = "--no-audit --no-fund"
+NETLIFY_EMAILS_DIRECTORY = "./emails"
+NETLIFY_EMAILS_SECRET = "329dbc21-c4af-437d-a937-865b28b3dcb0"
+VITE_EMAILJS_BOOKING_TEMPLATE_ID = "your_booking_template_id"
+VITE_EMAILJS_PUBLIC_KEY = "sjJ8kK6U9wFjY0zX9"
+VITE_EMAILJS_SERVICE_ID = "service_1rruujp"
+VITE_EMAILJS_TEMPLATE_ID = "template_3ovrl8t"
+VITE_GA_TRACKING_ID = "G-8JJ3BRSW92"
+VITE_GOOGLE_ADS_ID = "AW-10789737434"
+VITE_GTM_ID = "GTM-K2B9M3S"
+VITE_SUPABASE_URL = "https://kxjksvmlvyazphrbqglz.supabase.co"
+VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt4amtzdm1sdnlhenBocmJxZ2x6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzkyOTIzNTgsImV4cCI6MjA1NDg2ODM1OH0.8mEUKfK1AQ16waaPtJC8LDNvMND10u0jmDcLrCc0f6U"
+
+[build.processing]
+skip_processing = false
+
+[build.processing.css]
+bundle = true
+minify = true
+
+[build.processing.html]
+pretty_urls = true
+
+[build.processing.images]
+compress = true
+
+[build.processing.js]
+bundle = true
+minify = true
+
+[build.services]
+
+[functions]
+
+[functions."*"]
+
+[[plugins]]
+origin = "ui"
+package = "@netlify/plugin-lighthouse"
+pinned_version = "6"
+
+[plugins.inputs]
+
+[[headers]]
+for = "/sw.js"
+
+[headers.values]
+Cache-Control = "no-cache, no-store, must-revalidate"
+Pragma = "no-cache"
+Expires = "0"
+
+[[headers]]
+for = "/*.html"
+
+[headers.values]
+Cache-Control = "no-cache, no-store, must-revalidate"
+Pragma = "no-cache"
+Expires = "0"
+
+[[headers]]
+for = "/"
+
+[headers.values]
+Cache-Control = "no-cache, no-store, must-revalidate"
+Pragma = "no-cache"
+Expires = "0"
+
+[[headers]]
+for = "/assets/*"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/images/*"
+
+[headers.values]
+Cache-Control = "public, max-age=604800"
+
+[[headers]]
+for = "/fonts/*"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+for = "/api/*"
+
+[headers.values]
+Cache-Control = "no-cache, no-store, must-revalidate"
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+Content-Security-Policy = "default-src 'self';\n      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.google-analytics.com https://*.googletagmanager.com https://www.google.com https://www.googletagmanager.com https://www.googleadservices.com https://www.google.nl https://pagead2.googlesyndication.com https://connect.facebook.net https://*.clarity.ms;\n      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com data: blob:;\n      img-src 'self' data: https: blob:;\n      font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com;\n      connect-src 'self' https://api.emailjs.com https://*.google-analytics.com https://*.analytics.google.com https://analytics.google.com https://www.google.com https://*.netlify.app https://kxjksvmlvyazphrbqglz.supabase.co https://api.staycoolairco.nl https://*.doubleclick.net https://www.googletagmanager.com https://www.google.nl https://*.leadconnectorhq.com https://*.facebook.com https://www.facebook.com https://connect.facebook.net https://googleads.g.doubleclick.net https://www.googleadservices.com https://fonts.googleapis.com https://fonts.gstatic.com https://*.clarity.ms;\n      frame-src 'self' https://www.google.com https://www.googletagmanager.com https://www.youtube.com https://youtube-nocookie.com https://*.youtube-nocookie.com https://www.youtube-nocookie.com https://www.facebook.com https://*.facebook.com;\n      object-src 'none';\n      base-uri 'self';\n      form-action 'self' https://www.facebook.com https://*.facebook.com;\n      upgrade-insecure-requests;"
+Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+[[headers]]
+for = "/*.js"
+
+[headers.values]
+Content-Type = "application/javascript; charset=utf-8"
+
+[[headers]]
+for = "/*.css"
+
+[headers.values]
+Content-Type = "text/css; charset=utf-8"
+
+[[headers]]
+for = "/images/*"
+
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+from = "/airco-installatie-geleen/*"
+to = "/airco-installatie/geleen"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/airco-installatie-zuid-limburg/*"
+to = "/werkgebied"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]

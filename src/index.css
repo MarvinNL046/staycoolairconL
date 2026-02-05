@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-quatt-warm text-quatt-dark antialiased;
+  }
+}
+
 /* Inter font is loaded via HTML link tag for better performance */
 html {
   font-family: 'Inter', sans-serif;

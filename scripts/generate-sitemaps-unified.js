@@ -22,7 +22,7 @@ const ALL_LOCATIONS = [
 
 // Quality locations with more detailed content
 const QUALITY_LOCATIONS = [
-  'roermond', 'maastricht', 'heerlen', 'venlo', 'sittard', 
+  'roermond', 'maastricht', 'heerlen', 'venlo', 'sittard',
   'weert', 'geleen', 'stein', 'landgraaf'
 ];
 
@@ -30,30 +30,30 @@ const QUALITY_LOCATIONS = [
 async function discoverBlogPosts() {
   const appPath = path.join(process.cwd(), 'src', 'App.tsx');
   const appContent = await fs.promises.readFile(appPath, 'utf-8');
-  
+
   // Extract blog routes from App.tsx
   const blogRoutePattern = /<Route\s+path="\/blog\/([^"]+)"\s+element={<([^>]+)\s*\/>}/g;
   const blogPosts = [];
   let match;
-  
+
   while ((match = blogRoutePattern.exec(appContent)) !== null) {
     const slug = match[1];
     const componentName = match[2];
-    
+
     // Try to get file modification time for the component
     const componentPath = path.join(process.cwd(), 'src', 'pages', 'blog', `${componentName}.tsx`);
     let lastmod;
-    
+
     try {
       lastmod = await getFileModTime(componentPath);
     } catch {
       // If file not found, use current date
       lastmod = new Date().toISOString().split('T')[0];
     }
-    
+
     blogPosts.push({ slug, lastmod });
   }
-  
+
   return blogPosts;
 }
 
@@ -75,10 +75,10 @@ function routeToFileName(route) {
 // Generate main sitemap
 async function generateMainSitemap() {
   console.log('Generating main sitemap...');
-  
+
   const pagesPath = path.join(process.cwd(), 'src', 'pages');
   const pages = await glob('**/*.tsx', { cwd: pagesPath });
-  
+
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
@@ -87,10 +87,10 @@ async function generateMainSitemap() {
   for (const page of pages) {
     const filePath = path.join(pagesPath, page);
     const lastmod = await getFileModTime(filePath);
-    
+
     // Skip dynamic routes and nested components
     if (page.includes('[') || page.includes(']') || page.includes('components')) continue;
-    
+
     // Convert file path to URL
     let url = page
       .replace(/\.tsx$/, '')
@@ -99,18 +99,18 @@ async function generateMainSitemap() {
       .toLowerCase()
       .replace(/^-/, '')
       .replace(/\/-/g, '/');
-    
+
     // Skip if it's a utility file
     if (url.includes('layout') || url.includes('error') || url.includes('not-found')) continue;
-    
+
     // Handle comparisons pages
     if (page.startsWith('comparisons/')) {
       url = 'vergelijkingen/' + url.replace('comparisons/', '');
     }
-    
+
     // Handle special cases
     if (url === 'home' || url === '') url = '';
-    
+
     // Handle specific landing pages that have different route mappings
     const landingPageMappings = {
       'landing/-wat-kost-airco-installatie-landing': 'wat-kost-airco-installatie',
@@ -127,17 +127,19 @@ async function generateMainSitemap() {
       'landing/-airco-met-buitenunit-landing': 'airco-met-buitenunit',
       'landing/-airco-installatie-landing': 'airco-installatie',
       'landing/-airco-onderhoud-landing': 'airco-onderhoud',
-      'landing/-airco-reparatie-landing': 'airco-reparatie'
+      'landing/-airco-reparatie-landing': 'airco-reparatie',
+      'advies/top10-stille-aircos': 'advies/top-10-stille-aircos',
+      'advies/top5-energiezuinige-aircos': 'advies/top-5-energiezuinige-aircos'
     };
-    
+
     if (landingPageMappings[url]) {
       url = landingPageMappings[url];
     }
-    
-    const priority = url === '' ? '1.0' : 
-                    url.includes('products') || url.includes('services') || url.includes('vergelijkingen') ? '0.9' : '0.7';
+
+    const priority = url === '' ? '1.0' :
+      url.includes('products') || url.includes('services') || url.includes('vergelijkingen') ? '0.9' : '0.7';
     const changefreq = url === '' ? 'daily' : 'weekly';
-    
+
     sitemap += `
   <url>
     <loc>https://staycoolairco.nl${url ? '/' + url : ''}</loc>
@@ -148,7 +150,7 @@ async function generateMainSitemap() {
   }
 
   sitemap += '\n</urlset>';
-  
+
   fs.writeFileSync('public/sitemap.xml', sitemap);
   console.log('Main sitemap generated successfully!');
 }
@@ -156,7 +158,7 @@ async function generateMainSitemap() {
 // Generate products sitemap with images
 async function generateProductsSitemap() {
   console.log('Generating products sitemap...');
-  
+
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -179,14 +181,14 @@ async function generateProductsSitemap() {
     for (const product of brand.models) {
       const brandSlug = brand.name.toLowerCase().replace(/\s+/g, '-');
       const productSlug = product.slug || product.name.toLowerCase().replace(/\s+/g, '-');
-      
+
       sitemap += `
   <url>
     <loc>https://staycoolairco.nl/products/${brandSlug}/${productSlug}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>`;
-      
+
       // Add product image if available
       if (product.imageUrl || product.image) {
         const imageUrl = product.imageUrl || product.image;
@@ -197,14 +199,14 @@ async function generateProductsSitemap() {
       <image:caption>Professionele installatie van ${brand.name} ${product.name} airco in Limburg</image:caption>
     </image:image>`;
       }
-      
+
       sitemap += `
   </url>`;
     }
   }
 
   sitemap += '\n</urlset>';
-  
+
   fs.writeFileSync('public/products-sitemap.xml', sitemap);
   console.log('Products sitemap generated successfully!');
 }
@@ -212,7 +214,7 @@ async function generateProductsSitemap() {
 // Generate service areas sitemap
 async function generateServiceAreasSitemap() {
   console.log('Generating service areas sitemap...');
-  
+
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
@@ -223,7 +225,7 @@ async function generateServiceAreasSitemap() {
   for (const location of ALL_LOCATIONS) {
     const priority = QUALITY_LOCATIONS.includes(location) ? '0.9' : '0.8';
     const changefreq = QUALITY_LOCATIONS.includes(location) ? 'weekly' : 'monthly';
-    
+
     sitemap += `
   <url>
     <loc>https://staycoolairco.nl/airco-installatie/${location}</loc>
@@ -234,7 +236,7 @@ async function generateServiceAreasSitemap() {
   }
 
   sitemap += '\n</urlset>';
-  
+
   fs.writeFileSync('public/service-areas-sitemap.xml', sitemap);
   console.log('Service areas sitemap generated successfully!');
 }
@@ -242,11 +244,11 @@ async function generateServiceAreasSitemap() {
 // Generate blog sitemap
 async function generateBlogSitemap() {
   console.log('Generating blog sitemap...');
-  
+
   // Automatically discover blog posts
   const blogPosts = await discoverBlogPosts();
   console.log(`Found ${blogPosts.length} blog posts`);
-  
+
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
@@ -254,7 +256,7 @@ async function generateBlogSitemap() {
   // Add blog index
   const blogIndexPath = path.join(process.cwd(), 'src', 'pages', 'blog', 'BlogPage.tsx');
   const blogIndexLastmod = await getFileModTime(blogIndexPath);
-  
+
   sitemap += `
   <url>
     <loc>https://staycoolairco.nl/blog</loc>
@@ -275,7 +277,7 @@ async function generateBlogSitemap() {
   }
 
   sitemap += '\n</urlset>';
-  
+
   fs.writeFileSync('public/blog-sitemap.xml', sitemap);
   console.log('Blog sitemap generated successfully!');
 }
@@ -283,9 +285,9 @@ async function generateBlogSitemap() {
 // Generate sitemap index
 async function generateSitemapIndex() {
   console.log('Generating sitemap index...');
-  
+
   const lastmod = new Date().toISOString().split('T')[0];
-  
+
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -314,7 +316,7 @@ async function generateSitemapIndex() {
 // Validate sitemaps
 function validateSitemaps() {
   console.log('Validating sitemaps...');
-  
+
   const sitemaps = [
     'public/sitemap.xml',
     'public/products-sitemap.xml',
@@ -322,15 +324,15 @@ function validateSitemaps() {
     'public/blog-sitemap.xml',
     'public/sitemap-index.xml'
   ];
-  
+
   for (const sitemapPath of sitemaps) {
     try {
       const content = fs.readFileSync(sitemapPath, 'utf-8');
       const urlCount = (content.match(/<url>/g) || []).length;
       const fileSize = fs.statSync(sitemapPath).size;
-      
+
       console.log(`✓ ${path.basename(sitemapPath)}: ${urlCount} URLs, ${(fileSize / 1024).toFixed(2)} KB`);
-      
+
       // Check sitemap limits
       if (urlCount > 50000) {
         console.warn(`⚠️  ${path.basename(sitemapPath)} exceeds 50,000 URL limit!`);
@@ -347,20 +349,20 @@ function validateSitemaps() {
 // Main function
 async function generateAllSitemaps() {
   console.log('Starting unified sitemap generation...\n');
-  
+
   try {
     await generateMainSitemap();
     await generateProductsSitemap();
     await generateServiceAreasSitemap();
     await generateBlogSitemap();
     await generateSitemapIndex();
-    
+
     console.log('\nAll sitemaps generated successfully!');
-    
+
     // Validate the generated sitemaps
     console.log('\nValidating sitemaps...');
     validateSitemaps();
-    
+
   } catch (error) {
     console.error('Error generating sitemaps:', error);
     process.exit(1);

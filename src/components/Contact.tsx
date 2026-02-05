@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, MessageSquare, Calendar, Clock, CheckCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageSquare, Calendar, Clock, CheckCircle, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { sendEmail } from '../utils/email';
 import { trackFormSubmission, trackInteraction } from '../utils/analytics';
@@ -7,6 +7,8 @@ import { trackPixelFormSubmission } from '../utils/facebook';
 import { trackAPIFormSubmission } from '../utils/conversionsAPI';
 import toast, { Toaster } from 'react-hot-toast';
 import { requestIdleCallbackPolyfill } from '../utils/requestIdleCallback';
+import Card from './ui/Card';
+import Button from './ui/Button';
 
 interface FormData {
   name: string;
@@ -36,7 +38,6 @@ export default function Contact() {
       [name]: value
     }));
 
-    // Use requestIdleCallback polyfill for non-critical analytics to avoid blocking INP
     requestIdleCallbackPolyfill(() => {
       trackInteraction('contact_form', 'field_input', name);
     }, { timeout: 2000 });
@@ -44,7 +45,7 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     if (isSubmitting) return;
 
     setIsSubmitting(true);
@@ -52,42 +53,33 @@ export default function Contact() {
     try {
       await sendEmail(formData);
 
-      // Track successful form submission with error handling
       try {
         trackFormSubmission('contact_form', true);
       } catch (trackError) {
         console.warn('Failed to track form submission:', trackError);
       }
-      
-      // Track Facebook Pixel conversion (client-side) and get event ID
+
       let eventId;
       try {
         eventId = trackPixelFormSubmission('contact_form', true);
       } catch (pixelError) {
         console.warn('Failed to track Facebook Pixel:', pixelError);
       }
-      
-      // Track with Conversions API (server-side) using same event ID for deduplication
+
       console.log('Tracking with Conversions API...');
       trackAPIFormSubmission('contact_form', formData, 1650, eventId).catch(error => {
         console.warn('Failed to track with Conversions API:', error);
       });
 
-      // Show success message briefly before redirecting
       toast.success('Bericht succesvol verzonden!');
-      
-      // Reset form
       setFormData(initialFormState);
-      
-      // Redirect to thank you page after a short delay
+
       setTimeout(() => {
         navigate('/tot-snel');
       }, 1000);
     } catch (error) {
       console.error('Form submission error:', error);
       toast.error('Er is iets misgegaan. Probeer het later opnieuw of neem telefonisch contact op.');
-      
-      // Track form submission error
       trackFormSubmission('contact_form', false);
     } finally {
       setIsSubmitting(false);
@@ -95,135 +87,156 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-sky-50 to-blue-50">
+    <section id="contact" className="py-24 bg-quatt-warm">
       <Toaster position="top-center" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Contact
+
+        <div className="text-center mb-16">
+          <span className="text-quatt-orange font-bold tracking-wide uppercase text-sm mb-2 block">Contact</span>
+          <h2 className="text-4xl font-extrabold text-quatt-dark mb-6">
+            Kom in contact
           </h2>
-          <p className="mt-4 text-xl text-gray-600">
-            Neem contact op voor een vrijblijvende offerte
+          <p className="text-xl text-gray-600">
+            De airco specialisten van Limburg staan voor u klaar.
           </p>
         </div>
 
-        <div className="mt-12 mb-8">
-          <div className="bg-orange-500 rounded-lg shadow-xl overflow-hidden">
-            <div className="px-6 py-8 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                <Calendar className="h-8 w-8 inline mr-2" />
+        {/* Calendar Card */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-r from-quatt-orange to-orange-500 rounded-[2rem] shadow-2xl overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
+
+            <div className="px-8 py-12 md:p-16 text-center relative z-10">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/20 mb-6 backdrop-blur-sm">
+                <Calendar className="h-8 w-8 text-white" />
+              </div>
+
+              <h3 className="text-3xl font-bold text-white mb-4">
                 Direct Online een Afspraak Maken
               </h3>
-              <p className="text-white/90 mb-6">
-                Kies zelf uw datum en tijd voor een gratis adviesgesprek aan huis
+              <p className="text-orange-100 mb-8 text-lg max-w-2xl mx-auto">
+                Kies zelf uw datum en tijd voor een gratis adviesgesprek aan huis. Geen wachttijden, direct zekerheid.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-                <div className="flex items-center text-white">
-                  <CheckCircle className="h-5 w-5 mr-2" />
+
+              <div className="flex flex-wrap gap-6 justify-center items-center mb-10 text-white/90">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-white" />
                   <span>Direct bevestiging</span>
                 </div>
-                <div className="flex items-center text-white">
-                  <Clock className="h-5 w-5 mr-2" />
+                <div className="flex items-center gap-2">
+                  <Clock className="h-5 w-5 text-white" />
                   <span>Kies uw eigen tijd</span>
                 </div>
-                <div className="flex items-center text-white">
-                  <Phone className="h-5 w-5 mr-2" />
-                  <span>Gratis advies</span>
+                <div className="flex items-center gap-2">
+                  <MessageSquare className="h-5 w-5 text-white" />
+                  <span>Vrijblijvend advies</span>
                 </div>
               </div>
+
               <a
                 href="https://afspraken.staycoolairco.nl"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => {
-                  try {
-                    trackInteraction('contact', 'click_appointment');
-                  } catch (e) {
-                    console.warn('Tracking error:', e);
-                  }
-                }}
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-lg font-medium rounded-md text-orange-500 bg-white hover:bg-gray-100 transition-colors duration-300"
+                onClick={() => trackInteraction('contact', 'click_appointment')}
+                className="inline-flex items-center px-8 py-4 bg-white text-quatt-orange font-bold text-lg rounded-xl hover:bg-orange-50 hover:scale-105 transition-all shadow-lg"
               >
-                <Calendar className="h-6 w-6 mr-3" />
                 Plan nu een afspraak
+                <ArrowRight className="h-5 w-5 ml-2" />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-8 lg:grid-cols-2">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="px-6 py-8">
-              <h3 className="text-2xl font-bold text-gray-900">Direct Contact</h3>
-              <div className="mt-8 space-y-6">
-                <a 
-                  href="tel:0462021430" 
-                  className="flex items-center text-gray-600 hover:text-orange-500"
-                  onClick={() => {
-                    try {
-                      trackInteraction('contact', 'click_phone');
-                    } catch (e) {
-                      console.warn('Tracking error:', e);
-                    }
-                  }}
-                >
-                  <Phone className="h-6 w-6 mr-3" />
-                  <span>046 202 1430</span>
-                </a>
-                <a 
-                  href="https://wa.me/31636481054" 
-                  className="flex items-center text-gray-600 hover:text-orange-500"
-                  onClick={() => {
-                    try {
-                      trackInteraction('contact', 'click_whatsapp');
-                    } catch (e) {
-                      console.warn('Tracking error:', e);
-                    }
-                  }}
-                >
-                  <MessageSquare className="h-6 w-6 mr-3" />
-                  <span>WhatsApp: 06 36481054</span>
-                </a>
-                <a 
-                  href="mailto:info@staycoolairco.nl" 
-                  className="flex items-center text-gray-600 hover:text-orange-500"
-                  onClick={() => trackInteraction('contact', 'click_email')}
-                >
-                  <Mail className="h-6 w-6 mr-3" />
-                  <span>info@staycoolairco.nl</span>
-                </a>
-                <div className="flex items-center text-gray-600">
-                  <MapPin className="h-6 w-6 mr-3" />
-                  <div>
-                    <p>Aan De Bogen 11</p>
-                    <p>6118AS Nieuwstadt</p>
-                    <p>Werkgebied: Limburg, Nederland</p>
-                  </div>
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+
+          {/* Contact Info Card */}
+          <Card padding="lg" className="h-full">
+            <h3 className="text-2xl font-bold text-quatt-dark mb-8">Direct Contact</h3>
+            <div className="space-y-8">
+              <a
+                href="tel:0462021430"
+                className="flex items-start group"
+                onClick={() => trackInteraction('contact', 'click_phone')}
+              >
+                <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center text-quatt-orange group-hover:bg-quatt-orange group-hover:text-white transition-colors shrink-0">
+                  <Phone className="h-6 w-6" />
+                </div>
+                <div className="ml-6">
+                  <span className="block text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">Telefoon</span>
+                  <span className="text-xl font-bold text-quatt-dark group-hover:text-quatt-orange transition-colors">046 202 1430</span>
+                  <span className="block text-sm text-gray-500 mt-1">Ma-Vr: 09:00 - 17:00</span>
+                </div>
+              </a>
+
+              <a
+                href="https://wa.me/31636481054"
+                className="flex items-start group"
+                onClick={() => trackInteraction('contact', 'click_whatsapp')}
+              >
+                <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center text-green-600 group-hover:bg-green-600 group-hover:text-white transition-colors shrink-0">
+                  <MessageSquare className="h-6 w-6" />
+                </div>
+                <div className="ml-6">
+                  <span className="block text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">WhatsApp</span>
+                  <span className="text-xl font-bold text-quatt-dark group-hover:text-green-600 transition-colors">06 36481054</span>
+                  <span className="block text-sm text-gray-500 mt-1">Snel antwoord</span>
+                </div>
+              </a>
+
+              <a
+                href="mailto:info@staycoolairco.nl"
+                className="flex items-start group"
+                onClick={() => trackInteraction('contact', 'click_email')}
+              >
+                <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors shrink-0">
+                  <Mail className="h-6 w-6" />
+                </div>
+                <div className="ml-6">
+                  <span className="block text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">Email</span>
+                  <span className="text-xl font-bold text-quatt-dark group-hover:text-blue-600 transition-colors">info@staycoolairco.nl</span>
+                </div>
+              </a>
+
+              <div className="flex items-start">
+                <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-gray-500 shrink-0">
+                  <MapPin className="h-6 w-6" />
+                </div>
+                <div className="ml-6">
+                  <span className="block text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">Locatie</span>
+                  <p className="text-quatt-dark font-medium">Aan De Bogen 11</p>
+                  <p className="text-quatt-dark font-medium">6118AS Nieuwstadt</p>
+                  <p className="text-sm text-gray-500 mt-1">Werkgebied: Heel Limburg</p>
                 </div>
               </div>
             </div>
-          </div>
+          </Card>
 
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <form onSubmit={handleSubmit} className="px-6 py-8">
-              <div className="space-y-6">
+          {/* Contact Form Card */}
+          <Card padding="lg" className="h-full">
+            <h3 className="text-2xl font-bold text-quatt-dark mb-2">Stuur een bericht</h3>
+            <p className="text-gray-600 mb-8">Vul het formulier in en wij nemen binnen 24 uur contact op.</p>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-quatt-dark mb-1.5">
+                  Naam
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  disabled={isSubmitting}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-quatt-orange focus:ring-2 focus:ring-quatt-orange/20 transition-all bg-gray-50"
+                  placeholder="Uw naam"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                    Naam
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    disabled={isSubmitting}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 disabled:opacity-50"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="email" className="block text-sm font-medium text-quatt-dark mb-1.5">
                     E-mail
                   </label>
                   <input
@@ -234,11 +247,12 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     disabled={isSubmitting}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 disabled:opacity-50"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-quatt-orange focus:ring-2 focus:ring-quatt-orange/20 transition-all bg-gray-50"
+                    placeholder="naam@email.nl"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                  <label htmlFor="phone" className="block text-sm font-medium text-quatt-dark mb-1.5">
                     Telefoon
                   </label>
                   <input
@@ -249,59 +263,56 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     disabled={isSubmitting}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 disabled:opacity-50"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-quatt-orange focus:ring-2 focus:ring-quatt-orange/20 transition-all bg-gray-50"
+                    placeholder="06 12345678"
                   />
                 </div>
-                <div>
-                  <label htmlFor="city" className="block text-sm font-medium text-gray-700">
-                    Woonplaats
-                  </label>
-                  <input
-                    type="text"
-                    name="city"
-                    id="city"
-                    required
-                    value={formData.city}
-                    onChange={handleChange}
-                    disabled={isSubmitting}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 disabled:opacity-50"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                    Bericht
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    required
-                    value={formData.message}
-                    onChange={handleChange}
-                    disabled={isSubmitting}
-                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 disabled:opacity-50"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Verzenden...
-                    </>
-                  ) : (
-                    'Verstuur Bericht'
-                  )}
-                </button>
               </div>
+
+              <div>
+                <label htmlFor="city" className="block text-sm font-medium text-quatt-dark mb-1.5">
+                  Woonplaats
+                </label>
+                <input
+                  type="text"
+                  name="city"
+                  id="city"
+                  required
+                  value={formData.city}
+                  onChange={handleChange}
+                  disabled={isSubmitting}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-quatt-orange focus:ring-2 focus:ring-quatt-orange/20 transition-all bg-gray-50"
+                  placeholder="Bijv. Maastricht"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-quatt-dark mb-1.5">
+                  Bericht
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
+                  disabled={isSubmitting}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-quatt-orange focus:ring-2 focus:ring-quatt-orange/20 transition-all bg-gray-50 resize-none"
+                  placeholder="Waar kunnen we u mee helpen?"
+                ></textarea>
+              </div>
+
+              <Button
+                type="submit"
+                variant="primary"
+                disabled={isSubmitting}
+                className="w-full py-4 text-lg"
+              >
+                {isSubmitting ? 'Verzenden...' : 'Verstuur Bericht'}
+              </Button>
             </form>
-          </div>
+          </Card>
         </div>
       </div>
     </section>

@@ -35,8 +35,9 @@ export default defineConfig({
           https://connect.facebook.net
           https://*.facebook.com
           https://*.clarity.ms
+          https://wetryleadflow.com
           http://localhost:*;
-        frame-src 'self' https://*.stripe.com https://*.youtube-nocookie.com https://*.googletagmanager.com;
+        frame-src 'self' https://*.stripe.com https://*.youtube-nocookie.com https://www.youtube.com https://youtube.com https://*.googletagmanager.com;
       `.replace(/\s+/g, ' ').trim()
     }
   },
@@ -92,9 +93,9 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: [
-      'react', 
-      'react-dom', 
-      'react-router-dom', 
+      'react',
+      'react-dom',
+      'react-router-dom',
       'framer-motion',
       '@emailjs/browser',
       'react-hot-toast',
@@ -131,8 +132,9 @@ export default defineConfig({
           https://connect.facebook.net
           https://*.facebook.com
           https://*.clarity.ms
+          https://wetryleadflow.com
           http://localhost:*;
-        frame-src 'self' https://*.stripe.com https://*.youtube-nocookie.com https://*.googletagmanager.com
+        frame-src 'self' https://*.stripe.com https://*.youtube-nocookie.com https://www.youtube.com https://youtube.com https://*.googletagmanager.com
       `.replace(/\s+/g, ' ').trim(),
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',

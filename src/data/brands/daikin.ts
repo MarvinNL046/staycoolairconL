@@ -64,7 +64,7 @@ export const daikinData: Brand = {
           alt: 'Daikin Sensira - Wit'
         }
       ],
-      price: '€1.599,- inclusief standaard installatie',
+      price: 'Vanaf €1.599,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,0 kW - 7,1 kW',
       features: [
@@ -93,7 +93,8 @@ export const daikinData: Brand = {
         { label: 'Werkingsbereik verwarming', value: '-15°C tot +18°C buitentemperatuur' },
         { label: 'Stroomvoorziening', value: '1~/50/220-240V' },
         { label: 'Energieverbruik koeling', value: '106 - 460 kWh/a' },
-        { label: 'Energieverbruik verwarming', value: '595 - 2.332 kWh/a' }
+        { label: 'Energieverbruik verwarming', value: '595 - 2.332 kWh/a' },
+        { label: 'Prijzen (incl. montage)', value: 'Vanaf €1.599,- (2,0kW), 5,0kW: €2.495,-, 6,0kW: €2.895,-' }
       ]
     },
     {
@@ -115,7 +116,7 @@ export const daikinData: Brand = {
           alt: 'Daikin Comfora Onecta smartphone app interface - remote airco bediening en planning'
         }
       ],
-      price: '€2.155,- inclusief standaard installatie',
+      price: 'Vanaf €2.155,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,0 kW - 7,1 kW',
       features: [
@@ -148,7 +149,8 @@ export const daikinData: Brand = {
         { label: 'Stroomvoorziening', value: '1~/50/220-240V' },
         { label: 'Maximale zekeringwaarde', value: '16-20A, afhankelijk van capaciteit' },
         { label: 'Jaarlijks energieverbruik koeling', value: '97 - 401 kWh/a' },
-        { label: 'Jaarlijks energieverbruik verwarming', value: '663 - 2.166 kWh/a' }
+        { label: 'Jaarlijks energieverbruik verwarming', value: '663 - 2.166 kWh/a' },
+        { label: 'Prijzen (incl. montage)', value: 'Vanaf €2.155,- (2,5kW), 5,0kW: €2.775,-, 7,1kW: €3.625,-' }
       ]
     },
     {
@@ -162,7 +164,7 @@ export const daikinData: Brand = {
           alt: 'Daikin Perfera FTXM-A wandmodel airco wit 2.0-5.0kW - A+++ energielabel 3D luchtstroom'
         }
       ],
-      price: '€2.420,- inclusief standaard installatie',
+      price: 'Vanaf €2.420,- inclusief standaard installatie',
       energyLabel: 'A+++',
       capacity: '2,0 kW - 5,0 kW koelen / 2,5 kW - 6,0 kW verwarmen',
       features: [
@@ -329,7 +331,7 @@ export const daikinData: Brand = {
           alt: 'Daikin Perfera Vloermodel - Rechts'
         }
       ],
-      price: '€2.725,- inclusief standaard installatie',
+      price: 'Vanaf €2.725,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,4 kW - 5,0 kW koelen / 3,4 kW - 5,8 kW verwarmen',
       features: [

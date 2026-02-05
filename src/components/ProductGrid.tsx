@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
-import { Phone, Mail, ChevronRight, Zap, Snowflake, Wind, Eye } from 'lucide-react';
+import { ChevronRight, Snowflake, Phone } from 'lucide-react';
 import { aircoProducts, AircoProduct } from '../data/aircoProducts';
+import Card from './ui/Card';
+import Button from './ui/Button';
+import { cn } from '../utils/cn';
 
 type BrandFilter = 'all' | 'LG' | 'Tosot' | 'MaxiCool';
 type TypeFilter = 'all' | 'single-split' | 'multi-split' | 'commercieel';
@@ -26,7 +29,6 @@ export default function ProductGrid({
   const [typeFilter, setTypeFilter] = useState<TypeFilter>('all');
   const [visibleCount, setVisibleCount] = useState(maxProducts);
 
-  // Reset visible count when filters change
   const handleBrandFilter = (brand: BrandFilter) => {
     setBrandFilter(brand);
     setVisibleCount(maxProducts);
@@ -45,100 +47,71 @@ export default function ProductGrid({
 
   const displayProducts = filteredProducts.slice(0, visibleCount);
   const hasMoreProducts = visibleCount < filteredProducts.length;
-  const remainingCount = filteredProducts.length - visibleCount;
-
-  const brandCounts = {
-    all: aircoProducts.length,
-    LG: aircoProducts.filter(p => p.brand === 'LG').length,
-    Tosot: aircoProducts.filter(p => p.brand === 'Tosot').length,
-    MaxiCool: aircoProducts.filter(p => p.brand === 'MaxiCool').length,
-  };
 
   return (
-    <section id="airco-systemen" className="py-20 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="airco-systemen" className="py-32 bg-white relative overflow-hidden">
+      {/* Subtle Background Ambience */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-50/50 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 opacity-50 pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+        <div className="text-center mb-24">
+          <h2 className="text-5xl sm:text-6xl font-black text-quatt-dark mb-8 tracking-tighter italic">
             {title}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">
             {subtitle}
           </p>
         </div>
 
         {/* Filters */}
         {showFilters && (
-          <div className="mb-10 flex flex-wrap justify-center gap-4">
+          <div className="mb-20 flex flex-col items-center gap-8">
             {/* Brand Filter */}
-            <div className="flex flex-wrap justify-center gap-2">
+            <div className="flex flex-wrap justify-center gap-4">
               {(['all', 'LG', 'Tosot', 'MaxiCool'] as BrandFilter[]).map((brand) => (
                 <button
                   key={brand}
                   onClick={() => handleBrandFilter(brand)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                  className={cn(
+                    "px-8 py-3 rounded-full text-sm font-black uppercase tracking-widest transition-all duration-300 border-2",
                     brandFilter === brand
-                      ? 'bg-blue-600 text-white shadow-lg'
-                      : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                  }`}
+                      ? 'bg-quatt-dark text-white border-quatt-dark shadow-xl shadow-gray-200'
+                      : 'bg-white text-gray-400 border-gray-100 hover:border-quatt-orange hover:text-quatt-orange'
+                  )}
                 >
                   {brand === 'all' ? 'Alle merken' : brand}
-                  <span className="ml-1 text-xs opacity-70">({brandCounts[brand]})</span>
                 </button>
               ))}
             </div>
 
             {/* Type Filter */}
-            <div className="flex gap-2">
-              <button
-                onClick={() => handleTypeFilter('all')}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  typeFilter === 'all'
-                    ? 'bg-green-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                }`}
-              >
-                Alle types
-              </button>
-              <button
-                onClick={() => handleTypeFilter('single-split')}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  typeFilter === 'single-split'
-                    ? 'bg-green-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                }`}
-              >
-                <Wind className="inline-block w-4 h-4 mr-1" />
-                Single-split
-              </button>
-              <button
-                onClick={() => handleTypeFilter('multi-split')}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  typeFilter === 'multi-split'
-                    ? 'bg-green-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                }`}
-              >
-                <Wind className="inline-block w-4 h-4 mr-1" />
-                Multi-split
-              </button>
-              <button
-                onClick={() => handleTypeFilter('commercieel')}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  typeFilter === 'commercieel'
-                    ? 'bg-green-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                }`}
-              >
-                <Zap className="inline-block w-4 h-4 mr-1" />
-                Commercieel
-              </button>
+            <div className="flex flex-wrap justify-center gap-6">
+              {[
+                { id: 'all', label: 'Alle types' },
+                { id: 'single-split', label: 'Single-split' },
+                { id: 'multi-split', label: 'Multi-split' },
+                { id: 'commercieel', label: 'Commercieel' }
+              ].map((type) => (
+                <button
+                  key={type.id}
+                  onClick={() => handleTypeFilter(type.id as TypeFilter)}
+                  className={cn(
+                    "px-4 py-2 text-sm font-bold transition-all duration-200 border-b-2",
+                    typeFilter === type.id
+                      ? 'text-quatt-orange border-quatt-orange'
+                      : 'text-gray-400 border-transparent hover:text-quatt-dark'
+                  )}
+                >
+                  {type.label}
+                </button>
+              ))}
             </div>
           </div>
         )}
 
         {/* Product Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {displayProducts.map((product, index) => (
             <ProductCard key={product.id} product={product} index={index} />
           ))}
@@ -146,42 +119,67 @@ export default function ProductGrid({
 
         {/* Show More Button */}
         {hasMoreProducts && (
-          <div className="text-center mt-10">
-            <button
+          <div className="text-center mt-20">
+            <Button
+              variant="outline"
               onClick={() => setVisibleCount(prev => prev + loadMoreCount)}
-              className="inline-flex items-center px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-800 font-medium rounded-lg transition-colors"
+              className="group rounded-3xl"
             >
-              Laad meer ({remainingCount} resterend)
-              <ChevronRight className="w-5 h-5 ml-2" />
-            </button>
+              Laad meer producten
+              <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
         )}
 
-        {/* CTA Section */}
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 sm:p-12 text-center text-white shadow-xl">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-4">
-            Interesse in een van deze systemen?
-          </h3>
-          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-            Ontvang gratis en vrijblijvend advies van onze airco specialisten.
-            Wij helpen u graag bij het kiezen van het juiste systeem voor uw situatie.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="tel:0462021430"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-colors shadow-lg"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Bel: 046 202 1430
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-400 transition-colors border-2 border-blue-400"
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              Vraag offerte aan
-            </a>
-          </div>
+        {/* Bottom Card */}
+        <div className="mt-32">
+          {/* Dark Theme CTA - Quatt Dark */}
+          <Card radius="5xl" padding="none" className="!bg-quatt-dark text-white border-none shadow-2xl shadow-gray-200/50 overflow-hidden group relative isolate">
+            <div className="relative p-12 sm:p-20 text-center">
+              {/* Subtle Dark Accents (No Gradients) */}
+              <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2 pointer-events-none -z-10" />
+
+              <div className="relative z-10 max-w-3xl mx-auto">
+                <h3 className="text-4xl sm:text-5xl font-black mb-8 tracking-tight text-white">
+                  Hulp nodig bij uw keuze?
+                </h3>
+                <p className="text-gray-300 mb-12 text-xl leading-relaxed font-medium">
+                  Onze adviseurs komen graag bij u langs voor een <span className="font-bold text-white">gratis en vrijblijvend adviesgesprek</span>. Wij meten de ruimte op en berekenen direct uw besparing.
+                </p>
+
+                <div className="flex flex-col sm:flex-row justify-center gap-6">
+                  <Button
+                    href="/contact"
+                    variant="primary"
+                    size="lg"
+                    className="px-10 h-16 text-lg rounded-2xl shadow-xl shadow-quatt-orange/20 hover:shadow-2xl hover:scale-105 transition-all bg-quatt-orange hover:bg-orange-500 text-white border-none font-black"
+                  >
+                    Adviesgesprek inplannen
+                  </Button>
+                  <Button
+                    href="tel:0462021430"
+                    variant="outline"
+                    size="lg"
+                    className="px-10 h-16 text-lg rounded-2xl bg-white/5 text-white hover:bg-white hover:text-quatt-dark border-2 border-white/20 hover:border-white backdrop-blur-sm transition-all font-bold group/btn"
+                  >
+                    <Phone className="w-5 h-5 mr-3 group-hover/btn:text-quatt-orange transition-colors" />
+                    Bel 046 202 1430
+                  </Button>
+                </div>
+
+                <div className="mt-12 flex items-center justify-center opacity-80 gap-3">
+                  <div className="flex -space-x-2">
+                    <div className="w-8 h-8 rounded-full bg-gray-600 border-2 border-quatt-dark" />
+                    <div className="w-8 h-8 rounded-full bg-gray-500 border-2 border-quatt-dark" />
+                    <div className="w-8 h-8 rounded-full bg-gray-400 border-2 border-quatt-dark" />
+                  </div>
+                  <p className="text-sm font-bold text-gray-400">
+                    Al <span className="text-white">500+</span> tevreden klanten
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
     </section>
@@ -195,96 +193,68 @@ function ProductCard({ product, index }: { product: AircoProduct; index: number 
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.3) }}
       viewport={{ once: true }}
-      className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
     >
-      {/* Image - Clickable */}
-      <Link to={`/products/airco/${product.id}`} className="block">
-        <div className="relative aspect-square bg-gray-100 overflow-hidden">
+      <Card radius="3xl" padding="none" className="h-full flex flex-col group border-transparent hover:border-gray-100 hover:shadow-2xl hover:shadow-gray-200/50 transition-all duration-500 overflow-hidden bg-white">
+        {/* Image - Clickable */}
+        <Link to={`/products/airco/${product.id}`} className="block relative aspect-[4/3] bg-gray-50 overflow-hidden">
           {product.image ? (
             <img
               src={product.image}
               alt={product.name}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               loading="lazy"
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center">
-              <Snowflake className="w-16 h-16 text-gray-300" />
+              <Snowflake className="w-12 h-12 text-gray-200" />
             </div>
           )}
 
-          {/* Brand Badge */}
-          <div className="absolute top-3 left-3">
-            <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-              product.brand === 'LG' ? 'bg-red-100 text-red-700' :
-              product.brand === 'Tosot' ? 'bg-green-100 text-green-700' :
-              'bg-blue-100 text-blue-700'
-            }`}>
-              {product.brand}
+          {/* Energy Label Badge */}
+          <div className="absolute top-4 left-4">
+            <span className={cn(
+              "inline-flex items-center px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-sm border",
+              product.energyLabel === 'A+++'
+                ? "bg-green-50 text-green-700 border-green-100"
+                : "bg-white/90 backdrop-blur-md text-quatt-dark border-white/20"
+            )}>
+              {product.energyLabel ? `Label ${product.energyLabel}` : 'Energiezuinig'}
             </span>
           </div>
-
-          {/* Capacity Badge */}
-          {product.capacity && (
-            <div className="absolute top-3 right-3">
-              <span className="px-3 py-1 bg-gray-900/80 text-white rounded-full text-xs font-semibold">
-                {product.capacity} kW
-              </span>
-            </div>
-          )}
-
-          {/* Type Badge */}
-          <div className="absolute bottom-3 left-3">
-            <span className={`px-2 py-1 rounded text-xs font-medium ${
-              product.type === 'single-split' ? 'bg-green-500/90 text-white' :
-              product.type === 'multi-split' ? 'bg-blue-500/90 text-white' :
-              'bg-purple-500/90 text-white'
-            }`}>
-              {product.type === 'single-split' ? 'Single-split' :
-               product.type === 'multi-split' ? 'Multi-split' : 'Commercieel'}
-            </span>
-          </div>
-        </div>
-      </Link>
-
-      {/* Content */}
-      <div className="p-4">
-        <Link to={`/products/airco/${product.id}`}>
-          <h3 className="font-semibold text-gray-900 text-sm leading-tight mb-2 line-clamp-2 min-h-[40px] hover:text-blue-600 transition-colors">
-            {product.name}
-          </h3>
         </Link>
 
-        {/* Quick Specs */}
-        <div className="flex items-center gap-2 mb-3 text-xs text-gray-500">
-          {product.capacity && (
-            <span className="flex items-center">
-              <Zap className="w-3 h-3 mr-1 text-yellow-500" />
-              {product.capacity} kW
-            </span>
-          )}
-          <span>•</span>
-          <span>{product.type === 'single-split' ? 'Single-split' :
-                 product.type === 'multi-split' ? 'Multi-split' : 'Commercieel'}</span>
-        </div>
+        {/* Content */}
+        <div className="p-6 flex flex-col flex-grow">
+          <div className="mb-3">
+            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-quatt-orange">{product.brand}</span>
+          </div>
 
-        {/* Buttons */}
-        <div className="flex gap-2">
-          <Link
-            to={`/products/airco/${product.id}`}
-            className="flex-1 text-center py-2 px-3 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium rounded-lg transition-colors flex items-center justify-center"
-          >
-            <Eye className="w-4 h-4 mr-1" />
-            Meer info
+          <Link to={`/products/airco/${product.id}`} className="block mb-6">
+            <h3 className="font-bold text-quatt-dark text-lg leading-snug group-hover:text-quatt-orange transition-colors min-h-[56px] line-clamp-2">
+              {product.name}
+            </h3>
           </Link>
-          <a
-            href="#contact"
-            className="flex-1 text-center py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors"
-          >
-            Offerte
-          </a>
+
+          {/* Pricing & Specs */}
+          <div className="flex items-end justify-between mb-6 pt-6 border-t border-gray-50 mt-auto">
+            <div>
+              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Prijs incl. montage</p>
+              <p className="text-lg font-black text-quatt-orange leading-none group-hover:underline decoration-2 underline-offset-4">
+                Vraag offerte aan
+              </p>
+            </div>
+            <div className="text-right">
+              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Vermogen</p>
+              <p className="font-bold text-quatt-dark">{product.capacity} kW</p>
+            </div>
+          </div>
+
+          {/* Button */}
+          <Button variant="secondary" href={`/products/airco/${product.id}`} className="w-full rounded-xl font-bold bg-gray-50 hover:bg-quatt-orange hover:text-white border-none transition-all">
+            Bekijk details
+          </Button>
         </div>
-      </div>
+      </Card>
     </m.div>
   );
 }

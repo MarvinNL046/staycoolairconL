@@ -22,7 +22,7 @@ export const lgData: Brand = {
           alt: 'LG DualCool Standaard Plus wandmodel airco wit 2.5-6.6kW - A++ ThinQ wifi besturing'
         }
       ],
-      price: '€1.695,- inclusief standaard installatie',
+      price: 'Vanaf €1.695,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,5 kW - 6,6 kW',
       features: [
@@ -47,21 +47,22 @@ export const lgData: Brand = {
         { label: 'Afmetingen buitendeel (3,5kW)', value: '717 x 495 x 230mm (BxHxD)' },
         { label: 'Gewicht buitenunit (3,5kW)', value: '25,1 kg' },
         { label: 'Afmetingen binnendeel (5kW & 7kW)', value: '998 x 345 x 210mm (BxHxD)' },
-        { label: 'Afmetingen buitendeel (5kW & 7kW)', value: '770 x 545 x 288mm (BxHxD)' }
+        { label: 'Afmetingen buitendeel (5kW & 7kW)', value: '770 x 545 x 288mm (BxHxD)' },
+        { label: 'Prijzen (incl. montage)', value: '2,5kW: €1.695,-, 3,5kW: €1.795,-, 5,0kW: €2.295,-, 7,0kW: €2.795,-' }
       ]
     },
     {
-      name: 'DualCool Premium',
-      slug: 'dualcool-premium',
-      description: 'Geavanceerde wandunit met superieure energiezuinigheid en uitgebreide functies voor optimaal comfort. Voorzien van AI air mode, allergiefilter en fluisterstille werking vanaf 19 dB. Bedien de unit eenvoudig via wifi of spraakbesturing met Google Assistant of Alexa.',
+      name: 'DualCool Deluxe',
+      slug: 'dualcool-deluxe',
+      description: 'Geavanceerde wandunit (nieuw model) met superieure energiezuinigheid en uitgebreide functies voor optimaal comfort. Voorzien van AI air mode, allergiefilter en fluisterstille werking. Bedien de unit eenvoudig via wifi of spraakbesturing.',
       imageUrl: '/images/products/rac-eu-lg-premium.webp',
       images: [
         {
           url: '/images/products/rac-eu-lg-premium.webp',
-          alt: 'LG DualCool Premium wandmodel airco wit 2.5-6.6kW - A++ UVnano AI technologie spraakbesturing'
+          alt: 'LG DualCool Deluxe wandmodel airco wit - A++ UVnano AI technologie'
         }
       ],
-      price: '€2.060,- inclusief standaard installatie',
+      price: 'Vanaf €1.850,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,5 kW - 6,6 kW',
       features: [
@@ -100,7 +101,8 @@ export const lgData: Brand = {
         { label: 'Werktemperatuur koelen', value: '-10°C ~ +48°C' },
         { label: 'Werktemperatuur verwarmen', value: '-15°C ~ +24°C' },
         { label: 'Luchtstroom binnen', value: '270 - 900 m³/h' },
-        { label: 'Garantie', value: '5 jaar' }
+        { label: 'Garantie', value: '5 jaar' },
+        { label: 'Prijzen (incl. montage)', value: '2,5kW: €1.850,-, 3,5kW: €1.950,-, 5,0kW: €2.450,-, 7,0kW: €3.050,-' }
       ]
     },
     {

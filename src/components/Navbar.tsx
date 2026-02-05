@@ -1,373 +1,143 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Calendar, Battery, Wind, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Check } from 'lucide-react';
 import Logo from './Logo';
 import { seoNavigation } from '../data/seoNavigation';
+import Button from './ui/Button';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isBannerVisible, setIsBannerVisible] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return !sessionStorage.getItem('urgencyBannerDismissed');
-    }
-    return true;
-  });
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
-
-  // Listen for banner dismissal
-  useEffect(() => {
-    const handleBannerDismiss = () => {
-      setIsBannerVisible(false);
-    };
-    window.addEventListener('urgencyBannerDismissed', handleBannerDismiss);
-    return () => window.removeEventListener('urgencyBannerDismissed', handleBannerDismiss);
-  }, []);
 
   useEffect(() => {
-    // Throttle scroll handler to run at most every 100ms
-    let ticking = false;
     const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          setIsScrolled(window.scrollY > 50);
-          ticking = false;
-        });
-        ticking = true;
-      }
+      setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // Check initial scroll position
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const getNavBackground = () => {
-    if (isOpen) {
-      return 'bg-white shadow-lg';
-    }
-    if (!isScrolled && isHomePage) {
-      return 'bg-transparent';
-    }
-    return 'bg-white/90 backdrop-blur-sm shadow-lg';
-  };
+  const navClasses = `fixed w-full z-50 transition-all duration-300 ${isScrolled
+      ? 'bg-white/90 backdrop-blur-xl shadow-sm py-3 top-0'
+      : 'bg-white/0 backdrop-blur-none py-4 top-0 md:top-[38px]'
+    }`;
 
-  const getLinkColor = () => {
-    if (!isScrolled && isHomePage && !isOpen) {
-      return 'text-white hover:text-white/90';
-    }
-    return 'text-gray-700 hover:text-orange-500';
-  };
+  const linkClasses = "text-quatt-dark font-bold tracking-tight hover:text-quatt-orange transition-colors duration-200 text-sm uppercase";
 
   return (
-    <nav
-      className={`fixed w-full z-50 transition-all duration-300 h-[64px] sm:h-[80px] ${getNavBackground()} ${isBannerVisible ? 'top-10' : 'top-0'}`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-        <div className="flex justify-between h-full">
-          <div className="flex items-center h-full py-2">
-            <Link to="/" className="flex items-center h-full">
-              <Logo className="h-8 sm:h-10 w-[100px] sm:w-[120px]" />
-            </Link>
+    <>
+      {/* USP Topbar */}
+      <div className="bg-quatt-dark text-white py-2.5 text-[11px] font-bold tracking-widest uppercase hidden md:block">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+          <div className="flex items-center gap-6">
+            <span className="flex items-center gap-2">
+              <Check className="w-3.5 h-3.5 text-quatt-orange" />
+              Erkend Installateur
+            </span>
+            <span className="flex items-center gap-2">
+              <Check className="w-3.5 h-3.5 text-quatt-orange" />
+              4,7/5 uit 174 reviews
+            </span>
           </div>
-          
-          <div className="hidden md:flex items-center space-x-6">
-            <Link 
-              to="/"
-              className={`transition-colors duration-300 ${getLinkColor()}`}
-            >
-              Home
+          <div className="flex items-center gap-6">
+            <span className="flex items-center gap-2">
+              <Check className="w-3.5 h-3.5 text-quatt-orange" />
+              Binnen 2 weken in huis
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <nav className={navClasses}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            {/* Logo */}
+            <Link to="/" className="flex-shrink-0 z-50">
+              <Logo className="h-8 sm:h-9 w-auto" />
             </Link>
-            <div className="relative group">
-              <Link 
-                to="/products" 
-                className={`transition-colors duration-300 ${getLinkColor()}`}
-              >
-                Producten
-              </Link>
-              <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-lg shadow-lg">
-                <div className="py-2">
-                  <Link 
-                    to="/products"
-                    className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-50"
-                  >
-                    Alle Producten
-                  </Link>
-                  <Link 
-                    to="/capaciteit-calculator"
-                    className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-50"
-                  >
-                    Capaciteit Calculator
-                  </Link>
-                  <Link 
-                    to="/thuisbatterij-calculator"
-                    className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-50"
-                  >
-                    Thuisbatterij Calculator
-                  </Link>
-                  <Link 
-                    to="/mobiele-airco"
-                    className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-50"
-                  >
-                    Mobiele Airco
-                  </Link>
-                  <Link 
-                    to="/airco-met-buitenunit"
-                    className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-50"
-                  >
-                    Airco Met Buitenunit
-                  </Link>
-                  <Link 
-                    to="/airco-installatie"
-                    className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-50"
-                  >
-                    Airco Installatie
-                  </Link>
-                  <Link 
-                    to="/airco-onderhoud"
-                    className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-50"
-                  >
-                    Airco Onderhoud
-                  </Link>
-                  <Link 
-                    to="/airco-reparatie"
-                    className="block px-4 py-2 text-gray-700 hover:text-orange-500 hover:bg-gray-50"
-                  >
-                    Airco Reparatie
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <Link
-              to="/onderhoud"
-              className={`transition-colors duration-300 ${getLinkColor()}`}
-            >
-              Onderhoud
-            </Link>
-            <div className="relative group">
-              <button
-                className={`flex items-center transition-colors duration-300 ${getLinkColor()}`}
-              >
-                Info
-                <ChevronDown className="h-4 w-4 ml-1" />
-              </button>
-              <div className="absolute left-0 mt-2 w-[800px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-lg shadow-xl z-50">
-                <div className="grid grid-cols-3 gap-6 p-6">
-                  {seoNavigation.slice(0, 9).map((pillar) => (
-                    <div key={pillar.slug}>
-                      <h4 className="font-semibold text-gray-900 mb-2 text-sm">{pillar.name}</h4>
-                      <ul className="space-y-1">
-                        {pillar.subpillars.map((subpillar) => (
-                          <li key={subpillar.slug}>
-                            <Link
-                              to={subpillar.path}
-                              className="block text-xs text-gray-600 hover:text-orange-500 py-1"
-                            >
-                              {subpillar.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-                {/* Show 10th pillar separately if needed */}
-                <div className="border-t border-gray-100 p-4 bg-gray-50">
-                  <div className="grid grid-cols-3 gap-4">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2 text-sm">{seoNavigation[9].name}</h4>
-                      <ul className="space-y-1">
-                        {seoNavigation[9].subpillars.map((subpillar) => (
-                          <li key={subpillar.slug}>
-                            <Link
-                              to={subpillar.path}
-                              className="block text-xs text-gray-600 hover:text-orange-500 py-1"
-                            >
-                              {subpillar.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-10">
+              <div className="flex items-center space-x-8">
+                <Link to="/products" className={linkClasses}>
+                  Producten
+                </Link>
+                <Link to="/airco-installatie" className={linkClasses}>
+                  Installatie
+                </Link>
+                <Link to="/onderhoud" className={linkClasses}>
+                  Onderhoud
+                </Link>
+                <div className="relative group">
+                  <button className={`${linkClasses} flex items-center group-hover:text-quatt-orange`}>
+                    Meer <ChevronDown className="ml-1 h-4 w-4" />
+                  </button>
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div className="bg-white rounded-[2rem] shadow-2xl border border-gray-100 p-8 w-[640px] grid grid-cols-2 gap-x-12 gap-y-6 transform translate-y-2 group-hover:translate-y-0 transition-transform">
+                      <div>
+                        <h4 className="font-black text-quatt-dark mb-4 text-sm uppercase tracking-wider">Kennisbank</h4>
+                        <ul className="space-y-3">
+                          <li><Link to="/kennisbank" className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">Alle Artikelen</Link></li>
+                          <li><Link to="/kennisbank/hoe-werkt-airco" className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">Hoe werkt een airco?</Link></li>
+                          <li><Link to="/kennisbank/subsidies" className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">Subsidies</Link></li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-black text-quatt-dark mb-4 text-sm uppercase tracking-wider">Tools</h4>
+                        <ul className="space-y-3">
+                          <li><Link to="/capaciteit-calculator" className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">Capaciteit Calculator</Link></li>
+                          <li><Link to="/thuisbatterij-calculator" className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">Besparing Calculator</Link></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              {/* CTA Buttons */}
+              <div className="flex items-center space-x-6">
+                <a href="tel:0462021430" className="text-quatt-dark font-black tracking-tight hover:text-quatt-orange transition-colors hidden xl:block">
+                  046 202 1430
+                </a>
+                <Button href="https://afspraken.staycoolairco.nl" variant="primary" size="md" className="rounded-full px-6 py-2.5 shadow-xl shadow-quatt-orange/20 hover:shadow-2xl hover:-translate-y-0.5 transition-all">
+                  Plan adviesgesprek
+                </Button>
+              </div>
             </div>
-            <Link 
-              to="/aircos" 
-              className="inline-flex items-center px-3 py-1.5 bg-sky-500 text-white font-medium rounded-md hover:bg-sky-600 transition-colors duration-300"
-            >
-              <Wind className="h-4 w-4 mr-1.5" />
-              Airco's
-            </Link>
-            <Link 
-              to="/thuisbatterijen" 
-              className="inline-flex items-center px-3 py-1.5 bg-yellow-400 text-gray-900 font-medium rounded-md hover:bg-yellow-500 transition-colors duration-300"
-            >
-              <Battery className="h-4 w-4 mr-1.5" />
-              Thuisbatterijen
-            </Link>
-            <div className="flex items-center space-x-4">
-              <a 
-                href="https://afspraken.staycoolairco.nl"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md transition-colors duration-300 ${
-                  isScrolled || !isHomePage || isOpen
-                    ? 'bg-orange-500 text-white hover:bg-orange-600'
-                    : 'bg-white text-orange-500 hover:bg-orange-50'
-                }`}
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden z-50">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="p-2 text-quatt-dark hover:bg-gray-100 rounded-full transition-colors"
               >
-                <Calendar className="h-4 w-4 mr-2" />
-                Plan een afspraak
-              </a>
-              <a 
-                href="tel:0462021430" 
-                className={`inline-flex items-center px-4 py-2 border text-sm font-medium rounded-md transition-colors duration-300 ${
-                  isScrolled || !isHomePage || isOpen
-                    ? 'border-gray-300 text-gray-700 hover:text-orange-500 hover:border-orange-500'
-                    : 'border-white/50 text-white hover:bg-white/10'
-                }`}
-              >
-                <Phone className="h-4 w-4 mr-2" />
-                046 202 1430
-              </a>
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
             </div>
           </div>
+        </div>
 
-          <div className="md:hidden flex items-center space-x-4 relative z-50">
-            <button 
-              onClick={() => setIsOpen(!isOpen)} 
-              className={`inline-flex items-center justify-center transition-colors duration-300 ${
-                isScrolled || !isHomePage || isOpen ? 'text-gray-700 hover:text-orange-500' : 'text-white hover:text-white/90'
-              }`}
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+        {/* Mobile Menu Overlay */}
+        <div className={`fixed inset-0 bg-white/95 backdrop-blur-xl z-40 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden pt-24 px-6`}>
+          <div className="flex flex-col space-y-6 text-2xl font-black text-quatt-dark tracking-tight">
+            <Link to="/products" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Producten</Link>
+            <Link to="/airco-installatie" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Installatie</Link>
+            <Link to="/onderhoud" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Onderhoud</Link>
+            <Link to="/kennisbank" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Kennisbank</Link>
+            <Link to="/contact" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Contact</Link>
+
+            <div className="pt-6 space-y-4">
+              <Button href="https://afspraken.staycoolairco.nl" variant="primary" className="w-full justify-center rounded-2xl py-4 shadow-xl text-lg">
+                Plan gratis advies
+              </Button>
+              <Button href="tel:0462021430" variant="secondary" className="w-full justify-center rounded-2xl bg-gray-50 text-quatt-dark hover:bg-gray-100 py-4 text-lg">
+                Bel 046 202 1430
+              </Button>
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <div
-        className={`md:hidden fixed inset-x-0 z-40 transition-all duration-200 ${
-          isBannerVisible ? 'top-[104px]' : 'top-[64px]'
-        } ${
-          isOpen ? 'translate-y-0 opacity-100 visible' : 'translate-y-2 opacity-0 invisible'
-        }`}
-      >
-        <div className="px-4 pt-2 pb-3 space-y-2 bg-white shadow-lg">
-          <Link 
-            to="/"
-            className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50"
-            onClick={() => setIsOpen(false)}
-          >
-            Home
-          </Link>
-          <div className="space-y-1">
-            <Link 
-              to="/products"
-              className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50"
-              onClick={() => setIsOpen(false)}
-            >
-              Alle Producten
-            </Link>
-            <Link 
-              to="/capaciteit-calculator"
-              className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50 ml-4"
-              onClick={() => setIsOpen(false)}
-            >
-              Capaciteit Calculator
-            </Link>
-            <Link 
-              to="/thuisbatterij-calculator"
-              className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50 ml-4"
-              onClick={() => setIsOpen(false)}
-            >
-              Thuisbatterij Calculator
-            </Link>
-            <Link 
-              to="/mobiele-airco"
-              className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50 ml-4"
-              onClick={() => setIsOpen(false)}
-            >
-              Mobiele Airco
-            </Link>
-            <Link 
-              to="/airco-met-buitenunit"
-              className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50 ml-4"
-              onClick={() => setIsOpen(false)}
-            >
-              Airco Met Buitenunit
-            </Link>
-            <Link 
-              to="/airco-installatie"
-              className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50 ml-4"
-              onClick={() => setIsOpen(false)}
-            >
-              Airco Installatie
-            </Link>
-            <Link 
-              to="/airco-onderhoud"
-              className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50 ml-4"
-              onClick={() => setIsOpen(false)}
-            >
-              Airco Onderhoud
-            </Link>
-            <Link 
-              to="/airco-reparatie"
-              className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50 ml-4"
-              onClick={() => setIsOpen(false)}
-            >
-              Airco Reparatie
-            </Link>
-          </div>
-          <Link 
-            to="/onderhoud"
-            className="block px-4 py-2.5 rounded-md text-gray-700 hover:text-orange-500 active:bg-gray-50"
-            onClick={() => setIsOpen(false)}
-          >
-            Onderhoud
-          </Link>
-          <Link 
-            to="/products"
-            className="flex items-center px-4 py-2.5 rounded-md bg-sky-500 text-white font-medium hover:bg-sky-600 active:bg-sky-700"
-            onClick={() => setIsOpen(false)}
-          >
-            <Wind className="h-4 w-4 mr-2" />
-            Airco's
-          </Link>
-          <Link 
-            to="/thuisbatterijen"
-            className="flex items-center px-4 py-2.5 rounded-md bg-yellow-400 text-gray-900 font-medium hover:bg-yellow-500 active:bg-yellow-600"
-            onClick={() => setIsOpen(false)}
-          >
-            <Battery className="h-4 w-4 mr-2" />
-            Thuisbatterijen
-          </Link>
-          <div className="space-y-2 pt-2">
-            <a 
-              href="https://afspraken.staycoolairco.nl"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block px-4 py-2.5 rounded-md bg-orange-500 text-white hover:bg-orange-600 active:bg-orange-700"
-              onClick={() => setIsOpen(false)}
-            >
-              <Calendar className="h-4 w-4 inline mr-2" />
-              Plan een afspraak
-            </a>
-            <a 
-              href="tel:0462021430" 
-              className="block px-4 py-2.5 rounded-md border border-gray-300 text-gray-700 hover:text-orange-500 hover:border-orange-500"
-            >
-              <Phone className="h-4 w-4 inline mr-2" />
-              046 202 1430
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 }

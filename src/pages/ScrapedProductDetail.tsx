@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, Phone, Mail, Zap, Wind, Snowflake, ChevronLeft, ChevronRight, X, Ruler, FileText, ExternalLink, Leaf, Volume2, ThermometerSun } from 'lucide-react';
+import { ArrowLeft, Phone, Mail, Zap, Wind, Snowflake, ChevronLeft, ChevronRight, X, Ruler, FileText, ExternalLink, Leaf, Volume2, ThermometerSun, Check, Info } from 'lucide-react';
 import { aircoProducts, AircoProduct } from '../data/aircoProducts';
 
 export default function ScrapedProductDetail() {
   const { productId } = useParams();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [showInstallationInfo, setShowInstallationInfo] = useState(false);
 
   const product = aircoProducts.find(p => p.id === productId);
 
@@ -122,7 +123,7 @@ export default function ScrapedProductDetail() {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12">
+      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24 lg:pt-32 pb-12 overflow-x-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <div className="mb-8">
@@ -137,12 +138,12 @@ export default function ScrapedProductDetail() {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Image Gallery */}
-            <div>
+            <div className="min-w-0">
               {/* Main Image */}
               <m.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="relative aspect-square bg-white rounded-2xl shadow-lg overflow-hidden mb-4 cursor-pointer"
+                className="relative aspect-square bg-white rounded-2xl shadow-lg overflow-hidden mb-4 cursor-pointer w-full max-w-full"
                 onClick={() => setLightboxOpen(true)}
               >
                 {images.length > 0 ? (
@@ -186,11 +187,10 @@ export default function ScrapedProductDetail() {
 
                 {/* Badges */}
                 <div className="absolute top-4 left-4 flex flex-col gap-2">
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                    product.brand === 'LG' ? 'bg-red-100 text-red-700' :
+                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${product.brand === 'LG' ? 'bg-red-100 text-red-700' :
                     product.brand === 'Tosot' ? 'bg-green-100 text-green-700' :
-                    'bg-blue-100 text-blue-700'
-                  }`}>
+                      'bg-blue-100 text-blue-700'
+                    }`}>
                     {product.brand}
                   </span>
                 </div>
@@ -212,11 +212,10 @@ export default function ScrapedProductDetail() {
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all relative ${
-                        currentImageIndex === index
-                          ? 'border-blue-600 shadow-md'
-                          : 'border-gray-200 hover:border-gray-300'
-                      }`}
+                      className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all relative ${currentImageIndex === index
+                        ? 'border-blue-600 shadow-md'
+                        : 'border-gray-200 hover:border-gray-300'
+                        }`}
                     >
                       <img
                         src={img.path}
@@ -233,24 +232,23 @@ export default function ScrapedProductDetail() {
             </div>
 
             {/* Product Info */}
-            <div>
+            <div className="min-w-0">
               <m.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
               >
                 <div className="flex flex-wrap gap-2 mb-3">
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                    product.type === 'single-split' ? 'bg-green-500 text-white' :
+                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${product.type === 'single-split' ? 'bg-green-500 text-white' :
                     product.type === 'multi-split' ? 'bg-blue-500 text-white' :
-                    'bg-purple-500 text-white'
-                  }`}>
+                      'bg-purple-500 text-white'
+                    }`}>
                     {product.type === 'single-split' ? 'Single-split' :
-                     product.type === 'multi-split' ? 'Multi-split' : 'Commercieel'}
+                      product.type === 'multi-split' ? 'Multi-split' : 'Commercieel'}
                   </span>
                 </div>
 
-                <h1 className="text-3xl font-bold text-gray-900 mb-4">
+                <h1 className="text-3xl font-bold text-gray-900 mb-4 break-words">
                   {product.name}
                 </h1>
 
@@ -258,6 +256,30 @@ export default function ScrapedProductDetail() {
                   <p className="text-sm text-gray-500 mb-4">
                     Artikelnummer: {product.sku}
                   </p>
+                )}
+
+                {/* Price Card */}
+                {product.price && (
+                  <div className="mb-8 bg-white p-4 rounded-xl shadow-sm border border-blue-100">
+                    <div className="flex flex-col">
+                      <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">All-in prijs vanaf</span>
+                      <div className="flex items-baseline gap-2 flex-wrap">
+                        <span className="text-3xl font-bold text-gray-900">
+                          € {product.price.toLocaleString('nl-NL', { minimumFractionDigits: 2 })}
+                        </span>
+                        <span className="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-md">
+                          Inclusief montage
+                        </span>
+                      </div>
+                      <button
+                        onClick={() => setShowInstallationInfo(true)}
+                        className="text-sm text-gray-500 underline decoration-dotted hover:text-blue-600 mt-1 text-left w-fit flex items-center gap-1"
+                      >
+                        <Info className="w-3 h-3" />
+                        Wat is standaard installatie?
+                      </button>
+                    </div>
+                  </div>
                 )}
 
                 {/* Quick specs */}
@@ -353,7 +375,7 @@ export default function ScrapedProductDetail() {
                         </h3>
                         <span className="text-gray-500 group-open:rotate-180 transition-transform">▼</span>
                       </summary>
-                      <div className="max-h-96 overflow-y-auto">
+                      <div className="max-h-96 overflow-y-auto overflow-x-auto">
                         <table className="w-full text-sm">
                           <tbody>
                             {Object.entries(product.specifications).map(([key, value], index) => (
@@ -518,6 +540,59 @@ export default function ScrapedProductDetail() {
             <span className="text-white text-sm">
               {currentImageIndex + 1} / {images.length}
             </span>
+          </div>
+        </div>
+      )}
+      {/* Installation Info Modal */}
+      {showInstallationInfo && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={() => setShowInstallationInfo(false)}>
+          <div className="bg-white rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+            <div className="p-6 border-b border-gray-100 flex justify-between items-center sticky top-0 bg-white">
+              <h3 className="text-xl font-bold text-gray-900">Standaard installatie</h3>
+              <button
+                onClick={() => setShowInstallationInfo(false)}
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                aria-label="Sluiten"
+              >
+                <X className="w-5 h-5 text-gray-500" />
+              </button>
+            </div>
+            <div className="p-6 space-y-4">
+              <p className="text-gray-600">
+                Onze all-in prijzen zijn inclusief standaard montage. Dit omvat alles wat nodig is voor een professionele installatie in de meeste situaties:
+              </p>
+              <ul className="space-y-3">
+                {[
+                  'Volledige installatie door F-gassen gecertificeerde monteurs',
+                  'Tot 3 meter koelleiding en bekabeling',
+                  'Muurdooringen door steen/beton (excl. gewapend beton)',
+                  'Plaatsing binnenunit op gewenste locatie',
+                  'Plaatsing buitenunit op opstelmateriaal (balken/blokken) of muurbeugel',
+                  'Afwerking met luxe kabelgoten',
+                  'Elektrische aansluiting op geaard stopcontact (binnen 3 meter)',
+                  'Vacumeren en in bedrijf stellen van het systeem',
+                  'Uitleg over de werking van het systeem'
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="mt-1 bg-green-100 p-1 rounded-full">
+                      <Check className="w-3 h-3 text-green-600" />
+                    </div>
+                    <span className="text-gray-700 text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="bg-blue-50 p-4 rounded-lg mt-6">
+                <p className="text-sm text-blue-800">
+                  <strong>Let op:</strong> Voor situaties die buiten de standaard montage vallen (zoals leidinglengtes &gt; 3 meter, dakdoorvoer, hoogwerker nodig) maken we graag een maatwerk prijsopgave.
+                </p>
+              </div>
+              <button
+                onClick={() => setShowInstallationInfo(false)}
+                className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors mt-4"
+              >
+                Begrepen
+              </button>
+            </div>
           </div>
         </div>
       )}

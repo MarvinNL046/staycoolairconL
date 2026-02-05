@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import toast, { Toaster } from 'react-hot-toast';
 import SchemaMarkup from './SchemaMarkup';
-import { 
-  Check, 
-  ThermometerSun, 
-  Wind, 
-  Zap, 
-  Timer, 
-  Ruler, 
+import {
+  Check,
+  ThermometerSun,
+  Wind,
+  Zap,
+  Timer,
+  Ruler,
   Info,
   Award,
   X,
@@ -69,13 +69,13 @@ export default function ProductDetail({
   const [showInstallationInfo, setShowInstallationInfo] = useState(false);
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-8 lg:py-20 bg-gray-50 overflow-hidden">
       <Toaster position="top-center" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Product Header */}
         <div className="mb-12">
           <nav className="flex mb-8" aria-label="Breadcrumb">
-            <ol className="inline-flex items-center space-x-1 md:space-x-3">
+            <ol className="inline-flex items-center space-x-1 md:space-x-3 flex-wrap">
               <li><a href="#" className="text-gray-500 hover:text-blue-600">Producten</a></li>
               <li className="flex items-center">
                 <span className="mx-2 text-gray-400">/</span>
@@ -83,7 +83,7 @@ export default function ProductDetail({
               </li>
               <li className="flex items-center">
                 <span className="mx-2 text-gray-400">/</span>
-                <span className="text-gray-700">{model}</span>
+                <span className="text-gray-700 truncate max-w-[150px] sm:max-w-none">{model}</span>
               </li>
             </ol>
           </nav>
@@ -96,10 +96,10 @@ export default function ProductDetail({
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-white rounded-2xl p-8 shadow-lg"
+            className="bg-white rounded-2xl p-4 sm:p-8 shadow-lg w-full max-w-full overflow-hidden"
           >
-            <ProductCarousel 
-              images={images} 
+            <ProductCarousel
+              images={images}
             />
             <div className="mt-4 flex justify-end space-x-2">
               <button
@@ -152,28 +152,27 @@ export default function ProductDetail({
                   Bestseller
                 </span>
               </div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-4 flex items-center">
-                {brand} {model}
-                <span className="ml-3 bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-1 rounded flex items-center">
-                  <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  Voorradig
-                </span>
+              <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 flex flex-wrap items-center gap-3">
               </h1>
-              
-              {/* Average rating */}
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <svg key={star} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                    </svg>
-                  ))}
+
+              {/* Product Status & Rating - Mobile Optimized */}
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                  <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-1.5"></span>
+                  Op voorraad
+                </span>
+                <div className="flex items-center">
+                  <div className="flex text-yellow-400">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <svg key={star} className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <span className="ml-1 text-xs text-gray-500 underline">150 reviews</span>
                 </div>
-                <span className="ml-2 text-gray-600">4.9/5 (150 reviews)</span>
               </div>
-              
+
               <p className="text-xl text-gray-600 mb-8">{description}</p>
 
               {/* Key benefits box */}
@@ -219,85 +218,90 @@ export default function ProductDetail({
               </div>
 
               {price && (
-                <div className="mb-8">
-                  <div className="text-sm text-gray-600">Vanaf</div>
-                  <div className="text-3xl font-bold text-gray-900">
-                    {price}
-                    {price.includes('inclusief standaard installatie') && (
-                      <button
-                        onClick={() => setShowInstallationInfo(true)}
-                        className="ml-2 text-sm font-normal text-blue-600 hover:text-blue-700 underline"
-                      >
-                        Wat houdt dit in?
-                      </button>
-                    )}
+                <div className="mb-8 bg-white p-4 rounded-xl shadow-sm border border-blue-100">
+                  <div className="flex flex-col">
+                    <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">All-in prijs vanaf</span>
+                    <div className="flex items-baseline gap-2 flex-wrap">
+                      <span className="text-3xl font-bold text-gray-900">
+                        {price.replace('inclusief standaard installatie', '').replace('Vanaf', '').trim()}
+                      </span>
+                      <span className="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-md">
+                        Inclusief montage
+                      </span>
+                    </div>
+                    <button
+                      onClick={() => setShowInstallationInfo(true)}
+                      className="text-xs text-gray-500 hover:text-blue-600 underline mt-1 text-left"
+                    >
+                      Wat is standaard installatie?
+                    </button>
                   </div>
-          </div>
-        )}
+                </div>
+              )}
 
-        <SchemaMarkup 
-          type="Product"
-          data={{
-            name: `${brand} ${model}`,
-            description: description,
-            image: getAbsoluteUrl(images[0].url),
-            brand: {
-              "@type": "Brand",
-              name: brand
-            },
-            offers: {
-              "@type": "Offer",
-              url: window.location.href,
-              priceCurrency: "EUR",
-              price: price ? parseFloat(price.replace(/[^0-9.]/g, '')) : undefined,
-              availability: "https://schema.org/InStock",
-              shippingDetails: {
-                "@type": "OfferShippingDetails",
-                shippingRate: {
-                  "@type": "MonetaryAmount",
-                  value: "0",
-                  currency: "EUR"
-                },
-                deliveryTime: {
-                  "@type": "ShippingDeliveryTime",
-                  businessDays: {
-                    "@type": "OpeningHoursSpecification",
-                    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                    opens: "09:00",
-                    closes: "17:00"
+              <SchemaMarkup
+                type="Product"
+                data={{
+                  name: `${brand} ${model}`,
+                  description: description,
+                  image: getAbsoluteUrl(images[0].url),
+                  brand: {
+                    "@type": "Brand",
+                    name: brand
+                  },
+                  offers: {
+                    "@type": "Offer",
+                    url: window.location.href,
+                    priceCurrency: "EUR",
+                    price: price ? parseFloat(price.replace(/[^0-9.]/g, '')) : undefined,
+                    availability: "https://schema.org/InStock",
+                    shippingDetails: {
+                      "@type": "OfferShippingDetails",
+                      shippingRate: {
+                        "@type": "MonetaryAmount",
+                        value: "0",
+                        currency: "EUR"
+                      },
+                      deliveryTime: {
+                        "@type": "ShippingDeliveryTime",
+                        businessDays: {
+                          "@type": "OpeningHoursSpecification",
+                          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                          opens: "09:00",
+                          closes: "17:00"
+                        }
+                      }
+                    },
+                    hasMerchantReturnPolicy: {
+                      "@type": "MerchantReturnPolicy",
+                      applicableCountry: "NL",
+                      returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+                      merchantReturnDays: 14,
+                      returnMethod: "https://schema.org/ReturnByMail"
+                    }
+                  },
+                  aggregateRating: {
+                    "@type": "AggregateRating",
+                    ratingValue: "4.8",
+                    reviewCount: "150"
+                  },
+                  review: {
+                    "@type": "Review",
+                    reviewRating: {
+                      "@type": "Rating",
+                      ratingValue: "5",
+                      bestRating: "5"
+                    },
+                    author: {
+                      "@type": "Person",
+                      name: "StayCool Klant"
+                    },
+                    reviewBody: "Uitstekende service en een perfect werkende airco. Zeer tevreden!"
                   }
-                }
-              },
-              hasMerchantReturnPolicy: {
-                "@type": "MerchantReturnPolicy",
-                applicableCountry: "NL",
-                returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
-                merchantReturnDays: 14,
-                returnMethod: "https://schema.org/ReturnByMail"
-              }
-            },
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "4.8",
-              reviewCount: "150"
-            },
-            review: {
-              "@type": "Review",
-              reviewRating: {
-                "@type": "Rating",
-                ratingValue: "5",
-                bestRating: "5"
-              },
-              author: {
-                "@type": "Person",
-                name: "StayCool Klant"
-              },
-              reviewBody: "Uitstekende service en een perfect werkende airco. Zeer tevreden!"
-            }
-          }}
-        />
+                }}
+              />
 
-        {/* Features */}
+              {/* Features */}
               <div className="space-y-4 mb-8">
                 {features.map((feature) => (
                   <div key={feature} className="flex items-center text-gray-600">
@@ -323,7 +327,7 @@ export default function ProductDetail({
                 </span>
                 <span className="absolute top-0 right-0 px-2 py-1 text-xs font-semibold bg-orange-500 rounded-bl-lg text-white">GRATIS</span>
               </a>
-              
+
               <a
                 href="tel:0462021430"
                 className="group block w-full py-4 px-6 text-center text-blue-600 bg-white border-2 border-blue-600 hover:border-blue-700 hover:text-blue-700 rounded-lg font-medium transition-all duration-300 transform hover:translate-y-[-2px]"
@@ -333,7 +337,7 @@ export default function ProductDetail({
                   <span className="text-base">Direct Advies: 046 202 1430</span>
                 </span>
               </a>
-              
+
               <a
                 href="#specifications"
                 className="flex items-center justify-center w-full py-3 px-4 text-center text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg font-medium transition-colors duration-300"
@@ -342,7 +346,7 @@ export default function ProductDetail({
                 <span>Bekijk Specificaties</span>
               </a>
             </div>
-            
+
             {/* Trust badges */}
             <div className="mt-6 flex flex-wrap justify-between items-center">
               <div className="flex items-center text-sm text-gray-600 mr-4">
@@ -379,16 +383,23 @@ export default function ProductDetail({
               </button>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Standaard Installatie</h3>
               <div className="space-y-4 text-gray-600">
-                <p className="font-medium">Een standaard installatie bij StayCool Airco bestaat uit:</p>
+                <p className="font-medium">De prijzen zijn inclusief standaard installatie. Dit houdt in:</p>
                 <ul className="list-disc pl-5 space-y-2">
                   <li>Koelleiding lengte tussen binnen- en buitenunit maximaal 4 meter</li>
                   <li>Gangbare hoogte voor de buitenunit tot 2,5 meter hoogte</li>
                   <li>Diamantboring door de muur (uitgezonderd beton)</li>
                   <li>Electra aansluiting zonder groep bij plaatsing in de meterkast</li>
+                  <li>Afwerking met kunststof goten</li>
                 </ul>
-                <p className="text-sm mt-4">
-                  <strong>Let op:</strong> Eventueel benodigde hoogwerker of steigerwerk is niet inbegrepen in de standaard installatie.
-                </p>
+                <div className="bg-orange-50 p-4 rounded-lg mt-4">
+                  <p className="text-sm font-semibold text-orange-800 mb-2">Goed om te weten:</p>
+                  <ul className="text-sm text-orange-800 list-disc pl-5 space-y-1">
+                    <li>Betonboring is mogelijk tegen meerprijs (€ 175,00)</li>
+                    <li>Extra koelleiding: € 45,00 - € 70,00 per meter (afhankelijk van vermogen)</li>
+                    <li>Exclusief steigerwerk en/of hoogwerker indien nodig</li>
+                    <li>Dakdoorvoer (bitumen) is mogelijk tegen meerprijs (€ 175,00)</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -399,8 +410,8 @@ export default function ProductDetail({
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-gray-900 mb-8">Product Video</h2>
             <div className="bg-white rounded-xl shadow-md overflow-hidden">
-              <video 
-                controls 
+              <video
+                controls
                 className="w-full h-auto"
                 poster={images[0].url}
               >
@@ -475,23 +486,23 @@ export default function ProductDetail({
         )}
 
         {/* Enhanced CTA Section */}
-        <div id="contact" className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-10 relative overflow-hidden shadow-xl">
+        <div id="contact" className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-6 lg:p-10 relative overflow-hidden shadow-xl">
           {/* Background pattern */}
           <div className="absolute inset-0 opacity-10">
             <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
               <defs>
                 <pattern id="grid-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
-                  <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" strokeWidth="1"/>
+                  <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" strokeWidth="1" />
                 </pattern>
               </defs>
               <rect width="100" height="100" fill="url(#grid-pattern)" />
             </svg>
           </div>
-          
+
           {/* Floating elements */}
           <div className="absolute -top-12 -right-12 w-40 h-40 bg-blue-500 rounded-full opacity-20"></div>
           <div className="absolute -bottom-12 -left-12 w-32 h-32 bg-blue-400 rounded-full opacity-20"></div>
-          
+
           {/* Content */}
           <div className="relative z-10 flex flex-col lg:flex-row items-center">
             <div className="lg:w-2/3 mb-8 lg:mb-0 lg:pr-12 text-left">
@@ -502,10 +513,10 @@ export default function ProductDetail({
                 Interesse in deze {brand} {model}?
               </h2>
               <p className="text-blue-100 mb-6 max-w-3xl">
-                Onze experts helpen u graag met een persoonlijk advies en scherpe offerte. 
+                Onze experts helpen u graag met een persoonlijk advies en scherpe offerte.
                 Wij staan voor kwaliteit, service en vakmanschap.
               </p>
-              
+
               {/* Testimonial */}
               <div className="bg-white/10 p-4 rounded-lg mb-6 backdrop-blur-sm">
                 <div className="flex items-center mb-2">
@@ -520,7 +531,7 @@ export default function ProductDetail({
                 </div>
                 <p className="text-white text-sm italic">"Zeer tevreden met onze nieuwe {brand} airco. Professionele installatie en uitstekende service!" - Johan uit Rotterdam</p>
               </div>
-              
+
               {/* Trust badges */}
               <div className="flex flex-wrap gap-4 text-white text-sm">
                 <div className="flex items-center">
@@ -543,28 +554,28 @@ export default function ProductDetail({
                 </div>
               </div>
             </div>
-            
+
             <div className="lg:w-1/3 bg-white/10 backdrop-blur-sm p-6 rounded-xl shadow-lg">
               <h3 className="text-xl font-bold text-white mb-4">Vraag direct een offerte aan</h3>
               <form className="space-y-4">
                 <div>
-                  <input 
-                    type="text" 
-                    placeholder="Uw naam" 
+                  <input
+                    type="text"
+                    placeholder="Uw naam"
                     className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
                   />
                 </div>
                 <div>
-                  <input 
-                    type="email" 
-                    placeholder="E-mailadres" 
+                  <input
+                    type="email"
+                    placeholder="E-mailadres"
                     className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
                   />
                 </div>
                 <div>
-                  <input 
-                    type="tel" 
-                    placeholder="Telefoonnummer" 
+                  <input
+                    type="tel"
+                    placeholder="Telefoonnummer"
                     className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
                   />
                 </div>
@@ -577,7 +588,7 @@ export default function ProductDetail({
                 </button>
               </form>
               <p className="text-white/80 text-xs mt-4 text-center">Wij nemen binnen 24 uur contact met u op</p>
-              
+
               <div className="mt-4 pt-4 border-t border-white/20">
                 <a
                   href="tel:0462021430"

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Check } from 'lucide-react';
 import HeroRedesign from '../components/HeroRedesign';
 import Services from '../components/ServicesOptimized';
 import ProductGrid from '../components/ProductGrid';
@@ -54,7 +55,7 @@ export default function Home() {
 
   return (
     <>
-      <SchemaMarkup 
+      <SchemaMarkup
         type="LocalBusiness"
         data={{
           description: "Specialist in airco installatie en onderhoud in Limburg. Bespaar op terugleverkosten van zonnepanelen door slim te verwarmen met airco.",
@@ -103,91 +104,91 @@ export default function Home() {
       />
 
       {/* Static H1 Section - Critical for SEO */}
-      <section className="py-16 bg-gradient-to-br from-sky-50 to-blue-50">
+      <section className="py-32 bg-quatt-warm border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
-            Airco Installateur Limburg
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-500 mt-2">
-              Professionele Installatie & Onderhoud
-            </span>
+          <span className="text-quatt-orange font-black tracking-[0.2em] uppercase text-xs mb-8 block">StayCool Airco Installateur</span>
+          <h1 className="text-6xl sm:text-7xl lg:text-9xl font-black text-quatt-dark mb-10 leading-[0.85] tracking-tighter italic">
+            Airco Specialist <br />
+            <span className="text-quatt-orange">Limburg</span>
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-700 max-w-4xl mx-auto mb-8">
+          <p className="text-xl sm:text-2xl text-gray-500 max-w-4xl mx-auto mb-16 leading-relaxed">
             StayCool Airco is uw erkende specialist voor klimaatbeheersing in heel Limburg.
-            <strong className="text-blue-600"> Bespaar tot 60% op uw verwarmingskosten</strong> door slim te verwarmen met een airco.
+            Bespaar direct tot <span className="text-quatt-dark font-black">60% op uw gasrekening</span> door slim te verwarmen.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 text-gray-600">
-            <div className="flex items-center">
-              <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span className="font-medium">F-gassen gecertificeerd</span>
+
+          <div className="flex flex-wrap justify-center gap-10 text-quatt-dark/40 font-black uppercase text-xs tracking-widest">
+            <div className="flex items-center gap-3">
+              <div className="bg-white p-1.5 rounded-full text-quatt-orange shadow-sm border border-gray-100">
+                <Check className="h-4 w-4" />
+              </div>
+              <span>F-gassen gecertificeerd</span>
             </div>
-            <div className="flex items-center">
-              <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span className="font-medium">500+ Tevreden klanten</span>
+            <div className="flex items-center gap-3">
+              <div className="bg-white p-1.5 rounded-full text-quatt-orange shadow-sm border border-gray-100">
+                <Check className="h-4 w-4" />
+              </div>
+              <span>500+ Tevreden klanten</span>
             </div>
-            <div className="flex items-center">
-              <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span className="font-medium">Gratis advies aan huis</span>
+            <div className="flex items-center gap-3">
+              <div className="bg-white p-1.5 rounded-full text-quatt-orange shadow-sm border border-gray-100">
+                <Check className="h-4 w-4" />
+              </div>
+              <span>Gratis advies aan huis</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* SEO Content Section - Keyword Rich */}
-      <section className="py-16 bg-gradient-to-br from-sky-50 to-blue-50">
+      <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              Airco Installateur bij u in de Buurt in Limburg
+            <h2 className="text-5xl font-black text-quatt-dark mb-12 tracking-tighter italic">
+              Airco Installatie in de buurt
             </h2>
-            <p className="text-lg text-gray-700 mb-6">
-              Zoekt u een betrouwbare <strong>airco installateur in Limburg</strong>? StayCool Airco is uw lokale specialist voor professionele
-              klimaatbeheersing in heel Limburg. Met meer dan 500+ tevreden klanten zijn wij dé erkende airco monteur voor installatie,
-              onderhoud en reparatie van airconditioningsystemen.
-            </p>
+            <div className="prose prose-xl prose-slate max-w-none text-gray-500 space-y-8 leading-relaxed">
+              <p>
+                Zoekt u een betrouwbare <strong>airco installateur in Limburg</strong>? StayCool Airco is uw lokale specialist voor professionele
+                klimaatbeheersing in heel Limburg. Met meer dan 500+ tevreden klanten zijn wij dé erkende airco monteur voor installatie,
+                onderhoud en reparatie van airconditioningsystemen.
+              </p>
 
-            <div className="grid md:grid-cols-2 gap-8 my-10">
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  Airco Installatie in Limburg
+              <div className="grid md:grid-cols-2 gap-12 my-20 not-prose">
+                <div className="bg-quatt-warm p-12 rounded-[3.5rem] border border-gray-100 shadow-sm relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-orange-100/30 rounded-full blur-2xl translate-x-1/2 -translate-y-1/2" />
+                  <h3 className="text-2xl font-black text-quatt-dark mb-6 tracking-tight flex items-center">
+                    Installatie
+                  </h3>
+                  <p className="text-gray-500 leading-relaxed font-medium">
+                    Als F-gassen gecertificeerd airco bedrijf verzorgen wij vakkundige installatie van split-units, multi-split systemen en
+                    vloer airconditioners. Wij bedienen heel <strong>Limburg</strong>.
+                  </p>
+                </div>
+
+                <div className="bg-quatt-warm p-12 rounded-[3.5rem] border border-gray-100 shadow-sm relative overflow-hidden group">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-quatt-dark/5 rounded-full blur-2xl translate-x-1/2 -translate-y-1/2" />
+                  <h3 className="text-2xl font-black text-quatt-dark mb-6 tracking-tight flex items-center">
+                    Waarom StayCool?
+                  </h3>
+                  <ul className="text-gray-500 space-y-4 font-black uppercase text-[10px] tracking-widest">
+                    <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-quatt-orange" /> Binnen 2 weken koud</li>
+                    <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-quatt-orange" /> Gratis adviesgesprek</li>
+                    <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-quatt-orange" /> Dealer van A-Merken</li>
+                    <li className="flex items-center gap-3"><span className="w-1.5 h-1.5 rounded-full bg-quatt-orange" /> Transparant & Lokaal</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-quatt-dark text-white p-12 sm:p-20 rounded-[4rem] relative overflow-hidden shadow-2xl shadow-gray-200 mt-20 not-prose">
+                <div className="absolute top-0 right-0 w-96 h-96 bg-quatt-orange/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2" />
+                <h3 className="text-3xl sm:text-4xl font-black mb-8 tracking-tighter italic relative z-10">
+                  Service in heel Limburg
                 </h3>
-                <p className="text-gray-600">
-                  Als F-gassen gecertificeerd airco bedrijf verzorgen wij vakkundige installatie van split-units, multi-split systemen en
-                  vloer airconditioners. Van <strong>airco installatie Roermond</strong> tot <strong>airconditioning plaatsen Maastricht</strong> -
-                  wij bedienen heel Zuid-Limburg, Midden-Limburg en Noord-Limburg.
+                <p className="text-white/60 text-xl leading-relaxed relative z-10 max-w-2xl">
+                  Wij zijn uw lokale <strong>airco specialist dichtbij</strong> met snelle service in alle Limburgse steden.
+                  Van Roermond tot Maastricht en van Venlo tot Weert.
                 </p>
               </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                  <span className="text-blue-600 mr-2">✓</span>
-                  Waarom Kiezen voor StayCool?
-                </h3>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Erkend en gecertificeerd airco installateur</li>
-                  <li>• Snelle service in heel Limburg (binnen 48 uur)</li>
-                  <li>• Gratis advies en offerte aan huis</li>
-                  <li>• Officiële dealer van A-merken (Daikin, Mitsubishi)</li>
-                  <li>• Transparante prijzen zonder verrassingen</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Airco Service in Roermond, Maastricht, Heerlen, Venlo, Weert & omgeving
-              </h3>
-              <p className="text-gray-700">
-                Wij zijn uw lokale <strong>airco specialist dichtbij</strong> met snelle service in alle Limburgse steden.
-                Of u nu woont in Sittard, Geleen, Stein, Landgraaf of een andere plaats - als erkend klimaatbeheersing bedrijf
-                staan wij altijd voor u klaar met professionele installatie en onderhoud.
-              </p>
             </div>
           </div>
         </div>

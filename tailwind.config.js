@@ -27,19 +27,33 @@ export default {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
       colors: {
+        // Quatt-inspired design system
+        quatt: {
+          orange: '#F06635', // Primary encoded CTA
+          warm: '#F9F8F6',   // Background warm white
+          dark: '#2B2C2D',   // Primary text
+          gray: '#E6E6E6',   // Borders/Subtle backgrounds
+        },
         blue: {
           600: '#2563eb', // WCAG AA compliant
           700: '#1d4ed8', // WCAG AAA compliant
         },
         orange: {
-          500: '#F97316', // Main CTA color - WCAG AA compliant
-          600: '#EA580C', // Hover state - WCAG AAA compliant
+          500: '#F06635', // Updated to match Quatt orange
+          600: '#D95528', // Darker shade for hover
         },
         gray: {
           600: '#4b5563', // WCAG AA compliant for large text
           700: '#374151', // WCAG AAA compliant
           900: '#111827', // Maximum contrast
         }
+      },
+      borderRadius: {
+        'xl': '1rem',
+        '2xl': '1.5rem',
+        '3xl': '2rem',
+        '4xl': '2.5rem',
+        '5xl': '3rem',
       },
       typography: {
         DEFAULT: {

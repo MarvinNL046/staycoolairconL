@@ -161,7 +161,7 @@ export const samsungData: Brand = {
           alt: 'Samsung Luzon - Sfeerbeeld 2'
         }
       ],
-      price: 'Prijs op aanvraag',
+      price: 'Vanaf €1.795,- inclusief standaard installatie',
       energyLabel: 'A++',
       capacity: '2,5 kW - 7,0 kW',
       features: [
@@ -185,7 +185,8 @@ export const samsungData: Brand = {
         { label: 'Filtertechnologie', value: 'Silver Nano Coated Filter, Easy Filter Plus met reinigingsindicator' },
         { label: 'Bedieningsopties', value: 'Infrarood afstandsbediening of gecentraliseerde bedrade systemen' },
         { label: 'Smart functies', value: 'Auto-Changeover, Eco Mode, Quiet Mode' },
-        { label: 'Voeding', value: '220-240V, 50Hz' }
+        { label: 'Voeding', value: '220-240V, 50Hz' },
+        { label: 'Prijzen (incl. montage)', value: '2,5kW: €1.795,-, 3,5kW: €1.950,-, 5,0kW: €2.450,-, 7,0kW: €3.095,-' }
       ]
     },
     {
@@ -309,6 +310,32 @@ export const samsungData: Brand = {
         { label: 'Testcondities verwarming', value: 'Binnentemperatuur: 20°C DB, 15°C WB / Buitentemperatuur: 7°C DB, 6°C WB' },
         { label: 'Bedrijfstemperatuur koeling', value: '-15°C tot 50°C' },
         { label: 'Bedrijfstemperatuur verwarming', value: '-25°C tot 24°C' }
+      ]
+    },
+    {
+      name: 'Console Vloermodel',
+      slug: 'console-vloermodel',
+      description: 'De Samsung Console is een stijlvol vloermodel dat naadloos in elk interieur past. Ideaal voor plaatsen waar wandmontage niet mogelijk is, met krachtige prestaties en een stille werking.',
+      imageUrl: '/images/products/samsung/luzon/Luzon_S2_Front_Web_RGB.webp',
+      images: [
+        {
+          url: '/images/products/samsung/luzon/Luzon_S2_Front_Web_RGB.webp',
+          alt: 'Samsung Console Vloermodel'
+        }
+      ],
+      price: '€2.885,- inclusief standaard installatie',
+      energyLabel: 'A++',
+      capacity: '3,5 kW',
+      features: [
+        'Stijlvol en slank ontwerp',
+        '2-weg luchtstroom (boven en onder)',
+        'Stille werking',
+        'SmartThings bediening'
+      ],
+      specifications: [
+        { label: 'Koelcapaciteit', value: '3,5 kW' },
+        { label: 'Prijs inclusief installatie', value: '€2.885,-' },
+        { label: 'Type', value: 'Vloermodel' }
       ]
     }
   ]
