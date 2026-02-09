@@ -19,7 +19,7 @@ const debugError = (...args: any[]) => {
 
 // Leadflow CRM configuration
 const LEADFLOW_URL = "https://wetryleadflow.com/api/webhooks/leads";
-const LEADFLOW_API_KEY = "lf_1wYS_sm_h375UmWm5TuvN7zHFLHltLHE";
+const LEADFLOW_API_KEY = "lf_qmfCdcNm3kZYVipX-jOBf8c49zu6reTp";
 
 export interface EmailData {
   name: string;
@@ -41,17 +41,18 @@ const sendToLeadflow = async (data: EmailData): Promise<boolean> => {
     const firstName = nameParts[0] || '';
     const lastName = nameParts.slice(1).join(' ') || '';
 
+    // Only use fields supported by Leadflow API:
+    // email, phone, firstName, lastName, name, company, position, message, source, pageUrl
     const leadflowData = {
       firstName,
       lastName,
       email: data.email,
       phone: data.phone,
-      message: data.message,
+      message: data.city
+        ? `Woonplaats: ${data.city}\n\n${data.message || ''}`
+        : data.message || '',
       source: 'website-contact',
-      customFields: {
-        city: data.city,
-        woonplaats: data.city
-      }
+      pageUrl: typeof window !== 'undefined' ? window.location.href : ''
     };
 
     debugLog('Sending data to Leadflow CRM:', leadflowData);

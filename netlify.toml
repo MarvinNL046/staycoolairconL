@@ -55,6 +55,7 @@
   VITE_GTM_ID = "GTM-K2B9M3S"
   VITE_SUPABASE_URL = "https://kxjksvmlvyazphrbqglz.supabase.co"
   VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt4amtzdm1sdnlhenBocmJxZ2x6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzkyOTIzNTgsImV4cCI6MjA1NDg2ODM1OH0.8mEUKfK1AQ16waaPtJC8LDNvMND10u0jmDcLrCc0f6U"
+  RESEND_API_KEY = "re_NdzSPbFh_HKp7kWisbpmERLUHy48qR8bu"
 
 [build.processing]
   skip_processing = false
@@ -73,6 +74,13 @@
 [build.processing.images]
   compress = true
 
+# API route for contact form email - must be BEFORE the catch-all SPA redirect
+[[redirects]]
+  from = "/api/send-email"
+  to = "/.netlify/functions/send-email"
+  status = 200
+
+# SPA catch-all redirect
 [[redirects]]
   from = "/*"
   to = "/index.html"
