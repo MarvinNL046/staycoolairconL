@@ -1,7 +1,7 @@
-// Netlify Function for sending contact form emails via Resend
-// Replaces the Vercel-style api/send-email.ts that returned 404 on Netlify
+// Netlify Function (ESM) for sending contact form emails via Resend
+import { Resend } from 'resend';
 
-exports.handler = async (event, context) => {
+export const handler = async (event, context) => {
   const headers = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
@@ -21,9 +21,6 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ error: 'Method not allowed' }),
     };
   }
-
-  // Dynamic import for ESM resend package
-  const { Resend } = await import('resend');
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
