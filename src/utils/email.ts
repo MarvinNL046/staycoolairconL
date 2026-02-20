@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 
 // Set to true to enable debug logging
 const DEBUG_MODE = true;
@@ -16,10 +17,16 @@ const debugError = (...args: any[]) => {
   }
 };
 
+// EmailJS configuration
+const EMAILJS_CONFIG = {
+  SERVICE_ID: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  TEMPLATE_ID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+};
 
 // Leadflow CRM configuration
 const LEADFLOW_URL = "https://wetryleadflow.com/api/webhooks/leads";
-const LEADFLOW_API_KEY = "lf_qmfCdcNm3kZYVipX-jOBf8c49zu6reTp";
+const LEADFLOW_API_KEY = "lf_lRyHo1ENukt9VsG9gYT8EKeDA_nKuoQ1";
 
 export interface EmailData {
   name: string;
@@ -41,18 +48,17 @@ const sendToLeadflow = async (data: EmailData): Promise<boolean> => {
     const firstName = nameParts[0] || '';
     const lastName = nameParts.slice(1).join(' ') || '';
 
-    // Only use fields supported by Leadflow API:
-    // email, phone, firstName, lastName, name, company, position, message, source, pageUrl
     const leadflowData = {
       firstName,
       lastName,
       email: data.email,
       phone: data.phone,
-      message: data.city
-        ? `Woonplaats: ${data.city}\n\n${data.message || ''}`
-        : data.message || '',
+      message: data.message,
       source: 'website-contact',
-      pageUrl: typeof window !== 'undefined' ? window.location.href : ''
+      customFields: {
+        city: data.city,
+        woonplaats: data.city
+      }
     };
 
     debugLog('Sending data to Leadflow CRM:', leadflowData);
@@ -81,57 +87,83 @@ const sendToLeadflow = async (data: EmailData): Promise<boolean> => {
 };
 
 /**
- * Send data to the webhook
+ * Send email via EmailJS
  */
-
-/**
- * Send email via Resend (Vercel API Route)
- */
-const sendViaResend = async (data: EmailData): Promise<boolean> => {
+const sendViaEmailJS = async (data: EmailData): Promise<boolean> => {
   try {
-    debugLog('Sending email via Resend API route...');
-
-    const response = await fetch('/api/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (!response.ok) {
-      const errorData = await response.json();
-      debugError('Resend API error:', errorData);
+    // Check if PUBLIC_KEY is available
+    if (!EMAILJS_CONFIG.PUBLIC_KEY) {
+      // console.error('EmailJS PUBLIC_KEY is missing');
+      debugError('EmailJS PUBLIC_KEY is missing');
       return false;
     }
+    
+    // Initialize EmailJS safely
+    try {
+      emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+    } catch (initError) {
+      // console.error('EmailJS initialization failed:', initError);
+      debugError('EmailJS initialization failed:', initError);
+      return false;
+    }
+    
+    // Check if other required config is available
+    if (!EMAILJS_CONFIG.SERVICE_ID || !EMAILJS_CONFIG.TEMPLATE_ID) {
+      // console.error('EmailJS SERVICE_ID or TEMPLATE_ID is missing');
+      debugError('EmailJS SERVICE_ID or TEMPLATE_ID is missing');
+      return false;
+    }
+    
+    const response = await emailjs.send(
+      EMAILJS_CONFIG.SERVICE_ID,
+      EMAILJS_CONFIG.TEMPLATE_ID,
+      {
+        from_name: data.name,
+        from_email: data.email,
+        phone: data.phone,
+        city: data.city,
+        message: data.message,
+        to_name: data.to_name || 'StayCool Airco',
+        reply_to: data.email,
+        subject: data.subject || 'Nieuwe aanvraag via website'
+      }
+    );
 
-    debugLog('Resend submission successful');
+    if (response.status !== 200) {
+      // console.error('EmailJS responded with non-200 status:', response);
+      debugError('EmailJS responded with non-200 status:', response);
+      return false;
+    }
+    
+    // console.log('EmailJS submission successful');
+    debugLog('EmailJS submission successful');
     return true;
   } catch (error) {
-    debugError('Resend submission failed:', error);
+    // console.error('EmailJS submission failed:', error);
+    debugError('EmailJS submission failed:', error);
     return false;
   }
 };
 
 /**
- * Send contact form data using Resend and Leadflow CRM
+ * Send contact form data using EmailJS and Leadflow CRM
  */
 export const sendEmail = async (data: EmailData): Promise<void> => {
   // Try all methods in parallel
-  const [resendSuccess, leadflowSuccess] = await Promise.all([
-    sendViaResend(data),
+  const [emailJSSuccess, leadflowSuccess] = await Promise.all([
+    sendViaEmailJS(data),
     sendToLeadflow(data)
   ]);
 
   // Only throw an error if all methods fail
-  if (!resendSuccess && !leadflowSuccess) {
-    debugError('All submission methods failed (Resend, Leadflow)');
+  if (!emailJSSuccess && !leadflowSuccess) {
+    debugError('All submission methods failed (EmailJS, Leadflow)');
     throw new Error('Failed to send contact form data through any available method');
   }
 
   // Log which methods succeeded
   const successMethods = [];
-  if (resendSuccess) successMethods.push('Resend');
+  if (emailJSSuccess) successMethods.push('EmailJS');
   if (leadflowSuccess) successMethods.push('Leadflow');
 
   debugLog(`Contact form submitted successfully via: ${successMethods.join(', ')}`);
