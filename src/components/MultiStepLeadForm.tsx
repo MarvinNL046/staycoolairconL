@@ -75,7 +75,11 @@ export default function MultiStepLeadForm() {
             await sendEmail(emailData);
 
             toast.success('Bedankt! We nemen spoedig contact op.');
-            navigate('/tot-snel');
+
+            // Redirect to thank you page after a short delay
+            setTimeout(() => {
+                window.location.href = 'https://staycoolairco.nl/tot-snel';
+            }, 1500);
         } catch (error) {
             console.error(error);
             toast.error('Er ging iets mis. Probeer het opnieuw.');

@@ -131,8 +131,8 @@ export default function MultiStepForm({ variant = 'hero', className = '' }: Mult
       setStep(1);
 
       setTimeout(() => {
-        navigate('/tot-snel');
-      }, 1000);
+        window.location.href = 'https://staycoolairco.nl/tot-snel';
+      }, 1500);
     } catch (error) {
       console.error('Error sending email:', error);
       toast.error('Er ging iets mis. Probeer het opnieuw of bel ons direct.');

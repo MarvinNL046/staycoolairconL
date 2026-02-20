@@ -78,9 +78,14 @@ export default function ProductLandingContact({
       trackAPIFormSubmission('landing_contact_form', formData, 1650, eventId).catch(console.error);
 
       toast.success('Bericht succesvol verzonden! We nemen zo spoedig mogelijk contact met u op.');
-      
+
       // Reset form
       setFormData(initialFormState);
+
+      // Redirect to thank you page after a short delay
+      setTimeout(() => {
+        window.location.href = 'https://staycoolairco.nl/tot-snel';
+      }, 1500);
     } catch (error) {
       console.error('Form submission error:', error);
       toast.error('Er is iets misgegaan. Probeer het later opnieuw of neem telefonisch contact op.');

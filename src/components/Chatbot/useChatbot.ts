@@ -653,6 +653,11 @@ export const useChatbot = () => {
           "Je storing is gemeld! 📧 We nemen zo snel mogelijk contact met je op."
         );
       }
+
+      // Redirect to thank you page after a short delay
+      setTimeout(() => {
+        window.location.href = 'https://staycoolairco.nl/tot-snel';
+      }, 1500);
     } catch (error) {
       addBotMessage(
         "Er ging iets mis met het versturen. Probeer het opnieuw of bel ons direct op 046-202-1430."
