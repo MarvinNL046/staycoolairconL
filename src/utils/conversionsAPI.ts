@@ -181,7 +181,7 @@ export const sendConversionEvent = async (
     console.log('Event freshness: Real-time (0 seconds delay)');
     
     // Send to Netlify Function endpoint with retry logic
-    console.log('Sending to Netlify function:', event);
+    console.log('Sending to API endpoint:', event);
     
     let retryCount = 0;
     const maxRetries = 3;
@@ -189,7 +189,7 @@ export const sendConversionEvent = async (
     
     while (retryCount < maxRetries) {
       try {
-        const response = await fetch('/.netlify/functions/facebook-conversion', {
+        const response = await fetch('/api/facebook-conversion', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
