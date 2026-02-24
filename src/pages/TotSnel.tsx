@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Home, Phone, MessageSquare } from 'lucide-react';
 import MetaTags from '../components/MetaTags';
+import { trackConversion } from '../utils/analytics';
 
 const TotSnel: React.FC = () => {
+  useEffect(() => {
+    trackConversion();
+  }, []);
+
   return (
     <>
       <MetaTags 

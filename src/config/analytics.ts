@@ -35,25 +35,6 @@ export const initGA = () => {
     // Configure Google Ads
     gtag('config', GOOGLE_ADS_ID);
 
-    // Add conversion tracking events for both conversion IDs
-    const conversionScript = document.createElement('script');
-    conversionScript.innerHTML = `
-      // Track with first conversion ID
-      gtag('event', 'conversion', {
-        'send_to': 'AW-10789737434/E-FmCJ743ocYENqn-Zgo',
-        'value': 1650.0,
-        'currency': 'EUR'
-      });
-      
-      // Track with second conversion ID
-      gtag('event', 'conversion', {
-        'send_to': 'AW-10789737434/HcGCCP3ez6AaENqn-Zgo',
-        'value': 1650.0,
-        'currency': 'EUR'
-      });
-    `;
-    document.head.appendChild(conversionScript);
-
     // Track route changes
     if ('navigation' in window) {
       (window.navigation as any).addEventListener('navigate', (event: any) => {

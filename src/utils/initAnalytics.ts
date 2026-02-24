@@ -92,7 +92,7 @@ export function initAnalytics() {
 
         // Initialize Google Ads if ID is available
         const adsId = import.meta.env.VITE_GOOGLE_ADS_ID;
-        if (adsId && adsId !== 'AW-10789737434') {
+        if (adsId) {
           window.gtag('config', adsId, {
             ...commonParams,
             event_label: 'Ads',

@@ -5,6 +5,9 @@ import { sendEmail } from '../utils/email';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { cn } from '../utils/cn';
+import { trackFormSubmission } from '../utils/analytics';
+import { trackPixelFormSubmission } from '../utils/facebook';
+import { trackAPIFormSubmission } from '../utils/conversionsAPI';
 
 interface FormData {
     intent: 'heating' | 'cooling' | 'both' | 'service';
@@ -74,6 +77,23 @@ export default function MultiStepLeadForm() {
 
             await sendEmail(emailData);
 
+            try {
+                trackFormSubmission('contact_form', true);
+            } catch (trackError) {
+                console.warn('Failed to track form submission:', trackError);
+            }
+
+            let eventId;
+            try {
+                eventId = trackPixelFormSubmission('contact_form', true);
+            } catch (pixelError) {
+                console.warn('Failed to track Facebook Pixel:', pixelError);
+            }
+
+            trackAPIFormSubmission('contact_form', formData, 1650, eventId).catch(error => {
+                console.warn('Failed to track with Conversions API:', error);
+            });
+
             toast.success('Bedankt! We nemen spoedig contact op.');
 
             // Redirect to thank you page after a short delay
@@ -83,6 +103,7 @@ export default function MultiStepLeadForm() {
         } catch (error) {
             console.error(error);
             toast.error('Er ging iets mis. Probeer het opnieuw.');
+            trackFormSubmission('contact_form', false);
         } finally {
             setIsSubmitting(false);
         }
