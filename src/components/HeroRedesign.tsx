@@ -3,6 +3,7 @@ import { m } from 'framer-motion';
 import { Play, Check, Zap, Shield, X } from 'lucide-react';
 import Button from './ui/Button';
 import MultiStepLeadForm from './MultiStepLeadForm';
+import TrustooWidget from './TrustooWidget';
 
 export default function HeroRedesign() {
   const [showVideo, setShowVideo] = useState(false);
@@ -71,6 +72,9 @@ export default function HeroRedesign() {
             className="relative h-full"
           >
             <MultiStepLeadForm />
+            <div className="mt-6 flex justify-center">
+              <TrustooWidget size="small" />
+            </div>
           </m.div>
 
         </div>
