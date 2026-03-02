@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown, Check } from 'lucide-react';
 import Logo from './Logo';
 import { seoNavigation } from '../data/seoNavigation';
 import Button from './ui/Button';
+import TrustooWidget from './TrustooWidget';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,12 +36,13 @@ export default function Navbar() {
               <Check className="w-3.5 h-3.5 text-quatt-orange" />
               Erkend Installateur
             </span>
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2 hidden lg:flex">
               <Check className="w-3.5 h-3.5 text-quatt-orange" />
               4,7/5 uit 174 reviews
             </span>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4">
+            <TrustooWidget className="normal-case tracking-normal max-w-[300px]" size="small" />
             <span className="flex items-center gap-2">
               <Check className="w-3.5 h-3.5 text-quatt-orange" />
               Binnen 2 weken in huis
@@ -128,6 +130,9 @@ export default function Navbar() {
             <Link to="/contact" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Contact</Link>
 
             <div className="pt-6 space-y-4">
+              <div className="normal-case tracking-normal">
+                <TrustooWidget size="small" />
+              </div>
               <Button href="https://afspraken.staycoolairco.nl" variant="primary" className="w-full justify-center rounded-2xl py-4 shadow-xl text-lg">
                 Plan gratis advies
               </Button>

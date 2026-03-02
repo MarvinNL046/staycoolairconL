@@ -8,7 +8,6 @@ import LazyImage from '../components/LazyImage';
 import Breadcrumbs from '../components/Breadcrumbs';
 import SchemaMarkup from '../components/SchemaMarkup';
 import { aggregateReviews } from '../data/reviews';
-import TrustooWidget from '../components/TrustooWidget';
 
 export default function Products() {
   const breadcrumbItems = [
@@ -149,12 +148,6 @@ export default function Products() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="py-10 bg-white border-y border-gray-100">
-        <div className="container mx-auto px-4">
-          <TrustooWidget className="flex justify-center" />
         </div>
       </section>
 

@@ -2,12 +2,18 @@ import React, { useEffect } from 'react';
 
 type TrustooWidgetProps = {
   className?: string;
+  size?: 'small' | 'medium' | 'large';
+  type?: 'landscape' | 'portrait';
 };
 
 const TRUSTOO_SCRIPT_SRC = 'https://static.trustoo.nl/widget/widget_v2.js';
 const TRUSTOO_SCRIPT_ID = 'trustoo-widget-v2-script';
 
-export default function TrustooWidget({ className = '' }: TrustooWidgetProps) {
+export default function TrustooWidget({
+  className = '',
+  size = 'large',
+  type = 'landscape',
+}: TrustooWidgetProps) {
   useEffect(() => {
     if (document.getElementById(TRUSTOO_SCRIPT_ID)) {
       return;
@@ -29,8 +35,8 @@ export default function TrustooWidget({ className = '' }: TrustooWidgetProps) {
         data-country-code="NL"
         data-badge="default"
         data-quote="hidden"
-        data-size="large"
-        data-type="landscape"
+        data-size={size}
+        data-type={type}
         data-border="shadow"
         data-theme="light"
         data-background="transparent"

@@ -9,7 +9,6 @@ import BrandLogos from '../components/BrandLogos';
 import HomeBattery from '../components/HomeBattery';
 import Contact from '../components/Contact';
 import SchemaMarkup from '../components/SchemaMarkup';
-import TrustooWidget from '../components/TrustooWidget';
 
 export default function Home() {
   const services = [
@@ -96,12 +95,6 @@ export default function Home() {
       </Helmet>
 
       <HeroRedesign />
-
-      <section className="py-10 bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <TrustooWidget className="flex justify-center" />
-        </div>
-      </section>
 
       {/* Product Grid - Direct onder hero voor maximale conversie */}
       <ProductGrid
