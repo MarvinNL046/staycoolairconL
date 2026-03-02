@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Shield, Star } from 'lucide-react';
 import ContactForm from '../components/Contact';
 import Breadcrumbs from '../components/Breadcrumbs';
+import TrustooWidget from '../components/TrustooWidget';
 
 export default function Contact() {
   const breadcrumbItems = [
@@ -95,6 +96,9 @@ export default function Contact() {
         {/* Contact Form Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
+            <div className="mb-10 flex justify-center">
+              <TrustooWidget />
+            </div>
             <ContactForm />
           </div>
         </section>

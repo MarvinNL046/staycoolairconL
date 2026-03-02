@@ -13,7 +13,7 @@ export default defineConfig({
       'Expires': '0',
       'Content-Security-Policy': `
         default-src 'self';
-        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https://www.google.com https://connect.facebook.net https://*.clarity.ms;
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https://www.google.com https://connect.facebook.net https://*.clarity.ms https://static.trustoo.nl https://*.trustoo.nl;
         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com data: blob:;
         img-src 'self' data: blob: https:;
         font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com;
@@ -36,8 +36,9 @@ export default defineConfig({
           https://*.facebook.com
           https://*.clarity.ms
           https://wetryleadflow.com
+          https://*.trustoo.nl
           http://localhost:*;
-        frame-src 'self' https://*.stripe.com https://*.youtube-nocookie.com https://www.youtube.com https://youtube.com https://*.googletagmanager.com;
+        frame-src 'self' https://*.stripe.com https://*.youtube-nocookie.com https://www.youtube.com https://youtube.com https://*.googletagmanager.com https://*.trustoo.nl;
       `.replace(/\s+/g, ' ').trim()
     }
   },
@@ -109,7 +110,7 @@ export default defineConfig({
     headers: {
       'Content-Security-Policy': `
         default-src 'self';
-        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https://www.google.com https://connect.facebook.net https://*.clarity.ms;
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googletagmanager.com https://*.google-analytics.com https://*.googleadservices.com https://www.google.com https://connect.facebook.net https://*.clarity.ms https://static.trustoo.nl https://*.trustoo.nl;
         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com data: blob:;
         img-src 'self' data: blob: https:;
         font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com;
@@ -133,8 +134,9 @@ export default defineConfig({
           https://*.facebook.com
           https://*.clarity.ms
           https://wetryleadflow.com
+          https://*.trustoo.nl
           http://localhost:*;
-        frame-src 'self' https://*.stripe.com https://*.youtube-nocookie.com https://www.youtube.com https://youtube.com https://*.googletagmanager.com
+        frame-src 'self' https://*.stripe.com https://*.youtube-nocookie.com https://www.youtube.com https://youtube.com https://*.googletagmanager.com https://*.trustoo.nl
       `.replace(/\s+/g, ' ').trim(),
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
