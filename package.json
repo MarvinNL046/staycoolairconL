@@ -18,6 +18,7 @@
     "analyze-bundle": "npx tsx src/scripts/analyzeBundleSize.ts",
     "analyze-schema": "npx tsx src/scripts/runSchemaAudit.ts",
     "performance-audit": "npm run analyze-bundle && npm run analyze-schema",
+    "validate:locations": "node scripts/validate-programmatic-locations.cjs",
     "validate:build": "node scripts/validate-build.cjs",
     "cache:clear": "node scripts/clear-cache.cjs"
   },

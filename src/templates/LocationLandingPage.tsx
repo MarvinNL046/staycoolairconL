@@ -10,6 +10,7 @@ import FAQSchema from '../components/SEO/FAQSchema';
 import Contact from '../components/Contact';
 import { getUnsplashImageForCity } from '../utils/unsplashImages';
 import { getCoordinatesForCity } from '../data/geoCoordinates';
+import type { LocationCaseStudy, LocationExpertiseSignals } from '../types/programmatic-locations';
 
 interface FAQ {
   question: string;
@@ -37,6 +38,8 @@ interface LocationLandingPageProps {
     distance?: string;
   }>;
   installationCount?: number;
+  caseStudies?: LocationCaseStudy[];
+  expertiseSignals?: LocationExpertiseSignals;
 }
 
 export default function LocationLandingPage({
@@ -50,7 +53,9 @@ export default function LocationLandingPage({
   testimonials = [],
   faqs = [],
   nearbyLocations = [],
-  installationCount = 50
+  installationCount = 50,
+  caseStudies = [],
+  expertiseSignals
 }: LocationLandingPageProps) {
   // Get Unsplash image for this city or use provided image
   const unsplashImage = getUnsplashImageForCity(city.toLowerCase());
@@ -486,6 +491,48 @@ export default function LocationLandingPage({
                     </div>
                   </div>
                 ))}
+              </div>
+            </section>
+          )}
+
+          {/* Local Case Studies */}
+          {caseStudies.length > 0 && (
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold mb-6">Lokale praktijkcases in {city}</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {caseStudies.map((caseStudy, index) => (
+                  <article key={index} className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{caseStudy.title}</h3>
+                    <p className="text-sm text-gray-500 mb-3">Wijk: {caseStudy.neighborhood}</p>
+                    <p className="text-gray-700 mb-3">{caseStudy.summary}</p>
+                    <p className="text-gray-800 font-medium">{caseStudy.outcome}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* EEAT Trust Section */}
+          {expertiseSignals && (
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold mb-6">Waarom deze informatie betrouwbaar is</h2>
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <p className="text-gray-700 mb-2"><strong>Laatste inhoudscontrole:</strong> {expertiseSignals.lastReviewed}</p>
+                    <p className="text-gray-700 mb-2"><strong>Gecontroleerd door:</strong> {expertiseSignals.reviewedBy}</p>
+                    <p className="text-gray-700"><strong>Lokale projecten in regio:</strong> {expertiseSignals.localProjects}+</p>
+                  </div>
+                  <div>
+                    <p className="text-gray-700 mb-2"><strong>Ervaring:</strong> {expertiseSignals.yearsActive}+ jaar in Limburg</p>
+                    <p className="text-gray-700 mb-2"><strong>Reactietijd:</strong> {expertiseSignals.responseTime}</p>
+                    <ul className="list-disc list-inside text-gray-700">
+                      {expertiseSignals.certifications.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </section>
           )}

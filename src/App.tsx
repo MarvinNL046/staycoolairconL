@@ -107,6 +107,7 @@ const GulpenWittemPage = lazy(() => import('./pages/locations/GulpenWittem'));
 const VoerendaalPage = lazy(() => import('./pages/locations/Voerendaal'));
 const SimpelveldPage = lazy(() => import('./pages/locations/Simpelveld'));
 const NuthPage = lazy(() => import('./pages/locations/Nuth'));
+const ProgrammaticLocationPage = lazy(() => import('./pages/locations/ProgrammaticLocation'));
 
 // Blog
 const BlogPage = lazy(() => import('./pages/Blog'));
@@ -622,6 +623,7 @@ const App = () => {
                 <Route path="/airco-installatie/voerendaal" element={<VoerendaalPage />} />
                 <Route path="/airco-installatie/simpelveld" element={<SimpelveldPage />} />
                 <Route path="/airco-installatie/nuth" element={<NuthPage />} />
+                <Route path="/airco-installatie/:citySlug" element={<ProgrammaticLocationPage />} />
 
                 {/* Blog Pages */}
                 <Route path="/blog" element={<BlogPage />} />

@@ -11,20 +11,72 @@ import {
   aircoCoversData
 } from '../dist/brands-data.js';
 
-// All location pages as defined in App.tsx
-const ALL_LOCATIONS = [
-  'roermond', 'maastricht', 'heerlen', 'venlo', 'sittard', 'weert',
-  'meerssen', 'valkenburg', 'kerkrade', 'brunssum', 'geleen',
-  'stein', 'beek', 'landgraaf', 'venray', 'hoensbroek', 'gennep', 'echt',
-  'nederweert', 'vaals', 'panningen', 'maasbracht',
-  'eijsden-margraten', 'gulpen-wittem', 'voerendaal', 'simpelveld', 'nuth'
-];
+function getProgrammaticLocations() {
+  const sourcePath = path.join(process.cwd(), 'src', 'data', 'programmaticLocations.ts');
+  const source = fs.readFileSync(sourcePath, 'utf-8');
+  const match = source.match(/export const programmaticLocations:[\s\S]*?=\s*(\[[\s\S]*?\]);/);
 
-// Quality locations with more detailed content
-const QUALITY_LOCATIONS = [
-  'roermond', 'maastricht', 'heerlen', 'venlo', 'sittard',
-  'weert', 'geleen', 'stein', 'landgraaf'
-];
+  if (!match) {
+    throw new Error('Kon programmaticLocations niet lezen uit src/data/programmaticLocations.ts');
+  }
+
+  // eslint-disable-next-line no-new-func
+  const locations = Function(`return ${match[1]};`)();
+  return Array.isArray(locations) ? locations : [];
+}
+
+function shouldIndexRoute(routePath) {
+  if (!routePath) return false;
+  if (routePath.includes(':') || routePath.includes('*')) return false;
+  if (routePath.includes('/noindex/')) return false;
+  return true;
+}
+
+function discoverAppRoutes(appContent) {
+  const routePattern = /<Route\s+path="([^"]+)"\s+element={<\s*([A-Za-z0-9_]+)\s*\/>}/g;
+  const routes = [];
+  let match;
+
+  while ((match = routePattern.exec(appContent)) !== null) {
+    routes.push({ path: match[1], component: match[2] });
+  }
+
+  return routes.filter((route) => shouldIndexRoute(route.path));
+}
+
+function buildComponentFileMap(appContent) {
+  const componentToPath = new Map();
+
+  const directImportPattern = /import\s+([A-Za-z0-9_]+)\s+from\s+'(\.\/[^']+)'/g;
+  let importMatch;
+  while ((importMatch = directImportPattern.exec(appContent)) !== null) {
+    const componentName = importMatch[1];
+    const importPath = importMatch[2];
+    componentToPath.set(componentName, importPath);
+  }
+
+  const lazyImportPattern = /const\s+([A-Za-z0-9_]+)\s*=\s*lazy\(\(\)\s*=>\s*import\('(\.\/[^']+)'\)\)/g;
+  let lazyMatch;
+  while ((lazyMatch = lazyImportPattern.exec(appContent)) !== null) {
+    const componentName = lazyMatch[1];
+    const importPath = lazyMatch[2];
+    componentToPath.set(componentName, importPath);
+  }
+
+  return componentToPath;
+}
+
+function resolveComponentFilePath(componentImportPath) {
+  if (!componentImportPath) return null;
+  const normalized = componentImportPath.replace(/^\.\//, '');
+
+  const tsxPath = path.join(process.cwd(), 'src', `${normalized}.tsx`);
+  const indexTsxPath = path.join(process.cwd(), 'src', normalized, 'index.tsx');
+
+  if (fs.existsSync(tsxPath)) return tsxPath;
+  if (fs.existsSync(indexTsxPath)) return indexTsxPath;
+  return null;
+}
 
 // Automatically discover blog posts from App.tsx
 async function discoverBlogPosts() {
@@ -76,73 +128,30 @@ function routeToFileName(route) {
 async function generateMainSitemap() {
   console.log('Generating main sitemap...');
 
-  const pagesPath = path.join(process.cwd(), 'src', 'pages');
-  const pages = await glob('**/*.tsx', { cwd: pagesPath });
+  const appPath = path.join(process.cwd(), 'src', 'App.tsx');
+  const appContent = await fs.promises.readFile(appPath, 'utf-8');
+  const routes = discoverAppRoutes(appContent);
+  const componentMap = buildComponentFileMap(appContent);
 
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
 
-  // Process each page
-  for (const page of pages) {
-    const filePath = path.join(pagesPath, page);
-    const lastmod = await getFileModTime(filePath);
+  const uniqueRoutes = [...new Map(routes.map((route) => [route.path, route])).values()];
 
-    // Skip dynamic routes and nested components
-    if (page.includes('[') || page.includes(']') || page.includes('components')) continue;
+  for (const route of uniqueRoutes) {
+    const componentImportPath = componentMap.get(route.component);
+    const componentFilePath = resolveComponentFilePath(componentImportPath);
+    const lastmod = componentFilePath ? await getFileModTime(componentFilePath) : await getFileModTime(appPath);
 
-    // Convert file path to URL
-    let url = page
-      .replace(/\.tsx$/, '')
-      .replace(/index$/, '')
-      .replace(/([A-Z])/g, '-$1')
-      .toLowerCase()
-      .replace(/^-/, '')
-      .replace(/\/-/g, '/');
-
-    // Skip if it's a utility file
-    if (url.includes('layout') || url.includes('error') || url.includes('not-found')) continue;
-
-    // Handle comparisons pages
-    if (page.startsWith('comparisons/')) {
-      url = 'vergelijkingen/' + url.replace('comparisons/', '');
-    }
-
-    // Handle special cases
-    if (url === 'home' || url === '') url = '';
-
-    // Handle specific landing pages that have different route mappings
-    const landingPageMappings = {
-      'landing/-wat-kost-airco-installatie-landing': 'wat-kost-airco-installatie',
-      'landing/-airco-service-limburg-landing': 'airco-service-limburg',
-      'landing/-airco-voor-slaapkamer-landing': 'airco-voor-slaapkamer',
-      'landing/-airco-voor-woonkamer-landing': 'airco-voor-woonkamer',
-      'landing/-airco-voor-zolder-landing': 'airco-voor-zolder',
-      'landing/-daikin-landing': 'landing/daikin',
-      'landing/-lg-landing': 'landing/lg',
-      'landing/-mitsubishi-heavy-landing': 'landing/mitsubishi-heavy',
-      'landing/-toshiba-landing': 'landing/toshiba',
-      'landing/-tosot-landing': 'landing/tosot',
-      'landing/-mobiele-airco-landing': 'mobiele-airco',
-      'landing/-airco-met-buitenunit-landing': 'airco-met-buitenunit',
-      'landing/-airco-installatie-landing': 'airco-installatie',
-      'landing/-airco-onderhoud-landing': 'airco-onderhoud',
-      'landing/-airco-reparatie-landing': 'airco-reparatie',
-      'advies/top10-stille-aircos': 'advies/top-10-stille-aircos',
-      'advies/top5-energiezuinige-aircos': 'advies/top-5-energiezuinige-aircos'
-    };
-
-    if (landingPageMappings[url]) {
-      url = landingPageMappings[url];
-    }
-
-    const priority = url === '' ? '1.0' :
-      url.includes('products') || url.includes('services') || url.includes('vergelijkingen') ? '0.9' : '0.7';
-    const changefreq = url === '' ? 'daily' : 'weekly';
+    const normalizedRoute = route.path === '/' ? '' : route.path;
+    const priority = normalizedRoute === '' ? '1.0' :
+      normalizedRoute.startsWith('/products') || normalizedRoute.startsWith('/airco-installatie') || normalizedRoute.startsWith('/vergelijkingen') ? '0.9' : '0.7';
+    const changefreq = normalizedRoute === '' ? 'daily' : 'weekly';
 
     sitemap += `
   <url>
-    <loc>https://staycoolairco.nl${url ? '/' + url : ''}</loc>
+    <loc>https://staycoolairco.nl${normalizedRoute}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
@@ -221,14 +230,16 @@ async function generateServiceAreasSitemap() {
 
   const lastmod = new Date().toISOString().split('T')[0];
 
-  // Add all location pages
-  for (const location of ALL_LOCATIONS) {
-    const priority = QUALITY_LOCATIONS.includes(location) ? '0.9' : '0.8';
-    const changefreq = QUALITY_LOCATIONS.includes(location) ? 'weekly' : 'monthly';
+  const allLocations = getProgrammaticLocations();
+
+  // Add all location pages from the single source of truth
+  for (const location of allLocations) {
+    const priority = location.installationCount >= 100 ? '0.9' : '0.8';
+    const changefreq = location.installationCount >= 100 ? 'weekly' : 'monthly';
 
     sitemap += `
   <url>
-    <loc>https://staycoolairco.nl/airco-installatie/${location}</loc>
+    <loc>https://staycoolairco.nl/airco-installatie/${location.slug}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>

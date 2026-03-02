@@ -3,6 +3,7 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { MapPin, Shield, Clock, Star } from 'lucide-react';
+import { programmaticLocations } from '../data/programmaticLocations';
 
 export default function ServiceArea() {
   const breadcrumbItems = [
@@ -31,6 +32,13 @@ export default function ServiceArea() {
       beschrijving: "Beoordeeld met 4.7/5 door onze klanten"
     }
   ];
+
+  const featuredLocations = [...programmaticLocations]
+    .sort((a, b) => b.installationCount - a.installationCount)
+    .slice(0, 9);
+
+  const allLocations = [...programmaticLocations]
+    .sort((a, b) => a.city.localeCompare(b.city, 'nl'));
 
   return (
     <>
@@ -110,86 +118,38 @@ export default function ServiceArea() {
           <div className="mb-12">
             <h2 className="text-3xl font-semibold mb-6 text-center">Onze Specialistische Diensten per Stad</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <Link 
-                to="/airco-installatie/roermond"
-                className="block p-4 bg-blue-50 rounded-lg border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all"
-              >
-                <h3 className="text-xl font-medium text-blue-800 mb-2">Airco Installatie Roermond</h3>
-                <p className="text-gray-600">Specialist in airconditioning voor Roermond en omgeving. Bekijk onze lokale diensten.</p>
-                <p className="text-sm text-blue-600 mt-2">200+ positieve reviews (4.7/5)</p>
-              </Link>
-              
-              <Link 
-                to="/airco-installatie/maastricht"
-                className="block p-4 bg-blue-50 rounded-lg border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all"
-              >
-                <h3 className="text-xl font-medium text-blue-800 mb-2">Airco Installatie Maastricht</h3>
-                <p className="text-gray-600">Ervaren airco installateurs in Maastricht. Ontdek onze oplossingen voor historische panden.</p>
-                <p className="text-sm text-blue-600 mt-2">200+ positieve reviews (4.7/5)</p>
-              </Link>
-              
-              <Link 
-                to="/airco-installatie/heerlen"
-                className="block p-4 bg-blue-50 rounded-lg border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all"
-              >
-                <h3 className="text-xl font-medium text-blue-800 mb-2">Airco Installatie Heerlen</h3>
-                <p className="text-gray-600">Airconditioning in Heerlen en omgeving. Bekijk onze specifieke diensten voor de voormalige mijnstreek.</p>
-                <p className="text-sm text-blue-600 mt-2">200+ positieve reviews (4.7/5)</p>
-              </Link>
-              
-              <Link 
-                to="/airco-installatie/venlo"
-                className="block p-4 bg-blue-50 rounded-lg border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all"
-              >
-                <h3 className="text-xl font-medium text-blue-800 mb-2">Airco Installatie Venlo</h3>
-                <p className="text-gray-600">Deskundige airconditioning diensten in Venlo. Bekijk onze oplossingen voor woningen en bedrijven.</p>
-                <p className="text-sm text-blue-600 mt-2">200+ positieve reviews (4.7/5)</p>
-              </Link>
-              
-              <Link 
-                to="/airco-installatie/sittard"
-                className="block p-4 bg-blue-50 rounded-lg border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all"
-              >
-                <h3 className="text-xl font-medium text-blue-800 mb-2">Airco Installatie Sittard</h3>
-                <p className="text-gray-600">Professionele airco installatie in Sittard. Ontdek onze aanpak voor karakteristieke panden.</p>
-                <p className="text-sm text-blue-600 mt-2">200+ positieve reviews (4.7/5)</p>
-              </Link>
-              
-              <Link 
-                to="/airco-installatie/weert"
-                className="block p-4 bg-blue-50 rounded-lg border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all"
-              >
-                <h3 className="text-xl font-medium text-blue-800 mb-2">Airco Installatie Weert</h3>
-                <p className="text-gray-600">Specialist in airconditioning voor de warmste stad van Nederland. Ontdek onze koeloplossingen.</p>
-                <p className="text-sm text-blue-600 mt-2">200+ positieve reviews (4.7/5)</p>
-              </Link>
-              
-              <Link 
-                to="/airco-installatie/geleen"
-                className="block p-4 bg-blue-50 rounded-lg border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all"
-              >
-                <h3 className="text-xl font-medium text-blue-800 mb-2">Airco Installatie Geleen</h3>
-                <p className="text-gray-600">Airco oplossingen voor Geleen met extra aandacht voor de omgeving van Chemelot. Ontdek onze diensten.</p>
-                <p className="text-sm text-blue-600 mt-2">200+ positieve reviews (4.7/5)</p>
-              </Link>
-              
-              <Link 
-                to="/airco-installatie/stein"
-                className="block p-4 bg-blue-50 rounded-lg border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all"
-              >
-                <h3 className="text-xl font-medium text-blue-800 mb-2">Airco Installatie Stein</h3>
-                <p className="text-gray-600">Professionele airconditioning voor woningen in Stein. Met speciale oplossingen voor het Maasdal.</p>
-                <p className="text-sm text-blue-600 mt-2">200+ positieve reviews (4.7/5)</p>
-              </Link>
-              
-              <Link 
-                to="/airco-installatie/landgraaf"
-                className="block p-4 bg-blue-50 rounded-lg border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all"
-              >
-                <h3 className="text-xl font-medium text-blue-800 mb-2">Airco Installatie Landgraaf</h3>
-                <p className="text-gray-600">Deskundige airco installatie in Landgraaf. Bekijk onze speciale aanpak voor de unieke ligging.</p>
-                <p className="text-sm text-blue-600 mt-2">200+ positieve reviews (4.7/5)</p>
-              </Link>
+              {featuredLocations.map((location) => (
+                <Link
+                  key={location.slug}
+                  to={`/airco-installatie/${location.slug}`}
+                  className="block p-4 bg-blue-50 rounded-lg border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all"
+                >
+                  <h3 className="text-xl font-medium text-blue-800 mb-2">Airco Installatie {location.city}</h3>
+                  <p className="text-gray-600">
+                    Lokale specialist in {location.city} ({location.region}) met maatwerk voor woningen in {location.neighborhoods[0]} en {location.neighborhoods[1]}.
+                  </p>
+                  <p className="text-sm text-blue-600 mt-2">{location.installationCount}+ regionale installaties</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* All Programmatic Locations */}
+          <div className="mb-12 bg-white rounded-2xl border border-gray-200 p-8">
+            <h2 className="text-3xl font-semibold mb-6 text-center">Alle Limburg Locaties</h2>
+            <p className="text-center text-gray-600 mb-8">
+              Volledige dekking van onze programmatic locatiepagina&apos;s voor airco installatie, service en advies.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+              {allLocations.map((location) => (
+                <Link
+                  key={location.slug}
+                  to={`/airco-installatie/${location.slug}`}
+                  className="text-sm bg-gray-50 border border-gray-100 rounded-lg px-3 py-2 hover:border-blue-300 hover:text-blue-700 transition-colors"
+                >
+                  Airco {location.city}
+                </Link>
+              ))}
             </div>
           </div>
           
