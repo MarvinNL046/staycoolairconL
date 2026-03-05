@@ -171,6 +171,40 @@ const EnergiezuinigeAircoLimburg = lazy(() => import('./pages/articles/energiezu
 const AircoVerwarmingKostenBesparing = lazy(() => import('./pages/AircoVerwarmingKostenBesparing'));
 const AircoVerwarmingVoordelen = lazy(() => import('./pages/articles/airco-verwarming-voordelen'));
 
+// New SEO Funnel - BOFU Money Pages
+const AircoInstallatieLimburgLanding = lazy(() => import('./pages/landing/AircoInstallatieLimburg'));
+const AircoInstallatiePrijs = lazy(() => import('./pages/landing/AircoInstallatiePrijs'));
+const AircoOfferte = lazy(() => import('./pages/landing/AircoOfferte'));
+const SplitAircoInstallatie = lazy(() => import('./pages/landing/SplitAircoInstallatie'));
+const MultiSplitAircoInstallatie = lazy(() => import('./pages/landing/MultiSplitAircoInstallatie'));
+
+// New SEO Funnel - MOFU Comparison/Decision Pages
+const BesteAircoVoorVerwarmen = lazy(() => import('./pages/landing/BesteAircoVoorVerwarmen'));
+const Airco35KwHoevelM2 = lazy(() => import('./pages/landing/Airco35KwHoevelM2'));
+const AircoSlaapkamerWelkeKw = lazy(() => import('./pages/landing/AircoSlaapkamerWelkeKw'));
+const AircoKoelenEnVerwarmen = lazy(() => import('./pages/landing/AircoKoelenEnVerwarmen'));
+const AircoMetWifiVoordelen = lazy(() => import('./pages/landing/AircoMetWifiVoordelen'));
+const AircoAPlusPlusVerwarmen = lazy(() => import('./pages/landing/AircoAPlusPlusVerwarmen'));
+const AircoMetBuitenunitOfZonder = lazy(() => import('./pages/landing/AircoMetBuitenunitOfZonder'));
+const BesteAircoMerken = lazy(() => import('./pages/landing/BesteAircoMerken'));
+const LGVsDaikinAirco = lazy(() => import('./pages/comparisons/LGVsDaikinAirco'));
+
+// New SEO Funnel - Room Landing Pages
+const AircoKantoor = lazy(() => import('./pages/landing/AircoKantoor'));
+const AircoWinkel = lazy(() => import('./pages/landing/AircoWinkel'));
+
+// New SEO Funnel - TOFU Articles
+const AircoAlsVerwarmingKosten = lazy(() => import('./pages/articles/airco-als-verwarming-kosten'));
+const WatKostAircoPerMaand = lazy(() => import('./pages/articles/wat-kost-airco-per-maand'));
+const IsAircoGoedkoperDanGas = lazy(() => import('./pages/articles/is-airco-goedkoper-dan-gas'));
+const AircoGeluidBurenRegels = lazy(() => import('./pages/articles/airco-geluid-buren-regels'));
+const AircoVsWarmtepomp = lazy(() => import('./pages/articles/airco-vs-warmtepomp'));
+const AircoVoordelenEnNadelen = lazy(() => import('./pages/articles/airco-voordelen-en-nadelen'));
+const AircoInstallatieDuur = lazy(() => import('./pages/articles/airco-installatie-duur'));
+
+// Programmatic Ruimte × Stad (135 pages: 5 rooms × 27 cities)
+const ProgrammaticRuimteStadPage = lazy(() => import('./pages/locations/ProgrammaticRuimteStad'));
+
 // SEO Landing Pages - Pillar 1: Installatie Services
 const SEOAircoInstallatieWoonkamer = lazy(() => import('./pages/seo/pillar-1-installatie-services/airco-installatie-woonkamer'));
 const SEOAircoInstallatieSlaapkamer = lazy(() => import('./pages/seo/pillar-1-installatie-services/airco-installatie-slaapkamer'));
@@ -817,6 +851,40 @@ const App = () => {
                 <Route path="/duurzaamheid/noindex/airco-keuze-gids" element={<SEODuurzameAircoGids />} />
                 <Route path="/duurzaamheid/noindex/milieuvriendelijke-koeling-tips" element={<SEOMilieuvriendelijkeKoelingTips />} />
                 <Route path="/duurzaamheid/noindex/airco-co2-footprint-verlagen" element={<SEOAircoCO2FootprintVerlagen />} />
+
+                {/* New SEO Funnel - BOFU Money Pages */}
+                <Route path="/airco-installatie-limburg" element={<AircoInstallatieLimburgLanding />} />
+                <Route path="/airco-installatie-prijs" element={<AircoInstallatiePrijs />} />
+                <Route path="/airco-offerte" element={<AircoOfferte />} />
+                <Route path="/split-airco-installatie" element={<SplitAircoInstallatie />} />
+                <Route path="/multi-split-airco-installatie" element={<MultiSplitAircoInstallatie />} />
+
+                {/* New SEO Funnel - MOFU Comparison/Decision Pages */}
+                <Route path="/beste-airco-voor-verwarmen" element={<BesteAircoVoorVerwarmen />} />
+                <Route path="/airco-3-5kw-hoeveel-m2" element={<Airco35KwHoevelM2 />} />
+                <Route path="/airco-slaapkamer-welke-kw" element={<AircoSlaapkamerWelkeKw />} />
+                <Route path="/airco-koelen-en-verwarmen" element={<AircoKoelenEnVerwarmen />} />
+                <Route path="/airco-met-wifi-voordelen" element={<AircoMetWifiVoordelen />} />
+                <Route path="/airco-a-plus-plus-plus-verwarmen" element={<AircoAPlusPlusVerwarmen />} />
+                <Route path="/airco-met-buitenunit-of-zonder" element={<AircoMetBuitenunitOfZonder />} />
+                <Route path="/beste-airco-merken" element={<BesteAircoMerken />} />
+                <Route path="/lg-vs-daikin-airco" element={<LGVsDaikinAirco />} />
+
+                {/* New SEO Funnel - Room Landing Pages */}
+                <Route path="/airco-kantoor" element={<AircoKantoor />} />
+                <Route path="/airco-winkel" element={<AircoWinkel />} />
+
+                {/* New SEO Funnel - TOFU Articles */}
+                <Route path="/airco-als-verwarming-kosten" element={<AircoAlsVerwarmingKosten />} />
+                <Route path="/wat-kost-airco-per-maand" element={<WatKostAircoPerMaand />} />
+                <Route path="/is-airco-goedkoper-dan-gas" element={<IsAircoGoedkoperDanGas />} />
+                <Route path="/airco-geluid-buren-regels" element={<AircoGeluidBurenRegels />} />
+                <Route path="/airco-vs-warmtepomp" element={<AircoVsWarmtepomp />} />
+                <Route path="/airco-voordelen-en-nadelen" element={<AircoVoordelenEnNadelen />} />
+                <Route path="/airco-installatie-duur" element={<AircoInstallatieDuur />} />
+
+                {/* Programmatic Ruimte × Stad (135 pages: 5 rooms × 27 cities) */}
+                <Route path="/airco/:ruimte/:city" element={<ProgrammaticRuimteStadPage />} />
 
                 {/* 404 Page - Catch all */}
                 <Route path="*" element={<NotFound />} />
