@@ -8,8 +8,8 @@ export default function AircoLatenInstalleren() {
   return (
     <>
       <MetaTags
-        title="Airco laten installeren? Alles wat u moet weten | StayCool Airco"
-        description="Een airco laten installeren? Ontdek de complete gids: voorbereiding, kosten, stappenplan en tips om de beste installateur te vinden in Limburg."
+        title="Airco Laten Installeren? Kosten & Stappenplan 2026"
+        description="Airco laten installeren vanaf €1.600. Compleet stappenplan: voorbereiding, kosten, tijdlijn en tips. F-gassen gecertificeerd in Limburg. Vraag gratis offerte aan!"
         keywords="airco laten installeren, airco installatie, airconditioning installeren, airco monteur, airco installateur limburg, kosten airco installatie"
         canonicalUrl="https://staycoolairco.nl/kennisbank/airco-laten-installeren"
         type="article"
@@ -35,7 +35,7 @@ export default function AircoLatenInstalleren() {
             "@id": "https://staycoolairco.nl/kennisbank/airco-laten-installeren"
           },
           "datePublished": "2025-04-30",
-          "dateModified": new Date().toISOString().split('T')[0]
+          "dateModified": "2026-03-22"
         }}
       />
 

@@ -61,11 +61,14 @@ const TosotLanding = lazy(() => import('./pages/landing/TosotLanding'));
 const MobieleAircoLanding = lazy(() => import('./pages/landing/MobieleAircoLanding'));
 const AircoMetBuitenunitLanding = lazy(() => import('./pages/landing/AircoMetBuitenunitLanding'));
 const AircoInstallatieLanding = lazy(() => import('./pages/landing/AircoInstallatieLanding'));
+const AircoInstallateurLanding = lazy(() => import('./pages/landing/AircoInstallateurLanding'));
 const AircoOnderhoudLanding = lazy(() => import('./pages/landing/AircoOnderhoudLanding'));
 const AircoReparatieLanding = lazy(() => import('./pages/landing/AircoReparatieLanding'));
+const AircoLatenPlaatsenLanding = lazy(() => import('./pages/landing/AircoLatenPlaatsenLanding'));
 const WatKostAircoInstallatieLanding = lazy(() => import('./pages/landing/WatKostAircoInstallatieLanding'));
 const AircoServiceLimburgLanding = lazy(() => import('./pages/landing/AircoServiceLimburgLanding'));
 const AircoKopenLimburg = lazy(() => import('./pages/landing/AircoKopenLimburg'));
+const AircoKopenEnLatenInstalleren = lazy(() => import('./pages/landing/AircoKopenEnLatenInstalleren'));
 const AircoVoorSlaapkamerLanding = lazy(() => import('./pages/landing/AircoVoorSlaapkamerLanding'));
 const AircoVoorWoonkamerLanding = lazy(() => import('./pages/landing/AircoVoorWoonkamerLanding'));
 const AircoVoorZolderLanding = lazy(() => import('./pages/landing/AircoVoorZolderLanding'));
@@ -187,6 +190,7 @@ const AircoMetWifiVoordelen = lazy(() => import('./pages/landing/AircoMetWifiVoo
 const AircoAPlusPlusVerwarmen = lazy(() => import('./pages/landing/AircoAPlusPlusVerwarmen'));
 const AircoMetBuitenunitOfZonder = lazy(() => import('./pages/landing/AircoMetBuitenunitOfZonder'));
 const BesteAircoMerken = lazy(() => import('./pages/landing/BesteAircoMerken'));
+const AirconditioningPillar = lazy(() => import('./pages/landing/AirconditioningPillar'));
 const LGVsDaikinAirco = lazy(() => import('./pages/comparisons/LGVsDaikinAirco'));
 
 // New SEO Funnel - Room Landing Pages
@@ -201,6 +205,7 @@ const AircoGeluidBurenRegels = lazy(() => import('./pages/articles/airco-geluid-
 const AircoVsWarmtepomp = lazy(() => import('./pages/articles/airco-vs-warmtepomp'));
 const AircoVoordelenEnNadelen = lazy(() => import('./pages/articles/airco-voordelen-en-nadelen'));
 const AircoInstallatieDuur = lazy(() => import('./pages/articles/airco-installatie-duur'));
+const AircoInstallerenGids = lazy(() => import('./pages/landing/AircoInstallerenGids'));
 
 // Programmatic Ruimte × Stad (135 pages: 5 rooms × 27 cities)
 const ProgrammaticRuimteStadPage = lazy(() => import('./pages/locations/ProgrammaticRuimteStad'));
@@ -619,12 +624,15 @@ const App = () => {
                 <Route path="/mobiele-airco" element={<MobieleAircoLanding />} />
                 <Route path="/airco-met-buitenunit" element={<AircoMetBuitenunitLanding />} />
                 <Route path="/airco-installatie" element={<AircoInstallatieLanding />} />
+                <Route path="/airco-installateur" element={<AircoInstallateurLanding />} />
                 <Route path="/airco-onderhoud" element={<AircoOnderhoudLanding />} />
                 <Route path="/onderhoud-email" element={<OnderhoudLanding />} />
                 <Route path="/airco-reparatie" element={<AircoReparatieLanding />} />
+                <Route path="/airco-laten-plaatsen" element={<AircoLatenPlaatsenLanding />} />
                 <Route path="/wat-kost-airco-installatie" element={<WatKostAircoInstallatieLanding />} />
                 <Route path="/airco-service-limburg" element={<AircoServiceLimburgLanding />} />
                 <Route path="/airco-kopen-limburg" element={<AircoKopenLimburg />} />
+                <Route path="/airco-kopen-en-laten-installeren" element={<AircoKopenEnLatenInstalleren />} />
                 <Route path="/airco-voor-slaapkamer" element={<AircoVoorSlaapkamerLanding />} />
                 <Route path="/airco-voor-woonkamer" element={<AircoVoorWoonkamerLanding />} />
                 <Route path="/airco-voor-zolder" element={<AircoVoorZolderLanding />} />
@@ -868,6 +876,7 @@ const App = () => {
                 <Route path="/airco-a-plus-plus-plus-verwarmen" element={<AircoAPlusPlusVerwarmen />} />
                 <Route path="/airco-met-buitenunit-of-zonder" element={<AircoMetBuitenunitOfZonder />} />
                 <Route path="/beste-airco-merken" element={<BesteAircoMerken />} />
+                <Route path="/airconditioning" element={<AirconditioningPillar />} />
                 <Route path="/lg-vs-daikin-airco" element={<LGVsDaikinAirco />} />
 
                 {/* New SEO Funnel - Room Landing Pages */}
@@ -882,6 +891,7 @@ const App = () => {
                 <Route path="/airco-vs-warmtepomp" element={<AircoVsWarmtepomp />} />
                 <Route path="/airco-voordelen-en-nadelen" element={<AircoVoordelenEnNadelen />} />
                 <Route path="/airco-installatie-duur" element={<AircoInstallatieDuur />} />
+                <Route path="/airco-installeren" element={<AircoInstallerenGids />} />
 
                 {/* Programmatic Ruimte × Stad (135 pages: 5 rooms × 27 cities) */}
                 <Route path="/airco/:ruimte/:city" element={<ProgrammaticRuimteStadPage />} />

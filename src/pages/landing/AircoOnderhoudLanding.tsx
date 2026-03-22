@@ -35,10 +35,10 @@ export default function AircoOnderhoudLanding() {
   return (
     <>
       <Helmet>
-        <title>Airco Onderhoud | Vakkundig & Betaalbaar | StayCool Airco</title>
+        <title>Airco Onderhoud vanaf €11/mnd | Voorkom Storingen [2026]</title>
         <meta
           name="description"
-          content="Airco onderhoud: F-gassen gecertificeerd | Vanaf 11/mnd contract | Verleng levensduur | Voorkom storingen. Limburg. Gratis advies!"
+          content="Airco onderhoud vanaf €11/mnd. F-gassen gecertificeerd, voorkom dure storingen en verleng de levensduur. Erkend in Limburg. Vraag gratis advies aan!"
         />
         <meta 
           name="keywords" 

@@ -39,10 +39,10 @@ export default function TosotLanding() {
   return (
     <>
       <Helmet>
-        <title>Tosot Airconditioning | Premium Kwaliteit, Scherpe Prijs | StayCool Airco</title>
+        <title>Tosot Airco vanaf €1.395 Incl. Montage | GREE Kwaliteit</title>
         <meta
           name="description"
-          content="Tosot airco: G-Tech Inverter | A++ energielabel | Premium GREE kwaliteit | Beste prijs-kwaliteit. Erkend installateur Limburg. Gratis offerte!"
+          content="Tosot airco vanaf €1.395 incl. installatie. A++ energielabel, G-Tech Inverter, GREE kwaliteit. Erkend installateur Limburg. Vraag gratis offerte aan!"
         />
         <meta 
           name="keywords" 

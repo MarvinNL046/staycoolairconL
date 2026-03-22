@@ -70,10 +70,10 @@ const AircoBevriesstBijVerwarmen = () => {
 
   return (
     <ArticleLayout
-      title="Airco Bevriest bij Verwarmen? Oorzaken & Oplossingen"
-      description="Ontdek waarom je airco bevriest tijdens het verwarmen en hoe je dit kunt voorkomen. Complete gids met praktische tips en oplossingen."
+      title="Airco Bevriest bij Verwarmen: 5 Oorzaken + Oplossing"
+      description="Bevriest uw airco bij verwarmen? Dit zijn de 5 meest voorkomende oorzaken en hoe u ze zelf oplost. Van ijsvorming tot defrostcyclus problemen."
       publishDate="2025-01-22"
-      modifiedDate="2025-01-22"
+      modifiedDate="2026-03-22"
       author="StayCool Airconditioning"
       tags={['Problemen', 'Verwarming', 'Onderhoud', 'Troubleshooting']}
     >

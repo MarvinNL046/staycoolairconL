@@ -84,7 +84,7 @@ export default function MetaTags({
     }
   } else if (type === 'article' && !title.includes('|')) {
     // Maintain existing enhancement for articles
-    enhancedTitle = `${title} | Advies & Oplossingen 2025`;
+    enhancedTitle = `${title} | Advies & Oplossingen 2026`;
   }
   
   // Enhancement for Google search: Add urgency/CTA and location information to description

@@ -72,25 +72,25 @@ export default function Home() {
         }}
       />
       <Helmet>
-        <title>Airco Installateur Limburg | Professionele Installatie & Onderhoud | StayCool</title>
+        <title>Airco Installateur Limburg | Vanaf €1.600 Incl. Montage</title>
         <meta
           name="description"
-          content="Erkend airco installateur Limburg ✓ Bespaar 60% op verwarming ✓ F-gassen gecertificeerd ✓ Gratis advies in Roermond, Maastricht, Heerlen. Nu offerte!"
+          content="Erkend airco installateur in Limburg. F-gassen gecertificeerd ✓ 5 jaar garantie ✓ Vanaf €1.600 incl. montage ✓ Gratis offerte binnen 24u. ★ 4.8/5"
         />
         <link rel="canonical" href="https://staycoolairco.nl" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://staycoolairco.nl" />
-        <meta property="og:title" content="Airco Installateur Limburg | StayCool Airco" />
-        <meta property="og:description" content="Erkend airco installateur Limburg ✓ Bespaar 60% op verwarming ✓ F-gassen gecertificeerd ✓ Gratis advies. Nu offerte!" />
+        <meta property="og:title" content="Airco Installateur Limburg | Vanaf €1.600 Incl. Montage" />
+        <meta property="og:description" content="Erkend airco installateur in Limburg. F-gassen gecertificeerd ✓ 5 jaar garantie ✓ Vanaf €1.600 incl. montage ✓ Gratis offerte binnen 24u. ★ 4.8/5" />
         <meta property="og:image" content="https://staycoolairco.nl/og-image.jpg" />
         <meta property="og:locale" content="nl_NL" />
 
         {/* Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Airco Installateur Limburg | StayCool Airco" />
-        <meta name="twitter:description" content="Erkend airco installateur Limburg ✓ Bespaar 60% op verwarming ✓ F-gassen gecertificeerd" />
+        <meta name="twitter:title" content="Airco Installateur Limburg | Vanaf €1.600 Incl. Montage" />
+        <meta name="twitter:description" content="Erkend airco installateur in Limburg. F-gassen gecertificeerd ✓ 5 jaar garantie ✓ Vanaf €1.600 incl. montage ✓ Gratis offerte binnen 24u. ★ 4.8/5" />
         <meta name="twitter:image" content="https://staycoolairco.nl/og-image.jpg" />
       </Helmet>
 

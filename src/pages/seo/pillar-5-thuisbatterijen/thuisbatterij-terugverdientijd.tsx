@@ -226,18 +226,18 @@ const ThuisbatterijTerugverdientijdPage = () => {
   return (
     <>
       <MetaTags
-        title="Thuisbatterij Terugverdientijd Berekenen | ROI & Besparing 2024 | StayCool Airco"
-        description="Thuisbatterij terugverdientijd ✓ 5-12 jaar ROI ✓ €400-2.000/jaar besparing ✓ Gratis persoonlijke berekening ✓ Alle factoren uitgelegd ✓ Limburg!"
+        title="Thuisbatterij Terugverdientijd: 5-8 Jaar in 2026"
+        description="Wat is de terugverdientijd van een thuisbatterij in 2026? Gemiddeld 5-8 jaar met €400-2.000 besparing per jaar. Gratis ROI berekening op maat."
       />
 
       <SchemaMarkup
         type="Article"
         data={{
           "@type": "Article",
-          headline: "Thuisbatterij Terugverdientijd: Complete ROI Gids 2024",
+          headline: "Thuisbatterij Terugverdientijd: Complete ROI Gids 2026",
           description: "Uitgebreide gids over terugverdientijd van thuisbatterijen. Factoren, berekeningen, scenario's en tips voor optimale Return on Investment.",
           datePublished: "2024-01-15",
-          dateModified: "2024-01-15",
+          dateModified: "2026-03-22",
           author: {
             "@type": "Organization",
             name: "StayCool Airco"

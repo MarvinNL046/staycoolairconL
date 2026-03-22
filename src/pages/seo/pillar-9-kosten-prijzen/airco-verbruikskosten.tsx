@@ -217,7 +217,7 @@ const AircoVerbruikskosten: React.FC = () => {
     },
     {
       question: "Is een airco goedkoper of duurder dan verwarmen met gas?",
-      answer: "Voor verwarmen is een moderne warmtepomp-airco goedkoper dan elektrische verwarming maar iets duurder dan gasverwarming bij normale gasprijzen. Een airco verwarmt voor €0.32/uur (bij SCOP 4.0), gasverwarming kost €0.14/uur. ECHTER: bij hoge gasprijzen (2022-2024) of wanneer u geen gasaansluiting heeft, is een airco vaak de goedkoopste optie. Bovendien: een airco biedt óók koeling in de zomer (geen extra investering) en vermijdt terugleververgoeding zonnepanelen door eigen stroom slim te benutten voor verwarming."
+      answer: "Voor verwarmen is een moderne warmtepomp-airco goedkoper dan elektrische verwarming maar iets duurder dan gasverwarming bij normale gasprijzen. Een airco verwarmt voor €0.32/uur (bij SCOP 4.0), gasverwarming kost €0.14/uur. ECHTER: bij hoge gasprijzen (2022-2026) of wanneer u geen gasaansluiting heeft, is een airco vaak de goedkoopste optie. Bovendien: een airco biedt óók koeling in de zomer (geen extra investering) en vermijdt terugleververgoeding zonnepanelen door eigen stroom slim te benutten voor verwarming."
     },
     {
       question: "Hoeveel bespaar ik door airco als verwarming te gebruiken?",
@@ -244,8 +244,8 @@ const AircoVerbruikskosten: React.FC = () => {
   return (
     <>
       <MetaTags
-        title="Airco Verbruikskosten 2024 | €180-400/jaar | 60% Besparing | StayCool"
-        description="Airco verbruikskosten €180-400 per jaar ✓ 60% goedkoper verwarmen ✓ A+++ efficiency ✓ Bereken uw verbruik ✓ Gratis advies stroomkosten!"
+        title="Airco Verbruikskosten 2026 | €180-400 per Jaar Berekend"
+        description="Wat kost een airco aan stroom? Gemiddeld €180-400/jaar. Verwarmen met airco is 60% goedkoper dan gas. Bereken uw exacte verbruikskosten per maand."
       />
 
       <SchemaMarkup

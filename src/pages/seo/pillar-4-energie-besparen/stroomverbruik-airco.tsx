@@ -63,7 +63,7 @@ const StroomverbruikAirco: React.FC = () => {
     },
     {
       question: 'Is verwarmen met een airco goedkoper dan met gas?',
-      answer: 'In de meeste gevallen ja, zeker met huidige energieprijzen (2024-2025). Een warmtepomp airco met SCOP 4,5 produceert 4,5 kW warmte uit 1 kW stroom (kosten: €0,30). Dat is €0,067 per kWh warmte. Een HR-combiketel met 95% rendement kost bij €1,45/m³ gas (inclusief vastrecht): €1,45 ÷ (10,3 kWh × 0,95) = €0,148 per kWh warmte. De airco is dus 55% goedkoper dan gas! Met zonnepanelen (eigen stroom €0,10/kWh) wordt het verschil nog groter: €0,022 per kWh warmte met airco vs €0,148 met gas = 85% goedkoper. Enige kanttekening: bij zeer lage buitentemperaturen (<-10°C) daalt de efficiency van de airco, maar in Limburg komt dat zelden voor.'
+      answer: 'In de meeste gevallen ja, zeker met huidige energieprijzen (2025-2026). Een warmtepomp airco met SCOP 4,5 produceert 4,5 kW warmte uit 1 kW stroom (kosten: €0,30). Dat is €0,067 per kWh warmte. Een HR-combiketel met 95% rendement kost bij €1,45/m³ gas (inclusief vastrecht): €1,45 ÷ (10,3 kWh × 0,95) = €0,148 per kWh warmte. De airco is dus 55% goedkoper dan gas! Met zonnepanelen (eigen stroom €0,10/kWh) wordt het verschil nog groter: €0,022 per kWh warmte met airco vs €0,148 met gas = 85% goedkoper. Enige kanttekening: bij zeer lage buitentemperaturen (<-10°C) daalt de efficiency van de airco, maar in Limburg komt dat zelden voor.'
     },
     {
       question: 'Hoe nauwkeurig zijn de verbruiksgegevens van de fabrikant?',
@@ -74,8 +74,8 @@ const StroomverbruikAirco: React.FC = () => {
   return (
     <>
       <MetaTags
-        title="Stroomverbruik Airco Berekenen - Kosten per Maand | Limburg"
-        description="Stroomverbruik airco berekenen ✓ Kosten per uur/dag/maand ✓ Inverter vs on/off ✓ Besparingstips ✓ Gratis calculator Limburg!"
+        title="Stroomverbruik Airco: €0,20-€0,80 per Uur [2026]"
+        description="Hoeveel stroom verbruikt een airco? Gemiddeld 0,5-1,5 kWh per uur (€0,20-€0,80). Bereken uw kosten per dag en maand. Met besparingstips tot 40%."
       />
 
       <SchemaMarkup

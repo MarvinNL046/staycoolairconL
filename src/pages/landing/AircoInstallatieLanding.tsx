@@ -35,10 +35,10 @@ export default function AircoInstallatieLanding() {
   return (
     <>
       <Helmet>
-        <title>Airco Installatie | Inclusief Montage | Door Gecertificeerde Monteurs | StayCool Airco</title>
+        <title>Airco Installatie vanaf €1.600 | F-Gassen Gecertificeerd 2026</title>
         <meta
           name="description"
-          content="Airco installatie: F-gassen gecertificeerd | 5 jaar garantie | Behoud fabrieksgarantie | Nette afwerking. Erkend Limburg. Gratis offerte!"
+          content="Airco installatie incl. montage vanaf €1.600. F-gassen gecertificeerd, 5 jaar garantie, installatie binnen 5 werkdagen. Erkend installateur Limburg. Vraag gratis offerte aan!"
         />
         <meta 
           name="keywords" 

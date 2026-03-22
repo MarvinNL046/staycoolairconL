@@ -82,10 +82,10 @@ const AircoBuitenunitPlaatsing = () => {
 
   return (
     <ArticleLayout
-      title="Airco Buitenunit Plaatsing: Complete Gids 2025"
-      description="Alles over de juiste plaatsing van je airco buitenunit. Van locatiekeuze tot installatietips - zorg voor optimale prestaties van je airconditioning."
+      title="Airco Buitenunit Plaatsing: Regels, Afstanden & Tips [2026]"
+      description="Waar plaats je een airco buitenunit? Minimale afstanden, geluidseisen (max 40 dB), beste locatie en veelgemaakte fouten. Met plaatsingschecklist."
       publishDate="2025-01-22"
-      modifiedDate="2025-01-22"
+      modifiedDate="2026-03-22"
       author="StayCool Airconditioning"
       tags={['Installatie', 'Buitenunit', 'Plaatsing', 'Tips']}
     >

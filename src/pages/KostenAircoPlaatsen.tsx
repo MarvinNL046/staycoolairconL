@@ -104,10 +104,10 @@ const KostenAircoPlaatsen: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Kosten Airco Plaatsen 2025 | Complete Prijsgids | StayCool Airco</title>
-        <meta 
-          name="description" 
-          content="De gemiddelde kosten voor het kopen en installeren van een split airco zijn €1.600 tot €3.250. Bekijk onze complete prijsgids met alle kosten, prijsbepalende factoren en bespaartips."
+        <title>Kosten Airco Plaatsen 2026 | Prijzen vanaf €1.600</title>
+        <meta
+          name="description"
+          content="Wat kost een airco in 2026? Split airco incl. installatie vanaf €1.600. Bekijk actuele prijzen, vergelijk merken en bespaar. Gratis offerte binnen 24 uur!"
         />
         <link rel="canonical" href="https://staycoolairco.nl/kosten-airco-plaatsen" />
         
@@ -151,7 +151,7 @@ const KostenAircoPlaatsen: React.FC = () => {
             {/* Hero Section */}
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-8 md:p-12">
               <h1 className="text-3xl md:text-4xl font-bold mb-4">
-                Kosten Airco Plaatsen 2025
+                Kosten Airco Plaatsen 2026
               </h1>
               <p className="text-xl opacity-90">
                 Complete prijsgids voor aanschaf en installatie van airconditioning
