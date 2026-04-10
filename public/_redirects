@@ -1,5 +1,0 @@
-# Redirect URL with hyphens to URL with slashes
-/airco-installatie-geleen/* /airco-installatie/geleen 301
-/airco-installatie-zuid-limburg/* /werkgebied 301
-
-/* /index.html 200
