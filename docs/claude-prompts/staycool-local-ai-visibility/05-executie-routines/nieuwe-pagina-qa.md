@@ -30,6 +30,7 @@ Werk evidence-first. Controleer alleen wat je kunt zien in de draft, outline of 
 Volg deze regels:
 - antwoord volledig in Nederlands;
 - behandel `airco` en `thuisbatterijen` als aparte pijlers;
+- geen generieke SEO-uitleg;
 - gebruik `Limburg breed` als hoofdregio;
 - controleer op operator-ready publiceerbaarheid;
 - geef geen lange uitleg, maar concrete QA-uitkomsten;

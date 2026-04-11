@@ -29,6 +29,7 @@ Laad eerst de context en prioritering. Zet daarna de relevante bevindingen om in
 Volg deze regels:
 - antwoord volledig in Nederlands;
 - behandel `airco` en `thuisbatterijen` als aparte pijlers;
+- geen generieke SEO-uitleg;
 - gebruik `Limburg breed` als hoofdregio;
 - geef geen strategische vaagheid;
 - vertaal elk onderdeel naar een operatoractie;

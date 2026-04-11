@@ -27,6 +27,7 @@ Laad eerst de context en handoff. Zet de aangeleverde GBP-input om in concrete u
 Volg deze regels:
 - antwoord volledig in Nederlands;
 - behandel `airco` en `thuisbatterijen` als aparte pijlers;
+- geen generieke SEO-uitleg;
 - gebruik `Limburg breed` als hoofdregio;
 - werk alleen met operatoracties;
 - geef geen losse uitleg zonder uitvoering;

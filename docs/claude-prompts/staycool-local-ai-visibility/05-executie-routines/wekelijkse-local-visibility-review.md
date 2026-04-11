@@ -30,6 +30,7 @@ Werk alleen met de aangeleverde context, status en bewijs. Trek geen conclusies 
 Volg deze regels:
 - antwoord volledig in helder Nederlands;
 - behandel `airco` en `thuisbatterijen` als aparte pijlers;
+- geen generieke SEO-uitleg;
 - gebruik `Limburg breed` als hoofdregio;
 - geef geen vaag advies;
 - rapporteer verschillen ten opzichte van vorige week concreet en kort;

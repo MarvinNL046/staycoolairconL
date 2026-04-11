@@ -30,6 +30,7 @@ Werk evidence-first. Analyseer alleen de aangeleverde reviews en context. Gebrui
 Volg deze regels:
 - antwoord volledig in Nederlands;
 - behandel `airco` en `thuisbatterijen` als aparte pijlers;
+- geen generieke SEO-uitleg;
 - gebruik `Limburg breed` als hoofdregio;
 - focus op patronen, herhaalbaarheid en acties;
 - maak onderscheid tussen sentiment, thema en operatoractie;

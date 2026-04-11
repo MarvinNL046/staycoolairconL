@@ -31,6 +31,7 @@ Werk evidence-first en koppel elk gat aan een concrete route, surface of assetty
 Volg deze regels:
 - antwoord volledig in Nederlands;
 - behandel `airco` en `thuisbatterijen` als aparte pijlers;
+- geen generieke SEO-uitleg;
 - gebruik `Limburg breed` als hoofdregio;
 - geef geen abstracte contentstrategie;
 - benoem alleen gaps die een operator echt kan vullen;

@@ -30,6 +30,7 @@ Werk evidence-first. Vergelijk alleen wat je echt hebt gezien of ontvangen. Mark
 Volg deze regels:
 - antwoord volledig in Nederlands;
 - behandel `airco` en `thuisbatterijen` apart waar relevant;
+- geen generieke SEO-uitleg;
 - gebruik `Limburg breed` als hoofdregio;
 - focus op patronen, niet op losse observaties;
 - noem alleen actiegerichte verschillen;

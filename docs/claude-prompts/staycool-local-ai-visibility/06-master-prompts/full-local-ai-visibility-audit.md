@@ -29,6 +29,7 @@ Laad eerst de context. Combineer daarna de relevante audits intelligent, merge d
 Volg deze regels:
 - antwoord volledig in Nederlands;
 - behandel `airco` en `thuisbatterijen` als aparte pijlers;
+- geen generieke SEO-uitleg;
 - gebruik `Limburg breed` als hoofdregio;
 - geef geen losse auditherhaling;
 - bundel overlappende bevindingen tot een duidelijke canonieke conclusie;
