@@ -53,13 +53,14 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna uitsluitend met deze tabel:
-| Vraag / Titel | Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |
+| Asset-ID | Vraag / Titel | Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |
 
 Vereisten voor de tabel:
 - geef per attribuut een eigen rij;
 - in `mixed` mode splits je airco en thuisbatterij zichtbaar uit;
 - gebruik een expliciete `Vraag / Titel`-kolom zodat de vraag en het titelidee in één briefbare rij staan;
 - geef per attribuut een eigen rij;
+- geef elk deliverable een stabiel `Asset-ID`;
 - gebruik alleen attributen die terug te voeren zijn op de input of de bestaande site-structuur;
 - noem de aanbevolen URL alleen als die logisch past binnen de huidige routes;
 - maak het onderscheid tussen indexed content en support/noindex expliciet in de tabel;
@@ -71,7 +72,7 @@ Vereisten voor de tabel:
 - `Gedeelde asset`: hetzelfde kernasset of dezelfde content bedient beide pijlers zonder pillar-specifieke rewrite.
 - `Crossover asset`: een pijler-eigen asset dat bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
 - `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een attribuut/shared asset krijgt nooit een derde of vage pillarwaarde.
-- als een attribuut/shared asset voorkomt, geef dan altijd twee canonieke rijen: één `airco`, één `thuisbatterij`; beide gebruiken dezelfde surface en het passende `Crossover`-label.
+- als een attribuut/shared asset voorkomt, geef dan altijd twee canonieke rijen met hetzelfde `Asset-ID`: één `airco`, één `thuisbatterij`; beide gebruiken dezelfde concrete URL/route, dezelfde surface en het passende `Crossover`-label.
 - gebruik voor `Indexed / noindex` alleen `indexed` of `noindex`.
 
 Vereisten voor de framing:
@@ -95,6 +96,7 @@ Sluit af met deze secties:
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
 - Exact de tabel `| Vraag / Titel | Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |`
+- Exact de tabel `| Asset-ID | Vraag / Titel | Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |`
 - Een concrete set vraag-naar-antwoord attributepagina's
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - De standaard afsluitende secties

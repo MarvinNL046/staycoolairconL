@@ -55,10 +55,11 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna uitsluitend met deze tabel:
-| Titel | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |
+| Asset-ID | Titel | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |
 
 Vereisten voor de tabel:
 - geef per relevant voorstel een eigen rij;
+- geef elk deliverable een stabiel `Asset-ID`;
 - koppel elk voorstel aan een concrete publishing surface uit de site-structuur;
 - gebruik geen vage clusterterminologie zonder surface;
 - gebruik Limburg-brede relevantie waar dat past;
@@ -71,7 +72,7 @@ Vereisten voor de tabel:
 - `Gedeelde asset`: hetzelfde kernasset of dezelfde content bedient beide pijlers zonder pillar-specifieke rewrite.
 - `Crossover asset`: een pijler-eigen asset dat bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
 - `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een gedeelde/crossover asset krijgt nooit een derde of vage pillarwaarde;
-- als een asset/copy shared is, geef dan altijd twee canonieke rijen: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen dragen dezelfde surface en het passende `Crossover`-label;
+- als een asset/copy shared is, geef dan altijd twee canonieke rijen met hetzelfde `Asset-ID`: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen dragen dezelfde concrete URL/route, dezelfde surface en het passende `Crossover`-label;
 - vul per rij altijd `Indexed / noindex` in;
 - gebruik voor `Indexed / noindex` alleen `indexed` of `noindex`;
 - vul per rij altijd `Crossover` in met `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset` of `Crossover asset`.
@@ -90,6 +91,7 @@ Sluit af met deze secties:
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
 - Exact de tabel `| Titel | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |`
+- Exact de tabel `| Asset-ID | Titel | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |`
 - Een korte, concrete rangorde van de beste nieuwe servicepagina's
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - Een expliciete `Gedeelde asset` / `Crossover asset`-labeling waar passend in mixed mode

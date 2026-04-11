@@ -57,10 +57,11 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Gebruik daarna deze tabel:
-| Concrete pagina / route | Publishing surface | Pijler | Crossover | Bloktype | Tekstblok | Regionale invalshoek | Opmerking |
+| Asset-ID | Concrete pagina / route | Publishing surface | Pijler | Crossover | Bloktype | Tekstblok | Regionale invalshoek | Opmerking |
 
 Vereisten voor de tabel:
 - geef per blok een eigen rij;
+- geef elk deliverable een stabiel `Asset-ID`;
 - vul per rij altijd `Pijler` en `Crossover` in;
 - gebruik deze waarden in elke modus:
   - `Pijler`: `airco`, `thuisbatterij`
@@ -69,7 +70,7 @@ Vereisten voor de tabel:
 - `Crossover asset`: een pijler-eigen asset dat bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
 - `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een regionaal shared/crossover blok krijgt nooit een derde of vage pillarwaarde.
 - laat deze waarden niet leeg en gebruik geen andere labels;
-- als een regionaal blok shared/crossover is, geef twee canonieke rijen: één `airco`, één `thuisbatterij`; beide delen dezelfde concrete pagina/route en de passende publishing surface.
+- als een regionaal blok shared/crossover is, geef twee canonieke rijen met hetzelfde `Asset-ID`: één `airco`, één `thuisbatterij`; beide delen dezelfde concrete pagina/route, dezelfde publishing surface en dezelfde target.
 - schrijf `Tekstblok` als 1-2 zinnen of maximaal 40 woorden;
 - maak het blok direct inzetbaar, zonder open einde of extra uitwerking;
 - houd de toon compact, regionaal en briefingsklaar.
@@ -97,6 +98,7 @@ Sluit af met deze secties:
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
 - Exact de tabel `| Concrete pagina / route | Publishing surface | Pijler | Crossover | Bloktype | Tekstblok | Regionale invalshoek | Opmerking |`
+- Exact de tabel `| Asset-ID | Concrete pagina / route | Publishing surface | Pijler | Crossover | Bloktype | Tekstblok | Regionale invalshoek | Opmerking |`
 - Concrete regionale blokken die direct in content kunnen landen
 - Tekstblokken van 1-2 zinnen of maximaal 40 woorden
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant

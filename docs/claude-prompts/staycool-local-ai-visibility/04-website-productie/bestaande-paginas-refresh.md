@@ -47,10 +47,11 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna uitsluitend met deze tabel:
-| Concrete pagina / route | Pijler | Crossover | Huidige tekortkoming | Ontbrekend attribuut | Nieuwe sectie | Publishing surface | Interne linkkans |
+| Asset-ID | Concrete pagina / route | Pijler | Crossover | Huidige tekortkoming | Ontbrekend attribuut | Nieuwe sectie | Publishing surface | Interne linkkans |
 
 Vereisten voor de tabel:
 - gebruik alleen bestaande pagina's of routes uit de site-structuur;
+- geef elk deliverable een stabiel `Asset-ID`;
 - vul per rij altijd `Pijler` en `Crossover` in;
 - gebruik deze waarden in elke modus:
   - `Pijler`: `airco`, `thuisbatterij`
@@ -59,7 +60,7 @@ Vereisten voor de tabel:
 - `Crossover asset`: een pijler-eigen asset dat bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
 - `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een enkele gedeelde rij is niet geldig.
 - laat deze waarden niet leeg en gebruik geen andere labels;
-- als een shared/crossover item voorkomt, geef het altijd als twee canonieke rijen: één met `Pijler = airco` en één met `Pijler = thuisbatterij`.
+- als een shared/crossover item voorkomt, geef het altijd als twee canonieke rijen met hetzelfde `Asset-ID`: één met `Pijler = airco` en één met `Pijler = thuisbatterij`; beide rijen gebruiken dezelfde concrete pagina/route, dezelfde surface en dezelfde target.
 - de primaire target moet een concrete pagina of route zijn die de operator kan aanpassen;
 - benoem per rij wat de kleinste bruikbare refresh is;
 - maak de interne linkkans concreet, niet algemeen;
@@ -80,7 +81,7 @@ Sluit af met deze secties:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Concrete pagina / route | Pijler | Crossover | Huidige tekortkoming | Ontbrekend attribuut | Nieuwe sectie | Publishing surface | Interne linkkans |`
+- Exact de tabel `| Asset-ID | Concrete pagina / route | Pijler | Crossover | Huidige tekortkoming | Ontbrekend attribuut | Nieuwe sectie | Publishing surface | Interne linkkans |`
 - Een compacte refresh-rangorde voor bestaande content
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - De standaard afsluitende secties
