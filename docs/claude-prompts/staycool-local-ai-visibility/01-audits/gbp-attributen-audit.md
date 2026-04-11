@@ -14,6 +14,12 @@ Gebruik deze prompt wanneer je de zichtbare profielattributen in Google Maps wil
 - `00-context/thuisbatterij-pijler.md`
 - `00-context/bestaande-site-structuur.md`
 - `00-context/concurrentenlijst.md` indien beschikbaar
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- Target GBP-URL(s) van StayCool
+- Competitor GBP-URL(s)
+- Target zoektermen
+- Screenshots of gekopieerde Google Maps- en GBP-observaties
+- Vastgelegde zoekdatum en gebruikte locatie-instelling
 
 ## Prompt
 Onderzoek de GBP-attributen van StayCool en relevante concurrenten in Limburg breed.
@@ -24,6 +30,11 @@ Volg deze regels:
 - gebruik Limburg breed als hoofdregio;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
+- gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+
+Definieer schalen als volgt:
+- `prioriteit`: `P1` = direct oppakken, `P2` = plannen, `P3` = later.
+- `impact`: `hoog`, `middel`, `laag`.
 
 Breng in kaart:
 - welke attributen zichtbaar zijn bij StayCool;
@@ -46,7 +57,7 @@ Sluit af met een prioriteitenlijst voor attribute gaps.
 - Een gap-overzicht met ontbrekende of zwakke attributen.
 - `Topprioriteiten`
 - `Quick wins`
-- `Direct publiceerbaar`
+- `Direct publiceerbaar`: concrete attribuut-aanpassingen, copyregels of operator-acties die direct kunnen worden uitgevoerd.
 - `Later`
 
 ## Klaarcheck

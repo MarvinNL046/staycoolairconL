@@ -14,6 +14,12 @@ Gebruik deze prompt wanneer je reviewgroei en reviewcadans wilt vergelijken met 
 - `00-context/thuisbatterij-pijler.md`
 - `00-context/bestaande-site-structuur.md`
 - `00-context/concurrentenlijst.md` indien beschikbaar
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- Target GBP-URL(s) van StayCool
+- Competitor GBP-URL(s)
+- Target zoektermen
+- Review snapshots of review-exports
+- Laatste relevante reviewvenster per profiel of concurrent
 
 ## Prompt
 Analyseer de review velocity van StayCool en relevante concurrenten in Limburg breed.
@@ -24,6 +30,11 @@ Volg deze regels:
 - gebruik Limburg breed als hoofdregio;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
+- gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+
+Definieer schalen als volgt:
+- `prioriteit`: `P1` = direct oppakken, `P2` = plannen, `P3` = later.
+- `impact`: `hoog`, `middel`, `laag`.
 
 Onderzoek minimaal:
 - totale reviewaantallen;
@@ -39,7 +50,7 @@ Geef ook aan of StayCool minder actief oogt dan concurrenten, en wat dat beteken
 - Een apart oordeel per pijler.
 - `Topprioriteiten`
 - `Quick wins`
-- `Direct publiceerbaar`
+- `Direct publiceerbaar`: review-signal acties, voorbeeldvragen of follow-upteksten die direct inzetbaar zijn.
 - `Later`
 
 ## Klaarcheck

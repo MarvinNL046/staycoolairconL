@@ -14,6 +14,12 @@ Gebruik deze prompt wanneer je de categoriepositie in Google Maps wilt vergelijk
 - `00-context/thuisbatterij-pijler.md`
 - `00-context/bestaande-site-structuur.md`
 - `00-context/concurrentenlijst.md` indien beschikbaar
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- Target GBP-URL(s) van StayCool
+- Competitor GBP-URL(s)
+- Target zoektermen
+- Screenshots of gekopieerde Google Maps- en GBP-observaties
+- Vastgelegde zoekdatum en gebruikte locatie-instelling
 
 ## Prompt
 Open Google Maps en onderzoek StayCool plus zichtbare concurrenten in Limburg breed.
@@ -24,6 +30,11 @@ Volg deze regels:
 - gebruik Limburg breed als hoofdregio;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
+- gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+
+Definieer schalen als volgt:
+- `prioriteit`: `P1` = direct oppakken, `P2` = plannen, `P3` = later.
+- `impact`: `hoog`, `middel`, `laag`.
 
 Voer meerdere zoekopdrachten uit voor ten minste:
 - `airco Limburg`
@@ -46,7 +57,7 @@ Check expliciet of de categorieen beter passen bij installatie, onderhoud, advie
 - Een apart overzicht voor `airco` en `thuisbatterijen`.
 - `Topprioriteiten`
 - `Quick wins`
-- `Direct publiceerbaar`
+- `Direct publiceerbaar`: concrete categorie-aanpassingen, copyregels of operator-acties die direct kunnen worden uitgevoerd.
 - `Later`
 
 ## Klaarcheck

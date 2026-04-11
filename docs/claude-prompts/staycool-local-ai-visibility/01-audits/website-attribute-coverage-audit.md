@@ -13,9 +13,13 @@ Gebruik deze prompt wanneer je de website wilt toetsen op de mate waarin die con
 - `00-context/airco-pijler.md`
 - `00-context/thuisbatterij-pijler.md`
 - `00-context/bestaande-site-structuur.md`
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- Sitebron: `sitemap.xml`, crawl-export, of vaste URL-sample
+- Vaste URL-sample of crawl-export met concrete URLs
+- Datum van crawl of sample
 
 ## Prompt
-Scan de StayCool-site en toets of de copy voldoende expliciet is over lokale attributes.
+Toets de StayCool-site op expliciete attribute coverage met een reproduceerbare bron.
 
 Volg deze regels:
 - antwoord volledig in Nederlands;
@@ -23,6 +27,18 @@ Volg deze regels:
 - gebruik Limburg breed als hoofdregio;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
+- gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+
+Gebruik één vaste bronmethode:
+- `sitemap.xml`; of
+- crawl-export; of
+- vaste URL-sample van minimaal 12 expliciete URLs uit `00-context/bestaande-site-structuur.md`.
+
+Als je een vaste URL-sample gebruikt, benoem die sample expliciet en verander die niet tijdens de audit.
+
+Definieer schalen als volgt:
+- `prioriteit`: `P1` = direct oppakken, `P2` = plannen, `P3` = later.
+- `impact`: `hoog`, `middel`, `laag`.
 
 Controleer expliciet op:
 - services;
@@ -46,7 +62,7 @@ Werk uit:
 - Een lijst met concrete contentgaten.
 - `Topprioriteiten`
 - `Quick wins`
-- `Direct publiceerbaar`
+- `Direct publiceerbaar`: concrete contentblokken, kopregels of operator-acties die direct naar content kunnen worden vertaald.
 - `Later`
 
 ## Klaarcheck

@@ -14,6 +14,12 @@ Gebruik deze prompt wanneer je patronen wilt herkennen in concurrenten die steed
 - `00-context/thuisbatterij-pijler.md`
 - `00-context/bestaande-site-structuur.md`
 - `00-context/concurrentenlijst.md` indien beschikbaar
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- Target GBP-URL(s) van StayCool
+- Competitor GBP-URL(s)
+- Target zoektermen
+- Screenshots of gekopieerde Google Maps-observaties
+- Vastgelegde zoekdatum en gebruikte locatie-instelling
 
 ## Prompt
 Analyseer de Map Pack-patronen van concurrenten in Google Maps voor Limburg breed.
@@ -24,6 +30,11 @@ Volg deze regels:
 - gebruik Limburg breed als hoofdregio;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
+- gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+
+Definieer schalen als volgt:
+- `prioriteit`: `P1` = direct oppakken, `P2` = plannen, `P3` = later.
+- `impact`: `hoog`, `middel`, `laag`.
 
 Onderzoek meerdere zoekopdrachten rond:
 - `airco Limburg`
@@ -47,7 +58,7 @@ Maak expliciet onderscheid tussen patronen voor `airco` en `thuisbatterijen`.
 - Een lijst met Map Pack-patronen die StayCool nu moet spiegelen of overtreffen.
 - `Topprioriteiten`
 - `Quick wins`
-- `Direct publiceerbaar`
+- `Direct publiceerbaar`: concrete patroon-acties, observatie-samenvattingen of operator-stappen die direct inzetbaar zijn.
 - `Later`
 
 ## Klaarcheck

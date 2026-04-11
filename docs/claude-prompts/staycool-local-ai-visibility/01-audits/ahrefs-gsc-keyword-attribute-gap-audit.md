@@ -14,6 +14,7 @@ Gebruik deze prompt wanneer je keyworddata wilt koppelen aan ontbrekende attribu
 - `00-context/thuisbatterij-pijler.md`
 - `00-context/bestaande-site-structuur.md`
 - recente Ahrefs- en GSC-export of querylijst
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
 
 ## Prompt
 Vergelijk Ahrefs- en GSC-termen met de bestaande StayCool-copy.
@@ -24,6 +25,12 @@ Volg deze regels:
 - gebruik Limburg breed als hoofdregio;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
+- gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+- gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+
+Definieer schalen als volgt:
+- `prioriteit`: `P1` = direct oppakken, `P2` = plannen, `P3` = later.
+- `impact`: `hoog`, `middel`, `laag`.
 
 Maak een prioriteitstabel met exact deze kolommen:
 - `zoekvraag`
@@ -37,13 +44,18 @@ Markeer expliciet per zoekvraag:
 - `ontbrekende woorden`
 - `semantische details`
 
+Voeg daarnaast een korte begeleidende sectie toe met:
+- `ontbrekende woorden` per zoekvraag;
+- `semantische details` per zoekvraag.
+
 ## Verwachte output
 - Een prioriteitstabel met de gevraagde kolommen.
+- Een begeleidende sectie met `ontbrekende woorden` en `semantische details`.
 - Een apart blok voor `airco` en `thuisbatterijen`.
 - Een korte samenvatting van de grootste keyword-attribute gaps.
 - `Topprioriteiten`
 - `Quick wins`
-- `Direct publiceerbaar`
+- `Direct publiceerbaar`: concrete copyregels, pagina-aanpassingen of operator-acties die direct kunnen worden uitgevoerd.
 - `Later`
 
 ## Klaarcheck

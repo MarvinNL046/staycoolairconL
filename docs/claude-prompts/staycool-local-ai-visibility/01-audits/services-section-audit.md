@@ -13,6 +13,12 @@ Gebruik deze prompt wanneer je de servicesectie op GBP wilt vergelijken met de d
 - `00-context/airco-pijler.md`
 - `00-context/thuisbatterij-pijler.md`
 - `00-context/bestaande-site-structuur.md`
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- Target GBP-URL(s) van StayCool
+- Competitor GBP-URL(s)
+- Target zoektermen
+- Screenshots of gekopieerde GBP-servicesobservaties
+- Laatste zichtbare servicesectie of profielsnapshot
 
 ## Prompt
 Analyseer de GBP-servicesectie van StayCool en vergelijk die met de kernservices en relevante concurrenten in Limburg breed.
@@ -23,6 +29,11 @@ Volg deze regels:
 - gebruik Limburg breed als hoofdregio;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
+- gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+
+Definieer schalen als volgt:
+- `prioriteit`: `P1` = direct oppakken, `P2` = plannen, `P3` = later.
+- `impact`: `hoog`, `middel`, `laag`.
 
 Controleer of de servicesectie voldoende dekking geeft voor:
 - installatie;
@@ -45,7 +56,7 @@ Markeer:
 - Een lijst met aanbevolen servicebeschrijvingen of toevoegingen.
 - `Topprioriteiten`
 - `Quick wins`
-- `Direct publiceerbaar`
+- `Direct publiceerbaar`: directe servicecopy, service-entries of operator-acties die meteen kunnen worden gepubliceerd.
 - `Later`
 
 ## Klaarcheck

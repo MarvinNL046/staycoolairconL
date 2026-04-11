@@ -14,6 +14,12 @@ Gebruik deze prompt wanneer je GBP-foto's wilt vergelijken op activiteit, inhoud
 - `00-context/thuisbatterij-pijler.md`
 - `00-context/bestaande-site-structuur.md`
 - `00-context/concurrentenlijst.md` indien beschikbaar
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- Target GBP-URL(s) van StayCool
+- Competitor GBP-URL(s)
+- Target zoektermen
+- Screenshots of gekopieerde GBP-fotoobservaties
+- 90-dagen foto-bewijs of foto-exports per profiel
 
 ## Prompt
 Analyseer de GBP-foto's van StayCool en relevante concurrenten in Limburg breed.
@@ -24,6 +30,12 @@ Volg deze regels:
 - gebruik Limburg breed als hoofdregio;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
+- gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+
+Definieer schalen als volgt:
+- `activity score`: `0` = geen zichtbare activiteit, `1` = zeer laag, `2` = laag, `3` = gemiddeld, `4` = hoog, `5` = zeer hoog.
+- `prioriteit`: `P1` = direct oppakken, `P2` = plannen, `P3` = later.
+- `impact`: `hoog`, `middel`, `laag`.
 
 Voor de laatste 90 dagen:
 - noteer fotofrequentie;
@@ -46,7 +58,7 @@ Let specifiek op:
 - Quick wins voor de komende 30 dagen.
 - `Topprioriteiten`
 - `Quick wins`
-- `Direct publiceerbaar`
+- `Direct publiceerbaar`: concrete foto-opdrachten, caption-ideeën of operator-acties die direct uitvoerbaar zijn.
 - `Later`
 
 ## Klaarcheck

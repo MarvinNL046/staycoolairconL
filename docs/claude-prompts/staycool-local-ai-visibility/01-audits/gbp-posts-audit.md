@@ -14,6 +14,12 @@ Gebruik deze prompt wanneer je de recentheid, inhoud en regionale signalen van G
 - `00-context/thuisbatterij-pijler.md`
 - `00-context/bestaande-site-structuur.md`
 - `00-context/concurrentenlijst.md` indien beschikbaar
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- Target GBP-URL(s) van StayCool
+- Competitor GBP-URL(s)
+- Target zoektermen
+- Screenshots of gekopieerde GBP-postobservaties
+- 90-dagen postbewijs of post-exports per profiel
 
 ## Prompt
 Analyseer de GBP-posts van StayCool en relevante concurrenten in Limburg breed.
@@ -24,6 +30,12 @@ Volg deze regels:
 - gebruik Limburg breed als hoofdregio;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
+- gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+
+Definieer schalen als volgt:
+- `activity score`: `0` = geen zichtbare activiteit, `1` = zeer laag, `2` = laag, `3` = gemiddeld, `4` = hoog, `5` = zeer hoog.
+- `prioriteit`: `P1` = direct oppakken, `P2` = plannen, `P3` = later.
+- `impact`: `hoog`, `middel`, `laag`.
 
 Voor de laatste 90 dagen:
 - noteer postfrequentie;
@@ -40,7 +52,7 @@ Laat zien of de posts vooral promotioneel, informatief, bewijsgericht of regiona
 - Quick wins voor de komende 30 dagen.
 - `Topprioriteiten`
 - `Quick wins`
-- `Direct publiceerbaar`
+- `Direct publiceerbaar`: concrete postideeën, postkoppen of operator-acties voor de komende 30 dagen.
 - `Later`
 
 ## Klaarcheck

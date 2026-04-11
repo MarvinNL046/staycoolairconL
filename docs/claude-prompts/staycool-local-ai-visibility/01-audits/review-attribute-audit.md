@@ -14,9 +14,15 @@ Gebruik deze prompt wanneer je reviewinhoud wilt vertalen naar meetbare attribut
 - `00-context/thuisbatterij-pijler.md`
 - `00-context/bestaande-site-structuur.md`
 - `00-context/concurrentenlijst.md` indien beschikbaar
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- Target GBP-URL(s) van StayCool
+- Competitor GBP-URL(s)
+- Target zoektermen
+- Review snapshots of review-exports
+- Laatste relevante reviewvenster per profiel of concurrent
 
 ## Prompt
-Lees de laatste relevante reviews van StayCool en concurrenten te lezen.
+Lees de laatste relevante reviews van StayCool en concurrenten.
 
 Volg deze regels:
 - antwoord volledig in Nederlands;
@@ -24,6 +30,11 @@ Volg deze regels:
 - gebruik Limburg breed als hoofdregio;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
+- gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+
+Definieer schalen als volgt:
+- `prioriteit`: `P1` = direct oppakken, `P2` = plannen, `P3` = later.
+- `impact`: `hoog`, `middel`, `laag`.
 
 Extra instructie:
 - lees de reviews inhoudelijk, niet alleen op sterren;
@@ -47,7 +58,7 @@ Eindig met de review-attributen die StayCool actief moet verzamelen via reviewve
 - Een slotblok met ontbrekende review-attributen die StayCool actief moet verzamelen.
 - `Topprioriteiten`
 - `Quick wins`
-- `Direct publiceerbaar`
+- `Direct publiceerbaar`: ready-to-publish reviewvragen, follow-upzinnen of operator-acties om meteen te gebruiken.
 - `Later`
 
 ## Klaarcheck
