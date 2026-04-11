@@ -73,6 +73,9 @@ Vereisten voor de tabel:
 - `Crossover asset`: een pijler-eigen asset dat bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
 - `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; metadata voor een shared/crossover asset krijgt nooit een derde of vage pillarwaarde.
 - als metadata shared/crossover is, geef twee canonieke rijen: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen delen dezelfde surface en het passende `Crossover`-label.
+- hou `Nieuwe title tag` compact, idealiter 45-60 tekens;
+- hou `Meta description` beknopt, idealiter 130-155 tekens;
+- maak beide velden direct CMS-bruikbaar, zonder extra uitleg of varianten in dezelfde rij.
 
 Vereisten voor mixed mode:
 - maak duidelijk welke metadata hoort bij `Airco-only`, `Thuisbatterij-only` en welke bij een `Gedeelde asset` / `Crossover asset` hoort;
@@ -89,6 +92,7 @@ Sluit af met:
 - Korte metadata-echo met de vaste velden
 - Exact de tabel `| Concrete pagina / route | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | H1 / slug-check | Publishing surface | Opmerking |`
 - Een compacte set metadata-aanpassingen die direct in CMS of briefing past
+- Title tags en meta descriptions binnen CMS-bruikbare lengte
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - Een expliciete `Gedeelde asset` / `Crossover asset`-scheiding waar passend in mixed mode
 - De standaard afsluitende secties

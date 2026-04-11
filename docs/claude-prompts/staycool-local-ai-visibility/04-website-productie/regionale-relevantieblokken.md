@@ -70,6 +70,9 @@ Vereisten voor de tabel:
 - `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een regionaal shared/crossover blok krijgt nooit een derde of vage pillarwaarde.
 - laat deze waarden niet leeg en gebruik geen andere labels;
 - als een regionaal blok shared/crossover is, geef twee canonieke rijen: één `airco`, één `thuisbatterij`; beide delen dezelfde concrete pagina/route en de passende publishing surface.
+- schrijf `Tekstblok` als 1-2 zinnen of maximaal 40 woorden;
+- maak het blok direct inzetbaar, zonder open einde of extra uitwerking;
+- houd de toon compact, regionaal en briefingsklaar.
 - laat de tekstblokken Limburg-breed voelen zonder generieke fluff of dunne stadsduplicatie;
 - gebruik alleen regio-invalshoeken die uit de input of site-structuur volgen;
 - noteer onzekerheid met `onbekend` wanneer bewijs of context ontbreekt.
@@ -95,6 +98,7 @@ Sluit af met:
 - Korte metadata-echo met de vaste velden
 - Exact de tabel `| Concrete pagina / route | Publishing surface | Pijler | Crossover | Bloktype | Tekstblok | Regionale invalshoek | Opmerking |`
 - Concrete regionale blokken die direct in content kunnen landen
+- Tekstblokken van 1-2 zinnen of maximaal 40 woorden
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - Een expliciete `Gedeelde asset` / `Crossover asset`-scheiding waar passend in mixed mode
 - De standaard afsluitende secties
