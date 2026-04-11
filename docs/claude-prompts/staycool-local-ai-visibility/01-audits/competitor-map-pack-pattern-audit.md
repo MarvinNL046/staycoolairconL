@@ -12,6 +12,7 @@ Gebruik deze prompt wanneer je patronen wilt herkennen in concurrenten die steed
 - `00-context/limburg-brede-focus.md`
 - `00-context/airco-pijler.md`
 - `00-context/thuisbatterij-pijler.md`
+- `00-context/bestaande-site-structuur.md`
 - `00-context/concurrentenlijst.md` indien beschikbaar
 
 ## Prompt
