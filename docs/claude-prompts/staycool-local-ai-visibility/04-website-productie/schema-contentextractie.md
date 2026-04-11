@@ -72,6 +72,7 @@ Vereisten voor de extractie:
   - `Pijler`: `airco`, `thuisbatterij`
   - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
 - laat deze waarden niet leeg en gebruik geen andere labels in mixed mode;
+- als een shared/crossover extract in mixed mode voorkomt, geef het altijd als twee canonieke rijen: één met `Pijler = airco` en één met `Pijler = thuisbatterij`; een enkele gedeelde rij is niet geldig;
 - gebruik alleen extracties die direct uit de input volgen;
 - markeer ontbrekende of zwakke onderbouwing met `onbekend`;
 - maak de output geschikt voor redactie, schema-invoer of contentbriefing;

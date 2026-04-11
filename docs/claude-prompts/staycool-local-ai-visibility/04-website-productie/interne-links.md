@@ -57,6 +57,7 @@ Vereisten voor de tabel:
   - `Pijler`: `airco`, `thuisbatterij`
   - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
 - laat deze waarden niet leeg en gebruik geen andere labels in mixed mode;
+- als een shared/crossover link in mixed mode voorkomt, geef het altijd als twee canonieke rijen: één met `Pijler = airco` en één met `Pijler = thuisbatterij`; een enkele gedeelde rij is niet geldig;
 - gebruik alleen bron- en doelpagina's die passen bij een expliciet benoemde publishing surface uit de site-structuur;
 - maak het waarom concreet: attribuut, intentie of regionale match;
 - noteer onzekerheden met `onbekend` als de broninput tekortschiet.
