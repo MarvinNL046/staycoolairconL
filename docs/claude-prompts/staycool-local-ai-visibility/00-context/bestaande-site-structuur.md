@@ -25,6 +25,7 @@
 - `/products/daikin/ururu-sarara`, `/products/daikin/stylish`, `/products/mitsubishi/daiseikai-10`, `/products/lg-mobiele-airco`, `/products/tosot-mobiele-airco`
 - `/aircos`, `/aircos/:productId`
 - `/thuisbatterijen`, `/thuisbatterij-calculator`, `/kennisbank/thuisbatterijen`
+- `/capaciteit-calculator`
 - `/kennisbank/*` voor algemene kennisbankartikelen zoals werking, onderhoud, verwarmen, energielabels, storingen, merken en vergelijkingen
 - `/blog/*` voor bewijs, cases en regionale context
 - `/vergelijkingen/*` voor comparison content
@@ -47,7 +48,7 @@
 
 ## Routeconventies
 - Brand landings lopen onder `/landing/*`.
-- Root-level commerciële of money pages staan buiten `/landing/*`, bijvoorbeeld `/airco-installatie`, `/airco-onderhoud`, `/airco-reparatie`, `/airco-service-limburg`, `/airco-kopen-limburg`, `/airco-kopen-en-laten-installeren`, `/wat-kost-airco-installatie`, `/mobiele-airco`, `/airco-met-buitenunit`, `/airco-installatie-limburg`, `/airco-installatie-prijs`, `/airco-offerte`, `/airco-installeren-gids`, `/airco-kantoor`, `/airco-winkel`, `/airco-voor-slaapkamer`, `/airco-voor-woonkamer`, `/airco-voor-zolder`.
+- Root-level commerciële of money pages staan buiten `/landing/*`, bijvoorbeeld `/airco-installatie`, `/airco-onderhoud`, `/airco-reparatie`, `/airco-service-limburg`, `/airco-kopen-limburg`, `/airco-kopen-en-laten-installeren`, `/wat-kost-airco-installatie`, `/mobiele-airco`, `/airco-met-buitenunit`, `/airco-installatie-limburg`, `/airco-installatie-prijs`, `/airco-offerte`, `/airco-installeren`, `/airco-kantoor`, `/airco-winkel`, `/airco-voor-slaapkamer`, `/airco-voor-woonkamer`, `/airco-voor-zolder`.
 - Gebruik deze scheiding in prompts: brand landings zijn vooral merk- of productgericht; root-level money pages zijn bredere commerciële instappunten.
 
 ## Belangrijke clusters uit de huidige site
