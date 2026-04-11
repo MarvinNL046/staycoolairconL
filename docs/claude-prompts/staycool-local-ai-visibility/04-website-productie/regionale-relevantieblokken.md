@@ -62,7 +62,7 @@ Gebruik daarna deze tabel:
 Vereisten voor de tabel:
 - geef per blok een eigen rij;
 - geef elk deliverable een stabiel `Asset-ID`;
-- maak `Asset-ID` deterministisch en route-gebaseerd, maar blokspecifiek: gebruik een lowercase kebab-id afgeleid van de concrete pagina/route plus `Bloktype` en een vaste nulgevulde volgorde (`01`, `02`, etc.) binnen die combinatie; hergebruik exact dezelfde `Asset-ID` als hetzelfde blok in een latere run of tweede canonieke rij terugkomt; gebruik nooit datums, random suffixes of vrije invalshoeklabels;
+- maak `Asset-ID` deterministisch en route-gebaseerd, maar blokspecifiek: gebruik een lowercase kebab-id afgeleid van de concrete pagina/route plus `Bloktype` en een vaste nulgevulde volgorde (`01`, `02`, etc.) binnen die combinatie; bepaal die volgorde stabiel door binnen dezelfde route + `Bloktype` alfabetisch op genormaliseerde `Regionale invalshoek` te sorteren; hergebruik exact dezelfde `Asset-ID` als hetzelfde blok in een latere run of tweede canonieke rij terugkomt; gebruik nooit datums, random suffixes of vrije invalshoeklabels;
 - vul per rij altijd `Pijler` en `Crossover` in;
 - gebruik deze waarden in elke modus:
   - `Pijler`: `airco`, `thuisbatterij`

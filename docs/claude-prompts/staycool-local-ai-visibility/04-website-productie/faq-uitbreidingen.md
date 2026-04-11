@@ -57,7 +57,7 @@ Vereisten voor de tabel:
 - geef per relevante FAQ een eigen rij met een uniek `FAQ-Rij-ID`;
 - geef per onderliggend FAQ-asset of gedeelde set een stabiel `FAQ-Groep-ID`;
 - maak `FAQ-Groep-ID` deterministisch en route-gebaseerd: gebruik een lowercase kebab-id afgeleid van de concrete target page / route plus het onderliggende FAQ-thema; hergebruik exact dezelfde `FAQ-Groep-ID` als dezelfde set in een latere run terugkomt;
-- maak `FAQ-Rij-ID` deterministisch als `FAQ-Groep-ID--<pijler>--<nn>` waarbij `<pijler>` exact `airco` of `thuisbatterij` is en `<nn>` een vaste nulgevulde volgorde binnen die pijler is; hergebruik exact dezelfde `FAQ-Rij-ID` als dezelfde canonieke FAQ-rij in een latere run terugkomt;
+- maak `FAQ-Rij-ID` deterministisch als `FAQ-Groep-ID--<pijler>--<nn>` waarbij `<pijler>` exact `airco` of `thuisbatterij` is en `<nn>` een vaste nulgevulde volgorde binnen die pijler is; bepaal die volgorde stabiel door binnen elke `FAQ-Groep-ID` eerst op `Pijler` (`airco` voor `thuisbatterij`) en daarna alfabetisch op genormaliseerde `Vraag` te sorteren; hergebruik exact dezelfde `FAQ-Rij-ID` als dezelfde canonieke FAQ-rij in een latere run terugkomt;
 - canonical rows hebben altijd een unieke `FAQ-Rij-ID`; rijen die bij dezelfde shared/crossover FAQ-set horen delen hetzelfde `FAQ-Groep-ID`;
 - vul per rij altijd `Pijler` en `Crossover` in;
 - gebruik deze waarden in elke modus:
@@ -100,6 +100,7 @@ Vast publiceerbaar FAQ-blok:
 - formatteer `FAQ-items in volgorde` altijd als een genummerde reeks binnen één cel, gescheiden met ` <br> `, bijvoorbeeld `1. Vraag -> Kort antwoord <br> 2. Vraag -> Kort antwoord`;
 - als een FAQ-set voor beide pijlers werkt, label die hier als `Gedeelde asset` / `Crossover asset`.
 - gebruik in `Pijler` binnen dit block alleen `airco`, `thuisbatterij` of `gedeeld`; `gedeeld` is alleen toegestaan als dezelfde block-rij exact voor beide pijlers publiceerbaar is op dezelfde route en surface.
+- als `Pijler = gedeeld`, neem in `FAQ-Rij-ID's` altijd alle bijbehorende canonieke `airco`- en `thuisbatterij`-rijen op, in die volgorde; dedupliceer in `FAQ-items in volgorde` identieke `Vraag -> Kort antwoord`-paren zodat de CMS-handoff één gedeeld blok blijft.
 - in mixed mode blijft het publiceerbare blok per gedeelde set beperkt tot één gedeelde block-rij of twee pijlerspecifieke block-rijen; gebruik nooit een derde variant of een paginafamilie als vervanging voor de concrete target.
 
 Sluit af met deze secties:
