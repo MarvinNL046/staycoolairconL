@@ -67,6 +67,7 @@ Vereisten voor de tabel:
 - gebruik deze waarden in elke modus:
   - `Pijler`: `airco`, `thuisbatterij`
   - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
+  - `Bloktype`: `intro-blok`, `bewijs-blok`, `servicegebied-blok`, `cta-blok`, `faq-intro-blok`
 - `Gedeelde asset`: hetzelfde kernasset of dezelfde content bedient beide pijlers zonder pillar-specifieke rewrite.
 - `Crossover asset`: een pijler-eigen asset dat bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
 - `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een regionaal shared/crossover blok krijgt nooit een derde of vage pillarwaarde.

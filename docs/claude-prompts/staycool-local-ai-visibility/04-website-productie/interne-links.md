@@ -59,7 +59,7 @@ Vereisten voor de tabel:
   - `Plaatsingsstatus`: `direct plaatsbaar`, `wacht op bronpagina`, `wacht op doelpagina`, `wacht op beide`
 - vul `Bron concrete pagina / route` en `Doel concrete pagina / route` altijd met een concrete bestaande of beoogde eindroute;
 - vul `Bron referentie-ID` en `Doel referentie-ID` in als de bron of het doel uit een andere Task 6-deliverable komt; gebruik anders `n.v.t.`.
-- hergebruik referentie-ID's exact zoals ze in de upstream Task 6-output staan: gebruik `Asset-ID` voor pagina- en blokdeliverables, `FAQ-Groep-ID` of `FAQ-Rij-ID` voor FAQ-deliverables, en maak geen nieuwe varianten voor hetzelfde deliverable;
+- hergebruik referentie-ID's exact zoals ze in de upstream Task 6-output staan: gebruik `Asset-ID` voor pagina- en blokdeliverables en gebruik voor FAQ-deliverables altijd `FAQ-Groep-ID`; maak geen nieuwe varianten voor hetzelfde deliverable;
 - `same-pillar`: bron en doel horen bij dezelfde pijler;
 - `cross-pillar`: bron en doel horen bij verschillende pijlers;
 - `shared-support`: de link ondersteunt een gedeelde of pijler-overstijgende context, maar blijft één canonieke linkplaatsing;

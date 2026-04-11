@@ -27,9 +27,10 @@ Werk evidence-first en gebruik alleen vragen die logisch volgen uit de audits, p
 Recovery rule: gebruik live browse alleen als een vereiste handoff ontbreekt of aantoonbaar verouderd is; anders werk je uitsluitend met de aangeleverde context en handoff.
 
 Maak in de output de volgende hoeveelheden zichtbaar:
-- `airco-only`: 10 FAQ's voor airco
-- `thuisbatterij-only`: 10 FAQ's voor thuisbatterijen
-- `mixed`: exact 20 FAQ-rijen totaal in de hoofdtafel, bestaande uit 10 `airco`-rijen en 10 `thuisbatterij`-rijen; elke rij krijgt precies één `Pijler`-waarde (`airco` of `thuisbatterij`), en als een FAQ shared/crossover is, wordt die in de hoofdtafel als twee canonieke rijen opgenomen: één `airco`, één `thuisbatterij`; die twee rijen tellen samen als 2 van de 20 en nooit als 1 plus extra
+- `airco-only`: streef naar 10 FAQ's voor airco
+- `thuisbatterij-only`: streef naar 10 FAQ's voor thuisbatterijen
+- `mixed`: streef naar 20 FAQ-rijen totaal in de hoofdtafel, opgebouwd uit maximaal 10 `airco`-rijen en maximaal 10 `thuisbatterij`-rijen; elke rij krijgt precies één `Pijler`-waarde (`airco` of `thuisbatterij`), en als een FAQ shared/crossover is, wordt die in de hoofdtafel als twee canonieke rijen opgenomen: één `airco`, één `thuisbatterij`
+- als de handoff onvoldoende unieke, evidence-first FAQ's bevat, geef dan minder rijen in plaats van opvulvragen te verzinnen, en noteer het tekort expliciet in `Topprioriteiten` of `Later`
 
 Lever de output als een publiceerbaar FAQ-blok op de website, niet als losse lijst zonder implementatiehouvast. Elke FAQ moet kunnen landen op een concrete target page / route, met een expliciete publishing surface en indexability-keuze.
 
@@ -51,12 +52,13 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Gebruik daarna deze tabel:
-| FAQ-Rij-ID | FAQ-Groep-ID | Vraag | Pijler | Crossover | Kort antwoord | Concrete target page / route | Publishing surface | Indexed / noindex | Schema-geschikt | Waarom nu |
+| FAQ-Rij-ID | FAQ-Groep-ID | FAQ-Thema | Vraag | Pijler | Crossover | Kort antwoord | Concrete target page / route | Publishing surface | Indexed / noindex | Schema-geschikt | Waarom nu |
 
 Vereisten voor de tabel:
 - geef per relevante FAQ een eigen rij met een uniek `FAQ-Rij-ID`;
 - geef per onderliggend FAQ-asset of gedeelde set een stabiel `FAQ-Groep-ID`;
-- maak `FAQ-Groep-ID` deterministisch en route-gebaseerd: gebruik een lowercase kebab-id afgeleid van de concrete target page / route plus het onderliggende FAQ-thema; hergebruik exact dezelfde `FAQ-Groep-ID` als dezelfde set in een latere run terugkomt;
+- vul `FAQ-Thema` altijd met een korte, genormaliseerde themanaam in;
+- maak `FAQ-Groep-ID` deterministisch en route-gebaseerd: gebruik een lowercase kebab-id afgeleid van de concrete target page / route plus `FAQ-Thema`; hergebruik exact dezelfde `FAQ-Groep-ID` als dezelfde set in een latere run terugkomt;
 - maak `FAQ-Rij-ID` deterministisch als `FAQ-Groep-ID--<pijler>--<nn>` waarbij `<pijler>` exact `airco` of `thuisbatterij` is en `<nn>` een vaste nulgevulde volgorde binnen die pijler is; bepaal die volgorde stabiel door binnen elke `FAQ-Groep-ID` eerst op `Pijler` (`airco` voor `thuisbatterij`) en daarna alfabetisch op genormaliseerde `Vraag` te sorteren; hergebruik exact dezelfde `FAQ-Rij-ID` als dezelfde canonieke FAQ-rij in een latere run terugkomt;
 - canonical rows hebben altijd een unieke `FAQ-Rij-ID`; rijen die bij dezelfde shared/crossover FAQ-set horen delen hetzelfde `FAQ-Groep-ID`;
 - vul per rij altijd `Pijler` en `Crossover` in;
@@ -112,7 +114,7 @@ Sluit af met deze secties:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| FAQ-Rij-ID | FAQ-Groep-ID | Vraag | Pijler | Crossover | Kort antwoord | Concrete target page / route | Publishing surface | Indexed / noindex | Schema-geschikt | Waarom nu |`
+- Exact de tabel `| FAQ-Rij-ID | FAQ-Groep-ID | FAQ-Thema | Vraag | Pijler | Crossover | Kort antwoord | Concrete target page / route | Publishing surface | Indexed / noindex | Schema-geschikt | Waarom nu |`
 - 10 FAQ's per pijler waar relevant, met korte antwoorden
 - Schema-vriendelijke formuleringen
 - Een publiceerbaar FAQ-blok per pijler met verwijzing naar de canonieke `FAQ-Groep-ID` en `FAQ-Rij-ID`s
