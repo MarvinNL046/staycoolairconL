@@ -7,9 +7,9 @@ Elke prompt in deze bibliotheek moet Claude instrueren om:
 - `Limburg breed` als hoofdregio te nemen;
 - geen generieke SEO-uitleg te geven;
 - tabellen te gebruiken waar nuttig;
-- de vier afsluitende secties `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar` en `Later` standaard te gebruiken als eindstructuur voor analyse- en productieprompts, tenzij het bewust een kleine utility-scaffold is;
-- af te sluiten met:
+Gebruik standaard deze afsluiting voor analyse- en productieprompts:
   - `Topprioriteiten`
   - `Quick wins`
   - `Direct publiceerbaar`
   - `Later`
+Kleine utility-scaffolds mogen hiervan afwijken.

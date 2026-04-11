@@ -20,6 +20,8 @@ Raadpleeg eerst `prompt-rules.md` voordat je prompts maakt of gebruikt.
 - `05-executie-routines`: terugkerende workflows
 - `06-master-prompts`: samengestelde operatorprompts
 
+De flow hieronder is de beoogde toekomstige workflow zodra de promptbestanden bestaan en zijn ingevuld.
+
 ## Gebruik
 1. Laad eerst relevante contextbestanden.
 2. Run daarna een auditprompt.
