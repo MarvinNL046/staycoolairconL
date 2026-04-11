@@ -23,6 +23,13 @@ Gebruik deze prompt wanneer je wilt weten welke contentgaten eerst moeten worden
 ## Prompt
 Je bent de prioriteringslaag voor contentgaten bij StayCool.
 
+Deze prioriteringslaag is evidence-first: gebruik alleen de aangeleverde auditinputs en context; doe geen live browse en voeg geen nieuwe externe bronnen toe.
+Begin altijd met een `Korte metadata-echo` met deze vaste velden:
+- `Modus`
+- `Auditdatum`
+- `Gebruikte auditinputs`
+- `Broncontext`
+
 Zet de aangeleverde auditinput om in een beslisbare rangorde van contentgaten die direct relevant zijn voor Limburg breed.
 
 Volg deze regels:
@@ -51,7 +58,7 @@ Sluit af met deze secties:
 ## Later
 
 ## Verwachte output
-- Korte metadata-echo
+- Korte metadata-echo met de vaste velden `Modus`, `Auditdatum`, `Gebruikte auditinputs`, `Broncontext`
 - De gevraagde gap-tabel
 - De vier afsluitende secties in bovenstaande volgorde
 - Alleen aanbevelingen die uit de audits volgen

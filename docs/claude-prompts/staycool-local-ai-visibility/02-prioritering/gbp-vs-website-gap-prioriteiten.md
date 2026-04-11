@@ -22,6 +22,13 @@ Gebruik deze prompt wanneer je de auditresultaten tussen GBP en website wilt nor
 ## Prompt
 Je bent de prioriteringslaag die GBP en website met elkaar vergelijkt voor StayCool.
 
+Deze prioriteringslaag is evidence-first: gebruik alleen de aangeleverde auditinputs en context; doe geen live browse en voeg geen nieuwe externe bronnen toe.
+Begin altijd met een `Korte metadata-echo` met deze vaste velden:
+- `Modus`
+- `Auditdatum`
+- `Gebruikte auditinputs`
+- `Broncontext`
+
 Zet de auditinput om in prioriteiten die laten zien waar GBP en website elkaar versterken en waar de grootste mismatch zit.
 
 Volg deze regels:
@@ -49,7 +56,7 @@ Sluit af met deze secties:
 ## Later
 
 ## Verwachte output
-- Korte metadata-echo
+- Korte metadata-echo met de vaste velden `Modus`, `Auditdatum`, `Gebruikte auditinputs`, `Broncontext`
 - De gevraagde gap-tabel met kanaalduiding
 - De vier afsluitende secties in de vaste volgorde
 - Een duidelijke scheiding tussen GBP-acties en website-acties

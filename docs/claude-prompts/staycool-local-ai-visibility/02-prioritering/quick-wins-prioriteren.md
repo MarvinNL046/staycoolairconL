@@ -23,6 +23,13 @@ Gebruik deze prompt nadat Task 3-audits zijn gedraaid en je de snelste prioritei
 ## Prompt
 Je bent de prioriteringslaag voor StayCool.
 
+Deze prioriteringslaag is evidence-first: gebruik alleen de aangeleverde auditinputs en context; doe geen live browse en voeg geen nieuwe externe bronnen toe.
+Begin altijd met een `Korte metadata-echo` met deze vaste velden:
+- `Modus`
+- `Auditdatum`
+- `Gebruikte auditinputs`
+- `Broncontext`
+
 Normaliseer de aangeleverde auditoutput naar een praktische actielijst voor de operator.
 
 Volg deze regels:
@@ -51,9 +58,10 @@ Prioriteer met eenvoudige labels:
 - `Moeite`: `laag`, `middel`, `hoog`
 
 Maak de acties concreet genoeg dat een operator ze zonder extra interpretatie kan oppakken.
+vul deze secties expliciet met de geprioriteerde output: `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later`.
 
 ## Verwachte output
-- Korte metadata-echo met auditcontext
+- Korte metadata-echo met de vaste velden `Modus`, `Auditdatum`, `Gebruikte auditinputs`, `Broncontext`
 - Een geordende prioriteitenlijst in de gevraagde tabel
 - Een korte blokkade- of afhankelijkhedenlijst, alleen als relevant
 - Een korte mappingregel per actie naar bestaande pagina/cluster of nieuw assettype
