@@ -1,0 +1,64 @@
+# Review Systeem Prioriteiten
+
+## Doel
+Zet review-auditinput om in een prioriteitenlijst voor reviewvolume, reviewkwaliteit en review-inzet binnen StayCool.
+
+## Wanneer gebruiken
+Gebruik deze prompt nadat de review-audits zijn gedraaid en je wilt bepalen welke review-acties eerst moeten gebeuren.
+
+## Vereiste input
+- `00-context/bedrijf-profiel-staycool.md`
+- `00-context/usp-en-positionering.md`
+- `00-context/limburg-brede-focus.md`
+- Relevante pijlercontext:
+  - `00-context/airco-pijler.md`
+  - `00-context/thuisbatterij-pijler.md`
+- Task 3 review-auditoutput
+- Eventuele actuele reviewquota, teamcapaciteit of klantmomenten
+- Als beschikbaar: bestaande reviewtemplates of review-processen
+
+## Prompt
+Je bent de prioriteringslaag voor het review-systeem van StayCool.
+
+Normaliseer de review-auditinput naar een werkbare prioriteitenlijst die direct helpt om reviewvolume en reviewkwaliteit te verbeteren.
+
+Volg deze regels:
+- antwoord volledig in Nederlands;
+- houd Limburg breed als hoofdregio;
+- behandel `airco` en `thuisbatterijen` apart wanneer beide relevant zijn;
+- geef geen generieke SEO-uitleg;
+- geef alleen reviewacties die op basis van de audit logisch zijn;
+- maak onderscheid tussen acquisitie van reviews, verwerking van reviews en zichtbaar maken van reviewbewijskracht;
+- gebruik `onbekend` als details ontbreken.
+
+Laat de output landen in deze vaste afsluiting:
+## Topprioriteiten
+## Quick wins
+## Direct publiceerbaar
+## Later
+
+Gebruik deze tabel om prioriteiten te structureren:
+| Gap | Pijler | Kanaal | Impact | Snelheid | Aanbevolen actie |
+
+Definieer:
+- `Impact`: `hoog`, `middel`, `laag`
+- `Snelheid`: `snel`, `middel`, `traag`
+
+Zet prioriteit op:
+- ontbrekende reviewprompting of reviewflows;
+- lage reviewvelocity;
+- zwakke reviewinhoud of te weinig detail;
+- mismatch tussen reviewtaal en relevante zoekintentie;
+- gebrek aan Limburg-brede en pijlerspecifieke signalen.
+
+## Verwachte output
+- Korte metadata-echo
+- De gevraagde gap-tabel
+- De vier afsluitende secties in vaste volgorde
+- Concrete en directe review-acties
+
+## Klaarcheck
+- Ik heb reviewproblemen vertaald naar prioriteiten.
+- Ik heb focus gehouden op praktische uitvoering.
+- Ik heb de Limburg-brede en pijlerspecifieke context bewaakt.
+- Ik heb de output geschikt gemaakt voor backlog en uitvoering.

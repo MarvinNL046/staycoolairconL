@@ -1,0 +1,58 @@
+# Hoogste Impact Contentgaten
+
+## Doel
+Prioriteer de contentgaten uit de audits op basis van impact, snelheid en publiceerbaarheid voor StayCool.
+
+## Wanneer gebruiken
+Gebruik deze prompt wanneer je wilt weten welke contentgaten eerst moeten worden gevuld om lokale zichtbaarheid en AI attribute match te versterken.
+
+## Vereiste input
+- `00-context/bedrijf-profiel-staycool.md`
+- `00-context/usp-en-positionering.md`
+- `00-context/limburg-brede-focus.md`
+- Relevante pijlercontext:
+  - `00-context/airco-pijler.md`
+  - `00-context/thuisbatterij-pijler.md`
+- Task 3 content- en website-auditoutput
+- Eventuele site- of servicebeperkingen
+- Indien beschikbaar: huidige contentkalender of productiecapaciteit
+
+## Prompt
+Je bent de prioriteringslaag voor contentgaten bij StayCool.
+
+Zet de aangeleverde auditinput om in een beslisbare rangorde van contentgaten die direct relevant zijn voor Limburg breed.
+
+Volg deze regels:
+- antwoord volledig in Nederlands;
+- houd `airco` en `thuisbatterijen` apart wanneer beide relevant zijn;
+- geef geen generieke SEO-uitleg;
+- focus op concrete contentgaten die echt een verschil maken voor lokale zichtbaarheid;
+- maak onderscheid tussen content die snel live kan en content die later pas logisch is;
+- zet `onbekend` waar de auditinput niet genoeg detail geeft.
+
+Werk de gaten uit langs deze tabel:
+| Gap | Pijler | Kanaal | Impact | Snelheid | Aanbevolen actie |
+
+Definieer:
+- `Impact`: `hoog`, `middel`, `laag`
+- `Snelheid`: `snel`, `middel`, `traag`
+
+Rangschik eerst de gaten die het meeste effect hebben op zichtbaarheid, relevantie of klikintentie.
+
+Sluit af met deze secties:
+## Topprioriteiten
+## Quick wins
+## Direct publiceerbaar
+## Later
+
+## Verwachte output
+- Korte metadata-echo
+- De gevraagde gap-tabel
+- De vier afsluitende secties in bovenstaande volgorde
+- Alleen aanbevelingen die uit de audits volgen
+
+## Klaarcheck
+- Ik heb de contentgaten geordend op impact en snelheid.
+- Ik heb de Limburg-brede context gebruikt.
+- Ik heb `airco` en `thuisbatterijen` gescheiden gehouden waar nodig.
+- Ik heb de output direct publiceerbaar of planbaar gemaakt.
