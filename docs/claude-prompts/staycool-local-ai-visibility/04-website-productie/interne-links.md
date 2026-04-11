@@ -47,19 +47,20 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Gebruik daarna exact deze tabel:
-| Bronpagina | Doelpagina | Pijler | Crossover | Anchor | Publishing surface bron | Publishing surface doel | Waarom |
+| Bronpagina | Bron pijler | Doelpagina | Doel pijler | Linkrelatie | Anchor | Publishing surface bron | Publishing surface doel | Waarom |
 
 Vereisten voor de tabel:
 - geef per relevante link een eigen rij;
-- vul per rij altijd `Pijler` en `Crossover` in;
+- vul per rij altijd `Bron pijler`, `Doel pijler` en `Linkrelatie` in;
 - gebruik deze waarden in elke modus:
-  - `Pijler`: `airco`, `thuisbatterij`
-  - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
-- `Gedeelde asset`: hetzelfde kernasset of dezelfde content bedient beide pijlers zonder pillar-specifieke rewrite.
-- `Crossover asset`: een pijler-eigen asset dat bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
-- `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een enkele gedeelde rij is niet geldig.
+  - `Bron pijler`: `airco`, `thuisbatterij`
+  - `Doel pijler`: `airco`, `thuisbatterij`
+  - `Linkrelatie`: `same-pillar`, `cross-pillar`, `shared-support`
+- `same-pillar`: bron en doel horen bij dezelfde pijler;
+- `cross-pillar`: bron en doel horen bij verschillende pijlers;
+- `shared-support`: de link ondersteunt een gedeelde of pijler-overstijgende context, maar blijft één canonieke linkplaatsing;
 - laat deze waarden niet leeg en gebruik geen andere labels;
-- als een shared/crossover link voorkomt, houd het op één canonieke rij per unieke combinatie van bronpagina, doelpagina en anchor; gebruik `Pijler` voor de primaire eigenaar/context en `Crossover` om aan te geven dat de link ook de andere pijler ondersteunt.
+- houd het bij shared of crossover context op één canonieke rij per unieke combinatie van bronpagina, doelpagina en anchor; gebruik `Bron pijler`, `Doel pijler` en `Linkrelatie` om de relatie eenduidig te maken.
 - gebruik alleen bron- en doelpagina's die passen bij een expliciet benoemde publishing surface uit de site-structuur;
 - maak het waarom concreet: attribuut, intentie of regionale match;
 - noteer onzekerheden met `onbekend` als de broninput tekortschiet.
@@ -78,7 +79,7 @@ Sluit af met deze secties:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Bronpagina | Doelpagina | Pijler | Crossover | Anchor | Publishing surface bron | Publishing surface doel | Waarom |`
+- Exact de tabel `| Bronpagina | Bron pijler | Doelpagina | Doel pijler | Linkrelatie | Anchor | Publishing surface bron | Publishing surface doel | Waarom |`
 - Een praktische interne-linkmap voor redactie of CMS
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - De standaard afsluitende secties

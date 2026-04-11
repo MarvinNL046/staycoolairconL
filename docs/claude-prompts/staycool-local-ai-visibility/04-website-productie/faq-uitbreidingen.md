@@ -86,12 +86,13 @@ Vereisten voor publiceerbaarheid:
 
 Vast publiceerbaar FAQ-blok:
 ### Publiceerbaar FAQ-blok
-| FAQ-set | FAQ-Groep-ID | FAQ-Rij-ID's | Pijler | Crossover | Concrete target page / route | Publishing surface | Indexed / noindex | CMS-ready opmerking |
+| FAQ-set | FAQ-Groep-ID | FAQ-Rij-ID's | Pijler | Crossover | Concrete target page / route | Publishing surface | Indexed / noindex | FAQ-items in volgorde | CMS-ready opmerking |
 
 - vul deze sectie altijd in, ook als de tabel al compleet is;
 - groepeer hier de FAQ's per publishing surface zodat de set direct in CMS kan worden overgenomen;
 - verwijs per set expliciet naar de canonieke `FAQ-Groep-ID` en bijbehorende `FAQ-Rij-ID`s uit de hoofdtafel;
 - neem per block-rij altijd dezelfde concrete target page / route over als in de bijbehorende canonieke FAQ-rijen;
+- neem in `FAQ-items in volgorde` de concrete `Vraag -> Kort antwoord`-paren op, in exact de volgorde van de genoemde `FAQ-Rij-ID`s;
 - als een FAQ-set voor beide pijlers werkt, label die hier als `Gedeelde asset` / `Crossover asset`.
 - in mixed mode blijft het publiceerbare blok per gedeelde set beperkt tot die twee rijen; gebruik nooit een derde variant of een paginafamilie als vervanging voor de concrete target.
 
@@ -108,7 +109,7 @@ Sluit af met deze secties:
 - 10 FAQ's per pijler waar relevant, met korte antwoorden
 - Schema-vriendelijke formuleringen
 - Een publiceerbaar FAQ-blok per pijler met verwijzing naar de canonieke `FAQ-Groep-ID` en `FAQ-Rij-ID`s
-- De vaste sectie `### Publiceerbaar FAQ-blok` met `| FAQ-set | FAQ-Groep-ID | FAQ-Rij-ID's | Pijler | Crossover | Concrete target page / route | Publishing surface | Indexed / noindex | CMS-ready opmerking |`
+- De vaste sectie `### Publiceerbaar FAQ-blok` met `| FAQ-set | FAQ-Groep-ID | FAQ-Rij-ID's | Pijler | Crossover | Concrete target page / route | Publishing surface | Indexed / noindex | FAQ-items in volgorde | CMS-ready opmerking |`
 - In mixed mode: de publiceerbare set wordt altijd als twee block-rijen uitgewerkt, met dezelfde `FAQ-Groep-ID`, dezelfde `FAQ-Rij-ID`-set en dezelfde surface per gedeelde set
 - De standaard afsluitende secties
 - `Klaarcheck`

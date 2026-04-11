@@ -53,7 +53,7 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna met deze tabel:
-| Concrete pagina / route | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | Nieuwe H1 | Slug-outcome | Publishing surface | Opmerking |
+| Huidige concrete pagina / route | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | Nieuwe H1 | Doelslug / slug-outcome | Publishing surface | Opmerking |
 
 Vereisten voor de tabel:
 - geef per pagina of route een eigen rij;
@@ -64,7 +64,7 @@ Vereisten voor de tabel:
 - noteer onzekerheid met `onbekend` in plaats van een aanname;
 - waar relevant mag je ook relevante snippet- of OG-varianten noemen in de opmerking.
 - metadata is per concrete pagina/route altijd één canonieke rij; dupliceer dezelfde URL nooit als tweede metadata-rij;
-- als een concrete pagina/route beide pijlers bedient, blijft de metadata toch één rij: `Pijler` geeft de primaire eigenaar/context aan en `Crossover` geeft aan dat de pagina ook de andere pijler ondersteunt;
+- als een huidige concrete pagina/route beide pijlers bedient, blijft de metadata toch één rij: `Pijler` geeft de primaire eigenaar/context aan en `Crossover` geeft aan dat de pagina ook de andere pijler ondersteunt;
 - vul per rij altijd `Pijler` en `Crossover` in;
 - gebruik deze waarden in elke modus:
   - `Pijler`: `airco`, `thuisbatterij`
@@ -76,7 +76,7 @@ Vereisten voor de tabel:
 - hou `Nieuwe title tag` compact, idealiter 45-60 tekens;
 - hou `Meta description` beknopt, idealiter 130-155 tekens;
 - hou `Nieuwe H1` kort en direct, idealiter 1 duidelijke zin of titelzin;
-- hou `Slug-outcome` deterministisch: geef exact de gewenste slug, of gebruik `ongewijzigd` als de slug niet hoeft te veranderen;
+- hou `Doelslug / slug-outcome` deterministisch: geef exact de gewenste doelslug, of gebruik `ongewijzigd` als de slug niet hoeft te veranderen;
 - maak alle velden direct CMS-bruikbaar, zonder extra uitleg of varianten in dezelfde rij.
 
 Vereisten voor mixed mode:
@@ -92,7 +92,7 @@ Sluit af met deze secties:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Concrete pagina / route | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | Nieuwe H1 | Slug-outcome | Publishing surface | Opmerking |`
+- Exact de tabel `| Huidige concrete pagina / route | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | Nieuwe H1 | Doelslug / slug-outcome | Publishing surface | Opmerking |`
 - Een compacte set metadata-aanpassingen die direct in CMS of briefing past
 - Title tags en meta descriptions binnen CMS-bruikbare lengte
 - Nieuwe H1 en slug-outcome als aparte, deterministische velden
