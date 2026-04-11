@@ -28,7 +28,7 @@ Werk evidence-first en gebruik alleen vragen die logisch volgen uit de audits, p
 Maak in de output de volgende hoeveelheden zichtbaar:
 - `airco-only`: 10 FAQ's voor airco
 - `thuisbatterij-only`: 10 FAQ's voor thuisbatterijen
-- `mixed`: exact 20 FAQ's totaal, bestaande uit 10 FAQ's voor airco en 10 FAQ's voor thuisbatterijen; een `Gedeelde asset` / `Crossover asset`-label telt binnen die 20 en komt niet erbovenop
+- `mixed`: exact 20 FAQ-rijen totaal in de hoofdtafel, bestaande uit 10 `airco`-rijen en 10 `thuisbatterij`-rijen; `Gedeelde asset` / `Crossover asset` mag binnen die 20 worden gebruikt, maar telt altijd als precies één van die 20 rijen en nooit erbovenop
 
 Lever de output als een publiceerbaar FAQ-blok op de website, niet als losse lijst zonder implementatiehouvast. Elke FAQ moet kunnen landen op een concrete target page, route family en indexability-keuze.
 
@@ -50,11 +50,12 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Gebruik daarna deze tabel:
-| Vraag | Pijler | Kort antwoord | Doelpagina / paginafamilie | Routefamilie / publicatiesurface | Indexed / noindex | Schema-geschikt | Waarom nu |
+| Vraag | Pijler | Crossover | Kort antwoord | Doelpagina / paginafamilie | Routefamilie / publicatiesurface | Indexed / noindex | Schema-geschikt | Waarom nu |
 
 Vereisten voor de tabel:
 - geef per relevante FAQ een eigen rij;
 - in `mixed` mode splits je airco en thuisbatterijen zichtbaar uit;
+- in `mixed` mode vul je per rij altijd `Pijler` en `Crossover` in;
 - korte antwoorden blijven compact en direct publiceerbaar;
 - markeer een antwoord als schema-geschikt als het zonder bewerking in FAQ schema kan landen;
 - wijs elke FAQ toe aan een target page of page family;
@@ -70,7 +71,7 @@ Vereisten voor publiceerbaarheid:
 
 Vast publiceerbaar FAQ-blok:
 ### Publiceerbaar FAQ-blok
-| Pijler | Publicatiesurface | Indexed / noindex | FAQ-set | CMS-ready opmerking |
+| Pijler | Crossover | Publicatiesurface | Indexed / noindex | FAQ-set | CMS-ready opmerking |
 
 - vul deze sectie altijd in, ook als de tabel al compleet is;
 - groepeer hier de FAQ's per publicatiesurface zodat de set direct in CMS kan worden overgenomen;

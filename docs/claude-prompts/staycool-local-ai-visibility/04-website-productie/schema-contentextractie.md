@@ -52,20 +52,21 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 
 Gebruik daarna deze vier secties in vaste volgorde:
 ### FAQ input
-| Bronpagina | Vraag | Kort antwoord | Publishing surface | Onderbouwing | Opmerking |
+| Bronpagina | Vraag | Pijler | Crossover | Kort antwoord | Publishing surface | Onderbouwing | Opmerking |
 
 ### Service schema input
-| Bronpagina | Service | Beschrijving | Publishing surface | Service area | Opmerking |
+| Bronpagina | Service | Pijler | Crossover | Beschrijving | Publishing surface | Service area | Opmerking |
 
 ### LocalBusiness relevante velden
-| Veld | Waarde | Bron | Publishing surface | Betrouwbaarheid |
+| Veld | Waarde | Pijler | Crossover | Bron | Publishing surface | Betrouwbaarheid |
 
 ### Review/case snippets
-| Bron | Snippet | Gebruik | Publishing surface | Opmerking |
+| Bron | Snippet | Pijler | Crossover | Gebruik | Publishing surface | Opmerking |
 
 Vereisten voor de extractie:
 - geef per bruikbaar item een eigen rij;
 - in `mixed` mode splits je airco en thuisbatterij zichtbaar uit;
+- in `mixed` mode vul je per rij altijd `Pijler` en `Crossover` in;
 - gebruik alleen extracties die direct uit de input volgen;
 - markeer ontbrekende of zwakke onderbouwing met `onbekend`;
 - maak de output geschikt voor redactie, schema-invoer of contentbriefing;

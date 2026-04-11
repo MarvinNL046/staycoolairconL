@@ -52,11 +52,13 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna uitsluitend met deze tabel:
-| Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Indexed / noindex | Crossover | Waarom nu |
+| Vraag / Titel | Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Indexed / noindex | Crossover | Waarom nu |
 
 Vereisten voor de tabel:
 - geef per attribuut een eigen rij;
 - in `mixed` mode splits je airco en thuisbatterij zichtbaar uit;
+- gebruik een expliciete `Vraag / Titel`-kolom zodat de vraag en het titelidee in één briefbare rij staan;
+- geef per attribuut een eigen rij;
 - gebruik alleen attributen die terug te voeren zijn op de input of de bestaande site-structuur;
 - noem de aanbevolen URL alleen als die logisch past binnen de huidige routes;
 - maak het onderscheid tussen indexed content en support/noindex expliciet in de tabel;
@@ -81,7 +83,7 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Indexed / noindex | Crossover | Waarom nu |`
+- Exact de tabel `| Vraag / Titel | Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Indexed / noindex | Crossover | Waarom nu |`
 - Een concrete set vraag-naar-antwoord attributepagina's
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - De standaard afsluitende secties

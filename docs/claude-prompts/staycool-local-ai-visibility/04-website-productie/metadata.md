@@ -52,11 +52,12 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna met deze tabel:
-| Pagina of surface | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | H1 / slug-check | Opmerking |
+| Concrete pagina / route | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | H1 / slug-check | Publishing surface | Opmerking |
 
 Vereisten voor de tabel:
-- geef per pagina of surface een eigen rij;
+- geef per pagina of route een eigen rij;
 - in `mixed` mode splits je airco en thuisbatterij zichtbaar uit;
+- de primaire target moet een concrete pagina of route zijn die de operator kan aanpassen;
 - koppel elk voorstel aan een concrete publishing surface uit de site-structuur;
 - gebruik geen vage clusterterminologie zonder surface;
 - gebruik enkel metadata die past bij de echte inhoud en zoekintentie;
@@ -77,7 +78,7 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Pagina of surface | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | H1 / slug-check | Opmerking |`
+- Exact de tabel `| Concrete pagina / route | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | H1 / slug-check | Publishing surface | Opmerking |`
 - Een compacte set metadata-aanpassingen die direct in CMS of briefing past
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - Een expliciete `Gedeelde asset` / `Crossover asset`-scheiding waar passend in mixed mode
