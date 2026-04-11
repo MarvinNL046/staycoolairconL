@@ -12,6 +12,9 @@ Gebruik deze prompt wanneer je keyworddata wilt koppelen aan ontbrekende attribu
 - `00-context/limburg-brede-focus.md`
 - `00-context/bestaande-site-structuur.md`
 - recente Ahrefs- en GSC-export of querylijst
+- Exportdatum
+- Lookback window
+- Source/account
 - Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
 - Relevante pijlercontext:
   - `airco-only` -> `00-context/airco-pijler.md`
@@ -58,6 +61,7 @@ Voeg daarnaast een korte begeleidende sectie toe met:
 - `semantische details` per zoekvraag.
 
 ## Verwachte output
+- Echo van de exportmetadata: `Exportdatum`, `Lookback window`, `Source/account`
 - Een prioriteitstabel met de gevraagde kolommen voor de gekozen modus.
 - Een begeleidende sectie met `ontbrekende woorden` en `semantische details` voor de gekozen modus.
 - Een apart blok voor de gekozen pijler of pijlers.

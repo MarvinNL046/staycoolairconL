@@ -19,7 +19,7 @@ Gebruik deze prompt wanneer je de categoriepositie in Google Maps wilt vergelijk
   - `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
 - Competitor GBP-URL(s)
-- Target zoektermen passend bij de gekozen modus
+- Gebruik de aangeleverde `Target zoektermen` passend bij de gekozen modus
 - Screenshots of gekopieerde Google Maps- en GBP-observaties
 - Vastgelegde zoekdatum en gebruikte locatie-instelling
 
