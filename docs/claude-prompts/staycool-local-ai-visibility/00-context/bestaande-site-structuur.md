@@ -1,5 +1,7 @@
 # Bestaande Site-Structuur
 
+## Bestaande site-structuur
+
 ## Hoofdstructuur
 - Home
 - Productpagina's en merkpagina's
