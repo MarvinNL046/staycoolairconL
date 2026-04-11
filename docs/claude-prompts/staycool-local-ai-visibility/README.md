@@ -1,12 +1,14 @@
 # StayCool Local AI Visibility Prompt Library
 
-## Purpose
+Deze bibliotheek is gemaakt voor StayCool Airco en gebruik in Claude in Chrome.
+
+## Doel
 - klassieke local SEO versterken;
 - AI attribute match versterken;
 - GBP, reviews en websitecontent op elkaar afstemmen;
 - direct bruikbare output genereren in het Nederlands.
 
-## Structure
+## Structuur
 - `00-context`: vaste StayCool context
 - `01-audits`: analyseprompts
 - `02-prioritering`: beslisprompts
@@ -15,7 +17,7 @@
 - `05-executie-routines`: terugkerende workflows
 - `06-master-prompts`: samengestelde operatorprompts
 
-## Usage
+## Gebruik
 1. Laad eerst relevante contextbestanden.
 2. Run daarna een auditprompt.
 3. Zet de audit om naar prioriteiten.
