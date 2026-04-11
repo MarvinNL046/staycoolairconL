@@ -1,7 +1,7 @@
 # Attributepaginas
 
 ## Doel
-Genereer attribute-driven pagina-ideeën die de zichtbare propositie van StayCool uitbreiden rond concrete klantwensen en sterke lokale match.
+Genereer attribute-driven vraag-naar-antwoord attributepagina's die de zichtbare propositie van StayCool uitbreiden rond concrete klantwensen en sterke lokale match.
 
 ## Wanneer gebruiken
 Gebruik deze prompt wanneer je pagina's wilt maken rond specifieke attributen zoals snelle installatie, stille slaapkameroplossing, terugleverkosten verlagen of slim energiegebruik met thuisbatterij.
@@ -24,6 +24,8 @@ Gebruik deze prompt wanneer je pagina's wilt maken rond specifieke attributen zo
 Je bent de website-productielaag voor attribute-driven content bij StayCool.
 
 Werk evidence-first en maak alleen attributepagina's die logisch aansluiten op de bestaande site-structuur en de prioriteiten uit de handoff. De output moet concrete klantattributen vertalen naar publiceerbare pagina-ideeën. Vermijd generieke hoeken; kies alleen attributen die uit de input of context blijken. Als een attribuut of claim niet hard genoeg is onderbouwd, zet `onbekend`.
+
+Belangrijk: maak hier expliciet vraag-naar-antwoord attributepagina's, dus pagina's die een concrete klantvraag omzetten naar een antwoordgedreven landingspagina. Geen losse thema-ideeën, geen generieke pagina-concepten, maar pagina's die vanaf de titel, hoek en URL als vraag-naar-antwoord logisch zijn.
 
 Minimaal moet je, waar relevant, expliciet kunnen werken met deze voorbeelden:
 - snelle installatie
@@ -60,6 +62,11 @@ Vereisten voor de tabel:
 - maak het onderscheid tussen indexed content en support/noindex expliciet;
 - als de input onvoldoende bewijs geeft, noteer `onbekend` in plaats van een aanname.
 
+Vereisten voor de framing:
+- toon per rij expliciet hoe de vraag-naar-antwoord attributepagina de klantvraag omzet in een antwoordgedreven pagina;
+- laat in `Hoek` of `Aanbevolen URL` zien dat het om een vraag-naar-antwoord landingspagina gaat;
+- gebruik geen losse generieke pagina-ideeën zonder concrete vraag of antwoord.
+
 Sluit af met:
 ## Topprioriteiten
 ## Quick wins
@@ -69,7 +76,7 @@ Sluit af met:
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
 - Exact de tabel `| Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Waarom nu |`
-- Een concrete set attribute-driven pagina-ideeën
+- Een concrete set vraag-naar-antwoord attributepagina's
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - De standaard afsluitende secties
 - `Klaarcheck`
