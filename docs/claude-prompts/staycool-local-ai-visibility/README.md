@@ -19,5 +19,5 @@
 1. Laad eerst de relevante contextbestanden uit `00-context`.
 2. Run daarna de passende auditprompt uit `01-audits`.
 3. Vertaal de auditresultaten naar prioriteiten met `02-prioritering`.
-4. Gebruik de productieprompts om GBP- of websitecopy te maken.
-5. Gebruik de executieroutines om de bibliotheek actueel te houden.
+4. Gebruik productieprompts om copy of backlog te maken.
+5. Gebruik executieroutines voor onderhoud.
