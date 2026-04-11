@@ -58,9 +58,9 @@ Vereisten voor de tabel:
   - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
 - `Gedeelde asset`: hetzelfde kernasset of dezelfde content bedient beide pijlers zonder pillar-specifieke rewrite.
 - `Crossover asset`: een pijler-eigen asset dat bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
-- `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een enkele gedeelde rij is niet geldig.
+- `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; voor een bestaande gedeelde pagina kies je de primaire eigenaar/context en gebruik je geen tweede refresh-rij voor dezelfde URL.
 - laat deze waarden niet leeg en gebruik geen andere labels;
-- als een shared/crossover item voorkomt, geef het altijd als twee canonieke rijen met hetzelfde `Asset-ID`: één met `Pijler = airco` en één met `Pijler = thuisbatterij`; beide rijen gebruiken dezelfde concrete pagina/route, dezelfde surface en dezelfde target.
+- houd refreshwerk altijd op één canonieke rij per bestaande concrete pagina/route; gebruik `Pijler` voor de primaire eigenaar/context en `Crossover` om aan te geven dat de pagina ook de andere pijler ondersteunt.
 - de primaire target moet een concrete pagina of route zijn die de operator kan aanpassen;
 - benoem per rij wat de kleinste bruikbare refresh is;
 - maak de interne linkkans concreet, niet algemeen;

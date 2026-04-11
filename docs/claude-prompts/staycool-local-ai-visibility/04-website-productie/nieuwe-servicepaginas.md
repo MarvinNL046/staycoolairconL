@@ -55,7 +55,7 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna uitsluitend met deze tabel:
-| Asset-ID | Titel | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |
+| Asset-ID | Titel | Pijler | Zoekintentie | Hoek | Concrete eindroute | Publishing surface | Indexed / noindex | Crossover | Waarom nu |
 
 Vereisten voor de tabel:
 - geef per relevant voorstel een eigen rij;
@@ -63,6 +63,7 @@ Vereisten voor de tabel:
 - koppel elk voorstel aan een concrete publishing surface uit de site-structuur;
 - gebruik geen vage clusterterminologie zonder surface;
 - gebruik Limburg-brede relevantie waar dat past;
+- vul `Concrete eindroute` altijd met een concrete beoogde eindroute in, niet met een family, patroon of losse surface;
 - maak expliciet of het voorstel bedoeld is voor indexed content of support/noindex;
 - selecteer alleen voorstellen die direct terug te voeren zijn op de audits, de prioritering of de bestaande site-structuur.
 - vul per rij altijd `Pijler` en `Crossover` in;
@@ -90,7 +91,7 @@ Sluit af met deze secties:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Asset-ID | Titel | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |`
+- Exact de tabel `| Asset-ID | Titel | Pijler | Zoekintentie | Hoek | Concrete eindroute | Publishing surface | Indexed / noindex | Crossover | Waarom nu |`
 - Een korte, concrete rangorde van de beste nieuwe servicepagina's
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - Een expliciete `Gedeelde asset` / `Crossover asset`-labeling waar passend in mixed mode

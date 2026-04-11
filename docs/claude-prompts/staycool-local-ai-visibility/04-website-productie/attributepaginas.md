@@ -41,7 +41,7 @@ Volg deze regels:
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt;
 - laat elk voorstel landen op een herkenbare publishing surface;
-- koppel voorstellen aan bestaande routes of benoemde site families;
+- koppel voorstellen altijd aan een concrete beoogde eindroute; gebruik een benoemde site family alleen als context in de surface-kolom, nooit als vervanging voor de route;
 - maak zichtbaar waarom het attribuut nu belangrijk is;
 - sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later` en `Klaarcheck`.
 
@@ -53,7 +53,7 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna uitsluitend met deze tabel:
-| Asset-ID | Vraag / Titel | Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |
+| Asset-ID | Vraag / Titel | Attribuut | Pijler | Zoekintentie | Hoek | Concrete eindroute | Publishing surface | Indexed / noindex | Crossover | Waarom nu |
 
 Vereisten voor de tabel:
 - geef per attribuut een eigen rij;
@@ -62,7 +62,7 @@ Vereisten voor de tabel:
 - geef per attribuut een eigen rij;
 - geef elk deliverable een stabiel `Asset-ID`;
 - gebruik alleen attributen die terug te voeren zijn op de input of de bestaande site-structuur;
-- noem de aanbevolen URL alleen als die logisch past binnen de huidige routes;
+- vul `Concrete eindroute` altijd met een concrete beoogde eindroute in die logisch past binnen de huidige routes;
 - maak het onderscheid tussen indexed content en support/noindex expliciet in de tabel;
 - als de input onvoldoende bewijs geeft, noteer `onbekend` in plaats van een aanname.
 - vul per rij altijd `Pijler` en `Crossover` in;
@@ -77,7 +77,7 @@ Vereisten voor de tabel:
 
 Vereisten voor de framing:
 - toon per rij expliciet hoe de vraag-naar-antwoord attributepagina de klantvraag omzet in een antwoordgedreven pagina;
-- laat in `Hoek` of `Aanbevolen URL` zien dat het om een vraag-naar-antwoord landingspagina gaat;
+- laat in `Hoek` of `Concrete eindroute` zien dat het om een vraag-naar-antwoord landingspagina gaat;
 - gebruik geen losse generieke pagina-ideeën zonder concrete vraag of antwoord.
 
 Vereisten voor surface- en crossover-normalisatie:
@@ -95,7 +95,7 @@ Sluit af met deze secties:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Asset-ID | Vraag / Titel | Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |`
+- Exact de tabel `| Asset-ID | Vraag / Titel | Attribuut | Pijler | Zoekintentie | Hoek | Concrete eindroute | Publishing surface | Indexed / noindex | Crossover | Waarom nu |`
 - Een concrete set vraag-naar-antwoord attributepagina's
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - De standaard afsluitende secties
