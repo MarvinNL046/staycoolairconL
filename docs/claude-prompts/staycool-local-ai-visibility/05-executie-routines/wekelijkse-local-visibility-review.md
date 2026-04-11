@@ -7,9 +7,14 @@ Voer een wekelijkse operator-review uit op local visibility voor StayCool, met f
 Gebruik deze prompt elke week om de actuele stand van zaken snel te beoordelen en te vertalen naar concrete acties.
 
 ## Vereiste input
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
+- Modusmapping:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 - Relevante pijlercontext op basis van de scope
 - Laatste GBP-, review-, website- of contentstatus
 - Vorige week output of referentiepunt
@@ -31,6 +36,7 @@ Volg deze regels:
 - maak actiepunten uitvoerbaar voor een operator.
 
 Begin met een korte metadata-echo met deze vaste velden:
+- `Modus`
 - `Week`
 - `Broncontext`
 - `Gebruikte input`
@@ -38,7 +44,16 @@ Begin met een korte metadata-echo met deze vaste velden:
 - `Handoff bron`
 
 Gebruik daarna exact deze tabel:
-| Onderdeel | Status | Verandering sinds vorige week | Actie |
+| Onderdeel | Pijler | Status | Verandering sinds vorige week | Actie |
+
+Mixed-mode regel:
+- in `mixed` maak je per onderdeel twee rijen als de status per pijler verschilt;
+- als de status gelijk is voor beide pijlers, gebruik één rij met `Pijler = gedeeld`;
+- in single-pillar mode gebruik je alleen `airco` of `thuisbatterij`.
+
+Operationele waarden:
+- `Pijler`: `airco`, `thuisbatterij`, `gedeeld`
+- `Status`: `groen`, `geel`, `rood`, `onbekend`
 
 Beoordeel minimaal deze onderdelen:
 - GBP zichtbaarheid
@@ -58,7 +73,7 @@ Sluit af met exact deze secties, in deze volgorde:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Onderdeel | Status | Verandering sinds vorige week | Actie |`
+- Exact de tabel `| Onderdeel | Pijler | Status | Verandering sinds vorige week | Actie |`
 - Korte, concrete observaties per pijler
 - Een operator-ready prioritering zonder herhaling
 - De vaste afsluitsecties in de juiste volgorde

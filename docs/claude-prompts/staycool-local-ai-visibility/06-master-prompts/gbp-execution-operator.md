@@ -7,9 +7,14 @@ Zet GBP-werk voor StayCool om in een uitvoerbare operatorflow voor descriptions,
 Gebruik deze prompt wanneer GBP-uitvoering moet worden gepland of aangestuurd op basis van audits en prioriteiten.
 
 ## Vereiste input
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
+- Modusmapping:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 - Relevante pijlercontext
 - Relevante GBP-audits en prioritering
 - Eventuele bestaande GBP-copy, posts, reviewconcepten of foto-opvolging
@@ -28,6 +33,7 @@ Volg deze regels:
 - maak duidelijk wat direct publiceerbaar is en wat nog input mist.
 
 Begin met een korte metadata-echo met deze vaste velden:
+- `Modus`
 - `Kanaalmix`
 - `Broncontext`
 - `Gebruikte input`
@@ -36,6 +42,16 @@ Begin met een korte metadata-echo met deze vaste velden:
 
 Gebruik daarna exact deze tabel:
 | Taak | Kanaal | Pijler | Input | Actie | Status |
+
+Operationele waarden:
+- `Pijler`: `airco`, `thuisbatterij`, `gedeeld`
+- `Status`: `direct`, `blocked`, `needs-input`, `onbekend`
+- `Kanaal`: `GBP description`, `services`, `posts`, `review`, `Q&A`, `foto`, `onbekend`
+
+Mixed-mode regel:
+- gebruik `airco` of `thuisbatterij` per taak wanneer die taak pijlerspecifiek is;
+- gebruik `gedeeld` alleen voor taken die beide pijlers zonder rewrite bedienen;
+- in single-pillar mode gebruik je alleen de actieve pijler.
 
 Werk minimaal uit:
 - GBP descriptions

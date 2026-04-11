@@ -7,10 +7,15 @@ Breng elk kwartaal de contentgaten van StayCool in kaart en vertaal ze naar een 
 Gebruik deze prompt elk kwartaal om de contentdekking opnieuw te toetsen aan audits, concurrerende patronen en site-structuur.
 
 ## Vereiste input
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
 - `00-context/bestaande-site-structuur.md`
+- Modusmapping:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 - Relevante pijlercontext
 - Audits over keyword gap, attribute coverage of service coverage
 - Competitor- of SERP-patronen
@@ -32,6 +37,7 @@ Volg deze regels:
 - koppel kansen aan publiceerbaarheid en prioriteit.
 
 Begin met een korte metadata-echo met deze vaste velden:
+- `Modus`
 - `Kwartaal`
 - `Broncontext`
 - `Gebruikte input`
@@ -40,6 +46,15 @@ Begin met een korte metadata-echo met deze vaste velden:
 
 Gebruik daarna exact deze tabel:
 | Gap | Pijler | Zoekintentie | Huidige dekking | Prioriteit | Actie |
+
+Operationele waarden:
+- `Pijler`: `airco`, `thuisbatterij`, `gedeeld`
+- `Prioriteit`: `hoog`, `middel`, `laag`, `onbekend`
+
+Mixed-mode regel:
+- gebruik `gedeeld` alleen als een gap zonder rewrite beide pijlers bedient;
+- anders maak je per pijler een aparte rij;
+- in single-pillar mode gebruik je alleen de actieve pijler.
 
 Werk minimaal uit:
 - ontbrekende service- of supportonderwerpen

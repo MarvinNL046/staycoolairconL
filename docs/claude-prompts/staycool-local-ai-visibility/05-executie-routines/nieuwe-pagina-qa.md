@@ -7,10 +7,15 @@ Controleer nieuwe pagina's of pagina-ontwerpen van StayCool op inhoud, structuur
 Gebruik deze prompt zodra een nieuwe pagina, landingspagina of contentblok klaar is voor kwaliteitscontrole.
 
 ## Vereiste input
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
 - `00-context/bestaande-site-structuur.md`
+- Modusmapping:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 - Relevante pijlercontext
 - Nieuwe pagina-copy, outline of draft
 - Eventuele metadata, FAQ's, schema-input of interne-linkvoorstellen
@@ -31,6 +36,7 @@ Volg deze regels:
 - markeer risico's, hiaten en fixpunten kort.
 
 Begin met een korte metadata-echo met deze vaste velden:
+- `Modus`
 - `Pagina`
 - `Broncontext`
 - `Gebruikte input`
@@ -38,7 +44,16 @@ Begin met een korte metadata-echo met deze vaste velden:
 - `Handoff bron`
 
 Gebruik daarna exact deze tabel:
-| Check | Status | Bevinding | Actie |
+| Check | Pijler | Status | Bevinding | Actie |
+
+Operationele waarden:
+- `Pijler`: `airco`, `thuisbatterij`, `gedeeld`
+- `Status`: `ok`, `fixen`, `blocker`, `onbekend`
+
+Mixed-mode regel:
+- gebruik `airco` of `thuisbatterij` per specifieke bevinding;
+- gebruik `gedeeld` alleen voor checks die beide pijlers exact gelijk raken;
+- in single-pillar mode gebruik je alleen de actieve pijler.
 
 Beoordeel minimaal:
 - pijlerfit
@@ -58,7 +73,7 @@ Sluit af met exact deze secties, in deze volgorde:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Check | Status | Bevinding | Actie |`
+- Exact de tabel `| Check | Pijler | Status | Bevinding | Actie |`
 - Een korte QA-conclusie per pijler of pagina
 - Concrete fixpunten voor redactie of CMS
 - De vaste afsluitsecties in de juiste volgorde

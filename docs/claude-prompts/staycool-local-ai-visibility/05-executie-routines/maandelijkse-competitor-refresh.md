@@ -7,9 +7,14 @@ Werk de concurrentie- en map-pack-benchmarks van StayCool maandelijks bij en ver
 Gebruik deze prompt elke maand wanneer concurrenten, rankings of lokale SERP-patronen opnieuw bekeken moeten worden.
 
 ## Vereiste input
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
+- Modusmapping:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 - Relevante pijlercontext
 - Huidige concurrentenlijst
 - Recente audit- of SERP-notities
@@ -31,6 +36,7 @@ Volg deze regels:
 - maak duidelijk wat een echte bedreiging, kans of ruis is.
 
 Begin met een korte metadata-echo met deze vaste velden:
+- `Modus`
 - `Maand`
 - `Broncontext`
 - `Gebruikte input`
@@ -38,7 +44,16 @@ Begin met een korte metadata-echo met deze vaste velden:
 - `Handoff bron`
 
 Gebruik daarna exact deze tabel:
-| Concurrent | Focus | Signaal | Verandering | Impact | Actie |
+| Concurrent | Pijler | Focus | Signaal | Verandering | Impact | Actie |
+
+Mixed-mode regel:
+- in `mixed` gebruik je voor elke concurrent een expliciete `Pijler`-rij per pijler als het signaal afwijkt;
+- als het signaal en de actie voor beide pijlers hetzelfde zijn, mag `Pijler = gedeeld`;
+- in single-pillar mode gebruik je alleen `airco` of `thuisbatterij`.
+
+Operationele waarden:
+- `Pijler`: `airco`, `thuisbatterij`, `gedeeld`
+- `Impact`: `hoog`, `middel`, `laag`, `onbekend`
 
 Werk per concurrent minimaal uit:
 - zichtbaarheid of map-pack signaal
@@ -55,7 +70,7 @@ Sluit af met exact deze secties, in deze volgorde:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Concurrent | Focus | Signaal | Verandering | Impact | Actie |`
+- Exact de tabel `| Concurrent | Pijler | Focus | Signaal | Verandering | Impact | Actie |`
 - Een korte samenvatting van de belangrijkste competitieve verschuivingen
 - Een concrete actielijst per pijler
 - De vaste afsluitsecties in de juiste volgorde

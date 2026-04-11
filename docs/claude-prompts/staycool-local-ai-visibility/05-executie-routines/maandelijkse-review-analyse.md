@@ -7,9 +7,14 @@ Analyseer de maandelijkse reviewstroom van StayCool en vertaal patronen naar ver
 Gebruik deze prompt elke maand om reviewpatronen, thema's en responsekansen te beoordelen.
 
 ## Vereiste input
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
+- Modusmapping:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 - Relevante pijlercontext
 - Reviewexport of reviewset van de afgelopen maand
 - Eventuele review-responsecopy of review-asks
@@ -31,6 +36,7 @@ Volg deze regels:
 - geef geen losstaande marketingpraat.
 
 Begin met een korte metadata-echo met deze vaste velden:
+- `Modus`
 - `Maand`
 - `Broncontext`
 - `Gebruikte input`
@@ -39,6 +45,16 @@ Begin met een korte metadata-echo met deze vaste velden:
 
 Gebruik daarna exact deze tabel:
 | Thema | Pijler | Observatie | Frequentie | Kans | Actie |
+
+Operationele waarden:
+- `Pijler`: `airco`, `thuisbatterij`, `gedeeld`
+- `Frequentie`: `hoog`, `middel`, `laag`, `onbekend`
+- `Kans`: `hoog`, `middel`, `laag`, `onbekend`
+
+Mixed-mode regel:
+- label elk thema aan de dominante pijler;
+- als een thema beide pijlers even sterk raakt, gebruik `Pijler = gedeeld`;
+- in single-pillar mode gebruik je alleen de actieve pijler.
 
 Analyseer minimaal:
 - compliment-thema's
