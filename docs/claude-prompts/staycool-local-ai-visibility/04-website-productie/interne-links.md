@@ -47,7 +47,7 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Gebruik daarna exact deze tabel:
-| Bron concrete pagina / route | Bron Asset-ID | Bron pijler | Doel concrete pagina / route | Doel Asset-ID | Doel pijler | Linkrelatie | Plaatsingsstatus | Anchor | Publishing surface bron | Publishing surface doel | Waarom |
+| Bron concrete pagina / route | Bron referentie-ID | Bron pijler | Doel concrete pagina / route | Doel referentie-ID | Doel pijler | Linkrelatie | Plaatsingsstatus | Anchor | Publishing surface bron | Publishing surface doel | Waarom |
 
 Vereisten voor de tabel:
 - geef per relevante link een eigen rij;
@@ -55,15 +55,15 @@ Vereisten voor de tabel:
 - gebruik deze waarden in elke modus:
   - `Bron pijler`: `airco`, `thuisbatterij`
   - `Doel pijler`: `airco`, `thuisbatterij`
-  - `Linkrelatie`: `same-pillar`, `cross-pillar`, `shared-support`
+- `Linkrelatie`: `same-pillar`, `cross-pillar`, `shared-support`
   - `Plaatsingsstatus`: `direct plaatsbaar`, `wacht op bronpagina`, `wacht op doelpagina`, `wacht op beide`
 - vul `Bron concrete pagina / route` en `Doel concrete pagina / route` altijd met een concrete bestaande of beoogde eindroute;
-- vul `Bron Asset-ID` en `Doel Asset-ID` in als de bron of het doel uit een andere Task 6-deliverable komt; gebruik anders `n.v.t.`;
-- hergebruik `Bron Asset-ID` en `Doel Asset-ID` exact zoals ze in de upstream Task 6-output staan; maak geen nieuwe varianten voor hetzelfde deliverable;
+- vul `Bron referentie-ID` en `Doel referentie-ID` in als de bron of het doel uit een andere Task 6-deliverable komt; gebruik anders `n.v.t.`.
+- hergebruik referentie-ID's exact zoals ze in de upstream Task 6-output staan: gebruik `Asset-ID` voor pagina- en blokdeliverables, `FAQ-Groep-ID` of `FAQ-Rij-ID` voor FAQ-deliverables, en maak geen nieuwe varianten voor hetzelfde deliverable;
 - `same-pillar`: bron en doel horen bij dezelfde pijler;
 - `cross-pillar`: bron en doel horen bij verschillende pijlers;
 - `shared-support`: de link ondersteunt een gedeelde of pijler-overstijgende context, maar blijft één canonieke linkplaatsing;
-- als bron of doel uit een gedeeld/crossover deliverable komt, kies dan de canonieke upstream rij met `Pijler = airco` of `Pijler = thuisbatterij` en hergebruik precies de bijbehorende `Asset-ID`; gebruik geen derde pijlerwaarde;
+- als bron of doel uit een gedeeld/crossover deliverable komt, kies dan de canonieke upstream rij met `Pijler = airco` of `Pijler = thuisbatterij` en hergebruik precies de bijbehorende referentie-ID; gebruik geen derde pijlerwaarde;
 - laat deze waarden niet leeg en gebruik geen andere labels;
 - houd het bij shared of crossover context op één canonieke rij per unieke combinatie van bronroute, doelroute en anchor; gebruik `Bron pijler`, `Doel pijler` en `Linkrelatie` om de relatie eenduidig te maken.
 - vul per rij altijd `Plaatsingsstatus` in zodat redactie ziet of de link direct kan worden geplaatst of nog afhankelijk is van nieuwe content;
@@ -85,7 +85,7 @@ Sluit af met deze secties:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Bron concrete pagina / route | Bron Asset-ID | Bron pijler | Doel concrete pagina / route | Doel Asset-ID | Doel pijler | Linkrelatie | Plaatsingsstatus | Anchor | Publishing surface bron | Publishing surface doel | Waarom |`
+- Exact de tabel `| Bron concrete pagina / route | Bron referentie-ID | Bron pijler | Doel concrete pagina / route | Doel referentie-ID | Doel pijler | Linkrelatie | Plaatsingsstatus | Anchor | Publishing surface bron | Publishing surface doel | Waarom |`
 - Een praktische interne-linkmap voor redactie of CMS
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - De standaard afsluitende secties

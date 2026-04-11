@@ -56,6 +56,8 @@ Gebruik daarna deze tabel:
 Vereisten voor de tabel:
 - geef per relevante FAQ een eigen rij met een uniek `FAQ-Rij-ID`;
 - geef per onderliggend FAQ-asset of gedeelde set een stabiel `FAQ-Groep-ID`;
+- maak `FAQ-Groep-ID` deterministisch en route-gebaseerd: gebruik een lowercase kebab-id afgeleid van de concrete target page / route plus het onderliggende FAQ-thema; hergebruik exact dezelfde `FAQ-Groep-ID` als dezelfde set in een latere run terugkomt;
+- maak `FAQ-Rij-ID` deterministisch als `FAQ-Groep-ID` plus een vaste pijler- of volgorde-suffix; hergebruik exact dezelfde `FAQ-Rij-ID` als dezelfde canonieke FAQ-rij in een latere run terugkomt;
 - canonical rows hebben altijd een unieke `FAQ-Rij-ID`; rijen die bij dezelfde shared/crossover FAQ-set horen delen hetzelfde `FAQ-Groep-ID`;
 - vul per rij altijd `Pijler` en `Crossover` in;
 - gebruik deze waarden in elke modus:
