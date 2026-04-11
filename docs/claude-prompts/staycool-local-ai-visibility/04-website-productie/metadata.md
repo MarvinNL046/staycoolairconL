@@ -57,22 +57,22 @@ Werk daarna met deze tabel:
 
 Vereisten voor de tabel:
 - geef per pagina of route een eigen rij;
-- in `mixed` mode splits je airco en thuisbatterij zichtbaar uit;
 - de primaire target moet een concrete pagina of route zijn die de operator kan aanpassen;
 - koppel elk voorstel aan een concrete publishing surface uit de site-structuur;
 - gebruik geen vage clusterterminologie zonder surface;
 - gebruik enkel metadata die past bij de echte inhoud en zoekintentie;
 - noteer onzekerheid met `onbekend` in plaats van een aanname;
 - waar relevant mag je ook relevante snippet- of OG-varianten noemen in de opmerking.
-- vul per rij altijd `Pijler` in;
-- vul per rij altijd `Crossover` in met `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset` of `Crossover asset`.
+- metadata is per concrete pagina/route altijd één canonieke rij; dupliceer dezelfde URL nooit als tweede metadata-rij;
+- als een concrete pagina/route beide pijlers bedient, blijft de metadata toch één rij: `Pijler` geeft de primaire eigenaar/context aan en `Crossover` geeft aan dat de pagina ook de andere pijler ondersteunt;
+- vul per rij altijd `Pijler` en `Crossover` in;
 - gebruik deze waarden in elke modus:
   - `Pijler`: `airco`, `thuisbatterij`
   - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
 - `Gedeelde asset`: hetzelfde kernasset of dezelfde content bedient beide pijlers zonder pillar-specifieke rewrite.
 - `Crossover asset`: een pijler-eigen asset dat bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
 - `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; metadata voor een shared/crossover asset krijgt nooit een derde of vage pillarwaarde.
-- als metadata shared/crossover is, geef twee canonieke rijen: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen delen dezelfde surface en het passende `Crossover`-label.
+- als metadata shared/crossover is, gebruik nog steeds één canonieke rij per concrete URL; gebruik geen tweede metadata-rij voor dezelfde route.
 - hou `Nieuwe title tag` compact, idealiter 45-60 tekens;
 - hou `Meta description` beknopt, idealiter 130-155 tekens;
 - maak beide velden direct CMS-bruikbaar, zonder extra uitleg of varianten in dezelfde rij.

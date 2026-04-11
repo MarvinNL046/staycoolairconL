@@ -51,10 +51,10 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Gebruik daarna deze tabel:
-| Vraag | Pijler | Crossover | Kort antwoord | Doelpagina / paginafamilie | Routefamilie / publicatiesurface | Indexed / noindex | Schema-geschikt | Waarom nu |
+| FAQ-ID | Vraag | Pijler | Crossover | Kort antwoord | Doelpagina / paginafamilie | Routefamilie / publicatiesurface | Indexed / noindex | Schema-geschikt | Waarom nu |
 
 Vereisten voor de tabel:
-- geef per relevante FAQ een eigen rij;
+- geef per relevante FAQ een eigen rij met een uniek `FAQ-ID`;
 - vul per rij altijd `Pijler` en `Crossover` in;
 - gebruik deze waarden in elke modus:
   - `Pijler`: `airco`, `thuisbatterij`
@@ -66,6 +66,8 @@ Vereisten voor de tabel:
 - als een FAQ shared/crossover is, geef dan altijd twee canonieke rijen: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen dragen dezelfde publicatiesurface en het passende `Crossover`-label;
 - korte antwoorden blijven compact en direct publiceerbaar;
 - markeer een antwoord als schema-geschikt als het zonder bewerking in FAQ schema kan landen;
+- gebruik voor `Indexed / noindex` alleen `indexed` of `noindex`;
+- gebruik voor `Schema-geschikt` alleen `ja` of `nee`;
 - wijs elke FAQ toe aan een target page of page family;
 - wijs elke FAQ toe aan een route family / publishing surface;
 - geef expliciet aan of de plaatsing indexed of noindex is;
@@ -76,16 +78,16 @@ Vereisten voor publiceerbaarheid:
 - maak per pijler een publishable FAQ-blok dat direct in CMS of content kan worden ingezet;
 - gebruik in mixed mode waar passend een `Gedeelde asset` / `Crossover asset`-blok als de FAQ-set inhoudelijk voor beide pijlers werkt;
 - maak duidelijk welke vragen airco-only, thuisbatterij-only of crossover zijn.
-- als een FAQ-set shared/crossover is in mixed mode, reflecteer die dan in het publiceerbare blok als twee canonieke rijen: één `airco`, één `thuisbatterij`; de hoofdtafel blijft exact 20 rijen en de publiceerbare blokkering mag dezelfde 2-rij vertegenwoordiging gebruiken als handoff.
-- in mixed mode geldt: de hoofdtafel blijft exact 20 rijen, waarvan shared/crossover content altijd als 2 canonieke rijen meetelt; de publiceerbare blokkering mag dezelfde 2-rij vertegenwoordiging gebruiken als handoff, maar nooit een extra derde rij toevoegen.
-- de hoofdtafel is de canonieke telling; `### Publiceerbaar FAQ-blok` is alleen een handoff-laag en mag alleen dezelfde canonieke 2-rij vertegenwoordiging herhalen, nooit een extra of afwijkende shared rij toevoegen.
+- als een FAQ-set shared/crossover is, laat de hoofdtafel de canonieke FAQ-rijen zien met hun unieke `FAQ-ID`s en laat het publiceerbare blok diezelfde `FAQ-ID`s expliciet hergebruiken; de hoofdtafel blijft exact 20 rijen, waarvan shared/crossover content altijd als 2 canonieke rijen meetelt.
+- het publiceerbare blok is een handoff-laag: herhaal alleen de bestaande `FAQ-ID`s uit de hoofdtafel en voeg nooit nieuwe of afwijkende FAQ-rijen toe.
 
 Vast publiceerbaar FAQ-blok:
 ### Publiceerbaar FAQ-blok
-| Pijler | Crossover | Publicatiesurface | Indexed / noindex | FAQ-set | CMS-ready opmerking |
+| FAQ-set | FAQ-ID's | Pijler | Crossover | Publicatiesurface | Indexed / noindex | CMS-ready opmerking |
 
 - vul deze sectie altijd in, ook als de tabel al compleet is;
 - groepeer hier de FAQ's per publicatiesurface zodat de set direct in CMS kan worden overgenomen;
+- verwijs per set expliciet naar de canonieke `FAQ-ID`s uit de hoofdtafel;
 - als een FAQ-set voor beide pijlers werkt, label die hier als `Gedeelde asset` / `Crossover asset`.
 
 Sluit af met:
@@ -97,11 +99,11 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Vraag | Pijler | Crossover | Kort antwoord | Doelpagina / paginafamilie | Routefamilie / publicatiesurface | Indexed / noindex | Schema-geschikt | Waarom nu |`
+- Exact de tabel `| FAQ-ID | Vraag | Pijler | Crossover | Kort antwoord | Doelpagina / paginafamilie | Routefamilie / publicatiesurface | Indexed / noindex | Schema-geschikt | Waarom nu |`
 - 10 FAQ's per pijler waar relevant, met korte antwoorden
 - Schema-vriendelijke formuleringen
-- Een publiceerbaar FAQ-blok per pijler
-- De vaste sectie `### Publiceerbaar FAQ-blok` met `| Pijler | Crossover | Publicatiesurface | Indexed / noindex | FAQ-set | CMS-ready opmerking |`
+- Een publiceerbaar FAQ-blok per pijler met verwijzing naar de canonieke `FAQ-ID`s
+- De vaste sectie `### Publiceerbaar FAQ-blok` met `| FAQ-set | FAQ-ID's | Pijler | Crossover | Publicatiesurface | Indexed / noindex | CMS-ready opmerking |`
 - De standaard afsluitende secties
 - `Klaarcheck`
 

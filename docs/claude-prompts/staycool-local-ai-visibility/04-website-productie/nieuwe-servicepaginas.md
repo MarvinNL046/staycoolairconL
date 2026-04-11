@@ -73,6 +73,7 @@ Vereisten voor de tabel:
 - `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een gedeelde/crossover asset krijgt nooit een derde of vage pillarwaarde;
 - als een asset/copy shared is, geef dan altijd twee canonieke rijen: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen dragen dezelfde surface en het passende `Crossover`-label;
 - vul per rij altijd `Indexed / noindex` in;
+- gebruik voor `Indexed / noindex` alleen `indexed` of `noindex`;
 - vul per rij altijd `Crossover` in met `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset` of `Crossover asset`.
 
 Vereisten voor mixed mode:

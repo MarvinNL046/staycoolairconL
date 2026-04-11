@@ -72,6 +72,7 @@ Vereisten voor de tabel:
 - `Crossover asset`: een pijler-eigen asset dat bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
 - `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een attribuut/shared asset krijgt nooit een derde of vage pillarwaarde.
 - als een attribuut/shared asset voorkomt, geef dan altijd twee canonieke rijen: één `airco`, één `thuisbatterij`; beide gebruiken dezelfde surface en het passende `Crossover`-label.
+- gebruik voor `Indexed / noindex` alleen `indexed` of `noindex`.
 
 Vereisten voor de framing:
 - toon per rij expliciet hoe de vraag-naar-antwoord attributepagina de klantvraag omzet in een antwoordgedreven pagina;
