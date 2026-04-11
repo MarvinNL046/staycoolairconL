@@ -15,6 +15,9 @@ Gebruik deze prompt wanneer je een 8-weken foto-uploadschema wilt maken voor GBP
   - `airco-only` -> `00-context/airco-pijler.md`
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
   - `mixed` -> beide pijlercontexten
+- Relevante `01-audits` input, bij voorkeur `gbp-foto-audit.md` en/of `gbp-posts-audit.md`
+- Relevante `02-prioritering` input, bij voorkeur `90-dagen-actieplan.md` of `quick-wins-prioriteren.md`
+- Handoff bron of auditbasis die het fotoplan moet volgen
 - Eventuele bestaande fotobewijzen, teamfoto's of projectoverzichten
 - Eventuele seizoens- of projectcontext
 
@@ -41,6 +44,14 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 Gebruik daarna exact deze tabel:
 | Week | Aantal foto's | Type | Waar fotograferen | Waarom dit telt |
 
+De metadata-echo moet altijd expliciet aangeven:
+- `Modus`
+- `Broncontext`
+- `Gebruikte input`
+- `Periode`
+- `Handoff bron`
+- `Auditbasis`
+
 Per week:
 - houd de planning uitvoerbaar;
 - geef per rij een passend fototype;
@@ -56,6 +67,7 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
+- Een expliciete handoff naar de gebruikte audit- en prioriteringsinput
 - Een 8-weken schema met exact de gevraagde kolommen
 - Bewijsgerichte en regionale fotokeuzes
 - Duidelijke mode-splits waar relevant

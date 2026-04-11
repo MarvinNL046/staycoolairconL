@@ -8,6 +8,7 @@ Gebruik deze prompt wanneer je reviewreacties wilt voorbereiden of standaardiser
 
 ## Vereiste input
 - Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- Antwoordmodus: `reply-ready` of `template-fallback`
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
@@ -29,6 +30,8 @@ Gebruik alleen de aangeleverde context en invoer. Reageer menselijk, kort en pro
 Volg deze regels:
 - antwoord volledig in Nederlands;
 - houd Limburg breed als hoofdregio;
+- `Modus` bepaalt de pijlerkeuze;
+- `Antwoordmodus` bepaalt de outputvorm;
 - reply-ready mode: gebruik de aangeleverde reviewtekst of reviewexcerpt en schrijf een passend antwoord;
 - template-fallback mode: geef 3 varianten voor 5 sterren, 3 varianten voor 4 sterren, 3 varianten voor 3 sterren, 3 varianten voor 1-2 sterren;
 - noem service en Limburg waar dat natuurlijk past;
@@ -39,10 +42,10 @@ Volg deze regels:
 
 Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Modus`
+- `Antwoordmodus`
 - `Broncontext`
 - `Gebruikte input`
 - `Toon`
-- `Antwoordmodus` met `reply-ready` of `template-fallback`
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Gebruik daarna deze tabel:
@@ -61,15 +64,27 @@ Sluit af met:
 ## Later
 
 ## Verwachte output
+### reply-ready
 - Korte metadata-echo met de vaste velden
-- Reply-ready antwoorden op basis van echte reviewinput, of template-fallback varianten als expliciet gekozen
-- 3 varianten per sterrenklasse: 5, 4, 3 en 1-2 in template-fallback mode
-- Natuurlijke service- en Limburg-verwijzingen waar passend
-- Een tabel die direct kan worden gebruikt door de operator
+- Een reactie per aangeleverde reviewtekst of reviewexcerpt
+- Een tabel of lijst met antwoordregels per review
+- De standaard afsluitende secties
+- `Klaarcheck`
+
+### template-fallback
+- Korte metadata-echo met de vaste velden
+- 3 varianten per sterrenklasse: 5, 4, 3 en 1-2
+- Een tabel met de fallback-varianten
 - De standaard afsluitende secties
 - `Klaarcheck`
 
 ## Klaarcheck
+### reply-ready
+- Ik heb een antwoord gemaakt op basis van echte reviewinput.
+- Ik heb service en Limburg waar passend natuurlijk genoemd.
+- Ik heb de reacties kort en publiceerbaar gehouden.
+
+### template-fallback
 - Ik heb 3 varianten per sterrenklasse geleverd.
 - Ik heb service en Limburg waar passend natuurlijk genoemd.
 - Ik heb lage scores rustig en oplossingsgericht beantwoord.

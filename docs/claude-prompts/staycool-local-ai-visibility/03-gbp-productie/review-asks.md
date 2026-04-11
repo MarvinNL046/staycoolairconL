@@ -64,17 +64,42 @@ Sluit af met:
 ## Later
 
 ## Verwachte output
+### airco-only
 - Korte metadata-echo met de vaste velden
-- De zes gevraagde reviewverzoeken
-- Een korte WhatsApp-versie
-- Een korte e-mailversie
-- Duidelijke mode-splits: single-pillar blijft binnen de gekozen pijler, mixed bevat beide pijlers
+- Alleen reviewverzoeken voor airco: installatie, onderhoud, repair, short WhatsApp version en short e-mail version
+- Een tabel met alleen airco-triggers
+- De standaard afsluitende secties
+- `Klaarcheck`
+
+### thuisbatterij-only
+- Korte metadata-echo met de vaste velden
+- Alleen reviewverzoeken voor thuisbatterij: advice/installation, short WhatsApp version en short e-mail version
+- Een tabel met alleen thuisbatterij-triggers
+- De standaard afsluitende secties
+- `Klaarcheck`
+
+### mixed
+- Korte metadata-echo met de vaste velden
+- De volledige gecombineerde set voor airco en thuisbatterij
+- Een tabel met beide pijlers en alle relevante triggers
 - De standaard afsluitende secties
 - `Klaarcheck`
 
 ## Klaarcheck
-- Ik heb alle zes reviewverzoektypen gemaakt.
+### airco-only
+- Ik heb alleen airco-reviewverzoeken gemaakt.
 - Ik heb WhatsApp en e-mail expliciet kort gehouden.
-- Ik heb de juiste modus en pijlers gescheiden.
+- Ik heb reviewlink en merge fields als input verplicht gemaakt.
+- Ik heb Limburg-brede verwijzingen alleen waar passend gebruikt.
+
+### thuisbatterij-only
+- Ik heb alleen thuisbatterij-reviewverzoeken gemaakt.
+- Ik heb WhatsApp en e-mail expliciet kort gehouden.
+- Ik heb reviewlink en merge fields als input verplicht gemaakt.
+- Ik heb Limburg-brede verwijzingen alleen waar passend gebruikt.
+
+### mixed
+- Ik heb de volledige gecombineerde set voor beide pijlers gemaakt.
+- Ik heb WhatsApp en e-mail expliciet kort gehouden.
 - Ik heb reviewlink en merge fields als input verplicht gemaakt.
 - Ik heb Limburg-brede verwijzingen alleen waar passend gebruikt.
