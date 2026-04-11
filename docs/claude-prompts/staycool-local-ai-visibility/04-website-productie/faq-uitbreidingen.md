@@ -93,6 +93,7 @@ Vast publiceerbaar FAQ-blok:
 - verwijs per set expliciet naar de canonieke `FAQ-Groep-ID` en bijbehorende `FAQ-Rij-ID`s uit de hoofdtafel;
 - neem per block-rij altijd dezelfde concrete target page / route over als in de bijbehorende canonieke FAQ-rijen;
 - neem in `FAQ-items in volgorde` de concrete `Vraag -> Kort antwoord`-paren op, in exact de volgorde van de genoemde `FAQ-Rij-ID`s;
+- formatteer `FAQ-items in volgorde` altijd als een genummerde reeks binnen één cel, gescheiden met ` <br> `, bijvoorbeeld `1. Vraag -> Kort antwoord <br> 2. Vraag -> Kort antwoord`;
 - als een FAQ-set voor beide pijlers werkt, label die hier als `Gedeelde asset` / `Crossover asset`.
 - in mixed mode blijft het publiceerbare blok per gedeelde set beperkt tot die twee rijen; gebruik nooit een derde variant of een paginafamilie als vervanging voor de concrete target.
 

@@ -56,7 +56,7 @@ Gebruik daarna deze vier secties in vaste volgorde:
 | Bron | Brontype | Vraag | Pijler | Crossover | Concrete target page / route | Publishing surface | Kort antwoord | Onderbouwing | Opmerking |
 
 ### Service schema input
-| Bron | Brontype | Service | Pijler | Crossover | Concrete target page / route | Publishing surface | Beschrijving | Service area | Opmerking |
+| Bron | Brontype | Service | Pijler | Crossover | Concrete target page / route | Publishing surface | Beschrijving | Service area | Onderbouwing | Opmerking |
 
 ### LocalBusiness relevante velden
 | Veld | Waarde | Bron | Betrouwbaarheid |
@@ -66,7 +66,7 @@ Gebruik daarna deze vier secties in vaste volgorde:
 - alleen als een LocalBusiness-veld aantoonbaar pijlerspecifiek is, mag je het niet in deze sectie plaatsen maar in de FAQ-, Service- of review/case-secties.
 
 ### Review/case snippets
-| Bron | Snippet | Pijler | Crossover | Concrete target page / route | Gebruik | Publishing surface | Opmerking |
+| Bron | Snippet | Pijler | Crossover | Concrete target page / route | Gebruik | Publishing surface | Onderbouwing | Opmerking |
 
 Vereisten voor de extractie:
 - geef per bruikbaar item een eigen rij;
