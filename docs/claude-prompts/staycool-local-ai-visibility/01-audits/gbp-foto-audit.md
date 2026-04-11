@@ -73,8 +73,8 @@ Let specifiek op:
   - gebruikte competitor-cohort bron
 - Een tabel per relevant profiel met 90-dagenfrequentie, contenttype, regionale signalen en activity score.
 - Een lijst met fototypes die StayCool vaker moet publiceren.
-- Quick wins
 - `Topprioriteiten`
+- `Quick wins`
 - `Direct publiceerbaar`: concrete foto-opdrachten, caption-ideeën of operator-acties die direct uitvoerbaar zijn.
 - `Later`
 

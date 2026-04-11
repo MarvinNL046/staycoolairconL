@@ -67,8 +67,8 @@ Laat zien of de posts vooral promotioneel, informatief, bewijsgericht of regiona
   - gebruikte competitor-cohort bron
 - Een tabel per relevant profiel met 90-dagenfrequentie, contenttype, regionale signalen en activity score.
 - Een lijst met contenttypes die StayCool vaker moet posten.
-- Quick wins
 - `Topprioriteiten`
+- `Quick wins`
 - `Direct publiceerbaar`: concrete postideeën, postkoppen of operator-acties voor de komende 30 dagen.
 - `Later`
 

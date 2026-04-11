@@ -61,6 +61,7 @@ Sluit af met een prioriteitenlijst voor attribute gaps.
   - locatie/source context
   - profiel/snapshot context
   - `Target zoektermen`
+  - gebruikte competitor-cohort bron
 - Een attributentabel per pijler met StayCool versus concurrenten.
 - Een gap-overzicht met ontbrekende of zwakke attributen.
 - `Topprioriteiten`
