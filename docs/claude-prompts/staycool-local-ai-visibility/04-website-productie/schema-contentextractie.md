@@ -61,6 +61,9 @@ Gebruik daarna deze vier secties in vaste volgorde:
 ### LocalBusiness relevante velden
 | Veld | Waarde | Pijler | Crossover | Bron | Publishing surface | Betrouwbaarheid |
 
+- `LocalBusiness relevante velden` is een business-brede, canonical outputlaag: gebruik hier één hoofdobject of hoofdset voor de hele site als dat uit de bron volgt.
+- dupliceer business-brede LocalBusiness-velden niet per pijler; als een veld sitebreed geldt, houd het op één canonieke rij/object en laat `Pijler` op `airco` / `thuisbatterij` alleen staan wanneer het veld echt pijlerspecifiek is.
+
 ### Review/case snippets
 | Bron | Snippet | Pijler | Crossover | Gebruik | Publishing surface | Opmerking |
 
@@ -75,6 +78,7 @@ Vereisten voor de extractie:
 - `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een enkele gedeelde rij is niet geldig.
 - laat deze waarden niet leeg en gebruik geen andere labels;
 - als een shared/crossover extract voorkomt, geef het altijd als twee canonieke rijen: één met `Pijler = airco` en één met `Pijler = thuisbatterij`.
+- uitzondering: `LocalBusiness relevante velden` mag business-breed als één canonieke rij/object worden uitgewerkt als het veld sitebreed geldt; dupliceer die velden niet per pijler.
 - gebruik alleen extracties die direct uit de input volgen;
 - markeer ontbrekende of zwakke onderbouwing met `onbekend`;
 - maak de output geschikt voor redactie, schema-invoer of contentbriefing;
