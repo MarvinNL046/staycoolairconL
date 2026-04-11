@@ -57,7 +57,7 @@ Vereisten voor de tabel:
 - geef per relevante FAQ een eigen rij met een uniek `FAQ-Rij-ID`;
 - geef per onderliggend FAQ-asset of gedeelde set een stabiel `FAQ-Groep-ID`;
 - maak `FAQ-Groep-ID` deterministisch en route-gebaseerd: gebruik een lowercase kebab-id afgeleid van de concrete target page / route plus het onderliggende FAQ-thema; hergebruik exact dezelfde `FAQ-Groep-ID` als dezelfde set in een latere run terugkomt;
-- maak `FAQ-Rij-ID` deterministisch als `FAQ-Groep-ID` plus een vaste pijler- of volgorde-suffix; hergebruik exact dezelfde `FAQ-Rij-ID` als dezelfde canonieke FAQ-rij in een latere run terugkomt;
+- maak `FAQ-Rij-ID` deterministisch als `FAQ-Groep-ID--<pijler>--<nn>` waarbij `<pijler>` exact `airco` of `thuisbatterij` is en `<nn>` een vaste nulgevulde volgorde binnen die pijler is; hergebruik exact dezelfde `FAQ-Rij-ID` als dezelfde canonieke FAQ-rij in een latere run terugkomt;
 - canonical rows hebben altijd een unieke `FAQ-Rij-ID`; rijen die bij dezelfde shared/crossover FAQ-set horen delen hetzelfde `FAQ-Groep-ID`;
 - vul per rij altijd `Pijler` en `Crossover` in;
 - gebruik deze waarden in elke modus:
@@ -84,7 +84,7 @@ Vereisten voor publiceerbaarheid:
 - maak per pijler een publishable FAQ-blok dat direct in CMS of content kan worden ingezet;
 - gebruik in mixed mode waar passend een `Gedeelde asset` / `Crossover asset`-blok als de FAQ-set inhoudelijk voor beide pijlers werkt;
 - maak duidelijk welke vragen airco-only, thuisbatterij-only of crossover zijn.
-- als een FAQ-set shared/crossover is in mixed mode, representeer het publiceerbare blok als precies twee rijen in `### Publiceerbaar FAQ-blok`: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen hergebruiken dezelfde `FAQ-Groep-ID`, dezelfde concrete target page/route, dezelfde surface en dezelfde FAQ-set referentie, maar elke blokrij noemt alleen de `FAQ-Rij-ID`s die bij die eigen `Pijler` horen.
+- als een FAQ-set shared/crossover is in mixed mode en route, surface en FAQ-inhoud identiek blijven, representeer het `### Publiceerbaar FAQ-blok` als één gedeelde block-rij met `Pijler = gedeeld`; gebruik alleen twee block-rijen als de plaatsing of inhoud per pijler echt verschilt.
 - de hoofdtafel blijft de canonieke bron; het publiceerbare blok is een handoff-laag en voegt nooit nieuwe of afwijkende FAQ-rijen toe.
 
 Vast publiceerbaar FAQ-blok:
@@ -99,7 +99,8 @@ Vast publiceerbaar FAQ-blok:
 - neem in `FAQ-items in volgorde` de concrete `Vraag -> Kort antwoord`-paren op, in exact de volgorde van de genoemde `FAQ-Rij-ID`s;
 - formatteer `FAQ-items in volgorde` altijd als een genummerde reeks binnen één cel, gescheiden met ` <br> `, bijvoorbeeld `1. Vraag -> Kort antwoord <br> 2. Vraag -> Kort antwoord`;
 - als een FAQ-set voor beide pijlers werkt, label die hier als `Gedeelde asset` / `Crossover asset`.
-- in mixed mode blijft het publiceerbare blok per gedeelde set beperkt tot die twee rijen; gebruik nooit een derde variant of een paginafamilie als vervanging voor de concrete target.
+- gebruik in `Pijler` binnen dit block alleen `airco`, `thuisbatterij` of `gedeeld`; `gedeeld` is alleen toegestaan als dezelfde block-rij exact voor beide pijlers publiceerbaar is op dezelfde route en surface.
+- in mixed mode blijft het publiceerbare blok per gedeelde set beperkt tot één gedeelde block-rij of twee pijlerspecifieke block-rijen; gebruik nooit een derde variant of een paginafamilie als vervanging voor de concrete target.
 
 Sluit af met deze secties:
 - `Topprioriteiten`
@@ -115,7 +116,7 @@ Sluit af met deze secties:
 - Schema-vriendelijke formuleringen
 - Een publiceerbaar FAQ-blok per pijler met verwijzing naar de canonieke `FAQ-Groep-ID` en `FAQ-Rij-ID`s
 - De vaste sectie `### Publiceerbaar FAQ-blok` met `| FAQ-set | FAQ-Groep-ID | FAQ-Rij-ID's | Pijler | Crossover | Concrete target page / route | Publishing surface | Indexed / noindex | FAQ-items in volgorde | CMS-ready opmerking |`
-- In mixed mode: de publiceerbare set wordt altijd als twee block-rijen uitgewerkt, met dezelfde `FAQ-Groep-ID` en dezelfde surface per gedeelde set, maar per blokrij alleen de `FAQ-Rij-ID`s van de eigen `Pijler`
+- In mixed mode: de publiceerbare set wordt per gedeelde set uitgewerkt als één gedeelde block-rij of twee pijlerspecifieke block-rijen, afhankelijk van of route, surface en inhoud identiek blijven
 - De standaard afsluitende secties
 - `Klaarcheck`
 
