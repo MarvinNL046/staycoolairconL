@@ -35,7 +35,7 @@ Volg deze regels:
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt;
 - laat anchors natuurlijk, inhoudelijk en attribuutgedreven zijn;
-- koppel links aan bestaande routes of benoemde site families;
+- koppel links altijd aan concrete bron- en doelroutes; gebruik een benoemde site family alleen als context in de surface-kolommen, nooit als vervanging voor een route;
 - voorkom dubbele of zwakke anchorteksten;
 - sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later` en `Klaarcheck`.
 
@@ -47,7 +47,7 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Gebruik daarna exact deze tabel:
-| Bronpagina | Bron pijler | Doelpagina | Doel pijler | Linkrelatie | Plaatsingsstatus | Anchor | Publishing surface bron | Publishing surface doel | Waarom |
+| Bron concrete pagina / route | Bron Asset-ID | Bron pijler | Doel concrete pagina / route | Doel Asset-ID | Doel pijler | Linkrelatie | Plaatsingsstatus | Anchor | Publishing surface bron | Publishing surface doel | Waarom |
 
 Vereisten voor de tabel:
 - geef per relevante link een eigen rij;
@@ -57,20 +57,22 @@ Vereisten voor de tabel:
   - `Doel pijler`: `airco`, `thuisbatterij`, `gedeeld`
   - `Linkrelatie`: `same-pillar`, `cross-pillar`, `shared-support`
   - `Plaatsingsstatus`: `direct plaatsbaar`, `wacht op bronpagina`, `wacht op doelpagina`, `wacht op beide`
+- vul `Bron concrete pagina / route` en `Doel concrete pagina / route` altijd met een concrete bestaande of beoogde eindroute;
+- vul `Bron Asset-ID` en `Doel Asset-ID` in als de bron of het doel uit een andere Task 6-deliverable komt; gebruik anders `n.v.t.`;
 - `same-pillar`: bron en doel horen bij dezelfde pijler;
 - `cross-pillar`: bron en doel horen bij verschillende pijlers;
 - `shared-support`: de link ondersteunt een gedeelde of pijler-overstijgende context, maar blijft één canonieke linkplaatsing;
 - gebruik `gedeeld` alleen wanneer de bron- of doelpagina aantoonbaar pijler-overstijgend is; kies anders expliciet `airco` of `thuisbatterij`;
 - laat deze waarden niet leeg en gebruik geen andere labels;
-- houd het bij shared of crossover context op één canonieke rij per unieke combinatie van bronpagina, doelpagina en anchor; gebruik `Bron pijler`, `Doel pijler` en `Linkrelatie` om de relatie eenduidig te maken.
+- houd het bij shared of crossover context op één canonieke rij per unieke combinatie van bronroute, doelroute en anchor; gebruik `Bron pijler`, `Doel pijler` en `Linkrelatie` om de relatie eenduidig te maken.
 - vul per rij altijd `Plaatsingsstatus` in zodat redactie ziet of de link direct kan worden geplaatst of nog afhankelijk is van nieuwe content;
-- gebruik alleen bron- en doelpagina's die passen bij een expliciet benoemde publishing surface uit de site-structuur;
+- gebruik alleen bron- en doelroutes die passen bij een expliciet benoemde publishing surface uit de site-structuur;
 - maak het waarom concreet: attribuut, intentie of regionale match;
 - noteer onzekerheden met `onbekend` als de broninput tekortschiet.
 
 Vereisten voor surface-grounding:
 - gebruik alleen expliciet benoemde surfaces zoals `/landing/*`, root-level money pages, `/kennisbank/*`, `/seo/pillar-*/*`, `*/noindex/*` of een andere benoemde site family uit de site-structuur;
-- noem bron en doel per rij expliciet in de surface-kolommen;
+- noem bron en doel per rij expliciet in de surface-kolommen, maar laat die surfaces nooit de concrete routekolommen vervangen;
 - gebruik geen cluster- of assetterminologie zonder route.
 
 Sluit af met deze secties:
@@ -82,7 +84,7 @@ Sluit af met deze secties:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Bronpagina | Bron pijler | Doelpagina | Doel pijler | Linkrelatie | Plaatsingsstatus | Anchor | Publishing surface bron | Publishing surface doel | Waarom |`
+- Exact de tabel `| Bron concrete pagina / route | Bron Asset-ID | Bron pijler | Doel concrete pagina / route | Doel Asset-ID | Doel pijler | Linkrelatie | Plaatsingsstatus | Anchor | Publishing surface bron | Publishing surface doel | Waarom |`
 - Een praktische interne-linkmap voor redactie of CMS
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - De standaard afsluitende secties
