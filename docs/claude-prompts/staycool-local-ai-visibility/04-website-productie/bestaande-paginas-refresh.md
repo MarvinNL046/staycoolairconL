@@ -71,12 +71,12 @@ Vereisten voor surface-grounding:
 - noem de gekozen surface per rij expliciet in de kolom `Publishing surface`;
 - gebruik geen vage cluster- of assetterminologie.
 
-Sluit af met:
-## Topprioriteiten
-## Quick wins
-## Direct publiceerbaar
-## Later
-## Klaarcheck
+Sluit af met deze secties:
+- `Topprioriteiten`
+- `Quick wins`
+- `Direct publiceerbaar`
+- `Later`
+- `Klaarcheck`
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden

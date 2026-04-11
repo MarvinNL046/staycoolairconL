@@ -80,12 +80,12 @@ Vereisten voor mixed mode:
 - maak duidelijk welke voorstellen `Airco-only` zijn, welke `Thuisbatterij-only` zijn en welke `Gedeelde asset` / `Crossover asset` zijn;
 - een crossover asset mag alleen als de site-structuur en handoff die gedeelde publicatie echt dragen.
 
-Sluit af met:
-## Topprioriteiten
-## Quick wins
-## Direct publiceerbaar
-## Later
-## Klaarcheck
+Sluit af met deze secties:
+- `Topprioriteiten`
+- `Quick wins`
+- `Direct publiceerbaar`
+- `Later`
+- `Klaarcheck`
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden

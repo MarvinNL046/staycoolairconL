@@ -83,12 +83,12 @@ Vereisten voor mixed mode:
 - maak duidelijk welke metadata hoort bij `Airco-only`, `Thuisbatterij-only` en welke bij een `Gedeelde asset` / `Crossover asset` hoort;
 - een crossover asset mag alleen als de gecombineerde publicatiesurface uit de site-structuur logisch is.
 
-Sluit af met:
-## Topprioriteiten
-## Quick wins
-## Direct publiceerbaar
-## Later
-## Klaarcheck
+Sluit af met deze secties:
+- `Topprioriteiten`
+- `Quick wins`
+- `Direct publiceerbaar`
+- `Later`
+- `Klaarcheck`
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden

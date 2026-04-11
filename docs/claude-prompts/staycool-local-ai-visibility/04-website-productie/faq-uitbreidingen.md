@@ -90,12 +90,12 @@ Vast publiceerbaar FAQ-blok:
 - verwijs per set expliciet naar de canonieke `FAQ-ID`s uit de hoofdtafel;
 - als een FAQ-set voor beide pijlers werkt, label die hier als `Gedeelde asset` / `Crossover asset`.
 
-Sluit af met:
-## Topprioriteiten
-## Quick wins
-## Direct publiceerbaar
-## Later
-## Klaarcheck
+Sluit af met deze secties:
+- `Topprioriteiten`
+- `Quick wins`
+- `Direct publiceerbaar`
+- `Later`
+- `Klaarcheck`
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden

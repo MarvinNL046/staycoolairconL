@@ -62,8 +62,8 @@ Gebruik daarna deze vier secties in vaste volgorde:
 | Veld | Waarde | Bron | Betrouwbaarheid |
 
 - `LocalBusiness relevante velden` is een business-brede, canonical outputlaag: gebruik hier één hoofdobject of hoofdset voor de hele site als dat uit de bron volgt.
-- dit is een uitzondering op de standaard dubbel-rij/logica: dupliceer business-brede LocalBusiness-velden niet per pijler en gebruik hier geen `Pijler`, `Crossover` of `Publishing surface`-velden tenzij het veld aantoonbaar pijlerspecifiek is.
-- als een veld sitebreed geldt, houd het op één canonieke rij/object; als het veld pijlerspecifiek is, zet het dan niet in deze sectie maar in de FAQ-, Service- of review/case-secties.
+- uitzondering op de standaard dubbel-rij/logica: als een LocalBusiness-veld sitebreed of businessbreed geldt, zet het dan hier op één canonieke rij/object zonder `Pijler`, `Crossover` of `Publishing surface`.
+- alleen als een LocalBusiness-veld aantoonbaar pijlerspecifiek is, mag je het niet in deze sectie plaatsen maar in de FAQ-, Service- of review/case-secties.
 
 ### Review/case snippets
 | Bron | Snippet | Pijler | Crossover | Gebruik | Publishing surface | Opmerking |
@@ -90,12 +90,12 @@ Vereisten voor surface-grounding:
 - vul per rij altijd een publishing surface in;
 - gebruik geen cluster- of assetterminologie zonder route.
 
-Sluit af met:
-## Topprioriteiten
-## Quick wins
-## Direct publiceerbaar
-## Later
-## Klaarcheck
+Sluit af met deze secties:
+- `Topprioriteiten`
+- `Quick wins`
+- `Direct publiceerbaar`
+- `Later`
+- `Klaarcheck`
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden

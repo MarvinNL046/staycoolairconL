@@ -59,7 +59,7 @@ Vereisten voor de tabel:
 - `Crossover asset`: een pijler-eigen asset dat bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
 - `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een enkele gedeelde rij is niet geldig.
 - laat deze waarden niet leeg en gebruik geen andere labels;
-- als een shared/crossover link voorkomt, geef het altijd als twee canonieke rijen: één met `Pijler = airco` en één met `Pijler = thuisbatterij`.
+- als een shared/crossover link voorkomt, houd het op één canonieke rij per unieke combinatie van bronpagina, doelpagina en anchor; gebruik `Pijler` voor de primaire eigenaar/context en `Crossover` om aan te geven dat de link ook de andere pijler ondersteunt.
 - gebruik alleen bron- en doelpagina's die passen bij een expliciet benoemde publishing surface uit de site-structuur;
 - maak het waarom concreet: attribuut, intentie of regionale match;
 - noteer onzekerheden met `onbekend` als de broninput tekortschiet.
@@ -69,12 +69,12 @@ Vereisten voor surface-grounding:
 - noem bron en doel per rij expliciet in de surface-kolommen;
 - gebruik geen cluster- of assetterminologie zonder route.
 
-Sluit af met:
-## Topprioriteiten
-## Quick wins
-## Direct publiceerbaar
-## Later
-## Klaarcheck
+Sluit af met deze secties:
+- `Topprioriteiten`
+- `Quick wins`
+- `Direct publiceerbaar`
+- `Later`
+- `Klaarcheck`
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden

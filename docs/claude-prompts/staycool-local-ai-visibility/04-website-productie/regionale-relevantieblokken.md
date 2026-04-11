@@ -87,12 +87,12 @@ Vereisten voor mixed mode:
 - maak expliciet wanneer een blok airco-only, thuisbatterij-only of crossover is;
 - een crossover blok mag alleen als de site-structuur dat logisch draagt.
 
-Sluit af met:
-## Topprioriteiten
-## Quick wins
-## Direct publiceerbaar
-## Later
-## Klaarcheck
+Sluit af met deze secties:
+- `Topprioriteiten`
+- `Quick wins`
+- `Direct publiceerbaar`
+- `Later`
+- `Klaarcheck`
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
