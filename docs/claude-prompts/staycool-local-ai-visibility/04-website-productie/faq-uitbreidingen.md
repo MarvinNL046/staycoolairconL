@@ -55,14 +55,15 @@ Gebruik daarna deze tabel:
 
 Vereisten voor de tabel:
 - geef per relevante FAQ een eigen rij;
-- in `mixed` mode splits je airco en thuisbatterijen zichtbaar uit;
-- in `mixed` mode vul je per rij altijd `Pijler` en `Crossover` in;
-- gebruik in mixed mode alleen deze waarden:
+- vul per rij altijd `Pijler` en `Crossover` in;
+- gebruik deze waarden in elke modus:
   - `Pijler`: `airco`, `thuisbatterij`
   - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
-- `Pijler` is verplicht en mag in mixed mode alleen `airco` of `thuisbatterij` zijn; een FAQ/shared asset krijgt nooit een derde of vage pillarwaarde.
-- laat deze waarden niet leeg en gebruik geen andere labels in mixed mode;
-- als een FAQ shared/crossover is in mixed mode, geef dan twee canonieke rijen: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen dragen dezelfde publicatiesurface en het passende `Crossover`-label;
+- `Gedeelde asset`: hetzelfde kernasset of dezelfde FAQ-set bedient beide pijlers zonder pillar-specifieke rewrite.
+- `Crossover asset`: een pijler-eigen FAQ-set die bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
+- `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een FAQ/shared asset krijgt nooit een derde of vage pillarwaarde.
+- laat deze waarden niet leeg en gebruik geen andere labels;
+- als een FAQ shared/crossover is, geef dan altijd twee canonieke rijen: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen dragen dezelfde publicatiesurface en het passende `Crossover`-label;
 - korte antwoorden blijven compact en direct publiceerbaar;
 - markeer een antwoord als schema-geschikt als het zonder bewerking in FAQ schema kan landen;
 - wijs elke FAQ toe aan een target page of page family;

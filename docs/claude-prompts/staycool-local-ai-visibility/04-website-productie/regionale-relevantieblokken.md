@@ -57,21 +57,22 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Gebruik daarna deze tabel:
-| Pagina of surface | Pijler | Crossover | Bloktype | Tekstblok | Regionale invalshoek | Opmerking |
+| Concrete pagina / route | Publishing surface | Pijler | Crossover | Bloktype | Tekstblok | Regionale invalshoek | Opmerking |
 
 Vereisten voor de tabel:
 - geef per blok een eigen rij;
-- in `mixed` mode splits je airco en thuisbatterij zichtbaar uit;
+- vul per rij altijd `Pijler` en `Crossover` in;
+- gebruik deze waarden in elke modus:
+  - `Pijler`: `airco`, `thuisbatterij`
+  - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
+- `Gedeelde asset`: hetzelfde kernasset of dezelfde content bedient beide pijlers zonder pillar-specifieke rewrite.
+- `Crossover asset`: een pijler-eigen asset dat bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
+- `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een regionaal shared/crossover blok krijgt nooit een derde of vage pillarwaarde.
+- laat deze waarden niet leeg en gebruik geen andere labels;
+- als een regionaal blok shared/crossover is, geef twee canonieke rijen: één `airco`, één `thuisbatterij`; beide delen dezelfde concrete pagina/route en de passende publishing surface.
 - laat de tekstblokken Limburg-breed voelen zonder generieke fluff of dunne stadsduplicatie;
 - gebruik alleen regio-invalshoeken die uit de input of site-structuur volgen;
 - noteer onzekerheid met `onbekend` wanneer bewijs of context ontbreekt.
-- vul per rij altijd `Pijler` in;
-- vul per rij altijd `Crossover` in met `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset` of `Crossover asset`.
-- gebruik in mixed mode alleen deze waarden:
-  - `Pijler`: `airco`, `thuisbatterij`
-  - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
-- `Pijler` is verplicht en mag in mixed mode alleen `airco` of `thuisbatterij` zijn; een regionaal shared/crossover blok krijgt nooit een derde of vage pillarwaarde.
-- als een regionaal blok shared/crossover is in mixed mode, geef twee canonieke rijen: één `airco`, één `thuisbatterij`; beide delen dezelfde surface en het passende `Crossover`-label.
 
 Vereisten voor de outputaanpak:
 - gebruik geen stad-voor-stad herhaling met minimale variatie;
@@ -91,7 +92,7 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Pagina of surface | Pijler | Crossover | Bloktype | Tekstblok | Regionale invalshoek | Opmerking |`
+- Exact de tabel `| Concrete pagina / route | Publishing surface | Pijler | Crossover | Bloktype | Tekstblok | Regionale invalshoek | Opmerking |`
 - Concrete regionale blokken die direct in content kunnen landen
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - Een expliciete `Gedeelde asset` / `Crossover asset`-scheiding waar passend in mixed mode

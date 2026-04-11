@@ -63,13 +63,15 @@ Vereisten voor de tabel:
 - gebruik geen vage clusterterminologie zonder surface;
 - gebruik Limburg-brede relevantie waar dat past;
 - maak expliciet of het voorstel bedoeld is voor indexed content of support/noindex;
-- in `mixed` mode splits je airco en thuisbatterij zichtbaar uit;
 - selecteer alleen voorstellen die direct terug te voeren zijn op de audits, de prioritering of de bestaande site-structuur.
-- gebruik in mixed mode alleen deze waarden:
+- vul per rij altijd `Pijler` en `Crossover` in;
+- gebruik deze waarden in elke modus:
   - `Pijler`: `airco`, `thuisbatterij`
   - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
-- `Pijler` is verplicht en mag in mixed mode alleen `airco` of `thuisbatterij` zijn; een gedeelde/crossover asset krijgt nooit een derde of vage pillarwaarde;
-- als een asset/copy shared is, geef dan in mixed mode twee canonieke rijen: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen dragen dezelfde surface en het passende `Crossover`-label;
+- `Gedeelde asset`: hetzelfde kernasset of dezelfde content bedient beide pijlers zonder pillar-specifieke rewrite.
+- `Crossover asset`: een pijler-eigen asset dat bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
+- `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een gedeelde/crossover asset krijgt nooit een derde of vage pillarwaarde;
+- als een asset/copy shared is, geef dan altijd twee canonieke rijen: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen dragen dezelfde surface en het passende `Crossover`-label;
 - vul per rij altijd `Indexed / noindex` in;
 - vul per rij altijd `Crossover` in met `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset` of `Crossover asset`.
 

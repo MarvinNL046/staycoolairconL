@@ -66,11 +66,13 @@ Vereisten voor de tabel:
 - waar relevant mag je ook relevante snippet- of OG-varianten noemen in de opmerking.
 - vul per rij altijd `Pijler` in;
 - vul per rij altijd `Crossover` in met `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset` of `Crossover asset`.
-- gebruik in mixed mode alleen deze waarden:
+- gebruik deze waarden in elke modus:
   - `Pijler`: `airco`, `thuisbatterij`
   - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
-- `Pijler` is verplicht en mag in mixed mode alleen `airco` of `thuisbatterij` zijn; metadata voor een shared/crossover asset krijgt nooit een derde of vage pillarwaarde.
-- als metadata shared/crossover is in mixed mode, geef twee canonieke rijen: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen delen dezelfde surface en het passende `Crossover`-label.
+- `Gedeelde asset`: hetzelfde kernasset of dezelfde content bedient beide pijlers zonder pillar-specifieke rewrite.
+- `Crossover asset`: een pijler-eigen asset dat bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
+- `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; metadata voor een shared/crossover asset krijgt nooit een derde of vage pillarwaarde.
+- als metadata shared/crossover is, geef twee canonieke rijen: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen delen dezelfde surface en het passende `Crossover`-label.
 
 Vereisten voor mixed mode:
 - maak duidelijk welke metadata hoort bij `Airco-only`, `Thuisbatterij-only` en welke bij een `Gedeelde asset` / `Crossover asset` hoort;

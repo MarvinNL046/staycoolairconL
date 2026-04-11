@@ -51,13 +51,15 @@ Gebruik daarna exact deze tabel:
 
 Vereisten voor de tabel:
 - geef per relevante link een eigen rij;
-- in `mixed` mode splits je airco en thuisbatterij zichtbaar uit;
-- in mixed mode vul je per rij altijd `Pijler` en `Crossover` in;
-- gebruik in mixed mode alleen deze waarden:
+- vul per rij altijd `Pijler` en `Crossover` in;
+- gebruik deze waarden in elke modus:
   - `Pijler`: `airco`, `thuisbatterij`
   - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
-- laat deze waarden niet leeg en gebruik geen andere labels in mixed mode;
-- als een shared/crossover link in mixed mode voorkomt, geef het altijd als twee canonieke rijen: één met `Pijler = airco` en één met `Pijler = thuisbatterij`; een enkele gedeelde rij is niet geldig;
+- `Gedeelde asset`: hetzelfde kernasset of dezelfde content bedient beide pijlers zonder pillar-specifieke rewrite.
+- `Crossover asset`: een pijler-eigen asset dat bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
+- `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een enkele gedeelde rij is niet geldig.
+- laat deze waarden niet leeg en gebruik geen andere labels;
+- als een shared/crossover link voorkomt, geef het altijd als twee canonieke rijen: één met `Pijler = airco` en één met `Pijler = thuisbatterij`.
 - gebruik alleen bron- en doelpagina's die passen bij een expliciet benoemde publishing surface uit de site-structuur;
 - maak het waarom concreet: attribuut, intentie of regionale match;
 - noteer onzekerheden met `onbekend` als de broninput tekortschiet.

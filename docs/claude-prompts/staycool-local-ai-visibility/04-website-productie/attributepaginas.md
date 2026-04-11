@@ -64,11 +64,14 @@ Vereisten voor de tabel:
 - noem de aanbevolen URL alleen als die logisch past binnen de huidige routes;
 - maak het onderscheid tussen indexed content en support/noindex expliciet in de tabel;
 - als de input onvoldoende bewijs geeft, noteer `onbekend` in plaats van een aanname.
-- gebruik in mixed mode alleen deze waarden:
+- vul per rij altijd `Pijler` en `Crossover` in;
+- gebruik deze waarden in elke modus:
   - `Pijler`: `airco`, `thuisbatterij`
   - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
-- `Pijler` is verplicht en mag in mixed mode alleen `airco` of `thuisbatterij` zijn; een attribuut/shared asset krijgt nooit een derde of vage pillarwaarde.
-- als een attribuut/shared asset in mixed mode geldt, geef dan twee canonieke rijen: één `airco`, één `thuisbatterij`; beide gebruiken dezelfde surface en het passende `Crossover`-label.
+- `Gedeelde asset`: hetzelfde kernasset of dezelfde content bedient beide pijlers zonder pillar-specifieke rewrite.
+- `Crossover asset`: een pijler-eigen asset dat bewust de andere pijler/use-case ondersteunt of ernaar verwijst.
+- `Pijler` is altijd verplicht en mag alleen `airco` of `thuisbatterij` zijn; een attribuut/shared asset krijgt nooit een derde of vage pillarwaarde.
+- als een attribuut/shared asset voorkomt, geef dan altijd twee canonieke rijen: één `airco`, één `thuisbatterij`; beide gebruiken dezelfde surface en het passende `Crossover`-label.
 
 Vereisten voor de framing:
 - toon per rij expliciet hoe de vraag-naar-antwoord attributepagina de klantvraag omzet in een antwoordgedreven pagina;
