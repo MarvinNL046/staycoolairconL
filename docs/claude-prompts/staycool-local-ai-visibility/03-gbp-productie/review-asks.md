@@ -39,6 +39,28 @@ Volg deze regels:
 - houd de toon vriendelijk, niet opdringerig en direct bruikbaar.
 - gebruik alleen placeholders die expliciet in de input zijn meegegeven.
 
+## Vereiste rijset per modus
+### airco-only
+- `review request after airco installation`
+- `review request after airco maintenance`
+- `review request after repair`
+- `short WhatsApp version`
+- `short e-mail version`
+
+### thuisbatterij-only
+- `review request after thuisbatterij advice/installation`
+- `short WhatsApp version`
+- `short e-mail version`
+
+### mixed
+- alle airco-rijen uit `airco-only`
+- alle thuisbatterij-rijen uit `thuisbatterij-only`
+
+## Kanaal mapping
+- `review request after airco installation`, `review request after airco maintenance`, `review request after repair`, `review request after thuisbatterij advice/installation` -> gebruik het kanaal dat in de input als verzendkanaal is meegegeven; als dat ontbreekt, zet `WhatsApp` en `E-mail` als aparte rijen per trigger
+- `short WhatsApp version` -> `WhatsApp`
+- `short e-mail version` -> `E-mail`
+
 Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Modus`
 - `Broncontext`
@@ -66,15 +88,15 @@ Sluit af met:
 ## Verwachte output
 ### airco-only
 - Korte metadata-echo met de vaste velden
-- Alleen reviewverzoeken voor airco: installatie, onderhoud, repair, short WhatsApp version en short e-mail version
-- Een tabel met alleen airco-triggers
+- Exact deze rijen: installation, maintenance, repair, short WhatsApp version, short e-mail version
+- Een tabel met alleen airco-triggers en het kanaal volgens de mapping hierboven
 - De standaard afsluitende secties
 - `Klaarcheck`
 
 ### thuisbatterij-only
 - Korte metadata-echo met de vaste velden
-- Alleen reviewverzoeken voor thuisbatterij: advice/installation, short WhatsApp version en short e-mail version
-- Een tabel met alleen thuisbatterij-triggers
+- Exact deze rijen: advice/installation, short WhatsApp version, short e-mail version
+- Een tabel met alleen thuisbatterij-triggers en het kanaal volgens de mapping hierboven
 - De standaard afsluitende secties
 - `Klaarcheck`
 

@@ -42,7 +42,7 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Periode`
 
 Gebruik daarna exact deze tabel:
-| Week | Aantal foto's | Type | Waar fotograferen | Waarom dit telt |
+| Week | Pijler | Aantal foto's | Type | Waar fotograferen | Waarom dit telt |
 
 De metadata-echo moet altijd expliciet aangeven:
 - `Modus`
@@ -69,6 +69,7 @@ Sluit af met:
 - Korte metadata-echo met de vaste velden
 - Een expliciete handoff naar de gebruikte audit- en prioriteringsinput
 - Een 8-weken schema met exact de gevraagde kolommen
+- Een 8-weken schema met exact de gevraagde kolommen inclusief `Pijler`
 - Bewijsgerichte en regionale fotokeuzes
 - Duidelijke mode-splits waar relevant
 - De standaard afsluitende secties

@@ -49,7 +49,7 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Gebruik daarna deze tabel:
-| Sterren | Pijler | Variant | Antwoord | Opmerking |
+| Antwoordmodus | Bron review/excerpt ID | Sterren | Pijler | Variant | Antwoord | Opmerking |
 
 Waar passend:
 - verwerk een natuurlijke serviceverwijzing;
@@ -67,14 +67,14 @@ Sluit af met:
 ### reply-ready
 - Korte metadata-echo met de vaste velden
 - Een reactie per aangeleverde reviewtekst of reviewexcerpt
-- Een tabel of lijst met antwoordregels per review
+- Een tabel met exact deze kolommen: `Antwoordmodus`, `Bron review/excerpt ID`, `Sterren`, `Pijler`, `Variant`, `Antwoord`, `Opmerking`
 - De standaard afsluitende secties
 - `Klaarcheck`
 
 ### template-fallback
 - Korte metadata-echo met de vaste velden
 - 3 varianten per sterrenklasse: 5, 4, 3 en 1-2
-- Een tabel met de fallback-varianten
+- Een tabel met exact deze kolommen: `Antwoordmodus`, `Bron review/excerpt ID`, `Sterren`, `Pijler`, `Variant`, `Antwoord`, `Opmerking`
 - De standaard afsluitende secties
 - `Klaarcheck`
 
