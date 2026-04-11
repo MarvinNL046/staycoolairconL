@@ -18,7 +18,7 @@ Gebruik deze prompt wanneer je reviewgroei en reviewcadans wilt vergelijken met 
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
 - `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
-- Competitor GBP-URL(s) indien aangeleverd; anders ontdek tijdens live browse
+- Competitor GBP-URL(s) indien aangeleverd, of de top 3 zichtbare concurrenten uit een eerder Map Pack/category-auditresultaat op dezelfde `Target zoektermen`
 - Target zoektermen passend bij de gekozen modus
 - Auditdatum
 - Review snapshots of review-exports voor de laatste 90 dagen
@@ -55,6 +55,8 @@ Geef ook aan of StayCool minder actief oogt dan concurrenten, en wat dat beteken
   - `Auditdatum`
   - locatie/source context
   - exact reviewvenster: 90 kalenderdagen tot en met de auditdatum
+  - `Target zoektermen`
+  - gebruikte competitor-cohort bron
 - Een tabel met reviewvolume, reviewgroei, 90-dagenfrequentie en observaties voor de gekozen pijler of pijlers.
 - Een apart oordeel per gekozen pijler.
 - `Topprioriteiten`

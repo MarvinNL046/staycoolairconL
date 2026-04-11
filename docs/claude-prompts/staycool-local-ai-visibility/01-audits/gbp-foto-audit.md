@@ -18,7 +18,7 @@ Gebruik deze prompt wanneer je GBP-foto's wilt vergelijken op activiteit, inhoud
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
 - `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
-- Competitor GBP-URL(s) indien aangeleverd; anders ontdek tijdens live browse
+- Competitor GBP-URL(s) indien aangeleverd, of de top 3 zichtbare concurrenten uit een eerder Map Pack/category-auditresultaat op dezelfde `Target zoektermen`
 - Target zoektermen passend bij de gekozen modus
 - Auditdatum
 - Observatievenster / lookback window voor de fotoanalyse
@@ -69,9 +69,11 @@ Let specifiek op:
   - `Auditdatum`
   - locatie/source context
   - exact observatievenster
+  - `Target zoektermen`
+  - gebruikte competitor-cohort bron
 - Een tabel per relevant profiel met 90-dagenfrequentie, contenttype, regionale signalen en activity score.
 - Een lijst met fototypes die StayCool vaker moet publiceren.
-- Quick wins voor de komende 30 dagen
+- Quick wins
 - `Topprioriteiten`
 - `Direct publiceerbaar`: concrete foto-opdrachten, caption-ideeën of operator-acties die direct uitvoerbaar zijn.
 - `Later`

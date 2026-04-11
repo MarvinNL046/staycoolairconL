@@ -16,9 +16,10 @@ Gebruik deze prompt wanneer je reviewinhoud wilt vertalen naar meetbare attribut
 - Relevante pijlercontext:
   - `airco-only` -> `00-context/airco-pijler.md`
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
-  - `mixed` -> beide pijlercontexten
+- `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
 - Competitor GBP-URL(s) indien aangeleverd, of top 3 zichtbare concurrenten uit een eerder Map Pack/category-auditresultaat op dezelfde `Target zoektermen`
+- Target zoektermen passend bij de gekozen modus
 - Auditdatum
 - Review snapshots of review-exports
 - Laatste relevante reviewvenster per profiel of concurrent:
@@ -64,6 +65,7 @@ Eindig met de review-attributen die StayCool actief moet verzamelen via reviewve
   - `Auditdatum`
   - locatie/source context
   - exact reviewvenster
+  - `Target zoektermen`
 - Een review-attributentabel per relevante pijler met voorbeelden uit reviews.
 - Een lijst met herhaalde reviewpatronen en ontbrekende reviewtaal.
 - Een slotblok met ontbrekende review-attributen die StayCool actief moet verzamelen.

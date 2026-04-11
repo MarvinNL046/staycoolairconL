@@ -18,7 +18,7 @@ Gebruik deze prompt wanneer je de recentheid, inhoud en regionale signalen van G
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
 - `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
-- Competitor GBP-URL(s) indien aangeleverd; anders ontdek tijdens live browse
+- Competitor GBP-URL(s) indien aangeleverd, of de top 3 zichtbare concurrenten uit een eerder Map Pack/category-auditresultaat op dezelfde `Target zoektermen`
 - Target zoektermen passend bij de gekozen modus
 - Auditdatum
 - Observatievenster / lookback window voor de postanalyse
@@ -63,9 +63,11 @@ Laat zien of de posts vooral promotioneel, informatief, bewijsgericht of regiona
   - `Auditdatum`
   - locatie/source context
   - exact observatievenster
+  - `Target zoektermen`
+  - gebruikte competitor-cohort bron
 - Een tabel per relevant profiel met 90-dagenfrequentie, contenttype, regionale signalen en activity score.
 - Een lijst met contenttypes die StayCool vaker moet posten.
-- Quick wins voor de komende 30 dagen
+- Quick wins
 - `Topprioriteiten`
 - `Direct publiceerbaar`: concrete postideeën, postkoppen of operator-acties voor de komende 30 dagen.
 - `Later`

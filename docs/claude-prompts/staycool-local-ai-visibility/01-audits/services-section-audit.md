@@ -15,9 +15,10 @@ Gebruik deze prompt wanneer je de servicesectie op GBP wilt vergelijken met de d
 - Relevante pijlercontext:
   - `airco-only` -> `00-context/airco-pijler.md`
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
-  - `mixed` -> beide pijlercontexten
+- `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
 - Competitor GBP-URL(s) indien aangeleverd, of top 3 zichtbare concurrenten uit een eerder Map Pack/category-auditresultaat op dezelfde `Target zoektermen`
+- Target zoektermen passend bij de gekozen modus
 - Auditdatum
 - Observatievenster / lookback window voor de servicesectieanalyse
 - Locatie- en broncontext:
@@ -66,6 +67,7 @@ Markeer:
   - `Auditdatum`
   - locatie/source context
   - exact observatievenster
+  - `Target zoektermen`
 - Een servicematrix met StayCool, ontbrekende services en prioriteit voor de gekozen pijler of pijlers.
 - Een apart blok voor de gekozen pijler of pijlers.
 - Een lijst met aanbevolen servicebeschrijvingen of toevoegingen.
