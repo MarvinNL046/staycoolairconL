@@ -39,6 +39,12 @@ Begin met een korte metadata-echo met deze vaste velden:
 Gebruik daarna exact deze tabel:
 | Titel | Zoekintentie | Attribuut | Funnel | Prioriteit | Waarom |
 
+Operationele waarden:
+- `Funnel`: `TOFU`, `MOFU`, `BOFU`, `support`, `onbekend`
+- `Prioriteit`: `hoog`, `middel`, `laag`, `backlog`, `onbekend`
+- gebruik `onbekend` als de input onvoldoende is om een waarde veilig af te leiden
+- gebruik `backlog` alleen voor ideeën die nog niet rijp zijn voor directe planning maar wel bewaard moeten blijven
+
 Werk airco-onderwerpen uit in een backlog die focus houdt op:
 - installatie
 - onderhoud
@@ -63,5 +69,6 @@ Sluit af met exact deze secties, in deze volgorde:
 ## Klaarcheck
 - Ik heb alleen airco-content voorgesteld.
 - Ik heb zoekintentie en attribuut expliciet gemaakt.
+- Ik heb Funnel en Prioriteit voorzien van stabiele waarden en fallback.
 - Ik heb de backlog direct bruikbaar gemaakt.
 - Ik heb Limburg-brede relevantie bewaakt.

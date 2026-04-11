@@ -54,6 +54,7 @@ Mixed-mode regel:
 Operationele waarden:
 - `Pijler`: `airco`, `thuisbatterij`, `gedeeld`
 - `Status`: `groen`, `geel`, `rood`, `onbekend`
+- alleen `Actie` mag `n.v.t.` zijn wanneer er geen concrete actie past
 
 Beoordeel minimaal deze onderdelen:
 - GBP zichtbaarheid
@@ -61,8 +62,7 @@ Beoordeel minimaal deze onderdelen:
 - service- en contentdekking
 - attributen en local relevance
 - nieuwe kansen of risico's
-
-Als een onderdeel niet relevant is voor de aangeleverde pijler, vul dan `n.v.t.` in plaats van te speculeren.
+- als een onderdeel niet relevant is voor de aangeleverde pijler, gebruik in `Actie` `n.v.t.` en laat `Status` strikt op een van de vaste enumwaarden staan
 
 Sluit af met exact deze secties, in deze volgorde:
 - `Topprioriteiten`

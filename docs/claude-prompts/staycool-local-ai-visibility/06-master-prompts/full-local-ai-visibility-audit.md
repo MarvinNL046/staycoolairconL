@@ -73,7 +73,7 @@ Sluit af met een `Top 10 actielijst` en daarna exact deze secties, in deze volgo
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Bron | Samengevoegde bevinding | Duplicaatgroep | Impact | Prioriteit | Actie |`
+- Exact de tabel `| Bron | Pijler | Samengevoegde bevinding | Duplicaatgroep | Impact | Prioriteit | Actie |`
 - Een samengevoegde auditconclusie zonder dubbele bevindingen
 - Een top-10 actielijst in strakke prioriteitsvolgorde
 - De vaste afsluitsecties in de juiste volgorde
