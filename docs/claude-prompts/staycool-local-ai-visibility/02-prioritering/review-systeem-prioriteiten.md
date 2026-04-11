@@ -11,6 +11,7 @@ Gebruik deze prompt nadat de review-audits zijn gedraaid en je wilt bepalen welk
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
+- `00-context/bestaande-site-structuur.md`
 - Relevante pijlercontext op basis van de modus:
   - `airco-only` -> `00-context/airco-pijler.md`
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
@@ -32,6 +33,8 @@ Volg deze regels:
 - geef alleen reviewacties die op basis van de audit logisch zijn;
 - maak onderscheid tussen acquisitie van reviews, verwerking van reviews en zichtbaar maken van reviewbewijskracht;
 - gebruik `onbekend` als details ontbreken.
+- map elke aanbeveling naar een bestaande StayCool pagina/cluster uit `00-context/bestaande-site-structuur.md` of naar een expliciet nieuw assettype;
+- geef per rij `source audit`, `exact target`, `owner`, `dependency` en `do-now/defer`.
 
 Laat de output landen in deze vaste afsluiting:
 ## Topprioriteiten
@@ -40,7 +43,7 @@ Laat de output landen in deze vaste afsluiting:
 ## Later
 
 Gebruik deze tabel om prioriteiten te structureren:
-| Gap | Pijler | Kanaal | Impact | Snelheid | Aanbevolen actie |
+| Gap | Pijler | Kanaal | Impact | Snelheid | Aanbevolen actie | Source audit | Exact target | Owner | Dependency | Do-now/defer |
 
 Definieer:
 - `Impact`: `hoog`, `middel`, `laag`
@@ -58,9 +61,12 @@ Zet prioriteit op:
 - De gevraagde gap-tabel
 - De vier afsluitende secties in vaste volgorde
 - Concrete en directe review-acties
+- Per actie een mapping naar bestaande pagina/cluster of nieuw assettype
+- Bij `mixed` mode aparte `Airco`, `Thuisbatterij` en optioneel `Gedeelde acties` uitwerking
 
 ## Klaarcheck
 - Ik heb reviewproblemen vertaald naar prioriteiten.
 - Ik heb focus gehouden op praktische uitvoering.
 - Ik heb de Limburg-brede en pijlerspecifieke context bewaakt.
+- Ik heb elke aanbeveling gekoppeld aan een bestaande pagina/cluster of een nieuw assettype.
 - Ik heb de output geschikt gemaakt voor backlog en uitvoering.

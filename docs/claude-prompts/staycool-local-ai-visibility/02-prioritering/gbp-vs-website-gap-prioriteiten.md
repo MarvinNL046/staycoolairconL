@@ -11,6 +11,7 @@ Gebruik deze prompt wanneer je de auditresultaten tussen GBP en website wilt nor
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
+- `00-context/bestaande-site-structuur.md`
 - Relevante pijlercontext op basis van de modus:
   - `airco-only` -> `00-context/airco-pijler.md`
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
@@ -31,9 +32,11 @@ Volg deze regels:
 - maak onderscheid tussen gaps die direct op GBP moeten worden opgelost en gaps die op de website thuishoren;
 - kies altijd voor een praktische, operatorgerichte aanbeveling;
 - gebruik `onbekend` wanneer de input onvoldoende is.
+- map elke aanbeveling naar een bestaande StayCool pagina/cluster uit `00-context/bestaande-site-structuur.md` of naar een expliciet nieuw assettype;
+- geef per rij `source audit`, `exact target`, `owner`, `dependency` en `do-now/defer`.
 
 Werk de gaps uit in deze tabel:
-| Gap | Pijler | Kanaal | Impact | Snelheid | Aanbevolen actie |
+| Gap | Pijler | Kanaal | Impact | Snelheid | Aanbevolen actie | Source audit | Exact target | Owner | Dependency | Do-now/defer |
 
 Definieer:
 - `Impact`: `hoog`, `middel`, `laag`
@@ -50,9 +53,12 @@ Sluit af met deze secties:
 - De gevraagde gap-tabel met kanaalduiding
 - De vier afsluitende secties in de vaste volgorde
 - Een duidelijke scheiding tussen GBP-acties en website-acties
+- Per actie een expliciete link naar bestaande pagina/cluster of nieuw assettype
+- Bij `mixed` mode aparte `Airco`, `Thuisbatterij` en optioneel `Gedeelde acties` prioritering
 
 ## Klaarcheck
 - Ik heb GBP en website tegen elkaar afgezet.
 - Ik heb de belangrijkste mismatchgebieden geprioriteerd.
 - Ik heb de Limburg-brede focus aangehouden.
+- Ik heb elke aanbeveling gekoppeld aan een bestaande pagina/cluster of een nieuw assettype.
 - Ik heb de output teruggebracht tot concrete acties.
