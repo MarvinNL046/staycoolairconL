@@ -35,6 +35,10 @@ Volg deze regels:
 - gebruik natuurlijke Limburg-verwijzing waar dat past;
 - houd de toon vriendelijk, niet opdringerig en direct bruikbaar.
 - gebruik alleen placeholders die expliciet in de input zijn meegegeven.
+- houd service-moment rows op maximaal 220 tekens;
+- houd short WhatsApp version op maximaal 160 tekens;
+- houd short e-mail version op maximaal 240 tekens;
+- gebruik de kanaalmapping exact zoals hieronder, zonder extra kanaalvarianten.
 
 ## Vereiste rijset per modus
 ### airco-only
@@ -59,6 +63,11 @@ Volg deze regels:
 - alle 5 rijen uit `airco-only`
 - alle 3 rijen uit `thuisbatterij-only`
 - totaal: 8 rijen
+
+## Canonieke row rule
+- elke rij staat voor precies één trigger én één kanaal;
+- service-moment rows zijn afzonderlijke rijen en worden niet samengevoegd met de korte standaardrijen;
+- `short WhatsApp version` en `short e-mail version` zijn per pijler apart in `mixed`, niet gedeeld.
 
 ## Kanaal mapping
 - service-moment rows: `Kanaal` komt uit de input; als dat ontbreekt, zet `Kanaal` op `onbekend` en maak geen extra kanaal-duplicaten

@@ -40,17 +40,11 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Broncontext`
 - `Gebruikte input`
 - `Periode`
+- `Handoff bron`
+- `Auditbasis`
 
 Gebruik daarna exact deze tabel:
 | Week | Aantal foto's | Type | Waar fotograferen | Waarom dit telt |
-
-De metadata-echo moet altijd expliciet aangeven:
-- `Modus`
-- `Broncontext`
-- `Gebruikte input`
-- `Periode`
-- `Handoff bron`
-- `Auditbasis`
 
 Mixed-mode labeling:
 - als `Modus` = `mixed`, begin de waarde in `Type` met `Airco -` of `Thuisbatterij -`
@@ -70,7 +64,7 @@ Sluit af met:
 ## Later
 
 ## Verwachte output
-- Korte metadata-echo met de vaste velden
+- Eén metadata-blok met de vaste velden
 - Een expliciete handoff naar de gebruikte audit- en prioriteringsinput
 - Een 8-weken schema met exact de gevraagde kolommen
 - Mixed-mode labeling via de `Type`-waarde, niet via een extra kolom

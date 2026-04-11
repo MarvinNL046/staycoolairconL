@@ -3,6 +3,7 @@
 Deze bibliotheek is gemaakt voor StayCool Airco en gebruik in Claude in Chrome.
 
 Primaire operating mode voor de auditlaag: live browse eerst in Claude in Chrome, met evidence-only fallback als live toegang onvolledig is.
+`03-gbp-productie` is live en direct bruikbaar.
 De contextlaag bestaat nu en `01-audits` is live en bruikbaar.
 Latere promptlagen kunnen nog gedeeltelijk scaffolded of onvolledig zijn.
 Raadpleeg eerst `prompt-rules.md` voordat je prompts maakt of gebruikt.
@@ -28,8 +29,45 @@ De flow hieronder is de beoogde toekomstige workflow zodra de promptbestanden be
 1. Laad eerst relevante contextbestanden.
 2. Run daarna een auditprompt.
 3. Zet de audit om naar prioriteiten.
-4. Gebruik productieprompts om copy of backlog te maken.
+4. Gebruik `02-prioritering` als handoff naar `03-gbp-productie`.
+5. Gebruik productieprompts om copy of backlog te maken.
 5. Gebruik executieroutines voor onderhoud.
+
+## Production Path
+Supported run path voor `03-gbp-productie`:
+1. Kies modus: `airco-only`, `thuisbatterij-only`, of `mixed`.
+2. Laad de relevante context uit `00-context`.
+3. Laad de relevante handoff uit `01-audits`.
+4. Laad de prioritering uit `02-prioritering`.
+5. Vul de preflight in.
+6. Run de gekozen productieprompt.
+
+## Production Preflight
+Gebruik dit blok vóór een Task 5 productieprompt:
+
+```text
+modus:
+geladen context:
+- bedrijf-profiel:
+- usp-en-positionering:
+- limburg-brede-focus:
+- pijlercontext:
+- bestaand-structuur:
+handoff audit/prioritering:
+- 01-audits:
+- 02-prioritering:
+source inputs:
+- auditfiles:
+- prioriteringsfiles:
+- bewijsinputs:
+required placeholders/links:
+- review_link:
+- cta_destination:
+- merge_fields:
+- bron_review_id:
+```
+
+Vul alleen in wat de gekozen prompt nodig heeft. Laat irrelevante regels leeg of verwijder ze niet; de prompt bepaalt wat verplicht is.
 
 ## Task 3 Run Order
 1. Foundation audits: GBP-categorie, GBP-attributen, services section.

@@ -36,6 +36,10 @@ Volg deze regels:
 - gebruik natuurlijke CTA's en geen lege marketingtaal;
 - gebruik plaatsnamen alleen als regionaal bewijs;
 - vermijd herhaling van dezelfde invalshoek.
+- houd elke publish-ready postcopy op 80-180 woorden;
+- houd de titel/haakje onder 60 tekens;
+- houd de CTA onder 12 woorden;
+- houd de image suggestion op 1 korte zin.
 
 Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Modus`

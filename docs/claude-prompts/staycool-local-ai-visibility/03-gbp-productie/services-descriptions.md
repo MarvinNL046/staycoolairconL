@@ -34,6 +34,10 @@ Volg deze regels:
 - gebruik plaatsnamen alleen als regionale verwijzing;
 - vermijd duplicatie tussen services;
 - als input onvolledig is, benoem dat expliciet.
+- houd beschrijvingen per rij op 1 regel of maximaal 2 korte zinnen;
+- mik op 20-35 woorden per beschrijving;
+- lever alleen services aan die direct bruikbaar zijn voor GBP-invoer of operator-check;
+- als een service of belofte langer wordt dan 35 woorden, kort hem in voordat je de tabel vult.
 
 Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Modus`

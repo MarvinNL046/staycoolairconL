@@ -35,6 +35,8 @@ Volg deze regels:
 - gebruik natuurlijke service- en regioverwijzingen waar dat past;
 - wees evidence-first en niet speculatief.
 - vereist één exact outputschema: geen vrije lijst, geen schema-varianten.
+- houd elke antwoordregel op maximaal 2 zinnen of 140 tekens per antwoord, tenzij de bronvraag langer vereist;
+- lever alleen vragen die uit de opgegeven backlog of input komen.
 
 Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Modus`
