@@ -8,6 +8,13 @@ De contextlaag bestaat nu en `01-audits` is live en bruikbaar.
 Latere promptlagen kunnen nog gedeeltelijk scaffolded of onvolledig zijn.
 Raadpleeg eerst `prompt-rules.md` voordat je prompts maakt of gebruikt.
 
+## Snelle start
+- [Foundation audits](./01-audits/)
+- [GBP copy](./03-gbp-productie/)
+- [Website content](./04-website-productie/)
+- [Review engine](./05-executie-routines/)
+- [Master prompts](./06-master-prompts/)
+
 ## Doel
 - klassieke local SEO versterken;
 - AI attribute match versterken;

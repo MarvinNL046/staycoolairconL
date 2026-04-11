@@ -16,6 +16,14 @@ Gebruik standaard deze afsluiting voor analyse- en productieprompts:
   - `Later`
 Kleine utility-scaffolds mogen hiervan afwijken.
 
+## QA Checklist
+- Is de output in Nederlands?
+- Zijn `airco` en `thuisbatterijen` apart benoemd?
+- Is `Limburg breed` correct meegenomen?
+- Is de output beslisbaar?
+- Staat er direct publiceerbare output in?
+- Eindigt de prompt met de vier vaste afsluitblokken?
+
 ## Context Load Matrix
 
 ### Airco-only
