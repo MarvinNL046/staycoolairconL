@@ -33,6 +33,9 @@ Maak een prioriteitstabel met exact deze kolommen:
 
 Werk alleen met termen die echt in de input voorkomen of duidelijk uit de exports blijken.
 Koppel elke zoekvraag aan de huidige content en benoem waar de copy nog te dun of te impliciet is.
+Markeer expliciet per zoekvraag:
+- `ontbrekende woorden`
+- `semantische details`
 
 ## Verwachte output
 - Een prioriteitstabel met de gevraagde kolommen.
