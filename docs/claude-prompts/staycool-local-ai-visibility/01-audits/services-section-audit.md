@@ -19,6 +19,9 @@ Gebruik deze prompt wanneer je de servicesectie op GBP wilt vergelijken met de d
 - Target GBP-URL(s) van StayCool
 - Competitor GBP-URL(s)
 - Target zoektermen passend bij de gekozen modus
+- Auditdatum
+- Observatievenster / lookback window voor de servicesectieanalyse
+- Locatie- en broncontext voor de observatie
 - Screenshots of gekopieerde GBP-servicesobservaties
 - Laatste zichtbare servicesectie of profielsnapshot
 
@@ -32,6 +35,7 @@ Volg deze regels:
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
 - gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+- leg per observatie vast wat de auditdatum, het lookback window en de broncontext zijn, zodat een herhaalrun vergelijkbaar blijft.
 - als screenshots, exports of observaties onvolledig zijn, markeer het item als `onbekend`, noteer welke input ontbreekt en doe geen aannames.
 
 Definieer schalen als volgt:

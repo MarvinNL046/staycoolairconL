@@ -29,7 +29,7 @@ Kleine utility-scaffolds mogen hiervan afwijken.
 - Optional: `00-context/concurrentenlijst.md`, `00-context/kernzoekwoorden.md`
 
 ## Context-First Status
-- Deze bibliotheek is context-first, met een werkende contextlaag en auditlaag.
-- De huidige documenten leveren basiscontext en een eerste set audits; latere promptlagen kunnen nog scaffolded of onvolledig zijn.
+- Deze bibliotheek is context-first, met een werkende contextlaag en een live auditlaag in `01-audits`.
+- De huidige documenten leveren basiscontext en de eerste set audits; latere promptlagen kunnen nog scaffolded of onvolledig zijn.
 - Latere promptlagen voegen prioritering, productie en executieroutines verder toe.
 - Kies per prompt altijd eerst de juiste contextset uit de matrix hierboven.

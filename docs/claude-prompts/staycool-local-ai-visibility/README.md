@@ -2,7 +2,8 @@
 
 Deze bibliotheek is gemaakt voor StayCool Airco en gebruik in Claude in Chrome.
 
-Dit is momenteel een scaffold; de losse promptbestanden moeten nog worden aangemaakt voordat de gebruiksstroom volledig uitvoerbaar is.
+De contextlaag bestaat nu en `01-audits` is live en bruikbaar.
+Latere promptlagen kunnen nog gedeeltelijk scaffolded of onvolledig zijn.
 Raadpleeg eerst `prompt-rules.md` voordat je prompts maakt of gebruikt.
 
 ## Doel

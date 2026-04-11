@@ -20,6 +20,9 @@ Gebruik deze prompt wanneer je de recentheid, inhoud en regionale signalen van G
 - Target GBP-URL(s) van StayCool
 - Competitor GBP-URL(s)
 - Target zoektermen passend bij de gekozen modus
+- Auditdatum
+- Observatievenster / lookback window voor de postanalyse
+- Locatie- en broncontext voor de observatie
 - Screenshots of gekopieerde GBP-postobservaties
 - 90-dagen postbewijs of post-exports per profiel
 
@@ -33,6 +36,7 @@ Volg deze regels:
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
 - gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+- leg per observatie vast wat de auditdatum, het lookback window en de broncontext zijn, zodat een herhaalrun vergelijkbaar blijft.
 - als screenshots, exports of observaties onvolledig zijn, markeer het item als `onbekend`, noteer welke input ontbreekt en doe geen aannames.
 
 Definieer schalen als volgt:
