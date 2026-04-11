@@ -85,11 +85,11 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Vraag | Pijler | Kort antwoord | Doelpagina / paginafamilie | Routefamilie / publicatiesurface | Indexed / noindex | Schema-geschikt | Waarom nu |`
+- Exact de tabel `| Vraag | Pijler | Crossover | Kort antwoord | Doelpagina / paginafamilie | Routefamilie / publicatiesurface | Indexed / noindex | Schema-geschikt | Waarom nu |`
 - 10 FAQ's per pijler waar relevant, met korte antwoorden
 - Schema-vriendelijke formuleringen
 - Een publiceerbaar FAQ-blok per pijler
-- De vaste sectie `### Publiceerbaar FAQ-blok` met `| Pijler | Publicatiesurface | Indexed / noindex | FAQ-set | CMS-ready opmerking |`
+- De vaste sectie `### Publiceerbaar FAQ-blok` met `| Pijler | Crossover | Publicatiesurface | Indexed / noindex | FAQ-set | CMS-ready opmerking |`
 - De standaard afsluitende secties
 - `Klaarcheck`
 

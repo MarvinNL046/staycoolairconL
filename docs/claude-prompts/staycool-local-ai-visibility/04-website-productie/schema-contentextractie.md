@@ -67,6 +67,10 @@ Vereisten voor de extractie:
 - geef per bruikbaar item een eigen rij;
 - in `mixed` mode splits je airco en thuisbatterij zichtbaar uit;
 - in `mixed` mode vul je per rij altijd `Pijler` en `Crossover` in;
+- gebruik in mixed mode alleen deze waarden:
+  - `Pijler`: `airco`, `thuisbatterij`
+  - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
+- laat deze waarden niet leeg en gebruik geen andere labels in mixed mode;
 - gebruik alleen extracties die direct uit de input volgen;
 - markeer ontbrekende of zwakke onderbouwing met `onbekend`;
 - maak de output geschikt voor redactie, schema-invoer of contentbriefing;

@@ -46,11 +46,12 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna uitsluitend met deze tabel:
-| Concrete pagina / route | Huidige tekortkoming | Ontbrekend attribuut | Nieuwe sectie | Publishing surface | Interne linkkans |
+| Concrete pagina / route | Pijler | Crossover | Huidige tekortkoming | Ontbrekend attribuut | Nieuwe sectie | Publishing surface | Interne linkkans |
 
 Vereisten voor de tabel:
 - gebruik alleen bestaande pagina's of routes uit de site-structuur;
 - in `mixed` mode splits je airco en thuisbatterijen zichtbaar uit;
+- in mixed mode vul je per rij altijd `Pijler` en `Crossover` in;
 - de primaire target moet een concrete pagina of route zijn die de operator kan aanpassen;
 - benoem per rij wat de kleinste bruikbare refresh is;
 - maak de interne linkkans concreet, niet algemeen;
@@ -70,7 +71,7 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Concrete pagina / route | Huidige tekortkoming | Ontbrekend attribuut | Nieuwe sectie | Publishing surface | Interne linkkans |`
+- Exact de tabel `| Concrete pagina / route | Pijler | Crossover | Huidige tekortkoming | Ontbrekend attribuut | Nieuwe sectie | Publishing surface | Interne linkkans |`
 - Een compacte refresh-rangorde voor bestaande content
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - De standaard afsluitende secties

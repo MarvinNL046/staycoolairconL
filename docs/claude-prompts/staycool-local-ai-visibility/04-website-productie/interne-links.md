@@ -46,11 +46,12 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Gebruik daarna exact deze tabel:
-| Bronpagina | Doelpagina | Anchor | Publishing surface bron | Publishing surface doel | Waarom |
+| Bronpagina | Doelpagina | Pijler | Crossover | Anchor | Publishing surface bron | Publishing surface doel | Waarom |
 
 Vereisten voor de tabel:
 - geef per relevante link een eigen rij;
 - in `mixed` mode splits je airco en thuisbatterij zichtbaar uit;
+- in mixed mode vul je per rij altijd `Pijler` en `Crossover` in;
 - gebruik alleen bron- en doelpagina's die passen bij een expliciet benoemde publishing surface uit de site-structuur;
 - maak het waarom concreet: attribuut, intentie of regionale match;
 - noteer onzekerheden met `onbekend` als de broninput tekortschiet.
@@ -68,7 +69,7 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Bronpagina | Doelpagina | Anchor | Publishing surface bron | Publishing surface doel | Waarom |`
+- Exact de tabel `| Bronpagina | Doelpagina | Pijler | Crossover | Anchor | Publishing surface bron | Publishing surface doel | Waarom |`
 - Een praktische interne-linkmap voor redactie of CMS
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - De standaard afsluitende secties
