@@ -18,7 +18,7 @@ Gebruik deze prompt wanneer je reviewinhoud wilt vertalen naar meetbare attribut
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
   - `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
-- Competitor GBP-URL(s) indien aangeleverd; anders ontdek tijdens live browse
+- Competitor GBP-URL(s) indien aangeleverd, of top 3 zichtbare concurrenten uit een eerder Map Pack/category-auditresultaat op dezelfde `Target zoektermen`
 - Auditdatum
 - Review snapshots of review-exports
 - Laatste relevante reviewvenster per profiel of concurrent:

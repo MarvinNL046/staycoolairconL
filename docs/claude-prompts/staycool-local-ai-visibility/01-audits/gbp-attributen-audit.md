@@ -18,7 +18,7 @@ Gebruik deze prompt wanneer je de zichtbare profielattributen in Google Maps wil
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
   - `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
-- Competitor GBP-URL(s) indien aangeleverd; anders ontdek tijdens live browse
+- Competitor GBP-URL(s) indien aangeleverd, of top 3 zichtbare concurrenten uit een eerder Map Pack/category-auditresultaat op dezelfde `Target zoektermen`
 - Screenshots of gekopieerde Google Maps- en GBP-observaties
 - Vastgelegde zoekdatum en gebruikte locatie-instelling
 
@@ -58,7 +58,7 @@ Sluit af met een prioriteitenlijst voor attribute gaps.
 - Metadata-echo:
   - `Auditdatum`
   - locatie/source context
-  - exact zoekvenster
+  - profiel/snapshot context
 - Een attributentabel per pijler met StayCool versus concurrenten.
 - Een gap-overzicht met ontbrekende of zwakke attributen.
 - `Topprioriteiten`

@@ -9,8 +9,8 @@
 
 ## Status
 - Nog niet gecureerd.
-- Voor live-browse audits is deze lijst optioneel; Claude mag concurrenten tijdens de audit ontdekken wanneer dat nodig is.
-- Voor evidence-only of competitie-zware audits heeft een vooraf ingevulde lijst de voorkeur.
+- Voor live-browse audits is deze lijst optioneel; Claude mag concurrenten tijdens de audit ontdekken, maar moet dan de top 3 zichtbaarste concurrenten uit het bijbehorende Map Pack/category-auditresultaat hergebruiken.
+- Voor evidence-only of competitie-zware audits moet deze lijst vooraf worden ingevuld of moeten concurrenten via een eerder auditresultaat zijn aangeleverd.
 - Zonder ingevulde set geen aannames over concurrenten meenemen in prompts.
 
 | Naam | Type concurrent | Positionering | GBP URL | Website URL | Regio / plaats | Waarom relevant |
