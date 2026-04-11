@@ -44,6 +44,7 @@ De flow hieronder is de beoogde toekomstige workflow zodra de promptbestanden be
 - Optional: `00-context/concurrentenlijst.md`, `00-context/kernzoekwoorden.md`
 
 ## Status
-- Deze bibliotheek is context-first en nog een scaffold.
-- De contextlaag is bedoeld om latere promptlagen te voeden zodra die zijn toegevoegd.
+- De contextlaag en auditlaag zijn aanwezig en bruikbaar.
+- Latere promptlagen kunnen nog scaffolded of gedeeltelijk ingevuld zijn.
+- De contextlaag blijft bedoeld om latere promptlagen te voeden zodra die verder zijn uitgewerkt.
 - Gebruik de matrix hierboven om te bepalen welke context minimaal geladen moet worden per prompttype.

@@ -20,7 +20,8 @@ Gebruik deze prompt wanneer je reviewgroei en reviewcadans wilt vergelijken met 
 - Target GBP-URL(s) van StayCool
 - Competitor GBP-URL(s)
 - Target zoektermen passend bij de gekozen modus
-- Review snapshots of review-exports
+- Review snapshots of review-exports voor minimaal de laatste 90 dagen
+- 90-dagen reviewbewijs per profiel of concurrent, of een export waar die periode uit kan worden afgeleid
 - Laatste relevante reviewvenster per profiel of concurrent:
   - gebruik de auditdatum als eindpunt;
   - neem reviews uit de 30 kalenderdagen tot en met die datum;
