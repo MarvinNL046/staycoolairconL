@@ -41,7 +41,7 @@ Volg deze regels:
 - gebruik tabellen waar dat helpt;
 - maak zichtbaar welke bronpagina of welke passage elk extract ondersteunt;
 - koppel de extractie aan een expliciet benoemde publishing surface uit de site-structuur;
-- sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later`.
+- sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later` en `Klaarcheck`.
 
 Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Modus`

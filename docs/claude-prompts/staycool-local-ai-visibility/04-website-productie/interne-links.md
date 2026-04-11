@@ -36,7 +36,7 @@ Volg deze regels:
 - laat anchors natuurlijk, inhoudelijk en attribuutgedreven zijn;
 - koppel links aan bestaande routes of benoemde site families;
 - voorkom dubbele of zwakke anchorteksten;
-- sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later`.
+- sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later` en `Klaarcheck`.
 
 Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Modus`

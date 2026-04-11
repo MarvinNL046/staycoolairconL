@@ -36,7 +36,7 @@ Volg deze regels:
 - laat voorstellen alleen staan als ze aansluiten op een concrete publishing surface uit de site-structuur;
 - gebruik prioriteit, evidence en publiceerbaarheid als doorslaggevende filters;
 - noteer onzekerheden kort en concreet;
-- sluit steeds af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later`.
+- sluit steeds af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later` en `Klaarcheck`.
 
 Gebruik alleen deze expliciete publishing surfaces waar passend:
 - `/landing/*`
@@ -54,7 +54,7 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna uitsluitend met deze tabel:
-| Titel | Pijler | Zoekintentie | Hoek | Waarom nu | Aanbevolen URL |
+| Titel | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Indexed / noindex | Crossover | Waarom nu |
 
 Vereisten voor de tabel:
 - geef per relevant voorstel een eigen rij;
@@ -64,6 +64,8 @@ Vereisten voor de tabel:
 - maak expliciet of het voorstel bedoeld is voor indexed content of support/noindex;
 - in `mixed` mode splits je airco en thuisbatterij zichtbaar uit;
 - selecteer alleen voorstellen die direct terug te voeren zijn op de audits, de prioritering of de bestaande site-structuur.
+- vul per rij altijd `Indexed / noindex` in;
+- vul per rij altijd `Crossover` in met `Airco-only`, `Thuisbatterij-only` of `Gedeelde asset` / `Crossover asset`.
 
 Vereisten voor mixed mode:
 - maak duidelijk welke voorstellen `Airco-only` zijn, welke `Thuisbatterij-only` zijn en welke `Gedeelde asset` / `Crossover asset` zijn;
@@ -77,7 +79,7 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Titel | Pijler | Zoekintentie | Hoek | Waarom nu | Aanbevolen URL |`
+- Exact de tabel `| Titel | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Indexed / noindex | Crossover | Waarom nu |`
 - Een korte, concrete rangorde van de beste nieuwe servicepagina's
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - Een expliciete `Gedeelde asset` / `Crossover asset`-labeling waar passend in mixed mode

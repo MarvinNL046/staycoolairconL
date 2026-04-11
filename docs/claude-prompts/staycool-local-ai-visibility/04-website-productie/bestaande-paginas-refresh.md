@@ -36,7 +36,7 @@ Volg deze regels:
 - focus op bestaande pagina's, secties en publishing surfaces, niet op losstaande ideeën;
 - gebruik de huidige route- en surface-logica uit de site-structuur;
 - kies steeds de kleinste wijziging die een echt inhoudelijk gat vult;
-- sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later`.
+- sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later` en `Klaarcheck`.
 
 Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Modus`

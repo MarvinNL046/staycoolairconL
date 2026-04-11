@@ -28,7 +28,7 @@ Werk evidence-first en gebruik alleen vragen die logisch volgen uit de audits, p
 Maak in de output de volgende hoeveelheden zichtbaar:
 - `airco-only`: 10 FAQ's voor airco
 - `thuisbatterij-only`: 10 FAQ's voor thuisbatterijen
-- `mixed`: 10 FAQ's voor airco en 10 FAQ's voor thuisbatterijen
+- `mixed`: exact 20 FAQ's totaal, bestaande uit 10 FAQ's voor airco en 10 FAQ's voor thuisbatterijen; een `Gedeelde asset` / `Crossover asset`-label telt binnen die 20 en komt niet erbovenop
 
 Lever de output als een publiceerbaar FAQ-blok op de website, niet als losse lijst zonder implementatiehouvast. Elke FAQ moet kunnen landen op een concrete target page, route family en indexability-keuze.
 
@@ -40,7 +40,7 @@ Volg deze regels:
 - gebruik schema-vriendelijke vraagformuleringen;
 - vermijd dubbele vragen of bijna dezelfde variant;
 - maak het onderscheid tussen airco en thuisbatterijen zichtbaar waar de modus dat vraagt;
-- sluit steeds af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later`.
+- sluit steeds af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later` en `Klaarcheck`.
 
 Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Modus`

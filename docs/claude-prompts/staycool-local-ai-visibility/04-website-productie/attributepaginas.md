@@ -42,7 +42,7 @@ Volg deze regels:
 - laat elk voorstel landen op een herkenbare publishing surface;
 - koppel voorstellen aan bestaande routes of benoemde site families;
 - maak zichtbaar waarom het attribuut nu belangrijk is;
-- sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later`.
+- sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later` en `Klaarcheck`.
 
 Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Modus`

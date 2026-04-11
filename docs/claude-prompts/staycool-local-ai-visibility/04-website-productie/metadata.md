@@ -34,7 +34,7 @@ Volg deze regels:
 - koppel metadata aan echte routes, publishing surfaces en pagina-typen uit de site-structuur;
 - laat title, description en H1 inhoudelijk op elkaar aansluiten;
 - gebruik prioriteit, evidence en publiceerbaarheid als selectiecriteria;
-- sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later`.
+- sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later` en `Klaarcheck`.
 
 Gebruik alleen deze expliciete publishing surfaces waar passend:
 - `/landing/*`
@@ -52,7 +52,7 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna met deze tabel:
-| Pagina of surface | Huidige metadata-zwakte | Nieuwe title tag | Meta description | H1 / slug-check | Opmerking |
+| Pagina of surface | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | H1 / slug-check | Opmerking |
 
 Vereisten voor de tabel:
 - geef per pagina of surface een eigen rij;
@@ -62,6 +62,8 @@ Vereisten voor de tabel:
 - gebruik enkel metadata die past bij de echte inhoud en zoekintentie;
 - noteer onzekerheid met `onbekend` in plaats van een aanname;
 - waar relevant mag je ook relevante snippet- of OG-varianten noemen in de opmerking.
+- vul per rij altijd `Pijler` in;
+- vul per rij altijd `Crossover` in met `Airco-only`, `Thuisbatterij-only` of `Gedeelde asset` / `Crossover asset`.
 
 Vereisten voor mixed mode:
 - maak duidelijk welke metadata hoort bij `Airco-only`, `Thuisbatterij-only` en welke bij een `Gedeelde asset` / `Crossover asset` hoort;
@@ -75,7 +77,7 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Pagina of surface | Huidige metadata-zwakte | Nieuwe title tag | Meta description | H1 / slug-check | Opmerking |`
+- Exact de tabel `| Pagina of surface | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | H1 / slug-check | Opmerking |`
 - Een compacte set metadata-aanpassingen die direct in CMS of briefing past
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - Een expliciete `Gedeelde asset` / `Crossover asset`-scheiding waar passend in mixed mode
