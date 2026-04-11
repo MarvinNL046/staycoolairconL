@@ -22,7 +22,9 @@ Kleine utility-scaffolds mogen hiervan afwijken.
 - Is `Limburg breed` correct meegenomen?
 - Is de output beslisbaar?
 - Staat er direct publiceerbare output in?
-- Eindigt de prompt met de vier vaste afsluitblokken?
+- Eindigt de output met de afgesproken slotsecties in de juiste volgorde?
+- Staat `Klaarcheck` erin als de prompt die sectie vereist?
+- Staat bij masterprompts een `Top 10 actielijst` vóór of naast de standaard slotsecties als dat contractueel is vastgelegd?
 
 ## Context Load Matrix
 

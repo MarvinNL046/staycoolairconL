@@ -9,10 +9,13 @@ Latere promptlagen kunnen nog gedeeltelijk scaffolded of onvolledig zijn.
 Raadpleeg eerst `prompt-rules.md` voordat je prompts maakt of gebruikt.
 
 ## Snelle start
+1. Lees eerst `prompt-rules.md`.
+2. Laad daarna de juiste context via de matrix hieronder.
+3. Kies vervolgens de juiste werklaag:
 - [Foundation audits](./01-audits/)
 - [GBP copy](./03-gbp-productie/)
 - [Website content](./04-website-productie/)
-- [Review engine](./05-executie-routines/)
+- [Executieroutines](./05-executie-routines/)
 - [Master prompts](./06-master-prompts/)
 
 ## Doel
