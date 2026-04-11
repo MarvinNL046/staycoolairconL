@@ -29,7 +29,7 @@ Recovery rule: gebruik live browse alleen als een vereiste handoff ontbreekt of 
 Maak in de output de volgende hoeveelheden zichtbaar:
 - `airco-only`: 10 FAQ's voor airco
 - `thuisbatterij-only`: 10 FAQ's voor thuisbatterijen
-- `mixed`: exact 20 FAQ-rijen totaal in de hoofdtafel, bestaande uit 10 `airco`-rijen en 10 `thuisbatterij`-rijen; elke rij krijgt precies één `Pijler`-waarde (`airco` of `thuisbatterij`), en als `Crossover` `Gedeelde asset` of `Crossover asset` is, dan telt die rij gewoon mee binnen de 10 van die `Pijler` en nooit extra
+- `mixed`: exact 20 FAQ-rijen totaal in de hoofdtafel, bestaande uit 10 `airco`-rijen en 10 `thuisbatterij`-rijen; elke rij krijgt precies één `Pijler`-waarde (`airco` of `thuisbatterij`), en als een FAQ shared/crossover is, wordt die in de hoofdtafel als twee canonieke rijen opgenomen: één `airco`, één `thuisbatterij`; die twee rijen tellen samen als 2 van de 20 en nooit als 1 plus extra
 
 Lever de output als een publiceerbaar FAQ-blok op de website, niet als losse lijst zonder implementatiehouvast. Elke FAQ moet kunnen landen op een concrete target page, route family en indexability-keuze.
 
@@ -60,7 +60,9 @@ Vereisten voor de tabel:
 - gebruik in mixed mode alleen deze waarden:
   - `Pijler`: `airco`, `thuisbatterij`
   - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
+- `Pijler` is verplicht en mag in mixed mode alleen `airco` of `thuisbatterij` zijn; een FAQ/shared asset krijgt nooit een derde of vage pillarwaarde.
 - laat deze waarden niet leeg en gebruik geen andere labels in mixed mode;
+- als een FAQ shared/crossover is in mixed mode, geef dan twee canonieke rijen: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen dragen dezelfde publicatiesurface en het passende `Crossover`-label;
 - korte antwoorden blijven compact en direct publiceerbaar;
 - markeer een antwoord als schema-geschikt als het zonder bewerking in FAQ schema kan landen;
 - wijs elke FAQ toe aan een target page of page family;
@@ -73,6 +75,9 @@ Vereisten voor publiceerbaarheid:
 - maak per pijler een publishable FAQ-blok dat direct in CMS of content kan worden ingezet;
 - gebruik in mixed mode waar passend een `Gedeelde asset` / `Crossover asset`-blok als de FAQ-set inhoudelijk voor beide pijlers werkt;
 - maak duidelijk welke vragen airco-only, thuisbatterij-only of crossover zijn.
+- als een FAQ-set shared/crossover is in mixed mode, reflecteer die dan in het publiceerbare blok als twee canonieke rijen: één `airco`, één `thuisbatterij`; de hoofdtafel blijft exact 20 rijen en de publiceerbare blokkering mag dezelfde 2-rij vertegenwoordiging gebruiken als handoff.
+- in mixed mode geldt: de hoofdtafel blijft exact 20 rijen, waarvan shared/crossover content altijd als 2 canonieke rijen meetelt; de publiceerbare blokkering mag dezelfde 2-rij vertegenwoordiging gebruiken als handoff, maar nooit een extra derde rij toevoegen.
+- de hoofdtafel is de canonieke telling; `### Publiceerbaar FAQ-blok` is alleen een handoff-laag en mag alleen dezelfde canonieke 2-rij vertegenwoordiging herhalen, nooit een extra of afwijkende shared rij toevoegen.
 
 Vast publiceerbaar FAQ-blok:
 ### Publiceerbaar FAQ-blok

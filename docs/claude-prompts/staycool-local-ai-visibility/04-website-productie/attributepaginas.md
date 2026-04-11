@@ -64,6 +64,11 @@ Vereisten voor de tabel:
 - noem de aanbevolen URL alleen als die logisch past binnen de huidige routes;
 - maak het onderscheid tussen indexed content en support/noindex expliciet in de tabel;
 - als de input onvoldoende bewijs geeft, noteer `onbekend` in plaats van een aanname.
+- gebruik in mixed mode alleen deze waarden:
+  - `Pijler`: `airco`, `thuisbatterij`
+  - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
+- `Pijler` is verplicht en mag in mixed mode alleen `airco` of `thuisbatterij` zijn; een attribuut/shared asset krijgt nooit een derde of vage pillarwaarde.
+- als een attribuut/shared asset in mixed mode geldt, geef dan twee canonieke rijen: één `airco`, één `thuisbatterij`; beide gebruiken dezelfde surface en het passende `Crossover`-label.
 
 Vereisten voor de framing:
 - toon per rij expliciet hoe de vraag-naar-antwoord attributepagina de klantvraag omzet in een antwoordgedreven pagina;
@@ -73,7 +78,7 @@ Vereisten voor de framing:
 Vereisten voor surface- en crossover-normalisatie:
 - gebruik alleen expliciete publishing surfaces zoals `/landing/*`, root-level money pages, `/kennisbank/*`, `/seo/pillar-*/*`, `*/noindex/*` of een andere benoemde site family uit de site-structuur;
 - vul per rij altijd `Indexed / noindex` in;
-- vul per rij altijd `Crossover` in met `Airco-only`, `Thuisbatterij-only` of `Gedeelde asset` / `Crossover asset`;
+- vul per rij altijd `Crossover` in met `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset` of `Crossover asset`;
 - een crossover-rij mag alleen als de site-structuur en de handoff die combinatie dragen.
 
 Sluit af met:

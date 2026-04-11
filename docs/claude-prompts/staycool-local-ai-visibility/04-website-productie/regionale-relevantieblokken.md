@@ -66,7 +66,12 @@ Vereisten voor de tabel:
 - gebruik alleen regio-invalshoeken die uit de input of site-structuur volgen;
 - noteer onzekerheid met `onbekend` wanneer bewijs of context ontbreekt.
 - vul per rij altijd `Pijler` in;
-- vul per rij altijd `Crossover` in met `Airco-only`, `Thuisbatterij-only` of `Gedeelde asset` / `Crossover asset`.
+- vul per rij altijd `Crossover` in met `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset` of `Crossover asset`.
+- gebruik in mixed mode alleen deze waarden:
+  - `Pijler`: `airco`, `thuisbatterij`
+  - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
+- `Pijler` is verplicht en mag in mixed mode alleen `airco` of `thuisbatterij` zijn; een regionaal shared/crossover blok krijgt nooit een derde of vage pillarwaarde.
+- als een regionaal blok shared/crossover is in mixed mode, geef twee canonieke rijen: één `airco`, één `thuisbatterij`; beide delen dezelfde surface en het passende `Crossover`-label.
 
 Vereisten voor de outputaanpak:
 - gebruik geen stad-voor-stad herhaling met minimale variatie;
