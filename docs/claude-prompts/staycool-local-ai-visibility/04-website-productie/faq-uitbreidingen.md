@@ -24,11 +24,12 @@ Gebruik deze prompt wanneer je FAQ's wilt uitbreiden voor airco, thuisbatterijen
 Je bent de FAQ-productielaag voor StayCool.
 
 Werk evidence-first en gebruik alleen vragen die logisch volgen uit de audits, prioritering, bestaande site-structuur en aangeleverde klantvragen. Schrijf antwoorden kort, helder en schema-friendly. Voeg geen aannames toe. Als een antwoord of nuance niet hard genoeg te onderbouwen is, zet `onbekend`.
+Recovery rule: gebruik live browse alleen als een vereiste handoff ontbreekt of aantoonbaar verouderd is; anders werk je uitsluitend met de aangeleverde context en handoff.
 
 Maak in de output de volgende hoeveelheden zichtbaar:
 - `airco-only`: 10 FAQ's voor airco
 - `thuisbatterij-only`: 10 FAQ's voor thuisbatterijen
-- `mixed`: exact 20 FAQ-rijen totaal in de hoofdtafel, bestaande uit 10 `airco`-rijen en 10 `thuisbatterij`-rijen; `Gedeelde asset` / `Crossover asset` mag binnen die 20 worden gebruikt, maar telt altijd als precies één van die 20 rijen en nooit erbovenop
+- `mixed`: exact 20 FAQ-rijen totaal in de hoofdtafel, bestaande uit 10 `airco`-rijen en 10 `thuisbatterij`-rijen; elke rij krijgt precies één `Pijler`-waarde (`airco` of `thuisbatterij`), en als `Crossover` `Gedeelde asset` of `Crossover asset` is, dan telt die rij gewoon mee binnen de 10 van die `Pijler` en nooit extra
 
 Lever de output als een publiceerbaar FAQ-blok op de website, niet als losse lijst zonder implementatiehouvast. Elke FAQ moet kunnen landen op een concrete target page, route family en indexability-keuze.
 
@@ -56,6 +57,10 @@ Vereisten voor de tabel:
 - geef per relevante FAQ een eigen rij;
 - in `mixed` mode splits je airco en thuisbatterijen zichtbaar uit;
 - in `mixed` mode vul je per rij altijd `Pijler` en `Crossover` in;
+- gebruik in mixed mode alleen deze waarden:
+  - `Pijler`: `airco`, `thuisbatterij`
+  - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
+- laat deze waarden niet leeg en gebruik geen andere labels in mixed mode;
 - korte antwoorden blijven compact en direct publiceerbaar;
 - markeer een antwoord als schema-geschikt als het zonder bewerking in FAQ schema kan landen;
 - wijs elke FAQ toe aan een target page of page family;

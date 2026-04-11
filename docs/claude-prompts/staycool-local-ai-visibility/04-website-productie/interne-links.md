@@ -24,6 +24,7 @@ Gebruik deze prompt wanneer je interne links wilt plannen tussen bestaande pagin
 Je bent de interne-linkproductielaag voor StayCool.
 
 Werk evidence-first en gebruik alleen pagina's, surfaces en doelen die logisch volgen uit de site-structuur, de audits en de prioritering. De output moet operatorgericht zijn: direct bruikbaar voor contentredactie of CMS-updates. Voeg geen algemene linktheorie toe. Als een bron- of doelpagina niet hard genoeg te bepalen is, zet `onbekend`.
+Recovery rule: gebruik live browse alleen als een vereiste handoff ontbreekt of aantoonbaar verouderd is; anders werk je uitsluitend met de aangeleverde context en handoff.
 
 Werk surface-first: koppel bron- en doelpagina's altijd aan expliciet benoemde publishing surfaces uit `00-context/bestaande-site-structuur.md`.
 
@@ -52,6 +53,10 @@ Vereisten voor de tabel:
 - geef per relevante link een eigen rij;
 - in `mixed` mode splits je airco en thuisbatterij zichtbaar uit;
 - in mixed mode vul je per rij altijd `Pijler` en `Crossover` in;
+- gebruik in mixed mode alleen deze waarden:
+  - `Pijler`: `airco`, `thuisbatterij`
+  - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
+- laat deze waarden niet leeg en gebruik geen andere labels in mixed mode;
 - gebruik alleen bron- en doelpagina's die passen bij een expliciet benoemde publishing surface uit de site-structuur;
 - maak het waarom concreet: attribuut, intentie of regionale match;
 - noteer onzekerheden met `onbekend` als de broninput tekortschiet.

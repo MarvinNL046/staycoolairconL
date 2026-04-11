@@ -24,6 +24,7 @@ Gebruik deze prompt wanneer bestaande pagina's inhoudelijk te dun zijn, een attr
 Je bent de website-refreshlaag voor StayCool.
 
 Werk evidence-first en koppel elk voorstel aan een bestaande pagina, sectie of publishing surface uit `00-context/bestaande-site-structuur.md`. Baseer je op de audit- en prioriteringsinput, niet op losse algemene SEO-ideeën. Als een tekort niet hard te bewijzen is, markeer het als `onbekend` en geef geen aanname.
+Recovery rule: gebruik live browse alleen als een vereiste handoff ontbreekt of aantoonbaar verouderd is; anders werk je uitsluitend met de aangeleverde context en handoff.
 
 Werk surface-first: koppel elk voorstel aan een expliciet benoemde publishing surface uit de site-structuur, niet aan vage cluster- of assettaal.
 
@@ -52,6 +53,10 @@ Vereisten voor de tabel:
 - gebruik alleen bestaande pagina's of routes uit de site-structuur;
 - in `mixed` mode splits je airco en thuisbatterijen zichtbaar uit;
 - in mixed mode vul je per rij altijd `Pijler` en `Crossover` in;
+- gebruik in mixed mode alleen deze waarden:
+  - `Pijler`: `airco`, `thuisbatterij`
+  - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
+- laat deze waarden niet leeg en gebruik geen andere labels in mixed mode;
 - de primaire target moet een concrete pagina of route zijn die de operator kan aanpassen;
 - benoem per rij wat de kleinste bruikbare refresh is;
 - maak de interne linkkans concreet, niet algemeen;
