@@ -67,9 +67,8 @@ Let specifiek op:
 ## Verwachte output
 - Een tabel per relevant profiel met 90-dagenfrequentie, contenttype, regionale signalen en activity score.
 - Een lijst met fototypes die StayCool vaker moet publiceren.
-- Quick wins voor de komende 30 dagen.
+- Quick wins voor de komende 30 dagen
 - `Topprioriteiten`
-- `Quick wins`
 - `Direct publiceerbaar`: concrete foto-opdrachten, caption-ideeën of operator-acties die direct uitvoerbaar zijn.
 - `Later`
 

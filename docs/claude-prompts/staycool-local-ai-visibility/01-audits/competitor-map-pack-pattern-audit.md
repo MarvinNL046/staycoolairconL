@@ -55,6 +55,10 @@ Breng per zoekopdracht in kaart:
 Maak expliciet onderscheid tussen de gekozen pijler of pijlers.
 
 ## Verwachte output
+- Metadata-echo:
+  - `Auditdatum`
+  - locatie/source context
+  - exact zoekvenster
 - Een tabel per relevante zoekterm met terugkerende bedrijven en patronen.
 - Een apart analyseblok voor de gekozen pijler of pijlers.
 - Een lijst met Map Pack-patronen die StayCool nu moet spiegelen of overtreffen.

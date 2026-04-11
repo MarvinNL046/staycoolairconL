@@ -55,6 +55,10 @@ Onderzoek minimaal:
 Geef ook aan of StayCool minder actief oogt dan concurrenten, en wat dat betekent voor lokale prominentie en vertrouwen.
 
 ## Verwachte output
+- Metadata-echo:
+  - `Auditdatum`
+  - locatie/source context
+  - exact reviewvenster
 - Een tabel met reviewvolume, reviewgroei, 90-dagenfrequentie en observaties voor de gekozen pijler of pijlers.
 - Een apart oordeel per gekozen pijler.
 - `Topprioriteiten`

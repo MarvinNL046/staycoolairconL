@@ -56,6 +56,10 @@ Vergelijk expliciet:
 Sluit af met een prioriteitenlijst voor attribute gaps.
 
 ## Verwachte output
+- Metadata-echo:
+  - `Auditdatum`
+  - locatie/source context
+  - exact zoekvenster
 - Een attributentabel per pijler met StayCool versus concurrenten.
 - Een gap-overzicht met ontbrekende of zwakke attributen.
 - `Topprioriteiten`

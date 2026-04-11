@@ -61,6 +61,10 @@ Maak onderscheid tussen:
 Eindig met de review-attributen die StayCool actief moet verzamelen via reviewverzoeken en follow-ups.
 
 ## Verwachte output
+- Metadata-echo:
+  - `Auditdatum`
+  - locatie/source context
+  - exact reviewvenster
 - Een review-attributentabel per relevante pijler met voorbeelden uit reviews.
 - Een lijst met herhaalde reviewpatronen en ontbrekende reviewtaal.
 - Een slotblok met ontbrekende review-attributen die StayCool actief moet verzamelen.

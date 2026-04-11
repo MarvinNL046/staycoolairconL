@@ -61,9 +61,8 @@ Laat zien of de posts vooral promotioneel, informatief, bewijsgericht of regiona
 ## Verwachte output
 - Een tabel per relevant profiel met 90-dagenfrequentie, contenttype, regionale signalen en activity score.
 - Een lijst met contenttypes die StayCool vaker moet posten.
-- Quick wins voor de komende 30 dagen.
+- Quick wins voor de komende 30 dagen
 - `Topprioriteiten`
-- `Quick wins`
 - `Direct publiceerbaar`: concrete postideeën, postkoppen of operator-acties voor de komende 30 dagen.
 - `Later`
 

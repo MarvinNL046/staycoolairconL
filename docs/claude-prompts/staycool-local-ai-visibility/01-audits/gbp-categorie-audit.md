@@ -55,6 +55,10 @@ Voor elke zoekopdracht:
 Check expliciet of de categorieen beter passen bij installatie, onderhoud, advies, energieopslag of bredere klimaatoplossingen.
 
 ## Verwachte output
+- Metadata-echo:
+  - `Auditdatum`
+  - locatie/source context
+  - exact zoekvenster
 - Een tabel per relevante zoekterm met zoekterm, zichtbare concurrenten, primaire categorieen, secundaire categorieen en observaties.
 - Een apart overzicht voor de gekozen pijler of pijlers.
 - `Topprioriteiten`
