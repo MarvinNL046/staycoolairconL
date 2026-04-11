@@ -31,8 +31,7 @@
 - `/handleidingen/*` voor merkhandleidingen
 - `/advies/*` voor adviescontent en keuzehulpen
 - `/airco-installatie/:citySlug` plus vaste stadspagina's zoals Maastricht, Roermond, Heerlen, Venlo, Sittard, Weert en andere Limburgse plaatsen
-- `/landing/*` voor commerciële instappagina's zoals installatie, onderhoud, reparatie, service en productintentie
-- `/seo/pillar-1-installatie-services/*`, `/seo/pillar-4-energie-besparen/*`, `/seo/pillar-5-thuisbatterijen/*`, `/seo/pillar-6-limburg-steden/*`, `/seo/pillar-7-technische-gidsen/*`, `/seo/pillar-8-vergelijkingen/*`, `/seo/pillar-9-kosten-prijzen/*`
+- `/seo/pillar-1-installatie-services/*`, `/seo/pillar-2-onderhoud-service/*`, `/seo/pillar-3-merken-modellen/*`, `/seo/pillar-4-energie-besparen/*`, `/seo/pillar-5-thuisbatterijen/*`, `/seo/pillar-6-limburg-steden/*`, `/seo/pillar-7-technische-gidsen/*`, `/seo/pillar-8-vergelijkingen/*`, `/seo/pillar-9-kosten-prijzen/*`, `/seo/pillar-10-duurzaamheid/*`
 
 ## Support- en noindexclusters
 - `/airco-installatie/noindex/*` voor stappenplan, kosten en FAQ support content
@@ -45,6 +44,11 @@
 - `/airco-technisch/noindex/*` voor technische specificaties, capaciteitstool en installatie-eisen
 - `/airco-vergelijking/noindex/*` voor gids, split-vs-mobiel en checklist
 - `/thuisbatterijen/noindex/*` voor ervaringen, gids Limburg, hulp kiezen, installateurs, stappen, regelgeving, merken, prijzen, vragen, huurders, senioren, zelfstandigen, werking en rendabiliteit
+
+## Routeconventies
+- Brand landings lopen onder `/landing/*`.
+- Root-level commerciële of money pages staan buiten `/landing/*`, bijvoorbeeld `/airco-installatie`, `/airco-onderhoud`, `/airco-reparatie`, `/airco-service-limburg`, `/airco-kopen-limburg`, `/airco-kopen-en-laten-installeren`, `/wat-kost-airco-installatie`, `/mobiele-airco`, `/airco-met-buitenunit`, `/airco-installatie-limburg`, `/airco-installatie-prijs`, `/airco-offerte`, `/airco-installeren-gids`, `/airco-kantoor`, `/airco-winkel`, `/airco-voor-slaapkamer`, `/airco-voor-woonkamer`, `/airco-voor-zolder`.
+- Gebruik deze scheiding in prompts: brand landings zijn vooral merk- of productgericht; root-level money pages zijn bredere commerciële instappunten.
 
 ## Belangrijke clusters uit de huidige site
 - Home, contact en transactieroutes vormen de top van de funnel
