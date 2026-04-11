@@ -53,12 +53,13 @@ Vereisten voor de tabel:
 - geef per relevante link een eigen rij;
 - vul per rij altijd `Bron pijler`, `Doel pijler` en `Linkrelatie` in;
 - gebruik deze waarden in elke modus:
-  - `Bron pijler`: `airco`, `thuisbatterij`
-  - `Doel pijler`: `airco`, `thuisbatterij`
+  - `Bron pijler`: `airco`, `thuisbatterij`, `gedeeld`
+  - `Doel pijler`: `airco`, `thuisbatterij`, `gedeeld`
   - `Linkrelatie`: `same-pillar`, `cross-pillar`, `shared-support`
 - `same-pillar`: bron en doel horen bij dezelfde pijler;
 - `cross-pillar`: bron en doel horen bij verschillende pijlers;
 - `shared-support`: de link ondersteunt een gedeelde of pijler-overstijgende context, maar blijft één canonieke linkplaatsing;
+- gebruik `gedeeld` alleen wanneer de bron- of doelpagina aantoonbaar pijler-overstijgend is; kies anders expliciet `airco` of `thuisbatterij`;
 - laat deze waarden niet leeg en gebruik geen andere labels;
 - houd het bij shared of crossover context op één canonieke rij per unieke combinatie van bronpagina, doelpagina en anchor; gebruik `Bron pijler`, `Doel pijler` en `Linkrelatie` om de relatie eenduidig te maken.
 - gebruik alleen bron- en doelpagina's die passen bij een expliciet benoemde publishing surface uit de site-structuur;
