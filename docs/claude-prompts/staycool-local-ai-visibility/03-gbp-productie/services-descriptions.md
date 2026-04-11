@@ -15,6 +15,8 @@ Gebruik deze prompt wanneer je GBP-services wilt aanvullen, opschonen of herschr
   - `airco-only` -> `00-context/airco-pijler.md`
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
   - `mixed` -> beide pijlercontexten
+- Relevante `01-audits` input, bij voorkeur `services-section-audit.md`
+- Relevante `02-prioritering` input, bij voorkeur `gbp-vs-website-gap-prioriteiten.md` of `90-dagen-actieplan.md`
 - Eventuele bestaande servicelijst of GBP-serviceexport
 - Eventuele beschikbare regio- of bewijsinputs
 
@@ -38,6 +40,7 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Broncontext`
 - `Gebruikte input`
 - `Onzekerheden`
+- `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna uitsluitend met deze tabel:
 | Service | Pijler | Beschrijving | Belofte/voordeel | Regioverwijzing |

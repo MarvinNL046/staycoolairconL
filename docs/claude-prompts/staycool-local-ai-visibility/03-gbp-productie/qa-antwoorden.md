@@ -15,7 +15,10 @@ Gebruik deze prompt wanneer je vragen in GBP wilt beantwoorden of een set QA-ant
   - `airco-only` -> `00-context/airco-pijler.md`
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
   - `mixed` -> beide pijlercontexten
-- Eventuele lijst met bestaande GBP-vragen
+- Relevante `01-audits` input, bij voorkeur een vraag-, FAQ- of attribute-gap-audit als die beschikbaar is
+- Relevante `02-prioritering` input, bij voorkeur een gapprioriteit of 90-dagenoutput die Q&A-opbouw raakt
+- Concrete vragenlijst of Q&A backlog als broninput
+- Eventuele bestaande GBP-vragen
 - Eventuele FAQ's, klantvragen of bewijsinputs
 
 ## Prompt
@@ -31,18 +34,17 @@ Volg deze regels:
 - vermijd generieke SEO-uitleg;
 - gebruik natuurlijke service- en regioverwijzingen waar dat past;
 - wees evidence-first en niet speculatief.
+- vereist één exact outputschema: geen vrije lijst, geen schema-varianten.
 
 Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Modus`
 - `Broncontext`
 - `Gebruikte input`
 - `Onzekerheden`
+- `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
-Gebruik daarna een tabel of duidelijke lijst met per vraag:
-- vraagtekst;
-- passend antwoord;
-- eventuele nuance voor airco of thuisbatterijen;
-- opmerking over Limburg-brede relevantie indien relevant.
+Gebruik daarna exact deze tabel:
+| Vraag | Pijler | Bronvraag of backlogitem | Antwoord | Nuance | Regioverwijzing |
 
 Sluit af met:
 ## Topprioriteiten
@@ -53,6 +55,7 @@ Sluit af met:
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
 - Korte, publiceerbare QA-antwoorden
+- Exact één outputschema zonder vrije lijstvariant
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - Limburg-brede formulering waar passend
 - De standaard afsluitende secties

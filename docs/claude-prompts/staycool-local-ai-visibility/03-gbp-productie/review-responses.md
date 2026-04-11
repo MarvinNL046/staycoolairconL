@@ -15,6 +15,10 @@ Gebruik deze prompt wanneer je reviewreacties wilt voorbereiden of standaardiser
   - `airco-only` -> `00-context/airco-pijler.md`
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
   - `mixed` -> beide pijlercontexten
+- Relevante `01-audits` input, bij voorkeur `review-attribute-audit.md` en/of `review-velocity-audit.md`
+- Relevante `02-prioritering` input, bij voorkeur `review-systeem-prioriteiten.md`
+- Voor reply-ready output: echte reviewtekst of een reviewexcerpt als broninput
+- Voor fallback-template output: expliciet `template-fallback` als modus of instructie
 - Eventuele voorbeeldreviews of gewenste toon
 
 ## Prompt
@@ -25,20 +29,21 @@ Gebruik alleen de aangeleverde context en invoer. Reageer menselijk, kort en pro
 Volg deze regels:
 - antwoord volledig in Nederlands;
 - houd Limburg breed als hoofdregio;
-- geef 3 varianten voor 5 sterren;
-- geef 3 varianten voor 4 sterren;
-- geef 3 varianten voor 3 sterren;
-- geef 3 varianten voor 1-2 sterren;
+- reply-ready mode: gebruik de aangeleverde reviewtekst of reviewexcerpt en schrijf een passend antwoord;
+- template-fallback mode: geef 3 varianten voor 5 sterren, 3 varianten voor 4 sterren, 3 varianten voor 3 sterren, 3 varianten voor 1-2 sterren;
 - noem service en Limburg waar dat natuurlijk past;
 - split airco en thuisbatterijen uit wanneer de modus `mixed` is;
 - voor lage scores: erkend, rustig, oplossingsgericht, zonder discussie;
 - voor hoge scores: dankbaar, concreet, persoonlijk, zonder overdrijving.
+- gebruik voor reply-ready output geen generieke templates zonder reviewbron.
 
 Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Modus`
 - `Broncontext`
 - `Gebruikte input`
 - `Toon`
+- `Antwoordmodus` met `reply-ready` of `template-fallback`
+- `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Gebruik daarna deze tabel:
 | Sterren | Pijler | Variant | Antwoord | Opmerking |
@@ -57,7 +62,8 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- 3 varianten per sterrenklasse: 5, 4, 3 en 1-2
+- Reply-ready antwoorden op basis van echte reviewinput, of template-fallback varianten als expliciet gekozen
+- 3 varianten per sterrenklasse: 5, 4, 3 en 1-2 in template-fallback mode
 - Natuurlijke service- en Limburg-verwijzingen waar passend
 - Een tabel die direct kan worden gebruikt door de operator
 - De standaard afsluitende secties

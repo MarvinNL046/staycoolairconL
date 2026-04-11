@@ -15,6 +15,8 @@ Gebruik deze prompt wanneer je GBP-bedrijfsbeschrijvingen wilt schrijven of herw
   - `airco-only` -> `00-context/airco-pijler.md`
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
   - `mixed` -> beide pijlercontexten
+- Relevante GBP-auditinput uit `01-audits`, bij voorkeur de laatste GBP-categorie-, attributen-, services- of gap-audit
+- Relevante prioriteringsinput uit `02-prioritering`, bij voorkeur een GBP-gapprioriteiten- of 90-dagenoutput
 - Eventuele bestaande GBP-omschrijving of ruwe concepttekst
 - Eventuele lokale bewijsinputs, plaatsnamen of servicecontext
 
@@ -50,6 +52,7 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Broncontext`
 - `Gebruikte input`
 - `Lengtecontrole`
+- `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Gebruik daarna deze vaste outputstructuur:
 ## Beschrijvingen

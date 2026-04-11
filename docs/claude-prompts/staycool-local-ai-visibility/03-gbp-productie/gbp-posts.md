@@ -15,6 +15,8 @@ Gebruik deze prompt wanneer je een GBP-postkalender of concrete postcopy voor pu
   - `airco-only` -> `00-context/airco-pijler.md`
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
   - `mixed` -> beide pijlercontexten
+- Relevante `01-audits` input, bij voorkeur `gbp-posts-audit.md` en/of `gbp-foto-audit.md`
+- Relevante `02-prioritering` input, bij voorkeur `90-dagen-actieplan.md` of `quick-wins-prioriteren.md`
 - Eventuele seizoensaanwijzingen, campagnes, cases, reviews of teamupdates
 - Eventuele bestaande GBP-posts of contentinputs
 
@@ -28,8 +30,8 @@ Volg deze regels:
 - houd Limburg breed als hoofdregio;
 - plan 2 tot 3 posts per week;
 - mix seizoenspromoties, cases, review-highlights en teamcontent;
-- de geplande output moet beide pijlers bevatten: `airco` en `thuisbatterijen`;
-- splits airco en thuisbatterijen uit in `mixed` mode, maar laat in de totale planning beide pijlers terugkomen;
+- single-pillar output: in `airco-only` alleen `airco`; in `thuisbatterij-only` alleen `thuisbatterijen`;
+- mixed output: de totale planning moet beide pijlers bevatten en expliciet gescheiden worden waar nodig;
 - lever per post publiceerbare copy en een concrete image suggestion;
 - gebruik natuurlijke CTA's en geen lege marketingtaal;
 - gebruik plaatsnamen alleen als regionaal bewijs;
@@ -49,8 +51,8 @@ Gebruik deze mix over de totale planning:
 - case of project;
 - review highlight;
 - teamcontent;
-- zorg dat beide pijlers in de planning voorkomen: `airco` én `thuisbatterijen`;
-- waar mogelijk: airco en thuisbatterij apart of gecombineerd;
+- in `airco-only` alleen airco-items, in `thuisbatterij-only` alleen thuisbatterij-items, in `mixed` beide pijlers;
+- waar relevant in `mixed`: airco en thuisbatterij apart of gecombineerd;
 - waar relevant: Limburg-brede regioverwijzing.
 
 Sluit af met:
@@ -64,12 +66,12 @@ Sluit af met:
 - Een planning van 2 tot 3 posts per week
 - Per post publish-ready copy plus image suggestion
 - Een mix van seizoenspromos, cases, review-highlights en teamcontent
-- Duidelijke mode-splits waar relevant, met beide pijlers in de totale output
+- Duidelijke mode-splits waar relevant; in single-pillar alleen de gekozen pijler, in mixed beide pijlers
 - De standaard afsluitende secties
 - `Klaarcheck`
 
 ## Klaarcheck
 - Ik heb 2 tot 3 posts per week gepland.
 - Ik heb seizoenspromos, cases, reviews en teamcontent gemixt.
-- Ik heb airco en thuisbatterijen meegenomen en beide pijlers expliciet in de output verwerkt.
+- Ik heb single-pillar en mixed output strikt gescheiden gehouden.
 - Ik heb per post een image suggestion toegevoegd.
