@@ -16,9 +16,9 @@ Gebruik deze prompt wanneer je de recentheid, inhoud en regionale signalen van G
 - Relevante pijlercontext:
   - `airco-only` -> `00-context/airco-pijler.md`
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
-  - `mixed` -> beide pijlercontexten
+- `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
-- Competitor GBP-URL(s)
+- Competitor GBP-URL(s) indien aangeleverd; anders ontdek tijdens live browse
 - Target zoektermen passend bij de gekozen modus
 - Auditdatum
 - Observatievenster / lookback window voor de postanalyse
@@ -59,6 +59,10 @@ Voor de laatste 90 dagen:
 Laat zien of de posts vooral promotioneel, informatief, bewijsgericht of regionaal zijn, en of ze voldoende aansluiten op de service- en attributentaal van StayCool.
 
 ## Verwachte output
+- Metadata-echo:
+  - `Auditdatum`
+  - locatie/source context
+  - exact observatievenster
 - Een tabel per relevant profiel met 90-dagenfrequentie, contenttype, regionale signalen en activity score.
 - Een lijst met contenttypes die StayCool vaker moet posten.
 - Quick wins voor de komende 30 dagen

@@ -16,18 +16,14 @@ Gebruik deze prompt wanneer je reviewgroei en reviewcadans wilt vergelijken met 
 - Relevante pijlercontext:
   - `airco-only` -> `00-context/airco-pijler.md`
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
-  - `mixed` -> beide pijlercontexten
+- `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
-- Competitor GBP-URL(s)
+- Competitor GBP-URL(s) indien aangeleverd; anders ontdek tijdens live browse
 - Target zoektermen passend bij de gekozen modus
 - Auditdatum
-- Review snapshots of review-exports voor minimaal de laatste 90 dagen
-- 90-dagen reviewbewijs per profiel of concurrent, of een export waar die periode uit kan worden afgeleid
-- Laatste relevante reviewvenster per profiel of concurrent:
-  - gebruik de auditdatum als eindpunt;
-  - neem reviews uit de 30 kalenderdagen tot en met die datum;
-  - als dat minder dan 10 reviews oplevert, vul aan met de 10 meest recente reviews vóór die periode;
-  - noteer het exacte venster dat is gebruikt.
+- Review snapshots of review-exports voor de laatste 90 dagen
+- 90-dagen reviewbewijs per profiel of concurrent, of een export waar die 90-dagenperiode uit kan worden afgeleid
+- Exact reviewvenster: de 90 kalenderdagen tot en met de auditdatum
 
 ## Prompt
 Analyseer de review velocity van StayCool en relevante concurrenten in Limburg breed.
@@ -58,7 +54,7 @@ Geef ook aan of StayCool minder actief oogt dan concurrenten, en wat dat beteken
 - Metadata-echo:
   - `Auditdatum`
   - locatie/source context
-  - exact reviewvenster
+  - exact reviewvenster: 90 kalenderdagen tot en met de auditdatum
 - Een tabel met reviewvolume, reviewgroei, 90-dagenfrequentie en observaties voor de gekozen pijler of pijlers.
 - Een apart oordeel per gekozen pijler.
 - `Topprioriteiten`

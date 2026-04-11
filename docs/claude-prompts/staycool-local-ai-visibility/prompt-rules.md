@@ -7,6 +7,8 @@ Elke prompt in deze bibliotheek moet Claude instrueren om:
 - `Limburg breed` als hoofdregio te nemen;
 - geen generieke SEO-uitleg te geven;
 - tabellen te gebruiken waar nuttig;
+- live browse eerst te gebruiken in Claude in Chrome, met evidence-only fallback als live toegang onvolledig is;
+- competitorbronnen tijdens live browse te mogen ontdekken wanneer die niet vooraf zijn aangeleverd, maar aangeleverde bronnen wel te gebruiken wanneer beschikbaar;
 Gebruik standaard deze afsluiting voor analyse- en productieprompts:
   - `Topprioriteiten`
   - `Quick wins`

@@ -2,6 +2,7 @@
 
 Deze bibliotheek is gemaakt voor StayCool Airco en gebruik in Claude in Chrome.
 
+Primaire operating mode voor de auditlaag: live browse eerst in Claude in Chrome, met evidence-only fallback als live toegang onvolledig is.
 De contextlaag bestaat nu en `01-audits` is live en bruikbaar.
 Latere promptlagen kunnen nog gedeeltelijk scaffolded of onvolledig zijn.
 Raadpleeg eerst `prompt-rules.md` voordat je prompts maakt of gebruikt.
@@ -49,3 +50,4 @@ De flow hieronder is de beoogde toekomstige workflow zodra de promptbestanden be
 - Latere promptlagen kunnen nog scaffolded of gedeeltelijk ingevuld zijn.
 - De contextlaag blijft bedoeld om latere promptlagen te voeden zodra die verder zijn uitgewerkt.
 - Gebruik de matrix hierboven om te bepalen welke context minimaal geladen moet worden per prompttype.
+- Bij live browse mogen competitorbronnen tijdens de audit worden ontdekt; bij incomplete live toegang val je terug op aangeleverde evidence-only inputs.

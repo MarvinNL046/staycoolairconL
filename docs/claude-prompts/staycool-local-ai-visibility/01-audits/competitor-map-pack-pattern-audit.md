@@ -18,7 +18,7 @@ Gebruik deze prompt wanneer je patronen wilt herkennen in concurrenten die steed
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
   - `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
-- Competitor GBP-URL(s)
+- Competitor GBP-URL(s) indien aangeleverd; anders ontdek tijdens live browse
 - Gebruik de aangeleverde `Target zoektermen` passend bij de gekozen modus
 - Screenshots of gekopieerde Google Maps-observaties
 - Vastgelegde zoekdatum en gebruikte locatie-instelling

@@ -60,6 +60,10 @@ Werk uit:
 - welke contentfamilies het snelst kunnen worden aangevuld.
 
 ## Verwachte output
+- Metadata-echo:
+  - `Auditdatum`
+  - broncontext / sitebron
+  - exact observatievenster of URL-sample
 - Een coverage-tabel met attribuut, huidige dekking, ontbrekend detail en aanbevolen pagina.
 - Een apart overzicht voor de gekozen pijler of pijlers.
 - Een lijst met concrete contentgaten.
