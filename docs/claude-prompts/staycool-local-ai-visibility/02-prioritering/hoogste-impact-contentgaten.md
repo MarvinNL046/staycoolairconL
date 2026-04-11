@@ -7,12 +7,14 @@ Prioriteer de contentgaten uit de audits op basis van impact, snelheid en public
 Gebruik deze prompt wanneer je wilt weten welke contentgaten eerst moeten worden gevuld om lokale zichtbaarheid en AI attribute match te versterken.
 
 ## Vereiste input
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
-- Relevante pijlercontext:
-  - `00-context/airco-pijler.md`
-  - `00-context/thuisbatterij-pijler.md`
+- Relevante pijlercontext op basis van de modus:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 - Task 3 content- en website-auditoutput
 - Eventuele site- of servicebeperkingen
 - Indien beschikbaar: huidige contentkalender of productiecapaciteit
@@ -24,7 +26,7 @@ Zet de aangeleverde auditinput om in een beslisbare rangorde van contentgaten di
 
 Volg deze regels:
 - antwoord volledig in Nederlands;
-- houd `airco` en `thuisbatterijen` apart wanneer beide relevant zijn;
+- volg de gekozen modus strikt: bij `airco-only` rangschik je alleen airco-contentgaten, bij `thuisbatterij-only` alleen thuisbatterij-contentgaten, bij `mixed` splits je beide pijlers;
 - geef geen generieke SEO-uitleg;
 - focus op concrete contentgaten die echt een verschil maken voor lokale zichtbaarheid;
 - maak onderscheid tussen content die snel live kan en content die later pas logisch is;

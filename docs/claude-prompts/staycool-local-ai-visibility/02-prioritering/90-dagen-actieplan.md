@@ -7,12 +7,14 @@ Zet de Task 3-audits om in een uitvoerbaar 90-dagenplan voor StayCool, met een r
 Gebruik deze prompt wanneer je na de audits een kwartaalplan nodig hebt dat de operator direct kan uitvoeren en opvolgen.
 
 ## Vereiste input
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
-- Relevante pijlercontext:
-  - `00-context/airco-pijler.md`
-  - `00-context/thuisbatterij-pijler.md`
+- Relevante pijlercontext op basis van de modus:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 - Samengevoegde Task 3-auditoutput
 - Eventuele bestaande backlog, capaciteit of seizoensdruk
 - Als beschikbaar: huidige status van GBP, reviews, website en contentproductie
@@ -25,7 +27,7 @@ Werk de aangeleverde auditinput uit naar een plan dat logisch oplopen in risico,
 Volg deze regels:
 - antwoord volledig in Nederlands;
 - houd Limburg breed als hoofdregio;
-- behandel `airco` en `thuisbatterijen` apart wanneer beide aan bod komen;
+- volg de gekozen modus strikt: bij `airco-only` plan je alleen airco-acties, bij `thuisbatterij-only` alleen thuisbatterij-acties, bij `mixed` splits je per pijler;
 - geef geen generieke SEO-uitleg;
 - maak het plan operationeel, niet strategisch vaag;
 - zet acties alleen in een maand als ze binnen die maand uitvoerbaar zijn;

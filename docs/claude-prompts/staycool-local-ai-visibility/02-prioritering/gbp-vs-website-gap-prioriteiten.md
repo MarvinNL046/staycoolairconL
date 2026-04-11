@@ -7,12 +7,14 @@ Vergelijk GBP- en websitegaps en zet ze om in een volgorde van prioriteiten voor
 Gebruik deze prompt wanneer je de auditresultaten tussen GBP en website wilt normaliseren naar een gezamenlijke backlog voor lokale zichtbaarheid.
 
 ## Vereiste input
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
-- Relevante pijlercontext:
-  - `00-context/airco-pijler.md`
-  - `00-context/thuisbatterij-pijler.md`
+- Relevante pijlercontext op basis van de modus:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 - Task 3 auditoutput voor GBP en website
 - Eventuele bronverwijzingen of observaties die de overlap of mismatch tonen
 
@@ -24,7 +26,7 @@ Zet de auditinput om in prioriteiten die laten zien waar GBP en website elkaar v
 Volg deze regels:
 - antwoord volledig in Nederlands;
 - gebruik Limburg breed als hoofdregio;
-- behandel `airco` en `thuisbatterijen` apart als beide relevant zijn;
+- volg de gekozen modus strikt: bij `airco-only` vergelijk je alleen airco-gaps, bij `thuisbatterij-only` alleen thuisbatterij-gaps, bij `mixed` splits je beide pijlers;
 - geef geen generieke SEO-uitleg;
 - maak onderscheid tussen gaps die direct op GBP moeten worden opgelost en gaps die op de website thuishoren;
 - kies altijd voor een praktische, operatorgerichte aanbeveling;

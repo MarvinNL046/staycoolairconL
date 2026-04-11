@@ -7,12 +7,14 @@ Zet review-auditinput om in een prioriteitenlijst voor reviewvolume, reviewkwali
 Gebruik deze prompt nadat de review-audits zijn gedraaid en je wilt bepalen welke review-acties eerst moeten gebeuren.
 
 ## Vereiste input
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
-- Relevante pijlercontext:
-  - `00-context/airco-pijler.md`
-  - `00-context/thuisbatterij-pijler.md`
+- Relevante pijlercontext op basis van de modus:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 - Task 3 review-auditoutput
 - Eventuele actuele reviewquota, teamcapaciteit of klantmomenten
 - Als beschikbaar: bestaande reviewtemplates of review-processen
@@ -25,7 +27,7 @@ Normaliseer de review-auditinput naar een werkbare prioriteitenlijst die direct 
 Volg deze regels:
 - antwoord volledig in Nederlands;
 - houd Limburg breed als hoofdregio;
-- behandel `airco` en `thuisbatterijen` apart wanneer beide relevant zijn;
+- volg de gekozen modus strikt: bij `airco-only` prioriteer je alleen airco-reviewacties, bij `thuisbatterij-only` alleen thuisbatterij-reviewacties, bij `mixed` splits je beide pijlers;
 - geef geen generieke SEO-uitleg;
 - geef alleen reviewacties die op basis van de audit logisch zijn;
 - maak onderscheid tussen acquisitie van reviews, verwerking van reviews en zichtbaar maken van reviewbewijskracht;

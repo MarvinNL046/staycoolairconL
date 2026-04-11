@@ -7,12 +7,14 @@ Zet auditoutput om in een scherpe volgorde van directe acties die binnen korte t
 Gebruik deze prompt nadat Task 3-audits zijn gedraaid en je de snelste prioriteiten wilt kiezen voor GBP, reviews, website en content.
 
 ## Vereiste input
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
-- Relevante pijlercontext:
-  - `00-context/airco-pijler.md`
-  - `00-context/thuisbatterij-pijler.md`
+- Relevante pijlercontext op basis van de modus:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 - Samengevoegde Task 3-auditoutput of losse auditblokken
 - Eventuele beperkingen, capaciteit of eigenaarssignalen
 - Indien beschikbaar: bestaande backlog, interne prioriteiten of deadlines
@@ -25,7 +27,7 @@ Normaliseer de aangeleverde auditoutput naar een praktische actielijst voor de o
 Volg deze regels:
 - antwoord volledig in Nederlands;
 - houd Limburg breed als hoofdregio;
-- behandel `airco` en `thuisbatterijen` apart wanneer beide voorkomen;
+- volg de gekozen modus strikt: bij `airco-only` werk alleen airco uit, bij `thuisbatterij-only` werk alleen thuisbatterijen uit, bij `mixed` splits je beide pijlers apart;
 - geef geen generieke SEO-uitleg;
 - maak de output direct beslisbaar en uitvoerbaar;
 - gebruik alleen feiten en impliciete conclusies die uit de auditinput volgen;
