@@ -9,7 +9,8 @@
 
 ## Status
 - Nog niet gecureerd.
-- Alleen gebruiken zodra er actuele GBP- en websitebronnen zijn verzameld.
+- Voor live-browse audits is deze lijst optioneel; Claude mag concurrenten tijdens de audit ontdekken wanneer dat nodig is.
+- Voor evidence-only of competitie-zware audits heeft een vooraf ingevulde lijst de voorkeur.
 - Zonder ingevulde set geen aannames over concurrenten meenemen in prompts.
 
 | Naam | Type concurrent | Positionering | GBP URL | Website URL | Regio / plaats | Waarom relevant |

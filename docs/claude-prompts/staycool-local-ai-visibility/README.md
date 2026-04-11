@@ -31,6 +31,27 @@ De flow hieronder is de beoogde toekomstige workflow zodra de promptbestanden be
 4. Gebruik productieprompts om copy of backlog te maken.
 5. Gebruik executieroutines voor onderhoud.
 
+## Task 3 Run Order
+1. Foundation audits: GBP-categorie, GBP-attributen, services section.
+2. Review audits: review-attribute en review-velocity.
+3. Activity audits: GBP-posts en GBP-foto.
+4. Content audits: website-attribute-coverage en Ahrefs/GSC keyword gap.
+5. Pattern audits: competitor Map Pack pattern als extra vergelijking of check.
+
+## Audit Preflight
+Plak dit vóór een auditprompt in Claude in Chrome:
+
+```text
+modus: 
+auditdatum: 
+GBP-URL(s): 
+lookback window: 
+target zoektermen: 
+broncontext: 
+```
+
+Gebruik dit als startblok voor elke auditrun. Vul alleen de velden die voor de gekozen audit relevant zijn; laat irrelevante velden leeg als de prompt ze niet gebruikt.
+
 ## Context Load Matrix
 
 ### Airco-only

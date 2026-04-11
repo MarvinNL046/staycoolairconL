@@ -19,7 +19,6 @@ Gebruik deze prompt wanneer je de zichtbare profielattributen in Google Maps wil
   - `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
 - Competitor GBP-URL(s) indien aangeleverd; anders ontdek tijdens live browse
-- Gebruik de aangeleverde `Target zoektermen` passend bij de gekozen modus
 - Screenshots of gekopieerde Google Maps- en GBP-observaties
 - Vastgelegde zoekdatum en gebruikte locatie-instelling
 

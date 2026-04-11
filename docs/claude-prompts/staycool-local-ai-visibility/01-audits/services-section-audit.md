@@ -15,10 +15,9 @@ Gebruik deze prompt wanneer je de servicesectie op GBP wilt vergelijken met de d
 - Relevante pijlercontext:
   - `airco-only` -> `00-context/airco-pijler.md`
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
-- `mixed` -> beide pijlercontexten
+  - `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
 - Competitor GBP-URL(s) indien aangeleverd; anders ontdek tijdens live browse
-- Target zoektermen passend bij de gekozen modus
 - Auditdatum
 - Observatievenster / lookback window voor de servicesectieanalyse
 - Locatie- en broncontext:

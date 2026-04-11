@@ -16,10 +16,9 @@ Gebruik deze prompt wanneer je reviewinhoud wilt vertalen naar meetbare attribut
 - Relevante pijlercontext:
   - `airco-only` -> `00-context/airco-pijler.md`
   - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
-- `mixed` -> beide pijlercontexten
+  - `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
 - Competitor GBP-URL(s) indien aangeleverd; anders ontdek tijdens live browse
-- Target zoektermen passend bij de gekozen modus
 - Auditdatum
 - Review snapshots of review-exports
 - Laatste relevante reviewvenster per profiel of concurrent:
