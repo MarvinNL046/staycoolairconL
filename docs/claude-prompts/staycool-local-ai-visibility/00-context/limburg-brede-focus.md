@@ -1,7 +1,5 @@
 # Limburg-brede Focus
 
-## Limburg-brede focus
-
 ## Hoofdregel
 - Heel Limburg is de hoofdregio van StayCool.
 - De site en prompts moeten Limburg breed denken voordat ze lokaal verfijnen.

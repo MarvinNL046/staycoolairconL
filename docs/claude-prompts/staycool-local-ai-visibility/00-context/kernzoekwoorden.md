@@ -1,7 +1,5 @@
 # Kernzoekwoorden
 
-## Kernzoekwoorden
-
 ## Airco kernwoorden
 - airco installatie limburg
 - airco onderhoud limburg

@@ -7,13 +7,6 @@
 - Sterke link tussen airco en slim verwarmen
 - Heel Limburg als hoofdregio, niet alleen een losse stad of wijk
 
-## Gedeelde positionering
-- Erkend specialist
-- Lokaal en transparant
-- Heel Limburg als hoofdregio
-- Comfort plus energiebesparing als gezamenlijke boodschap
-- Praktische en publiceerbare taal voor beide pijlers
-
 ## Airco-specifieke accenten
 - Koelen en verwarmen met een moderne airco
 - Installatie, onderhoud en reparatie
@@ -39,3 +32,4 @@
 - Vermijd dunne stadsduplicatie; regionale relevantie is belangrijker dan veel bijna-identieke pagina's.
 - Koppel service altijd aan een concreet voordeel zoals rust, comfort, lagere energielasten of een betere benutting van zonnepanelen.
 - Laat expertise zien via praktische taal, duidelijke voorbeelden en meetbare claims waar mogelijk.
+- Gebruik deze file als canon voor positioning en USP-claims; andere contextdocs verwijzen hiernaartoe.

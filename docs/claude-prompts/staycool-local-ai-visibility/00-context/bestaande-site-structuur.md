@@ -1,7 +1,5 @@
 # Bestaande Site-Structuur
 
-## Bestaande site-structuur
-
 ## Hoofdstructuur
 - Home
 - Contact en conversiepagina's

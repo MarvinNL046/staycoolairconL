@@ -12,11 +12,11 @@
 - Alleen gebruiken zodra er actuele GBP- en websitebronnen zijn verzameld.
 - Zonder ingevulde set geen aannames over concurrenten meenemen in prompts.
 
-| Naam | Type concurrent | GBP URL | Website URL | Regio / plaats | Waarom relevant |
-| --- | --- | --- | --- | --- | --- |
-| Concurrent 1 | airco / thuisbatterij / beide | in te vullen | in te vullen | in te vullen | eerst in Google Maps en GBP bekijken |
-| Concurrent 2 | airco / thuisbatterij / beide | in te vullen | in te vullen | in te vullen | vergelijk categorieen, attributen en reviews |
-| Concurrent 3 | airco / thuisbatterij / beide | in te vullen | in te vullen | in te vullen | noteer lokale dekking en servicetaal |
+| Naam | Type concurrent | Positionering | GBP URL | Website URL | Regio / plaats | Waarom relevant |
+| --- | --- | --- | --- | --- | --- | --- |
+| Concurrent 1 | airco / thuisbatterij / beide | in te vullen | in te vullen | in te vullen | in te vullen | eerst in Google Maps en GBP bekijken |
+| Concurrent 2 | airco / thuisbatterij / beide | in te vullen | in te vullen | in te vullen | in te vullen | vergelijk categorieen, attributen en reviews |
+| Concurrent 3 | airco / thuisbatterij / beide | in te vullen | in te vullen | in te vullen | in te vullen | noteer lokale dekking en servicetaal |
 
 ## Basis voor onderzoek
 - Zoek eerst op kernopdrachten zoals airco installatie Limburg, airco onderhoud Limburg en thuisbatterij Limburg.
