@@ -21,7 +21,11 @@ Gebruik deze prompt wanneer je reviewinhoud wilt vertalen naar meetbare attribut
 - Competitor GBP-URL(s)
 - Target zoektermen passend bij de gekozen modus
 - Review snapshots of review-exports
-- Laatste relevante reviewvenster per profiel of concurrent
+- Laatste relevante reviewvenster per profiel of concurrent:
+  - gebruik de auditdatum als eindpunt;
+  - neem reviews uit de 30 kalenderdagen tot en met die datum;
+  - als dat minder dan 10 reviews oplevert, vul aan met de 10 meest recente reviews vóór die periode;
+  - noteer het exacte venster dat is gebruikt.
 
 ## Prompt
 Lees de laatste relevante reviews van StayCool en concurrenten.
@@ -33,6 +37,7 @@ Volg deze regels:
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
 - gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+- als reviews, screenshots of exports onvolledig zijn, markeer het item als `onbekend`, noteer welke input ontbreekt en doe geen aannames.
 
 Definieer schalen als volgt:
 - `prioriteit`: `P1` = direct oppakken, `P2` = plannen, `P3` = later.

@@ -32,6 +32,7 @@ Volg deze regels:
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
 - gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+- als screenshots, exports of observaties onvolledig zijn, markeer het item als `onbekend`, noteer welke input ontbreekt en doe geen aannames.
 
 Definieer schalen als volgt:
 - `prioriteit`: `P1` = direct oppakken, `P2` = plannen, `P3` = later.

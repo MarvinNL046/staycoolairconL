@@ -33,6 +33,7 @@ Volg deze regels:
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
 - gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+- als screenshots, exports of observaties onvolledig zijn, markeer het item als `onbekend`, noteer welke input ontbreekt en doe geen aannames.
 
 Definieer schalen als volgt:
 - `activity score`: `0` = geen zichtbare activiteit, `1` = zeer laag, `2` = laag, `3` = gemiddeld, `4` = hoog, `5` = zeer hoog.

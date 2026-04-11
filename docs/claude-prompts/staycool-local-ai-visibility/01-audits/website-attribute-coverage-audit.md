@@ -30,6 +30,7 @@ Volg deze regels:
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
 - gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
+- als screenshots, exports of observaties onvolledig zijn, markeer het item als `onbekend`, noteer welke input ontbreekt en doe geen aannames.
 
 Gebruik één vaste bronmethode:
 - `sitemap.xml`; of
