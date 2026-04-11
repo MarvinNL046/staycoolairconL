@@ -73,7 +73,11 @@ Sluit af met:
 
 ### template-fallback
 - Korte metadata-echo met de vaste velden
-- 3 varianten per sterrenklasse: 5, 4, 3 en 1-2
+- `3 varianten` betekent 3 per sterrenklasse per pijler, niet 3 totaal
+- single-pillar:
+  - totaal 12 rijen per pijlermodus
+- mixed:
+  - totaal 24 rijen: 3 varianten × 4 sterrenklassen × 2 pijlers
 - Een tabel met exact deze kolommen: `Antwoordmodus`, `Bron review/excerpt ID`, `Sterren`, `Pijler`, `Variant`, `Antwoord`, `Opmerking`
 - De standaard afsluitende secties
 - `Klaarcheck`
@@ -85,7 +89,8 @@ Sluit af met:
 - Ik heb de reacties kort en publiceerbaar gehouden.
 
 ### template-fallback
-- Ik heb 3 varianten per sterrenklasse geleverd.
+- Ik heb 3 varianten per sterrenklasse per pijler geleverd.
+- In mixed mode heb ik 24 rijen geleverd.
 - Ik heb service en Limburg waar passend natuurlijk genoemd.
 - Ik heb lage scores rustig en oplossingsgericht beantwoord.
 - Ik heb de reacties kort en publiceerbaar gehouden.

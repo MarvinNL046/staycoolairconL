@@ -42,7 +42,7 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Periode`
 
 Gebruik daarna exact deze tabel:
-| Week | Pijler | Aantal foto's | Type | Waar fotograferen | Waarom dit telt |
+| Week | Aantal foto's | Type | Waar fotograferen | Waarom dit telt |
 
 De metadata-echo moet altijd expliciet aangeven:
 - `Modus`
@@ -51,6 +51,10 @@ De metadata-echo moet altijd expliciet aangeven:
 - `Periode`
 - `Handoff bron`
 - `Auditbasis`
+
+Mixed-mode labeling:
+- als `Modus` = `mixed`, begin de waarde in `Type` met `Airco -` of `Thuisbatterij -`
+- bij single-pillar mode blijft `Type` zonder extra pijlerprefix
 
 Per week:
 - houd de planning uitvoerbaar;
@@ -69,7 +73,7 @@ Sluit af met:
 - Korte metadata-echo met de vaste velden
 - Een expliciete handoff naar de gebruikte audit- en prioriteringsinput
 - Een 8-weken schema met exact de gevraagde kolommen
-- Een 8-weken schema met exact de gevraagde kolommen inclusief `Pijler`
+- Mixed-mode labeling via de `Type`-waarde, niet via een extra kolom
 - Bewijsgerichte en regionale fotokeuzes
 - Duidelijke mode-splits waar relevant
 - De standaard afsluitende secties

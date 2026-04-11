@@ -31,35 +31,40 @@ Volg deze regels:
 - houd Limburg breed als hoofdregio;
 - single-pillar output: in `airco-only` alleen airco-reviewverzoeken; in `thuisbatterij-only` alleen thuisbatterij-reviewverzoeken;
 - mixed output: maak de volledige set aan verzoeken voor beide pijlers;
-- maak per modus alleen de verzoeken die daarbij passen:
-  - `airco-only`: review request after airco installation, review request after airco maintenance, review request after repair, short WhatsApp version, short e-mail version;
-  - `thuisbatterij-only`: review request after thuisbatterij advice/installation, short WhatsApp version, short e-mail version;
-  - `mixed`: combineer beide pijlers en maak de volledige set;
+- maak per modus alleen de verzoeken die daarbij passen en gebruik geen andere rijen;
 - gebruik natuurlijke Limburg-verwijzing waar dat past;
 - houd de toon vriendelijk, niet opdringerig en direct bruikbaar.
 - gebruik alleen placeholders die expliciet in de input zijn meegegeven.
 
 ## Vereiste rijset per modus
 ### airco-only
-- `review request after airco installation`
-- `review request after airco maintenance`
-- `review request after repair`
-- `short WhatsApp version`
-- `short e-mail version`
+- 3 service-moment rows:
+  - `review request after airco installation`
+  - `review request after airco maintenance`
+  - `review request after repair`
+- 2 korte standaardrijen:
+  - `short WhatsApp version`
+  - `short e-mail version`
+- totaal: 5 rijen
 
 ### thuisbatterij-only
-- `review request after thuisbatterij advice/installation`
-- `short WhatsApp version`
-- `short e-mail version`
+- 1 service-moment row:
+  - `review request after thuisbatterij advice/installation`
+- 2 korte standaardrijen:
+  - `short WhatsApp version`
+  - `short e-mail version`
+- totaal: 3 rijen
 
 ### mixed
-- alle airco-rijen uit `airco-only`
-- alle thuisbatterij-rijen uit `thuisbatterij-only`
+- alle 5 rijen uit `airco-only`
+- alle 3 rijen uit `thuisbatterij-only`
+- totaal: 8 rijen
 
 ## Kanaal mapping
-- `review request after airco installation`, `review request after airco maintenance`, `review request after repair`, `review request after thuisbatterij advice/installation` -> gebruik het kanaal dat in de input als verzendkanaal is meegegeven; als dat ontbreekt, zet `WhatsApp` en `E-mail` als aparte rijen per trigger
-- `short WhatsApp version` -> `WhatsApp`
-- `short e-mail version` -> `E-mail`
+- service-moment rows: `Kanaal` komt uit de input; als dat ontbreekt, zet `Kanaal` op `onbekend` en maak geen extra kanaal-duplicaten
+- `short WhatsApp version`: `WhatsApp`
+- `short e-mail version`: `E-mail`
+- in `mixed` zijn de korte WhatsApp- en e-mailrijen per pijler apart: 2 voor airco en 2 voor thuisbatterijen
 
 Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Modus`
@@ -88,22 +93,23 @@ Sluit af met:
 ## Verwachte output
 ### airco-only
 - Korte metadata-echo met de vaste velden
-- Exact deze rijen: installation, maintenance, repair, short WhatsApp version, short e-mail version
-- Een tabel met alleen airco-triggers en het kanaal volgens de mapping hierboven
+- Exact 5 rijen: 3 service-moment rows + 2 korte standaardrijen
+- Een tabel met alleen airco-rijen volgens de kanaalmapping hierboven
 - De standaard afsluitende secties
 - `Klaarcheck`
 
 ### thuisbatterij-only
 - Korte metadata-echo met de vaste velden
-- Exact deze rijen: advice/installation, short WhatsApp version, short e-mail version
-- Een tabel met alleen thuisbatterij-triggers en het kanaal volgens de mapping hierboven
+- Exact 3 rijen: 1 service-moment row + 2 korte standaardrijen
+- Een tabel met alleen thuisbatterij-rijen volgens de kanaalmapping hierboven
 - De standaard afsluitende secties
 - `Klaarcheck`
 
 ### mixed
 - Korte metadata-echo met de vaste velden
-- De volledige gecombineerde set voor airco en thuisbatterij
-- Een tabel met beide pijlers en alle relevante triggers
+- Exact 8 rijen: 5 airco-rijen + 3 thuisbatterij-rijen
+- De 4 korte standaardrijen zijn per pijler uitgesplitst en dus niet gedeeld
+- Een tabel met alle rijen volgens de kanaalmapping hierboven
 - De standaard afsluitende secties
 - `Klaarcheck`
 
