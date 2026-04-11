@@ -28,7 +28,9 @@ Volg deze regels:
 - houd Limburg breed als hoofdregio;
 - plan 2 tot 3 posts per week;
 - mix seizoenspromoties, cases, review-highlights en teamcontent;
-- neem airco en thuisbatterijen op waar relevant;
+- de geplande output moet beide pijlers bevatten: `airco` en `thuisbatterijen`;
+- zorg dat in de totale maandplanning beide pijlers terugkomen;
+- splits airco en thuisbatterijen uit in de maandindeling waar nodig;
 - lever per post publiceerbare copy plus een image suggestion;
 - maak de planning uitvoerbaar voor een operator;
 - gebruik natuurlijke CTA's;
@@ -46,7 +48,7 @@ Gebruik daarna een kalender in tabelvorm, bijvoorbeeld:
 Zorg dat:
 - de totale maand 2 tot 3 posts per week bevat;
 - er een goede mix zit tussen promo, case, review en team;
-- airco en thuisbatterij bij `mixed` apart zichtbaar zijn;
+- airco en thuisbatterij bij `mixed` apart zichtbaar zijn, maar in alle planningen moeten beide pijlers voorkomen;
 - de copy direct publiceerbaar is;
 - de image suggestion concreet en eenvoudig uitvoerbaar is.
 
@@ -61,7 +63,7 @@ Sluit af met:
 - Een maandkalender met 2 tot 3 posts per week
 - Per post publiceerbare copy plus image suggestion
 - Een mix van seizoenspromoties, cases, review-highlights en teamcontent
-- Duidelijke mode-splits waar relevant
+- Duidelijke mode-splits waar relevant, met beide pijlers in de totale output
 - De standaard afsluitende secties
 - `Klaarcheck`
 
@@ -69,4 +71,4 @@ Sluit af met:
 - Ik heb 2 tot 3 posts per week gepland.
 - Ik heb de maandmix bewust verdeeld over promo, case, review en team.
 - Ik heb per post een image suggestion toegevoegd.
-- Ik heb airco en thuisbatterijen waar relevant apart gehouden.
+- Ik heb airco en thuisbatterijen expliciet en tegelijk in de maandoutput verwerkt.
