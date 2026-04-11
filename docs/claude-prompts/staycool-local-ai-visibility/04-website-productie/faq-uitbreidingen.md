@@ -68,6 +68,14 @@ Vereisten voor publiceerbaarheid:
 - gebruik in mixed mode waar passend een `Gedeelde asset` / `Crossover asset`-blok als de FAQ-set inhoudelijk voor beide pijlers werkt;
 - maak duidelijk welke vragen airco-only, thuisbatterij-only of crossover zijn.
 
+Vast publiceerbaar FAQ-blok:
+### Publiceerbaar FAQ-blok
+| Pijler | Publicatiesurface | Indexed / noindex | FAQ-set | CMS-ready opmerking |
+
+- vul deze sectie altijd in, ook als de tabel al compleet is;
+- groepeer hier de FAQ's per publicatiesurface zodat de set direct in CMS kan worden overgenomen;
+- als een FAQ-set voor beide pijlers werkt, label die hier als `Gedeelde asset` / `Crossover asset`.
+
 Sluit af met:
 ## Topprioriteiten
 ## Quick wins
@@ -80,6 +88,7 @@ Sluit af met:
 - 10 FAQ's per pijler waar relevant, met korte antwoorden
 - Schema-vriendelijke formuleringen
 - Een publiceerbaar FAQ-blok per pijler
+- De vaste sectie `### Publiceerbaar FAQ-blok` met `| Pijler | Publicatiesurface | Indexed / noindex | FAQ-set | CMS-ready opmerking |`
 - De standaard afsluitende secties
 - `Klaarcheck`
 

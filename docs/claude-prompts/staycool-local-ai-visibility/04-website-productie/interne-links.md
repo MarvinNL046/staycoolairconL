@@ -23,7 +23,9 @@ Gebruik deze prompt wanneer je interne links wilt plannen tussen bestaande pagin
 ## Prompt
 Je bent de interne-linkproductielaag voor StayCool.
 
-Werk evidence-first en gebruik alleen pagina's, clusters en doelen die logisch volgen uit de site-structuur, de audits en de prioritering. De output moet operatorgericht zijn: direct bruikbaar voor contentredactie of CMS-updates. Voeg geen algemene linktheorie toe. Als een bron- of doelpagina niet hard genoeg te bepalen is, zet `onbekend`.
+Werk evidence-first en gebruik alleen pagina's, surfaces en doelen die logisch volgen uit de site-structuur, de audits en de prioritering. De output moet operatorgericht zijn: direct bruikbaar voor contentredactie of CMS-updates. Voeg geen algemene linktheorie toe. Als een bron- of doelpagina niet hard genoeg te bepalen is, zet `onbekend`.
+
+Werk surface-first: koppel bron- en doelpagina's altijd aan expliciet benoemde publishing surfaces uit `00-context/bestaande-site-structuur.md`.
 
 Volg deze regels:
 - antwoord volledig in Nederlands;
@@ -32,7 +34,7 @@ Volg deze regels:
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt;
 - laat anchors natuurlijk, inhoudelijk en attribuutgedreven zijn;
-- koppel links aan bestaande routes of expliciet nieuwe assettypes;
+- koppel links aan bestaande routes of benoemde site families;
 - voorkom dubbele of zwakke anchorteksten;
 - sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later`.
 
@@ -44,14 +46,19 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Gebruik daarna exact deze tabel:
-| Bronpagina | Doelpagina | Anchor | Waarom |
+| Bronpagina | Doelpagina | Anchor | Publishing surface bron | Publishing surface doel | Waarom |
 
 Vereisten voor de tabel:
 - geef per relevante link een eigen rij;
 - in `mixed` mode splits je airco en thuisbatterij zichtbaar uit;
-- gebruik alleen bron- en doelpagina's die passen bij de bestaande site-structuur of een nieuw assettype;
+- gebruik alleen bron- en doelpagina's die passen bij een expliciet benoemde publishing surface uit de site-structuur;
 - maak het waarom concreet: attribuut, intentie of regionale match;
 - noteer onzekerheden met `onbekend` als de broninput tekortschiet.
+
+Vereisten voor surface-grounding:
+- gebruik alleen expliciet benoemde surfaces zoals `/landing/*`, root-level money pages, `/kennisbank/*`, `/seo/pillar-*/*`, `*/noindex/*` of een andere benoemde site family uit de site-structuur;
+- noem bron en doel per rij expliciet in de surface-kolommen;
+- gebruik geen cluster- of assetterminologie zonder route.
 
 Sluit af met:
 ## Topprioriteiten
@@ -61,14 +68,14 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Bronpagina | Doelpagina | Anchor | Waarom |`
+- Exact de tabel `| Bronpagina | Doelpagina | Anchor | Publishing surface bron | Publishing surface doel | Waarom |`
 - Een praktische interne-linkmap voor redactie of CMS
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - De standaard afsluitende secties
 - `Klaarcheck`
 
 ## Klaarcheck
-- Ik heb de interne links aan echte pagina's of clusters gekoppeld.
+- Ik heb de interne links aan echte pagina's of surfaces gekoppeld.
 - Ik heb anchors inhoudelijk en natuurlijk gehouden.
 - Ik heb airco en thuisbatterijen gescheiden waar nodig.
 - Ik heb alleen evidence-first linkkansen opgenomen.

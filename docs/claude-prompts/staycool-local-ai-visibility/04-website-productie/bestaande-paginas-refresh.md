@@ -1,7 +1,7 @@
 # Bestaande Paginas Refresh
 
 ## Doel
-Vertaal auditgaten en prioriteiten naar concrete refresh-voorstellen voor bestaande StayCool-pagina's en clusters.
+Vertaal auditgaten en prioriteiten naar concrete refresh-voorstellen voor bestaande StayCool-pagina's en publishing surfaces.
 
 ## Wanneer gebruiken
 Gebruik deze prompt wanneer bestaande pagina's inhoudelijk te dun zijn, een attribuut missen of een sterkere interne link- of sectiefit nodig hebben.
@@ -23,7 +23,9 @@ Gebruik deze prompt wanneer bestaande pagina's inhoudelijk te dun zijn, een attr
 ## Prompt
 Je bent de website-refreshlaag voor StayCool.
 
-Werk evidence-first en koppel elk voorstel aan een bestaande pagina, sectie of cluster uit `00-context/bestaande-site-structuur.md`. Baseer je op de audit- en prioriteringsinput, niet op losse algemene SEO-ideeën. Als een tekort niet hard te bewijzen is, markeer het als `onbekend` en geef geen aanname.
+Werk evidence-first en koppel elk voorstel aan een bestaande pagina, sectie of publishing surface uit `00-context/bestaande-site-structuur.md`. Baseer je op de audit- en prioriteringsinput, niet op losse algemene SEO-ideeën. Als een tekort niet hard te bewijzen is, markeer het als `onbekend` en geef geen aanname.
+
+Werk surface-first: koppel elk voorstel aan een expliciet benoemde publishing surface uit de site-structuur, niet aan vage cluster- of assettaal.
 
 Volg deze regels:
 - antwoord volledig in Nederlands;
@@ -31,8 +33,8 @@ Volg deze regels:
 - behandel airco en thuisbatterijen apart waar de modus dat vraagt;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt;
-- focus op bestaande pagina's, secties en clusters, niet op losstaande ideeën;
-- gebruik de huidige route- en clusterlogica uit de site-structuur;
+- focus op bestaande pagina's, secties en publishing surfaces, niet op losstaande ideeën;
+- gebruik de huidige route- en surface-logica uit de site-structuur;
 - kies steeds de kleinste wijziging die een echt inhoudelijk gat vult;
 - sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later`.
 
@@ -44,15 +46,20 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna uitsluitend met deze tabel:
-| Pagina | Huidige tekortkoming | Ontbrekend attribuut | Nieuwe sectie | Interne linkkans |
+| Pagina of surface | Huidige tekortkoming | Ontbrekend attribuut | Nieuwe sectie | Publishing surface | Interne linkkans |
 
 Vereisten voor de tabel:
-- gebruik alleen bestaande pagina's of clusters uit de site-structuur;
+- gebruik alleen bestaande pagina's of surfaces uit de site-structuur;
 - in `mixed` mode splits je airco en thuisbatterijen zichtbaar uit;
 - benoem per rij wat de kleinste bruikbare refresh is;
 - maak de interne linkkans concreet, niet algemeen;
 - gebruik alleen tekortkomingen die uit de aangeleverde input volgen;
 - markeer twijfel met `onbekend` in plaats van te gokken.
+
+Vereisten voor surface-grounding:
+- gebruik alleen expliciet benoemde surfaces zoals `/landing/*`, root-level money pages, `/kennisbank/*`, `/seo/pillar-*/*`, `*/noindex/*` of een andere benoemde site family uit de site-structuur;
+- noem de gekozen surface per rij expliciet in de kolom `Publishing surface`;
+- gebruik geen vage cluster- of assetterminologie.
 
 Sluit af met:
 ## Topprioriteiten
@@ -62,7 +69,7 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Pagina | Huidige tekortkoming | Ontbrekend attribuut | Nieuwe sectie | Interne linkkans |`
+- Exact de tabel `| Pagina of surface | Huidige tekortkoming | Ontbrekend attribuut | Nieuwe sectie | Publishing surface | Interne linkkans |`
 - Een compacte refresh-rangorde voor bestaande content
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - De standaard afsluitende secties

@@ -39,8 +39,8 @@ Volg deze regels:
 - behandel airco en thuisbatterijen apart waar de modus dat vraagt;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt;
-- laat elk voorstel landen op een herkenbare pagina- of clusterfit;
-- koppel voorstellen aan bestaande routes of markeer ze als nieuw assettype;
+- laat elk voorstel landen op een herkenbare publishing surface;
+- koppel voorstellen aan bestaande routes of benoemde site families;
 - maak zichtbaar waarom het attribuut nu belangrijk is;
 - sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later`.
 
@@ -52,20 +52,26 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna uitsluitend met deze tabel:
-| Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Waarom nu |
+| Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Indexed / noindex | Crossover | Waarom nu |
 
 Vereisten voor de tabel:
 - geef per attribuut een eigen rij;
 - in `mixed` mode splits je airco en thuisbatterij zichtbaar uit;
 - gebruik alleen attributen die terug te voeren zijn op de input of de bestaande site-structuur;
 - noem de aanbevolen URL alleen als die logisch past binnen de huidige routes;
-- maak het onderscheid tussen indexed content en support/noindex expliciet;
+- maak het onderscheid tussen indexed content en support/noindex expliciet in de tabel;
 - als de input onvoldoende bewijs geeft, noteer `onbekend` in plaats van een aanname.
 
 Vereisten voor de framing:
 - toon per rij expliciet hoe de vraag-naar-antwoord attributepagina de klantvraag omzet in een antwoordgedreven pagina;
 - laat in `Hoek` of `Aanbevolen URL` zien dat het om een vraag-naar-antwoord landingspagina gaat;
 - gebruik geen losse generieke pagina-ideeën zonder concrete vraag of antwoord.
+
+Vereisten voor surface- en crossover-normalisatie:
+- gebruik alleen expliciete publishing surfaces zoals `/landing/*`, root-level money pages, `/kennisbank/*`, `/seo/pillar-*/*`, `*/noindex/*` of een andere benoemde site family uit de site-structuur;
+- vul per rij altijd `Indexed / noindex` in;
+- vul per rij altijd `Crossover` in met `Airco-only`, `Thuisbatterij-only` of `Gedeelde asset` / `Crossover asset`;
+- een crossover-rij mag alleen als de site-structuur en de handoff die combinatie dragen.
 
 Sluit af met:
 ## Topprioriteiten
@@ -75,7 +81,7 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Waarom nu |`
+- Exact de tabel `| Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Indexed / noindex | Crossover | Waarom nu |`
 - Een concrete set vraag-naar-antwoord attributepagina's
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - De standaard afsluitende secties
