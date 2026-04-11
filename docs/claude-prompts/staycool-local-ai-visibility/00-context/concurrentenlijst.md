@@ -1,9 +1,16 @@
 # Concurrentenlijst
 
 ## Concurrentenlijst
+- Dit is een research worksheet, geen default contextset voor elk prompttype.
+- Vul deze lijst eerst in voordat je concurrent-gebaseerde prompts runt.
 - Gebruik deze lijst om per concurrent GBP-URL, website-URL en positionering vast te leggen.
 - Type concurrent: airco, thuisbatterij of beide.
 - Vul altijd in wat de concurrent zichtbaar goed doet, niet alleen wie het is.
+
+## Status
+- Nog niet gecureerd.
+- Alleen gebruiken zodra er actuele GBP- en websitebronnen zijn verzameld.
+- Zonder ingevulde set geen aannames over concurrenten meenemen in prompts.
 
 | Naam | Type concurrent | GBP URL | Website URL | Regio / plaats | Waarom relevant |
 | --- | --- | --- | --- | --- | --- |

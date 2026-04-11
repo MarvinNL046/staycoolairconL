@@ -28,3 +28,22 @@ De flow hieronder is de beoogde toekomstige workflow zodra de promptbestanden be
 3. Zet de audit om naar prioriteiten.
 4. Gebruik productieprompts om copy of backlog te maken.
 5. Gebruik executieroutines voor onderhoud.
+
+## Context Load Matrix
+
+### Airco-only
+- Required: `00-context/bedrijf-profiel-staycool.md`, `00-context/usp-en-positionering.md`, `00-context/limburg-brede-focus.md`, `00-context/airco-pijler.md`, `00-context/bestaande-site-structuur.md`
+- Optional: `00-context/concurrentenlijst.md`, `00-context/kernzoekwoorden.md`
+
+### Thuisbatterij-only
+- Required: `00-context/bedrijf-profiel-staycool.md`, `00-context/usp-en-positionering.md`, `00-context/limburg-brede-focus.md`, `00-context/thuisbatterij-pijler.md`, `00-context/bestaande-site-structuur.md`
+- Optional: `00-context/concurrentenlijst.md`, `00-context/kernzoekwoorden.md`
+
+### Mixed
+- Required: `00-context/bedrijf-profiel-staycool.md`, `00-context/usp-en-positionering.md`, `00-context/limburg-brede-focus.md`, `00-context/airco-pijler.md`, `00-context/thuisbatterij-pijler.md`, `00-context/bestaande-site-structuur.md`
+- Optional: `00-context/concurrentenlijst.md`, `00-context/kernzoekwoorden.md`
+
+## Status
+- Deze bibliotheek is context-first en nog een scaffold.
+- De contextlaag is bedoeld om latere promptlagen te voeden zodra die zijn toegevoegd.
+- Gebruik de matrix hierboven om te bepalen welke context minimaal geladen moet worden per prompttype.

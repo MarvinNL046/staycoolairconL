@@ -13,3 +13,22 @@ Gebruik standaard deze afsluiting voor analyse- en productieprompts:
   - `Direct publiceerbaar`
   - `Later`
 Kleine utility-scaffolds mogen hiervan afwijken.
+
+## Context Load Matrix
+
+### Airco-only
+- Required: `00-context/bedrijf-profiel-staycool.md`, `00-context/usp-en-positionering.md`, `00-context/limburg-brede-focus.md`, `00-context/airco-pijler.md`, `00-context/bestaande-site-structuur.md`
+- Optional: `00-context/concurrentenlijst.md`, `00-context/kernzoekwoorden.md`
+
+### Thuisbatterij-only
+- Required: `00-context/bedrijf-profiel-staycool.md`, `00-context/usp-en-positionering.md`, `00-context/limburg-brede-focus.md`, `00-context/thuisbatterij-pijler.md`, `00-context/bestaande-site-structuur.md`
+- Optional: `00-context/concurrentenlijst.md`, `00-context/kernzoekwoorden.md`
+
+### Mixed
+- Required: `00-context/bedrijf-profiel-staycool.md`, `00-context/usp-en-positionering.md`, `00-context/limburg-brede-focus.md`, `00-context/airco-pijler.md`, `00-context/thuisbatterij-pijler.md`, `00-context/bestaande-site-structuur.md`
+- Optional: `00-context/concurrentenlijst.md`, `00-context/kernzoekwoorden.md`
+
+## Context-First Status
+- Deze bibliotheek is voorlopig context-first en scaffolded.
+- De huidige documenten leveren basiscontext en structuur; latere promptlagen voegen audits, prioritering en productie toe.
+- Kies per prompt altijd eerst de juiste contextset uit de matrix hierboven.

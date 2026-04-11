@@ -7,6 +7,25 @@
 - Sterke link tussen airco en slim verwarmen
 - Heel Limburg als hoofdregio, niet alleen een losse stad of wijk
 
+## Gedeelde positionering
+- Erkend specialist
+- Lokaal en transparant
+- Heel Limburg als hoofdregio
+- Comfort plus energiebesparing als gezamenlijke boodschap
+- Praktische en publiceerbare taal voor beide pijlers
+
+## Airco-specifieke accenten
+- Koelen en verwarmen met een moderne airco
+- Installatie, onderhoud en reparatie
+- Ruimte-intenties zoals woonkamer, slaapkamer, kantoor en zolder
+- Merken- en modelcontext waar dat relevant is
+
+## Thuisbatterij-specifieke accenten
+- Thuisbatterij als aparte pijler voor energiegebruik en opslag
+- Koppeling met zonnepanelen, dynamische tarieven en terugleverkosten
+- Rendement en capaciteit als kernonderwerpen
+- Geen airco-specifieke claims overnemen zonder expliciete batterijrelatie
+
 ## USP's die consequent terug moeten komen
 - F-gassen gecertificeerd
 - Meer dan 1000 installaties uitgevoerd
