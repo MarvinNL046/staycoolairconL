@@ -68,6 +68,7 @@ Markeer:
   - locatie/source context
   - exact observatievenster
   - `Target zoektermen`
+  - gebruikte competitor-cohort bron
 - Een servicematrix met StayCool, ontbrekende services en prioriteit voor de gekozen pijler of pijlers.
 - Een apart blok voor de gekozen pijler of pijlers.
 - Een lijst met aanbevolen servicebeschrijvingen of toevoegingen.

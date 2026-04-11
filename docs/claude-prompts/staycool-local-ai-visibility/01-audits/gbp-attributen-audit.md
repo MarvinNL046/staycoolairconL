@@ -19,6 +19,7 @@ Gebruik deze prompt wanneer je de zichtbare profielattributen in Google Maps wil
   - `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
 - Competitor GBP-URL(s) indien aangeleverd, of top 3 zichtbare concurrenten uit een eerder Map Pack/category-auditresultaat op dezelfde `Target zoektermen`
+- Target zoektermen passend bij de gekozen modus
 - Screenshots of gekopieerde Google Maps- en GBP-observaties
 - Vastgelegde zoekdatum en gebruikte locatie-instelling
 
@@ -59,6 +60,7 @@ Sluit af met een prioriteitenlijst voor attribute gaps.
   - `Auditdatum`
   - locatie/source context
   - profiel/snapshot context
+  - `Target zoektermen`
 - Een attributentabel per pijler met StayCool versus concurrenten.
 - Een gap-overzicht met ontbrekende of zwakke attributen.
 - `Topprioriteiten`
