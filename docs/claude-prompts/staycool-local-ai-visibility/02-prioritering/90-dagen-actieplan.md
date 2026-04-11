@@ -68,10 +68,15 @@ Per maand:
 - geef alleen acties die passen bij de auditinput.
 vul deze secties expliciet met de geprioriteerde output: `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later`.
 
+Gebruik per maandblok exact deze uitvoerbare actietabel zodat reruns vergelijkbaar blijven:
+| Actie | Kanaal | Pijler | Exact target | Owner | Dependency | Timing | Do-now/defer | Source audit |
+
+Vul elk maandblok met concrete rijen onder deze kolommen. Gebruik `Timing` als maand- of weekindicatie binnen de 90-dagenhorizon.
+
 ## Verwachte output
 - Korte metadata-echo met de vaste velden `Modus`, `Auditdatum`, `Gebruikte auditinputs`, `Broncontext`
 - `Maand 1`, `Maand 2` en `Maand 3` met per maand de relevante pijlerblokken en optioneel `Gedeelde acties`
-- Een uitvoerbare actietabel per blok met `source audit`, `exact target`, `owner`, `dependency` en `do-now/defer`
+- Een uitvoerbare actietabel per blok met exact deze kolommen: `Actie`, `Kanaal`, `Pijler`, `Exact target`, `Owner`, `Dependency`, `Timing`, `Do-now/defer`, `Source audit`
 - Een korte risico- of afhankelijkhedennoot als dat helpt
 - `Klaarcheck`
 
