@@ -10,14 +10,16 @@ Gebruik deze prompt wanneer je de zichtbare profielattributen in Google Maps wil
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
-- `00-context/airco-pijler.md`
-- `00-context/thuisbatterij-pijler.md`
 - `00-context/bestaande-site-structuur.md`
 - `00-context/concurrentenlijst.md` indien beschikbaar
 - Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- Relevante pijlercontext:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
 - Competitor GBP-URL(s)
-- Target zoektermen
+- Target zoektermen passend bij de gekozen modus
 - Screenshots of gekopieerde Google Maps- en GBP-observaties
 - Vastgelegde zoekdatum en gebruikte locatie-instelling
 
@@ -26,7 +28,7 @@ Onderzoek de GBP-attributen van StayCool en relevante concurrenten in Limburg br
 
 Volg deze regels:
 - antwoord volledig in Nederlands;
-- behandel `airco` en `thuisbatterijen` apart;
+- behandel alleen de gekozen pijler of pijlers volgens de modus;
 - gebruik Limburg breed als hoofdregio;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.

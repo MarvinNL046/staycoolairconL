@@ -10,20 +10,22 @@ Gebruik deze prompt wanneer je de website wilt toetsen op de mate waarin die con
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
-- `00-context/airco-pijler.md`
-- `00-context/thuisbatterij-pijler.md`
 - `00-context/bestaande-site-structuur.md`
 - Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
 - Sitebron: `sitemap.xml`, crawl-export, of vaste URL-sample
 - Vaste URL-sample of crawl-export met concrete URLs
 - Datum van crawl of sample
+- Relevante pijlercontext:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 
 ## Prompt
 Toets de StayCool-site op expliciete attribute coverage met een reproduceerbare bron.
 
 Volg deze regels:
 - antwoord volledig in Nederlands;
-- behandel `airco` en `thuisbatterijen` apart;
+- behandel alleen de gekozen pijler of pijlers volgens de modus;
 - gebruik Limburg breed als hoofdregio;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
@@ -58,7 +60,7 @@ Werk uit:
 
 ## Verwachte output
 - Een coverage-tabel met attribuut, huidige dekking, ontbrekend detail en aanbevolen pagina.
-- Een apart overzicht voor `airco` en `thuisbatterijen`.
+- Een apart overzicht voor de gekozen pijler of pijlers.
 - Een lijst met concrete contentgaten.
 - `Topprioriteiten`
 - `Quick wins`

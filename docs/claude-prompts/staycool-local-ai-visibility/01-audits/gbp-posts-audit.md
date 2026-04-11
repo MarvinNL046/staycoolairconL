@@ -10,14 +10,16 @@ Gebruik deze prompt wanneer je de recentheid, inhoud en regionale signalen van G
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
-- `00-context/airco-pijler.md`
-- `00-context/thuisbatterij-pijler.md`
 - `00-context/bestaande-site-structuur.md`
 - `00-context/concurrentenlijst.md` indien beschikbaar
 - Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- Relevante pijlercontext:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
 - Competitor GBP-URL(s)
-- Target zoektermen
+- Target zoektermen passend bij de gekozen modus
 - Screenshots of gekopieerde GBP-postobservaties
 - 90-dagen postbewijs of post-exports per profiel
 
@@ -26,7 +28,7 @@ Analyseer de GBP-posts van StayCool en relevante concurrenten in Limburg breed.
 
 Volg deze regels:
 - antwoord volledig in Nederlands;
-- behandel `airco` en `thuisbatterijen` apart;
+- behandel alleen de gekozen pijler of pijlers volgens de modus;
 - gebruik Limburg breed als hoofdregio;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
@@ -41,13 +43,13 @@ Voor de laatste 90 dagen:
 - noteer postfrequentie;
 - noteer contenttype;
 - noteer lokale of regionale signalen;
-- geef een activity score per profiel;
+- geef een activity score per relevante pijler of profiel;
 - bepaal quick wins voor de komende 30 dagen.
 
 Laat zien of de posts vooral promotioneel, informatief, bewijsgericht of regionaal zijn, en of ze voldoende aansluiten op de service- en attributentaal van StayCool.
 
 ## Verwachte output
-- Een tabel per profiel met 90-dagenfrequentie, contenttype, regionale signalen en activity score.
+- Een tabel per relevant profiel met 90-dagenfrequentie, contenttype, regionale signalen en activity score.
 - Een lijst met contenttypes die StayCool vaker moet posten.
 - Quick wins voor de komende 30 dagen.
 - `Topprioriteiten`

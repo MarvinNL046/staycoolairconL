@@ -10,14 +10,16 @@ Gebruik deze prompt wanneer je reviewinhoud wilt vertalen naar meetbare attribut
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
-- `00-context/airco-pijler.md`
-- `00-context/thuisbatterij-pijler.md`
 - `00-context/bestaande-site-structuur.md`
 - `00-context/concurrentenlijst.md` indien beschikbaar
 - Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- Relevante pijlercontext:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
 - Competitor GBP-URL(s)
-- Target zoektermen
+- Target zoektermen passend bij de gekozen modus
 - Review snapshots of review-exports
 - Laatste relevante reviewvenster per profiel of concurrent
 
@@ -26,7 +28,7 @@ Lees de laatste relevante reviews van StayCool en concurrenten.
 
 Volg deze regels:
 - antwoord volledig in Nederlands;
-- behandel `airco` en `thuisbatterijen` apart;
+- behandel alleen de gekozen pijler of pijlers volgens de modus;
 - gebruik Limburg breed als hoofdregio;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
@@ -43,7 +45,7 @@ Extra instructie:
 - extraheer expliciet genoemde regio's of plaatsen;
 - extraheer expliciet genoemde snelheid of responstijd;
 - extraheer expliciet genoemde resultaten of uitkomsten;
-- label alle bevindingen apart voor `airco` en voor `thuisbatterijen`.
+- label alle bevindingen apart voor de gekozen pijler of pijlers.
 
 Maak onderscheid tussen:
 - klanttaal die al aanwezig is;
@@ -53,7 +55,7 @@ Maak onderscheid tussen:
 Eindig met de review-attributen die StayCool actief moet verzamelen via reviewverzoeken en follow-ups.
 
 ## Verwachte output
-- Een review-attributentabel per pijler met voorbeelden uit reviews.
+- Een review-attributentabel per relevante pijler met voorbeelden uit reviews.
 - Een lijst met herhaalde reviewpatronen en ontbrekende reviewtaal.
 - Een slotblok met ontbrekende review-attributen die StayCool actief moet verzamelen.
 - `Topprioriteiten`

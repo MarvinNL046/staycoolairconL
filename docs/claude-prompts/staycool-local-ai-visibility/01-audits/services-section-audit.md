@@ -10,13 +10,15 @@ Gebruik deze prompt wanneer je de servicesectie op GBP wilt vergelijken met de d
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
-- `00-context/airco-pijler.md`
-- `00-context/thuisbatterij-pijler.md`
 - `00-context/bestaande-site-structuur.md`
 - Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- Relevante pijlercontext:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
 - Competitor GBP-URL(s)
-- Target zoektermen
+- Target zoektermen passend bij de gekozen modus
 - Screenshots of gekopieerde GBP-servicesobservaties
 - Laatste zichtbare servicesectie of profielsnapshot
 
@@ -25,7 +27,7 @@ Analyseer de GBP-servicesectie van StayCool en vergelijk die met de kernservices
 
 Volg deze regels:
 - antwoord volledig in Nederlands;
-- behandel `airco` en `thuisbatterijen` apart;
+- behandel alleen de gekozen pijler of pijlers volgens de modus;
 - gebruik Limburg breed als hoofdregio;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
@@ -51,8 +53,8 @@ Markeer:
 - services die de site al goed ondersteunt en dus logisch zijn om in GBP te versterken.
 
 ## Verwachte output
-- Een servicematrix met StayCool, ontbrekende services en prioriteit.
-- Een apart blok voor `airco` en `thuisbatterijen`.
+- Een servicematrix met StayCool, ontbrekende services en prioriteit voor de gekozen pijler of pijlers.
+- Een apart blok voor de gekozen pijler of pijlers.
 - Een lijst met aanbevolen servicebeschrijvingen of toevoegingen.
 - `Topprioriteiten`
 - `Quick wins`

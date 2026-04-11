@@ -26,7 +26,6 @@ Volg deze regels:
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
 - gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
-- gebruik alleen de gekozen modus en laat de niet-relevante pijler weg.
 
 Definieer schalen als volgt:
 - `prioriteit`: `P1` = direct oppakken, `P2` = plannen, `P3` = later.

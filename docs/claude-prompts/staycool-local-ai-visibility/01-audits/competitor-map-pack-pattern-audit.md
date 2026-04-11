@@ -10,14 +10,16 @@ Gebruik deze prompt wanneer je patronen wilt herkennen in concurrenten die steed
 - `00-context/bedrijf-profiel-staycool.md`
 - `00-context/usp-en-positionering.md`
 - `00-context/limburg-brede-focus.md`
-- `00-context/airco-pijler.md`
-- `00-context/thuisbatterij-pijler.md`
 - `00-context/bestaande-site-structuur.md`
 - `00-context/concurrentenlijst.md` indien beschikbaar
 - Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- Relevante pijlercontext:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
 - Target GBP-URL(s) van StayCool
 - Competitor GBP-URL(s)
-- Target zoektermen
+- Target zoektermen passend bij de gekozen modus
 - Screenshots of gekopieerde Google Maps-observaties
 - Vastgelegde zoekdatum en gebruikte locatie-instelling
 
@@ -26,7 +28,7 @@ Analyseer de Map Pack-patronen van concurrenten in Google Maps voor Limburg bree
 
 Volg deze regels:
 - antwoord volledig in Nederlands;
-- behandel `airco` en `thuisbatterijen` apart;
+- behandel alleen de gekozen pijler of pijlers volgens de modus;
 - gebruik Limburg breed als hoofdregio;
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt.
@@ -36,11 +38,10 @@ Definieer schalen als volgt:
 - `prioriteit`: `P1` = direct oppakken, `P2` = plannen, `P3` = later.
 - `impact`: `hoog`, `middel`, `laag`.
 
-Onderzoek meerdere zoekopdrachten rond:
-- `airco Limburg`
-- `airco installatie Limburg`
-- `thuisbatterij Limburg`
-- `thuisbatterij installatie Limburg`
+Onderzoek meerdere zoekopdrachten rond de gekozen modus:
+- `airco-only`: `airco Limburg`, `airco installatie Limburg`
+- `thuisbatterij-only`: `thuisbatterij Limburg`, `thuisbatterij installatie Limburg`
+- `mixed`: alle vier zoektermen
 
 Breng per zoekopdracht in kaart:
 - welke bedrijven herhaald zichtbaar zijn;
@@ -50,11 +51,11 @@ Breng per zoekopdracht in kaart:
 - welke regionale signalen of serviceclaims opvallen;
 - wat StayCool hiervan kan leren.
 
-Maak expliciet onderscheid tussen patronen voor `airco` en `thuisbatterijen`.
+Maak expliciet onderscheid tussen de gekozen pijler of pijlers.
 
 ## Verwachte output
-- Een tabel per zoekterm met terugkerende bedrijven en patronen.
-- Een apart analyseblok voor `airco` en `thuisbatterijen`.
+- Een tabel per relevante zoekterm met terugkerende bedrijven en patronen.
+- Een apart analyseblok voor de gekozen pijler of pijlers.
 - Een lijst met Map Pack-patronen die StayCool nu moet spiegelen of overtreffen.
 - `Topprioriteiten`
 - `Quick wins`
