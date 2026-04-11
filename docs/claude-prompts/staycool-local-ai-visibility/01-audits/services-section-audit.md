@@ -21,7 +21,12 @@ Gebruik deze prompt wanneer je de servicesectie op GBP wilt vergelijken met de d
 - Target zoektermen passend bij de gekozen modus
 - Auditdatum
 - Observatievenster / lookback window voor de servicesectieanalyse
-- Locatie- en broncontext voor de observatie
+- Locatie- en broncontext:
+  - platform/source
+  - profiel/business
+  - bekeken locatie / markt
+  - auditdatum
+  - observatievenster
 - Screenshots of gekopieerde GBP-servicesobservaties
 - Laatste zichtbare servicesectie of profielsnapshot
 

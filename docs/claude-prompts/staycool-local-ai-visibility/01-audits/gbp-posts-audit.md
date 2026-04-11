@@ -22,7 +22,12 @@ Gebruik deze prompt wanneer je de recentheid, inhoud en regionale signalen van G
 - Target zoektermen passend bij de gekozen modus
 - Auditdatum
 - Observatievenster / lookback window voor de postanalyse
-- Locatie- en broncontext voor de observatie
+- Locatie- en broncontext:
+  - platform/source
+  - profiel/business
+  - bekeken locatie / markt
+  - auditdatum
+  - observatievenster
 - Screenshots of gekopieerde GBP-postobservaties
 - 90-dagen postbewijs of post-exports per profiel
 

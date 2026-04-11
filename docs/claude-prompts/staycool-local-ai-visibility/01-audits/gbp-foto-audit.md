@@ -22,7 +22,12 @@ Gebruik deze prompt wanneer je GBP-foto's wilt vergelijken op activiteit, inhoud
 - Target zoektermen passend bij de gekozen modus
 - Auditdatum
 - Observatievenster / lookback window voor de fotoanalyse
-- Locatie- en broncontext voor de observatie
+- Locatie- en broncontext:
+  - platform/source
+  - profiel/business
+  - bekeken locatie / markt
+  - auditdatum
+  - observatievenster
 - Screenshots of gekopieerde GBP-fotoobservaties
 - 90-dagen foto-bewijs of foto-exports per profiel
 
