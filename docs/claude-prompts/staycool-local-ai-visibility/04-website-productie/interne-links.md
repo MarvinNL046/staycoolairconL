@@ -53,16 +53,17 @@ Vereisten voor de tabel:
 - geef per relevante link een eigen rij;
 - vul per rij altijd `Bron pijler`, `Doel pijler` en `Linkrelatie` in;
 - gebruik deze waarden in elke modus:
-  - `Bron pijler`: `airco`, `thuisbatterij`, `gedeeld`
-  - `Doel pijler`: `airco`, `thuisbatterij`, `gedeeld`
+  - `Bron pijler`: `airco`, `thuisbatterij`
+  - `Doel pijler`: `airco`, `thuisbatterij`
   - `Linkrelatie`: `same-pillar`, `cross-pillar`, `shared-support`
   - `Plaatsingsstatus`: `direct plaatsbaar`, `wacht op bronpagina`, `wacht op doelpagina`, `wacht op beide`
 - vul `Bron concrete pagina / route` en `Doel concrete pagina / route` altijd met een concrete bestaande of beoogde eindroute;
 - vul `Bron Asset-ID` en `Doel Asset-ID` in als de bron of het doel uit een andere Task 6-deliverable komt; gebruik anders `n.v.t.`;
+- hergebruik `Bron Asset-ID` en `Doel Asset-ID` exact zoals ze in de upstream Task 6-output staan; maak geen nieuwe varianten voor hetzelfde deliverable;
 - `same-pillar`: bron en doel horen bij dezelfde pijler;
 - `cross-pillar`: bron en doel horen bij verschillende pijlers;
 - `shared-support`: de link ondersteunt een gedeelde of pijler-overstijgende context, maar blijft één canonieke linkplaatsing;
-- gebruik `gedeeld` alleen wanneer de bron- of doelpagina aantoonbaar pijler-overstijgend is; kies anders expliciet `airco` of `thuisbatterij`;
+- als bron of doel uit een gedeeld/crossover deliverable komt, kies dan de canonieke upstream rij met `Pijler = airco` of `Pijler = thuisbatterij` en hergebruik precies de bijbehorende `Asset-ID`; gebruik geen derde pijlerwaarde;
 - laat deze waarden niet leeg en gebruik geen andere labels;
 - houd het bij shared of crossover context op één canonieke rij per unieke combinatie van bronroute, doelroute en anchor; gebruik `Bron pijler`, `Doel pijler` en `Linkrelatie` om de relatie eenduidig te maken.
 - vul per rij altijd `Plaatsingsstatus` in zodat redactie ziet of de link direct kan worden geplaatst of nog afhankelijk is van nieuwe content;

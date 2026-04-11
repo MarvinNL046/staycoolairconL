@@ -60,6 +60,7 @@ Werk daarna uitsluitend met deze tabel:
 Vereisten voor de tabel:
 - geef per relevant voorstel een eigen rij;
 - geef elk deliverable een stabiel `Asset-ID`;
+- maak `Asset-ID` deterministisch en route-gebaseerd: gebruik een lowercase kebab-id afgeleid van de concrete eindroute; hergebruik exact dezelfde `Asset-ID` als hetzelfde deliverable in een latere run of in een tweede canonieke rij terugkomt; gebruik nooit datums, random suffixes of vrijblijvende labels;
 - koppel elk voorstel aan een concrete publishing surface uit de site-structuur;
 - gebruik geen vage clusterterminologie zonder surface;
 - gebruik Limburg-brede relevantie waar dat past;

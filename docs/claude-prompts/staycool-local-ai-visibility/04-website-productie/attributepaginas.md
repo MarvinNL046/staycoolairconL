@@ -61,6 +61,7 @@ Vereisten voor de tabel:
 - gebruik een expliciete `Vraag / Titel`-kolom zodat de vraag en het titelidee in één briefbare rij staan;
 - geef per attribuut een eigen rij;
 - geef elk deliverable een stabiel `Asset-ID`;
+- maak `Asset-ID` deterministisch en route-gebaseerd: gebruik een lowercase kebab-id afgeleid van de concrete eindroute; hergebruik exact dezelfde `Asset-ID` als hetzelfde deliverable in een latere run of in een tweede canonieke rij terugkomt; gebruik nooit datums, random suffixes of vrijblijvende labels;
 - gebruik alleen attributen die terug te voeren zijn op de input of de bestaande site-structuur;
 - vul `Concrete eindroute` altijd met een concrete beoogde eindroute in die logisch past binnen de huidige routes;
 - maak het onderscheid tussen indexed content en support/noindex expliciet in de tabel;

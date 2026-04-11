@@ -52,6 +52,7 @@ Werk daarna uitsluitend met deze tabel:
 Vereisten voor de tabel:
 - gebruik alleen bestaande pagina's of routes uit de site-structuur;
 - geef elk deliverable een stabiel `Asset-ID`;
+- maak `Asset-ID` deterministisch en route-gebaseerd: gebruik een lowercase kebab-id afgeleid van de concrete pagina/route; hergebruik exact dezelfde `Asset-ID` als hetzelfde deliverable in een latere run terugkomt; gebruik nooit datums, random suffixes of vrijblijvende labels;
 - vul per rij altijd `Pijler` en `Crossover` in;
 - gebruik deze waarden in elke modus:
   - `Pijler`: `airco`, `thuisbatterij`
