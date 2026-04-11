@@ -53,10 +53,10 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 
 Gebruik daarna deze vier secties in vaste volgorde:
 ### FAQ input
-| Bron | Brontype | Vraag | Pijler | Crossover | Kort antwoord | Publishing surface | Onderbouwing | Opmerking |
+| Bron | Brontype | Vraag | Pijler | Crossover | Concrete target page / route | Publishing surface | Kort antwoord | Onderbouwing | Opmerking |
 
 ### Service schema input
-| Bron | Brontype | Service | Pijler | Crossover | Beschrijving | Publishing surface | Service area | Opmerking |
+| Bron | Brontype | Service | Pijler | Crossover | Concrete target page / route | Publishing surface | Beschrijving | Service area | Opmerking |
 
 ### LocalBusiness relevante velden
 | Veld | Waarde | Bron | Betrouwbaarheid |
@@ -66,7 +66,7 @@ Gebruik daarna deze vier secties in vaste volgorde:
 - alleen als een LocalBusiness-veld aantoonbaar pijlerspecifiek is, mag je het niet in deze sectie plaatsen maar in de FAQ-, Service- of review/case-secties.
 
 ### Review/case snippets
-| Bron | Snippet | Pijler | Crossover | Gebruik | Publishing surface | Opmerking |
+| Bron | Snippet | Pijler | Crossover | Concrete target page / route | Gebruik | Publishing surface | Opmerking |
 
 Vereisten voor de extractie:
 - geef per bruikbaar item een eigen rij;
@@ -88,6 +88,7 @@ Vereisten voor de extractie:
 
 Vereisten voor surface-grounding:
 - gebruik alleen expliciet benoemde surfaces zoals `/landing/*`, root-level money pages, `/kennisbank/*`, `/seo/pillar-*/*`, `*/noindex/*` of een andere benoemde site family uit de site-structuur;
+- vul in `FAQ input`, `Service schema input` en `Review/case snippets` per rij altijd een concrete target page / route in;
 - vul in `FAQ input`, `Service schema input` en `Review/case snippets` per rij altijd een publishing surface in;
 - uitzondering: `LocalBusiness relevante velden` blijft sitebreed/businessbreed en gebruikt daarom geen `Publishing surface`-kolom;
 - gebruik geen cluster- of assetterminologie zonder route.
