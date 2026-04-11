@@ -53,7 +53,7 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna met deze tabel:
-| Pagina-status | Huidige concrete pagina / route | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | Nieuwe H1 | Doelslug / slug-outcome | Publishing surface | Opmerking |
+| Pagina-status | Huidige of beoogde concrete pagina / route | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | Nieuwe H1 | Doelslug / slug-outcome | Publishing surface | Opmerking |
 
 Vereisten voor de tabel:
 - geef per pagina of route een eigen rij;
@@ -65,6 +65,7 @@ Vereisten voor de tabel:
 - noteer onzekerheid met `onbekend` in plaats van een aanname;
 - waar relevant mag je ook relevante snippet- of OG-varianten noemen in de opmerking.
 - als `Pagina-status = nieuw`, gebruik in `Huidige metadata-zwakte` alleen `nieuwe pagina` of een andere korte, feitelijke startstatus; verzin geen bestaande metadata;
+- als `Pagina-status = nieuw`, vul in `Huidige of beoogde concrete pagina / route` de beoogde eindroute in waarop de pagina moet landen;
 - metadata is per concrete pagina/route altijd één canonieke rij; dupliceer dezelfde URL nooit als tweede metadata-rij;
 - als een huidige concrete pagina/route beide pijlers bedient, blijft de metadata toch één rij: `Pijler` geeft de primaire eigenaar/context aan en `Crossover` geeft aan dat de pagina ook de andere pijler ondersteunt;
 - vul per rij altijd `Pijler` en `Crossover` in;
@@ -94,7 +95,7 @@ Sluit af met deze secties:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Pagina-status | Huidige concrete pagina / route | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | Nieuwe H1 | Doelslug / slug-outcome | Publishing surface | Opmerking |`
+- Exact de tabel `| Pagina-status | Huidige of beoogde concrete pagina / route | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | Nieuwe H1 | Doelslug / slug-outcome | Publishing surface | Opmerking |`
 - Een compacte set metadata-aanpassingen die direct in CMS of briefing past
 - Title tags en meta descriptions binnen CMS-bruikbare lengte
 - Nieuwe H1 en slug-outcome als aparte, deterministische velden

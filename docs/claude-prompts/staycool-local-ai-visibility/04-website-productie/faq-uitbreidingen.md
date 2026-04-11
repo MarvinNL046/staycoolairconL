@@ -81,7 +81,7 @@ Vereisten voor publiceerbaarheid:
 - maak per pijler een publishable FAQ-blok dat direct in CMS of content kan worden ingezet;
 - gebruik in mixed mode waar passend een `Gedeelde asset` / `Crossover asset`-blok als de FAQ-set inhoudelijk voor beide pijlers werkt;
 - maak duidelijk welke vragen airco-only, thuisbatterij-only of crossover zijn.
-- als een FAQ-set shared/crossover is in mixed mode, representeer het publiceerbare blok als precies twee rijen in `### Publiceerbaar FAQ-blok`: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen hergebruiken dezelfde `FAQ-Groep-ID`, dezelfde concrete target page/route, dezelfde surface en dezelfde FAQ-set referentie.
+- als een FAQ-set shared/crossover is in mixed mode, representeer het publiceerbare blok als precies twee rijen in `### Publiceerbaar FAQ-blok`: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen hergebruiken dezelfde `FAQ-Groep-ID`, dezelfde concrete target page/route, dezelfde surface en dezelfde FAQ-set referentie, maar elke blokrij noemt alleen de `FAQ-Rij-ID`s die bij die eigen `Pijler` horen.
 - de hoofdtafel blijft de canonieke bron; het publiceerbare blok is een handoff-laag en voegt nooit nieuwe of afwijkende FAQ-rijen toe.
 
 Vast publiceerbaar FAQ-blok:
@@ -111,7 +111,7 @@ Sluit af met deze secties:
 - Schema-vriendelijke formuleringen
 - Een publiceerbaar FAQ-blok per pijler met verwijzing naar de canonieke `FAQ-Groep-ID` en `FAQ-Rij-ID`s
 - De vaste sectie `### Publiceerbaar FAQ-blok` met `| FAQ-set | FAQ-Groep-ID | FAQ-Rij-ID's | Pijler | Crossover | Concrete target page / route | Publishing surface | Indexed / noindex | FAQ-items in volgorde | CMS-ready opmerking |`
-- In mixed mode: de publiceerbare set wordt altijd als twee block-rijen uitgewerkt, met dezelfde `FAQ-Groep-ID`, dezelfde `FAQ-Rij-ID`-set en dezelfde surface per gedeelde set
+- In mixed mode: de publiceerbare set wordt altijd als twee block-rijen uitgewerkt, met dezelfde `FAQ-Groep-ID` en dezelfde surface per gedeelde set, maar per blokrij alleen de `FAQ-Rij-ID`s van de eigen `Pijler`
 - De standaard afsluitende secties
 - `Klaarcheck`
 
