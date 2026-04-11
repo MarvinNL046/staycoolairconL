@@ -33,6 +33,7 @@
 - `/seo/pillar-1-installatie-services/*`, `/seo/pillar-2-onderhoud-service/*`, `/seo/pillar-3-merken-modellen/*`, `/seo/pillar-4-energie-besparen/*`, `/seo/pillar-5-thuisbatterijen/*`, `/seo/pillar-6-limburg-steden/*`, `/seo/pillar-7-technische-gidsen/*`, `/seo/pillar-8-vergelijkingen/*`, `/seo/pillar-9-kosten-prijzen/*`, `/seo/pillar-10-duurzaamheid/*`
 
 ## Support- en noindexclusters
+- Dit zijn niet-uitputtende voorbeelden van support- en noindexfamilies.
 - `/airco-installatie/noindex/*` voor stappenplan, kosten en FAQ support content
 - `/airco-onderhoud/noindex/*` voor checklist, seizoenen en problemen voorkomen
 - `/airco-reparatie/noindex/*` voor storingen, kosten en spoed
@@ -42,6 +43,8 @@
 - `/airco-limburg/noindex/*` voor wijkgids, gemeentenoverzicht en reistijdservice
 - `/airco-technisch/noindex/*` voor technische specificaties, capaciteitstool en installatie-eisen
 - `/airco-vergelijking/noindex/*` voor gids, split-vs-mobiel en checklist
+- `/airco-kosten/noindex/*` voor prijzen vergelijken, kosten besparen en investering terugverdienen
+- `/duurzaamheid/noindex/*` voor keuzegids, milieuvriendelijke koeling en CO2-footprint uitleg
 - `/thuisbatterijen/noindex/*` voor ervaringen, gids Limburg, hulp kiezen, installateurs, stappen, regelgeving, merken, prijzen, vragen, huurders, senioren, zelfstandigen, werking en rendabiliteit
 
 ## Routeconventies
