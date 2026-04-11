@@ -61,8 +61,8 @@ Gebruik daarna deze vier secties in vaste volgorde:
 ### LocalBusiness relevante velden
 | Veld | Waarde | Bron | Betrouwbaarheid |
 
-- `LocalBusiness relevante velden` is een business-brede, canonical outputlaag: gebruik hier één hoofdobject of hoofdset voor de hele site als dat uit de bron volgt.
-- uitzondering op de standaard dubbel-rij/logica: als een LocalBusiness-veld sitebreed of businessbreed geldt, zet het dan hier op één canonieke rij/object zonder `Pijler`, `Crossover` of `Publishing surface`.
+- `LocalBusiness relevante velden` is een business-brede, canonical outputlaag: werk hier als één canonieke veldset voor de hele site, uitgesplitst over meerdere rijen in dezelfde tabel.
+- uitzondering op de standaard dubbel-rij/logica: als een LocalBusiness-veld sitebreed of businessbreed geldt, zet het dan hier op één canonieke veldrij zonder `Pijler`, `Crossover` of `Publishing surface`.
 - alleen als een LocalBusiness-veld aantoonbaar pijlerspecifiek is, mag je het niet in deze sectie plaatsen maar in de FAQ-, Service- of review/case-secties.
 
 ### Review/case snippets

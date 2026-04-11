@@ -73,6 +73,7 @@ Vereisten voor de tabel:
 - gebruik voor `Schema-geschikt` alleen `ja` of `nee`;
 - wijs elke FAQ toe aan een concrete target page of route;
 - wijs elke FAQ toe aan een publishing surface;
+- gebruik voor `Publishing surface` alleen expliciete surfaces zoals `/landing/*`, root-level money pages, `/kennisbank/*`, `/seo/pillar-*/*`, `*/noindex/*` of een andere expliciet benoemde site family uit `00-context/bestaande-site-structuur.md`;
 - geef expliciet aan of de plaatsing indexed of noindex is;
 - gebruik alleen vragen die uit de input of de site-structuur volgen;
 - noteer ontbrekende onderbouwing als `onbekend`.
@@ -90,6 +91,7 @@ Vast publiceerbaar FAQ-blok:
 
 - vul deze sectie altijd in, ook als de tabel al compleet is;
 - groepeer hier de FAQ's per publishing surface zodat de set direct in CMS kan worden overgenomen;
+- gebruik in `Publishing surface` alleen de canonieke surface-set uit de rest van Task 6;
 - verwijs per set expliciet naar de canonieke `FAQ-Groep-ID` en bijbehorende `FAQ-Rij-ID`s uit de hoofdtafel;
 - neem per block-rij altijd dezelfde concrete target page / route over als in de bijbehorende canonieke FAQ-rijen;
 - neem in `FAQ-items in volgorde` de concrete `Vraag -> Kort antwoord`-paren op, in exact de volgorde van de genoemde `FAQ-Rij-ID`s;
