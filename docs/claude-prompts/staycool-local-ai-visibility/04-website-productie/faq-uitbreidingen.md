@@ -30,6 +30,8 @@ Maak in de output de volgende hoeveelheden zichtbaar:
 - `thuisbatterij-only`: 10 FAQ's voor thuisbatterijen
 - `mixed`: 10 FAQ's voor airco en 10 FAQ's voor thuisbatterijen
 
+Lever de output als een publiceerbaar FAQ-blok op de website, niet als losse lijst zonder implementatiehouvast. Elke FAQ moet kunnen landen op een concrete target page, route family en indexability-keuze.
+
 Volg deze regels:
 - antwoord volledig in Nederlands;
 - houd Limburg breed als hoofdregio;
@@ -48,15 +50,23 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Gebruik daarna deze tabel:
-| Vraag | Pijler | Kort antwoord | Schema-geschikt | Waarom nu |
+| Vraag | Pijler | Kort antwoord | Doelpagina / paginafamilie | Routefamilie / publicatiesurface | Indexed / noindex | Schema-geschikt | Waarom nu |
 
 Vereisten voor de tabel:
 - geef per relevante FAQ een eigen rij;
 - in `mixed` mode splits je airco en thuisbatterijen zichtbaar uit;
 - korte antwoorden blijven compact en direct publiceerbaar;
 - markeer een antwoord als schema-geschikt als het zonder bewerking in FAQ schema kan landen;
+- wijs elke FAQ toe aan een target page of page family;
+- wijs elke FAQ toe aan een route family / publishing surface;
+- geef expliciet aan of de plaatsing indexed of noindex is;
 - gebruik alleen vragen die uit de input of de site-structuur volgen;
 - noteer ontbrekende onderbouwing als `onbekend`.
+
+Vereisten voor publiceerbaarheid:
+- maak per pijler een publishable FAQ-blok dat direct in CMS of content kan worden ingezet;
+- gebruik in mixed mode waar passend een `Gedeelde asset` / `Crossover asset`-blok als de FAQ-set inhoudelijk voor beide pijlers werkt;
+- maak duidelijk welke vragen airco-only, thuisbatterij-only of crossover zijn.
 
 Sluit af met:
 ## Topprioriteiten
@@ -66,9 +76,10 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Vraag | Pijler | Kort antwoord | Schema-geschikt | Waarom nu |`
+- Exact de tabel `| Vraag | Pijler | Kort antwoord | Doelpagina / paginafamilie | Routefamilie / publicatiesurface | Indexed / noindex | Schema-geschikt | Waarom nu |`
 - 10 FAQ's per pijler waar relevant, met korte antwoorden
 - Schema-vriendelijke formuleringen
+- Een publiceerbaar FAQ-blok per pijler
 - De standaard afsluitende secties
 - `Klaarcheck`
 

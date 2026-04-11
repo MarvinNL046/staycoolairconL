@@ -36,9 +36,17 @@ Volg deze regels:
 - geef geen generieke SEO-uitleg;
 - gebruik tabellen waar dat helpt;
 - maak regionale relevantie concreet via werkgebied, servicebereik, installatietraject of bewijs;
-- koppel elk blok aan een bestaande pagina/cluster of een nieuw assettype;
+- koppel elk blok aan een concrete publishing surface uit de site-structuur;
 - vermijd opgeblazen claims;
 - sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later`.
+
+Gebruik alleen deze expliciete publishing surfaces waar passend:
+- `/landing/*`
+- root-level money pages buiten `/landing/*`
+- `/kennisbank/*`
+- `/seo/pillar-*/*`
+- `*/noindex/*`
+- of een andere expliciet benoemde bestaande site family uit `00-context/bestaande-site-structuur.md`
 
 Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Modus`
@@ -48,7 +56,7 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Gebruik daarna deze tabel:
-| Pagina of cluster | Bloktype | Tekstblok | Regionale invalshoek | Opmerking |
+| Pagina of surface | Bloktype | Tekstblok | Regionale invalshoek | Opmerking |
 
 Vereisten voor de tabel:
 - geef per blok een eigen rij;
@@ -62,6 +70,11 @@ Vereisten voor de outputaanpak:
 - geef geen duplicate stadscontent als regionale strategie;
 - maak elk blok breed genoeg voor Limburg, maar nog steeds concreet en servicegericht.
 
+Vereisten voor mixed mode:
+- toon waar relevant een `Gedeelde asset` / `Crossover asset`-blok als een blok echt voor beide pijlers werkt;
+- maak expliciet wanneer een blok airco-only, thuisbatterij-only of crossover is;
+- een crossover blok mag alleen als de site-structuur dat logisch draagt.
+
 Sluit af met:
 ## Topprioriteiten
 ## Quick wins
@@ -70,9 +83,10 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Pagina of cluster | Bloktype | Tekstblok | Regionale invalshoek | Opmerking |`
+- Exact de tabel `| Pagina of surface | Bloktype | Tekstblok | Regionale invalshoek | Opmerking |`
 - Concrete regionale blokken die direct in content kunnen landen
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
+- Een expliciete `Gedeelde asset` / `Crossover asset`-scheiding waar passend in mixed mode
 - De standaard afsluitende secties
 - `Klaarcheck`
 
