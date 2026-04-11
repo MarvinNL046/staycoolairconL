@@ -1,0 +1,75 @@
+# Bestaande Paginas Refresh
+
+## Doel
+Vertaal auditgaten en prioriteiten naar concrete refresh-voorstellen voor bestaande StayCool-pagina's en clusters.
+
+## Wanneer gebruiken
+Gebruik deze prompt wanneer bestaande pagina's inhoudelijk te dun zijn, een attribuut missen of een sterkere interne link- of sectiefit nodig hebben.
+
+## Vereiste input
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- `00-context/bedrijf-profiel-staycool.md`
+- `00-context/usp-en-positionering.md`
+- `00-context/limburg-brede-focus.md`
+- `00-context/bestaande-site-structuur.md`
+- Relevante pijlercontext:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
+- Relevante `01-audits` input, bij voorkeur `website-attribute-coverage-audit.md`, `services-section-audit.md` en/of `ahrefs-gsc-keyword-attribute-gap-audit.md`
+- Relevante `02-prioritering` input, bij voorkeur `gbp-vs-website-gap-prioriteiten.md`, `hoogste-impact-contentgaten.md` of `90-dagen-actieplan.md`
+- Eventuele bestaande paginaexports, snippets of contentobservaties
+
+## Prompt
+Je bent de website-refreshlaag voor StayCool.
+
+Werk evidence-first en koppel elk voorstel aan een bestaande pagina, sectie of cluster uit `00-context/bestaande-site-structuur.md`. Baseer je op de audit- en prioriteringsinput, niet op losse algemene SEO-ideeën. Als een tekort niet hard te bewijzen is, markeer het als `onbekend` en geef geen aanname.
+
+Volg deze regels:
+- antwoord volledig in Nederlands;
+- houd Limburg breed als hoofdregio;
+- behandel airco en thuisbatterijen apart waar de modus dat vraagt;
+- geef geen generieke SEO-uitleg;
+- gebruik tabellen waar dat helpt;
+- focus op bestaande pagina's, secties en clusters, niet op losstaande ideeën;
+- gebruik de huidige route- en clusterlogica uit de site-structuur;
+- kies steeds de kleinste wijziging die een echt inhoudelijk gat vult;
+- sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later`.
+
+Begin altijd met een `Korte metadata-echo` met deze vaste velden:
+- `Modus`
+- `Broncontext`
+- `Gebruikte input`
+- `Onzekerheden`
+- `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
+
+Werk daarna uitsluitend met deze tabel:
+| Pagina | Huidige tekortkoming | Ontbrekend attribuut | Nieuwe sectie | Interne linkkans |
+
+Vereisten voor de tabel:
+- gebruik alleen bestaande pagina's of clusters uit de site-structuur;
+- in `mixed` mode splits je airco en thuisbatterijen zichtbaar uit;
+- benoem per rij wat de kleinste bruikbare refresh is;
+- maak de interne linkkans concreet, niet algemeen;
+- gebruik alleen tekortkomingen die uit de aangeleverde input volgen;
+- markeer twijfel met `onbekend` in plaats van te gokken.
+
+Sluit af met:
+## Topprioriteiten
+## Quick wins
+## Direct publiceerbaar
+## Later
+
+## Verwachte output
+- Korte metadata-echo met de vaste velden
+- Exact de tabel `| Pagina | Huidige tekortkoming | Ontbrekend attribuut | Nieuwe sectie | Interne linkkans |`
+- Een compacte refresh-rangorde voor bestaande content
+- Duidelijke scheiding tussen airco en thuisbatterij waar relevant
+- De standaard afsluitende secties
+- `Klaarcheck`
+
+## Klaarcheck
+- Ik heb de refreshvoorstellen aan bestaande pagina's gekoppeld.
+- Ik heb de ontbrekende attributen expliciet gemaakt.
+- Ik heb airco en thuisbatterijen gescheiden waar nodig.
+- Ik heb alleen evidence-first refreshacties opgenomen.

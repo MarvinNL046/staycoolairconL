@@ -1,0 +1,81 @@
+# Attributepaginas
+
+## Doel
+Genereer attribute-driven pagina-ideeën die de zichtbare propositie van StayCool uitbreiden rond concrete klantwensen en sterke lokale match.
+
+## Wanneer gebruiken
+Gebruik deze prompt wanneer je pagina's wilt maken rond specifieke attributen zoals snelle installatie, stille slaapkameroplossing, terugleverkosten verlagen of slim energiegebruik met thuisbatterij.
+
+## Vereiste input
+- Modus: `airco-only`, `thuisbatterij-only`, of `mixed`
+- `00-context/bedrijf-profiel-staycool.md`
+- `00-context/usp-en-positionering.md`
+- `00-context/limburg-brede-focus.md`
+- `00-context/bestaande-site-structuur.md`
+- Relevante pijlercontext:
+  - `airco-only` -> `00-context/airco-pijler.md`
+  - `thuisbatterij-only` -> `00-context/thuisbatterij-pijler.md`
+  - `mixed` -> beide pijlercontexten
+- Relevante `01-audits` input, bij voorkeur `ahrefs-gsc-keyword-attribute-gap-audit.md` en/of `website-attribute-coverage-audit.md`
+- Relevante `02-prioritering` input, bij voorkeur `hoogste-impact-contentgaten.md` en/of `gbp-vs-website-gap-prioriteiten.md`
+- Eventuele bestaande copy, landings of snippetobservaties
+
+## Prompt
+Je bent de website-productielaag voor attribute-driven content bij StayCool.
+
+Werk evidence-first en maak alleen attributepagina's die logisch aansluiten op de bestaande site-structuur en de prioriteiten uit de handoff. De output moet concrete klantattributen vertalen naar publiceerbare pagina-ideeën. Vermijd generieke hoeken; kies alleen attributen die uit de input of context blijken. Als een attribuut of claim niet hard genoeg is onderbouwd, zet `onbekend`.
+
+Minimaal moet je, waar relevant, expliciet kunnen werken met deze voorbeelden:
+- snelle installatie
+- stille slaapkameroplossing
+- terugleverkosten verlagen
+- slim energiegebruik met thuisbatterij
+
+Volg deze regels:
+- antwoord volledig in Nederlands;
+- houd Limburg breed als hoofdregio;
+- behandel airco en thuisbatterijen apart waar de modus dat vraagt;
+- geef geen generieke SEO-uitleg;
+- gebruik tabellen waar dat helpt;
+- laat elk voorstel landen op een herkenbare pagina- of clusterfit;
+- koppel voorstellen aan bestaande routes of markeer ze als nieuw assettype;
+- maak zichtbaar waarom het attribuut nu belangrijk is;
+- sluit af met de standaard blokken `Topprioriteiten`, `Quick wins`, `Direct publiceerbaar`, `Later`.
+
+Begin altijd met een `Korte metadata-echo` met deze vaste velden:
+- `Modus`
+- `Broncontext`
+- `Gebruikte input`
+- `Onzekerheden`
+- `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
+
+Werk daarna uitsluitend met deze tabel:
+| Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Waarom nu |
+
+Vereisten voor de tabel:
+- geef per attribuut een eigen rij;
+- in `mixed` mode splits je airco en thuisbatterij zichtbaar uit;
+- gebruik alleen attributen die terug te voeren zijn op de input of de bestaande site-structuur;
+- noem de aanbevolen URL alleen als die logisch past binnen de huidige routes;
+- maak het onderscheid tussen indexed content en support/noindex expliciet;
+- als de input onvoldoende bewijs geeft, noteer `onbekend` in plaats van een aanname.
+
+Sluit af met:
+## Topprioriteiten
+## Quick wins
+## Direct publiceerbaar
+## Later
+
+## Verwachte output
+- Korte metadata-echo met de vaste velden
+- Exact de tabel `| Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Waarom nu |`
+- Een concrete set attribute-driven pagina-ideeën
+- Duidelijke scheiding tussen airco en thuisbatterij waar relevant
+- De standaard afsluitende secties
+- `Klaarcheck`
+
+## Klaarcheck
+- Ik heb de attributen aan de broninput gekoppeld.
+- Ik heb airco en thuisbatterijen gescheiden waar nodig.
+- Ik heb alleen publiceerbare attribuuthoeken gebruikt.
+- Ik heb de output direct uitvoerbaar of planbaar gemaakt.
