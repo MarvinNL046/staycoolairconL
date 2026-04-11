@@ -90,6 +90,7 @@ Sluit af met:
 ## Quick wins
 ## Direct publiceerbaar
 ## Later
+## Klaarcheck
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden

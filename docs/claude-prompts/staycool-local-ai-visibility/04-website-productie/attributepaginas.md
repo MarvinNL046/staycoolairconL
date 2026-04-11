@@ -53,7 +53,7 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna uitsluitend met deze tabel:
-| Vraag / Titel | Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Indexed / noindex | Crossover | Waarom nu |
+| Vraag / Titel | Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |
 
 Vereisten voor de tabel:
 - geef per attribuut een eigen rij;
@@ -89,10 +89,11 @@ Sluit af met:
 ## Quick wins
 ## Direct publiceerbaar
 ## Later
+## Klaarcheck
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Vraag / Titel | Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Indexed / noindex | Crossover | Waarom nu |`
+- Exact de tabel `| Vraag / Titel | Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |`
 - Een concrete set vraag-naar-antwoord attributepagina's
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - De standaard afsluitende secties
