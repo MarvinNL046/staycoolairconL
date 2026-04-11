@@ -95,7 +95,6 @@ Sluit af met deze secties:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Vraag / Titel | Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |`
 - Exact de tabel `| Asset-ID | Vraag / Titel | Attribuut | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |`
 - Een concrete set vraag-naar-antwoord attributepagina's
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant

@@ -90,7 +90,6 @@ Sluit af met deze secties:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Titel | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |`
 - Exact de tabel `| Asset-ID | Titel | Pijler | Zoekintentie | Hoek | Aanbevolen URL | Publishing surface | Indexed / noindex | Crossover | Waarom nu |`
 - Een korte, concrete rangorde van de beste nieuwe servicepagina's
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant

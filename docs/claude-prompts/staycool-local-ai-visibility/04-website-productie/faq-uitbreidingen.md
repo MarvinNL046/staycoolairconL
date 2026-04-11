@@ -78,8 +78,8 @@ Vereisten voor publiceerbaarheid:
 - maak per pijler een publishable FAQ-blok dat direct in CMS of content kan worden ingezet;
 - gebruik in mixed mode waar passend een `Gedeelde asset` / `Crossover asset`-blok als de FAQ-set inhoudelijk voor beide pijlers werkt;
 - maak duidelijk welke vragen airco-only, thuisbatterij-only of crossover zijn.
-- als een FAQ-set shared/crossover is, laat de hoofdtafel de canonieke FAQ-rijen zien met hun unieke `FAQ-ID`s en laat het publiceerbare blok diezelfde `FAQ-ID`s expliciet hergebruiken; de hoofdtafel blijft exact 20 rijen, waarvan shared/crossover content altijd als 2 canonieke rijen meetelt.
-- het publiceerbare blok is een handoff-laag: herhaal alleen de bestaande `FAQ-ID`s uit de hoofdtafel en voeg nooit nieuwe of afwijkende FAQ-rijen toe.
+- als een FAQ-set shared/crossover is in mixed mode, representeer het publiceerbare blok als precies twee rijen in `### Publiceerbaar FAQ-blok`: één met `Pijler = airco`, één met `Pijler = thuisbatterij`; beide rijen hergebruiken dezelfde `FAQ-ID`s uit de hoofdtafel, dezelfde surface en dezelfde FAQ-set referentie.
+- de hoofdtafel blijft de canonieke bron; het publiceerbare blok is een handoff-laag en voegt nooit nieuwe of afwijkende FAQ-rijen toe.
 
 Vast publiceerbaar FAQ-blok:
 ### Publiceerbaar FAQ-blok
@@ -104,6 +104,7 @@ Sluit af met deze secties:
 - Schema-vriendelijke formuleringen
 - Een publiceerbaar FAQ-blok per pijler met verwijzing naar de canonieke `FAQ-ID`s
 - De vaste sectie `### Publiceerbaar FAQ-blok` met `| FAQ-set | FAQ-ID's | Pijler | Crossover | Publicatiesurface | Indexed / noindex | CMS-ready opmerking |`
+- In mixed mode: de publiceerbare set wordt altijd als twee block-rijen uitgewerkt, met dezelfde `FAQ-ID`s en dezelfde surface per gedeelde set
 - De standaard afsluitende secties
 - `Klaarcheck`
 

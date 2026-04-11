@@ -97,7 +97,6 @@ Sluit af met deze secties:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Concrete pagina / route | Publishing surface | Pijler | Crossover | Bloktype | Tekstblok | Regionale invalshoek | Opmerking |`
 - Exact de tabel `| Asset-ID | Concrete pagina / route | Publishing surface | Pijler | Crossover | Bloktype | Tekstblok | Regionale invalshoek | Opmerking |`
 - Concrete regionale blokken die direct in content kunnen landen
 - Tekstblokken van 1-2 zinnen of maximaal 40 woorden
