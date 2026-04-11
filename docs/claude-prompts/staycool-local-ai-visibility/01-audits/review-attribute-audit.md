@@ -15,7 +15,7 @@ Gebruik deze prompt wanneer je reviewinhoud wilt vertalen naar meetbare attribut
 - `00-context/concurrentenlijst.md` indien beschikbaar
 
 ## Prompt
-Lees relevante reviews van StayCool en vergelijkbare concurrenten.
+Lees de laatste relevante reviews van StayCool en concurrenten te lezen.
 
 Volg deze regels:
 - antwoord volledig in Nederlands;
