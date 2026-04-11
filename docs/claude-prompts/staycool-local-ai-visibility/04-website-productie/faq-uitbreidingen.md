@@ -31,7 +31,7 @@ Maak in de output de volgende hoeveelheden zichtbaar:
 - `thuisbatterij-only`: 10 FAQ's voor thuisbatterijen
 - `mixed`: exact 20 FAQ-rijen totaal in de hoofdtafel, bestaande uit 10 `airco`-rijen en 10 `thuisbatterij`-rijen; elke rij krijgt precies één `Pijler`-waarde (`airco` of `thuisbatterij`), en als een FAQ shared/crossover is, wordt die in de hoofdtafel als twee canonieke rijen opgenomen: één `airco`, één `thuisbatterij`; die twee rijen tellen samen als 2 van de 20 en nooit als 1 plus extra
 
-Lever de output als een publiceerbaar FAQ-blok op de website, niet als losse lijst zonder implementatiehouvast. Elke FAQ moet kunnen landen op een concrete target page, route family en indexability-keuze.
+Lever de output als een publiceerbaar FAQ-blok op de website, niet als losse lijst zonder implementatiehouvast. Elke FAQ moet kunnen landen op een concrete target page / route, met een expliciete publishing surface en indexability-keuze.
 
 Volg deze regels:
 - antwoord volledig in Nederlands;

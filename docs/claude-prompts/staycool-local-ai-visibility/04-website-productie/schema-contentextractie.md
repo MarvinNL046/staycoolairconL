@@ -53,10 +53,10 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 
 Gebruik daarna deze vier secties in vaste volgorde:
 ### FAQ input
-| Bronpagina | Vraag | Pijler | Crossover | Kort antwoord | Publishing surface | Onderbouwing | Opmerking |
+| Bron | Brontype | Vraag | Pijler | Crossover | Kort antwoord | Publishing surface | Onderbouwing | Opmerking |
 
 ### Service schema input
-| Bronpagina | Service | Pijler | Crossover | Beschrijving | Publishing surface | Service area | Opmerking |
+| Bron | Brontype | Service | Pijler | Crossover | Beschrijving | Publishing surface | Service area | Opmerking |
 
 ### LocalBusiness relevante velden
 | Veld | Waarde | Bron | Betrouwbaarheid |
@@ -70,7 +70,7 @@ Gebruik daarna deze vier secties in vaste volgorde:
 
 Vereisten voor de extractie:
 - geef per bruikbaar item een eigen rij;
-- vul per rij altijd `Pijler` en `Crossover` in;
+- vul in `FAQ input`, `Service schema input` en `Review/case snippets` per rij altijd `Pijler` en `Crossover` in;
 - gebruik deze waarden in elke modus:
   - `Pijler`: `airco`, `thuisbatterij`
   - `Crossover`: `Airco-only`, `Thuisbatterij-only`, `Gedeelde asset`, `Crossover asset`
@@ -80,6 +80,7 @@ Vereisten voor de extractie:
 - laat deze waarden niet leeg en gebruik geen andere labels;
 - als een shared/crossover extract voorkomt, geef het altijd als twee canonieke rijen: één met `Pijler = airco` en één met `Pijler = thuisbatterij`.
 - uitzondering: `LocalBusiness relevante velden` mag business-breed als één canonieke rij/object worden uitgewerkt als het veld sitebreed geldt; dupliceer die velden niet per pijler.
+- uitzondering voor provenance: in `FAQ input` en `Service schema input` mag `Bron` zowel een concrete pagina/route als een niet-pagina bron zijn; vul `Brontype` in als `pagina`, `review`, `case`, `operatornotitie` of `anders`.
 - gebruik alleen extracties die direct uit de input volgen;
 - markeer ontbrekende of zwakke onderbouwing met `onbekend`;
 - maak de output geschikt voor redactie, schema-invoer of contentbriefing;
@@ -87,7 +88,8 @@ Vereisten voor de extractie:
 
 Vereisten voor surface-grounding:
 - gebruik alleen expliciet benoemde surfaces zoals `/landing/*`, root-level money pages, `/kennisbank/*`, `/seo/pillar-*/*`, `*/noindex/*` of een andere benoemde site family uit de site-structuur;
-- vul per rij altijd een publishing surface in;
+- vul in `FAQ input`, `Service schema input` en `Review/case snippets` per rij altijd een publishing surface in;
+- uitzondering: `LocalBusiness relevante velden` blijft sitebreed/businessbreed en gebruikt daarom geen `Publishing surface`-kolom;
 - gebruik geen cluster- of assetterminologie zonder route.
 
 Sluit af met deze secties:
