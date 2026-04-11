@@ -59,10 +59,11 @@ Gebruik daarna deze vier secties in vaste volgorde:
 | Bronpagina | Service | Pijler | Crossover | Beschrijving | Publishing surface | Service area | Opmerking |
 
 ### LocalBusiness relevante velden
-| Veld | Waarde | Pijler | Crossover | Bron | Publishing surface | Betrouwbaarheid |
+| Veld | Waarde | Bron | Betrouwbaarheid |
 
 - `LocalBusiness relevante velden` is een business-brede, canonical outputlaag: gebruik hier één hoofdobject of hoofdset voor de hele site als dat uit de bron volgt.
-- dupliceer business-brede LocalBusiness-velden niet per pijler; als een veld sitebreed geldt, houd het op één canonieke rij/object en laat `Pijler` op `airco` / `thuisbatterij` alleen staan wanneer het veld echt pijlerspecifiek is.
+- dit is een uitzondering op de standaard dubbel-rij/logica: dupliceer business-brede LocalBusiness-velden niet per pijler en gebruik hier geen `Pijler`, `Crossover` of `Publishing surface`-velden tenzij het veld aantoonbaar pijlerspecifiek is.
+- als een veld sitebreed geldt, houd het op één canonieke rij/object; als het veld pijlerspecifiek is, zet het dan niet in deze sectie maar in de FAQ-, Service- of review/case-secties.
 
 ### Review/case snippets
 | Bron | Snippet | Pijler | Crossover | Gebruik | Publishing surface | Opmerking |

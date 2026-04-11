@@ -53,7 +53,7 @@ Begin altijd met een `Korte metadata-echo` met deze vaste velden:
 - `Handoff bron` met verwijzing naar de gebruikte `01-audits` en/of `02-prioritering` output
 
 Werk daarna met deze tabel:
-| Concrete pagina / route | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | Nieuwe H1 | Slug-check | Publishing surface | Opmerking |
+| Concrete pagina / route | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | Nieuwe H1 | Slug-outcome | Publishing surface | Opmerking |
 
 Vereisten voor de tabel:
 - geef per pagina of route een eigen rij;
@@ -76,7 +76,7 @@ Vereisten voor de tabel:
 - hou `Nieuwe title tag` compact, idealiter 45-60 tekens;
 - hou `Meta description` beknopt, idealiter 130-155 tekens;
 - hou `Nieuwe H1` kort en direct, idealiter 1 duidelijke zin of titelzin;
-- hou `Slug-check` technisch en concreet: geef alleen de gewenste slug of een korte `ok` / `wijzigen`-notitie;
+- hou `Slug-outcome` deterministisch: geef exact de gewenste slug, of gebruik `ongewijzigd` als de slug niet hoeft te veranderen;
 - maak alle velden direct CMS-bruikbaar, zonder extra uitleg of varianten in dezelfde rij.
 
 Vereisten voor mixed mode:
@@ -92,10 +92,10 @@ Sluit af met:
 
 ## Verwachte output
 - Korte metadata-echo met de vaste velden
-- Exact de tabel `| Concrete pagina / route | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | Nieuwe H1 | Slug-check | Publishing surface | Opmerking |`
+- Exact de tabel `| Concrete pagina / route | Pijler | Crossover | Huidige metadata-zwakte | Nieuwe title tag | Meta description | Nieuwe H1 | Slug-outcome | Publishing surface | Opmerking |`
 - Een compacte set metadata-aanpassingen die direct in CMS of briefing past
 - Title tags en meta descriptions binnen CMS-bruikbare lengte
-- Nieuwe H1 en slug-check als aparte, deterministische velden
+- Nieuwe H1 en slug-outcome als aparte, deterministische velden
 - Duidelijke scheiding tussen airco en thuisbatterij waar relevant
 - Een expliciete `Gedeelde asset` / `Crossover asset`-scheiding waar passend in mixed mode
 - De standaard afsluitende secties
