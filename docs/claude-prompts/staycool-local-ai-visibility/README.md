@@ -2,6 +2,9 @@
 
 Deze bibliotheek is gemaakt voor StayCool Airco en gebruik in Claude in Chrome.
 
+Dit is momenteel een scaffold; de losse promptbestanden moeten nog worden aangemaakt voordat de gebruiksstroom volledig uitvoerbaar is.
+Raadpleeg eerst `prompt-rules.md` voordat je prompts maakt of gebruikt.
+
 ## Doel
 - klassieke local SEO versterken;
 - AI attribute match versterken;
