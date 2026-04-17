@@ -49,20 +49,52 @@ if (!SERPAPI_KEY) { console.error('Missing SERPAPI_KEY in .env.local'); process.
 // Config
 // -------------------------------------------------------------------
 const argIndex = process.argv.indexOf('--seed');
-const SEEDS = argIndex >= 0
-  ? [process.argv[argIndex + 1]]
-  : [
-      'airco installatie limburg',
-      'airco kopen limburg',
-      'airco kosten',
-      'airco installateur',
-      'airco maastricht',
-      'airco heerlen',
-      'airco sittard',
-      'warmtepomp airco',
-      'beste airco merken',
-      'airco subsidie 2026',
-    ];
+// Preset groups — pick via --group flag. Custom: --seeds "a,b,c"
+const SEED_GROUPS = {
+  research: [
+    'airco installatie limburg',
+    'airco kopen limburg',
+    'airco kosten',
+    'airco installateur',
+    'airco maastricht',
+    'airco heerlen',
+    'airco sittard',
+    'warmtepomp airco',
+    'beste airco merken',
+    'airco subsidie 2026',
+  ],
+  'buyer-intent': [
+    'airco laten installeren limburg',
+    'airco offerte',
+    'airco installateur heerlen',
+    'airco installateur sittard',
+    'airco onderhoud limburg',
+    'airco storing',
+    'airco reparatie',
+    'daikin installateur limburg',
+    'airco bijvullen kosten',
+    'airco vervangen',
+  ],
+};
+
+const groupIdx = process.argv.indexOf('--group');
+const customSeedsIdx = process.argv.indexOf('--seeds');
+
+let SEEDS;
+let LABEL = 'research'; // default label for file naming
+if (argIndex >= 0) {
+  SEEDS = [process.argv[argIndex + 1]];
+  LABEL = 'custom';
+} else if (groupIdx >= 0) {
+  LABEL = process.argv[groupIdx + 1];
+  SEEDS = SEED_GROUPS[LABEL];
+  if (!SEEDS) { console.error(`Unknown group: ${LABEL}. Available: ${Object.keys(SEED_GROUPS).join(', ')}`); process.exit(1); }
+} else if (customSeedsIdx >= 0) {
+  SEEDS = process.argv[customSeedsIdx + 1].split(',').map(s => s.trim());
+  LABEL = 'custom';
+} else {
+  SEEDS = SEED_GROUPS.research;
+}
 
 const SKIP_TRENDS = process.argv.includes('--skip-trends');
 const SKIP_AUTOCOMPLETE = process.argv.includes('--skip-autocomplete');
@@ -231,7 +263,7 @@ async function main() {
   const outDir = path.join(PROJECT_ROOT, 'data', 'keyword-research');
   fs.mkdirSync(outDir, { recursive: true });
 
-  const jsonPath = path.join(outDir, `intent-${today}.json`);
+  const jsonPath = path.join(outDir, `intent-${LABEL}-${today}.json`);
   fs.writeFileSync(jsonPath, JSON.stringify({
     capturedAt: new Date().toISOString(),
     provider: 'serpapi',
@@ -240,7 +272,7 @@ async function main() {
     results,
   }, null, 2));
 
-  const mdPath = path.join(outDir, `intent-${today}.md`);
+  const mdPath = path.join(outDir, `intent-${LABEL}-${today}.md`);
   fs.writeFileSync(mdPath, renderMarkdown(results, SEEDS, today));
 
   console.log(`JSON: ${jsonPath}`);

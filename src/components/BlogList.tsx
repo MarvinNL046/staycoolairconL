@@ -13,6 +13,24 @@ interface BlogPostPreview {
 
 const blogPosts: BlogPostPreview[] = [
   {
+    slug: 'airco-storingen-herkennen',
+    title: 'Airco storingen herkennen: 10 meest voorkomende problemen + wanneer monteur bellen',
+    description: 'Airco koelt niet, maakt geluid of lekt water? Onze monteurs leggen uit welke storingen u zelf kunt oplossen (filter, reset) en welke directe hulp vragen. Inclusief error-code tabel per merk.',
+    date: '18 april 2026',
+    imageUrl: '/images/blog/airco-storingen-herkennen.webp',
+    readingTime: '12 min',
+    category: 'Storingen'
+  },
+  {
+    slug: 'airco-levensduur-wanneer-vervangen',
+    title: 'Gemiddelde levensduur airco: wanneer vervangen? (2026)',
+    description: 'Een goed onderhouden airco gaat 10-15 jaar mee. Onze monteurs leggen uit welke 7 tekenen op vervanging wijzen, wanneer reparatie beter is en hoe u de levensduur verlengt.',
+    date: '18 april 2026',
+    imageUrl: '/images/blog/airco-levensduur-wanneer-vervangen.webp',
+    readingTime: '10 min',
+    category: 'Advies'
+  },
+  {
     slug: 'airco-maastricht-complete-gids-2026',
     title: 'Airco in Maastricht 2026: complete gids met kosten, subsidies en wijktips',
     description: 'Complete gids voor airco in Maastricht: kosten €1.500–€3.500, ISDE-subsidie, wijkspecifieke tips voor Binnenstad, Wyck, Heer en meer. Inclusief monumenten-advies en VvE-hulp.',

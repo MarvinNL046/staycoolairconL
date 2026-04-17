@@ -45,6 +45,16 @@ const POSTS = [
     title: 'Airco Maastricht complete gids 2026',
     prompt: `Professional editorial photograph: iconic view of Maastricht with the Sint-Servaasbrug bridge and historic city skyline with twin cathedral towers in the background during golden hour. In the foreground, a modern Dutch home exterior shows a tastefully installed white outdoor airco unit on a brick wall (clearly visible but not the main focus). The composition conveys "modern comfort in historic Maastricht". Warm late-afternoon light, rich color palette of limestone, terracotta roofs, and Meuse river. Hyperrealistic travel magazine quality. 16:9 horizontal composition. No people visible, no signage or readable text.`,
   },
+  {
+    slug: 'airco-levensduur-wanneer-vervangen',
+    title: 'Levensduur airco wanneer vervangen',
+    prompt: `Hyperrealistic professional photograph: side-by-side comparison of an old weathered beige/cream colored split airco unit (showing signs of age, slightly yellowed plastic, small stains) next to a modern sleek pristine white airco unit on the same type of brick wall. Soft natural daylight from the side highlighting the contrast between old and new. The scene conveys "time to upgrade" subtly. Clean Dutch residential exterior context, manicured plants below. Editorial magazine quality. 16:9 horizontal composition. No text, logos, or people visible.`,
+  },
+  {
+    slug: 'airco-storingen-herkennen',
+    title: 'Airco storingen herkennen',
+    prompt: `Hyperrealistic close-up photograph: a professional airco technician's gloved hand holding a multimeter/diagnostic tool against the internal components of an opened split airco unit (front panel removed, showing clean electronics and heat exchanger). Shallow depth of field. Soft industrial lighting. The scene conveys "expert diagnosis and troubleshooting". No visible face, just hands and tool. Blue-tinted professional atmosphere. 16:9 horizontal composition. No text or logos visible. Editorial technical photography style.`,
+  },
 ];
 
 function loadEnv() {

@@ -9,19 +9,20 @@ export default function AircoOfferteLimburg() {
   return (
     <>
       <MetaTags
-        title="Airco offerte Limburg – Wat je moet weten in 2025 | StayCool"
-        description="Wat kost een airco inclusief installatie in Limburg? Alles over prijzen, advies en factoren die de offerte beïnvloeden. Vraag vrijblijvend een offerte aan."
-        keywords="airco offerte, airco installatie Limburg, airco prijzen, airco kosten, airco buitenunit, airconditioning offerte, airco met montage"
+        title="Airco offerte Limburg 2026: echte prijzen + vergelijkings-checklist"
+        description="Wat kost een airco inclusief installatie in Limburg in 2026? Eerlijke prijsranges (€1.500-€3.500), checklist voor het vergelijken van offertes en wat te letten op wel/geen aggregator."
+        keywords="airco offerte limburg, airco prijzen 2026, airco offerte vergelijken, airco kosten inclusief installatie, airco offerte aanvragen, airco prijs per kw"
         canonicalUrl="https://staycoolairco.nl/blog/airco-offerte-limburg"
         type="article"
       />
-      
+
       <SchemaMarkup
         type="Article"
         data={{
-          name: "Airco offerte Limburg – Wat je moet weten in 2025",
-          description: "Een airco inclusief installatie kost gemiddeld tussen de €1.500 en €3.000. De exacte prijs hangt af van het merk, vermogen en installatiecomplexiteit. Vraag altijd meerdere offertes aan en kies voor een erkende installateur zoals StayCool Airconditioning.",
+          name: "Airco offerte Limburg 2026: echte prijzen + vergelijkings-checklist",
+          description: "Een airco inclusief installatie in Limburg kost gemiddeld tussen €1.500 en €3.500 in 2026. Prijzen per vermogen en woningtype, checklist voor het vergelijken van offertes en tips om aggregator-marges te omzeilen.",
           datePublished: "2025-05-10",
+          dateModified: "2026-04-18",
           image: "https://staycoolairco.nl/images/blog/airco-offerte-limburg-staycool.png"
         }}
       />
@@ -43,19 +44,23 @@ export default function AircoOfferteLimburg() {
           <article className="bg-white rounded-lg shadow-md p-6 md:p-8">
             <header className="mb-8">
               <div className="flex items-center text-sm text-gray-500 mb-3">
-                <span>10 mei 2025</span>
+                <span>Bijgewerkt: 18 april 2026</span>
                 <span className="mx-2">•</span>
-                <span>6 min leestijd</span>
+                <span>8 min leestijd</span>
                 <span className="mx-2">•</span>
                 <span className="text-blue-600">Prijzen</span>
               </div>
-              
+
               <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
-                Airco offerte Limburg – Wat je moet weten in 2025
+                Airco offerte Limburg 2026: echte prijzen + vergelijkings-checklist
               </h1>
-              
+
               <p className="text-xl text-gray-600 leading-relaxed">
-                Een airco inclusief installatie kost gemiddeld tussen de €1.500 en €3.000. De exacte prijs hangt af van het merk, vermogen en installatiecomplexiteit. Vraag altijd meerdere offertes aan en kies voor een erkende installateur zoals StayCool Airconditioning.
+                Een airco inclusief installatie in Limburg kost in 2026 gemiddeld tussen de <strong>€1.500 en €3.500</strong>.
+                Voor multisplit-systemen reken op €3.000 tot €7.500. De grote verschillen tussen offertes zijn meestal
+                te verklaren: omvang van installatiewerk, kwaliteit van onderdelen en of een aggregator tussen zit
+                (die 15-25% marge pakt). Hieronder echte prijzen voor 2026 + een checklist om offertes eerlijk te
+                vergelijken.
               </p>
             </header>
             
@@ -86,34 +91,47 @@ export default function AircoOfferteLimburg() {
                   <tr className="bg-gray-100">
                     <th className="border border-gray-200 px-4 py-2 text-left">Type ruimte</th>
                     <th className="border border-gray-200 px-4 py-2 text-left">Vermogen (kW)</th>
-                    <th className="border border-gray-200 px-4 py-2 text-left">Totale prijs (incl. montage)</th>
+                    <th className="border border-gray-200 px-4 py-2 text-left">Prijs-range 2026 (incl. montage)</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border border-gray-200 px-4 py-2">Slaapkamer</td>
+                    <td className="border border-gray-200 px-4 py-2">Slaapkamer / studeerkamer</td>
                     <td className="border border-gray-200 px-4 py-2">2,5 kW</td>
-                    <td className="border border-gray-200 px-4 py-2">€1.650,-</td>
+                    <td className="border border-gray-200 px-4 py-2">€1.500 – €1.900</td>
                   </tr>
                   <tr className="bg-gray-50">
-                    <td className="border border-gray-200 px-4 py-2">Woonkamer klein</td>
+                    <td className="border border-gray-200 px-4 py-2">Woonkamer klein (20-30 m²)</td>
                     <td className="border border-gray-200 px-4 py-2">3,5 kW</td>
-                    <td className="border border-gray-200 px-4 py-2">€2.000,-</td>
+                    <td className="border border-gray-200 px-4 py-2">€1.700 – €2.400</td>
                   </tr>
                   <tr>
-                    <td className="border border-gray-200 px-4 py-2">Woonkamer groot</td>
+                    <td className="border border-gray-200 px-4 py-2">Woonkamer groot (40-55 m²)</td>
                     <td className="border border-gray-200 px-4 py-2">5,0 kW</td>
-                    <td className="border border-gray-200 px-4 py-2">€2.400,-</td>
+                    <td className="border border-gray-200 px-4 py-2">€2.300 – €3.200</td>
                   </tr>
                   <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-4 py-2">Open keuken-woonkamer</td>
+                    <td className="border border-gray-200 px-4 py-2">7,0 kW</td>
+                    <td className="border border-gray-200 px-4 py-2">€2.800 – €3.700</td>
+                  </tr>
+                  <tr>
                     <td className="border border-gray-200 px-4 py-2">Multisplit 2 ruimtes</td>
-                    <td className="border border-gray-200 px-4 py-2">5,0 kW+</td>
-                    <td className="border border-gray-200 px-4 py-2">€2.900,-</td>
+                    <td className="border border-gray-200 px-4 py-2">2× units</td>
+                    <td className="border border-gray-200 px-4 py-2">€3.000 – €4.500</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-4 py-2">Multisplit 3-4 ruimtes</td>
+                    <td className="border border-gray-200 px-4 py-2">3-4 units</td>
+                    <td className="border border-gray-200 px-4 py-2">€4.500 – €7.500</td>
                   </tr>
                 </tbody>
               </table>
               <p className="text-sm text-gray-600 italic">
-                *Prijzen zijn inclusief btw, koelleidingen (5-8 meter), gootwerk en standaard montage.
+                * Prijsranges inclusief btw, F-gassen-gecertificeerde installatie, koelleidingen tot 5 m, gootwerk
+                en eerste jaaronderhoud. <strong>Waarom zo'n brede range?</strong> Verschil zit in merk (Daikin duurder
+                dan Toshiba), extra koelleidingen bij moeilijke plaatsing, en of jouw offerte via een aggregator
+                komt of direct van een lokale installateur. Zie sectie "aggregator-marges" hieronder.
               </p>
               
               <h2>Wat is de prijs van een airco inclusief montage?</h2>
@@ -180,10 +198,12 @@ export default function AircoOfferteLimburg() {
                 StayCool Airconditioning is dé specialist in Limburg. Wij bieden:
               </p>
               <ul>
-                <li>Persoonlijk advies aan huis</li>
-                <li>Installatie door gecertificeerde monteurs</li>
-                <li>5 jaar garantie op onderdelen</li>
-                <li>10 jaar garantie op de compressor bij LG</li>
+                <li>Persoonlijk advies bij u thuis (gratis en vrijblijvend)</li>
+                <li>F-gassen-gecertificeerde monteurs, eigen vaste team</li>
+                <li>Standaard 3 jaar garantie op onderdelen, uitbreidbaar tot 5 jaar</li>
+                <li>Eerste jaar onderhoud inbegrepen bij elke installatie</li>
+                <li>Directe offertes zonder aggregator-marge</li>
+                <li>Werkgebied heel Limburg, gemiddeld binnen 2 weken ingepland</li>
               </ul>
               
               <h2>Veelvoorkomende fouten bij het aanvragen van een offerte</h2>
@@ -225,16 +245,59 @@ export default function AircoOfferteLimburg() {
                 Ja, bij StayCool kun je eenvoudig via de website een offerte aanvragen, met of zonder bezoek op locatie.
               </p>
               
-              <h2>Praktische tips bij het vergelijken van offertes</h2>
+              <h2>Offertes vergelijken: 10-punts checklist</h2>
               <p>
-                Let bij het vergelijken van airco offertes op:
+                Verschillende installateurs bieden zelden één-op-één dezelfde offerte aan. Gebruik deze checklist
+                zodat je appels met appels vergelijkt en niet verrast wordt door onzichtbare meerkosten:
               </p>
+
+              <div className="not-prose bg-blue-50 border border-blue-200 rounded-lg p-6 my-6">
+                <ol className="space-y-3 text-sm text-gray-700 list-decimal list-inside">
+                  <li><strong>Inclusief F-gassen-certificaat?</strong> Verplicht bij elke installatie. Offerte zonder certificaat = illegaal werk én geen garantie.</li>
+                  <li><strong>Exacte vermogen en merk/model in offerte?</strong> "Een airco van 3,5 kW" is te vaag. Vraag om typenummer.</li>
+                  <li><strong>Lengte koelleidingen inbegrepen?</strong> Standaard 5 m is gangbaar. Elke extra meter: €35-€65.</li>
+                  <li><strong>Elektrawerk inbegrepen?</strong> Aparte groep (verplicht vanaf 5 kW) kost €180-€350 extra als niet inbegrepen.</li>
+                  <li><strong>Garantie onderdelen + installatie apart?</strong> Minimum: 3 jaar onderdelen. Premium: 5 jaar. Installatiefouten moeten los gegarandeerd zijn.</li>
+                  <li><strong>Eerste jaaronderhoud inbegrepen?</strong> Scheelt €85-€120.</li>
+                  <li><strong>Meldcode voor ISDE-subsidie beschikbaar?</strong> Nodig voor subsidie-aanvraag. Zonder = je mist €500+.</li>
+                  <li><strong>Aggregator of direct?</strong> Werkspot / Homedeal / Zoofy nemen 15-25% marge op de offerte — je betaalt dus meer voor hetzelfde.</li>
+                  <li><strong>Opruim- en beschermings-werk inbegrepen?</strong> Boren creëert gips-stof. Fatsoenlijke installateurs schoonmaken of rekenen dit apart.</li>
+                  <li><strong>BTW inbegrepen?</strong> Particulieren zien vaak offertes exclusief BTW. 21% verschil = groot.</li>
+                </ol>
+              </div>
+
+              <h2>⚠️ Waarschuwing: aggregator-marges op offertes</h2>
+
+              <p>
+                Sites als <strong>Werkspot, Homedeal en Zoofy</strong> bieden "gratis offertes vergelijken" — maar zij
+                leven van het doorverkopen van jouw aanvraag aan installateurs. Die installateurs rekenen die kosten
+                door in hun offerte (15-25% opslag). Je betaalt dus niet alleen voor de installatie, maar ook voor
+                de aggregator-tussenlaag.
+              </p>
+
+              <p>
+                <strong>Directe offerte aanvragen bij een lokale installateur</strong> zoals StayCool Airconditioning
+                bespaart je die marge. Omdat wij geen aggregator-fees betalen, kunnen wij scherpere prijzen bieden én
+                meer persoonlijke service. Zie onze <Link to="/blog/airco-maastricht-complete-gids-2026" className="text-blue-600 hover:underline">Maastricht gids</Link>
+                {' '}of <Link to="/werkgebied/heerlen" className="text-blue-600 hover:underline">Heerlen werkgebied</Link>
+                {' '}voor lokale kosten.
+              </p>
+
+              <h2>Subsidie opnemen in de offerte</h2>
+              <p>
+                Laat de installateur direct verwerken welke subsidies je verwacht. De <strong>ISDE</strong> geeft
+                minimaal €500 voor een airco met verwarmingsfunctie (lucht-lucht warmtepomp). Verdien je dat binnen
+                3-5 jaar terug door lagere stookkosten? Check onze volledige{' '}
+                <Link to="/blog/airco-subsidie-2026-limburg" className="text-blue-600 hover:underline">subsidie-uitleg 2026</Link>.
+              </p>
+
+              <h2>Extra tips bij het vergelijken</h2>
               <ul>
-                <li>Inclusief of exclusief installatie</li>
-                <li>Lengte van garantie</li>
-                <li>Inclusief onderhoudscontract</li>
-                <li>Specificaties van het binnen- en buitendeel</li>
-                <li>Type koelmiddel (bijv. R32)</li>
+                <li><strong>Type koelmiddel</strong>: R32 is moderne standaard (lagere GWP). Vermijd R410A-modellen — worden uitgefaseerd.</li>
+                <li><strong>COP en SCOP-waardes</strong>: hoger = zuiniger. Minimum COP 3,8 voor koelen, SCOP 4,0 voor verwarmen.</li>
+                <li><strong>Energielabel</strong>: A+++ minimum in 2026.</li>
+                <li><strong>Geluidsniveau (dB)</strong>: &lt;22 dB voor slaapkamers, &lt;45 dB voor buitenunit.</li>
+                <li><strong>Levertermijn</strong>: 2-4 weken normaal. Langer kan betekenen: seizoensprak of merkvoorraad-probleem.</li>
               </ul>
               
               <h2>Wanneer is het beste moment om een airco te laten installeren?</h2>
@@ -271,18 +334,28 @@ export default function AircoOfferteLimburg() {
               <h3>Gerelateerde artikelen</h3>
               <ul>
                 <li>
+                  <Link to="/blog/wat-kost-1-uur-airco-draaien" className="text-blue-600 hover:underline">
+                    Wat kost 1 uur airco draaien? Stroomkosten 2026 + rekenvoorbeelden
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/blog/airco-subsidie-2026-limburg" className="text-blue-600 hover:underline">
+                    Airco subsidie 2026 Limburg: ISDE-regeling + wijkspecifieke regelingen
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/blog/beste-airco-merken-2026" className="text-blue-600 hover:underline">
+                    Beste airco merken 2026: wat onze monteurs in de praktijk zien
+                  </Link>
+                </li>
+                <li>
                   <Link to="/blog/airco-installateur-limburg-kiezen" className="text-blue-600 hover:underline">
                     Hoe kies je de juiste airco installateur in Limburg?
                   </Link>
                 </li>
                 <li>
-                  <Link to="/blog/airco-onderhoud-limburg-belangrijk" className="text-blue-600 hover:underline">
-                    Waarom regelmatig airco onderhoud in Limburg essentieel is
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/kosten-airco-plaatsen" className="text-blue-600 hover:underline">
-                    Wat kost een airco laten plaatsen?
+                  <Link to="/blog/airco-levensduur-wanneer-vervangen" className="text-blue-600 hover:underline">
+                    Gemiddelde levensduur airco: wanneer vervangen?
                   </Link>
                 </li>
               </ul>

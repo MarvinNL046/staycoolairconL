@@ -123,6 +123,8 @@ const WatKostEenUurAircoDraaien = lazy(() => import('./pages/blog/WatKostEenUurA
 const AircoSubsidie2026Limburg = lazy(() => import('./pages/blog/AircoSubsidie2026Limburg'));
 const BesteAircoMerken2026 = lazy(() => import('./pages/blog/BesteAircoMerken2026'));
 const AircoMaastrichtCompleteGids2026 = lazy(() => import('./pages/blog/AircoMaastrichtCompleteGids2026'));
+const AircoLevensduurWanneerVervangen = lazy(() => import('./pages/blog/AircoLevensduurWanneerVervangen'));
+const AircoStoringenHerkennen = lazy(() => import('./pages/blog/AircoStoringenHerkennen'));
 
 // Knowledge Base Articles
 const HoeWerktAirco = lazy(() => import('./pages/articles/HoeWerktAirco'));
@@ -682,6 +684,8 @@ const App = () => {
                 <Route path="/blog/airco-subsidie-2026-limburg" element={<AircoSubsidie2026Limburg />} />
                 <Route path="/blog/beste-airco-merken-2026" element={<BesteAircoMerken2026 />} />
                 <Route path="/blog/airco-maastricht-complete-gids-2026" element={<AircoMaastrichtCompleteGids2026 />} />
+                <Route path="/blog/airco-levensduur-wanneer-vervangen" element={<AircoLevensduurWanneerVervangen />} />
+                <Route path="/blog/airco-storingen-herkennen" element={<AircoStoringenHerkennen />} />
 
                 {/* SEO Advice Pages */}
                 <Route path="/advies" element={<AdviesIndex />} />
