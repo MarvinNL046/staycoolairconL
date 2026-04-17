@@ -35,6 +35,16 @@ const POSTS = [
     title: 'Airco subsidie 2026 Limburg',
     prompt: `Professional editorial photograph: organized home office desk scene with a laptop showing a blurred government-style website page, a printed checklist with hand-checked boxes, a calculator, and a small scale model of a modern white airco wall unit on a clean light wooden desk. Warm natural afternoon light from a window. Composition conveys "researching subsidies and paperwork at home". Dutch home office aesthetic: minimal, organized, professional. Color palette: warm wood tones, soft blue accents, white paper, clean whites. No readable specific text anywhere. No human faces. Hyperrealistic editorial magazine style, 16:9 horizontal composition, shallow depth of field.`,
   },
+  {
+    slug: 'beste-airco-merken-2026',
+    title: 'Beste airco merken 2026',
+    prompt: `Hyperrealistic professional photograph inside a modern showroom with three premium white split airco units mounted on separate wooden wall panels, each on its own minimalist stand. Spacious brightly-lit interior with polished concrete floor, large floor-to-ceiling windows showing blurred greenery outside. Warm natural daylight mixed with soft overhead spotlights creating subtle shadows. Camera angle: slightly low, showing the units at eye level with the floor visible. Premium boutique HVAC showroom aesthetic. Sharp detail on units, slight depth-of-field blur on background. No text, logos, or labels visible anywhere. No people. 16:9 widescreen composition. Editorial magazine photography quality.`,
+  },
+  {
+    slug: 'airco-maastricht-complete-gids-2026',
+    title: 'Airco Maastricht complete gids 2026',
+    prompt: `Professional editorial photograph: iconic view of Maastricht with the Sint-Servaasbrug bridge and historic city skyline with twin cathedral towers in the background during golden hour. In the foreground, a modern Dutch home exterior shows a tastefully installed white outdoor airco unit on a brick wall (clearly visible but not the main focus). The composition conveys "modern comfort in historic Maastricht". Warm late-afternoon light, rich color palette of limestone, terracotta roofs, and Meuse river. Hyperrealistic travel magazine quality. 16:9 horizontal composition. No people visible, no signage or readable text.`,
+  },
 ];
 
 function loadEnv() {
