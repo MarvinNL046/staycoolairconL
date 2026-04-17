@@ -291,15 +291,20 @@ const AircoServiceLimburgLanding: React.FC = () => {
       latitude: "50.8514",
       longitude: "5.6910"
     },
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday", "Tuesday", "Wednesday", "Thursday",
-        "Friday", "Saturday"
-      ],
-      opens: "08:00",
-      closes: "18:00"
-    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        opens: "09:00",
+        closes: "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Friday",
+        opens: "09:00",
+        closes: "16:00"
+      }
+    ],
     areaServed: {
       "@type": "State",
       name: "Limburg"

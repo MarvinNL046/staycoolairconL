@@ -119,6 +119,8 @@ const AircoInstallateurLimburgKiezen = lazy(() => import('./pages/blog/AircoInst
 const AircoOfferteLimburg = lazy(() => import('./pages/blog/AircoOfferteLimburg'));
 const AircoSpecialistLimburgBlog = lazy(() => import('./pages/blog/AircoSpecialistLimburg'));
 const AircoInstallatieZuidLimburg = lazy(() => import('./pages/blog/AircoInstallatieZuidLimburg'));
+const WatKostEenUurAircoDraaien = lazy(() => import('./pages/blog/WatKostEenUurAircoDraaien'));
+const AircoSubsidie2026Limburg = lazy(() => import('./pages/blog/AircoSubsidie2026Limburg'));
 
 // Knowledge Base Articles
 const HoeWerktAirco = lazy(() => import('./pages/articles/HoeWerktAirco'));
@@ -674,6 +676,8 @@ const App = () => {
                 <Route path="/blog/airco-offerte-limburg" element={<AircoOfferteLimburg />} />
                 <Route path="/blog/airco-specialist-limburg" element={<AircoSpecialistLimburgBlog />} />
                 <Route path="/blog/airco-installatie-zuid-limburg" element={<AircoInstallatieZuidLimburg />} />
+                <Route path="/blog/wat-kost-1-uur-airco-draaien" element={<WatKostEenUurAircoDraaien />} />
+                <Route path="/blog/airco-subsidie-2026-limburg" element={<AircoSubsidie2026Limburg />} />
 
                 {/* SEO Advice Pages */}
                 <Route path="/advies" element={<AdviesIndex />} />

@@ -164,7 +164,7 @@ export default function Contact() {
                 <div className="ml-6">
                   <span className="block text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">Telefoon</span>
                   <span className="text-xl font-bold text-quatt-dark group-hover:text-quatt-orange transition-colors">046 202 1430</span>
-                  <span className="block text-sm text-gray-500 mt-1">Ma-Vr: 09:00 - 17:00</span>
+                  <span className="block text-sm text-gray-500 mt-1">Ma-Do: 09:00 - 17:00 | Vr: 09:00 - 16:00</span>
                 </div>
               </a>
 

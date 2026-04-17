@@ -5,7 +5,7 @@ import SchemaMarkup from '../../components/SchemaMarkup';
 import FAQSchema from '../../components/SEO/FAQSchema';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const faqItems = [
   {
@@ -162,7 +162,7 @@ export default function AircoKopenEnLatenInstalleren() {
           <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <Breadcrumbs items={breadcrumbItems} />
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -204,14 +204,14 @@ export default function AircoKopenEnLatenInstalleren() {
                   046 202 1430
                 </a>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </section>
 
         {/* Stap-voor-Stap Koopgids */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -224,11 +224,11 @@ export default function AircoKopenEnLatenInstalleren() {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Van behoeftebepaling tot installatie: onze stap-voor-stap koopgids helpt u de beste keuze te maken.
               </p>
-            </motion.div>
+            </m.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {stappen.map((stap, index) => (
-                <motion.div
+                <m.div
                   key={stap.nummer}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -251,7 +251,7 @@ export default function AircoKopenEnLatenInstalleren() {
                       </p>
                     </div>
                   </div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>
@@ -260,7 +260,7 @@ export default function AircoKopenEnLatenInstalleren() {
         {/* Vergelijking Typen Airco */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -274,11 +274,11 @@ export default function AircoKopenEnLatenInstalleren() {
                 Alle prijzen zijn inclusief apparatuur, standaard installatie en 5 jaar garantie.
                 Op basis van onze ervaring met meer dan 500 installaties in Limburg.
               </p>
-            </motion.div>
+            </m.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {aircoTypes.map((item, index) => (
-                <motion.div
+                <m.div
                   key={item.type}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -315,7 +315,7 @@ export default function AircoKopenEnLatenInstalleren() {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </m.div>
               ))}
             </div>
 
@@ -334,7 +334,7 @@ export default function AircoKopenEnLatenInstalleren() {
         {/* Top Merken */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -347,11 +347,11 @@ export default function AircoKopenEnLatenInstalleren() {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Wij werken uitsluitend met A-merken en zijn officieel dealer van alle onderstaande fabrikanten.
               </p>
-            </motion.div>
+            </m.div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {merken.map((merk, index) => (
-                <motion.div
+                <m.div
                   key={merk.naam}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -375,7 +375,7 @@ export default function AircoKopenEnLatenInstalleren() {
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </span>
                   </Link>
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>
@@ -385,7 +385,7 @@ export default function AircoKopenEnLatenInstalleren() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -399,7 +399,7 @@ export default function AircoKopenEnLatenInstalleren() {
                 </p>
                 <div className="space-y-4">
                   {checklistItems.map((item, index) => (
-                    <motion.div
+                    <m.div
                       key={item.label}
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
@@ -414,12 +414,12 @@ export default function AircoKopenEnLatenInstalleren() {
                           <p className="text-sm text-gray-600 mt-1">{item.uitleg}</p>
                         </div>
                       </div>
-                    </motion.div>
+                    </m.div>
                   ))}
                 </div>
-              </motion.div>
+              </m.div>
 
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -454,7 +454,7 @@ export default function AircoKopenEnLatenInstalleren() {
                 >
                   Gratis adviesgesprek plannen
                 </Link>
-              </motion.div>
+              </m.div>
             </div>
           </div>
         </section>
@@ -462,7 +462,7 @@ export default function AircoKopenEnLatenInstalleren() {
         {/* Waarom StayCool */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -475,7 +475,7 @@ export default function AircoKopenEnLatenInstalleren() {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Geen gedoe met losse leveranciers. Bij ons krijgt u advies, levering en installatie uit een hand.
               </p>
-            </motion.div>
+            </m.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
@@ -510,7 +510,7 @@ export default function AircoKopenEnLatenInstalleren() {
                   beschrijving: 'Met een gemiddelde beoordeling van 4,8 uit 5 sterren en meer dan 500 installaties in Limburg.',
                 },
               ].map((item, index) => (
-                <motion.div
+                <m.div
                   key={item.titel}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -523,12 +523,12 @@ export default function AircoKopenEnLatenInstalleren() {
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{item.titel}</h3>
                   <p className="text-gray-600">{item.beschrijving}</p>
-                </motion.div>
+                </m.div>
               ))}
             </div>
 
             {/* Internal links section */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -558,14 +558,14 @@ export default function AircoKopenEnLatenInstalleren() {
                   </Link>
                 ))}
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </section>
 
         {/* FAQ Section */}
         <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -578,11 +578,11 @@ export default function AircoKopenEnLatenInstalleren() {
               <p className="text-lg text-gray-600">
                 De meestgestelde vragen van onze klanten over het kopen en installeren van een airco.
               </p>
-            </motion.div>
+            </m.div>
 
             <div className="space-y-3">
               {faqItems.map((faq, index) => (
-                <motion.div
+                <m.div
                   key={index}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -606,7 +606,7 @@ export default function AircoKopenEnLatenInstalleren() {
                       <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                     </div>
                   )}
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>
@@ -615,7 +615,7 @@ export default function AircoKopenEnLatenInstalleren() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -646,7 +646,7 @@ export default function AircoKopenEnLatenInstalleren() {
               <p className="mt-6 text-blue-200 text-sm">
                 Gratis en vrijblijvend advies - Offerte binnen 24 uur - Installatie binnen 5 werkdagen
               </p>
-            </motion.div>
+            </m.div>
           </div>
         </section>
       </main>

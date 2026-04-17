@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Shield } from 'lucide-react';
 
@@ -16,7 +16,7 @@ export default function Privacy() {
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="mb-12"
@@ -30,7 +30,7 @@ export default function Privacy() {
             <p className="text-xl text-gray-600">
               Staycool Airconditioning - Laatst bijgewerkt: 25 juli 2024
             </p>
-          </motion.div>
+          </m.div>
 
           <div className="prose prose-lg max-w-none">
             <h2>1. Inleiding</h2>
@@ -54,7 +54,7 @@ export default function Privacy() {
                 <li><strong>Bedrijfsnaam:</strong> Staycool Airconditioning</li>
                 <li><strong>E-mailadres:</strong> info@staycoolairco.nl</li>
                 <li><strong>Telefoonnummer:</strong> 046 202 1430</li>
-                <li><strong>Postadres:</strong> Paalweg 18, 6129EZ Urmond</li>
+                <li><strong>Postadres:</strong> Aan de Bogen 11, 6118AS Nieuwstadt</li>
               </ul>
             </div>
 
@@ -131,8 +131,8 @@ export default function Privacy() {
             <h2>10. Contact</h2>
             <p>
               Als u vragen heeft over deze Privacy Policy of onze privacypraktijken, neem dan contact met 
-              ons op via info@staycoolairco.nl, bel ons op 046 202 1430, of schrijf naar Paalweg 18, 
-              6129EZ Urmond.
+              ons op via info@staycoolairco.nl, bel ons op 046 202 1430, of schrijf naar Aan de Bogen 11,
+              6118AS Nieuwstadt.
             </p>
           </div>
         </div>

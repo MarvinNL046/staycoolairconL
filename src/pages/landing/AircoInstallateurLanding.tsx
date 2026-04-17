@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { ShieldCheck, Clock, Award, Wrench, MapPin, Phone, Star, CheckCircle, Users, Thermometer, ChevronDown } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const faqItems = [
   {
@@ -208,7 +208,7 @@ export default function AircoInstallateurLanding() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 to-blue-800 pt-32 pb-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -236,10 +236,10 @@ export default function AircoInstallateurLanding() {
                 046 202 1430
               </a>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Trust Badges */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -260,14 +260,14 @@ export default function AircoInstallateurLanding() {
             <span className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
               <Clock className="h-4 w-4" /> Reactie binnen 24 uur
             </span>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* E-E-A-T: Experience & Expertise */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -281,10 +281,10 @@ export default function AircoInstallateurLanding() {
               Een airco installeren is vakwerk. De keuze voor een erkende installateur beschermt u juridisch,
               financieel en technisch. Dit is waarom certificering essentieel is.
             </p>
-          </motion.div>
+          </m.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -299,9 +299,9 @@ export default function AircoInstallateurLanding() {
                 en garandeert veilige installatie. Installatie door een niet-gecertificeerd bedrijf is illegaal
                 en kan leiden tot boetes tot €50.000.
               </p>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -316,9 +316,9 @@ export default function AircoInstallateurLanding() {
                 door verkeerde plaatsing. Bovendien vervalt de fabrieksgarantie bij installatie door een
                 niet-erkend bedrijf.
               </p>
-            </motion.div>
+            </m.div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -332,7 +332,7 @@ export default function AircoInstallateurLanding() {
                 StayCool Airco ontvangt u daarbovenop 5 jaar installatiegarantie. Wij werken volgens de richtlijnen
                 van de fabrikant, gebruiken het juiste gereedschap en documenteren elke installatie volledig.
               </p>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -340,7 +340,7 @@ export default function AircoInstallateurLanding() {
       {/* E-E-A-T: Experience - Onze Ervaring */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -354,7 +354,7 @@ export default function AircoInstallateurLanding() {
               Sinds 2019 hebben wij meer dan 500 aircosystemen geïnstalleerd in heel Limburg.
               Van compacte studio-appartementen tot grote villa's — wij kennen elke situatie.
             </p>
-          </motion.div>
+          </m.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -363,7 +363,7 @@ export default function AircoInstallateurLanding() {
               { icon: <Star className="h-8 w-8 text-blue-600" />, getal: '4.8/5', label: 'Gemiddelde beoordeling' },
               { icon: <Thermometer className="h-8 w-8 text-blue-600" />, getal: '5 Merken', label: 'Erkend installateur' },
             ].map((item, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -374,11 +374,11 @@ export default function AircoInstallateurLanding() {
                 <div className="flex justify-center mb-3">{item.icon}</div>
                 <p className="text-3xl font-bold text-gray-900">{item.getal}</p>
                 <p className="text-gray-600 mt-1">{item.label}</p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -422,14 +422,14 @@ export default function AircoInstallateurLanding() {
                 ))}
               </ul>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* Werkwijze / HowTo */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -442,11 +442,11 @@ export default function AircoInstallateurLanding() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Een duidelijk en transparant proces, zodat u precies weet wat u kunt verwachten.
             </p>
-          </motion.div>
+          </m.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {werkwijzeStappen.map((stap, index) => (
-              <motion.div
+              <m.div
                 key={stap.nummer}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -459,7 +459,7 @@ export default function AircoInstallateurLanding() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{stap.titel}</h3>
                 <p className="text-gray-600">{stap.beschrijving}</p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -468,7 +468,7 @@ export default function AircoInstallateurLanding() {
       {/* Merken */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -482,11 +482,11 @@ export default function AircoInstallateurLanding() {
               Als erkend installateur werken wij met de beste airco merken op de markt.
               Wij adviseren u graag welk merk het beste past bij uw situatie en budget.
             </p>
-          </motion.div>
+          </m.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {merken.map((merk, index) => (
-              <motion.div
+              <m.div
                 key={merk.naam}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -503,7 +503,7 @@ export default function AircoInstallateurLanding() {
                     Bekijk modellen →
                   </span>
                 </Link>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
@@ -521,7 +521,7 @@ export default function AircoInstallateurLanding() {
       {/* Werkgebied */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -535,11 +535,11 @@ export default function AircoInstallateurLanding() {
               Wij zijn actief als airco installateur in alle grote steden en gemeenten in Limburg.
               Onze monteurs kennen de regio en zijn snel bij u ter plaatse.
             </p>
-          </motion.div>
+          </m.div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {steden.map((stad, index) => (
-              <motion.div
+              <m.div
                 key={stad.naam}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -553,7 +553,7 @@ export default function AircoInstallateurLanding() {
                   <MapPin className="h-4 w-4 text-blue-600 flex-shrink-0" />
                   <span className="text-gray-700 font-medium text-sm">{stad.naam}</span>
                 </Link>
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
@@ -572,7 +572,7 @@ export default function AircoInstallateurLanding() {
       {/* FAQ */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -585,11 +585,11 @@ export default function AircoInstallateurLanding() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Antwoorden op de meest gestelde vragen over het kiezen van een airco installateur.
             </p>
-          </motion.div>
+          </m.div>
 
           <div className="max-w-3xl mx-auto space-y-4">
             {faqItems.map((item, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -613,7 +613,7 @@ export default function AircoInstallateurLanding() {
                     <p className="text-gray-600 leading-relaxed">{item.answer}</p>
                   </div>
                 )}
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -622,7 +622,7 @@ export default function AircoInstallateurLanding() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -666,7 +666,7 @@ export default function AircoInstallateurLanding() {
                 <CheckCircle className="h-5 w-5" /> Transparante prijzen
               </span>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 

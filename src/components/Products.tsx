@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Check, Award } from 'lucide-react';
 import { trackProductInteraction, trackInteraction } from '../utils/analytics';
 
@@ -61,7 +61,7 @@ export default function Products() {
 
         <div className="mt-20 space-y-16">
           {brands.map((brand, index) => (
-            <motion.div
+            <m.div
               key={brand.name}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -135,7 +135,7 @@ export default function Products() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 

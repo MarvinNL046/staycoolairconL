@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import MetaTags from '../../components/MetaTags';
@@ -26,7 +26,7 @@ export default function AircoOfferteLimburg() {
         }}
       />
 
-      <motion.div
+      <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -289,7 +289,7 @@ export default function AircoOfferteLimburg() {
             </div>
           </article>
         </div>
-      </motion.div>
+      </m.div>
     </>
   );
 }

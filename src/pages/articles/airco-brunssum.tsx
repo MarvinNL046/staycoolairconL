@@ -82,7 +82,7 @@ export default function AircoBrunssum() {
                   <h3 className="text-xl font-semibold">Service</h3>
                 </div>
                 <ul className="space-y-2">
-                  <li>✓ Ma-Vr: 9:00-17:00</li>
+                  <li>✓ Ma-Do: 9:00-17:00, Vr: 9:00-16:00</li>
                   <li>✓ Flexibele planning</li>
                   <li>✓ Snelle service</li>
                   <li>✓ Lokale expertise</li>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import BlogList from '../components/BlogList';
 import SchemaMarkup from '../components/SchemaMarkup';
 import MetaTags from '../components/MetaTags';
@@ -39,7 +39,7 @@ export default function Blog() {
         }}
       />
       
-      <motion.div
+      <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -63,7 +63,7 @@ export default function Blog() {
           
           <BlogList />
         </div>
-      </motion.div>
+      </m.div>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import toast, { Toaster } from 'react-hot-toast';
 import SchemaMarkup from './SchemaMarkup';
@@ -92,7 +92,7 @@ export default function ProductDetail({
         {/* Product Overview */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 relative">
           {/* Product Image */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -136,10 +136,10 @@ export default function ProductDetail({
                 <Share2 className="h-5 w-5" />
               </button>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Product Info */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -368,7 +368,7 @@ export default function ProductDetail({
                 <span>5 jaar garantie</span>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
 
         {/* Installation Info Modal */}
@@ -427,7 +427,7 @@ export default function ProductDetail({
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Kenmerken</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <m.div
                 key={feature}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -437,7 +437,7 @@ export default function ProductDetail({
               >
                 <Check className="h-8 w-8 text-blue-600 mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature}</h3>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -448,7 +448,7 @@ export default function ProductDetail({
           <div className="bg-white rounded-xl shadow-md overflow-hidden">
             <div className="divide-y divide-gray-200">
               {specifications.map((spec, index) => (
-                <motion.div
+                <m.div
                   key={spec.label}
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
@@ -458,7 +458,7 @@ export default function ProductDetail({
                 >
                   <div className="text-gray-600">{spec.label}</div>
                   <div className="text-gray-900 font-medium">{spec.value}</div>
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>

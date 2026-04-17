@@ -81,7 +81,7 @@ export default function MitsubishiAircoLimburg() {
                   <h3 className="text-xl font-semibold">Service</h3>
                 </div>
                 <ul className="space-y-2">
-                  <li>✓ Ma-Vr: 9:00-17:00</li>
+                  <li>✓ Ma-Do: 9:00-17:00, Vr: 9:00-16:00</li>
                   <li>✓ Vakkundige installatie</li>
                   <li>✓ Professioneel onderhoud</li>
                   <li>✓ Expert advies</li>

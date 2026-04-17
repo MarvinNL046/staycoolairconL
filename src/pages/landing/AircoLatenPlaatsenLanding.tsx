@@ -25,7 +25,7 @@ import {
 import SchemaMarkup from '../../components/SchemaMarkup';
 import FAQSchema from '../../components/SEO/FAQSchema';
 import Breadcrumbs from '../../components/Breadcrumbs';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const faqs = [
   {
@@ -155,7 +155,7 @@ export default function AircoLatenPlaatsenLanding() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -198,14 +198,14 @@ export default function AircoLatenPlaatsenLanding() {
                 Bel 046 202 1430
               </a>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* Waarom een Airco Laten Plaatsen? */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -219,7 +219,7 @@ export default function AircoLatenPlaatsenLanding() {
               Een airco is meer dan alleen koeling. Moderne aircosystemen bieden jaarrond comfort
               en helpen u energie te besparen.
             </p>
-          </motion.div>
+          </m.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
@@ -243,7 +243,7 @@ export default function AircoLatenPlaatsenLanding() {
                 description: 'Airco\'s filteren pollen, stof en allergenen uit de lucht. Het vochtregulerende effect voorkomt schimmel en zorgt voor een gezonder binnenklimaat.'
               }
             ].map((benefit, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -256,7 +256,7 @@ export default function AircoLatenPlaatsenLanding() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{benefit.description}</p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -265,7 +265,7 @@ export default function AircoLatenPlaatsenLanding() {
       {/* Wat Kost een Airco Laten Plaatsen? */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -279,7 +279,7 @@ export default function AircoLatenPlaatsenLanding() {
               Transparante prijzen inclusief apparaat, materialen en volledige installatie.
               Geen verborgen kosten — u weet altijd vooraf waar u aan toe bent.
             </p>
-          </motion.div>
+          </m.div>
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
               <table className="w-full">
@@ -337,7 +337,7 @@ export default function AircoLatenPlaatsenLanding() {
       {/* Ons Installatieproces */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -351,10 +351,10 @@ export default function AircoLatenPlaatsenLanding() {
               Van het eerste adviesgesprek tot de oplevering — bij StayCool Airco weet u precies wat u kunt verwachten.
               Onze monteurs hebben jarenlange ervaring met het vakkundig plaatsen van aircosystemen.
             </p>
-          </motion.div>
+          </m.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {howToSteps.map((step, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -374,7 +374,7 @@ export default function AircoLatenPlaatsenLanding() {
                     <ChevronRight className="h-6 w-6 text-blue-300" />
                   </div>
                 )}
-              </motion.div>
+              </m.div>
             ))}
           </div>
           <div className="mt-8 bg-blue-50 border border-blue-100 rounded-xl p-6 max-w-3xl mx-auto">
@@ -397,7 +397,7 @@ export default function AircoLatenPlaatsenLanding() {
       {/* Waar Plaatsen Wij Airco's? */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -411,7 +411,7 @@ export default function AircoLatenPlaatsenLanding() {
               Elke ruimte stelt andere eisen aan de airco. Of het nu gaat om uw woonkamer, slaapkamer,
               zolder of kantoor — wij adviseren het juiste systeem voor optimaal comfort.
             </p>
-          </motion.div>
+          </m.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
@@ -443,7 +443,7 @@ export default function AircoLatenPlaatsenLanding() {
                 link: '/airco-kantoor'
               }
             ].map((room, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -464,7 +464,7 @@ export default function AircoLatenPlaatsenLanding() {
                     Meer info <ArrowRight className="ml-1 h-4 w-4" />
                   </span>
                 </Link>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -473,7 +473,7 @@ export default function AircoLatenPlaatsenLanding() {
       {/* Werkgebied Limburg */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -487,7 +487,7 @@ export default function AircoLatenPlaatsenLanding() {
               StayCool Airco is al jarenlang actief in heel Limburg. Onze monteurs kennen de regio
               en staan snel bij u op de stoep voor advies of installatie.
             </p>
-          </motion.div>
+          </m.div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {[
               { city: 'Roermond', slug: 'roermond' },
@@ -497,7 +497,7 @@ export default function AircoLatenPlaatsenLanding() {
               { city: 'Sittard', slug: 'sittard' },
               { city: 'Weert', slug: 'weert' }
             ].map((location, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -511,7 +511,7 @@ export default function AircoLatenPlaatsenLanding() {
                   <MapPin className="h-4 w-4 text-blue-600 group-hover:text-blue-700" />
                   {location.city}
                 </Link>
-              </motion.div>
+              </m.div>
             ))}
           </div>
           <p className="text-center mt-8 text-gray-500 text-sm">
@@ -527,7 +527,7 @@ export default function AircoLatenPlaatsenLanding() {
       {/* Veelgestelde Vragen */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -540,10 +540,10 @@ export default function AircoLatenPlaatsenLanding() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               De meestgestelde vragen van onze klanten over het plaatsen van een airco.
             </p>
-          </motion.div>
+          </m.div>
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -567,7 +567,7 @@ export default function AircoLatenPlaatsenLanding() {
                     <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -576,7 +576,7 @@ export default function AircoLatenPlaatsenLanding() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -620,7 +620,7 @@ export default function AircoLatenPlaatsenLanding() {
                 Binnen 5 werkdagen geïnstalleerd
               </span>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 

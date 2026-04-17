@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { ShieldCheck, Award, CheckCircle, Calendar, Star, ArrowRight, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -85,7 +85,7 @@ function CompactVariant({ className }: { className?: string }) {
 
 function FullVariant({ showCTA, className }: { showCTA?: boolean; className?: string }) {
   return (
-    <motion.section
+    <m.section
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -93,7 +93,7 @@ function FullVariant({ showCTA, className }: { showCTA?: boolean; className?: st
       className={`bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 md:p-12 ${className ?? ''}`}
     >
       {/* Trust badges row */}
-      <motion.div
+      <m.div
         variants={itemVariants}
         className="flex flex-wrap items-center justify-center gap-4 md:gap-8 mb-10"
       >
@@ -109,22 +109,22 @@ function FullVariant({ showCTA, className }: { showCTA?: boolean; className?: st
             </span>
           );
         })}
-      </motion.div>
+      </m.div>
 
       {/* Heading */}
-      <motion.h2
+      <m.h2
         variants={itemVariants}
         className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-10"
       >
         Waarom Klanten voor StayCool Kiezen
-      </motion.h2>
+      </m.h2>
 
       {/* Three columns */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {expertiseColumns.map((column) => {
           const Icon = column.icon;
           return (
-            <motion.div
+            <m.div
               key={column.title}
               variants={itemVariants}
               className="bg-white rounded-xl p-6 shadow-sm"
@@ -145,14 +145,14 @@ function FullVariant({ showCTA, className }: { showCTA?: boolean; className?: st
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </m.div>
           );
         })}
       </div>
 
       {/* CTA */}
       {showCTA && (
-        <motion.div
+        <m.div
           variants={itemVariants}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10"
         >
@@ -170,9 +170,9 @@ function FullVariant({ showCTA, className }: { showCTA?: boolean; className?: st
             <Phone className="w-4 h-4" />
             046 202 1430
           </a>
-        </motion.div>
+        </m.div>
       )}
-    </motion.section>
+    </m.section>
   );
 }
 

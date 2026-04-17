@@ -376,7 +376,7 @@ export default function AircoLimburgReistijdService() {
 
             <div className="bg-white p-6 rounded-lg shadow-sm mb-6">
               <h3 className="text-2xl font-semibold mb-4">Standaard Service (Werkdagen)</h3>
-              <p className="mb-4">Maandag t/m vrijdag 08:00 - 18:00 uur, zaterdag 09:00 - 13:00 uur</p>
+              <p className="mb-4">Maandag t/m donderdag 09:00 - 17:00 uur, vrijdag 09:00 - 16:00 uur</p>
               <div className="grid md:grid-cols-3 gap-6">
                 <div>
                   <p className="font-semibold mb-2">Installaties:</p>

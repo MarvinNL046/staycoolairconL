@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { ScrollText } from 'lucide-react';
 
@@ -16,7 +16,7 @@ export default function Terms() {
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="mb-12"
@@ -30,7 +30,7 @@ export default function Terms() {
             <p className="text-xl text-gray-600">
               Staycool Airconditioning - Duidelijke afspraken voor een zorgeloze samenwerking
             </p>
-          </motion.div>
+          </m.div>
 
           <div className="prose prose-lg max-w-none">
             <p>

@@ -25,7 +25,7 @@ import {
   Heart,
   Volume2
 } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import FAQSchema from '../../components/SEO/FAQSchema';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -145,23 +145,23 @@ export default function AirconditioningPillar() {
             ]}
           />
           <div className="max-w-3xl">
-            <motion.h1
+            <m.h1
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
               Airconditioning: Alles over Kopen, Installeren & Onderhoud
-            </motion.h1>
-            <motion.p
+            </m.h1>
+            <m.p
               className="text-base md:text-lg text-blue-100 mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               De complete gids over airconditioning in 2026. Ontdek welk type het beste bij uw situatie past, wat het kost, hoe de installatie werkt en waarom een professioneel geïnstalleerde airco de slimste investering is voor comfort in huis. Al meer dan 1.000 tevreden klanten in Limburg.
-            </motion.p>
-            <motion.div
+            </m.p>
+            <m.div
               className="flex flex-col sm:flex-row gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -180,7 +180,7 @@ export default function AirconditioningPillar() {
                 <Phone className="h-5 w-5" />
                 Bel Nu: 046 202 1430
               </a>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -188,7 +188,7 @@ export default function AirconditioningPillar() {
       {/* Wat is Airconditioning? */}
       <section className="bg-white py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -259,14 +259,14 @@ export default function AirconditioningPillar() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </section>
 
       {/* Voordelen van Airconditioning */}
       <section className="bg-gray-50 py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -277,7 +277,7 @@ export default function AirconditioningPillar() {
             <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
               Een moderne airconditioning biedt veel meer dan alleen verkoeling. Ontdek de voordelen die een airco tot een slimme investering maken.
             </p>
-          </motion.div>
+          </m.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
@@ -321,7 +321,7 @@ export default function AirconditioningPillar() {
                 description: 'Bedien uw airco via WiFi met uw smartphone, Google Home of Amazon Alexa. Stel schema\'s in en bespaar energie met slimme automatisering.'
               }
             ].map((voordeel, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100"
                 initial={{ opacity: 0, y: 20 }}
@@ -332,7 +332,7 @@ export default function AirconditioningPillar() {
                 <voordeel.icon className="h-10 w-10 text-blue-600 mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{voordeel.title}</h3>
                 <p className="text-base text-gray-600">{voordeel.description}</p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -341,7 +341,7 @@ export default function AirconditioningPillar() {
       {/* Kosten Overzicht */}
       <section className="bg-white py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -352,7 +352,7 @@ export default function AirconditioningPillar() {
             <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
               Een overzicht van de kosten per type systeem, inclusief professionele installatie. Alle prijzen zijn inclusief BTW, materialen en inbedrijfstelling.
             </p>
-          </motion.div>
+          </m.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {[
               {
@@ -392,7 +392,7 @@ export default function AirconditioningPillar() {
                 popular: false
               }
             ].map((item, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 className={`bg-white rounded-2xl shadow-lg p-6 border-2 ${item.popular ? 'border-blue-600 relative' : 'border-gray-100'}`}
                 initial={{ opacity: 0, y: 20 }}
@@ -425,7 +425,7 @@ export default function AirconditioningPillar() {
                     Geschikt voor: {item.geschikt}
                   </li>
                 </ul>
-              </motion.div>
+              </m.div>
             ))}
           </div>
           <div className="text-center">
@@ -442,7 +442,7 @@ export default function AirconditioningPillar() {
       {/* Het Installatieproces */}
       <section className="bg-gray-50 py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -453,7 +453,7 @@ export default function AirconditioningPillar() {
             <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
               Bij StayCool Airco doorloopt u een helder en transparant traject. Zo weet u precies wat u kunt verwachten.
             </p>
-          </motion.div>
+          </m.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -493,7 +493,7 @@ export default function AirconditioningPillar() {
                 description: 'U krijgt uitgebreide uitleg over de bediening, WiFi-koppeling en onderhoudstips. Uw 5 jaar garantie gaat direct in. Wij staan altijd voor u klaar.'
               }
             ].map((item, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 relative"
                 initial={{ opacity: 0, y: 20 }}
@@ -507,7 +507,7 @@ export default function AirconditioningPillar() {
                 <item.icon className="h-8 w-8 text-blue-600 mb-4 mt-2" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-base text-gray-600">{item.description}</p>
-              </motion.div>
+              </m.div>
             ))}
           </div>
           <div className="text-center mt-10">
@@ -524,7 +524,7 @@ export default function AirconditioningPillar() {
       {/* Waarom StayCool Airco - E-E-A-T Section */}
       <section className="bg-white py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -535,7 +535,7 @@ export default function AirconditioningPillar() {
             <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
               Al sinds 2019 de vertrouwde airconditioning specialist in Limburg. Met meer dan 1.000 installaties, gecertificeerde monteurs en 5 jaar garantie bent u bij ons in goede handen.
             </p>
-          </motion.div>
+          </m.div>
 
           {/* Onze Ervaring */}
           <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 mb-12 border border-blue-200">
@@ -573,7 +573,7 @@ export default function AirconditioningPillar() {
 
           {/* Expertise & Certificeringen */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <motion.div
+            <m.div
               className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -584,8 +584,8 @@ export default function AirconditioningPillar() {
               <p className="text-base text-gray-600">
                 Al onze monteurs zijn <strong>F-gassen gecertificeerd</strong> conform de Europese F-gassenverordening (EU 517/2014). Dit is wettelijk verplicht voor het werken met koudemiddelen en garandeert vakkundige en veilige installaties.
               </p>
-            </motion.div>
-            <motion.div
+            </m.div>
+            <m.div
               className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -597,8 +597,8 @@ export default function AirconditioningPillar() {
               <p className="text-base text-gray-600">
                 Op elke installatie geven wij <strong>5 jaar volledige garantie</strong>. Dit dekt zowel het installatiewerk als de gebruikte materialen. Daarbovenop geldt de fabrieksgarantie van het gekozen merk (2 tot 10 jaar op de compressor).
               </p>
-            </motion.div>
-            <motion.div
+            </m.div>
+            <m.div
               className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -610,7 +610,7 @@ export default function AirconditioningPillar() {
               <p className="text-base text-gray-600">
                 Wij zijn officieel partner van <strong>Daikin, Mitsubishi Heavy Industries, LG, Toshiba en Tosot (Gree)</strong>. Dit betekent directe toegang tot de nieuwste modellen, onderdelen en technische support.
               </p>
-            </motion.div>
+            </m.div>
           </div>
 
           {/* Merken */}
@@ -681,7 +681,7 @@ export default function AirconditioningPillar() {
       {/* Airco per Ruimte */}
       <section className="bg-gray-50 py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -692,7 +692,7 @@ export default function AirconditioningPillar() {
             <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
               Elke ruimte heeft andere eisen. Lees onze specifieke adviezen per kamertype.
             </p>
-          </motion.div>
+          </m.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: 'Airco voor Slaapkamer', desc: 'Extra stil (19 dB), nachtmodus, gezonde nachtrust', path: '/airco-voor-slaapkamer' },
@@ -702,7 +702,7 @@ export default function AirconditioningPillar() {
               { title: 'Airco voor Winkel', desc: 'Krachtige systemen voor commerciële ruimtes', path: '/airco-winkel' },
               { title: 'Airco Kopen Limburg', desc: 'Vergelijk alle opties en prijzen in uw regio', path: '/airco-kopen-limburg' }
             ].map((item, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -719,7 +719,7 @@ export default function AirconditioningPillar() {
                     Lees meer <ArrowRight className="h-3 w-3" />
                   </span>
                 </Link>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
@@ -728,7 +728,7 @@ export default function AirconditioningPillar() {
       {/* Veelgestelde Vragen */}
       <section className="bg-white py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -739,10 +739,10 @@ export default function AirconditioningPillar() {
             <p className="text-lg text-gray-600 text-center mb-12">
               De meest gestelde vragen over het kopen, installeren en onderhouden van een airconditioning.
             </p>
-          </motion.div>
+          </m.div>
           <div className="space-y-4">
             {faqItems.map((faq, index) => (
-              <motion.div
+              <m.div
                 key={index}
                 className="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden"
                 initial={{ opacity: 0, y: 10 }}
@@ -781,7 +781,7 @@ export default function AirconditioningPillar() {
                     )}
                   </div>
                 )}
-              </motion.div>
+              </m.div>
             ))}
           </div>
           <div className="text-center mt-8">
@@ -798,7 +798,7 @@ export default function AirconditioningPillar() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-blue-600 to-blue-800 py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -825,9 +825,9 @@ export default function AirconditioningPillar() {
               </a>
             </div>
             <p className="text-blue-200 text-sm mt-6">
-              Ma-Vr: 08:00 - 18:00 | Za: 09:00 - 15:00 | Reactie binnen 24 uur
+              Ma-Do: 09:00 - 17:00 | Vr: 09:00 - 16:00 | Reactie binnen 24 uur
             </p>
-          </motion.div>
+          </m.div>
         </div>
       </section>
     </>

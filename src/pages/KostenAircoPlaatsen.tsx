@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { ChevronRight, DollarSign, BarChart2, Zap, Award, Tool, ThumbsUp } from 'react-feather';
@@ -138,7 +138,7 @@ const KostenAircoPlaatsen: React.FC = () => {
         </script>
       </Helmet>
       
-      <motion.div
+      <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -285,7 +285,7 @@ const KostenAircoPlaatsen: React.FC = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </m.div>
     </>
   );
 };

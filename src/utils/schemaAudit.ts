@@ -25,16 +25,16 @@ export class SchemaAudit {
       "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "Bank Transfer", "iDEAL"],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Industrieweg 15A",
-        "addressLocality": "Echt",
+        "streetAddress": "Aan de Bogen 11",
+        "addressLocality": "Nieuwstadt",
         "addressRegion": "Limburg",
-        "postalCode": "6101 XZ",
+        "postalCode": "6118AS",
         "addressCountry": "NL"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 51.1045,
-        "longitude": 5.8781
+        "latitude": 51.0384,
+        "longitude": 5.8562
       },
       "areaServed": [
         {
@@ -45,13 +45,13 @@ export class SchemaAudit {
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "08:00",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "09:00",
           "closes": "17:00"
         },
         {
-          "@type": "OpeningHoursSpecification", 
-          "dayOfWeek": "Saturday",
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
           "opens": "09:00",
           "closes": "16:00"
         }

@@ -430,7 +430,7 @@ const AircoInstallatieLimburgFAQPage = () => {
             </a>
           </div>
           <p className="mt-6 text-green-200">
-            Bereikbaar ma-vr 08:00-17:30 | Of stuur een e-mail naar info@staycoolairco.nl
+            Bereikbaar ma-do 09:00-17:00, vr 09:00-16:00 | Of stuur een e-mail naar info@staycoolairco.nl
           </p>
         </div>
       </section>

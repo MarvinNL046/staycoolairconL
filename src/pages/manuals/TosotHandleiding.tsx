@@ -557,7 +557,7 @@ const TosotHandleiding: React.FC = () => {
 
             <div className="mt-6 text-center">
               <p className="font-semibold mb-2">Openingstijden</p>
-              <p>Ma-Vr: 08:00 - 17:00 | Za: 09:00 - 14:00</p>
+              <p>Ma-Do: 09:00 - 17:00 | Vr: 09:00 - 16:00</p>
               <p className="text-sm text-gray-600 mt-2">Storingsdienst: snelle responstijd</p>
             </div>
           </div>

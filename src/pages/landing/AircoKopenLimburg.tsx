@@ -779,7 +779,7 @@ const AircoKopenLimburg: React.FC = () => {
                 <Phone className="w-5 h-5" />
                 046 202 1430
               </a>
-              <p className="text-sm text-gray-500 mt-3">Ma-Za 08:00 - 20:00</p>
+              <p className="text-sm text-gray-500 mt-3">Ma-Do 09:00 - 17:00 | Vr 09:00 - 16:00</p>
             </div>
 
             <div className="bg-green-50 rounded-xl p-6 text-center">

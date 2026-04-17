@@ -911,8 +911,8 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
                   046 202 1430
                 </a>
                 <p className="text-sm text-gray-600">
-                  Ma-Za: 08:00 - 20:00<br />
-                  Zo: 10:00 - 18:00
+                  Ma-Do: 09:00 - 17:00<br />
+                  Vr: 09:00 - 16:00
                 </p>
               </div>
             </div>

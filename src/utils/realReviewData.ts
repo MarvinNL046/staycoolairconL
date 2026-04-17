@@ -14,14 +14,8 @@ export const realReviewData = {
     foundingDate: "2021-03-11", 
     businessType: "Eenmanszaak",
     address: {
-      street: "Burg. Lemmensstraat 8B",
-      city: "Geleen",
-      postalCode: "6163JL",
-      region: "Limburg"
-    },
-    operationalAddress: {
-      street: "Aan De Bogen 11",
-      city: "Nieuwstadt", 
+      street: "Aan de Bogen 11",
+      city: "Nieuwstadt",
       postalCode: "6118AS",
       region: "Limburg"
     },

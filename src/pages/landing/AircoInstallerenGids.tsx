@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Wrench, AlertTriangle, CheckCircle, Clock, Shield, Zap, ThermometerSun, BookOpen, ArrowRight, Phone } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const installationSteps = [
   {
@@ -209,7 +209,7 @@ export default function AircoInstallerenGids() {
       <section className="pt-32 pb-16 bg-gradient-to-br from-blue-50 via-white to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -225,10 +225,10 @@ export default function AircoInstallerenGids() {
                 Van voorbereiding tot oplevering — alles wat u moet weten over het installatieproces van een airco.
                 Inclusief wat u zelf kunt doen, wat wettelijk verplicht door een professional moet en welke kosten u kunt verwachten.
               </p>
-            </motion.div>
+            </m.div>
 
             {/* Quick Navigation */}
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -243,7 +243,7 @@ export default function AircoInstallerenGids() {
                   {section.label}
                 </a>
               ))}
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -252,7 +252,7 @@ export default function AircoInstallerenGids() {
       <section id="zelf-installeren" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -330,7 +330,7 @@ export default function AircoInstallerenGids() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -339,7 +339,7 @@ export default function AircoInstallerenGids() {
       <section id="stappenplan" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -352,7 +352,7 @@ export default function AircoInstallerenGids() {
                 Hieronder beschrijven we stap voor stap hoe een professionele airco-installatie in de praktijk verloopt.
                 Dit is gebaseerd op hoe onze monteurs bij StayCool Airco dagelijks split-airco's installeren in Limburg.
               </p>
-            </motion.div>
+            </m.div>
 
             <div className="relative">
               {/* Timeline line */}
@@ -360,7 +360,7 @@ export default function AircoInstallerenGids() {
 
               <div className="space-y-8">
                 {installationSteps.map((step, index) => (
-                  <motion.div
+                  <m.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -384,12 +384,12 @@ export default function AircoInstallerenGids() {
                         {step.text}
                       </p>
                     </div>
-                  </motion.div>
+                  </m.div>
                 ))}
               </div>
             </div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -405,7 +405,7 @@ export default function AircoInstallerenGids() {
                   Bij StayCool trekken we altijd minimaal 20 minuten vacuüm en controleren we het met een digitale manometer.
                 </p>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -414,7 +414,7 @@ export default function AircoInstallerenGids() {
       <section id="materialen" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -430,7 +430,7 @@ export default function AircoInstallerenGids() {
 
               <div className="grid sm:grid-cols-2 gap-4">
                 {materialenList.map((item, index) => (
-                  <motion.div
+                  <m.div
                     key={index}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -440,10 +440,10 @@ export default function AircoInstallerenGids() {
                   >
                     <Wrench className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700">{item}</span>
-                  </motion.div>
+                  </m.div>
                 ))}
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -452,7 +452,7 @@ export default function AircoInstallerenGids() {
       <section id="tijdsduur-kosten" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -564,7 +564,7 @@ export default function AircoInstallerenGids() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -573,7 +573,7 @@ export default function AircoInstallerenGids() {
       <section id="fouten" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -589,7 +589,7 @@ export default function AircoInstallerenGids() {
 
               <div className="space-y-6">
                 {commonMistakes.map((mistake, index) => (
-                  <motion.div
+                  <m.div
                     key={index}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -606,7 +606,7 @@ export default function AircoInstallerenGids() {
                         <p className="text-gray-600 leading-relaxed">{mistake.description}</p>
                       </div>
                     </div>
-                  </motion.div>
+                  </m.div>
                 ))}
               </div>
 
@@ -626,7 +626,7 @@ export default function AircoInstallerenGids() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>
@@ -635,7 +635,7 @@ export default function AircoInstallerenGids() {
       <section id="faq" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -644,11 +644,11 @@ export default function AircoInstallerenGids() {
               <h2 className="text-3xl font-bold text-gray-900 mb-10">
                 Veelgestelde vragen over airco installeren
               </h2>
-            </motion.div>
+            </m.div>
 
             <div className="space-y-4">
               {faqItems.map((item, index) => (
-                <motion.div
+                <m.div
                   key={index}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -673,7 +673,7 @@ export default function AircoInstallerenGids() {
                       <p className="text-gray-600 leading-relaxed">{item.answer}</p>
                     </div>
                   )}
-                </motion.div>
+                </m.div>
               ))}
             </div>
           </div>
@@ -684,7 +684,7 @@ export default function AircoInstallerenGids() {
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -744,7 +744,7 @@ export default function AircoInstallerenGids() {
                   Airco onderhoud
                 </Link>
               </p>
-            </motion.div>
+            </m.div>
           </div>
         </div>
       </section>

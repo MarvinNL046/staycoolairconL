@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import LazyImage from './LazyImage';
 
@@ -17,7 +17,7 @@ export default function KnowledgeBaseArticle({ title, description, imageUrl, slu
   });
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -44,6 +44,6 @@ export default function KnowledgeBaseArticle({ title, description, imageUrl, slu
           </svg>
         </a>
       </div>
-    </motion.div>
+    </m.div>
   );
 }

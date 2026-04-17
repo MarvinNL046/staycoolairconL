@@ -13,6 +13,24 @@ interface BlogPostPreview {
 
 const blogPosts: BlogPostPreview[] = [
   {
+    slug: 'airco-subsidie-2026-limburg',
+    title: 'Airco subsidie 2026: wanneer wel, wanneer niet + Limburgse regelingen',
+    description: 'Pure koel-airco krijgt geen subsidie. Een airco met verwarmingsfunctie (lucht-lucht warmtepomp) komt wél in aanmerking voor minimaal €500 ISDE. Plus gemeentelijke regelingen in Limburg.',
+    date: '17 april 2026',
+    imageUrl: '/images/blog/airco-subsidie-2026-limburg.webp',
+    readingTime: '8 min',
+    category: 'Subsidie'
+  },
+  {
+    slug: 'wat-kost-1-uur-airco-draaien',
+    title: 'Wat kost 1 uur airco draaien? Stroomkosten 2026 + Rekenvoorbeelden',
+    description: 'Een 3,5 kW airco kost €0,30–€0,50 per uur bij koelen en €0,20–€0,35 bij verwarmen (2026). Formule, tabel per vermogen, rekenvoorbeelden en bespaartips van onze monteurs.',
+    date: '17 april 2026',
+    imageUrl: '/images/blog/wat-kost-1-uur-airco-draaien.webp',
+    readingTime: '9 min',
+    category: 'Prijzen'
+  },
+  {
     slug: 'airco-installatie-zuid-limburg',
     title: 'Airco Installatie in Zuid-Limburg: Van Maastricht tot Kerkrade',
     description: 'Ontdek de voordelen van professionele airco installatie in Zuid-Limburg. Van Maastricht tot Kerkrade, wij installeren airconditioners in heel Zuid-Limburg met gratis onderhoud.',
