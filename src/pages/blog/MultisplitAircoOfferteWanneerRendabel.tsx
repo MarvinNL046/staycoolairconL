@@ -25,6 +25,34 @@ export default function MultisplitAircoOfferteWanneerRendabel() {
           image: "https://staycoolairco.nl/images/blog/multisplit-airco-offerte-wanneer-rendabel.webp"
         }}
       />
+      <SchemaMarkup
+        type="FAQPage"
+        data={{
+          questions: [
+            {
+            "question": "Kan een multisplit tegelijk koelen en verwarmen in verschillende kamers?",
+            "answer": "Bij standaard residentiële multisplits niet. Alle aangesloten binnendelen moeten tegelijk in koelmodus of tegelijk in verwarmingsmodus staan. Gelijktijdig koelen én verwarmen in verschillende kamers vereist een VRF- of 3-pipe-systeem, wat technisch en financieel een heel andere categorie is (meestal zakelijk)."
+            },
+            {
+            "question": "Hoeveel binnendelen kan ik op één buitenunit aansluiten?",
+            "answer": "Dat hangt van het model af. Gangbare residentiële multisplits ondersteunen 2 tot 5 binnendelen. Premium-modellen van Daikin en Mitsubishi gaan tot 6-8 binnendelen. Regel van onze monteurs: de totale capaciteit van binnendelen mag 120-130% zijn van de buitenunit-capaciteit, afhankelijk van gelijktijdigheidsfactor."
+            },
+            {
+            "question": "Is een multisplit toekomstbestendig? Kan ik later een binnendeel bijplaatsen?",
+            "answer": "Beperkt. Je kunt alleen bijplaatsen als de buitenunit al vooringeplande poorten en reserve- capaciteit heeft. Wij adviseren standaard om bij aanleg een extra leidingtraject mee te trekken voor toekomstige uitbreiding — dat is vele malen goedkoper dan achteraf. Indien je nu al weet dat je over 2-3 jaar uitbreidt, koop dan direct een multisplit me..."
+            },
+            {
+            "question": "Wat als één binnendeel kapotgaat — draaien de andere dan wel door?",
+            "answer": "Meestal wel. Als het defect alleen in het binnendeel zelf zit (bijvoorbeeld ventilator of elektronische print), kan dat binnendeel worden uitgeschakeld en blijven de andere functioneren. Ligt het probleem bij de buitenunit (compressor, printkaart, refrigerant-lek), dan staan alle binnendelen stil tot reparatie."
+            },
+            {
+            "question": "Beide scenario's doorgerekend op uw situatie",
+            "answer": "In plaats van gokken: laat een monteur van StayCool gratis langskomen en u krijgt twee offertes — multisplit én losse single splits — met prijs, jaarlijks energieverbruik en onderhoudskosten naast elkaar. Kies op cijfers, niet op intuïtie."
+            }
+            ]
+        }}
+      />
+
 
       <m.div
         initial={{ opacity: 0 }}
@@ -630,6 +658,16 @@ export default function MultisplitAircoOfferteWanneerRendabel() {
               </div>
 
               {/* ==================== RELATED ==================== */}
+              <div className="not-prose bg-gray-50 border border-gray-200 p-6 rounded-lg my-8">
+                <h3 className="text-xl font-bold text-gray-800 mb-3">🔗 Andere offerte-cluster pagina\'s</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>➤ <Link to="/blog/airco-offerte-aanvragen-checklist" className="text-blue-600 hover:underline font-medium">12-punts offerte-checklist</Link> — zeker bij multisplit extra belangrijk</li>
+                  <li>➤ <Link to="/blog/airco-offerte-online-vs-inmeting" className="text-blue-600 hover:underline font-medium">Online offerte of inmeting?</Link> — multisplit vraagt bijna altijd fysieke inmeting</li>
+                  <li>➤ <Link to="/blog/waarom-verschillen-airco-offertes" className="text-blue-600 hover:underline font-medium">Waarom verschillen offertes?</Link> — bij multisplit zijn verschillen nóg groter</li>
+                  <li>➤ Lokaal: <Link to="/blog/airco-offerte-maastricht" className="text-blue-600 hover:underline">Maastricht</Link>, <Link to="/blog/airco-offerte-heerlen" className="text-blue-600 hover:underline">Heerlen</Link>, <Link to="/blog/airco-offerte-sittard" className="text-blue-600 hover:underline">Sittard</Link></li>
+                </ul>
+              </div>
+
               <h2>Verder lezen</h2>
               <ul>
                 <li>

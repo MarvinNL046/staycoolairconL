@@ -25,6 +25,38 @@ export default function AircoSubsidie2026Limburg() {
           image: "https://staycoolairco.nl/images/blog/airco-subsidie-2026-limburg.webp"
         }}
       />
+      <SchemaMarkup
+        type="FAQPage"
+        data={{
+          questions: [
+            {
+            "question": "Kun je subsidie krijgen voor een airco?",
+            "answer": "Alleen als de airco ook kan verwarmen (lucht-lucht warmtepomp) én het model op de RVO-meldcodelijst staat. Pure koel-airco's kwalificeren niet voor ISDE."
+            },
+            {
+            "question": "Welke postcodes komen in aanmerking voor €10.000 subsidie?",
+            "answer": "Er is geen landelijke \"€10.000 airco-subsidie\" per postcode. Hoge bedragen zoals deze horen bij gemeentelijke aardgasvrij-pilots of collectieve verduurzamingsprojecten — niet bij individuele airco-installaties. Check via energiesubsidiewijzer.nl wat voor uw adres werkelijk beschikbaar is."
+            },
+            {
+            "question": "Is er nog subsidie op airco in 2026?",
+            "answer": "Ja: de ISDE-regeling is actief in 2026, minimaal €500 per (hybride) warmtepomp met verwarmingsfunctie. Voor 2e+ lucht-water warmtepompen geldt vanaf 2026 een lager bedrag — het subsidiebeleid wordt jaarlijks geëvalueerd."
+            },
+            {
+            "question": "Kan ik ISDE krijgen als huurder?",
+            "answer": "Nee, de ISDE is alleen voor eigenaar-bewoners. Huurders moeten overleggen met hun verhuurder; die kan de subsidie wel aanvragen voor installatie in de huurwoning onder bepaalde voorwaarden."
+            },
+            {
+            "question": "Hoe lang duurt de aanvraag?",
+            "answer": "Na correct indienen bij RVO krijgt u meestal binnen 8 weken uitsluitsel. Uitbetaling volgt kort daarna. Zorg dat alle documenten (factuur, betaalbewijs, meldcode) volledig zijn om vertraging te voorkomen."
+            },
+            {
+            "question": "Wat als mijn aanvraag wordt afgewezen?",
+            "answer": "Meest voorkomende redenen: apparaat niet op meldcodelijst, ontbrekende documenten, of aanvraag na 24 maanden. U kunt bezwaar indienen bij RVO binnen 6 weken na afwijzing. In de meeste gevallen is het simpelweg beter de aanvraag compleet opnieuw te doen met juiste documenten."
+            }
+            ]
+        }}
+      />
+
 
       <m.div
         initial={{ opacity: 0 }}

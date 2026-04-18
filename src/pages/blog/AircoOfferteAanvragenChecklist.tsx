@@ -25,6 +25,34 @@ export default function AircoOfferteAanvragenChecklist() {
           image: "https://staycoolairco.nl/images/blog/airco-offerte-aanvragen-checklist.webp"
         }}
       />
+      <SchemaMarkup
+        type="FAQPage"
+        data={{
+          questions: [
+            {
+            "question": "Wat vraag je in een airco-offerte?",
+            "answer": "Minimaal deze 12 punten: F-gassen-nummer, typenummer, leidinglengte, elektrawerk, garantie-splitsing, eerste jaaronderhoud, ISDE-meldcode, aggregator-status, opruimwerk, BTW, betalingsvoorwaarden en levertijd. Gebruik de template hierboven als uitgangspunt. Een offerte die deze punten niet beantwoordt is incompleet."
+            },
+            {
+            "question": "Hoeveel offertes moet ik aanvragen?",
+            "answer": "Drie is het minimum voor een eerlijke vergelijking: één van een lokale installateur, één via een landelijke keten en één die aanbeveling is van bekende of via Google-zoekresultaten. Méér dan 5 wordt vaak onoverzichtelijk. Zie ook onze gids over het kiezen van een airco-installateur ."
+            },
+            {
+            "question": "Is een mondelinge offerte geldig?",
+            "answer": "Juridisch wel, praktisch niet. Zonder schriftelijke offerte met handtekening van beide partijen is alles moeilijk aantoonbaar bij conflict. Vraag altijd om een PDF-offerte met bedrijfsgegevens, KvK-nummer en BTW-nummer. Mondelinge toezeggingen mogen — schriftelijk bevestigd."
+            },
+            {
+            "question": "Hoe lang is een offerte geldig?",
+            "answer": "Standaard 30 dagen, soms 14 dagen in hoogseizoen (mei-juli) door koersschommelingen in de valutamarkt die merk-inkoopprijzen beïnvloeden. Staat de geldigheidstermijn niet op de offerte, vraag dit dan expliciet — anders kan de installateur de prijs achteraf \"aanpassen wegens gewijzigde inkoopprijs\"."
+            },
+            {
+            "question": "Deze checklist is onderdeel van onze pillar",
+            "answer": "Deze 12-punts checklist staat centraal in onze complete airco offerte gids Limburg 2026 met context per regio, prijsranges per vermogensklasse en uitleg over aggregator-marges. Gebruik deze deep-dive checklist voor de aanvraag-fase en de pillar voor de prijsbepaling-fase."
+            }
+            ]
+        }}
+      />
+
 
       <m.div
         initial={{ opacity: 0 }}
@@ -636,6 +664,16 @@ Met vriendelijke groet,
               </div>
 
               {/* ==================== RELATED ==================== */}
+              <div className="not-prose bg-gray-50 border border-gray-200 p-6 rounded-lg my-8">
+                <h3 className="text-xl font-bold text-gray-800 mb-3">🔗 Andere offerte-cluster pagina\'s</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>➤ <Link to="/blog/waarom-verschillen-airco-offertes" className="text-blue-600 hover:underline font-medium">Waarom verschillen offertes 30-50%?</Link> — 10 redenen + red flags</li>
+                  <li>➤ <Link to="/blog/airco-offerte-online-vs-inmeting" className="text-blue-600 hover:underline font-medium">Online offerte of fysieke inmeting?</Link> — welke route wanneer</li>
+                  <li>➤ <Link to="/blog/multisplit-airco-offerte-wanneer-rendabel" className="text-blue-600 hover:underline font-medium">Multisplit offerte wanneer rendabel?</Link> — break-even analyse</li>
+                  <li>➤ Lokaal: <Link to="/blog/airco-offerte-maastricht" className="text-blue-600 hover:underline">Maastricht</Link>, <Link to="/blog/airco-offerte-heerlen" className="text-blue-600 hover:underline">Heerlen</Link>, <Link to="/blog/airco-offerte-sittard" className="text-blue-600 hover:underline">Sittard</Link></li>
+                </ul>
+              </div>
+
               <h2>Verder lezen</h2>
               <ul>
                 <li>

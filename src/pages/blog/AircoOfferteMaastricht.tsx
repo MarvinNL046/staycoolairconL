@@ -25,6 +25,34 @@ export default function AircoOfferteMaastricht() {
           image: "https://staycoolairco.nl/images/blog/airco-offerte-maastricht.webp"
         }}
       />
+      <SchemaMarkup
+        type="FAQPage"
+        data={{
+          questions: [
+            {
+            "question": "Hoe snel krijg ik een offerte voor airco in Maastricht?",
+            "answer": "Bij StayCool meestal binnen 48 uur na de gratis inmeting. De inmeting zelf plannen we binnen 2–4 werkdagen. Voor een rijtjeshuis in Heer of Scharn betekent dit: binnen een week heeft u een complete offerte op tafel."
+            },
+            {
+            "question": "Is de offerte bindend als ik nog geen monumentenvergunning heb?",
+            "answer": "Onze offertes hebben 30 dagen geldigheid. Bij monumenten nemen we een optionele post op voor vergunningregie (€300–€500). Als de gemeente Maastricht onverhoopt weigert, vervalt het deel van de installatie — u betaalt dan alleen de tekening- en leges-kosten. Geen verrassingen."
+            },
+            {
+            "question": "Kan ik een offerte uit België gebruiken in Maastricht?",
+            "answer": "Technisch ja, juridisch nee. Voor installatie op Nederlands grondgebied is een Nederlandse F-gassen- gecertificeerde monteur verplicht. Belgische offertes lijken 15–20% goedkoper, maar bij problemen heeft u geen NL-garantie en riskeert u boetes tot €5.000 bij een illegale installatie."
+            },
+            {
+            "question": "Verschilt een offerte in Maastricht van één in Heerlen of Sittard?",
+            "answer": "Ja. Maastricht heeft meer monumentenpanden, strengere VvE-regels in Céramique/Wyck en vaker mergelgrond. Voor algemene offerte-aspecten die in heel Limburg gelden, raden we onze volledige airco offerte gids voor Limburg aan."
+            },
+            {
+            "question": "Klaar voor uw Maastrichtse offerte?",
+            "answer": "Gratis inmeting bij u thuis — in elke wijk van Maastricht. Offerte binnen 48 uur, alle 10 checklist-punten compleet ingevuld. Geen meerwerk achteraf, geen verkooppraatjes."
+            }
+            ]
+        }}
+      />
+
 
       <m.div
         initial={{ opacity: 0 }}
@@ -489,6 +517,16 @@ export default function AircoOfferteMaastricht() {
               </div>
 
               {/* ==================== RELATED ==================== */}
+              <div className="not-prose bg-gray-50 border border-gray-200 p-6 rounded-lg my-8">
+                <h3 className="text-xl font-bold text-gray-800 mb-3">🔗 Andere Limburgse offerte-gidsen</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>➤ <Link to="/blog/airco-offerte-heerlen" className="text-blue-600 hover:underline font-medium">Airco offerte Heerlen</Link> — Parkstad-woningen met ISDE-combi voordeel</li>
+                  <li>➤ <Link to="/blog/airco-offerte-sittard" className="text-blue-600 hover:underline font-medium">Airco offerte Sittard</Link> — Sittard-Geleen pragmatische prijsranges</li>
+                  <li>➤ <Link to="/blog/airco-offerte-aanvragen-checklist" className="text-blue-600 hover:underline font-medium">12-punts offerte-checklist</Link> — wat vraag je installateurs?</li>
+                  <li>➤ <Link to="/blog/waarom-verschillen-airco-offertes" className="text-blue-600 hover:underline font-medium">Waarom verschillen offertes 30-50%?</Link> — 10 redenen uitgelegd</li>
+                </ul>
+              </div>
+
               <h2>Verder lezen</h2>
               <p>
                 Voor algemene offerte-aspecten, zie onze{' '}

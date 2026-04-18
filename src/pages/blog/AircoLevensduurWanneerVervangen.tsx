@@ -25,6 +25,46 @@ export default function AircoLevensduurWanneerVervangen() {
           image: "https://staycoolairco.nl/images/blog/airco-levensduur-wanneer-vervangen.webp"
         }}
       />
+      <SchemaMarkup
+        type="FAQPage"
+        data={{
+          questions: [
+            {
+            "question": "Wat is de gemiddelde levensduur van een airco?",
+            "answer": "10 tot 15 jaar bij jaarlijks professioneel onderhoud. Premium split-units halen 12-17 jaar, mobiele units 5-8 jaar. Zonder onderhoud zakt de levensduur met 30-40%. Modellen geïnstalleerd na 2017 met inverter-technologie zitten doorgaans aan de bovenkant van de range."
+            },
+            {
+            "question": "Hoe weet je dat je airco kapot is?",
+            "answer": "Zeven signalen: verminderd koelvermogen, sterk gestegen stroomverbruik, vreemde geluiden, lekkend water, terugkerende fout-codes, ijsvorming op leidingen en muffe geur bij opstarten. Als er twee of meer tegelijk spelen, is reparatie vaak niet meer lonend bij een unit ouder dan 10 jaar."
+            },
+            {
+            "question": "Wanneer is het goedkoper om een airco te vervangen dan te repareren?",
+            "answer": "Bij een unit van 10+ jaar waarvan de reparatiekosten meer dan 40-50% van de nieuwprijs bedragen. Ook als het de tweede grote reparatie binnen 3 jaar is, of als het systeem nog werkt op R22 (waar koudemiddel bijvullen fors duurder is geworden). Houd rekening met €180-€250 per jaar besparing op stroom bij een modern A+++ model."
+            },
+            {
+            "question": "Wat is het grootste nadeel van een aircosysteem?",
+            "answer": "De milieu-impact van koudemiddel bij lekkage — zelfs moderne R32 heeft een GWP van 675. Daarnaast zijn aanschaf en installatie een forse investering (€1.500-€3.000), is jaarlijks onderhoud vereist en produceren airco's geluid. Voor de meeste huishoudens wegen comfort, zuinig verwarmen en koeltein de zomer daar wel tegenop."
+            },
+            {
+            "question": "Kunnen oude airco's nog met R32 gas werken?",
+            "answer": "Nee. Oude systemen zijn ontworpen voor R22 (vóór 2010) of R410A (2010-2017) en kunnen niet worden omgezet naar R32. De drukken en componenten verschillen. Als uw airco een R22- of R410A-lekkage heeft, is vervanging door een R32-systeem meestal de enige economische oplossing."
+            },
+            {
+            "question": "Wat bepaalt de levensduur van een airco?",
+            "answer": "Vijf hoofdfactoren: jaarlijks onderhoud (grootste impact), gebruiksintensiteit, merk en bouwkwaliteit, isolatie van de woning en plaatsing van de buitenunit. Premium Japanse merken in een goed geïsoleerde woning met jaarlijks onderhoud halen gemakkelijk 15+ jaar. Een budget-merk zonder onderhoud in een slecht geïsoleerde ruimte soms maar 6-8 jaar."
+            },
+            {
+            "question": "Hoe verleng ik de levensduur van mijn airco?",
+            "answer": "Jaarlijks professioneel onderhoud (belangrijkste), filters elke 4-6 weken zelf reinigen, buitenunit vrij houden van blad en vuil, aan/uit-gedrag vermijden (modulerend draaien), goede plaatsing van de buitenunit, ook in de winter af en toe gebruiken (niet 8 maanden stilzetten) en kleine reparaties direct laten uitvoeren. Onze monteurs zien gemakk..."
+            },
+            {
+            "question": "Tijd voor een vrijblijvende inmeting?",
+            "answer": "Of u nu twijfelt over vervangen, een tweede airco wilt of een oud R410A-systeem wilt upgraden: onze monteurs komen gratis langs voor inmeting en advies. U krijgt een concrete offerte op maat, rekening houdend met uw woning, isolatie en gebruik. Geen verrassingen achteraf."
+            }
+            ]
+        }}
+      />
+
 
       <m.div
         initial={{ opacity: 0 }}

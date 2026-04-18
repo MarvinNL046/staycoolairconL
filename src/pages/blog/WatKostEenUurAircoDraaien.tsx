@@ -25,6 +25,46 @@ export default function WatKostEenUurAircoDraaien() {
           image: "https://staycoolairco.nl/images/blog/wat-kost-1-uur-airco-draaien.webp"
         }}
       />
+      <SchemaMarkup
+        type="FAQPage"
+        data={{
+          questions: [
+            {
+            "question": "Wat kost 1 uur verwarmen met airco?",
+            "answer": "Voor een gangbare 3,5 kW airco in een Nederlandse woning ligt het verbruik tussen de €0,20 en €0,35 per uur (tarief €0,34/kWh, 2026). Bij vorst stijgt dit naar €0,40–€0,50 per uur omdat de COP afneemt."
+            },
+            {
+            "question": "Wat kost een hele dag airco aan?",
+            "answer": "Een realistische winter-dag (16 uur verwarmen op 20°C, buiten 2–5°C): tussen de €3,20 en €5,50. Een zomerdag met 8 uur koelen: €1,20 tot €1,80."
+            },
+            {
+            "question": "Is stoken met airco goedkoper dan gas?",
+            "answer": "Ja, bij buitentemperaturen boven 0°C ongeveer 30–50% goedkoper per geleverde kWh warmte. Onder -5°C worden de kosten vergelijkbaar met gas. Over een heel Nederlands stookseizoen is airco-verwarming gemiddeld 25–40% goedkoper dan gas — als uw woning goed geïsoleerd is."
+            },
+            {
+            "question": "Wat is het kantelpunt bij verwarmen met airco?",
+            "answer": "Het punt waarop de COP van de airco zo laag wordt dat verwarmen even duur is als gas. Bij moderne airco's ligt dit rond -5 tot -8°C buitentemperatuur. Dat komt in Limburg gemiddeld 10–20 dagen per jaar voor. Voor die dagen houden veel klanten de gasketel achter de hand (hybride opzet)."
+            },
+            {
+            "question": "Hoeveel euro kost een airco per uur?",
+            "answer": "Tussen de €0,20 (2,5 kW inverter in deeltijd) en €0,85 (7,0 kW op vol vermogen in de winter). De meeste klanten die wij in Maastricht, Heerlen en Sittard helpen, zitten op een gemiddelde van €0,30 tot €0,45 per actieve uur."
+            },
+            {
+            "question": "Verbruikt een airco veel stroom in standby?",
+            "answer": "Minimaal. Een moderne splitunit in standby verbruikt 1–3 watt, dat is minder dan €3 per jaar. De stekker eruit halen scheelt dus niets noemenswaardigs — en is bovendien niet aan te raden omdat de vorstbeveiliging dan uitstaat."
+            },
+            {
+            "question": "Heeft een airco een aparte groep nodig?",
+            "answer": "Voor splitunits tot 3,5 kW meestal niet — die kunnen op een bestaande groep zitten mits er ruimte is. Vanaf 5,0 kW adviseren onze monteurs wél een aparte groep. Bij multisplit-systemen altijd een aparte groep. Dit wordt bij elke StayCool-installatie bij u thuis beoordeeld en indien nodig meegenomen in de offerte."
+            },
+            {
+            "question": "Concrete kosten voor úw woning?",
+            "answer": "Onze monteurs komen gratis langs, meten uw ruimte, bekijken uw isolatie en rekenen de werkelijke jaarlijkse stroomkosten uit — inclusief terugverdientijd als u van gas overstapt. Dit vrijblijvende advies kost u niets."
+            }
+            ]
+        }}
+      />
+
 
       <m.div
         initial={{ opacity: 0 }}

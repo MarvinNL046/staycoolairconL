@@ -25,6 +25,34 @@ export default function AircoOfferteOnlineVsInmeting() {
           image: "https://staycoolairco.nl/images/blog/airco-offerte-online-vs-inmeting.webp"
         }}
       />
+      <SchemaMarkup
+        type="FAQPage"
+        data={{
+          questions: [
+            {
+            "question": "Is een online airco offerte bindend?",
+            "answer": "Nee. Bijna alle online offertes staan \"onder voorbehoud van inmeting\" of bevatten een clausule over meerwerk. Lees de kleine lettertjes goed: een \"vaste prijs\" online is zelden écht vast. Een fysieke inmeting-offerte is wél bindend voor het bedrag op papier."
+            },
+            {
+            "question": "Hoe lang duurt een fysieke inmeting bij StayCool?",
+            "answer": "Gemiddeld 30–45 minuten voor een single-split. Voor multisplit of een complexe woning kan het oplopen tot 60–75 minuten. Je hoeft niks voor te bereiden — we kijken, meten en adviseren. Definitieve offerte volgt binnen 2 werkdagen in je mailbox."
+            },
+            {
+            "question": "Kost een inmeting bij jullie iets?",
+            "answer": "Nee, de inmeting is gratis en vrijblijvend. Ook als je uiteindelijk voor een ander kiest. We verdienen aan installaties, niet aan bezoekjes — dus we gaan er niet uren zitten om je te overtuigen. In en uit, heldere offerte, jouw keus."
+            },
+            {
+            "question": "Wat als ik al een online offerte heb en die wil laten checken?",
+            "answer": "Dat kan. Veel klanten sturen ons een concurrerende offerte als vergelijkingsmateriaal. We kijken er eerlijk naar: soms zit er een scherpe deal in, vaak missen er elementen (elektrawerk, ISDE-meldcode, lengte koelleiding). Daar is onze offerte-checklist handig bij om zelf mee te kijken."
+            },
+            {
+            "question": "Klaar om de juiste route te kiezen?",
+            "answer": "Of je nu eerst een snelle online indicatie wilt of direct een fysieke inmeting — StayCool biedt beide, zonder aggregator-marge. Eén aanspreekpunt, eigen vaste monteurs, prijsgarantie na inmeting."
+            }
+            ]
+        }}
+      />
+
 
       <m.div
         initial={{ opacity: 0 }}
@@ -495,6 +523,16 @@ export default function AircoOfferteOnlineVsInmeting() {
               </div>
 
               {/* ==================== RELATED ==================== */}
+              <div className="not-prose bg-gray-50 border border-gray-200 p-6 rounded-lg my-8">
+                <h3 className="text-xl font-bold text-gray-800 mb-3">🔗 Andere offerte-cluster pagina\'s</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>➤ <Link to="/blog/airco-offerte-aanvragen-checklist" className="text-blue-600 hover:underline font-medium">12-punts offerte-checklist</Link> — werk deze door na je keuze online/inmeting</li>
+                  <li>➤ <Link to="/blog/waarom-verschillen-airco-offertes" className="text-blue-600 hover:underline font-medium">Waarom verschillen offertes 30-50%?</Link> — belangrijk voor online-offerte-vergelijking</li>
+                  <li>➤ <Link to="/blog/multisplit-airco-offerte-wanneer-rendabel" className="text-blue-600 hover:underline font-medium">Multisplit offerte wanneer rendabel?</Link> — multisplit vraagt bijna altijd fysieke inmeting</li>
+                  <li>➤ Lokaal: <Link to="/blog/airco-offerte-maastricht" className="text-blue-600 hover:underline">Maastricht</Link>, <Link to="/blog/airco-offerte-heerlen" className="text-blue-600 hover:underline">Heerlen</Link>, <Link to="/blog/airco-offerte-sittard" className="text-blue-600 hover:underline">Sittard</Link></li>
+                </ul>
+              </div>
+
               <h2>Gerelateerde artikelen</h2>
               <ul>
                 <li>

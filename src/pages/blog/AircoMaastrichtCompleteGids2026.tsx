@@ -25,6 +25,42 @@ export default function AircoMaastrichtCompleteGids2026() {
           image: "https://staycoolairco.nl/images/blog/airco-maastricht-complete-gids-2026.webp"
         }}
       />
+      <SchemaMarkup
+        type="FAQPage"
+        data={{
+          questions: [
+            {
+            "question": "Wat kost een airco in Maastricht inclusief montage?",
+            "answer": "Voor een gangbare woonkamer (3,5 kW single-split): €1.700–€2.400 inclusief installatie. Na ISDE-subsidie voor lucht-lucht warmtepomp: €1.200–€1.900 netto. Voor grotere of complexere installaties (villa, monumenten, multisplit): €3.000–€7.500."
+            },
+            {
+            "question": "Mag ik zomaar een airco plaatsen in een monument?",
+            "answer": "Nee. Maastrichtse binnenstadwoningen onder monumentenbescherming vragen vergunning voor externe wijzigingen. Binnen-units zijn meestal vrij, buiten-units vereisen beoordeling. Wij regelen de vergunningsaanvraag."
+            },
+            {
+            "question": "Kan ik subsidie krijgen voor airco in Maastricht?",
+            "answer": "Alleen als de airco verwarmingsfunctie heeft (lucht-lucht warmtepomp), én het model op de RVO-meldcode- lijst staat. Minimum €500 ISDE. Aanvullende gemeentelijke regelingen variëren; check gemeente Maastricht of energiesubsidiewijzer.nl."
+            },
+            {
+            "question": "Hoe lang duurt installatie in Maastricht?",
+            "answer": "Standaard-installatie (enkel split): 1 werkdag. Multisplit: 2 werkdagen. Planning vanaf aanvraag: meestal binnen 2 weken. Voor monumenten: reken op 6–10 weken vanwege vergunning."
+            },
+            {
+            "question": "Werken jullie in heel Maastricht?",
+            "answer": "Ja, in alle wijken: binnenstad, Wyck, Céramique, Heer, Scharn, Amby, Sint-Pieter, Villapark, Biesland, Campagne, Limmel, Malberg, Malpertuis, Nazareth, Wittevrouwenveld, Wijckerpoort. Ook aangrenzende gemeenten zoals Eijsden, Meerssen, Valkenburg."
+            },
+            {
+            "question": "Wat als mijn VvE geen toestemming geeft?",
+            "answer": "Kom dan met een compleet technisch voorstel: specs van stille binnenunit, locatie van buitenunit op onopvallende plek, geluidsberekening, trillings-isolatie. In 80% van onze VvE-aanvragen krijgen we goedkeuring met het juiste dossier. Wij helpen daarmee gratis."
+            },
+            {
+            "question": "Gratis inmeting bij u thuis in Maastricht",
+            "answer": "Geen verkooppraatjes, geen valse beloftes. Gewoon een monteur die bij u langskomt, meet, advies geeft en de juiste oplossing voor úw woning bepaalt. Inclusief VvE- en vergunningsvragen beantwoorden."
+            }
+            ]
+        }}
+      />
+
 
       <m.div
         initial={{ opacity: 0 }}

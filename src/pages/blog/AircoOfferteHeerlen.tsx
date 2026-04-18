@@ -25,6 +25,34 @@ export default function AircoOfferteHeerlen() {
           image: "https://staycoolairco.nl/images/blog/airco-offerte-heerlen.webp"
         }}
       />
+      <SchemaMarkup
+        type="FAQPage"
+        data={{
+          questions: [
+            {
+            "question": "Wat kost een airco-offerte in Heerlen?",
+            "answer": "Niets — wij rekenen geen voorrijdkosten of inmeetkosten voor offertes in Parkstad. Onze monteur komt gratis langs, meet uw woning door en levert binnen 48 uur een vaste offerte aan. Verplichting tot afname is er niet."
+            },
+            {
+            "question": "Is airco in Heerlen goedkoper dan in Maastricht?",
+            "answer": "Gemiddeld 10–20% ja, omdat Heerlense woningen vaker standaard-typologie zijn (rijtjeshuizen zonder monumenten­status). Maastrichtse binnenstad vraagt vergunningstrajecten en vaak complexere installaties. Voor een uitgebreide vergelijking zie Airco Maastricht complete gids 2026 ."
+            },
+            {
+            "question": "Kan ik als huurder in een corporatie-woning airco laten plaatsen?",
+            "answer": "Ja, met schriftelijke toestemming van uw corporatie (ZAV-aanvraag). Wij helpen met het technisch dossier. Reken op 4–8 weken wachttijd voor akkoord. Nooit beginnen zonder goedkeuring — risico op terugplaatsings-kosten bij vertrek."
+            },
+            {
+            "question": "Hoelang duurt van offerte tot installatie in Heerlen?",
+            "answer": "Bij standaard-situaties: 2 weken gemiddeld. ZAV-trajecten bij corporatie-woningen of VvE-afstemming voor appartementen: reken op 6–10 weken totaal."
+            },
+            {
+            "question": "Vraag nu uw Heerlen-offerte aan",
+            "answer": "Binnen 48 uur weet u exact wat een airco voor úw Parkstad-woning kost — inclusief ISDE-berekening, combi-voordeel en terugverdientijd. Geen verkooppraatjes, geen verplichtingen."
+            }
+            ]
+        }}
+      />
+
 
       <m.div
         initial={{ opacity: 0 }}
@@ -617,6 +645,16 @@ export default function AircoOfferteHeerlen() {
               </div>
 
               {/* ==================== RELATED ==================== */}
+              <div className="not-prose bg-gray-50 border border-gray-200 p-6 rounded-lg my-8">
+                <h3 className="text-xl font-bold text-gray-800 mb-3">🔗 Andere Limburgse offerte-gidsen</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>➤ <Link to="/blog/airco-offerte-maastricht" className="text-blue-600 hover:underline font-medium">Airco offerte Maastricht</Link> — wijk-specifieke prijzen + monumenten-advies</li>
+                  <li>➤ <Link to="/blog/airco-offerte-sittard" className="text-blue-600 hover:underline font-medium">Airco offerte Sittard</Link> — Westelijke Mijnstreek + nieuwbouw</li>
+                  <li>➤ <Link to="/blog/airco-offerte-aanvragen-checklist" className="text-blue-600 hover:underline font-medium">12-punts offerte-checklist</Link> — wat moet in elke offerte staan?</li>
+                  <li>➤ <Link to="/blog/waarom-verschillen-airco-offertes" className="text-blue-600 hover:underline font-medium">Waarom verschillen offertes?</Link> — aggregator-marges ontleed</li>
+                </ul>
+              </div>
+
               <h2>Verder lezen</h2>
               <ul>
                 <li>

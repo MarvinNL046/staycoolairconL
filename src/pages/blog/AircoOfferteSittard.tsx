@@ -25,6 +25,34 @@ export default function AircoOfferteSittard() {
           image: "https://staycoolairco.nl/images/blog/airco-offerte-sittard.webp"
         }}
       />
+      <SchemaMarkup
+        type="FAQPage"
+        data={{
+          questions: [
+            {
+            "question": "Wat kost een airco in Sittard gemiddeld?",
+            "answer": "Voor een standaard woonkamer (3,5 kW single-split) in een rijtjeshuis of twee-onder-een-kap: €1.600–€2.400 inclusief F-gassen-installatie. Na ISDE-subsidie voor lucht-lucht warmtepomp: €1.100–€1.900 netto. Nieuwbouw in Sittard-Noord of Hoogveld kan met 2,5 kW toe en komt op €1.400–€1.800 uit."
+            },
+            {
+            "question": "Rijden jullie ook in Geleen, Born en Beek?",
+            "answer": "Ja. Ons werkgebied omvat heel Sittard-Geleen (incl. Geleen, Born, Obbicht, Grevenbicht, Lindenheuvel, Krawinkel, Lutterade), plus Beek, Echt, Susteren, Roosteren, Nieuwstadt en Urmond. Dezelfde prijzen, dezelfde planning-termijnen."
+            },
+            {
+            "question": "Hoe lang duurt het vanaf offerte tot installatie?",
+            "answer": "Bij standaard-opdrachten: 7–10 werkdagen vanaf getekende offerte. In het voorjaar (april–juni) kan dit oplopen naar 3–4 weken. Onze monteurs plannen altijd realistisch — liever een iets latere datum die we halen dan een belofte die we moeten schuiven."
+            },
+            {
+            "question": "Is een installatie in Sittard echt goedkoper dan in Maastricht?",
+            "answer": "Gemiddeld €200–€500 per installatie, ja. Reden: vlakke bebouwing (geen steile heuvelstraten), standaard woningtypes zonder monumentenregime, en goede isolatie in moderne woningen betekent vaak kleiner (dus goedkoper) vermogen. Voor een vrijstaande villa met complex leidingwerk is het verschil kleiner."
+            },
+            {
+            "question": "Concrete offerte voor uw Sittardse woning",
+            "answer": "Onze monteurs in Sittard-Geleen meten gratis in, rekenen ISDE en BTW-voordeel uit, en leveren binnen 48 uur een eerlijke offerte. Geen voorschot, geen pushgesprek. Werkgebied: Sittard, Geleen, Born, Beek, Echt, Susteren."
+            }
+            ]
+        }}
+      />
+
 
       <m.div
         initial={{ opacity: 0 }}
@@ -593,6 +621,16 @@ export default function AircoOfferteSittard() {
               </div>
 
               {/* ==================== RELATED ==================== */}
+              <div className="not-prose bg-gray-50 border border-gray-200 p-6 rounded-lg my-8">
+                <h3 className="text-xl font-bold text-gray-800 mb-3">🔗 Andere Limburgse offerte-gidsen</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>➤ <Link to="/blog/airco-offerte-maastricht" className="text-blue-600 hover:underline font-medium">Airco offerte Maastricht</Link> — wijk-prijzen + monumenten-advies</li>
+                  <li>➤ <Link to="/blog/airco-offerte-heerlen" className="text-blue-600 hover:underline font-medium">Airco offerte Heerlen</Link> — Parkstad ISDE-combi</li>
+                  <li>➤ <Link to="/blog/multisplit-airco-offerte-wanneer-rendabel" className="text-blue-600 hover:underline font-medium">Multisplit offerte wanneer rendabel?</Link> — voor villa\'s en grote woningen</li>
+                  <li>➤ <Link to="/blog/airco-offerte-aanvragen-checklist" className="text-blue-600 hover:underline font-medium">12-punts offerte-checklist</Link> — stappenplan</li>
+                </ul>
+              </div>
+
               <h2>Verder lezen</h2>
               <ul>
                 <li>

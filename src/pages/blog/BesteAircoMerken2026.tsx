@@ -25,6 +25,42 @@ export default function BesteAircoMerken2026() {
           image: "https://staycoolairco.nl/images/blog/beste-airco-merken-2026.webp"
         }}
       />
+      <SchemaMarkup
+        type="FAQPage"
+        data={{
+          questions: [
+            {
+            "question": "Welk merk airco is het beste?",
+            "answer": "Voor Nederlandse omstandigheden: Daikin voor betrouwbaarheid, Mitsubishi Electric voor verwarmen bij vorst, Toshiba voor beste prijs/kwaliteit. Er is geen universele #1 — het hangt af van uw woning, gebruik en budget."
+            },
+            {
+            "question": "Wat zijn de 3 beste merken airconditioners?",
+            "answer": "Op basis van onze 7 jaar praktijkdata en overeenkomend met Consumentenbond-tests: Daikin, Mitsubishi Electric en Toshiba. Panasonic volgt dicht als 4e."
+            },
+            {
+            "question": "Wat is beter, Daikin of Mitsubishi airco?",
+            "answer": "Beide zijn top. Daikin wint op koeling, app-integratie en onderdelen-netwerk; Mitsubishi Electric wint op winter-verwarmen en robuustheid in zware gebruikscondities. Voor 80% van onze klanten adviseren wij Daikin; voor de 20% die in een slecht geïsoleerde woning serieus gaat verwarmen, Mitsubishi Electric."
+            },
+            {
+            "question": "Wat is een A merk airco?",
+            "answer": "\"A-merk\" is geen officieel keurmerk — het betekent gewoon \"premium-gevestigd merk met jaren historie\". In airco-context verstaan wij daaronder: Daikin, Mitsubishi Electric, Toshiba, Panasonic, LG, Samsung. \"B-merken\" zijn secundaire merken met variabele kwaliteit (Gree, Tosot, Sinclair, Hyundai airco)."
+            },
+            {
+            "question": "Welke airco komt als beste uit de test?",
+            "answer": "In de Consumentenbond Airco-test 2025 (achter betaalmuur) staan de Daikin Perfera en Mitsubishi Electric Kirigamine Zen in de top — beide ook door onze monteurs aanbevolen. Exacte modelnaam en -nummer wisselt per jaar; kijk op de website van Consumentenbond voor actuele data."
+            },
+            {
+            "question": "Zijn dure merken het geld waard?",
+            "answer": "Over een levensduur van 12–15 jaar: ja. Het prijsverschil tussen een goed-midden merk (€1.500) en premium (€2.000) = €500. Eén noodonderhoud bij een goedkoper model kost €200–€400. De TCO (Total Cost of Ownership) van premium-merken is in onze ervaring 15–30% lager over 10 jaar."
+            },
+            {
+            "question": "Klaar om te kiezen?",
+            "answer": "We helpen u bij het vergelijken van merken, modellen én prijzen. Geen verkooppraat, wel 7+ jaar veld-ervaring in Limburg. Offerte altijd gratis en vrijblijvend."
+            }
+            ]
+        }}
+      />
+
 
       <m.div
         initial={{ opacity: 0 }}

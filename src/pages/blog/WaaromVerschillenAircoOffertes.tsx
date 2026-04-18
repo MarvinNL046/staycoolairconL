@@ -25,6 +25,38 @@ export default function WaaromVerschillenAircoOffertes() {
           image: "https://staycoolairco.nl/images/blog/waarom-verschillen-airco-offertes.webp"
         }}
       />
+      <SchemaMarkup
+        type="FAQPage"
+        data={{
+          questions: [
+            {
+            "question": "Waarom is een airco offerte soms wel 50% duurder bij een ander bedrijf?",
+            "answer": "Meestal een combinatie van: ander merk (Daikin in plaats van Tosot: +25%), aggregator-marge (+20%), langere leidingen meegerekend (+€300), aparte elektragroep (+€250) en langere garantie (+€150). Alles bij elkaar zit u snel op 40-50% verschil zonder dat iemand \"te duur\" is — het zijn gewoon andere producten."
+            },
+            {
+            "question": "Mag een installateur zomaar meerwerk in rekening brengen?",
+            "answer": "Alleen als het in de offerte benoemd is als \"mogelijk meerwerk\" of als u expliciet akkoord geeft op onvoorziene extra werkzaamheden tijdens installatie. Een eerlijke installateur belt u ter plaatse als hij iets onverwachts tegenkomt, vóór hij doorwerkt. Meerwerk achteraf zonder overleg = weigeren te betalen is uw recht."
+            },
+            {
+            "question": "Is een offerte via Werkspot of Homedeal per definitie duurder?",
+            "answer": "Niet per definitie — maar wel in 80% van de gevallen. De installateur moet zijn lead-kosten terugverdienen en rekent dat in zijn prijs. In zeldzame gevallen gebruikt een installateur Werkspot alleen als marketing-kanaal en biedt hij dezelfde prijs als direct. Vraag daarom altijd óók een directe offerte aan, ter vergelijking."
+            },
+            {
+            "question": "Hoeveel offertes moet ik opvragen voor een goede vergelijking?",
+            "answer": "Drie is ideaal: dan ziet u de bandbreedte. Twee kan ook als ze sterk verschillen in opzet (bijv. één lokale installateur en één landelijke ketenaanbieder). Meer dan vier offertes leidt meestal tot keuze-verlamming — de verschillen worden dan vooral nuance."
+            },
+            {
+            "question": "Klaar voor een transparante offerte van StayCool?",
+            "answer": "Geen aggregator-opslag, uitgesplitste posten, exacte typenummers, eerste jaaronderhoud gratis. We komen vrijblijvend langs, meten uw ruimte, bekijken uw meterkast en leveren binnen 48 uur een helder voorstel. Vergelijkt u het met andere offertes? Graag — u zult zien dat alles klopt."
+            },
+            {
+            "question": "Diepere lezing: de complete offerte-checklist",
+            "answer": "Wilt u niet alleen begrijpen waarom offertes verschillen, maar ook hoe u ze punt-voor-punt vergelijkt? Gebruik onze complete offerte-checklist voor Limburg — inclusief prijzen per vermogen, een 10-punts vergelijkingsformulier en subsidie-tips."
+            }
+            ]
+        }}
+      />
+
 
       <m.div
         initial={{ opacity: 0 }}
@@ -443,6 +475,16 @@ export default function WaaromVerschillenAircoOffertes() {
               </div>
 
               {/* ==================== RELATED ==================== */}
+              <div className="not-prose bg-gray-50 border border-gray-200 p-6 rounded-lg my-8">
+                <h3 className="text-xl font-bold text-gray-800 mb-3">🔗 Andere offerte-cluster pagina\'s</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>➤ <Link to="/blog/airco-offerte-aanvragen-checklist" className="text-blue-600 hover:underline font-medium">12-punts offerte-checklist</Link> — gebruik deze bij het vergelijken</li>
+                  <li>➤ <Link to="/blog/airco-offerte-online-vs-inmeting" className="text-blue-600 hover:underline font-medium">Online offerte of inmeting?</Link> — online aggregators zijn vaak oorzaak van prijsverschillen</li>
+                  <li>➤ <Link to="/blog/multisplit-airco-offerte-wanneer-rendabel" className="text-blue-600 hover:underline font-medium">Multisplit offerte rendabel?</Link> — bij complexere opstellingen zijn verschillen nog groter</li>
+                  <li>➤ Lokaal: <Link to="/blog/airco-offerte-maastricht" className="text-blue-600 hover:underline">Maastricht</Link>, <Link to="/blog/airco-offerte-heerlen" className="text-blue-600 hover:underline">Heerlen</Link>, <Link to="/blog/airco-offerte-sittard" className="text-blue-600 hover:underline">Sittard</Link></li>
+                </ul>
+              </div>
+
               <h2>Verder lezen</h2>
               <ul>
                 <li>

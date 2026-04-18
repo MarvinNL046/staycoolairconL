@@ -25,6 +25,54 @@ export default function AircoStoringenHerkennen() {
           image: "https://staycoolairco.nl/images/blog/airco-storingen-herkennen.webp"
         }}
       />
+      <SchemaMarkup
+        type="FAQPage"
+        data={{
+          questions: [
+            {
+            "question": "Hoe weet je dat je airco kapot is?",
+            "answer": "De duidelijkste signalen: de airco koelt of verwarmt niet meer zoals voorheen, er komt water uit de binnenunit, u hoort nieuwe geluiden (tikken, zoemen, sissen), er verschijnt een error-code op het display, of het stroomverbruik stijgt ineens fors. Ruikt u brand- of chemische lucht — schakel de unit direct uit en bel een monteur."
+            },
+            {
+            "question": "Wat zijn de meest voorkomende aircoproblemen?",
+            "answer": "Uit onze service-data top-3: (1) verminderd koelvermogen door vieze filters of te laag koudemiddel, (2) waterlekkage door verstopte condensaatafvoer, en (3) vreemde geluiden door slijtage of losgekomen onderdelen. Daarna volgen error-codes door sensor-uitval en short cycling door verkeerd gedimensioneerd vermogen."
+            },
+            {
+            "question": "Wat is het grootste nadeel van een aircosysteem?",
+            "answer": "Er is niet één \"grootste\" nadeel — maar de meest onderschatte is de afhankelijkheid van jaarlijks onderhoud. In tegenstelling tot een CV-ketel kun je onderhoud niet jaren overslaan zonder rendementsverlies en storingen. Daarnaast: de aanvangsinvestering (€1.800+) en de strenger wordende F-gassen-regelgeving die toekomstige reparaties duurder kan..."
+            },
+            {
+            "question": "Wanneer moet ik een monteur bellen in plaats van zelf te proberen?",
+            "answer": "Bel altijd een monteur bij: werk aan het koelcircuit (F-gassen — wettelijk verplicht), elektrische reparaties, compressor-problemen, error-codes na een reset, brand- of chemische lucht en zichtbare ijs- of olie-sporen op de buitenunit. Zelf doen kan: filters schoonmaken, afvoer visueel checken, stekker reset, batterijen vervangen."
+            },
+            {
+            "question": "Wat kost een airco-storing repareren gemiddeld?",
+            "answer": "Een eenvoudige diagnose en reset kost €75–€180. Reiniging en condensaatafvoer-herstel €120–€280. F-gas bijvullen met leksporen €250–€600. Printplaat of compressor-reparatie €350–€1.200. Exacte prijs hangt af van merk, model, onderdelen-beschikbaarheid en regio. Vraag altijd eerst een diagnose en prijsopgave."
+            },
+            {
+            "question": "Waarom koelt mijn airco niet meer?",
+            "answer": "In 8 van de 10 gevallen: vervuilde filters of een te lage koudemiddel-vulling (klein lek). Andere mogelijke oorzaken: defecte thermostaat of sensor, bevroren verdamper door verstopte luchtstroom, compressor die niet meer op vol vermogen draait, of een dichtgeslibde buitenunit-warmtewisselaar. Begin altijd met filter uitspoelen en afvoer controle..."
+            },
+            {
+            "question": "Wat betekenen de error-codes op mijn airco?",
+            "answer": "Error-codes verschillen per merk (Daikin F3/A5, Mitsubishi E6, Toshiba F01, Panasonic H11, enz.) en duiden doorgaans op sensor-uitval, communicatiefouten tussen binnen- en buitenunit, drukbeveiligingen of temperatuur-afwijkingen. Zie onze tabel in sectie 2 voor algemene betekenis. Exacte diagnose en reparatie hoort bij een gecertificeerde monteu..."
+            },
+            {
+            "question": "Moet ik mijn airco in de winter uitschakelen?",
+            "answer": "Nee. Moderne airco's hebben een vorstbeveiliging die minimale stroom verbruikt (&lt; €3/jaar) en voorkomt dat het koelcircuit bevriest. Volledig uitzetten is alleen zinvol bij langdurige afwezigheid in combinatie met een service-beurt voor vorst."
+            },
+            {
+            "question": "Hoe vaak moet ik filters schoonmaken?",
+            "answer": "Elke 2 maanden bij normaal gebruik, elke maand als u huisdieren heeft of veel stof in de ruimte. Uitspoelen met lauw water + mild afwasmiddel, volledig laten drogen, terugplaatsen. Dit is de enkelvoudig beste storingspreventie die u zelf kunt doen."
+            },
+            {
+            "question": "Storing of voorkomen? Wij helpen u verder.",
+            "answer": "Of u nu een acute storing heeft of preventief een onderhoudscontract wilt: StayCool serviced dagelijks airco's in Maastricht, Heerlen, Sittard en omstreken. Bel ons, of vraag online een storingsmelding of onderhoudscontract aan."
+            }
+            ]
+        }}
+      />
+
 
       <m.div
         initial={{ opacity: 0 }}

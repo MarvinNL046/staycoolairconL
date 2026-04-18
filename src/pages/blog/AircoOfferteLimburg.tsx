@@ -26,6 +26,34 @@ export default function AircoOfferteLimburg() {
           image: "https://staycoolairco.nl/images/blog/airco-offerte-limburg-staycool.png"
         }}
       />
+      <SchemaMarkup
+        type="FAQPage"
+        data={{
+          questions: [
+            {
+            "question": "Is airco ook geschikt om te verwarmen?",
+            "answer": "Ja, de meeste airco's functioneren ook als warmtepomp. Ze zijn ideaal voor bijverwarming in voor- en najaar."
+            },
+            {
+            "question": "Hoe lang duurt de installatie?",
+            "answer": "Een standaard installatie duurt meestal 4 tot 6 uur. Complexere installaties kunnen tot 2 dagen duren."
+            },
+            {
+            "question": "Moet ik onderhoud laten doen?",
+            "answer": "Ja, jaarlijks onderhoud verlengt de levensduur en behoudt het rendement. Dit is vaak ook verplicht voor garantie."
+            },
+            {
+            "question": "Is subsidie beschikbaar?",
+            "answer": "In 2025 zijn er beperkte subsidies voor airco's met warmtepompfunctie. Vraag je installateur naar de voorwaarden."
+            },
+            {
+            "question": "Kan ik de offerte online aanvragen?",
+            "answer": "Ja, bij StayCool kun je eenvoudig via de website een offerte aanvragen, met of zonder bezoek op locatie."
+            }
+            ]
+        }}
+      />
+
 
       <m.div
         initial={{ opacity: 0 }}
