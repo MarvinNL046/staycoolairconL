@@ -125,6 +125,13 @@ const BesteAircoMerken2026 = lazy(() => import('./pages/blog/BesteAircoMerken202
 const AircoMaastrichtCompleteGids2026 = lazy(() => import('./pages/blog/AircoMaastrichtCompleteGids2026'));
 const AircoLevensduurWanneerVervangen = lazy(() => import('./pages/blog/AircoLevensduurWanneerVervangen'));
 const AircoStoringenHerkennen = lazy(() => import('./pages/blog/AircoStoringenHerkennen'));
+const AircoOfferteMaastricht = lazy(() => import('./pages/blog/AircoOfferteMaastricht'));
+const AircoOfferteHeerlen = lazy(() => import('./pages/blog/AircoOfferteHeerlen'));
+const AircoOfferteSittard = lazy(() => import('./pages/blog/AircoOfferteSittard'));
+const AircoOfferteAanvragenChecklist = lazy(() => import('./pages/blog/AircoOfferteAanvragenChecklist'));
+const AircoOfferteOnlineVsInmeting = lazy(() => import('./pages/blog/AircoOfferteOnlineVsInmeting'));
+const WaaromVerschillenAircoOffertes = lazy(() => import('./pages/blog/WaaromVerschillenAircoOffertes'));
+const MultisplitAircoOfferteWanneerRendabel = lazy(() => import('./pages/blog/MultisplitAircoOfferteWanneerRendabel'));
 
 // Knowledge Base Articles
 const HoeWerktAirco = lazy(() => import('./pages/articles/HoeWerktAirco'));
@@ -686,6 +693,13 @@ const App = () => {
                 <Route path="/blog/airco-maastricht-complete-gids-2026" element={<AircoMaastrichtCompleteGids2026 />} />
                 <Route path="/blog/airco-levensduur-wanneer-vervangen" element={<AircoLevensduurWanneerVervangen />} />
                 <Route path="/blog/airco-storingen-herkennen" element={<AircoStoringenHerkennen />} />
+                <Route path="/blog/airco-offerte-maastricht" element={<AircoOfferteMaastricht />} />
+                <Route path="/blog/airco-offerte-heerlen" element={<AircoOfferteHeerlen />} />
+                <Route path="/blog/airco-offerte-sittard" element={<AircoOfferteSittard />} />
+                <Route path="/blog/airco-offerte-aanvragen-checklist" element={<AircoOfferteAanvragenChecklist />} />
+                <Route path="/blog/airco-offerte-online-vs-inmeting" element={<AircoOfferteOnlineVsInmeting />} />
+                <Route path="/blog/waarom-verschillen-airco-offertes" element={<WaaromVerschillenAircoOffertes />} />
+                <Route path="/blog/multisplit-airco-offerte-wanneer-rendabel" element={<MultisplitAircoOfferteWanneerRendabel />} />
 
                 {/* SEO Advice Pages */}
                 <Route path="/advies" element={<AdviesIndex />} />

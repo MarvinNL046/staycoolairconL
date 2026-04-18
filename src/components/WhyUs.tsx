@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Award, Clock, ThumbsUp, Banknote } from 'lucide-react';
 import Card from './ui/Card';
 
@@ -40,7 +41,11 @@ export default function WhyUs() {
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
               Bij StayCool Airco kiezen we bewust voor kwaliteit. Geen snelle jongens, maar vakmensen die trots zijn op hun werk.
-              Wij gaan pas weg als alles perfect werkt en u tevreden bent.
+              Wij gaan pas weg als alles perfect werkt en u tevreden bent. Benieuwd naar de{' '}
+              <Link to="/blog/airco-offerte-limburg" className="text-quatt-orange hover:underline font-semibold">
+                echte prijzen voor een airco in Limburg?
+              </Link>{' '}
+              Wij leggen het transparant uit.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6">

@@ -193,6 +193,115 @@ export default function AircoOfferteLimburg() {
                 <p className="text-xs text-gray-500 mt-2">Actie geldig t/m 30 juni 2025. Vraag naar de voorwaarden.</p>
               </div>
               
+              <h2>Verdiept: hoe aggregator-marges jouw offerte beïnvloeden</h2>
+              <p>
+                Lead-aggregators (Werkspot, Homedeal, Zoofy, Bouwofferte) werken zo: jij vraagt een "gratis offerte",
+                zij verkopen jouw aanvraag door aan 3-5 lokale installateurs. Die installateurs betalen <strong>€15-€45
+                per lead</strong> aan de aggregator. Om die kosten terug te verdienen, verhogen ze de offerteprijs
+                meestal met 8-15%. Plus de aggregator-marge die verschilt per platform (soms tot 25%).
+              </p>
+              <p>
+                Concreet: een installatie die direct zou kosten <strong>€2.200</strong> wordt via een aggregator-route
+                <strong>€2.530 - €2.750</strong>. Dat is 15-25% extra voor precies dezelfde monteur, hetzelfde merk,
+                dezelfde garantie. Het enige verschil is een extra tussenlaag die meedeelt in jouw investering.
+              </p>
+              <p>
+                Hoe herken je een aggregator-offerte? Vaak is de eerste regel een generiek bedrijf (installateursbedrijf
+                met nietszeggende naam) dat vervolgens naar "onze partner" verwijst. Of de inmeting wordt uitbesteed
+                aan een monteur die je niet eerder gesproken hebt. Zie onze{' '}
+                <Link to="/blog/waarom-verschillen-airco-offertes" className="text-blue-600 hover:underline">
+                  volledige uitleg over offerte-verschillen
+                </Link>
+                {' '}voor meer signalen.
+              </p>
+
+              <h2>ISDE-rekenvoorbeeld: netto kosten na subsidie</h2>
+              <p>
+                Voor een lucht-lucht warmtepomp (airco met verwarmingsfunctie) geldt ISDE-subsidie van minimaal €500.
+                Bij combinatie met isolatie binnen 24 maanden verdubbelt het isolatie-subsidiebedrag. Concreet voor
+                een gemiddelde Limburgse situatie:
+              </p>
+
+              <table className="min-w-full border-collapse border border-gray-200 my-6">
+                <thead>
+                  <tr className="bg-gray-100">
+                    <th className="border border-gray-200 px-4 py-2 text-left">Scenario</th>
+                    <th className="border border-gray-200 px-4 py-2 text-left">Bruto kosten</th>
+                    <th className="border border-gray-200 px-4 py-2 text-left">ISDE</th>
+                    <th className="border border-gray-200 px-4 py-2 text-left">Netto</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-200 px-4 py-2">Alleen airco (3,5 kW)</td>
+                    <td className="border border-gray-200 px-4 py-2">€2.200</td>
+                    <td className="border border-gray-200 px-4 py-2">€500</td>
+                    <td className="border border-gray-200 px-4 py-2"><strong>€1.700</strong></td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-4 py-2">Airco + dakisolatie</td>
+                    <td className="border border-gray-200 px-4 py-2">€2.200 + €2.400</td>
+                    <td className="border border-gray-200 px-4 py-2">€500 + €1.040</td>
+                    <td className="border border-gray-200 px-4 py-2"><strong>€3.060</strong> totaal</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-200 px-4 py-2">Airco + 2× isolatie</td>
+                    <td className="border border-gray-200 px-4 py-2">€2.200 + €4.000</td>
+                    <td className="border border-gray-200 px-4 py-2">€500 + €2.000</td>
+                    <td className="border border-gray-200 px-4 py-2"><strong>€3.700</strong> totaal</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p className="text-sm text-gray-600 italic">
+                Voor de volledige voorwaarden, bedragen en aanvraagprocedure: zie{' '}
+                <Link to="/blog/airco-subsidie-2026-limburg" className="text-blue-600 hover:underline">
+                  onze ISDE-uitleg 2026
+                </Link>
+                {' '}of direct op rvo.nl/isde.
+              </p>
+
+              <h2>Waar zit het meerwerk? 8 veelvoorkomende extra's</h2>
+              <p>
+                Offertes bevatten vaak "standaard" onderdelen, en alles daarbuiten is meerwerk. Belangrijk om te weten
+                vóór je tekent:
+              </p>
+              <ul>
+                <li><strong>Extra koelleiding</strong>: meer dan 5 m standaard — €35-€65 per extra meter</li>
+                <li><strong>Aparte elektragroep</strong> (verplicht vanaf 5 kW multisplit): €180-€350</li>
+                <li><strong>Hoogwerker of steiger</strong> (flatgebouw boven 3e verdieping): €250-€600</li>
+                <li><strong>Muurdoorvoer in hardsteen of monument</strong>: €120-€400</li>
+                <li><strong>Condensaat-afvoer pomp</strong> (als natuurlijk afvoer niet kan): €150-€350</li>
+                <li><strong>Extra binnenunits</strong> in multisplit (meer dan 2-3): €600-€900 per extra unit</li>
+                <li><strong>Stekkerwerk/kabelgoot</strong> langere afstanden: €80-€200</li>
+                <li><strong>Verwijdering oude airco</strong> (F-gas-recycling): €75-€150</li>
+              </ul>
+              <p>
+                Een goede offerte benoemt al deze items EXPLICIET, ook als ze €0 kosten voor jouw situatie. Een offerte
+                die alleen het totaalbedrag geeft zonder uitsplitsing verbergt mogelijk meerwerk dat later meerkost wordt.
+              </p>
+
+              <div className="not-prose bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg my-8">
+                <h3 className="text-xl font-bold mb-3 text-gray-800">🎯 Gebruik deze cluster-gids voor jouw offerte</h3>
+                <p className="mb-4 text-sm text-gray-700">
+                  Wij hebben meerdere deep-dive artikelen die je helpen bij het aanvragen en vergelijken van offertes:
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li>➤ <Link to="/blog/airco-offerte-aanvragen-checklist" className="text-blue-600 hover:underline font-medium">12-punts checklist deep-dive</Link> — wat vraag je installateurs?</li>
+                  <li>➤ <Link to="/blog/waarom-verschillen-airco-offertes" className="text-blue-600 hover:underline font-medium">Waarom verschillen offertes 30-50%?</Link> — 10 redenen + red flags</li>
+                  <li>➤ <Link to="/blog/airco-offerte-online-vs-inmeting" className="text-blue-600 hover:underline font-medium">Online of fysieke inmeting?</Link> — wanneer welke route</li>
+                  <li>➤ <Link to="/blog/multisplit-airco-offerte-wanneer-rendabel" className="text-blue-600 hover:underline font-medium">Multisplit offerte wanneer rendabel?</Link> — break-even analyse</li>
+                </ul>
+                <p className="mt-4 text-sm text-gray-700 mb-0">
+                  <strong>Lokale offerte-gidsen</strong>:{' '}
+                  <Link to="/blog/airco-offerte-maastricht" className="text-blue-600 hover:underline">Maastricht</Link>
+                  {' '}·{' '}
+                  <Link to="/blog/airco-offerte-heerlen" className="text-blue-600 hover:underline">Heerlen</Link>
+                  {' '}·{' '}
+                  <Link to="/blog/airco-offerte-sittard" className="text-blue-600 hover:underline">Sittard</Link>
+                </p>
+              </div>
+
               <h2>Waarom kiezen voor StayCool Airconditioning?</h2>
               <p>
                 StayCool Airconditioning is dé specialist in Limburg. Wij bieden:

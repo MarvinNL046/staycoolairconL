@@ -13,6 +13,69 @@ interface BlogPostPreview {
 
 const blogPosts: BlogPostPreview[] = [
   {
+    slug: 'airco-offerte-aanvragen-checklist',
+    title: 'Airco offerte aanvragen: 12-punts checklist + red flag herkennen',
+    description: 'Deep-dive checklist voor offerte-aanvraag: wat vraag je, welke red flags herken je, en welke template-vragen kopieer je? Onze monteurs maken het je makkelijk.',
+    date: '18 april 2026',
+    imageUrl: '/images/blog/airco-offerte-aanvragen-checklist.webp',
+    readingTime: '10 min',
+    category: 'Offerte'
+  },
+  {
+    slug: 'waarom-verschillen-airco-offertes',
+    title: 'Waarom verschillen airco offertes 30-50%? De echte redenen uitgelegd',
+    description: 'Drie offertes, drie prijzen van €1.800 tot €3.100 — we leggen de 10 echte redenen uit waarom offertes zo ver uit elkaar liggen. Plus: wanneer is de goedkoopste een red flag?',
+    date: '18 april 2026',
+    imageUrl: '/images/blog/waarom-verschillen-airco-offertes.webp',
+    readingTime: '8 min',
+    category: 'Offerte'
+  },
+  {
+    slug: 'airco-offerte-online-vs-inmeting',
+    title: 'Airco offerte online of fysieke inmeting? Wanneer welke kiezen',
+    description: 'Online offerte in 5 minuten of monteur bij u thuis? Vergelijking van 10 criteria — voor welke woningen volstaat online, en wanneer is inmeting essentieel?',
+    date: '18 april 2026',
+    imageUrl: '/images/blog/airco-offerte-online-vs-inmeting.webp',
+    readingTime: '8 min',
+    category: 'Offerte'
+  },
+  {
+    slug: 'multisplit-airco-offerte-wanneer-rendabel',
+    title: 'Multisplit airco offerte: wanneer wel, wanneer beter losse units?',
+    description: 'Is multisplit goedkoper dan 3 losse single-splits? Break-even analyse, voor- en nadelen, en wanneer dit systeem écht rendabel wordt voor uw woning.',
+    date: '18 april 2026',
+    imageUrl: '/images/blog/multisplit-airco-offerte-wanneer-rendabel.webp',
+    readingTime: '8 min',
+    category: 'Offerte'
+  },
+  {
+    slug: 'airco-offerte-maastricht',
+    title: 'Airco offerte Maastricht: echte prijzen per wijk + checklist 2026',
+    description: 'Prijs-matrix voor Binnenstad, Wyck, Céramique, Heer en Sint-Pieter. Monumentenvergunning-kosten, VvE-procedure en timeline voor Maastrichtse installaties.',
+    date: '18 april 2026',
+    imageUrl: '/images/blog/airco-offerte-maastricht.webp',
+    readingTime: '8 min',
+    category: 'Offerte'
+  },
+  {
+    slug: 'airco-offerte-heerlen',
+    title: 'Airco offerte Heerlen: wat kost het in 2026 + Parkstad-specifieke tips',
+    description: 'Heerlense rijtjeshuizen en Parkstad-woningen hebben betere ROI voor airco. Prijzen, ISDE-combi met isolatie en corporatie-woning overwegingen.',
+    date: '18 april 2026',
+    imageUrl: '/images/blog/airco-offerte-heerlen.webp',
+    readingTime: '8 min',
+    category: 'Offerte'
+  },
+  {
+    slug: 'airco-offerte-sittard',
+    title: 'Airco offerte Sittard: echte prijzen + timeline voor Sittard-Geleen 2026',
+    description: 'Sittardse woningen, Chemelot-pragmatische keuzes en nieuwbouw-isolatie bepalen de offerte. Prijs-ranges voor suburban Sittard, Geleen en Born.',
+    date: '18 april 2026',
+    imageUrl: '/images/blog/airco-offerte-sittard.webp',
+    readingTime: '8 min',
+    category: 'Offerte'
+  },
+  {
     slug: 'airco-storingen-herkennen',
     title: 'Airco storingen herkennen: 10 meest voorkomende problemen + wanneer monteur bellen',
     description: 'Airco koelt niet, maakt geluid of lekt water? Onze monteurs leggen uit welke storingen u zelf kunt oplossen (filter, reset) en welke directe hulp vragen. Inclusief error-code tabel per merk.',

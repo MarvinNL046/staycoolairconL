@@ -55,6 +55,41 @@ const POSTS = [
     title: 'Airco storingen herkennen',
     prompt: `Hyperrealistic close-up photograph: a professional airco technician's gloved hand holding a multimeter/diagnostic tool against the internal components of an opened split airco unit (front panel removed, showing clean electronics and heat exchanger). Shallow depth of field. Soft industrial lighting. The scene conveys "expert diagnosis and troubleshooting". No visible face, just hands and tool. Blue-tinted professional atmosphere. 16:9 horizontal composition. No text or logos visible. Editorial technical photography style.`,
   },
+  {
+    slug: 'airco-offerte-maastricht',
+    title: 'Airco offerte Maastricht',
+    prompt: `Hyperrealistic editorial photograph: the Sint-Servaasbrug bridge in Maastricht with the city's historic skyline featuring the twin cathedral towers at golden hour. In the foreground softly blurred, a clipboard with a professional-looking printed quote document. Limestone-tan color palette mixing with warm evening light. Conveys "trustworthy local service in historic Maastricht". 16:9 widescreen. No readable text on the document, no people visible, no logos. Travel-magazine photography quality.`,
+  },
+  {
+    slug: 'airco-offerte-heerlen',
+    title: 'Airco offerte Heerlen',
+    prompt: `Hyperrealistic editorial photograph: a typical Dutch 1960s-70s rijtjeshuis (row house) streetscape in Heerlen/Parkstad-Limburg with red-brick facades, tidy front gardens, and modern white airco outdoor units subtly visible on multiple houses. Warm afternoon light. Composition suggests "modern comfort in a classic Parkstad neighborhood". 16:9 widescreen. No people, no readable signage or logos. Street-photography editorial quality.`,
+  },
+  {
+    slug: 'airco-offerte-sittard',
+    title: 'Airco offerte Sittard',
+    prompt: `Hyperrealistic editorial photograph: a modern Dutch 1990s-2000s twee-onder-een-kap (semi-detached house) neighborhood in Sittard with well-maintained gardens, pale-brick facades, and a clean modern airco unit installed on a side wall. Bright natural daylight. Conveys "practical Dutch suburban comfort". 16:9 widescreen. No people visible, no logos or readable text. Residential photography editorial style.`,
+  },
+  {
+    slug: 'airco-offerte-aanvragen-checklist',
+    title: 'Airco offerte checklist',
+    prompt: `Hyperrealistic close-up photograph: a clean wooden desk with a printed checklist document on clipboard (with hand-drawn checkmarks visible but no readable text), a silver ballpoint pen, a small succulent plant, and a laptop partly visible. Warm natural side-lighting. Conveys "careful comparison and decision-making". 16:9 widescreen. No readable text, no people, no logos. Editorial product photography quality.`,
+  },
+  {
+    slug: 'airco-offerte-online-vs-inmeting',
+    title: 'Online offerte vs inmeting',
+    prompt: `Hyperrealistic split-composition editorial photograph: left half shows a smartphone on a desk displaying a blurred website form (no readable text); right half shows a professional technician (hands only, gloved) holding a measuring tape against a wall near a window. Soft daylight bridging both halves. The split composition conveys "online vs in-person decision". 16:9 widescreen. No faces, no logos. Editorial dual-scene style.`,
+  },
+  {
+    slug: 'waarom-verschillen-airco-offertes',
+    title: 'Waarom verschillen offertes',
+    prompt: `Hyperrealistic top-down flat-lay photograph: three printed quote documents of different styles side-by-side on a neutral grey surface, with different colored edges (subtle green, amber, and blue tabs suggesting price differences). A simple calculator, a pen, and a coffee mug placed between them. Moody directional lighting creating shadows. Conveys "comparison and scrutiny". 16:9 widescreen. No readable text on documents, no logos, no people. Editorial flat-lay photography.`,
+  },
+  {
+    slug: 'multisplit-airco-offerte-wanneer-rendabel',
+    title: 'Multisplit airco',
+    prompt: `Hyperrealistic editorial photograph: a modern Dutch home exterior showing a single large outdoor airco unit on the wall connected to multiple refrigerant lines going to different rooms (lines subtly visible running along the facade to different window areas). Clean architecture, warm late-afternoon light. Conveys "one outdoor unit, multiple rooms served — multisplit efficiency". 16:9 widescreen. No people, no readable signage, no logos. Architectural editorial photography.`,
+  },
 ];
 
 function loadEnv() {
