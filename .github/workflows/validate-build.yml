@@ -32,10 +32,31 @@ jobs:
     - name: Check for cache issues
       run: |
         echo "Checking for potential cache issues..."
-        if grep -r "logo\.svg" dist/ --include="*.html" --include="*.js"; then
-          echo "❌ Found references to old logo.svg"
-          exit 1
-        fi
+        node <<'NODE'
+        const fs = require('fs');
+        const path = require('path');
+
+        const oldLogoPattern = /(^|["'(`])\/logo\.svg(?=$|["')?#])|https?:\/\/[^/"')?#]+\/logo\.svg(?=$|["')?#])/;
+
+        function* files(dir) {
+          for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+            const fullPath = path.join(dir, entry.name);
+            if (entry.isDirectory()) {
+              yield* files(fullPath);
+            } else if (entry.name.endsWith('.html') || entry.name.endsWith('.js')) {
+              yield fullPath;
+            }
+          }
+        }
+
+        for (const file of files('dist')) {
+          const content = fs.readFileSync(file, 'utf8');
+          if (oldLogoPattern.test(content)) {
+            console.error(`❌ Found reference to old root logo.svg in ${file}`);
+            process.exit(1);
+          }
+        }
+        NODE
         if find dist/assets -name "*.js" | wc -l | grep -q "^0$"; then
           echo "❌ No JS files found in assets"
           exit 1
