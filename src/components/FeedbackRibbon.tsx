@@ -56,7 +56,7 @@ const FeedbackRibbon: React.FC = () => {
       {/* Feedback Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed right-0 top-1/2 -translate-y-1/2 bg-blue-800 hover:bg-blue-900 text-white px-3 py-6 rounded-l-lg shadow-lg z-40 transition-all duration-300 hover:px-4"
+        className="hidden md:flex fixed right-0 top-1/2 -translate-y-1/2 bg-blue-800 hover:bg-blue-900 text-white px-3 py-6 rounded-l-lg shadow-lg z-40 transition-all duration-300 hover:px-4 flex-col items-center"
         aria-label="Geef feedback"
       >
         <MessageSquare className="w-5 h-5" />

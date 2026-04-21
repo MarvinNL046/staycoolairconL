@@ -13,6 +13,9 @@ import type { ChatbotMessage } from './types';
 export const Chatbot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [inputValue, setInputValue] = useState('');
+  const [isDesktop, setIsDesktop] = useState(() =>
+    typeof window === 'undefined' ? true : window.matchMedia('(min-width: 768px)').matches
+  );
   const messagesEndRef = useRef<HTMLDivElement>(null);
   
   const {
@@ -38,6 +41,20 @@ export const Chatbot: React.FC = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+    const handleChange = (event: MediaQueryListEvent) => {
+      setIsDesktop(event.matches);
+      if (!event.matches) {
+        setIsOpen(false);
+      }
+    };
+
+    setIsDesktop(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
 
   const handleSend = () => {
     if (inputValue.trim() && !isLoading) {
@@ -72,11 +89,15 @@ export const Chatbot: React.FC = () => {
 
   const progress = getProgress();
 
+  if (!isDesktop) {
+    return null;
+  }
+
   return (
     <>
       {/* Floating Action Button */}
       <m.button
-        className="fixed bottom-20 md:bottom-24 right-4 md:right-6 z-40 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-shadow"
+        className="fixed bottom-24 right-6 z-40 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-shadow"
         onClick={() => setIsOpen(true)}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}

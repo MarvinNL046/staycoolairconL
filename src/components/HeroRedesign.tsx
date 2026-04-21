@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { m } from 'framer-motion';
-import { Play, Check, Zap, Shield, X } from 'lucide-react';
+import { Play, Check, X, Calendar } from 'lucide-react';
 import Button from './ui/Button';
 import MultiStepLeadForm from './MultiStepLeadForm';
 import TrustooWidget from './TrustooWidget';
@@ -30,9 +30,18 @@ export default function HeroRedesign() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
+              <Button
+                href="https://afspraken.staycoolairco.nl"
+                variant="primary"
+                className="md:hidden mb-10 mx-auto rounded-full px-6 py-3 h-auto text-xs uppercase tracking-widest shadow-xl shadow-quatt-orange/20"
+              >
+                <Calendar className="w-4 h-4 mr-2" />
+                Plan gratis adviesgesprek
+              </Button>
+
               <div
                 onClick={() => setShowVideo(true)}
-                className="inline-flex items-center gap-3 bg-white px-5 py-2.5 rounded-full border border-gray-100 shadow-sm mb-10 mx-auto lg:mx-0 cursor-pointer hover:border-quatt-orange transition-colors group"
+                className="hidden md:inline-flex items-center gap-3 bg-white px-5 py-2.5 rounded-full border border-gray-100 shadow-sm mb-10 mx-auto lg:mx-0 cursor-pointer hover:border-quatt-orange transition-colors group"
               >
                 <div className="w-6 h-6 bg-quatt-orange/10 rounded-full flex items-center justify-center group-hover:bg-quatt-orange transition-colors">
                   <Play className="w-3 h-3 text-quatt-orange group-hover:text-white fill-current translate-x-0.5" />
