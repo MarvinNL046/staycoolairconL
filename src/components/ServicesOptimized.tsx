@@ -13,7 +13,7 @@ export default function ServicesOptimized() {
       title: 'Airco Installatie',
       description: 'Professionele installatie van A-merk airconditioners. Wij zorgen voor een perfecte montage en afwerking.',
       features: ['Gratis opname aan huis', 'Installatie binnen 2 weken', 'Stofvrije montage'],
-      link: '/airco-installatie',
+      link: '/airco-installatie-limburg',
       color: 'text-blue-500',
       bg: 'bg-blue-50'
     },
@@ -31,7 +31,7 @@ export default function ServicesOptimized() {
       title: 'Onderhoud & Service',
       description: 'Verleng de levensduur van uw systeem met ons vakkundige onderhoudsplan.',
       features: ['Jaarlijkse controle', 'Reinigen filters', 'Storingsdienst'],
-      link: '/airco-service-limburg',
+      link: '/airco-onderhoud-limburg',
       color: 'text-green-500',
       bg: 'bg-green-50'
     }
@@ -122,7 +122,7 @@ export default function ServicesOptimized() {
 
         {/* Quick Links CTA */}
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          <Link to="/airco-kopen-limburg" className="group relative overflow-hidden rounded-3xl bg-quatt-dark text-white p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-6 hover:shadow-2xl transition-all duration-300">
+          <Link to="/airco-kopen-en-laten-installeren-limburg" className="group relative overflow-hidden rounded-3xl bg-quatt-dark text-white p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-6 hover:shadow-2xl transition-all duration-300">
             <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center shrink-0 group-hover:bg-quatt-orange transition-colors">
               <ShoppingCart className="w-8 h-8 text-white" />
             </div>

@@ -297,11 +297,11 @@ export default function AircoOfferte() {
             <Link to="/airco-installatie-limburg" className="inline-flex items-center gap-2 bg-white border border-sky-200 rounded-xl px-5 py-3 text-sky-700 font-semibold hover:bg-sky-100 transition-colors">
               <ArrowRight className="h-4 w-4" /> Airco Installatie Limburg
             </Link>
-            <Link to="/airco-installatie-prijs" className="inline-flex items-center gap-2 bg-white border border-sky-200 rounded-xl px-5 py-3 text-sky-700 font-semibold hover:bg-sky-100 transition-colors">
+            <Link to="/airco-installatie-prijs-limburg" className="inline-flex items-center gap-2 bg-white border border-sky-200 rounded-xl px-5 py-3 text-sky-700 font-semibold hover:bg-sky-100 transition-colors">
               <ArrowRight className="h-4 w-4" /> Airco Installatie Prijs
             </Link>
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-white border border-sky-200 rounded-xl px-5 py-3 text-sky-700 font-semibold hover:bg-sky-100 transition-colors">
-              <ArrowRight className="h-4 w-4" /> Contact Opnemen
+            <Link to="/airco-laten-plaatsen-limburg" className="inline-flex items-center gap-2 bg-white border border-sky-200 rounded-xl px-5 py-3 text-sky-700 font-semibold hover:bg-sky-100 transition-colors">
+              <ArrowRight className="h-4 w-4" /> Airco Laten Plaatsen
             </Link>
           </div>
         </div>

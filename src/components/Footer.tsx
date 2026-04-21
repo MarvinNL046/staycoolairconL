@@ -4,6 +4,7 @@ import { Phone, Mail, MapPin, Calendar, Facebook, Instagram, Linkedin, MessageCi
 import Logo from './Logo';
 import { seoNavigation } from '../data/seoNavigation';
 import Button from './ui/Button';
+import { footerMoneyPageLinks } from '../data/moneyPageLinks';
 
 export default function Footer() {
   return (
@@ -16,7 +17,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
 
           {/* Brand Column */}
-          <div className="lg:col-span-4 space-y-6">
+          <div className="lg:col-span-3 space-y-6">
             <Link to="/" className="inline-block">
               <Logo inverted className="h-10 w-auto" />
             </Link>
@@ -36,10 +37,23 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-6 text-white">Producten</h3>
             <ul className="space-y-4 text-gray-400">
               <li><Link to="/products" className="hover:text-quatt-orange transition-colors">Alle Airco's</Link></li>
-              <li><Link to="/airco-installatie" className="hover:text-quatt-orange transition-colors">Installatie</Link></li>
-              <li><Link to="/onderhoud" className="hover:text-quatt-orange transition-colors">Onderhoud</Link></li>
+              <li><Link to="/airco-installatie-limburg" className="hover:text-quatt-orange transition-colors">Installatie Limburg</Link></li>
+              <li><Link to="/airco-onderhoud-limburg" className="hover:text-quatt-orange transition-colors">Onderhoud Limburg</Link></li>
               <li><Link to="/thuisbatterijen" className="hover:text-quatt-orange transition-colors">Thuisbatterijen</Link></li>
               <li><Link to="/capaciteit-calculator" className="hover:text-quatt-orange transition-colors">Calculator</Link></li>
+            </ul>
+          </div>
+
+          <div className="lg:col-span-2">
+            <h3 className="font-bold text-lg mb-6 text-white">Airco Diensten</h3>
+            <ul className="space-y-4 text-gray-400">
+              {footerMoneyPageLinks.map((link) => (
+                <li key={link.path}>
+                  <Link to={link.path} className="hover:text-quatt-orange transition-colors">
+                    {link.title.replace(' Limburg', '')}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -55,7 +69,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Column */}
-          <div className="lg:col-span-4 bg-white/5 p-8 rounded-2xl border border-white/10">
+          <div className="lg:col-span-3 bg-white/5 p-8 rounded-2xl border border-white/10">
             <h3 className="font-bold text-lg mb-6 text-white">Direct Contact</h3>
             <ul className="space-y-4 mb-8">
               <li>

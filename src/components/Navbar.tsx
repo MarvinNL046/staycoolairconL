@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown, Check } from 'lucide-react';
 import Logo from './Logo';
 import { seoNavigation } from '../data/seoNavigation';
 import Button from './ui/Button';
+import { primaryMoneyPageLinks } from '../data/moneyPageLinks';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,10 +64,10 @@ export default function Navbar() {
                 <Link to="/products" className={linkClasses}>
                   Producten
                 </Link>
-                <Link to="/airco-installatie" className={linkClasses}>
+                <Link to="/airco-installatie-limburg" className={linkClasses}>
                   Installatie
                 </Link>
-                <Link to="/onderhoud" className={linkClasses}>
+                <Link to="/airco-onderhoud-limburg" className={linkClasses}>
                   Onderhoud
                 </Link>
                 <div className="relative group">
@@ -74,7 +75,19 @@ export default function Navbar() {
                     Meer <ChevronDown className="ml-1 h-4 w-4" />
                   </button>
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <div className="bg-white rounded-[2rem] shadow-2xl border border-gray-100 p-8 w-[640px] grid grid-cols-2 gap-x-12 gap-y-6 transform translate-y-2 group-hover:translate-y-0 transition-transform">
+                    <div className="bg-white rounded-[2rem] shadow-2xl border border-gray-100 p-8 w-[860px] grid grid-cols-3 gap-x-10 gap-y-6 transform translate-y-2 group-hover:translate-y-0 transition-transform">
+                      <div>
+                        <h4 className="font-black text-quatt-dark mb-4 text-sm uppercase tracking-wider">Populaire diensten</h4>
+                        <ul className="space-y-3">
+                          {primaryMoneyPageLinks.map((link) => (
+                            <li key={link.path}>
+                              <Link to={link.path} className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">
+                                {link.title.replace(' Limburg', '')}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                       <div>
                         <h4 className="font-black text-quatt-dark mb-4 text-sm uppercase tracking-wider">Kennisbank</h4>
                         <ul className="space-y-3">
@@ -122,8 +135,10 @@ export default function Navbar() {
         <div className={`fixed inset-0 bg-white/95 backdrop-blur-xl z-40 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden pt-24 px-6`}>
           <div className="flex flex-col space-y-6 text-2xl font-black text-quatt-dark tracking-tight">
             <Link to="/products" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Producten</Link>
-            <Link to="/airco-installatie" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Installatie</Link>
-            <Link to="/onderhoud" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Onderhoud</Link>
+            <Link to="/airco-installatie-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Installatie</Link>
+            <Link to="/airco-onderhoud-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Onderhoud</Link>
+            <Link to="/airco-laten-plaatsen-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Airco laten plaatsen</Link>
+            <Link to="/airco-offerte-aanvragen-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Offerte aanvragen</Link>
             <Link to="/kennisbank" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Kennisbank</Link>
             <Link to="/contact" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Contact</Link>
 

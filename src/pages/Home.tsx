@@ -9,6 +9,8 @@ import BrandLogos from '../components/BrandLogos';
 import HomeBattery from '../components/HomeBattery';
 import Contact from '../components/Contact';
 import SchemaMarkup from '../components/SchemaMarkup';
+import MoneyPageLinks from '../components/MoneyPageLinks';
+import { primaryMoneyPageLinks } from '../data/moneyPageLinks';
 
 export default function Home() {
   const services = [
@@ -194,6 +196,7 @@ export default function Home() {
         </div>
       </section>
 
+      <MoneyPageLinks links={primaryMoneyPageLinks} />
       <Services />
       <HomeBattery />
       <WhyUs />

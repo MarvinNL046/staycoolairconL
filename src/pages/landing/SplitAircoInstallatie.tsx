@@ -342,11 +342,14 @@ export default function SplitAircoInstallatie() {
       <section className="bg-white py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/airco-installatie-prijs" className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 rounded-xl px-5 py-3 text-sky-700 font-semibold hover:bg-sky-100 transition-colors">
+            <Link to="/airco-installatie-prijs-limburg" className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 rounded-xl px-5 py-3 text-sky-700 font-semibold hover:bg-sky-100 transition-colors">
               <ArrowRight className="h-4 w-4" /> Airco Installatie Prijs
             </Link>
-            <Link to="/multi-split-airco-installatie" className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 rounded-xl px-5 py-3 text-sky-700 font-semibold hover:bg-sky-100 transition-colors">
+            <Link to="/multi-split-airco-installatie-limburg" className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 rounded-xl px-5 py-3 text-sky-700 font-semibold hover:bg-sky-100 transition-colors">
               <ArrowRight className="h-4 w-4" /> Multi-Split Airco Installatie
+            </Link>
+            <Link to="/single-split-airco-installatie-limburg" className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 rounded-xl px-5 py-3 text-sky-700 font-semibold hover:bg-sky-100 transition-colors">
+              <ArrowRight className="h-4 w-4" /> Single-Split Airco Installatie
             </Link>
             <Link to="/airco-installatie-limburg" className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 rounded-xl px-5 py-3 text-sky-700 font-semibold hover:bg-sky-100 transition-colors">
               <ArrowRight className="h-4 w-4" /> Airco Installatie Limburg

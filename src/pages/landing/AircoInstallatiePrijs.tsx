@@ -313,8 +313,11 @@ export default function AircoInstallatiePrijs() {
             <Link to="/airco-installatie-limburg" className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 rounded-xl px-5 py-3 text-sky-700 font-semibold hover:bg-sky-100 transition-colors">
               <ArrowRight className="h-4 w-4" /> Airco Installatie Limburg
             </Link>
-            <Link to="/contact" className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 rounded-xl px-5 py-3 text-sky-700 font-semibold hover:bg-sky-100 transition-colors">
-              <ArrowRight className="h-4 w-4" /> Contact Opnemen
+            <Link to="/airco-laten-installeren-kosten-limburg" className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 rounded-xl px-5 py-3 text-sky-700 font-semibold hover:bg-sky-100 transition-colors">
+              <ArrowRight className="h-4 w-4" /> Airco Laten Installeren Kosten
+            </Link>
+            <Link to="/airco-offerte-aanvragen-limburg" className="inline-flex items-center gap-2 bg-sky-50 border border-sky-200 rounded-xl px-5 py-3 text-sky-700 font-semibold hover:bg-sky-100 transition-colors">
+              <ArrowRight className="h-4 w-4" /> Airco Offerte Aanvragen
             </Link>
           </div>
         </div>
