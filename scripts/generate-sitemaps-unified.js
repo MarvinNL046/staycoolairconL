@@ -25,6 +25,39 @@ function getProgrammaticLocations() {
   return Array.isArray(locations) ? locations : [];
 }
 
+function getServicePages() {
+  const sourcePath = path.join(process.cwd(), 'src', 'data', 'servicePages.ts');
+  const source = fs.readFileSync(sourcePath, 'utf-8');
+  const marker = 'export const servicePages';
+  const start = source.indexOf(marker);
+
+  if (start < 0) {
+    throw new Error('Kon servicePages niet lezen uit src/data/servicePages.ts');
+  }
+
+  const assignmentStart = source.indexOf('=', start);
+  const arrayStart = source.indexOf('[', assignmentStart);
+  let depth = 0;
+  let arrayEnd = -1;
+
+  for (let i = arrayStart; i < source.length; i += 1) {
+    if (source[i] === '[') depth += 1;
+    if (source[i] === ']') depth -= 1;
+    if (depth === 0) {
+      arrayEnd = i + 1;
+      break;
+    }
+  }
+
+  if (arrayStart < 0 || arrayEnd < 0) {
+    throw new Error('Kon servicePages array niet parsen');
+  }
+
+  // eslint-disable-next-line no-new-func
+  const servicePages = Function(`return ${source.slice(arrayStart, arrayEnd)};`)();
+  return Array.isArray(servicePages) ? servicePages : [];
+}
+
 function shouldIndexRoute(routePath) {
   if (!routePath) return false;
   if (routePath.includes(':') || routePath.includes('*')) return false;
@@ -130,7 +163,12 @@ async function generateMainSitemap() {
 
   const appPath = path.join(process.cwd(), 'src', 'App.tsx');
   const appContent = await fs.promises.readFile(appPath, 'utf-8');
-  const routes = discoverAppRoutes(appContent);
+  const servicePages = getServicePages().filter((page) => page.indexable !== false);
+  const servicePageRoutes = servicePages.map((page) => ({
+    path: `/${page.slug}`,
+    component: 'ServiceLandingPage'
+  }));
+  const routes = [...discoverAppRoutes(appContent), ...servicePageRoutes];
   const componentMap = buildComponentFileMap(appContent);
 
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>

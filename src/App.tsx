@@ -26,6 +26,7 @@ import { Chatbot } from './components/Chatbot';
 import ExitIntentPopup from './components/ExitIntentPopup';
 import MobileStickyCTA from './components/MobileStickyCTA';
 import FloatingReviewBadge from './components/FloatingReviewBadge';
+import { servicePages } from './data/servicePages';
 
 // Lazy load all pages
 const Home = lazy(() => import('./pages/Home'));
@@ -188,7 +189,6 @@ const AircoVerwarmingKostenBesparing = lazy(() => import('./pages/AircoVerwarmin
 const AircoVerwarmingVoordelen = lazy(() => import('./pages/articles/airco-verwarming-voordelen'));
 
 // New SEO Funnel - BOFU Money Pages
-const AircoInstallatieLimburgLanding = lazy(() => import('./pages/landing/AircoInstallatieLimburg'));
 const AircoInstallatiePrijs = lazy(() => import('./pages/landing/AircoInstallatiePrijs'));
 const AircoOfferte = lazy(() => import('./pages/landing/AircoOfferte'));
 const SplitAircoInstallatie = lazy(() => import('./pages/landing/SplitAircoInstallatie'));
@@ -209,6 +209,7 @@ const LGVsDaikinAirco = lazy(() => import('./pages/comparisons/LGVsDaikinAirco')
 // New SEO Funnel - Room Landing Pages
 const AircoKantoor = lazy(() => import('./pages/landing/AircoKantoor'));
 const AircoWinkel = lazy(() => import('./pages/landing/AircoWinkel'));
+const ServiceLandingPage = lazy(() => import('./pages/ServiceLandingPage'));
 
 // New SEO Funnel - TOFU Articles
 const AircoAlsVerwarmingKosten = lazy(() => import('./pages/articles/airco-als-verwarming-kosten'));
@@ -886,8 +887,16 @@ const App = () => {
                 <Route path="/duurzaamheid/noindex/milieuvriendelijke-koeling-tips" element={<SEOMilieuvriendelijkeKoelingTips />} />
                 <Route path="/duurzaamheid/noindex/airco-co2-footprint-verlagen" element={<SEOAircoCO2FootprintVerlagen />} />
 
+                {/* Data-driven high-intent service pages */}
+                {servicePages.map((servicePage) => (
+                  <Route
+                    key={servicePage.slug}
+                    path={`/${servicePage.slug}`}
+                    element={<ServiceLandingPage slug={servicePage.slug} />}
+                  />
+                ))}
+
                 {/* New SEO Funnel - BOFU Money Pages */}
-                <Route path="/airco-installatie-limburg" element={<AircoInstallatieLimburgLanding />} />
                 <Route path="/airco-installatie-prijs" element={<AircoInstallatiePrijs />} />
                 <Route path="/airco-offerte" element={<AircoOfferte />} />
                 <Route path="/split-airco-installatie" element={<SplitAircoInstallatie />} />

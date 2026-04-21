@@ -19,7 +19,8 @@
     "analyze-schema": "npx tsx src/scripts/runSchemaAudit.ts",
     "performance-audit": "npm run analyze-bundle && npm run analyze-schema",
     "validate:locations": "node scripts/validate-programmatic-locations.cjs",
-    "validate:build": "node scripts/validate-build.cjs",
+    "validate:build": "node scripts/validate-build.cjs && node scripts/validate-service-pages.cjs",
+    "validate:service-pages": "node scripts/validate-service-pages.cjs",
     "cache:clear": "node scripts/clear-cache.cjs"
   },
   "dependencies": {
