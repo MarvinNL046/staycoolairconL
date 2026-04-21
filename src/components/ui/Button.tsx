@@ -37,6 +37,7 @@ const Button: React.FC<ButtonProps> = ({
         baseStyles,
         variants[variant],
         sizes[size],
+        variant === 'primary' && 'shiny-btn',
         className
     );
 
