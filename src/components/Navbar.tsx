@@ -101,6 +101,8 @@ export default function Navbar() {
                         <ul className="space-y-3">
                           <li><Link to="/capaciteit-calculator" className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">Capaciteit Calculator</Link></li>
                           <li><Link to="/thuisbatterij-calculator" className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">Besparing Calculator</Link></li>
+                          <li><Link to="/airco-buitenunit-plaatsen-regels-limburg" className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">Buitenunit regels</Link></li>
+                          <li><Link to="/stille-airco-buitenunit-limburg" className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">Stille buitenunit</Link></li>
                         </ul>
                       </div>
                     </div>
@@ -139,6 +141,7 @@ export default function Navbar() {
             <Link to="/airco-onderhoud-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Onderhoud</Link>
             <Link to="/airco-laten-plaatsen-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Airco laten plaatsen</Link>
             <Link to="/airco-offerte-aanvragen-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Offerte aanvragen</Link>
+            <Link to="/airco-buitenunit-plaatsen-regels-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Buitenunit regels</Link>
             <Link to="/kennisbank" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Kennisbank</Link>
             <Link to="/contact" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Contact</Link>
 

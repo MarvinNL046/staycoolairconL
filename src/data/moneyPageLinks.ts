@@ -49,5 +49,19 @@ export const footerMoneyPageLinks: MoneyPageLink[] = [
     description: 'Meerdere ruimtes koelen of verwarmen.',
     path: '/multi-split-airco-installatie-limburg',
   },
+  {
+    title: 'Airco buitenunit regels',
+    description: 'Check regels, geluid en plaatsing vooraf.',
+    path: '/airco-buitenunit-plaatsen-regels-limburg',
+  },
+  {
+    title: 'Stille airco buitenunit',
+    description: 'Voorkom geluidsoverlast bij buren.',
+    path: '/stille-airco-buitenunit-limburg',
+  },
+  {
+    title: 'Airco vergunning nodig?',
+    description: 'Controleer VvE, dak, gevel en balkon.',
+    path: '/airco-vergunning-nodig-limburg',
+  },
 ];
-

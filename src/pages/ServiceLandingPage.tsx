@@ -7,6 +7,7 @@ import {
   Clock,
   FileText,
   HelpCircle,
+  ExternalLink,
   MapPin,
   ShieldCheck,
 } from 'lucide-react';
@@ -288,6 +289,36 @@ export default function ServiceLandingPage({ slug }: ServiceLandingPageProps) {
             </div>
           </div>
         </section>
+
+        {page.sourceLinks && page.sourceLinks.length > 0 && (
+          <section className="px-4 py-16 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-5xl rounded-[2rem] border border-gray-100 bg-white p-6 shadow-sm">
+              <p className="mb-3 text-sm font-bold uppercase tracking-wide text-quatt-orange">
+                Bronnen en praktische checks
+              </p>
+              <h2 className="mb-4 text-2xl font-black text-quatt-dark">
+                Gebaseerd op actuele aandachtspunten rond regels, geluid en installatie
+              </h2>
+              <p className="mb-6 leading-7 text-gray-600">
+                Gebruik deze links als vertrekpunt voor controle. De exacte toepasbaarheid hangt af van woning, gemeente, VvE en montageplek.
+              </p>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {page.sourceLinks.map((source) => (
+                  <a
+                    key={source.url}
+                    href={source.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-between gap-3 rounded-2xl bg-[#f7f3ec] px-4 py-3 text-sm font-bold text-quatt-dark transition-colors hover:text-quatt-orange"
+                  >
+                    {source.label}
+                    <ExternalLink className="h-4 w-4 shrink-0" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         <section className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">

@@ -76,7 +76,7 @@ const requiredKeys = [
   'indexable',
 ];
 
-assert(pages.length === 30, `Expected 30 service pages, found ${pages.length}`);
+assert(pages.length === 40, `Expected 40 service pages, found ${pages.length}`);
 
 const slugs = new Set();
 for (const page of pages) {
@@ -97,6 +97,11 @@ for (const page of pages) {
   assert(page.benefits.length >= 3, `${page.slug} needs at least 3 benefits`);
   assert(page.faq.length >= 4, `${page.slug} needs at least 4 FAQs`);
   assert(page.relatedSlugs.length >= 3, `${page.slug} needs at least 3 relatedSlugs`);
+
+  if (page.category === 'rules') {
+    assert(Array.isArray(page.sourceLinks), `${page.slug} needs sourceLinks for EEAT`);
+    assert(page.sourceLinks.length >= 2, `${page.slug} needs at least 2 sourceLinks`);
+  }
 
   for (const relatedSlug of page.relatedSlugs) {
     assert(relatedSlug !== page.slug, `${page.slug} links to itself`);
@@ -131,6 +136,23 @@ const auditRequired = [
 
 for (const route of auditRequired) {
   assert(auditSource.includes(route), `Overlap audit missing ${route}`);
+}
+
+const rulesClusterSlugs = [
+  'airco-buitenunit-plaatsen-regels-limburg',
+  'airco-buitenunit-erfgrens-limburg',
+  'airco-geluidsoverlast-buren-limburg',
+  'stille-airco-buitenunit-limburg',
+  'airco-vergunning-nodig-limburg',
+  'airco-buitenunit-op-dak-limburg',
+  'airco-buitenunit-op-balkon-limburg',
+  'airco-zonder-overlast-plaatsen-limburg',
+  'airco-installatie-f-gassen-gecertificeerd-limburg',
+  'zelf-airco-installeren-of-laten-doen-limburg',
+];
+
+for (const slug of rulesClusterSlugs) {
+  assert(slugs.has(slug), `Rules cluster missing ${slug}`);
 }
 
 console.log(`Validated ${pages.length} service pages and overlap audit.`);

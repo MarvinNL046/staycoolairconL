@@ -8,6 +8,8 @@ const requiredLinksByFile = {
     '/airco-laten-plaatsen-limburg',
     '/airco-installatie-limburg',
     '/airco-offerte-aanvragen-limburg',
+    '/airco-buitenunit-plaatsen-regels-limburg',
+    '/stille-airco-buitenunit-limburg',
   ],
   'src/data/moneyPageLinks.ts': [
     '/airco-laten-plaatsen-limburg',
@@ -17,6 +19,9 @@ const requiredLinksByFile = {
     '/airco-installatie-prijs-limburg',
     '/airco-onderhoud-limburg',
     '/airco-reparatie-limburg',
+    '/airco-buitenunit-plaatsen-regels-limburg',
+    '/stille-airco-buitenunit-limburg',
+    '/airco-vergunning-nodig-limburg',
   ],
   'src/components/Footer.tsx': [
     'footerMoneyPageLinks.map',
