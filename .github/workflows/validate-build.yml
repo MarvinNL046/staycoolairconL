@@ -29,6 +29,18 @@ jobs:
     - name: Validate build consistency
       run: npm run validate:build
       
+    - name: Install Playwright browser
+      run: npx playwright install --with-deps chromium
+
+    - name: Check for broken internal links
+      run: |
+        npm run preview -- --port 4173 &
+        SERVER_PID=$!
+        until curl -sf http://localhost:4173/ -o /dev/null; do sleep 1; done
+        echo "Preview server up — starting crawler"
+        MAX_PAGES=400 CONCURRENCY=8 npm run crawl-links:local
+        kill $SERVER_PID 2>/dev/null || true
+
     - name: Check for cache issues
       run: |
         echo "Checking for potential cache issues..."

@@ -60,7 +60,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h3 className="font-bold text-lg mb-6 text-white">Informatie</h3>
             <ul className="space-y-4 text-gray-400">
-              <li><Link to="/about" className="hover:text-quatt-orange transition-colors">Over Ons</Link></li>
+              <li><Link to="/over" className="hover:text-quatt-orange transition-colors">Over Ons</Link></li>
               <li><Link to="/werkgebied" className="hover:text-quatt-orange transition-colors">Werkgebied</Link></li>
               <li><Link to="/kennisbank" className="hover:text-quatt-orange transition-colors">Kennisbank</Link></li>
               <li><Link to="/contact" className="hover:text-quatt-orange transition-colors">Contact</Link></li>

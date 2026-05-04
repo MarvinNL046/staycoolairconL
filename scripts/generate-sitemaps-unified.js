@@ -225,8 +225,13 @@ async function generateProductsSitemap() {
   ];
 
   for (const brand of brandsList) {
+    // Airco covers don't have individual product detail routes — only one
+    // category page at /products/airco-covers. Skip them in the sitemap so
+    // we don't emit URLs that resolve to the SPA 404.
+    if (brand === aircoCoversData) continue;
+
     for (const product of brand.models) {
-      const brandSlug = brand.name.toLowerCase().replace(/\s+/g, '-');
+      const brandSlug = brand.name.toLowerCase().replace(/[\s/]+/g, '-');
       const productSlug = product.slug || product.name.toLowerCase().replace(/\s+/g, '-');
 
       sitemap += `

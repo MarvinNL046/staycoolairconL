@@ -22,7 +22,13 @@
     "validate:build": "node scripts/validate-build.cjs && node scripts/validate-service-pages.cjs && node scripts/validate-money-page-links.cjs",
     "validate:service-pages": "node scripts/validate-service-pages.cjs",
     "validate:money-links": "node scripts/validate-money-page-links.cjs",
-    "cache:clear": "node scripts/clear-cache.cjs"
+    "cache:clear": "node scripts/clear-cache.cjs",
+    "check-links": "node scripts/check-links.js",
+    "check-links:local": "node scripts/check-links.js http://localhost:4173",
+    "check-links:rendered": "node scripts/check-links-rendered.js",
+    "check-links:rendered:local": "node scripts/check-links-rendered.js http://localhost:4173",
+    "crawl-links": "node scripts/crawl-links.js",
+    "crawl-links:local": "node scripts/crawl-links.js http://localhost:4173"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

@@ -74,6 +74,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://staycoolairco.nl/over</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://staycoolairco.nl/kennisbank</loc>
     <lastmod>2026-02-20</lastmod>
     <changefreq>weekly</changefreq>

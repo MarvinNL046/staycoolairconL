@@ -1,6 +1,11 @@
 import React, { Suspense, lazy, useEffect, useCallback } from 'react';
 import ScrollToTop from './components/ScrollToTop';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate, useParams } from 'react-router-dom';
+
+function WerkgebiedRedirect() {
+  const { city } = useParams();
+  return <Navigate to={`/airco-installatie/${city ?? ''}`} replace />;
+}
 import { trackPageView, trackError, trackPerformance } from './utils/analytics';
 import UruruSararaPage from './pages/products/ururu-sarara';
 import StylishPage from './pages/products/stylish';
@@ -40,6 +45,7 @@ const ServiceArea = lazy(() => import('./pages/ServiceArea'));
 const KnowledgeBase = lazy(() => import('./pages/KnowledgeBase'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Privacy = lazy(() => import('./pages/Privacy'));
+const Over = lazy(() => import('./pages/Over'));
 const MaintenanceProcedures = lazy(() => import('./pages/MaintenanceProcedures'));
 const AircoCovers = lazy(() => import('./pages/AircoCovers'));
 const LGMobieleAircoPage = lazy(() => import('./pages/products/lg-mobiele-airco'));
@@ -553,6 +559,32 @@ const App = () => {
                 <Route path="/contact-webhook-test" element={<ContactWebhookTest />} />
                 <Route path="/tot-snel" element={<TotSnel />} />
                 <Route path="/werkgebied" element={<ServiceArea />} />
+                <Route path="/werkgebied/:city" element={<WerkgebiedRedirect />} />
+                <Route path="/over" element={<Over />} />
+                <Route path="/about" element={<Navigate to="/over" replace />} />
+                <Route path="/vacatures" element={<Navigate to="/contact" replace />} />
+                <Route path="/cookies" element={<Navigate to="/privacy" replace />} />
+                <Route path="/seo/pillar-4-energie-besparen" element={<Navigate to="/seo/pillar-4-energie-besparen/verwarmen-met-airco" replace />} />
+                <Route path="/seo/pillar-6-limburg-steden" element={<Navigate to="/seo/pillar-6-limburg-steden/airco-installatie-maastricht" replace />} />
+                <Route path="/seo/pillar-7-technische-gidsen" element={<Navigate to="/seo/pillar-7-technische-gidsen/airco-capaciteit-berekenen" replace />} />
+                <Route path="/seo/pillar-8-vergelijkingen" element={<Navigate to="/seo/pillar-8-vergelijkingen/split-unit-vs-mobiele-airco" replace />} />
+                <Route path="/kennisbank/subsidies" element={<Navigate to="/seo/pillar-9-kosten-prijzen/airco-subsidies-limburg" replace />} />
+                <Route path="/kennisbank/airconditioning-limburg" element={<Navigate to="/kennisbank/airco-installatie-limburg" replace />} />
+                <Route path="/kennisbank/airco-monteur-limburg" element={<Navigate to="/kennisbank/airco-installateur-limburg" replace />} />
+                <Route path="/kennisbank/klimaatbeheersingssysteem" element={<Navigate to="/kennisbank/klimaatbeheersing" replace />} />
+                <Route path="/kennisbank/airco-maastricht" element={<Navigate to="/kennisbank/airco-installateur-maastricht" replace />} />
+                <Route path="/kennisbank/airco-heerlen" element={<Navigate to="/airco-installatie/heerlen" replace />} />
+                <Route path="/kennisbank/airco-roermond" element={<Navigate to="/kennisbank/airco-installateur-roermond" replace />} />
+                <Route path="/kennisbank/airco-installatie-venray" element={<Navigate to="/airco-installatie/venray" replace />} />
+                <Route path="/kennisbank/airco-bedrijven-limburg" element={<Navigate to="/seo/pillar-1-installatie-services/airco-installatie-bedrijfspand" replace />} />
+                <Route path="/zakelijk" element={<Navigate to="/seo/pillar-1-installatie-services/airco-installatie-bedrijfspand" replace />} />
+                <Route path="/merken" element={<Navigate to="/products" replace />} />
+                <Route path="/reviews" element={<Navigate to="/" replace />} />
+                <Route path="/gratis-onderhoud" element={<Navigate to="/airco-onderhoud-limburg" replace />} />
+                <Route path="/besparingcalculator" element={<Navigate to="/thuisbatterij-calculator" replace />} />
+                <Route path="/airconditioners" element={<Navigate to="/aircos" replace />} />
+                <Route path="/capacity-calculator" element={<Navigate to="/capaciteit-calculator" replace />} />
+                <Route path="/products/airco-bescherming/omkasting/:slug" element={<Navigate to="/products/airco-covers" replace />} />
                 <Route path="/kennisbank" element={<KnowledgeBase />} />
                 <Route path="/aircos" element={<Aircos />} />
                 <Route path="/aircos/:productId" element={<ScrapedProductDetail />} />
