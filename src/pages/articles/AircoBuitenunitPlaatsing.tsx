@@ -88,6 +88,7 @@ const AircoBuitenunitPlaatsing = () => {
       modifiedDate="2026-03-22"
       author="StayCool Airconditioning"
       tags={['Installatie', 'Buitenunit', 'Plaatsing', 'Tips']}
+      canonicalUrl="https://staycoolairco.nl/seo/pillar-7-technische-gidsen/airco-buitenunit-plaatsing"
     >
       <section className="prose prose-lg max-w-none">
         {/* Table of Contents */}

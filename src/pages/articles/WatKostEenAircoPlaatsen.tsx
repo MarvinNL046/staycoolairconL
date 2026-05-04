@@ -86,6 +86,7 @@ const WatKostEenAircoPlaatsen = () => {
       modifiedDate="2025-01-22"
       author="StayCool Airconditioning"
       tags={['Kosten', 'Installatie', 'Prijzen', 'Advies']}
+      canonicalUrl="https://staycoolairco.nl/kosten-airco-plaatsen"
     >
       <section className="prose prose-lg max-w-none">
         {/* Table of Contents */}

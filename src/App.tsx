@@ -564,10 +564,16 @@ const App = () => {
                 <Route path="/about" element={<Navigate to="/over" replace />} />
                 <Route path="/vacatures" element={<Navigate to="/contact" replace />} />
                 <Route path="/cookies" element={<Navigate to="/privacy" replace />} />
+                <Route path="/seo/pillar-1-installatie-services" element={<Navigate to="/seo/pillar-1-installatie-services/airco-installatie-woonkamer" replace />} />
+                <Route path="/seo/pillar-2-onderhoud-service" element={<Navigate to="/seo/pillar-2-onderhoud-service/jaarlijks-airco-onderhoud" replace />} />
+                <Route path="/seo/pillar-3-merken-modellen" element={<Navigate to="/seo/pillar-3-merken-modellen/daikin-airco-modellen" replace />} />
                 <Route path="/seo/pillar-4-energie-besparen" element={<Navigate to="/seo/pillar-4-energie-besparen/verwarmen-met-airco" replace />} />
+                <Route path="/seo/pillar-5-thuisbatterijen" element={<Navigate to="/seo/pillar-5-thuisbatterijen/thuisbatterij-smile-b3" replace />} />
                 <Route path="/seo/pillar-6-limburg-steden" element={<Navigate to="/seo/pillar-6-limburg-steden/airco-installatie-maastricht" replace />} />
                 <Route path="/seo/pillar-7-technische-gidsen" element={<Navigate to="/seo/pillar-7-technische-gidsen/airco-capaciteit-berekenen" replace />} />
                 <Route path="/seo/pillar-8-vergelijkingen" element={<Navigate to="/seo/pillar-8-vergelijkingen/split-unit-vs-mobiele-airco" replace />} />
+                <Route path="/seo/pillar-9-kosten-prijzen" element={<Navigate to="/kosten-airco-plaatsen" replace />} />
+                <Route path="/seo/pillar-10-duurzaamheid" element={<Navigate to="/seo/pillar-10-duurzaamheid/koudemiddel-r32" replace />} />
                 <Route path="/kennisbank/subsidies" element={<Navigate to="/seo/pillar-9-kosten-prijzen/airco-subsidies-limburg" replace />} />
                 <Route path="/kennisbank/airconditioning-limburg" element={<Navigate to="/kennisbank/airco-installatie-limburg" replace />} />
                 <Route path="/kennisbank/airco-monteur-limburg" element={<Navigate to="/kennisbank/airco-installateur-limburg" replace />} />

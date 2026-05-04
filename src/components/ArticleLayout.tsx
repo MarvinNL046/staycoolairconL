@@ -11,16 +11,18 @@ interface ArticleLayoutProps {
   modifiedDate: string;
   author: string;
   tags?: string[];
+  canonicalUrl?: string;
 }
 
-export default function ArticleLayout({ 
+export default function ArticleLayout({
   children,
   title,
   description,
   publishDate,
   modifiedDate,
   author,
-  tags = [] 
+  tags = [],
+  canonicalUrl
 }: ArticleLayoutProps) {
   return (
     <m.article
@@ -32,6 +34,7 @@ export default function ArticleLayout({
       <MetaTags
         title={title}
         description={description}
+        canonicalUrl={canonicalUrl}
       />
 
       <Breadcrumbs items={[

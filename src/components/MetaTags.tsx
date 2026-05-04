@@ -1,5 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
+
+const SITE_ORIGIN = 'https://staycoolairco.nl';
 
 interface FAQ {
   question: string;
@@ -52,7 +55,7 @@ export default function MetaTags({
   title,
   description,
   keywords,
-  canonicalUrl = "https://staycoolairco.nl",
+  canonicalUrl,
   ogImage = "https://staycoolairco.nl/og-image.jpg",
   type = 'website',
   schema,
@@ -66,6 +69,13 @@ export default function MetaTags({
   speakableContent = [],
   noIndex = false
 }: MetaTagsProps) {
+  // Auto-derive canonical URL from current route when caller does not pass one.
+  // Without this, react-router pages fall back to the index.html static canonical
+  // (which points at the homepage), causing site-wide canonical-to-homepage bug
+  // that consolidates all SEO signals to "/".
+  const location = useLocation();
+  const resolvedCanonical = canonicalUrl ?? `${SITE_ORIGIN}${location.pathname}`;
+
   // Enhance title with location information for better local SEO
   let enhancedTitle = title;
   
@@ -187,7 +197,7 @@ export default function MetaTags({
     ...(productInfo.sku && { "sku": productInfo.sku }),
     "offers": {
       "@type": "Offer",
-      "url": canonicalUrl,
+      "url": resolvedCanonical,
       "priceCurrency": priceInfo.currency || "EUR",
       "price": priceInfo.price,
       "availability": `https://schema.org/${priceInfo.availability || 'InStock'}`,
@@ -275,7 +285,7 @@ export default function MetaTags({
       <title>{enhancedTitle}</title>
       <meta name="description" content={enhancedDescription} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <link rel="canonical" href={canonicalUrl} />
+      <link rel="canonical" href={resolvedCanonical} />
 
       {/* Robots directive - noindex but follow links for SEO link juice */}
       {noIndex ? (
@@ -289,7 +299,7 @@ export default function MetaTags({
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
-      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:url" content={resolvedCanonical} />
       <meta property="og:title" content={enhancedTitle} />
       <meta property="og:description" content={enhancedDescription} />
       <meta property="og:image" content={ogImage} />
@@ -298,7 +308,7 @@ export default function MetaTags({
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={canonicalUrl} />
+      <meta name="twitter:url" content={resolvedCanonical} />
       <meta name="twitter:title" content={enhancedTitle} />
       <meta name="twitter:description" content={enhancedDescription} />
       <meta name="twitter:image" content={ogImage} />

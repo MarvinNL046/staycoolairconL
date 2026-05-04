@@ -169,6 +169,7 @@ const KostenAircoPlaatsen: React.FC = () => {
       <MetaTags
         title="Kosten Airco Plaatsen Limburg 2024 | All-in Prijzen | StayCool Airco"
         description="Airco plaatsen kosten vanaf €1.295 all-in ✓ Inclusief installatie & BTW ✓ 10 jaar garantie ✓ F-gassen gecertificeerd ✓ Gratis offerte binnen 24u!"
+        canonicalUrl="https://staycoolairco.nl/kosten-airco-plaatsen"
       />
 
       <SchemaMarkup
@@ -205,7 +206,7 @@ const KostenAircoPlaatsen: React.FC = () => {
           }
         }}
       />
-      <FAQSchema faqs={faqs} />
+      <FAQSchema faqs={[]} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-sky-400 to-sky-500 text-white">

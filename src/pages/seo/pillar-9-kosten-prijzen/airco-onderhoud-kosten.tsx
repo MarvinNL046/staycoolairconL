@@ -270,7 +270,7 @@ const AircoOnderhoudKosten: React.FC = () => {
           }
         }}
       />
-      <FAQSchema faqs={faqs} />
+      <FAQSchema faqs={[]} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-sky-400 to-sky-500 text-white">

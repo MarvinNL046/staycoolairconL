@@ -1,5 +1,6 @@
 import React from 'react';
 import ArticleLayout from '../../components/ArticleLayout';
+import RelatedArticles from '../../components/RelatedArticles';
 import { Calendar, Wrench, AlertTriangle, CheckCircle, ThermometerSun, Clock, PiggyBank, Leaf } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -274,6 +275,49 @@ const HoeVaakAircoOnderhoud = () => {
           </div>
         </div>
       </section>
+
+      <RelatedArticles
+        title="Verder lezen over airco onderhoud"
+        variant="cards"
+        articles={[
+          {
+            title: 'Jaarlijks Airco Onderhoud',
+            path: '/seo/pillar-2-onderhoud-service/jaarlijks-airco-onderhoud',
+            type: 'service',
+            description: 'Wat houdt een jaarlijkse onderhoudsbeurt in?'
+          },
+          {
+            title: 'Airco Onderhoud Kosten',
+            path: '/seo/pillar-9-kosten-prijzen/airco-onderhoud-kosten',
+            type: 'calculator',
+            description: 'Tarieven, contracten en wat is voordeliger'
+          },
+          {
+            title: 'Onderhoudstips voor uw airco',
+            path: '/kennisbank/onderhoudstips',
+            type: 'guide',
+            description: 'Wat u zelf kunt doen tussen beurten door'
+          },
+          {
+            title: 'Airco Filter Reiniging',
+            path: '/seo/pillar-2-onderhoud-service/airco-filter-reiniging',
+            type: 'guide',
+            description: 'Filter zelf schoonmaken of laten doen?'
+          },
+          {
+            title: 'Storingscodes & oplossingen',
+            path: '/kennisbank/storingscodes',
+            type: 'faq',
+            description: 'Veel voorkomende foutmeldingen'
+          },
+          {
+            title: 'Airco Reparatie Service',
+            path: '/seo/pillar-2-onderhoud-service/airco-reparatie-service',
+            type: 'service',
+            description: 'Snelle reparatie bij storingen'
+          },
+        ]}
+      />
     </ArticleLayout>
   );
 };
