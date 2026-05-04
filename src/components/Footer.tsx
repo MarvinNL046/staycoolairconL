@@ -105,7 +105,7 @@ export default function Footer() {
 
         {/* SEO Grid (Collapsed/Subtle) */}
         <div className="border-t border-white/10 pt-12 pb-8">
-          <h4 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-6">Onze Diensten & Regio's</h4>
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-6">Onze Diensten & Regio's</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {seoNavigation.slice(0, 8).map((pillar) => (
               <div key={pillar.slug} className="mb-4">

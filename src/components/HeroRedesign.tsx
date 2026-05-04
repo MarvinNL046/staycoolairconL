@@ -49,10 +49,10 @@ export default function HeroRedesign() {
                 <span className="text-xs font-black uppercase tracking-widest text-quatt-dark">Bekijk onze bedrijfsfilm</span>
               </div>
 
-              <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black text-quatt-dark leading-[0.85] tracking-tighter mb-10 italic">
+              <h2 className="text-5xl sm:text-7xl lg:text-8xl font-black text-quatt-dark leading-[0.85] tracking-tighter mb-10 italic">
                 De toekomst is <br />
                 <span className="text-quatt-orange">elektrisch <br className="hidden sm:block" /> verwarmen.</span>
-              </h1>
+              </h2>
 
               <p className="text-xl sm:text-2xl text-gray-500 font-medium mb-12 tracking-tight max-w-xl mx-auto lg:mx-0 leading-relaxed">
                 Schakel over op de meest efficiënte airco systemen en <span className="text-quatt-dark font-bold">bespaar direct 60%</span> op uw gasrekening.

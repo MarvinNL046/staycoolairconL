@@ -4,7 +4,7 @@ import { getCoordinatesForCity } from '../data/geoCoordinates';
 import { aggregateReviews, getAggregateRatingSchema } from '../data/reviews';
 
 interface SchemaMarkupProps {
-  type: 'LocalBusiness' | 'Service' | 'Product' | 'Article' | 'Review' | 'FAQPage' | 'HowTo' | 'CollectionPage';
+  type: 'LocalBusiness' | 'Service' | 'Product' | 'Article' | 'Review' | 'FAQPage' | 'HowTo' | 'CollectionPage' | 'Organization' | 'WebSite' | 'BreadcrumbList';
   data: any;
   location?: {
     city?: string;
@@ -22,12 +22,12 @@ export default function SchemaMarkup({ type, data, location }: SchemaMarkupProps
   };
 
   const getLocalBusinessSchema = () => {
-    // Get accurate geo coordinates from database or use defaults
+    // Get accurate geo coordinates from database or use HQ as default
     const cityCoordinates = location?.city ? getCoordinatesForCity(location.city) : null;
-    const latitude = location?.latitude || cityCoordinates?.latitude || 51.0;
-    const longitude = location?.longitude || cityCoordinates?.longitude || 5.9;
-    
-    // Determine postal address based on location data
+    const latitude = location?.latitude || cityCoordinates?.latitude || 51.0186;
+    const longitude = location?.longitude || cityCoordinates?.longitude || 5.8408;
+
+    // Determine postal address based on location data; fall back to HQ.
     const postalAddress = location?.city ? {
       "@type": "PostalAddress",
       addressLocality: location.city,
@@ -36,7 +36,10 @@ export default function SchemaMarkup({ type, data, location }: SchemaMarkupProps
       addressCountry: "NL"
     } : {
       "@type": "PostalAddress",
+      streetAddress: "Aan De Bogen 11",
+      addressLocality: "Nieuwstadt",
       addressRegion: "Limburg",
+      postalCode: "6118 AS",
       addressCountry: "NL"
     };
     
@@ -306,6 +309,64 @@ export default function SchemaMarkup({ type, data, location }: SchemaMarkupProps
     ...data
   });
   
+  const getOrganizationSchema = () => ({
+    ...baseSchema,
+    name: "StayCool Airco",
+    url: "https://staycoolairco.nl",
+    logo: "https://staycoolairco.nl/images/logo.svg",
+    image: "https://staycoolairco.nl/images/logo.svg",
+    telephone: "046 202 1430",
+    email: "info@staycoolairco.nl",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Aan De Bogen 11",
+      addressLocality: "Nieuwstadt",
+      addressRegion: "Limburg",
+      postalCode: "6118 AS",
+      addressCountry: "NL"
+    },
+    sameAs: [
+      "https://www.facebook.com/staycoolairco",
+      "https://www.instagram.com/staycoolairco",
+      "https://www.linkedin.com/company/staycoolairco"
+    ],
+    ...data
+  });
+
+  const getWebSiteSchema = () => ({
+    ...baseSchema,
+    name: "StayCool Airco",
+    url: "https://staycoolairco.nl",
+    inLanguage: "nl-NL",
+    publisher: {
+      "@type": "Organization",
+      name: "StayCool Airco",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://staycoolairco.nl/images/logo.svg"
+      }
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://staycoolairco.nl/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    },
+    ...data
+  });
+
+  const getBreadcrumbListSchema = () => ({
+    ...baseSchema,
+    itemListElement: (data.items || []).map((item: { name: string; url: string }, index: number) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url
+    }))
+  });
+
   const schemaMap = {
     LocalBusiness: getLocalBusinessSchema,
     Service: getServiceSchema,
@@ -314,7 +375,10 @@ export default function SchemaMarkup({ type, data, location }: SchemaMarkupProps
     Review: getReviewSchema,
     FAQPage: getFAQPageSchema,
     HowTo: getHowToSchema,
-    CollectionPage: getCollectionPageSchema
+    CollectionPage: getCollectionPageSchema,
+    Organization: getOrganizationSchema,
+    WebSite: getWebSiteSchema,
+    BreadcrumbList: getBreadcrumbListSchema
   };
 
   // Check if the type exists in schemaMap

@@ -98,7 +98,7 @@ function Benefit({ icon: Icon, title, description, color, bg }: { icon: any, tit
         <Icon className="w-7 h-7" />
       </div>
       <div>
-        <h4 className="text-xl font-bold text-quatt-dark mb-1">{title}</h4>
+        <h3 className="text-xl font-bold text-quatt-dark mb-1">{title}</h3>
         <p className="text-gray-600 leading-relaxed">{description}</p>
       </div>
     </div>
