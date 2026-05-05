@@ -19,9 +19,9 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navClasses = `fixed w-full z-50 transition-all duration-300 ${isScrolled
-      ? 'bg-white/90 backdrop-blur-xl shadow-sm py-3 top-0'
-      : 'bg-white/0 backdrop-blur-none py-4 top-0 md:top-[38px]'
+  const navClasses = `fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-xl shadow-sm md:shadow-none ${isScrolled
+      ? 'md:bg-white/90 md:backdrop-blur-xl md:shadow-sm py-3 top-0'
+      : 'md:bg-white/0 md:backdrop-blur-none py-4 top-0 md:top-[38px]'
     }`;
 
   const linkClasses = "text-quatt-dark font-bold tracking-tight hover:text-quatt-orange transition-colors duration-200 text-sm uppercase";
