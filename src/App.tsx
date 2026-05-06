@@ -74,6 +74,10 @@ const AircoBijvullen = lazy(() => import('./pages/AircoBijvullen'));
 const AircoVullenKosten = lazy(() => import('./pages/AircoVullenKosten'));
 const AircoBijvullenZelfDoen = lazy(() => import('./pages/articles/AircoBijvullenZelfDoen'));
 const AircoService = lazy(() => import('./pages/AircoService'));
+const AircoSubsidie = lazy(() => import('./pages/AircoSubsidie'));
+const IsdeAanvragenAirco = lazy(() => import('./pages/IsdeAanvragenAirco'));
+const AircoWarmtepomp = lazy(() => import('./pages/AircoWarmtepomp'));
+const HybrideWarmtepompAirco = lazy(() => import('./pages/HybrideWarmtepompAirco'));
 const AircoReparatieLanding = lazy(() => import('./pages/landing/AircoReparatieLanding'));
 const AircoLatenPlaatsenLanding = lazy(() => import('./pages/landing/AircoLatenPlaatsenLanding'));
 const WatKostAircoInstallatieLanding = lazy(() => import('./pages/landing/WatKostAircoInstallatieLanding'));
@@ -662,6 +666,12 @@ const App = () => {
                 <Route path="/airco-vullen-kosten" element={<AircoVullenKosten />} />
                 <Route path="/kennisbank/airco-bijvullen-zelf-doen" element={<AircoBijvullenZelfDoen />} />
                 <Route path="/airco-service" element={<AircoService />} />
+
+                {/* Cluster 3+4 — Subsidie & airco-warmtepomp */}
+                <Route path="/airco-subsidie" element={<AircoSubsidie />} />
+                <Route path="/isde-aanvragen-airco" element={<IsdeAanvragenAirco />} />
+                <Route path="/airco-warmtepomp" element={<AircoWarmtepomp />} />
+                <Route path="/hybride-warmtepomp-airco" element={<HybrideWarmtepompAirco />} />
                 <Route path="/onderhoud-email" element={<OnderhoudLanding />} />
                 <Route path="/airco-reparatie" element={<AircoReparatieLanding />} />
                 <Route path="/airco-laten-plaatsen" element={<AircoLatenPlaatsenLanding />} />
