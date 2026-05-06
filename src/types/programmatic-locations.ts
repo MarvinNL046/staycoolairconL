@@ -1,3 +1,21 @@
+export type CityTier = 'groot' | 'middel' | 'klein';
+
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export interface CityOverrides {
+  /** Pre-pended before generated FAQs — for genuinely city-specific questions. */
+  extraFaqs?: FaqItem[];
+  /** Appended after tier-generated specialFeatures. */
+  extraSpecialFeatures?: string[];
+  /** Appended after region-based climateFacts. */
+  extraClimateFacts?: string[];
+  /** Path to a city-specific image, e.g. "/images/locations/maastricht.webp". */
+  localImage?: string;
+}
+
 export interface ProgrammaticLocationProfile {
   slug: string;
   city: string;
@@ -9,6 +27,8 @@ export interface ProgrammaticLocationProfile {
   landmarks: [string, string];
   housingMix: string;
   localConstraint: string;
+  tier: CityTier;
+  overrides?: CityOverrides;
 }
 
 export interface LocationCaseStudy {
