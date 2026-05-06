@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="nl">
   <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-748ZSQ3J5L"></script>
     <script>
+      // GTM/GA4 deferred ~2.5s post-load to avoid LCP penalty.
+      // Triggers eerder bij eerste user-interaction (scroll/click/key/touch).
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-748ZSQ3J5L');
+      (function(){
+        var loaded = false;
+        function loadGtm() {
+          if (loaded) return;
+          loaded = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-748ZSQ3J5L';
+          document.head.appendChild(s);
+          ['scroll','click','keydown','touchstart','mousemove'].forEach(function(e){
+            window.removeEventListener(e, loadGtm, { passive: true });
+          });
+        }
+        // Trigger 1: user-interaction → laadt onmiddellijk bij intent
+        ['scroll','click','keydown','touchstart','mousemove'].forEach(function(e){
+          window.addEventListener(e, loadGtm, { passive: true, once: true });
+        });
+        // Trigger 2: timeout 2500ms → vangt no-interaction users (bounces)
+        setTimeout(loadGtm, 2500);
+      })();
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { m } from 'framer-motion';
 import { Play, Check, X, Calendar } from 'lucide-react';
 import Button from './ui/Button';
@@ -7,20 +7,29 @@ import TrustooWidget from './TrustooWidget';
 
 export default function HeroRedesign() {
   const [showVideo, setShowVideo] = useState(false);
+  // Defer background YouTube iframe until after LCP (~2.5s post-mount).
+  // Saves ~1MB payload from critical path; opacity 0.03 = decoratief, niet user-facing.
+  const [loadBgVideo, setLoadBgVideo] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setLoadBgVideo(true), 2500);
+    return () => clearTimeout(t);
+  }, []);
 
   return (
     <section className="relative min-h-[95vh] flex items-center pt-24 pb-32 overflow-hidden bg-quatt-warm">
-      {/* Background Video Overlay (Subtle, decorative) */}
+      {/* Background Video Overlay (Subtle, decorative — deferred load) */}
       <div className="absolute inset-0 z-0 opacity-[0.03] grayscale pointer-events-none overflow-hidden scale-110" aria-hidden="true">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/9m-jkGgfLog?autoplay=1&mute=1&controls=0&loop=1&playlist=9m-jkGgfLog&showinfo=0&rel=0&iv_load_policy=3"
-          className="absolute top-1/2 left-1/2 w-[115%] h-[115%] -translate-x-1/2 -translate-y-1/2 object-cover"
-          title="Decoratieve achtergrondvideo StayCool Airco"
-          frameBorder="0"
-          loading="lazy"
-          tabIndex={-1}
-          allow="autoplay; encrypted-media"
-        />
+        {loadBgVideo && (
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/9m-jkGgfLog?autoplay=1&mute=1&controls=0&loop=1&playlist=9m-jkGgfLog&showinfo=0&rel=0&iv_load_policy=3"
+            className="absolute top-1/2 left-1/2 w-[115%] h-[115%] -translate-x-1/2 -translate-y-1/2 object-cover"
+            title="Decoratieve achtergrondvideo StayCool Airco"
+            frameBorder="0"
+            loading="lazy"
+            tabIndex={-1}
+            allow="autoplay; encrypted-media"
+          />
+        )}
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
