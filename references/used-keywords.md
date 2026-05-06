@@ -84,6 +84,45 @@ Bij het bouwen van een cluster voor een nieuwe page:
 - Onze onderhoudsbeurt-stappen concreet beschreven (kapjes eraf, waterzak, verdamper uitspuiten, antibacteriële spray, buitenunit demonteren, ventilatormotor checken)
 - "Gas/koudemiddel alleen checken bij verdenking" — eerlijk dat we niet onnodig aan F-gas zitten (besparing voor klant + matching met `/airco-bijvullen` voice)
 
+### Cluster 3 — Subsidie / ISDE (toegevoegd 2026-05-06)
+
+| Primary keyword | Vol/mnd | Page | Bron | Cluster-rol |
+|-----------------|--------:|------|------|-------------|
+| `airco subsidie` | ~1.300 | `/airco-subsidie` | ✓ research (SERP) | **Pillar** |
+| `airco subsidie 2026` | ~600 | `/airco-subsidie` | ✓ research | secondary op pillar |
+| `isde airco` | ~250 | `/airco-subsidie` | ✓ research | secondary |
+| `subsidie airco warmtepomp` | ~150 | `/airco-subsidie` | ✓ research | secondary |
+| `isde aanvragen` | ~800 | `/isde-aanvragen-airco` | ✓ research | Supporting (HowTo schema) |
+| `isde aanvragen warmtepomp` | ~300 | `/isde-aanvragen-airco` | ✓ research | secondary |
+| `isde subsidie aanvragen 2026` | ~200 | `/isde-aanvragen-airco` | ✓ research | secondary |
+
+**Cluster 3 architectuur:**
+- Pillar `/airco-subsidie` (2.011w) — eerlijke positie: split-airco GEEN ISDE; wel BTW-9% + soms gemeente
+- Supporting `/isde-aanvragen-airco` (1.309w) — stappenplan voor wie wél lucht-water heeft
+- Cross-link bestaand: `/blog/airco-subsidie-2026-limburg`, `/seo/pillar-9-kosten-prijzen/airco-subsidies-limburg`
+
+**Cluster 3 differentiator:** RVO-bron als basis. Concurrent-sites zoals airco-purmerend.nl claimen ten onrechte ISDE voor split-airco. Onze eerlijke versie is trust-edge + ranking-edge — Google waardeert authoriteit-bronnen.
+
+### Cluster 4 — Airco-warmtepomp (toegevoegd 2026-05-06)
+
+| Primary keyword | Vol/mnd | Page | Bron | Cluster-rol |
+|-----------------|--------:|------|------|-------------|
+| `airco warmtepomp` | ~900 | `/airco-warmtepomp` | ✓ research (SERP) | **Pillar** |
+| `lucht-lucht warmtepomp` | ~600 | `/airco-warmtepomp` | ✓ research | secondary op pillar |
+| `airco als verwarming` | ~400 | `/airco-warmtepomp` | bestaand `/airco-verwarming-kosten-besparing` | concurrent — let op cannibalisatie |
+| `scop waarde airco` | ~200 | `/airco-warmtepomp` | ✓ research | secondary |
+| `hybride warmtepomp` | ~1.500 | `/hybride-warmtepomp-airco` | ✓ research (SERP) | Supporting |
+| `hybride warmtepomp kosten` | ~600 | `/hybride-warmtepomp-airco` | ✓ research | secondary |
+
+**Cluster 4 architectuur:**
+- Pillar `/airco-warmtepomp` (2.112w) — techniek + SCOP/COP + 3 besparingsscenario's voor Limburgse woningen
+- Supporting `/hybride-warmtepomp-airco` (1.335w) — twee betekenissen van "hybride" + reken-voorbeeld
+- Cross-link: `/airco-subsidie` (cluster 3, want subsidie-vraag is veelgesteld bij warmtepomp-onderzoek)
+
+**Cluster 4 differentiator:** drie concrete besparingsscenario's voor Limburgse woningprofielen (rijtjeshuis, geïsoleerde woning, vrijstaande pre-1980). Concurrenten geven generieke "60% besparing" zonder context. Onze versie geeft specifieke jaarkosten en terugverdientijd per huistype.
+
+**Anti-cannibalisation alert:** `/airco-warmtepomp` heeft potentiële overlap met bestaande `/airco-verwarming-kosten-besparing`. Strategie: `/airco-warmtepomp` focust op **techniek + warmtepomp-systeem-vergelijking**; `/airco-verwarming-kosten-besparing` focust op **financieel besparen** als hoofdtitel. Beide kunnen co-bestaan met andere primary keywords.
+
 ### City-primaries — `/airco-installatie/[stad]`
 
 Pattern: `airco installatie [stad]` als primary, plus 4–5 same-intent secondaries.
