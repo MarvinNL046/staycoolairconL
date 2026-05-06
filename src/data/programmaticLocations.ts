@@ -62,8 +62,8 @@ export const programmaticLocations: ProgrammaticLocationProfile[] = [
           answer: 'Voor appartementen in Maastricht adviseren we vaak wandmodellen van Daikin, Mitsubishi Heavy of Toshiba — stijlvol én stil. Bij beperkingen voor buitenunits hebben we alternatieven zoals plaatsing op balkons of platte daken. Voor VvE\'s leveren we vooraf een installatieplan dat we ter goedkeuring kunnen indienen.',
         },
         {
-          question: 'Welke subsidies zijn beschikbaar voor airco-installatie in Maastricht?',
-          answer: 'Bij een airco-warmtepomp kunt u meestal in aanmerking komen voor de ISDE-subsidie (tot €2.000 in 2026, verifieer actuele bedragen op rvo.nl). Daarnaast geldt 9% verlaagd BTW-tarief op installatie als uw woning ouder is dan 2 jaar. We helpen bij de aanvraag en verrekenen de subsidie waar mogelijk direct in de offerte — geen "u kunt het later claimen".',
+          question: 'Welke financiële regelingen gelden voor airco-installatie in Maastricht?',
+          answer: 'Eerlijk: voor een split-airco (lucht-lucht warmtepomp) geldt géén ISDE-subsidie in 2026 — andere sites claimen dat soms ten onrechte. Wat wél: 9% verlaagd BTW-tarief op installatie als uw woning ouder is dan 2 jaar (bespaart u direct ~€190 op een €1.600-installatie). Soms gemeentelijke energieregelingen. Voor de volledige uitleg over wat wel en niet in aanmerking komt: zie onze airco-subsidie-pagina.',
         },
         {
           question: 'Kan ik een airco laten installeren in een studentenwoning in Maastricht?',
