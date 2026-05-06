@@ -11,16 +11,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Resource hints for performance -->
-    <link rel="preconnect" href="https://www.google-analytics.com" />
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <!-- Resource hints for performance — max 4 preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
-    
+    <link rel="dns-prefetch" href="https://scripts.clarity.ms" />
+    <link rel="dns-prefetch" href="https://static.trustoo.nl" />
+
     <!-- Load font with display swap -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
     
+    <!-- LCP-image preload (hero logo) -->
+    <link rel="preload" as="image" href="/images/staycoolairco_logo.png" fetchpriority="high" />
+
     <!-- Icons -->
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     

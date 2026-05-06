@@ -8,9 +8,13 @@ interface LogoProps {
 
 export default function Logo({ className = "h-12 w-auto", style, inverted }: LogoProps) {
   return (
-    <img 
+    <img
       src="/images/staycoolairco_logo.png"
-      alt="StayCool Airconditioning" 
+      alt="StayCool Airconditioning"
+      width={360}
+      height={117}
+      decoding="async"
+      fetchPriority="high"
       className={className}
       style={{
         objectFit: 'contain',
