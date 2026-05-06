@@ -389,6 +389,16 @@ const JaarlijksAircoOnderhoud: React.FC = () => {
                   <h4 className="font-semibold text-gray-900 mb-4">Gerelateerde Services</h4>
                   <ul className="space-y-2 text-sm">
                     <li>
+                      <Link to="/airco-service" className="text-orange-600 hover:text-orange-700 font-semibold">
+                        ← Naar Service-overzicht (alle types)
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/airco-onderhoud" className="text-sky-600 hover:text-sky-700">
+                        → Onderhoudscontract vanaf €11/mnd
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="/seo/pillar-2-onderhoud-service/airco-reparatie-service" className="text-sky-600 hover:text-sky-700">
                         → Airco Reparatie Service
                       </Link>
@@ -399,8 +409,8 @@ const JaarlijksAircoOnderhoud: React.FC = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/seo/pillar-2-onderhoud-service/airco-koudemiddel-bijvullen" className="text-sky-600 hover:text-sky-700">
-                        → Koudemiddel Bijvullen
+                      <Link to="/airco-bijvullen" className="text-sky-600 hover:text-sky-700">
+                        → Airco bijvullen + lekdetectie
                       </Link>
                     </li>
                     <li>

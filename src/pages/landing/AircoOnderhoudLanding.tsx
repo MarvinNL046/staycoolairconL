@@ -35,14 +35,14 @@ export default function AircoOnderhoudLanding() {
   return (
     <>
       <Helmet>
-        <title>Airco Onderhoud vanaf €11/mnd | Voorkom Storingen [2026]</title>
+        <title>Airco Onderhoudscontract vanaf €11/mnd | StayCool Limburg</title>
         <meta
           name="description"
-          content="Airco onderhoud vanaf €11/mnd. F-gassen gecertificeerd, voorkom dure storingen en verleng de levensduur. Erkend in Limburg. Vraag gratis advies aan!"
+          content="Airco onderhoudscontract vanaf €11/mnd: jaarlijks onderhoud + voorrang bij storing + 10% korting op reparatie. F-gas gecertificeerd, heel Limburg. Bel 046 202 1430."
         />
-        <meta 
-          name="keywords" 
-          content="airco onderhoud, airconditioning onderhoud, airco servicebeurt, airco schoonmaken, airco filters vervangen, airco onderhoudcontract"
+        <meta
+          name="keywords"
+          content="airco onderhoudscontract, airco onderhoud abonnement, jaarlijks airco onderhoud, airco servicebeurt, airco schoonmaken, onderhoudsabonnement airco Limburg"
         />
         <link rel="canonical" href="https://staycoolairco.nl/airco-onderhoud" />
       </Helmet>
