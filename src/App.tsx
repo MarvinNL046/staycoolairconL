@@ -70,6 +70,10 @@ const AircoMetBuitenunitLanding = lazy(() => import('./pages/landing/AircoMetBui
 const AircoInstallatieLanding = lazy(() => import('./pages/landing/AircoInstallatieLanding'));
 const AircoInstallateurLanding = lazy(() => import('./pages/landing/AircoInstallateurLanding'));
 const AircoOnderhoudLanding = lazy(() => import('./pages/landing/AircoOnderhoudLanding'));
+const AircoBijvullen = lazy(() => import('./pages/AircoBijvullen'));
+const AircoVullenKosten = lazy(() => import('./pages/AircoVullenKosten'));
+const AircoBijvullenZelfDoen = lazy(() => import('./pages/articles/AircoBijvullenZelfDoen'));
+const AircoService = lazy(() => import('./pages/AircoService'));
 const AircoReparatieLanding = lazy(() => import('./pages/landing/AircoReparatieLanding'));
 const AircoLatenPlaatsenLanding = lazy(() => import('./pages/landing/AircoLatenPlaatsenLanding'));
 const WatKostAircoInstallatieLanding = lazy(() => import('./pages/landing/WatKostAircoInstallatieLanding'));
@@ -89,34 +93,9 @@ const DaikinVsMitsubishiHeavy = lazy(() => import('./pages/comparisons/DaikinVsM
 const SplitVsMonoblock = lazy(() => import('./pages/comparisons/SplitVsMonoblock'));
 const TosotVsLG = lazy(() => import('./pages/comparisons/TosotVsLG'));
 
-// Location Landing Pages
-const RoermondPage = lazy(() => import('./pages/locations/Roermond'));
-const MaastrichtPage = lazy(() => import('./pages/locations/Maastricht'));
-const HeerlenPage = lazy(() => import('./pages/locations/Heerlen'));
-const VenloPage = lazy(() => import('./pages/locations/Venlo'));
-const SittardPage = lazy(() => import('./pages/locations/Sittard'));
-const WeertPage = lazy(() => import('./pages/locations/Weert'));
-const MeerssenPage = lazy(() => import('./pages/locations/Meerssen'));
-const ValkenburgPage = lazy(() => import('./pages/locations/Valkenburg'));
-const KerkradePage = lazy(() => import('./pages/locations/Kerkrade'));
-const BrunssumPage = lazy(() => import('./pages/locations/Brunssum'));
-const GeleenPage = lazy(() => import('./pages/locations/Geleen'));
-const SteinPage = lazy(() => import('./pages/locations/Stein'));
-const BeekPage = lazy(() => import('./pages/locations/Beek'));
-const LandgraafPage = lazy(() => import('./pages/locations/Landgraaf'));
-const VenrayPage = lazy(() => import('./pages/locations/Venray'));
-const HoensbroekPage = lazy(() => import('./pages/locations/Hoensbroek'));
-const GennepPage = lazy(() => import('./pages/locations/Gennep'));
-const EchtPage = lazy(() => import('./pages/locations/Echt'));
-const NederweertPage = lazy(() => import('./pages/locations/Nederweert'));
-const VaalsPage = lazy(() => import('./pages/locations/Vaals'));
-const PanningenPage = lazy(() => import('./pages/locations/Panningen'));
-const MaasbrachtPage = lazy(() => import('./pages/locations/Maasbracht'));
-const EijsdenMargratenPage = lazy(() => import('./pages/locations/EijsdenMargraten'));
-const GulpenWittemPage = lazy(() => import('./pages/locations/GulpenWittem'));
-const VoerendaalPage = lazy(() => import('./pages/locations/Voerendaal'));
-const SimpelveldPage = lazy(() => import('./pages/locations/Simpelveld'));
-const NuthPage = lazy(() => import('./pages/locations/Nuth'));
+// Location Landing Pages — alle 30 cities renderen via één catch-all naar
+// ProgrammaticLocationPage, gevoed uit programmaticLocations.ts met
+// djb2-hash variant-rotatie (zie data/cityCopyVariants.ts).
 const ProgrammaticLocationPage = lazy(() => import('./pages/locations/ProgrammaticLocation'));
 
 // Blog
@@ -241,7 +220,6 @@ const SEOMultiSplitAircoInstallatie = lazy(() => import('./pages/seo/pillar-1-in
 const SEOJaarlijksAircoOnderhoud = lazy(() => import('./pages/seo/pillar-2-onderhoud-service/jaarlijks-airco-onderhoud'));
 const SEOAircoReparatieService = lazy(() => import('./pages/seo/pillar-2-onderhoud-service/airco-reparatie-service'));
 const SEOAircoFilterReiniging = lazy(() => import('./pages/seo/pillar-2-onderhoud-service/airco-filter-reiniging'));
-const SEOAircoKoudemiddelBijvullen = lazy(() => import('./pages/seo/pillar-2-onderhoud-service/airco-koudemiddel-bijvullen'));
 const SEOAircoStoringOplossen = lazy(() => import('./pages/seo/pillar-2-onderhoud-service/airco-storing-oplossen'));
 
 // SEO Landing Pages - Pillar 3: Merken & Modellen
@@ -678,6 +656,12 @@ const App = () => {
                 <Route path="/airco-installatie" element={<AircoInstallatieLanding />} />
                 <Route path="/airco-installateur" element={<AircoInstallateurLanding />} />
                 <Route path="/airco-onderhoud" element={<AircoOnderhoudLanding />} />
+
+                {/* Cluster 1 — Airco bijvullen & service */}
+                <Route path="/airco-bijvullen" element={<AircoBijvullen />} />
+                <Route path="/airco-vullen-kosten" element={<AircoVullenKosten />} />
+                <Route path="/kennisbank/airco-bijvullen-zelf-doen" element={<AircoBijvullenZelfDoen />} />
+                <Route path="/airco-service" element={<AircoService />} />
                 <Route path="/onderhoud-email" element={<OnderhoudLanding />} />
                 <Route path="/airco-reparatie" element={<AircoReparatieLanding />} />
                 <Route path="/airco-laten-plaatsen" element={<AircoLatenPlaatsenLanding />} />
@@ -690,33 +674,7 @@ const App = () => {
                 <Route path="/airco-voor-zolder" element={<AircoVoorZolderLanding />} />
 
                 {/* Location Pages */}
-                <Route path="/airco-installatie/roermond" element={<RoermondPage />} />
-                <Route path="/airco-installatie/maastricht" element={<MaastrichtPage />} />
-                <Route path="/airco-installatie/heerlen" element={<HeerlenPage />} />
-                <Route path="/airco-installatie/venlo" element={<VenloPage />} />
-                <Route path="/airco-installatie/sittard" element={<SittardPage />} />
-                <Route path="/airco-installatie/weert" element={<WeertPage />} />
-                <Route path="/airco-installatie/meerssen" element={<MeerssenPage />} />
-                <Route path="/airco-installatie/valkenburg" element={<ValkenburgPage />} />
-                <Route path="/airco-installatie/kerkrade" element={<KerkradePage />} />
-                <Route path="/airco-installatie/brunssum" element={<BrunssumPage />} />
-                <Route path="/airco-installatie/geleen" element={<GeleenPage />} />
-                <Route path="/airco-installatie/stein" element={<SteinPage />} />
-                <Route path="/airco-installatie/beek" element={<BeekPage />} />
-                <Route path="/airco-installatie/landgraaf" element={<LandgraafPage />} />
-                <Route path="/airco-installatie/venray" element={<VenrayPage />} />
-                <Route path="/airco-installatie/hoensbroek" element={<HoensbroekPage />} />
-                <Route path="/airco-installatie/gennep" element={<GennepPage />} />
-                <Route path="/airco-installatie/echt" element={<EchtPage />} />
-                <Route path="/airco-installatie/nederweert" element={<NederweertPage />} />
-                <Route path="/airco-installatie/vaals" element={<VaalsPage />} />
-                <Route path="/airco-installatie/panningen" element={<PanningenPage />} />
-                <Route path="/airco-installatie/maasbracht" element={<MaasbrachtPage />} />
-                <Route path="/airco-installatie/eijsden-margraten" element={<EijsdenMargratenPage />} />
-                <Route path="/airco-installatie/gulpen-wittem" element={<GulpenWittemPage />} />
-                <Route path="/airco-installatie/voerendaal" element={<VoerendaalPage />} />
-                <Route path="/airco-installatie/simpelveld" element={<SimpelveldPage />} />
-                <Route path="/airco-installatie/nuth" element={<NuthPage />} />
+                {/* All city pages route through one catch-all → ProgrammaticLocationPage. */}
                 <Route path="/airco-installatie/:citySlug" element={<ProgrammaticLocationPage />} />
 
                 {/* Blog Pages */}
@@ -758,7 +716,8 @@ const App = () => {
                 <Route path="/seo/pillar-2-onderhoud-service/jaarlijks-airco-onderhoud" element={<SEOJaarlijksAircoOnderhoud />} />
                 <Route path="/seo/pillar-2-onderhoud-service/airco-reparatie-service" element={<SEOAircoReparatieService />} />
                 <Route path="/seo/pillar-2-onderhoud-service/airco-filter-reiniging" element={<SEOAircoFilterReiniging />} />
-                <Route path="/seo/pillar-2-onderhoud-service/airco-koudemiddel-bijvullen" element={<SEOAircoKoudemiddelBijvullen />} />
+                {/* 301-style redirect: oude SEO-pillar slug verwijst naar nieuwe top-level pillar */}
+                <Route path="/seo/pillar-2-onderhoud-service/airco-koudemiddel-bijvullen" element={<Navigate to="/airco-bijvullen" replace />} />
                 <Route path="/seo/pillar-2-onderhoud-service/airco-storing-oplossen" element={<SEOAircoStoringOplossen />} />
 
                 {/* SEO Landing Pages - Pillar 3: Merken & Modellen */}

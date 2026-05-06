@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 import { ShoppingCart, Wrench, Wind } from 'lucide-react';
 import Breadcrumbs from '../components/Breadcrumbs';
 import MetaTags from '../components/MetaTags';
-import SchemaMarkup from '../components/SchemaMarkup';
-import FAQSchema from '../components/SEO/FAQSchema';
 import Contact from '../components/Contact';
+import VideoPlayer from '../components/VideoPlayer';
 import { getUnsplashImageForCity } from '../utils/unsplashImages';
 import { getCoordinatesForCity } from '../data/geoCoordinates';
+import { aggregateReviews } from '../data/reviews';
 import type { LocationCaseStudy, LocationExpertiseSignals } from '../types/programmatic-locations';
 
 interface FAQ {
@@ -23,6 +23,9 @@ interface LocationLandingPageProps {
   postalCodes?: string;
   populationCount?: number;
   locationImage?: string;
+  introParagraph?: string;
+  servicesParagraph?: string;
+  practicalParagraph?: string;
   climateFacts?: string[];
   specialFeatures?: string[];
   testimonials?: Array<{
@@ -42,12 +45,18 @@ interface LocationLandingPageProps {
   expertiseSignals?: LocationExpertiseSignals;
 }
 
+// Bedrijfsvideo (founder/company video) — same one used in HeroRedesign.
+const STAYCOOL_VIDEO_URL = 'https://www.youtube.com/watch?v=9m-jkGgfLog';
+
 export default function LocationLandingPage({
   city,
   region,
   postalCodes,
   populationCount,
   locationImage,
+  introParagraph,
+  servicesParagraph,
+  practicalParagraph,
   climateFacts = [],
   specialFeatures = [],
   testimonials = [],
@@ -57,101 +66,167 @@ export default function LocationLandingPage({
   caseStudies = [],
   expertiseSignals
 }: LocationLandingPageProps) {
-  // Get Unsplash image for this city or use provided image
   const unsplashImage = getUnsplashImageForCity(city.toLowerCase());
-  
-  // Get geo coordinates for this city
   const cityCoordinates = getCoordinatesForCity(city);
-  
-  // Default values for SEO
-  const serviceType = "Airco Installatie";
-  // Use Unsplash image or provided location image
+  const serviceType = 'Airco Installatie';
   const imageUrl = locationImage || unsplashImage.url;
-  
-  // Calculate average rating from testimonials
-  const averageRating = testimonials.length 
-    ? testimonials.reduce((sum, t) => sum + t.rating, 0) / testimonials.length 
-    : 4.7; // Default rating if no testimonials - company's actual rating
-  
-  // Format postal codes for display
-  const formattedPostalCodes = postalCodes 
-    ? postalCodes.split(',').map(code => code.trim()).join(', ') 
+  const citySlug = city.toLowerCase().replace(/\s+/g, '-');
+  const canonicalUrl = `https://staycoolairco.nl/airco-installatie/${citySlug}`;
+
+  const averageRating = testimonials.length
+    ? testimonials.reduce((sum, t) => sum + t.rating, 0) / testimonials.length
+    : 4.7;
+
+  const formattedPostalCodes = postalCodes
+    ? postalCodes.split(',').map((code) => code.trim()).join(', ')
     : '';
-  
-  // Create SEO-optimized title and description
+
   const pageTitle = `Airco Installateur ${city} | Bij u in de Buurt | StayCool Airco`;
   const pageDescription = `Erkend airco installateur ${city} ✓ Gratis advies ✓ F-gassen gecertificeerd ✓ ${installationCount}+ klanten in ${region}. Nu offerte!`;
-  
-  // Prepare FAQ data for schema markup
-  const faqSchemaData = {
-    questions: faqs.map(faq => ({
-      question: faq.question,
-      answer: faq.answer
-    }))
-  };
 
-  // Prepare review data for schema
-  const reviewsData = testimonials.map(testimonial => ({
+  const reviewsData = testimonials.map((testimonial) => ({
     author: testimonial.name,
     rating: testimonial.rating,
     reviewBody: testimonial.comment,
-    datePublished: testimonial.date
+    datePublished: testimonial.date,
   }));
-  
+
+  // ─── Consolidated @graph schema ────────────────────────────────────────────
+  // BreadcrumbList + Service + FAQPage in één blok — eligibility for rich
+  // results without duplicate JSON-LD scattered across the page.
+  const graphSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${canonicalUrl}#breadcrumbs`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://staycoolairco.nl/',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Werkgebied',
+            item: 'https://staycoolairco.nl/werkgebied',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: city,
+            item: canonicalUrl,
+          },
+        ],
+      },
+      {
+        '@type': 'Service',
+        '@id': `${canonicalUrl}#service`,
+        serviceType,
+        name: `${serviceType} ${city}`,
+        description: pageDescription,
+        url: canonicalUrl,
+        provider: {
+          '@type': 'LocalBusiness',
+          '@id': 'https://staycoolairco.nl/#organization',
+          name: 'StayCool Airco',
+          telephone: '+31462021430',
+          email: 'info@staycoolairco.nl',
+          url: 'https://staycoolairco.nl',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Aan de Bogen 11',
+            addressLocality: 'Nieuwstadt',
+            postalCode: '6118 AS',
+            addressRegion: 'Limburg',
+            addressCountry: 'NL',
+          },
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: aggregateReviews.averageRating.toString(),
+            reviewCount: aggregateReviews.totalReviews.toString(),
+            bestRating: '5',
+            worstRating: '1',
+          },
+        },
+        areaServed: {
+          '@type': 'City',
+          name: city,
+          ...(cityCoordinates && {
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: cityCoordinates.latitude,
+              longitude: cityCoordinates.longitude,
+            },
+          }),
+          containedInPlace: {
+            '@type': 'AdministrativeArea',
+            name: region,
+          },
+        },
+        ...(reviewsData.length > 0 && {
+          review: reviewsData.map((r) => ({
+            '@type': 'Review',
+            author: { '@type': 'Person', name: r.author },
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: r.rating.toString(),
+              bestRating: '5',
+            },
+            reviewBody: r.reviewBody,
+            ...(r.datePublished && { datePublished: r.datePublished }),
+          })),
+        }),
+      },
+      ...(faqs.length > 0
+        ? [
+            {
+              '@type': 'FAQPage',
+              '@id': `${canonicalUrl}#faq`,
+              mainEntity: faqs.map((faq) => ({
+                '@type': 'Question',
+                name: faq.question,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: faq.answer,
+                },
+              })),
+            },
+          ]
+        : []),
+    ],
+  };
+
   return (
     <>
       <MetaTags
         title={pageTitle}
         description={pageDescription}
-        canonicalUrl={`https://staycoolairco.nl/airco-installatie/${city.toLowerCase().replace(/\s+/g, '-')}`}
+        canonicalUrl={canonicalUrl}
         ogImage={imageUrl}
         type="service"
         serviceType={serviceType}
         locationInfo={{
           city,
           region,
-          postalCode: formattedPostalCodes
+          postalCode: formattedPostalCodes,
         }}
         faqs={faqs}
         reviews={reviewsData}
         speakableContent={[
           `StayCool Airco is uw lokale airco specialist in ${city}`,
-          `Wij installeren airconditioners in ${region} sinds jaren`,
+          `Wij installeren airconditioners in ${region} sinds 2021`,
           `Meer dan ${installationCount} tevreden klanten in de regio`,
           `Snelle service en professionele installatie in ${city}`,
-          `Vraag direct een offerte aan voor airco installatie in ${city}`
+          `Vraag direct een offerte aan voor airco installatie in ${city}`,
         ]}
       />
-      
-      <SchemaMarkup 
-        type="Service"
-        data={{
-          name: `${serviceType} ${city}`,
-          description: pageDescription,
-        }}
-        location={{
-          city,
-          region,
-          postalCode: formattedPostalCodes,
-          latitude: cityCoordinates?.latitude,
-          longitude: cityCoordinates?.longitude
-        }}
-      />
-      
-      {/* FAQ Schema */}
-      {faqs.length > 0 && (
-        <SchemaMarkup
-          type="FAQPage"
-          data={faqSchemaData}
-          location={{
-            city,
-            region
-          }}
-        />
-      )}
 
-      {/* Dedicated FAQ Schema for rich snippets */}
-      {faqs.length > 0 && <FAQSchema faqs={faqs} />}
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(graphSchema)}</script>
+      </Helmet>
 
       <m.div
         initial={{ opacity: 0 }}
@@ -164,10 +239,10 @@ export default function LocationLandingPage({
             items={[
               { label: 'Home', path: '/' },
               { label: 'Werkgebied', path: '/werkgebied' },
-              { label: city }
+              { label: city },
             ]}
           />
-          
+
           {/* Hero Section */}
           <section className="mb-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -213,8 +288,8 @@ export default function LocationLandingPage({
                 </div>
               </div>
               <div className="relative rounded-lg overflow-hidden shadow-xl">
-                <img 
-                  src={imageUrl} 
+                <img
+                  src={imageUrl}
                   alt={`Airco installatie in ${city}`}
                   className="w-full h-auto object-cover"
                 />
@@ -232,7 +307,7 @@ export default function LocationLandingPage({
             </div>
           </section>
 
-          {/* Static H1 Section - Critical for SEO with beautiful sky gradient! ☁️ */}
+          {/* Static H1 Section - Critical for SEO with beautiful sky gradient! */}
           <section className="py-16 mb-12 -mx-4 px-4 bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl">
             <div className="max-w-5xl mx-auto text-center">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
@@ -268,24 +343,30 @@ export default function LocationLandingPage({
             </div>
           </section>
 
-          {/* Main Content */}
+          {/* Main Content — uses variant intro/services paragraphs from buildProgrammaticLandingProps */}
           <section className="mb-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               <div className="prose max-w-none">
                 <h2>Professionele Airco Installatie in {city}</h2>
-                <p>
-                  <strong>Zoekt u een betrouwbare airco installateur bij u in de buurt in {city}?</strong> StayCool Airco is uw lokale specialist voor professionele airconditioning installatie in {city} en omgeving. 
-                  Met jarenlange ervaring in {region} hebben wij de kennis en expertise om u te voorzien van de 
-                  perfecte klimaatoplossing voor uw woning of bedrijf.
-                </p>
-                
-                <p>
-                  Als airco specialist dichtbij in {city} begrijpen wij de lokale behoeften perfect. Het klimaat in {region} kent steeds meer warme dagen, waardoor een betrouwbare airconditioning geen luxe meer is, maar een noodzaak voor comfort en productiviteit.
-                  Wij zijn uw airco monteur in de buurt die u graag helpt bij het selecteren, installeren en onderhouden van de perfecte airco voor uw situatie.
-                </p>
-                
+                {introParagraph ? (
+                  <p>{introParagraph}</p>
+                ) : (
+                  <>
+                    <p>
+                      <strong>Zoekt u een betrouwbare airco installateur bij u in de buurt in {city}?</strong> StayCool Airco is uw lokale specialist voor professionele airconditioning installatie in {city} en omgeving.
+                      Met jarenlange ervaring in {region} hebben wij de kennis en expertise om u te voorzien van de
+                      perfecte klimaatoplossing voor uw woning of bedrijf.
+                    </p>
+                    <p>
+                      Als airco specialist dichtbij in {city} begrijpen wij de lokale behoeften perfect. Het klimaat in {region} kent steeds meer warme dagen, waardoor een betrouwbare airconditioning geen luxe meer is, maar een noodzaak voor comfort en productiviteit.
+                    </p>
+                  </>
+                )}
+
+                {servicesParagraph && <p>{servicesParagraph}</p>}
+
                 <h3>Waarom kiezen voor een airco in {city}?</h3>
-                
+
                 <ul>
                   {climateFacts.map((fact, index) => (
                     <li key={index}>{fact}</li>
@@ -294,7 +375,7 @@ export default function LocationLandingPage({
                   <li>Verbeter uw comfort en nachtrust tijdens hete periodes</li>
                   <li>Moderne aircosystemen zijn ook energiezuinige verwarmingsoplossingen</li>
                 </ul>
-                
+
                 {postalCodes && (
                   <>
                     <h3>Wij bedienen alle postcodes in {city}</h3>
@@ -305,7 +386,7 @@ export default function LocationLandingPage({
                     </p>
                   </>
                 )}
-                
+
                 {specialFeatures.length > 0 && (
                   <>
                     <h3>Bijzonderheden voor Airco Installatie in {city}</h3>
@@ -318,7 +399,7 @@ export default function LocationLandingPage({
                 )}
               </div>
             </div>
-            
+
             <div className="bg-gray-50 p-6 rounded-lg shadow-md h-fit">
               <h3 className="text-xl font-semibold mb-4">Waarom StayCool Airco in {city}?</h3>
               <ul className="space-y-3">
@@ -338,7 +419,7 @@ export default function LocationLandingPage({
                   <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  <span>Gecertificeerde monteurs & garantie op installatie</span>
+                  <span>Gecertificeerde monteurs &amp; garantie op installatie</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -355,34 +436,38 @@ export default function LocationLandingPage({
               </ul>
             </div>
           </section>
-          
-          {/* Airco in de buurt Section */}
+
+          {/* Airco in de buurt Section — uses practicalParagraph variant */}
           <section className="mb-12 bg-blue-50 p-8 rounded-lg">
             <h2 className="text-3xl font-bold mb-4">Uw Airco Specialist bij u in de Buurt</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <p className="text-lg mb-4">
-                  Als lokale airco installateur in {city} zijn wij altijd dichtbij. Of u nu zoekt naar "airco installateur bij mij in de buurt" of "airco monteur dichtbij", StayCool Airco staat voor u klaar met:
-                </p>
+                {practicalParagraph ? (
+                  <p className="text-lg mb-4">{practicalParagraph}</p>
+                ) : (
+                  <p className="text-lg mb-4">
+                    Als lokale airco installateur in {city} zijn wij altijd dichtbij. Of u nu zoekt naar &quot;airco installateur bij mij in de buurt&quot; of &quot;airco monteur dichtbij&quot;, StayCool Airco staat voor u klaar.
+                  </p>
+                )}
                 <ul className="space-y-2">
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-blue-600 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
-                    <span><strong>Snelle responstijd</strong> - Binnen 30 minuten bij u in {city} en omgeving</span>
+                    <span><strong>Vrijblijvende opname</strong> aan huis in {city} en omgeving</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-blue-600 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
                     </svg>
-                    <span><strong>Gratis offerte</strong> - Vrijblijvend advies bij u thuis in {postalCodes || city}</span>
+                    <span><strong>Heldere offerte binnen 24-48 uur</strong> met alle posten gespecificeerd</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-blue-600 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    <span><strong>Snelle service</strong> - Meestal binnen 24-48 uur ter plaatse voor reparaties</span>
+                    <span><strong>Plaatsing 1-3 weken</strong> na akkoord (3-4 weken in zomerpiek)</span>
                   </li>
                 </ul>
               </div>
@@ -395,7 +480,7 @@ export default function LocationLandingPage({
                   Bel direct: 046-202-1430
                 </a>
                 <p className="text-sm text-gray-600 mt-3 text-center">
-                  Of vraag online een offerte aan
+                  Of stuur een appje naar 06 36481054 — vaak het snelst.
                 </p>
               </div>
             </div>
@@ -425,7 +510,7 @@ export default function LocationLandingPage({
                   </svg>
                 </a>
               </div>
-              
+
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
                 <div className="text-blue-600 mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -446,7 +531,7 @@ export default function LocationLandingPage({
                   </svg>
                 </a>
               </div>
-              
+
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
                 <div className="text-blue-600 mb-4">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -469,7 +554,7 @@ export default function LocationLandingPage({
               </div>
             </div>
           </section>
-          
+
           {/* Testimonials */}
           {testimonials.length > 0 && (
             <section className="mb-12">
@@ -484,7 +569,7 @@ export default function LocationLandingPage({
                         </svg>
                       ))}
                     </div>
-                    <p className="text-gray-700 italic mb-4">"{testimonial.comment}"</p>
+                    <p className="text-gray-700 italic mb-4">&quot;{testimonial.comment}&quot;</p>
                     <div className="flex justify-between items-center">
                       <span className="font-semibold">{testimonial.name}</span>
                       {testimonial.date && <span className="text-sm text-gray-500">{testimonial.date}</span>}
@@ -512,6 +597,19 @@ export default function LocationLandingPage({
             </section>
           )}
 
+          {/* Bedrijfsvideo — auto-injects VideoObject schema */}
+          <section className="mb-12">
+            <h2 className="text-3xl font-bold mb-6">Maak kennis met StayCool Airco</h2>
+            <div className="max-w-4xl mx-auto">
+              <VideoPlayer
+                videoUrl={STAYCOOL_VIDEO_URL}
+                title={`StayCool Airco — uw lokale specialist in ${city}`}
+                description={`Bekijk wie we zijn en hoe we werken. Marvin Smit en het vaste team van StayCool installeren elke maand airco's in heel Limburg, ook in ${city} en omgeving.`}
+                thumbnailUrl="https://img.youtube.com/vi/9m-jkGgfLog/maxresdefault.jpg"
+              />
+            </div>
+          </section>
+
           {/* EEAT Trust Section */}
           {expertiseSignals && (
             <section className="mb-12">
@@ -536,7 +634,7 @@ export default function LocationLandingPage({
               </div>
             </section>
           )}
-          
+
           {/* FAQs */}
           {faqs.length > 0 && (
             <section className="mb-12">
@@ -555,15 +653,15 @@ export default function LocationLandingPage({
               </div>
             </section>
           )}
-          
+
           {/* Nearby Locations */}
           {nearbyLocations.length > 0 && (
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6">Ook actief in deze omliggende gebieden</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {nearbyLocations.map((location, index) => (
-                  <a 
-                    key={index} 
+                  <a
+                    key={index}
                     href={location.url}
                     className="block p-4 bg-white rounded-lg border border-gray-200 hover:border-blue-500 hover:shadow-md transition-all"
                   >
@@ -598,7 +696,7 @@ export default function LocationLandingPage({
               >
                 <Wrench className="h-10 w-10 mb-4" />
                 <h3 className="text-xl font-bold mb-2">Service in {city}</h3>
-                <p className="text-green-100 mb-4">Snel onderhoud & reparatie in Limburg</p>
+                <p className="text-green-100 mb-4">Snel onderhoud &amp; reparatie in Limburg</p>
                 <span className="inline-flex items-center text-white font-semibold group-hover:translate-x-2 transition-transform">
                   Plan service in →
                 </span>
@@ -623,9 +721,8 @@ export default function LocationLandingPage({
             <h2 className="text-3xl font-bold mb-6">Direct een Airco Installateur bij u in de Buurt in {city}</h2>
             <div className="bg-gray-50 p-6 rounded-lg shadow-md">
               <p className="mb-6">
-                Zoekt u een airco installateur bij u in de buurt in {city}? Wij zijn uw lokale specialist voor airconditioning in {formattedPostalCodes || city} en omgeving. 
-                Vul onderstaand formulier in voor een vrijblijvende offerte en wij nemen binnen 24 uur contact met u op. 
-                Als airco monteur dichtbij in {city} kunnen wij snel bij u langskomen voor advies op maat.
+                Zoekt u een airco installateur bij u in de buurt in {city}? Wij zijn uw lokale specialist voor airconditioning in {formattedPostalCodes || city} en omgeving.
+                Vul onderstaand formulier in voor een vrijblijvende offerte en wij nemen binnen 24 uur contact met u op.
               </p>
               <Contact />
             </div>
