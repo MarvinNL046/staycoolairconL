@@ -156,7 +156,7 @@ export default function MultiStepLeadForm() {
                         >
                             {/* Intent Selection */}
                             <div className="space-y-3">
-                                <label className="text-xs font-black uppercase tracking-widest text-gray-400">Ik ben geïnteresseerd in</label>
+                                <label className="text-xs font-black uppercase tracking-widest text-gray-600">Ik ben geïnteresseerd in</label>
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                                     <button
                                         type="button"
@@ -210,7 +210,7 @@ export default function MultiStepLeadForm() {
 
                             {/* City Input */}
                             <div className="space-y-2">
-                                <label className="text-xs font-black uppercase tracking-widest text-gray-400">Uw Woonplaats</label>
+                                <label className="text-xs font-black uppercase tracking-widest text-gray-600">Uw Woonplaats</label>
                                 <div className="relative">
                                     <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-quatt-orange w-5 h-5" />
                                     <input
@@ -246,7 +246,7 @@ export default function MultiStepLeadForm() {
                                             <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-gray-100" />
                                         ))}
                                     </div>
-                                    <p className="text-xs font-bold text-gray-400">Al 500+ aanvragen in Limburg</p>
+                                    <p className="text-xs font-bold text-gray-600">Al 500+ aanvragen in Limburg</p>
                                 </div>
                             </div>
                         </m.div>

@@ -125,6 +125,9 @@ export default function Navbar() {
             <div className="md:hidden z-50">
               <button
                 onClick={() => setIsOpen(!isOpen)}
+                aria-label={isOpen ? 'Menu sluiten' : 'Menu openen'}
+                aria-expanded={isOpen}
+                aria-controls="mobile-menu"
                 className="p-2 text-quatt-dark hover:bg-gray-100 rounded-full transition-colors"
               >
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -134,7 +137,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Overlay */}
-        <div className={`fixed inset-0 bg-white/95 backdrop-blur-xl z-40 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden pt-24 px-6`}>
+        <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Hoofdmenu" className={`fixed inset-0 bg-white z-40 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden pt-24 px-6 overflow-y-auto`}>
           <div className="flex flex-col space-y-6 text-2xl font-black text-quatt-dark tracking-tight">
             <Link to="/products" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Producten</Link>
             <Link to="/airco-installatie-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Installatie</Link>

@@ -10,12 +10,15 @@ export default function HeroRedesign() {
 
   return (
     <section className="relative min-h-[95vh] flex items-center pt-24 pb-32 overflow-hidden bg-quatt-warm">
-      {/* Background Video Overlay (Subtle) */}
-      <div className="absolute inset-0 z-0 opacity-[0.03] grayscale pointer-events-none overflow-hidden scale-110">
+      {/* Background Video Overlay (Subtle, decorative) */}
+      <div className="absolute inset-0 z-0 opacity-[0.03] grayscale pointer-events-none overflow-hidden scale-110" aria-hidden="true">
         <iframe
           src="https://www.youtube-nocookie.com/embed/9m-jkGgfLog?autoplay=1&mute=1&controls=0&loop=1&playlist=9m-jkGgfLog&showinfo=0&rel=0&iv_load_policy=3"
           className="absolute top-1/2 left-1/2 w-[115%] h-[115%] -translate-x-1/2 -translate-y-1/2 object-cover"
+          title="Decoratieve achtergrondvideo StayCool Airco"
           frameBorder="0"
+          loading="lazy"
+          tabIndex={-1}
           allow="autoplay; encrypted-media"
         />
       </div>
@@ -39,15 +42,17 @@ export default function HeroRedesign() {
                 Plan gratis adviesgesprek
               </Button>
 
-              <div
+              <button
+                type="button"
                 onClick={() => setShowVideo(true)}
+                aria-label="Bekijk de StayCool bedrijfsfilm"
                 className="hidden md:inline-flex items-center gap-3 bg-white px-5 py-2.5 rounded-full border border-gray-100 shadow-sm mb-10 mx-auto lg:mx-0 cursor-pointer hover:border-quatt-orange transition-colors group"
               >
                 <div className="w-6 h-6 bg-quatt-orange/10 rounded-full flex items-center justify-center group-hover:bg-quatt-orange transition-colors">
-                  <Play className="w-3 h-3 text-quatt-orange group-hover:text-white fill-current translate-x-0.5" />
+                  <Play className="w-3 h-3 text-quatt-orange group-hover:text-white fill-current translate-x-0.5" aria-hidden="true" />
                 </div>
                 <span className="text-xs font-black uppercase tracking-widest text-quatt-dark">Bekijk onze bedrijfsfilm</span>
-              </div>
+              </button>
 
               <h2 className="text-5xl sm:text-7xl lg:text-8xl font-black text-quatt-dark leading-[0.85] tracking-tighter mb-10 italic">
                 De toekomst is <br />
@@ -98,15 +103,18 @@ export default function HeroRedesign() {
           <div className="relative w-full max-w-6xl aspect-video rounded-[3rem] overflow-hidden shadow-2xl">
             <iframe
               src="https://www.youtube-nocookie.com/embed/9m-jkGgfLog?autoplay=1"
+              title="StayCool Airco bedrijfsfilm"
               className="w-full h-full"
               allow="autoplay; encrypted-media; fullscreen"
               allowFullScreen
             />
             <button
+              type="button"
+              aria-label="Video sluiten"
               className="absolute top-8 right-8 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
               onClick={(e) => { e.stopPropagation(); setShowVideo(false); }}
             >
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6" aria-hidden="true" />
             </button>
           </div>
         </div>
