@@ -123,6 +123,23 @@ Bij het bouwen van een cluster voor een nieuwe page:
 
 **Anti-cannibalisation alert:** `/airco-warmtepomp` heeft potentiële overlap met bestaande `/airco-verwarming-kosten-besparing`. Strategie: `/airco-warmtepomp` focust op **techniek + warmtepomp-systeem-vergelijking**; `/airco-verwarming-kosten-besparing` focust op **financieel besparen** als hoofdtitel. Beide kunnen co-bestaan met andere primary keywords.
 
+### Cluster 5 — Limburg geo-uitbreiding (toegevoegd 2026-05-06, Fase D)
+
+| Primary keyword | Vol/mnd | Page | Bron | Cluster-rol |
+|-----------------|--------:|------|------|-------------|
+| `airco plaatsen limburg` | ~100 (KD 23) | `/airco-plaatsen-limburg` | ✓ research (SERP) | **Pillar (geo)** |
+| `airco installatie limburg` | secondary | `/airco-plaatsen-limburg` | related-search | secondary |
+| `airco montage limburg` | secondary | `/airco-plaatsen-limburg` | related-search | secondary |
+| `airco installateur limburg` | (gebruikt op `/`) | n.v.t. | - | reeds homepage primary |
+
+**Cluster 5 architectuur:**
+- Pillar `/airco-plaatsen-limburg` (~2.200w) — installatie-actie + Limburg-regio + Bbl 4.107-regelgeving
+- Anti-cannib: legacy `/kennisbank/airco-plaatsen-limburg` → 301 Navigate naar pillar (oude artikel-content uitgefaseerd, signalen geconsolideerd)
+- Cross-cluster links: `/airco-kopen-limburg` (cluster Limburg pillar), `/airco-service` (cluster 1 hub), `/airco-bijvullen` (cluster 1), `/airco-service-limburg` (regio-modifier), `/blog/airco-installatie-zuid-limburg` (geo-blog)
+- Anti-cannib outlinks naar bestaande deepdives: `/seo/pillar-9-kosten-prijzen/kosten-airco-plaatsen` (kosten-deepdive) + `/seo/pillar-7-technische-gidsen/airco-buitenunit-plaatsing` (regelgeving deepdive)
+
+**Cluster 5 differentiator:** enige page in deze SERP die per Limburgse gemeente onderscheid maakt (Maastricht beschermd stadsgezicht ≠ Sittard/Heerlen/Roermond standaard vergunningvrij) + concrete **Bbl 4.107** geluidsnorm 45 dB(A) overdag / 40 dB(A) 's nachts op erfgrens (sinds 1 jan 2024). Concurrenten blijven generiek. Bron: IPLO + Omgevingsloket. Gecombineerd met StayCool's USP-stem (Marvin + vaste monteur Danny + 1.000+ installaties + €1.600 startprijs uit `references/stats.md`).
+
 ### City-primaries — `/airco-installatie/[stad]`
 
 Pattern: `airco installatie [stad]` als primary, plus 4–5 same-intent secondaries.

@@ -45,7 +45,7 @@
 - `/airco-vullen-kosten` — ✅ **LIVE** 2026-05-06 (1.523w, 7 FAQs, kosten-deep-dive met variabelen)
 - `/kennisbank/airco-bijvullen-zelf-doen` — ✅ **LIVE** 2026-05-06 (1.383w, 6 FAQs, €1.500 boete-shock-opener)
 - `/goedkoop-airco-bijvullen` — keyword "goedkoop airco bijvullen" (200) — **Nog te bouwen**
-- ↪ Redirect: `/seo/pillar-2-onderhoud-service/airco-koudemiddel-bijvullen` → `/airco-bijvullen` (✅ live)
+- ↪ Redirect: `/seo/pillar-2-onderhoud-service/airco-koudemiddel-bijvullen` → `/airco-bijvullen` (⚠️ client-side only — zie Infrastructure backlog)
 
 ### Spokes onder `/airco-service` (Fase B)
 - 4 bestaande SEO supporting pages — ✅ **cross-linked** naar service-pillar 2026-05-06
@@ -189,7 +189,7 @@
 
 | URL | Keyword | Vol | KD | Status |
 |---|---|---|---|---|
-| `/airco-plaatsen-limburg` | airco plaatsen limburg | 100 | 23 | **Nieuw** — service+lokaal combo |
+| `/airco-plaatsen-limburg` | airco plaatsen limburg | 100 | 23 | ✅ **LIVE** 2026-05-06 — ~2.200w pillar, BreadcrumbList+Service+FAQPage+LocalBusiness, 8 FAQs, Bbl 4.107 geluidsnorm uitgelegd, Maastricht beschermd stadsgezicht-edge, €1.600 startprijs uit stats.md. ↪ Redirect: `/kennisbank/airco-plaatsen-limburg` → `/airco-plaatsen-limburg` (✅ HTTP 301 via vercel.json + `<Navigate>` fallback). |
 | `/werkgebied/maastricht` | airco installateur maastricht | 150 | 8 | **Nieuw** — eigen geo-page |
 | `/kennisbank/airconditioning-kerkrade` | airco eygelshoven | 150 | 0 | **Bestaand** — eigen page nodig (`/werkgebied/eygelshoven`?) |
 
@@ -343,3 +343,19 @@ Wanneer een spoke uit dit tracker wordt gebouwd:
 7. **Update dit cluster-tracker:** zet status op "live" + datum
 
 8. **Update `references/used-keywords.md`** met primary keyword
+
+---
+
+## 🔧 Infrastructure backlog
+
+Project-wide infra-issues die niet in een content-cluster passen maar wel SEO/architectuur raken.
+
+- **301-migratie sweep** — 33 client-side `<Navigate>` redirects in `src/App.tsx` migreren naar `vercel.json` `redirects[]` array met `permanent: true`. Client-side `<Navigate>` transfeert geen link-equity en Googlebot ziet 200 OK op de oude URL i.p.v. een echte 301. Prioriteit:
+  - **High:** 10× `/seo/pillar-X` shortcuts (link-equity-kritisch)
+  - **High:** `/seo/pillar-2-onderhoud-service/airco-koudemiddel-bijvullen` → `/airco-bijvullen` (Cluster 1)
+  - **Medium:** airco-merk/locatie consolidaties
+  - **Low:** `/about` → `/over`, `/cookies` → `/privacy`, `/vacatures` → `/contact` (interne nav, weinig backlinks)
+  - Schat: 1-2u + audit per redirect of er werkelijk link-equity stroomt.
+  - Pattern (al toegepast op `/kennisbank/airco-plaatsen-limburg` → `/airco-plaatsen-limburg`): voeg redirect toe aan `vercel.json` voor edge-niveau 301; behoud bestaande `<Navigate>` als client-side fallback voor SPA-routing.
+
+- **Reciprocal-links sweep `/airco-plaatsen-limburg`** — 14 city/article-pages verwijzen nog naar legacy `/kennisbank/airco-plaatsen-limburg` via `<Link to>`. De 301 in `vercel.json` vangt dat op, maar directe interne links naar de canonieke pillar-URL is sterker signaal. Plus 3 nieuwe inbound links toevoegen vanaf `/seo/pillar-9-kosten-prijzen/kosten-airco-plaatsen`, `/seo/pillar-7-technische-gidsen/airco-buitenunit-plaatsing`, en `/airco-service-limburg`. Aparte commit. Schat: 15 min.

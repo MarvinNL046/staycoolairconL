@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/kennisbank/airco-plaatsen-limburg",
+      "destination": "/airco-plaatsen-limburg",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]

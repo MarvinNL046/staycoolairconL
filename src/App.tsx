@@ -71,6 +71,7 @@ const AircoInstallatieLanding = lazy(() => import('./pages/landing/AircoInstalla
 const AircoInstallateurLanding = lazy(() => import('./pages/landing/AircoInstallateurLanding'));
 const AircoOnderhoudLanding = lazy(() => import('./pages/landing/AircoOnderhoudLanding'));
 const AircoBijvullen = lazy(() => import('./pages/AircoBijvullen'));
+const AircoPlaatsenLimburg = lazy(() => import('./pages/AircoPlaatsenLimburg'));
 const AircoVullenKosten = lazy(() => import('./pages/AircoVullenKosten'));
 const AircoBijvullenZelfDoen = lazy(() => import('./pages/articles/AircoBijvullenZelfDoen'));
 const AircoService = lazy(() => import('./pages/AircoService'));
@@ -172,7 +173,6 @@ const AircoBrunssum = lazy(() => import('./pages/articles/airco-brunssum'));
 const AircoSittard = lazy(() => import('./pages/articles/airco-sittard'));
 const MitsubishiAircoLimburg = lazy(() => import('./pages/articles/mitsubishi-airco-limburg'));
 const AirconditioningKerkrade = lazy(() => import('./pages/articles/airconditioning-kerkrade'));
-const AircoPlaatsenLimburg = lazy(() => import('./pages/articles/airco-plaatsen-limburg'));
 const EnergiezuinigeAircoLimburg = lazy(() => import('./pages/articles/energiezuinige-airco-limburg'));
 const AircoVerwarmingKostenBesparing = lazy(() => import('./pages/AircoVerwarmingKostenBesparing'));
 const AircoVerwarmingVoordelen = lazy(() => import('./pages/articles/airco-verwarming-voordelen'));
@@ -643,7 +643,7 @@ const App = () => {
                 <Route path="/kennisbank/airco-sittard" element={<AircoSittard />} />
                 <Route path="/kennisbank/mitsubishi-airco-limburg" element={<MitsubishiAircoLimburg />} />
                 <Route path="/kennisbank/airconditioning-kerkrade" element={<AirconditioningKerkrade />} />
-                <Route path="/kennisbank/airco-plaatsen-limburg" element={<AircoPlaatsenLimburg />} />
+                <Route path="/kennisbank/airco-plaatsen-limburg" element={<Navigate to="/airco-plaatsen-limburg" replace />} />
                 <Route path="/kennisbank/energiezuinige-airco-limburg" element={<EnergiezuinigeAircoLimburg />} />
                 <Route path="/airco-verwarming-kosten-besparing" element={<AircoVerwarmingKostenBesparing />} />
                 <Route path="/kennisbank/airco-verwarming-voordelen" element={<AircoVerwarmingVoordelen />} />
@@ -666,6 +666,9 @@ const App = () => {
                 <Route path="/airco-vullen-kosten" element={<AircoVullenKosten />} />
                 <Route path="/kennisbank/airco-bijvullen-zelf-doen" element={<AircoBijvullenZelfDoen />} />
                 <Route path="/airco-service" element={<AircoService />} />
+
+                {/* Cluster 4 — Limburg uitbreiding (geo-cluster) */}
+                <Route path="/airco-plaatsen-limburg" element={<AircoPlaatsenLimburg />} />
 
                 {/* Cluster 3+4 — Subsidie & airco-warmtepomp */}
                 <Route path="/airco-subsidie" element={<AircoSubsidie />} />
