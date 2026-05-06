@@ -315,8 +315,8 @@ const AircoServiceLimburgLanding: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Airco Service Limburg | Onderhoud & Reparatie | StayCool</title>
-        <meta name="description" content="Airco service in heel Limburg. ✓ Snelle service ✓ Onderhoudscontract vanaf €11/maand ✓ Alle merken ✓ Binnen 24u ter plaatse. Bel 046 202 1430." />
+        <title>Airco Service in Limburg | Maastricht t/m Venlo | StayCool</title>
+        <meta name="description" content="Lokale airco service in Limburg — Maastricht, Heerlen, Sittard, Roermond, Venlo, Weert. Binnen 24u ter plaatse, eigen team uit Nieuwstadt. F-gas + STEK gecertificeerd. Bel 046 202 1430." />
         <meta name="keywords" content="airco service limburg, airconditioning service limburg, airco onderhoud limburg, airco reparatie limburg, airco storing limburg" />
         <link rel="canonical" href="https://staycoolairco.nl/airco-service-limburg" />
       </Helmet>
@@ -341,11 +341,13 @@ const AircoServiceLimburgLanding: React.FC = () => {
                 <span className="text-sm font-medium">Gecertificeerd • Snelle Service • Heel Limburg</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Airco Service Limburg
+                Airco service in heel Limburg
               </h1>
-              <p className="text-xl mb-8 leading-relaxed">
-                Professionele airco service in heel Limburg. Van preventief onderhoud 
-                tot spoedreparaties. Alle merken, transparante prijzen.
+              <p className="text-xl mb-4 leading-relaxed">
+                Lokale service in <strong>Maastricht, Heerlen, Sittard-Geleen, Roermond, Venlo, Weert, Kerkrade, Brunssum, Landgraaf, Valkenburg</strong> en alle gemeenten daartussen — vanuit Nieuwstadt, eigen team, korte aanrijtijden.
+              </p>
+              <p className="text-base mb-8 leading-relaxed opacity-90">
+                Op zoek naar een algemeen overzicht van onze service-typen (onderhoud, reparatie, bijvullen, storing)? Bekijk de <Link to="/airco-service" className="underline font-semibold">service-hub</Link>.
               </p>
               
               {/* Quick Stats */}
