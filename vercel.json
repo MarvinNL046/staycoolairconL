@@ -7,7 +7,7 @@
     }
   ],
   "rewrites": [
-    { "source": "/((?!api/).*)", "destination": "/index.html" }
+    { "source": "/((?!api/|fonts/|images/|assets/|.*\\.[a-zA-Z0-9]+$).*)", "destination": "/index.html" }
   ],
   "headers": [
     {
