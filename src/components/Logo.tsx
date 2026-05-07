@@ -13,8 +13,8 @@ export default function Logo({ className = "h-12 w-auto", style, inverted }: Log
       alt="StayCool Airconditioning"
       width={360}
       height={117}
+      loading="lazy"
       decoding="async"
-      fetchPriority="high"
       className={className}
       style={{
         objectFit: 'contain',

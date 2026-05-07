@@ -2,12 +2,13 @@
 <html lang="nl">
   <head>
     <script>
-      // GTM/GA4 deferred ~2.5s post-load to avoid LCP penalty.
-      // Triggers eerder bij eerste user-interaction (scroll/click/key/touch).
+      // GTM/GA4 init — gtag() queue is direct beschikbaar voor early events
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-748ZSQ3J5L');
+      // Loader uitstellen tot eerste user-interaction OR 5s timeout —
+      // langer dan LCP-window om LCP-tijd niet te besmetten.
       (function(){
         var loaded = false;
         function loadGtm() {
@@ -17,16 +18,11 @@
           s.async = true;
           s.src = 'https://www.googletagmanager.com/gtag/js?id=G-748ZSQ3J5L';
           document.head.appendChild(s);
-          ['scroll','click','keydown','touchstart','mousemove'].forEach(function(e){
-            window.removeEventListener(e, loadGtm, { passive: true });
-          });
         }
-        // Trigger 1: user-interaction → laadt onmiddellijk bij intent
         ['scroll','click','keydown','touchstart','mousemove'].forEach(function(e){
           window.addEventListener(e, loadGtm, { passive: true, once: true });
         });
-        // Trigger 2: timeout 2500ms → vangt no-interaction users (bounces)
-        setTimeout(loadGtm, 2500);
+        setTimeout(loadGtm, 5000);
       })();
     </script>
     <meta charset="UTF-8" />
@@ -44,9 +40,6 @@
     <!-- Load font with display swap -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
     
-    <!-- LCP-image preload (hero logo) -->
-    <link rel="preload" as="image" href="/images/staycoolairco_logo.png" fetchpriority="high" />
-
     <!-- Icons -->
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     

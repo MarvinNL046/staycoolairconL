@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { m } from 'framer-motion';
 import { Play, Check, X, Calendar } from 'lucide-react';
 import Button from './ui/Button';
 import MultiStepLeadForm from './MultiStepLeadForm';
@@ -7,41 +6,23 @@ import TrustooWidget from './TrustooWidget';
 
 export default function HeroRedesign() {
   const [showVideo, setShowVideo] = useState(false);
-  // Defer background YouTube iframe until after LCP (~2.5s post-mount).
-  // Saves ~1MB payload from critical path; opacity 0.03 = decoratief, niet user-facing.
-  const [loadBgVideo, setLoadBgVideo] = useState(false);
+  // TrustooWidget pas mounten 5s post-load — voorkomt 616ms LCP-blocking
+  // door 3 woff2 fonts van static.trustoo.nl op critical path.
+  const [showTrustoo, setShowTrustoo] = useState(false);
   useEffect(() => {
-    const t = setTimeout(() => setLoadBgVideo(true), 2500);
+    const t = setTimeout(() => setShowTrustoo(true), 5000);
     return () => clearTimeout(t);
   }, []);
 
   return (
     <section className="relative min-h-[95vh] flex items-center pt-24 pb-32 overflow-hidden bg-quatt-warm">
-      {/* Background Video Overlay (Subtle, decorative — deferred load) */}
-      <div className="absolute inset-0 z-0 opacity-[0.03] grayscale pointer-events-none overflow-hidden scale-110" aria-hidden="true">
-        {loadBgVideo && (
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/9m-jkGgfLog?autoplay=1&mute=1&controls=0&loop=1&playlist=9m-jkGgfLog&showinfo=0&rel=0&iv_load_policy=3"
-            className="absolute top-1/2 left-1/2 w-[115%] h-[115%] -translate-x-1/2 -translate-y-1/2 object-cover"
-            title="Decoratieve achtergrondvideo StayCool Airco"
-            frameBorder="0"
-            loading="lazy"
-            tabIndex={-1}
-            allow="autoplay; encrypted-media"
-          />
-        )}
-      </div>
+      {/* Background YouTube iframe verwijderd — opacity 0.03 = decoratief, kost 1MB+ + LCP-tijd */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-          {/* Left: Content */}
+          {/* Left: Content — geen framer-motion wrapper voor LCP-snelheid */}
           <div className="max-w-2xl text-center lg:text-left">
-            <m.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
               <Button
                 href="https://afspraken.staycoolairco.nl"
                 variant="primary"
@@ -84,21 +65,15 @@ export default function HeroRedesign() {
                   </div>
                 </div>
               </div>
-            </m.div>
           </div>
 
-          {/* Right: Lead Form */}
-          <m.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative h-full"
-          >
+          {/* Right: Lead Form — geen framer-motion wrapper, deferred Trustoo */}
+          <div className="relative h-full">
             <MultiStepLeadForm />
-            <div className="mt-6 flex justify-center">
-              <TrustooWidget size="small" />
+            <div className="mt-6 flex justify-center min-h-[40px]">
+              {showTrustoo && <TrustooWidget size="small" />}
             </div>
-          </m.div>
+          </div>
 
         </div>
       </div>
@@ -106,6 +81,9 @@ export default function HeroRedesign() {
       {/* Video Lightbox */}
       {showVideo && (
         <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Bedrijfsvideo"
           className="fixed inset-0 z-[100] flex items-center justify-center bg-quatt-dark/95 backdrop-blur-xl p-4 sm:p-10"
           onClick={() => setShowVideo(false)}
         >
