@@ -84,10 +84,13 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 1000,
     assetsInlineLimit: 4096,
-    sourcemap: process.env.NODE_ENV !== 'production',
+    // Sourcemaps in production → fixt Lighthouse "missing sourcemap" warning
+    sourcemap: true,
     minify: 'esbuild',
     cssCodeSplit: true,
-    target: 'es2015',
+    // ES2022 = baseline modern browsers (Chrome 94+, Safari 15.4+, Firefox 93+)
+    // → bespaart polyfills voor Array.prototype.flat, etc. (~12 KiB)
+    target: 'es2022',
     reportCompressedSize: process.env.NODE_ENV === 'production',
     emptyOutDir: true,
     outDir: 'dist',
