@@ -29,17 +29,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Resource hints for performance — max 4 preconnects, rest dns-prefetch -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Resource hints for performance -->
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin.woff2" crossorigin />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
     <link rel="dns-prefetch" href="https://scripts.clarity.ms" />
     <link rel="dns-prefetch" href="https://static.trustoo.nl" />
 
-    <!-- Load font with display swap -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <!-- Inter font is now self-hosted via /fonts/inter-latin.woff2 (see src/index.css)
+         eliminates ~780ms render-blocking Google Fonts request -->
     
     <!-- Icons -->
     <link rel="icon" type="image/png" href="/images/favicon.png" />
