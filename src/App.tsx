@@ -57,6 +57,7 @@ const Aircos = lazy(() => import('./pages/Aircos'));
 
 // Naked leadgen landing pages (paid traffic, /lp/ prefix — geen nav/footer)
 const AircoInstallatieLP = lazy(() => import('./pages/lp/AircoInstallatieLP'));
+const AircoInstallatieLPB = lazy(() => import('./pages/lp/AircoInstallatieLPB'));
 
 // Manual Pages
 const LGHandleiding = lazy(() => import('./pages/manuals/LGHandleiding'));
@@ -540,6 +541,7 @@ const App = () => {
                 <Route path="/products/tosot-mobiele-airco" element={<TosotMobieleAircoPage />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/lp/airco-installatie" element={<AircoInstallatieLP />} />
+                <Route path="/lp/airco-installatie-b" element={<AircoInstallatieLPB />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/airco-covers" element={<AircoCovers />} />
                 <Route path="/products/airco/:productId" element={<ScrapedProductDetail />} />
