@@ -55,6 +55,9 @@ const ThuisbatterijCalculator = lazy(() => import('./pages/ThuisbatterijCalculat
 const Thuisbatterijen = lazy(() => import('./pages/Thuisbatterijen'));
 const Aircos = lazy(() => import('./pages/Aircos'));
 
+// Naked leadgen landing pages (paid traffic, /lp/ prefix — geen nav/footer)
+const AircoInstallatieLP = lazy(() => import('./pages/lp/AircoInstallatieLP'));
+
 // Manual Pages
 const LGHandleiding = lazy(() => import('./pages/manuals/LGHandleiding'));
 const TosotHandleiding = lazy(() => import('./pages/manuals/TosotHandleiding'));
@@ -428,6 +431,10 @@ const preloadCriticalRoutes = () => {
 const App = () => {
   const location = useLocation();
 
+  // Naked layout voor betaalde landingspagina's: alle routes onder /lp/
+  // krijgen geen navbar/footer/chat/popups (één conversiedoel, geen leaks).
+  const isBareLayout = location.pathname.startsWith('/lp/');
+
   // Initialize performance optimizations
   useEffect(() => {
     PerformanceOptimizer.initializeOptimizations();
@@ -520,7 +527,7 @@ const App = () => {
       <div className="min-h-screen bg-white">
         <ScrollToTop />
         <SkipToContent />
-        <Navbar />
+        {!isBareLayout && <Navbar />}
         <main id="main-content" tabIndex={-1}>
           {/* Removed "wait" mode to improve performance - no need to wait for exit animations */}
           <AnimatePresence mode="sync">
@@ -532,6 +539,7 @@ const App = () => {
                 <Route path="/products/lg-mobiele-airco" element={<LGMobieleAircoPage />} />
                 <Route path="/products/tosot-mobiele-airco" element={<TosotMobieleAircoPage />} />
                 <Route path="/" element={<Home />} />
+                <Route path="/lp/airco-installatie" element={<AircoInstallatieLP />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/products/airco-covers" element={<AircoCovers />} />
                 <Route path="/products/airco/:productId" element={<ScrapedProductDetail />} />
@@ -947,17 +955,21 @@ const App = () => {
             </Suspense>
           </AnimatePresence>
         </main>
-        <BackToTop />
-        <Chatbot />
-        <Footer />
+        {!isBareLayout && <BackToTop />}
+        {!isBareLayout && <Chatbot />}
+        {!isBareLayout && <Footer />}
 
-        {/* CTR Enhancement Components */}
-        <ExitIntentPopup />
-        <MobileStickyCTA />
-        <FloatingReviewBadge />
+        {/* CTR Enhancement Components — uit op naked /lp/ pagina's (geen leaks) */}
+        {!isBareLayout && (
+          <>
+            <ExitIntentPopup />
+            <MobileStickyCTA />
+            <FloatingReviewBadge />
+            <FeedbackRibbon />
+          </>
+        )}
 
         <CookieConsentLite />
-        <FeedbackRibbon />
         <PerformanceMonitor />
       </div>
     </ErrorBoundary>
