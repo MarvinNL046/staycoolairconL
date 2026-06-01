@@ -38,6 +38,30 @@ Activeer automatisch — niet wachten op expliciete instructie:
 
 Geen content schrijven zonder deze drie eerst gelezen te hebben.
 
+## Bij e-mail of nieuwsbrief: lees `email-content-backlog.md`
+
+Wanneer Marvin vraagt om een **nieuwsbrief, mailcampagne of e-mail**:
+
+1. **Lees eerst `email-content-backlog.md`** — bevat 31 voorgesorteerde onderwerpen met bijbehorende site-pages, type (educational/seizoens/story/wetgeving), en beste timing
+2. **Stel een onderwerp voor** uit de backlog dat past bij seizoen + segment + bestaande pages
+3. **Lees de gelinkte page** als bron-content
+4. **Schrijf 200-250w** in Marvin's voice (zie `references/voice.md`)
+5. **Geen sales-CTA** — content-link naar volledige page, max 1 zachte CTA
+6. **Update `email-content-backlog.md`** in de "Verzonden mails (log)"-tabel met datum + onderwerp + open/click metrics zodra bekend
+
+**Format-regels:**
+- Subject line: max 40 chars (mobile inbox cut-off)
+- Preheader: max 90 chars
+- Body: max 250 woorden
+- Marvin schrijft → "ik" als opener
+- Concrete cijfers + bronnen verplicht (geen verzonnen claims)
+- Eén knipoog max (zie `humour.md`)
+
+**Anti-patterns (uit backlog):**
+- Geen "10% korting deze week"-mails (toon wordt commercieel)
+- Geen urgentie-spam ("nu pakken!")
+- Geen mails > 400w body (alles boven dat: link naar de page)
+
 ## VERPLICHT — SERP-research vóór elke page (WebSearch + PAA)
 
 Geen content schrijven zonder eerst SERP-data te hebben. Dit is geen optie:
