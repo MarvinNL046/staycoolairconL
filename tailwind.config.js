@@ -27,20 +27,33 @@ export default {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
       colors: {
-        // Quatt-inspired design system
+        // StayCool brand design system (was Quatt-orange — remapped to brand blue 2026-06)
         quatt: {
-          orange: '#F06635', // Primary encoded CTA
-          warm: '#F9F8F6',   // Background warm white
+          // NOTE: token name kept as `quatt.orange` so ~190 existing usages keep working,
+          // but it now renders the StayCool brand CTA blue (#2080C0, white-text ~4:1).
+          orange: '#2080C0', // Primary CTA (brand "waaier" transition blue)
+          warm: '#F9F8F6',   // Background warm white (neutral, unchanged)
           dark: '#2B2C2D',   // Primary text
           gray: '#E6E6E6',   // Borders/Subtle backgrounds
         },
         blue: {
-          600: '#2563eb', // WCAG AA compliant
-          700: '#1d4ed8', // WCAG AAA compliant
+          600: '#2563eb', // WCAG AA compliant — prose/inline links (kept)
+          700: '#1d4ed8', // WCAG AAA compliant — prose/inline links (kept)
         },
+        // The `orange-*` scale is intentionally remapped to StayCool brand BLUE.
+        // All existing `*-orange-*` utility classes now render blue without per-file edits.
+        // Anchors: 400 = brand light #40B0E0 · 600 = CTA #2080C0 · 900 = brand dark #304090
         orange: {
-          500: '#F06635', // Updated to match Quatt orange
-          600: '#D95528', // Darker shade for hover
+          50:  '#ecf7fc',
+          100: '#cfeaf8',
+          200: '#a6d8f1',
+          300: '#6ec6ea',
+          400: '#40B0E0', // brand light blue — accent / icons / borders / gradient end
+          500: '#2596d2',
+          600: '#2080C0', // primary CTA background (white text ~4:1)
+          700: '#2070B0', // darker — hover / active
+          800: '#2a5aa0',
+          900: '#304090', // brand dark blue — deepest fills / headings
         },
         gray: {
           600: '#4b5563', // WCAG AA compliant for large text

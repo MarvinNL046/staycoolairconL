@@ -138,7 +138,7 @@ export default function ServiceLandingPage({ slug }: ServiceLandingPageProps) {
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <a
                     href="#offerte"
-                    className="shiny-btn relative inline-flex items-center justify-center overflow-hidden rounded-3xl bg-quatt-orange px-8 py-4 text-base font-extrabold text-white shadow-xl shadow-quatt-orange/20 transition-all hover:bg-[#D95528]"
+                    className="shiny-btn relative inline-flex items-center justify-center overflow-hidden rounded-3xl bg-quatt-orange px-8 py-4 text-base font-extrabold text-white shadow-xl shadow-quatt-orange/20 transition-all hover:bg-[#2070B0]"
                   >
                     Ontvang vrijblijvend een offerte
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -225,7 +225,7 @@ export default function ServiceLandingPage({ slug }: ServiceLandingPageProps) {
               </p>
               <a
                 href="#contact"
-                className="shiny-btn relative inline-flex w-full items-center justify-center overflow-hidden rounded-3xl bg-quatt-orange px-8 py-4 text-base font-extrabold text-white shadow-xl shadow-quatt-orange/20 transition-all hover:bg-[#D95528]"
+                className="shiny-btn relative inline-flex w-full items-center justify-center overflow-hidden rounded-3xl bg-quatt-orange px-8 py-4 text-base font-extrabold text-white shadow-xl shadow-quatt-orange/20 transition-all hover:bg-[#2070B0]"
               >
                 Start je aanvraag
                 <ArrowRight className="ml-2 h-5 w-5" />
