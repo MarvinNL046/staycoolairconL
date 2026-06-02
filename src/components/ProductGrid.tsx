@@ -7,7 +7,7 @@ import Card from './ui/Card';
 import Button from './ui/Button';
 import { cn } from '../utils/cn';
 
-type BrandFilter = 'all' | 'LG' | 'Tosot' | 'MaxiCool';
+type BrandFilter = 'all' | 'LG' | 'Tosot' | 'MaxiCool' | 'Mitsubishi Electric';
 type TypeFilter = 'all' | 'single-split' | 'multi-split' | 'commercieel';
 
 interface ProductGridProps {
@@ -69,7 +69,7 @@ export default function ProductGrid({
           <div className="mb-20 flex flex-col items-center gap-8">
             {/* Brand Filter */}
             <div className="flex flex-wrap justify-center gap-4">
-              {(['all', 'LG', 'Tosot', 'MaxiCool'] as BrandFilter[]).map((brand) => (
+              {(['all', 'LG', 'Tosot', 'MaxiCool', 'Mitsubishi Electric'] as BrandFilter[]).map((brand) => (
                 <button
                   key={brand}
                   onClick={() => handleBrandFilter(brand)}

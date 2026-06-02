@@ -16,7 +16,7 @@ export interface AircoProduct {
   id: string;
   sku: string | null;
   name: string;
-  brand: 'LG' | 'Tosot' | 'MaxiCool' | 'Overig';
+  brand: 'LG' | 'Tosot' | 'MaxiCool' | 'Mitsubishi Electric' | 'Overig';
   type: 'single-split' | 'multi-split' | 'commercieel' | 'overig';
   category: string;
   capacity: string | null;
@@ -40,6 +40,94 @@ export interface AircoProduct {
 }
 
 export const aircoProducts: AircoProduct[] = [
+  {
+    "id": "mitsubishi-msz-hr35vf",
+    "sku": "MSZ-HR35VF",
+    "name": "Mitsubishi Electric MSZ-HR35VF airco R32 3,5 kW Set",
+    "brand": "Mitsubishi Electric",
+    "type": "single-split",
+    "category": "Mitsubishi Single-split",
+    "capacity": "3.5",
+    "coolingCapacity": "3.5",
+    "heatingCapacity": null,
+    "description": "De Mitsubishi Electric MSZ-HR35VF is een complete single-split set met een koelvermogen van 3,5 kW (12.000 BTU), ideaal voor het koelen én verwarmen van middelgrote ruimtes zoals woon- en slaapkamers. De set combineert de MSZ-HR35VF binnenunit met de MUZ-HR35VF buitenunit en draait op het milieuvriendelijke R32-koudemiddel. Dankzij de geavanceerde inverter-techniek werkt de unit zeer stil (vanaf 22 dB(A)) en energiezuinig: energielabel A++/A++ met een SEER van 6,2 en SCOP van 4,3. WiFi-bediening is optioneel verkrijgbaar.\n\nMitsubishi Electric staat al decennia bekend om betrouwbare, duurzame klimaatsystemen met een lange levensduur. StayCool Airco installeert de MSZ-HR35VF inclusief montage door onze F-gassen gecertificeerde monteurs. Vraag een vrijblijvende offerte aan voor een installatie op maat.",
+    "dimensions": {
+      "binnenunit": "838 x 280 x 228 mm (BxHxD)",
+      "buitenunit": "699 x 538 x 249 mm (BxHxD)"
+    },
+    "energyLabel": "A++",
+    "seer": "6.2",
+    "scop": "4.3",
+    "soundLevel": "22 dB(A)",
+    "specifications": {
+      "Merk": "Mitsubishi Electric",
+      "Model binnenunit": "MSZ-HR35VF",
+      "Model buitenunit": "MUZ-HR35VF",
+      "Koelvermogen": "3,5 kW (12.000 BTU)",
+      "Energieklasse (koelen/verwarmen)": "A++/A++",
+      "SEER": "6,2",
+      "SCOP": "4,3",
+      "Koudemiddel": "R32",
+      "Geluidsdrukniveau binnenunit": "22 / 38 dB(A)",
+      "Gewicht binnenunit": "8,5 kg",
+      "Gewicht buitenunit": "24 kg",
+      "WiFi": "Optioneel"
+    },
+    "image": "/images/airco-products/mitsubishi-msz-hr35vf-main.webp",
+    "images": [
+      {
+        "path": "/images/airco-products/mitsubishi-msz-hr35vf-main.webp",
+        "type": "main",
+        "filename": "mitsubishi-msz-hr35vf-main.webp"
+      }
+    ],
+    "url": "/products/airco/mitsubishi-msz-hr35vf",
+    "documents": []
+  },
+  {
+    "id": "mitsubishi-msz-hr50vf",
+    "sku": "MSZ-HR50VF",
+    "name": "Mitsubishi Electric MSZ-HR50VF airco R32 5,0 kW Set",
+    "brand": "Mitsubishi Electric",
+    "type": "single-split",
+    "category": "Mitsubishi Single-split",
+    "capacity": "5.0",
+    "coolingCapacity": "5.0",
+    "heatingCapacity": null,
+    "description": "De Mitsubishi Electric MSZ-HR50VF is een complete single-split set met een koelvermogen van 5,0 kW (18.000 BTU), geschikt voor grotere ruimtes en open woonkamers. De set bestaat uit de MSZ-HR50VF binnenunit en de MUZ-HR50VF buitenunit en gebruikt het milieuvriendelijke R32-koudemiddel. Met inverter-techniek levert de unit krachtige prestaties bij een laag verbruik: energielabel A++/A++ met een SEER van 6,5 en SCOP van 4,3. WiFi-bediening is optioneel verkrijgbaar.\n\nMitsubishi Electric is een van de meest gewaardeerde merken in klimaatbeheersing, met de nadruk op betrouwbaarheid en een lange levensduur. StayCool Airco verzorgt de volledige installatie van de MSZ-HR50VF met F-gassen gecertificeerde monteurs. Vraag een vrijblijvende offerte aan voor een voorstel op maat.",
+    "dimensions": {
+      "binnenunit": "838 x 280 x 228 mm (BxHxD)",
+      "buitenunit": "800 x 550 x 285 mm (BxHxD)"
+    },
+    "energyLabel": "A++",
+    "seer": "6.5",
+    "scop": "4.3",
+    "soundLevel": "60 dB(A)",
+    "specifications": {
+      "Merk": "Mitsubishi Electric",
+      "Model binnenunit": "MSZ-HR50VF",
+      "Model buitenunit": "MUZ-HR50VF",
+      "Koelvermogen": "5,0 kW (18.000 BTU)",
+      "Energieklasse (koelen/verwarmen)": "A++/A++",
+      "SEER": "6,5",
+      "SCOP": "4,3",
+      "Koudemiddel": "R32",
+      "Geluidsvermogensniveau": "60 dB(A)",
+      "Gewicht binnenunit": "9 kg",
+      "Gewicht buitenunit": "35 kg",
+      "WiFi": "Optioneel"
+    },
+    "image": "/images/airco-products/mitsubishi-msz-hr50vf-main.webp",
+    "images": [
+      {
+        "path": "/images/airco-products/mitsubishi-msz-hr50vf-main.webp",
+        "type": "main",
+        "filename": "mitsubishi-msz-hr50vf-main.webp"
+      }
+    ],
+    "url": "/products/airco/mitsubishi-msz-hr50vf",
+    "documents": []
+  },
   {
     "id": "81002212",
     "sku": "LG-AA09SP-SET",
