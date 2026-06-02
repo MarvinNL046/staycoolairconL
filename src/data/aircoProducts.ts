@@ -503,7 +503,7 @@ export const aircoProducts: AircoProduct[] = [
       "Capaciteit": "2,5 kW",
       "Werkingsprincipe": "Koelen en verwarmen"
     },
-    "image": "/images/airco-products/81002172_sk17202_81002172_dimensions_2.webp",
+    "image": "/images/airco-products/81002172_sk17143_81002172_Main.jpg",
     "images": [
       {
         "path": "/images/airco-products/81002172_sk17202_81002172_dimensions_2.webp",
@@ -645,7 +645,7 @@ export const aircoProducts: AircoProduct[] = [
       "Capaciteit": "3,5 kW",
       "Werkingsprincipe": "Koelen en verwarmen"
     },
-    "image": "/images/airco-products/81002173_sk17202_81002172_dimensions_2.webp",
+    "image": "/images/airco-products/81002173_sk17143_81002172_Main.jpg",
     "images": [
       {
         "path": "/images/airco-products/81002173_sk17202_81002172_dimensions_2.webp",
