@@ -136,29 +136,34 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu Overlay */}
-        <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Hoofdmenu" className={`fixed inset-0 bg-white z-40 transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden pt-24 px-6 overflow-y-auto`}>
-          <div className="flex flex-col space-y-6 text-2xl font-black text-quatt-dark tracking-tight">
-            <Link to="/products" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Producten</Link>
-            <Link to="/airco-installatie-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Installatie</Link>
-            <Link to="/airco-onderhoud-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Onderhoud</Link>
-            <Link to="/airco-laten-plaatsen-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Airco laten plaatsen</Link>
-            <Link to="/airco-offerte-aanvragen-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Offerte aanvragen</Link>
-            <Link to="/airco-buitenunit-plaatsen-regels-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Buitenunit regels</Link>
-            <Link to="/kennisbank" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Kennisbank</Link>
-            <Link to="/contact" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Contact</Link>
+      </nav>
 
-            <div className="pt-6 space-y-4">
-              <Button href="https://afspraken.staycoolairco.nl" variant="primary" className="w-full justify-center rounded-2xl py-4 shadow-xl text-lg">
-                Plan gratis advies
-              </Button>
-              <Button href="tel:0462021430" variant="secondary" className="w-full justify-center rounded-2xl bg-gray-50 text-quatt-dark hover:bg-gray-100 py-4 text-lg">
-                Bel 046 202 1430
-              </Button>
-            </div>
+      {/* Mobile Menu Overlay — buiten <nav> gehouden: de navbar heeft backdrop-blur, en een
+          backdrop-filter maakt het element het containing block voor fixed-kinderen. Binnen <nav>
+          zou `fixed inset-0` daardoor tegen de 96px navbalk rekenen i.p.v. de viewport, waardoor
+          het menu een onzichtbaar strookje werd. z-[45] zit boven de sticky CTA (z-40) maar onder
+          de navbalk (z-50), zodat de X-sluitknop bereikbaar blijft. */}
+      <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Hoofdmenu" className={`fixed inset-0 bg-white z-[45] transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full pointer-events-none'} md:hidden pt-24 px-6 overflow-y-auto`}>
+        <div className="flex flex-col space-y-6 text-2xl font-black text-quatt-dark tracking-tight">
+          <Link to="/products" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Producten</Link>
+          <Link to="/airco-installatie-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Installatie</Link>
+          <Link to="/airco-onderhoud-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Onderhoud</Link>
+          <Link to="/airco-laten-plaatsen-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Airco laten plaatsen</Link>
+          <Link to="/airco-offerte-aanvragen-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Offerte aanvragen</Link>
+          <Link to="/airco-buitenunit-plaatsen-regels-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Buitenunit regels</Link>
+          <Link to="/kennisbank" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Kennisbank</Link>
+          <Link to="/contact" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Contact</Link>
+
+          <div className="pt-6 space-y-4">
+            <Button href="https://afspraken.staycoolairco.nl" variant="primary" className="w-full justify-center rounded-2xl py-4 shadow-xl text-lg">
+              Plan gratis advies
+            </Button>
+            <Button href="tel:0462021430" variant="secondary" className="w-full justify-center rounded-2xl bg-gray-50 text-quatt-dark hover:bg-gray-100 py-4 text-lg">
+              Bel 046 202 1430
+            </Button>
           </div>
         </div>
-      </nav>
+      </div>
     </>
   );
 }
