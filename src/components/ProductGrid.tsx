@@ -196,12 +196,12 @@ function ProductCard({ product, index }: { product: AircoProduct; index: number 
     >
       <Card radius="3xl" padding="none" className="h-full flex flex-col group border-transparent hover:border-gray-100 hover:shadow-2xl hover:shadow-gray-200/50 transition-all duration-500 overflow-hidden bg-white">
         {/* Image - Clickable */}
-        <Link to={`/products/airco/${product.id}`} className="block relative aspect-[4/3] bg-gray-50 overflow-hidden">
+        <Link to={`/products/airco/${product.id}`} className="block relative aspect-[4/3] bg-white overflow-hidden">
           {product.image ? (
             <img
               src={product.image}
               alt={product.name}
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              className="w-full h-full object-contain p-5 group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
           ) : (
@@ -230,7 +230,7 @@ function ProductCard({ product, index }: { product: AircoProduct; index: number 
           </div>
 
           <Link to={`/products/airco/${product.id}`} className="block mb-6">
-            <h3 className="font-bold text-quatt-dark text-lg leading-snug group-hover:text-quatt-orange transition-colors min-h-[56px] line-clamp-2">
+            <h3 className="font-bold text-quatt-dark text-lg leading-snug group-hover:text-quatt-orange transition-colors h-[50px] line-clamp-2 overflow-hidden">
               {product.name}
             </h3>
           </Link>
