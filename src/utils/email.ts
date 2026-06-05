@@ -24,8 +24,10 @@ const EMAILJS_CONFIG = {
   PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 };
 
-// Leadflow CRM configuration
-const LEADFLOW_URL = "https://wetryleadflow.com/api/webhooks/leads";
+// Leadflow CRM (v2) configuration — leads gaan rechtstreeks naar het v2-CRM
+// (Convex httpAction). v1 (wetryleadflow.com) is uitgefaseerd.
+const LEADFLOW_URL =
+  "https://vibrant-wildebeest-329.eu-west-1.convex.site/webhooks/leads";
 const LEADFLOW_API_KEY = "lf_lRyHo1ENukt9VsG9gYT8EKeDA_nKuoQ1";
 
 export interface EmailData {

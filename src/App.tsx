@@ -40,7 +40,6 @@ const BrandDetail = lazy(() => import('./pages/BrandDetail'));
 const ProductDetail = lazy(() => import('./pages/ProductDetail'));
 const ScrapedProductDetail = lazy(() => import('./pages/ScrapedProductDetail'));
 const Contact = lazy(() => import('./pages/Contact'));
-const ContactWebhookTest = lazy(() => import('./pages/ContactWebhookTest'));
 const ServiceArea = lazy(() => import('./pages/ServiceArea'));
 const KnowledgeBase = lazy(() => import('./pages/KnowledgeBase'));
 const Terms = lazy(() => import('./pages/Terms'));
@@ -552,7 +551,6 @@ const App = () => {
                 <Route path="/products/:brand" element={<BrandDetail />} />
                 <Route path="/products/:brand/:model" element={<ProductDetail />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/contact-webhook-test" element={<ContactWebhookTest />} />
                 <Route path="/tot-snel" element={<TotSnel />} />
                 <Route path="/werkgebied" element={<ServiceArea />} />
                 <Route path="/werkgebied/:city" element={<WerkgebiedRedirect />} />
