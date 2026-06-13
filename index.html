@@ -158,45 +158,41 @@
         var loaderText = document.getElementById('loader-text');
         if (loaderText) loaderText.classList.add('show');
       }, 2000);
-      
-      // Auto-refresh after 10 seconds if app hasn't loaded
-      var loadTimeout = setTimeout(function() {
-        console.warn('App failed to load in time, reloading...');
-        
-        // Clear caches first
+
+      // Laatste-redmiddel: herlaad na 10s als de app NIET is gemount.
+      // LET OP: bewust NIET op DOMContentLoaded annuleren — dat event vuurt
+      // zodra de HTML geparsed is (milliseconden), dus voordat React mount,
+      // waardoor de oude versie van dit vangnet effectief nooit werkte.
+      // main.tsx zet window.__appMounted = true na een succesvolle render.
+      window.__loadFailTimeout = setTimeout(function() {
+        if (window.__appMounted) return;
+        console.warn('App failed to mount in time, reloading...');
         if ('caches' in window) {
           caches.keys().then(function(names) {
             return Promise.all(names.map(function(name) {
               return caches.delete(name);
             }));
           }).then(function() {
-            window.location.reload(true);
+            window.location.reload();
           });
         } else {
-          window.location.reload(true);
+          window.location.reload();
         }
       }, 10000);
-      
-      // Clear timeout when app loads successfully
-      window.addEventListener('DOMContentLoaded', function() {
-        clearTimeout(loadTimeout);
-      });
     </script>
     
     <script type="module" src="/src/main.tsx"></script>
-    
-    <!-- Service Worker Registration -->
+
+    <!-- Service Worker bewust NIET geregistreerd.
+         De oude network-first SW cachete content-gehashte bundles en zorgde voor
+         intermitterende infinite-loading op eerste bezoek (refresh loste het op).
+         public/sw.js is nu een kill-switch die bestaande installaties opruimt.
+         Onderstaande regel zorgt dat reeds-geïnstalleerde SW's de update ophalen. -->
     <script>
       if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-              console.log('ServiceWorker registration successful:', registration.scope);
-            })
-            .catch(err => {
-              console.log('ServiceWorker registration failed:', err);
-            });
-        });
+        navigator.serviceWorker.getRegistrations()
+          .then(function (regs) { regs.forEach(function (r) { r.update(); }); })
+          .catch(function () {});
       }
     </script>
   </body>

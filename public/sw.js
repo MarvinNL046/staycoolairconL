@@ -1,96 +1,42 @@
-// Service Worker voor StayCool Airco
-const CACHE_VERSION = 'v1';
-const CACHE_NAME = `staycool-${CACHE_VERSION}`;
+// Kill-switch service worker for StayCool Airco.
+//
+// Reden: de oude network-first SW cachete content-gehashte Vite-bundles +
+// HTML en zorgde voor intermitterende "hangt op eerste bezoek, refresh lost op"
+// problemen (vooral mobiel/na deploy). Zie git-historie: dit is meerdere keren
+// geprobeerd te fixen en zelfs al eens volledig verwijderd (7e5cb87).
+//
+// Deze SW doet bewust NIETS behalve zichzelf opruimen: hij wist alle caches,
+// unregistert zichzelf en herlaadt elke open tab één keer. Browsers checken bij
+// navigatie automatisch op een SW-update, dus elke bestaande installatie in een
+// bezoekersbrowser vernietigt zo zichzelf op het volgende bezoek.
+//
+// index.html registreert GEEN service worker meer, dus nieuwe bezoekers krijgen
+// er nooit een. Zodra de meeste bezoekers deze kill-switch hebben uitgevoerd
+// (enkele weken), mag dit bestand verwijderd worden.
 
-// Assets om te cachen voor offline gebruik
-const urlsToCache = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  // Critical CSS and JS files will be added dynamically
-];
+self.addEventListener('install', () => {
+  // Direct activeren, niet wachten op een vrije client.
+  self.skipWaiting();
+});
 
-// Install Service Worker
-self.addEventListener('install', event => {
+self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
-      .then(() => self.skipWaiting())
+    (async () => {
+      // 1. Wis alle caches die de oude SW heeft aangemaakt.
+      const cacheNames = await caches.keys();
+      await Promise.all(cacheNames.map((name) => caches.delete(name)));
+
+      // 2. Unregister deze service worker.
+      await self.registration.unregister();
+
+      // 3. Herlaad elke open tab één keer zodat ze zonder SW + zonder
+      //    stale cache verder gaan.
+      const clients = await self.clients.matchAll({ type: 'window' });
+      for (const client of clients) {
+        client.navigate(client.url);
+      }
+    })()
   );
 });
 
-// Activate Service Worker
-self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames
-          .filter(cacheName => cacheName.startsWith('staycool-') && cacheName !== CACHE_NAME)
-          .map(cacheName => caches.delete(cacheName))
-      );
-    }).then(() => self.clients.claim())
-  );
-});
-
-// Fetch Strategy: Network First, falling back to cache
-self.addEventListener('fetch', event => {
-  const { request } = event;
-  
-  // Skip non-GET requests
-  if (request.method !== 'GET') return;
-  
-  // Skip cross-origin requests
-  if (!request.url.startsWith(self.location.origin)) return;
-  
-  event.respondWith(
-    fetch(request)
-      .then(response => {
-        // Don't cache if not successful
-        if (!response || response.status !== 200 || response.type !== 'basic') {
-          return response;
-        }
-
-        // Clone the response
-        const responseToCache = response.clone();
-
-        caches.open(CACHE_NAME)
-          .then(cache => {
-            // Cache HTML, CSS, JS, and image files
-            if (request.url.match(/\.(html|css|js|jpg|jpeg|png|gif|webp|svg|ico)$/)) {
-              cache.put(request, responseToCache);
-            }
-          });
-
-        return response;
-      })
-      .catch(() => {
-        // Network request failed, try to get from cache
-        return caches.match(request).then(cachedResponse => {
-          if (cachedResponse) {
-            return cachedResponse;
-          }
-          
-          // If requesting HTML and not in cache, return index.html for SPA routing
-          if (request.headers.get('accept').includes('text/html')) {
-            return caches.match('/index.html');
-          }
-        });
-      })
-  );
-});
-
-// Background sync for form submissions
-self.addEventListener('sync', event => {
-  if (event.tag === 'form-sync') {
-    event.waitUntil(syncFormData());
-  }
-});
-
-async function syncFormData() {
-  // Get queued form data from IndexedDB and try to submit
-  // Implementation depends on your form submission logic
-  console.log('Syncing form data...');
-}
+// Geen fetch-handler: alle requests gaan rechtstreeks naar het netwerk.

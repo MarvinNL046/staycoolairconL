@@ -65,6 +65,13 @@ try {
     </StrictMode>
   );
   
+  // Signaleer aan het index.html-vangnet dat de app daadwerkelijk gemount is,
+  // zodat de 10s auto-reload niet onnodig afvuurt.
+  (window as any).__appMounted = true;
+  if ((window as any).__loadFailTimeout) {
+    clearTimeout((window as any).__loadFailTimeout);
+  }
+
   // Reset retry count on successful render
   AppRecovery.resetRetryCount();
 } catch (error) {

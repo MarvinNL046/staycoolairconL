@@ -30,10 +30,14 @@ export class AppRecovery {
       }
     });
 
-    // Check if app failed to start after timeout
+    // Check if app failed to start after timeout.
+    // LET OP: niet op root.children.length === 0 checken — de initial-loader
+    // spinner zit IN #root, dus children.length is tijdens een hang nooit 0.
+    // We checken of de loader er na 10s nog steeds is (= React heeft #root
+    // nog niet vervangen) en of de app niet gemount is.
     setTimeout(() => {
-      const root = document.getElementById('root');
-      if (root && root.children.length === 0) {
+      const loaderStillPresent = !!document.querySelector('.initial-loader');
+      if (loaderStillPresent && !(window as any).__appMounted) {
         console.warn('App failed to render, attempting recovery');
         this.handleLoadingError();
       }
