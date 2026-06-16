@@ -35,7 +35,8 @@ export default function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
         email: email,
         phone: '',
         city: '',
-        message: 'Exit-intent popup — alleen e-mailadres opgegeven (geen naam/telefoon gevraagd)'
+        message: 'Exit-intent popup — alleen e-mailadres opgegeven (geen naam/telefoon gevraagd)',
+        source: 'exit-intent-popup'
       });
 
       trackEvent('exit_intent_popup', {

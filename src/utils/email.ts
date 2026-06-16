@@ -38,6 +38,9 @@ export interface EmailData {
   message: string;
   to_name?: string;
   subject?: string;
+  /** Lead origin for CRM segmentation (stored as utmSource in Leadflow v2).
+   *  Does NOT affect the lead's visibility or badge. Defaults to 'website-contact'. */
+  source?: string;
 }
 
 /**
@@ -56,7 +59,7 @@ const sendToLeadflow = async (data: EmailData): Promise<boolean> => {
       email: data.email,
       phone: data.phone,
       message: data.message,
-      source: 'website-contact',
+      source: data.source || 'website-contact',
       customFields: {
         city: data.city,
         woonplaats: data.city
