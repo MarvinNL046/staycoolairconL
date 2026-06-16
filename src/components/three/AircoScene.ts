@@ -1,56 +1,61 @@
 import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
 
-// Mounts a slowly-rotating stylized airco unit into `container`.
-// Transparent background so the blue hero shows through. Returns cleanup().
-export function mountAircoScene(container: HTMLElement): () => void {
+// Loads a glTF/GLB airco model into `container` and slowly rotates it.
+// Transparent background so the blue hero shows through.
+// REJECTS if the model can't be loaded (e.g. file not present yet) — the caller
+// then keeps the static poster image instead of showing an empty canvas.
+// Returns a cleanup() function on success.
+export async function mountAircoScene(
+  container: HTMLElement,
+  modelUrl: string,
+): Promise<() => void> {
+  // Load first — if this rejects, we never touch the DOM (poster stays).
+  const loader = new GLTFLoader();
+  const gltf = await loader.loadAsync(modelUrl);
+  const model = gltf.scene;
+
   const width = container.clientWidth || 480;
   const height = container.clientHeight || 320;
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(35, width / height, 0.1, 100);
-  camera.position.set(0, 0.4, 6);
+  camera.position.set(0, 0.3, 6);
 
   const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
   renderer.setSize(width, height);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.1;
   container.appendChild(renderer.domElement);
 
-  // Body: rounded indoor unit
-  const bodyGeo = new THREE.BoxGeometry(4, 1.1, 1, 4, 1, 1);
-  const bodyMat = new THREE.MeshStandardMaterial({ color: '#f4fafe', roughness: 0.45, metalness: 0.1 });
-  const body = new THREE.Mesh(bodyGeo, bodyMat);
+  // Image-based lighting so glTF PBR materials look realistic (soft reflections).
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  const envTex = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+  scene.environment = envTex;
 
-  // Front face accent strip (StayCool blue)
-  const stripGeo = new THREE.BoxGeometry(4.02, 0.18, 1.02);
-  const stripMat = new THREE.MeshStandardMaterial({ color: '#2080C0', roughness: 0.3, metalness: 0.2 });
-  const strip = new THREE.Mesh(stripGeo, stripMat);
-  strip.position.y = -0.42;
+  // Normalize: center the model at the origin and scale it to a consistent size,
+  // so however you export from Blender (scale/offset) it always fits nicely.
+  const box = new THREE.Box3().setFromObject(model);
+  const size = box.getSize(new THREE.Vector3());
+  const center = box.getCenter(new THREE.Vector3());
+  const maxDim = Math.max(size.x, size.y, size.z) || 1;
+  const scale = 3.6 / maxDim;
+  model.position.sub(center);          // recenter
+  const pivot = new THREE.Group();
+  pivot.add(model);
+  pivot.scale.setScalar(scale);
+  pivot.rotation.x = 0.12;
+  scene.add(pivot);
 
-  // Louver lines
-  const louvers = new THREE.Group();
-  const louverGeos: THREE.BoxGeometry[] = [];
-  const louverMats: THREE.MeshStandardMaterial[] = [];
-  for (let i = 0; i < 3; i++) {
-    const lGeo = new THREE.BoxGeometry(3.7, 0.04, 1.04);
-    const lMat = new THREE.MeshStandardMaterial({ color: '#cfe7f5', roughness: 0.6 });
-    const l = new THREE.Mesh(lGeo, lMat);
-    l.position.y = -0.1 - i * 0.12;
-    louvers.add(l);
-    louverGeos.push(lGeo);
-    louverMats.push(lMat);
-  }
-
-  const unit = new THREE.Group();
-  unit.add(body, strip, louvers);
-  unit.rotation.x = 0.15;
-  scene.add(unit);
-
-  // Lighting
-  scene.add(new THREE.AmbientLight(0xffffff, 0.7));
-  const key = new THREE.DirectionalLight(0xffffff, 1.1);
+  // A little direct light on top of the IBL for crisp highlights.
+  scene.add(new THREE.AmbientLight(0xffffff, 0.25));
+  const key = new THREE.DirectionalLight(0xffffff, 1.0);
   key.position.set(3, 4, 5);
   scene.add(key);
-  const rim = new THREE.DirectionalLight(0x40b0e0, 0.6);
+  const rim = new THREE.DirectionalLight(0x40b0e0, 0.5);
   rim.position.set(-4, 1, 2);
   scene.add(rim);
 
@@ -58,7 +63,7 @@ export function mountAircoScene(container: HTMLElement): () => void {
   let running = true;
   const animate = () => {
     if (!running) return;
-    unit.rotation.y += 0.0035; // slow
+    pivot.rotation.y += 0.0035; // slow
     renderer.render(scene, camera);
     raf = requestAnimationFrame(animate);
   };
@@ -67,7 +72,9 @@ export function mountAircoScene(container: HTMLElement): () => void {
   const onResize = () => {
     const w = container.clientWidth, h = container.clientHeight;
     if (!w || !h) return;
-    camera.aspect = w / h; camera.updateProjectionMatrix(); renderer.setSize(w, h);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
   };
   window.addEventListener('resize', onResize);
 
@@ -75,10 +82,19 @@ export function mountAircoScene(container: HTMLElement): () => void {
     running = false;
     cancelAnimationFrame(raf);
     window.removeEventListener('resize', onResize);
+    // Dispose every geometry/material/texture the model brought in.
+    model.traverse((obj) => {
+      const mesh = obj as THREE.Mesh;
+      if (mesh.geometry) mesh.geometry.dispose();
+      const mat = mesh.material as THREE.Material | THREE.Material[] | undefined;
+      if (Array.isArray(mat)) mat.forEach((m) => m.dispose());
+      else if (mat) mat.dispose();
+    });
+    envTex.dispose();
+    pmrem.dispose();
     renderer.dispose();
-    bodyGeo.dispose(); bodyMat.dispose(); stripGeo.dispose(); stripMat.dispose();
-    louverGeos.forEach((g) => g.dispose());
-    louverMats.forEach((m) => m.dispose());
-    if (renderer.domElement.parentNode) renderer.domElement.parentNode.removeChild(renderer.domElement);
+    if (renderer.domElement.parentNode) {
+      renderer.domElement.parentNode.removeChild(renderer.domElement);
+    }
   };
 }

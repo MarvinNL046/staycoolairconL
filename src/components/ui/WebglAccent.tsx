@@ -1,12 +1,19 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 interface WebglAccentProps {
-  poster: string;     // path to a static image shown first / as fallback
+  poster: string;     // static image shown first and as fallback (real airco photo)
   alt: string;
+  /** glTF/GLB model to load. If it is missing/fails, the poster stays — no empty canvas. */
+  model?: string;
   className?: string;
 }
 
-const WebglAccent: React.FC<WebglAccentProps> = ({ poster, alt, className }) => {
+const WebglAccent: React.FC<WebglAccentProps> = ({
+  poster,
+  alt,
+  model = '/models/airco-unit.glb',
+  className,
+}) => {
   const hostRef = useRef<HTMLDivElement>(null);
   const [showCanvas, setShowCanvas] = useState(false);
 
@@ -19,10 +26,15 @@ const WebglAccent: React.FC<WebglAccentProps> = ({ poster, alt, className }) => 
 
     const start = async () => {
       if (cancelled || !hostRef.current) return;
-      const { mountAircoScene } = await import('../three/AircoScene');
-      if (cancelled || !hostRef.current) return;
-      cleanup = mountAircoScene(hostRef.current);
-      setShowCanvas(true);
+      try {
+        const { mountAircoScene } = await import('../three/AircoScene');
+        if (cancelled || !hostRef.current) return;
+        cleanup = await mountAircoScene(hostRef.current, model);
+        if (cancelled) { cleanup?.(); cleanup = undefined; return; }
+        setShowCanvas(true);
+      } catch {
+        // No model yet (or load/runtime error) → keep the static poster photo.
+      }
     };
 
     const idle = (window as any).requestIdleCallback as undefined | ((cb: () => void, o?: any) => number);
@@ -34,7 +46,7 @@ const WebglAccent: React.FC<WebglAccentProps> = ({ poster, alt, className }) => 
       else clearTimeout(handle as number);
       cleanup?.();
     };
-  }, []);
+  }, [model]);
 
   return (
     <div className={className} style={{ position: 'relative' }}>
