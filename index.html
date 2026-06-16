@@ -31,7 +31,9 @@
     
     <!-- Resource hints for performance -->
     <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin.woff2" crossorigin />
-    <!-- Plus Jakarta Sans is bundled via @fontsource (hashed asset, font-display: swap) — no manual preload of a node_modules path. -->
+    <link rel="preload" as="font" type="font/woff2"
+      href="/node_modules/@fontsource/plus-jakarta-sans/files/plus-jakarta-sans-latin-800-normal.woff2"
+      crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
