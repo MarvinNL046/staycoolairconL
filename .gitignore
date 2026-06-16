@@ -48,3 +48,6 @@ stats.html
 .DS_Store
 Thumbs.db
 .vercel
+
+# Visual companion (brainstorming)
+.superpowers/
