@@ -28,12 +28,16 @@ export function mountAircoScene(container: HTMLElement): () => void {
 
   // Louver lines
   const louvers = new THREE.Group();
+  const louverGeos: THREE.BoxGeometry[] = [];
+  const louverMats: THREE.MeshStandardMaterial[] = [];
   for (let i = 0; i < 3; i++) {
     const lGeo = new THREE.BoxGeometry(3.7, 0.04, 1.04);
     const lMat = new THREE.MeshStandardMaterial({ color: '#cfe7f5', roughness: 0.6 });
     const l = new THREE.Mesh(lGeo, lMat);
     l.position.y = -0.1 - i * 0.12;
     louvers.add(l);
+    louverGeos.push(lGeo);
+    louverMats.push(lMat);
   }
 
   const unit = new THREE.Group();
@@ -73,6 +77,8 @@ export function mountAircoScene(container: HTMLElement): () => void {
     window.removeEventListener('resize', onResize);
     renderer.dispose();
     bodyGeo.dispose(); bodyMat.dispose(); stripGeo.dispose(); stripMat.dispose();
+    louverGeos.forEach((g) => g.dispose());
+    louverMats.forEach((m) => m.dispose());
     if (renderer.domElement.parentNode) renderer.domElement.parentNode.removeChild(renderer.domElement);
   };
 }
