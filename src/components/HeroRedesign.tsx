@@ -3,6 +3,7 @@ import { Play, Check, X, Calendar } from 'lucide-react';
 import Button from './ui/Button';
 import MultiStepLeadForm from './MultiStepLeadForm';
 import TrustooWidget from './TrustooWidget';
+import WebglAccent from './ui/WebglAccent';
 
 export default function HeroRedesign() {
   const [showVideo, setShowVideo] = useState(false);
@@ -70,6 +71,12 @@ export default function HeroRedesign() {
           {/* Right: Lead Form — geen framer-motion wrapper, deferred Trustoo */}
           <div className="relative h-full">
             <MultiStepLeadForm />
+            {/* WebGL airco accent — lazy-loaded after idle (Task 9) */}
+            <WebglAccent
+              poster="/images/airco-unit.png"
+              alt="Airco unit 3D preview"
+              className="hidden"
+            />
             <div className="mt-6 flex justify-center min-h-[40px]">
               {showTrustoo && <TrustooWidget size="small" />}
             </div>
