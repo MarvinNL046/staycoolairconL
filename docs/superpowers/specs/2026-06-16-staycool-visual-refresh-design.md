@@ -29,6 +29,7 @@ blijft ongewijzigd; we vervangen uitsluitend de **presentatie-laag**.
 | 3D / WebGL | **Niveau B:** lichte WebGL-accenten. Eén blikvanger (traag-draaiende 3D airco-unit in hero). **Lazy-loaded ná LCP**, met statische `.webp` poster als fallback. Niet over het formulier. |
 | Uitrol-aanpak | **Aanpak 1:** design-token-laag + herbruikbare UI-primitives, dan page-by-page (homepage-hero eerst → product-template → rest) |
 | Startpagina | Homepage-hero |
+| Navbar | **Slanke top-nav:** 3 items — `Airco's` (/products), `Thuisbatterijen` (/thuisbatterijen), + `Plan adviesgesprek`-knop. `tel:`-CTA blijft als contact-knop (CRO: phone 3-10× close-rate). Mega-dropdowns eruit. |
 
 ## 3. Architectuur
 
@@ -59,6 +60,17 @@ Herstijlen, structuur/SEO behouden:
 
 > **Intake-form zelf:** out of scope voor nu — Marvin kopieert later een formulier van een andere site.
 > We restylen de *container/card*, niet de form-logica.
+
+### 3.4 Navbar (`src/components/Navbar.tsx` — vereenvoudigen + restyle)
+Terug naar een **slanke top-nav** (3 zichtbare keuzes):
+- `Airco's` → `/products` · `Thuisbatterijen` → `/thuisbatterijen` · `Plan adviesgesprek`-knop (navy pill).
+- `tel:0462021430` blijft als contact-CTA (CRO, geen "nav-link").
+- Mega-dropdowns (money-pages, kennisbank, calculators) **eruit** uit de nav.
+- Restyle naar tokens: Plus Jakarta Sans, pill-knop, navy/accent.
+
+> **SEO-vangnet (orphan-preventie):** alle uit de nav verwijderde links blijven bestaan in de
+> **Footer** (dekt al installatie/onderhoud/kennisbank/calculators/werkgebied/over/contact) en
+> worden bewaakt door `npm run validate:money-links`. Geen page mag orphan worden.
 
 ## 4. SEO-behoud (harde eis)
 
