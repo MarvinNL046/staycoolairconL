@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Check } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Check } from 'lucide-react';
 import Logo from './Logo';
-import { seoNavigation } from '../data/seoNavigation';
 import Button from './ui/Button';
-import { primaryMoneyPageLinks } from '../data/moneyPageLinks';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,53 +58,8 @@ export default function Navbar() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-10">
               <div className="flex items-center space-x-8">
-                <Link to="/products" className={linkClasses}>
-                  Producten
-                </Link>
-                <Link to="/airco-installatie-limburg" className={linkClasses}>
-                  Installatie
-                </Link>
-                <Link to="/airco-onderhoud-limburg" className={linkClasses}>
-                  Onderhoud
-                </Link>
-                <div className="relative group">
-                  <button className={`${linkClasses} flex items-center group-hover:text-quatt-orange`}>
-                    Meer <ChevronDown className="ml-1 h-4 w-4" />
-                  </button>
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <div className="bg-white rounded-[2rem] shadow-2xl border border-gray-100 p-8 w-[860px] grid grid-cols-3 gap-x-10 gap-y-6 transform translate-y-2 group-hover:translate-y-0 transition-transform">
-                      <div>
-                        <h4 className="font-black text-quatt-dark mb-4 text-sm uppercase tracking-wider">Populaire diensten</h4>
-                        <ul className="space-y-3">
-                          {primaryMoneyPageLinks.map((link) => (
-                            <li key={link.path}>
-                              <Link to={link.path} className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">
-                                {link.title.replace(' Limburg', '')}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-black text-quatt-dark mb-4 text-sm uppercase tracking-wider">Kennisbank</h4>
-                        <ul className="space-y-3">
-                          <li><Link to="/kennisbank" className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">Alle Artikelen</Link></li>
-                          <li><Link to="/kennisbank/hoe-werkt-airco" className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">Hoe werkt een airco?</Link></li>
-                          <li><Link to="/kennisbank/subsidies" className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">Subsidies</Link></li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-black text-quatt-dark mb-4 text-sm uppercase tracking-wider">Tools</h4>
-                        <ul className="space-y-3">
-                          <li><Link to="/capaciteit-calculator" className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">Capaciteit Calculator</Link></li>
-                          <li><Link to="/thuisbatterij-calculator" className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">Besparing Calculator</Link></li>
-                          <li><Link to="/airco-buitenunit-plaatsen-regels-limburg" className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">Buitenunit regels</Link></li>
-                          <li><Link to="/stille-airco-buitenunit-limburg" className="text-gray-500 font-medium hover:text-quatt-orange block text-sm transition-colors">Stille buitenunit</Link></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <Link to="/products" className={linkClasses}>Airco's</Link>
+                <Link to="/thuisbatterijen" className={linkClasses}>Thuisbatterijen</Link>
               </div>
 
               {/* CTA Buttons */}
@@ -115,7 +67,8 @@ export default function Navbar() {
                 <a href="tel:0462021430" className="text-quatt-dark font-black tracking-tight hover:text-quatt-orange transition-colors hidden xl:block">
                   046 202 1430
                 </a>
-                <Button href="https://afspraken.staycoolairco.nl" variant="primary" size="md" className="rounded-full px-6 py-2.5 shadow-xl shadow-quatt-orange/20 hover:shadow-2xl hover:-translate-y-0.5 transition-all">
+                <Button href="https://afspraken.staycoolairco.nl" variant="primary" size="md" shape="pill"
+                  className="px-6 py-2.5 shadow-elevation-md hover:-translate-y-0.5 transition-all">
                   Plan adviesgesprek
                 </Button>
               </div>
@@ -145,13 +98,8 @@ export default function Navbar() {
           de navbalk (z-50), zodat de X-sluitknop bereikbaar blijft. */}
       <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Hoofdmenu" className={`fixed inset-0 bg-white z-[45] transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full pointer-events-none'} md:hidden pt-24 px-6 overflow-y-auto`}>
         <div className="flex flex-col space-y-6 text-2xl font-black text-quatt-dark tracking-tight">
-          <Link to="/products" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Producten</Link>
-          <Link to="/airco-installatie-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Installatie</Link>
-          <Link to="/airco-onderhoud-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Onderhoud</Link>
-          <Link to="/airco-laten-plaatsen-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Airco laten plaatsen</Link>
-          <Link to="/airco-offerte-aanvragen-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Offerte aanvragen</Link>
-          <Link to="/airco-buitenunit-plaatsen-regels-limburg" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Buitenunit regels</Link>
-          <Link to="/kennisbank" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Kennisbank</Link>
+          <Link to="/products" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Airco's</Link>
+          <Link to="/thuisbatterijen" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Thuisbatterijen</Link>
           <Link to="/contact" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Contact</Link>
 
           <div className="pt-6 space-y-4">

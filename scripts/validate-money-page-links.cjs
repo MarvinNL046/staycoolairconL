@@ -3,14 +3,9 @@ const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
 
+// NOTE: Navbar links were intentionally reduced to 3 items (Airco's, Thuisbatterijen, Plan adviesgesprek).
+// Money-pages are now kept reachable via Footer (footerMoneyPageLinks) and moneyPageLinks.ts data file.
 const requiredLinksByFile = {
-  'src/components/Navbar.tsx': [
-    '/airco-laten-plaatsen-limburg',
-    '/airco-installatie-limburg',
-    '/airco-offerte-aanvragen-limburg',
-    '/airco-buitenunit-plaatsen-regels-limburg',
-    '/stille-airco-buitenunit-limburg',
-  ],
   'src/data/moneyPageLinks.ts': [
     '/airco-laten-plaatsen-limburg',
     '/airco-installatie-limburg',
