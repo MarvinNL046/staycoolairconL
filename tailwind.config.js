@@ -59,7 +59,22 @@ export default {
           600: '#4b5563', // WCAG AA compliant for large text
           700: '#374151', // WCAG AAA compliant
           900: '#111827', // Maximum contrast
-        }
+        },
+        // --- Frank-DNA refresh tokens (added 2026-06; additive, non-breaking) ---
+        ink: {
+          DEFAULT: '#1b2b3c', // headings / primary text on light
+          soft: '#5b6b78',    // body / secondary text
+        },
+        navy: '#304090',      // deep brand blue — primary button on blue hero
+        accent: {
+          DEFAULT: '#f06e2c', // warm CTA — ONLY for primary conversion on white sections
+          hover: '#d85e1f',
+        },
+        surface: {
+          DEFAULT: '#ffffff',
+          soft: '#f6f7f8',    // soft card / "Over" section background
+        },
+        success: '#47a92a',   // green check bullets
       },
       borderRadius: {
         'xl': '1rem',
@@ -67,6 +82,15 @@ export default {
         '3xl': '2rem',
         '4xl': '2.5rem',
         '5xl': '3rem',
+        'pill': '7.5rem', // Frank-DNA pill buttons
+      },
+      boxShadow: {
+        'elevation-sm': '0px 7px 10px 0px #00000005, 0px 3px 4px 0px #00000005',
+        'elevation-md': '0px 4px 17px 0px #00000005, 0px 11px 18px 0px #0000000a',
+        'elevation-lg': '0px 30px 60px 0px #00000012, 0px 7px 10px 0px #00000005, 0px 3px 4px 0px #00000005',
+      },
+      fontFamily: {
+        display: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       typography: {
         DEFAULT: {
