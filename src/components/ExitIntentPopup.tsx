@@ -25,13 +25,17 @@ export default function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
     setIsSubmitting(true);
 
     try {
-      // Send to all webhooks (EmailJS, LeadConnector, Leadflow)
+      // Popup only collects an email. Don't send a fake person-name: the old
+      // value 'Exit Popup Lead' got split into firstName "Exit" / lastName
+      // "Popup Lead", so every lead showed up in the CRM as an unidentifiable
+      // "Exit Popup Lead". Leave the name empty (lead is keyed by its email)
+      // and note the origin in the message instead.
       await sendEmail({
-        name: 'Exit Popup Lead',
+        name: '',
         email: email,
         phone: '',
         city: '',
-        message: 'Lead via exit-intent popup - alleen email opgegeven'
+        message: 'Exit-intent popup — alleen e-mailadres opgegeven (geen naam/telefoon gevraagd)'
       });
 
       trackEvent('exit_intent_popup', {
