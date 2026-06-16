@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Check } from 'lucide-react';
+import { Menu, X, Check, Phone } from 'lucide-react';
 import Logo from './Logo';
 import Button from './ui/Button';
+import { trackEvent } from '../utils/analytics';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  // Click-to-call is the strongest leadgen conversion — fire a GTM/gtag event
+  // (safe-capture: trackEvent never throws if analytics isn't loaded).
+  const handlePhoneClick = (location: string) => {
+    trackEvent('phone_click', { location, phone: '0462021430' });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,8 +71,14 @@ export default function Navbar() {
 
               {/* CTA Buttons */}
               <div className="flex items-center space-x-6">
-                <a href="tel:0462021430" className="text-quatt-dark font-black tracking-tight hover:text-quatt-orange transition-colors hidden xl:block">
-                  046 202 1430
+                <a
+                  href="tel:0462021430"
+                  onClick={() => handlePhoneClick('navbar_desktop')}
+                  aria-label="Bel ons: 046 202 1430"
+                  className="flex items-center gap-2 text-quatt-dark font-black tracking-tight hover:text-quatt-orange transition-colors"
+                >
+                  <Phone className="w-4 h-4" strokeWidth={2.5} />
+                  <span className="hidden lg:inline">046 202 1430</span>
                 </a>
                 <Button href="https://afspraken.staycoolairco.nl" variant="primary" size="md" shape="pill"
                   className="px-6 py-2.5 shadow-elevation-md hover:-translate-y-0.5 transition-all">
@@ -106,9 +119,14 @@ export default function Navbar() {
             <Button href="https://afspraken.staycoolairco.nl" variant="primary" className="w-full justify-center rounded-2xl py-4 shadow-xl text-lg">
               Plan gratis advies
             </Button>
-            <Button href="tel:0462021430" variant="secondary" className="w-full justify-center rounded-2xl bg-gray-50 text-quatt-dark hover:bg-gray-100 py-4 text-lg">
+            <a
+              href="tel:0462021430"
+              onClick={() => { handlePhoneClick('navbar_mobile'); setIsOpen(false); }}
+              className="flex items-center justify-center gap-2 w-full rounded-2xl bg-gray-50 text-quatt-dark hover:bg-gray-100 py-4 text-lg font-extrabold transition-colors"
+            >
+              <Phone className="w-5 h-5" strokeWidth={2.5} />
               Bel 046 202 1430
-            </Button>
+            </a>
           </div>
         </div>
       </div>
