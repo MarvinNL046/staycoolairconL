@@ -19,45 +19,33 @@ const AircoSubsidie: React.FC = () => {
     {
       type: 'Split-airco (lucht-lucht warmtepomp)',
       isde: false,
-      btw9: true,
       gemeente: 'Soms (per gemeente verschillend)',
-      voorbeeld: '€1.600 installatie → €1.470 met 9% BTW = €130 besparing direct',
+      voorbeeld: 'Geen landelijke subsidie — verdient zich terug via energiebesparing (€700-€1.200/jaar)',
     },
     {
       type: 'Lucht-water warmtepomp (centraal verwarmingssysteem)',
       isde: true,
-      btw9: true,
       gemeente: 'Soms',
       voorbeeld: 'ISDE €1.025 startbedrag + €225/kW + €200 label-bonus = €2.150-€3.500',
     },
     {
       type: 'Hybride warmtepomp (lucht-water + behoud gas-CV)',
       isde: true,
-      btw9: true,
       gemeente: 'Soms',
       voorbeeld: 'ISDE €2.125 voor 4 kW unit + extra bij isolatie-combinatie',
     },
     {
       type: 'Bodemwarmtepomp (grondbron)',
       isde: true,
-      btw9: true,
       gemeente: 'Soms',
       voorbeeld: 'ISDE €4.425 voor 6 kW (rendabel bij grote percelen)',
     },
     {
       type: 'Mobiele airco',
       isde: false,
-      btw9: false,
       gemeente: false,
       voorbeeld: 'Geen subsidies — bovendien zelden rendabel (zie ons advies)',
     },
-  ];
-
-  const btw9Verschil = [
-    { item: 'Single-split installatie', exclBtw: '€1.292', btw9: '€1.408', btw21: '€1.563' },
-    { item: 'Multi-split (2 binnenunits)', exclBtw: '€2.314', btw9: '€2.522', btw21: '€2.800' },
-    { item: 'Multi-split (3 binnenunits)', exclBtw: '€3.306', btw9: '€3.604', btw21: '€4.000' },
-    { item: 'Onderhoudsbeurt', exclBtw: '€81', btw9: '€88', btw21: '€98' },
   ];
 
   const stappenIsde = [
@@ -76,7 +64,7 @@ const AircoSubsidie: React.FC = () => {
     },
     {
       question: 'Wat krijg ik dan wél als financieel voordeel op een airco-installatie?',
-      answer: 'Twee dingen die wel werken: (1) Verlaagd BTW-tarief 9% op installatiewerk bij woningen ouder dan 2 jaar — bespaart ongeveer 12% op de installatie-kosten (€130-€400 op een typische installatie). Wij verrekenen dit direct in de offerte. (2) Soms gemeentelijke energieregelingen — verschilt per gemeente, vaak gericht op verduurzaming algemeen. Check uw gemeentewebsite of energieloket.',
+      answer: 'Voor particulieren geen subsidie en geen BTW-korting op een split-airco — laten we daar eerlijk over zijn. Het voordeel zit in de energiebesparing: een A+++ airco bespaart op een Limburgs rijtjeshuis typisch €700-€1.200 per jaar ten opzichte van gas, met een terugverdientijd van 4-6 jaar. Twee dingen die soms wél iets opleveren: (1) gemeentelijke energieregelingen — verschilt per gemeente, check uw gemeentewebsite of energieloket. (2) Bent u ondernemer en gebruikt u de airco zakelijk? Dan kunt u de 21% BTW meestal als voorbelasting terugvragen — overleg met uw boekhouder.',
     },
     {
       question: 'Mijn buurman zegt dat hij wél ISDE kreeg voor zijn airco. Hoe kan dat?',
@@ -87,8 +75,8 @@ const AircoSubsidie: React.FC = () => {
       answer: 'Een lucht-lucht warmtepomp (= moderne split-airco) verwarmt direct de kamerlucht — efficiënt, snel reagerend, geschikt voor één of meerdere ruimtes. Een lucht-water warmtepomp verwarmt water in een buffervat dat naar radiatoren of vloerverwarming gaat — werkt als vervanging voor uw gas-CV, vereist een groter systeem en hogere investering (€8.000-€15.000) maar krijgt wel ISDE. Voor de meeste Limburgse huishoudens met een goed werkende gas-CV is een airco-warmtepomp (zonder ISDE) financieel rendabeler. Zie onze pagina airco-warmtepomp voor de volledige uitleg.',
     },
     {
-      question: 'Hoe hoog is de BTW-besparing precies?',
-      answer: 'Voor woningen ouder dan 2 jaar geldt 9% BTW op installatiewerk in plaats van 21%. Concreet: een installatie die €1.563 incl. 21% BTW kost, kost €1.408 met 9% BTW. Dat is €155 besparing — direct in de offerte verrekend, geen aanvraag nodig. Voor multi-split met 3 binnenunits kan de besparing oplopen tot €396. We tonen op elke offerte het BTW-tarief expliciet.',
+      question: 'Betaal ik 9% of 21% BTW op een airco-installatie?',
+      answer: '21%. Op airco-installatie geldt het standaard BTW-tarief van 21% — er is geen verlaagd 9%-tarief voor airco of lucht-lucht warmtepompen. Het 9%-tarief dat u online tegenkomt, geldt voor isolatiewerk aan woningen ouder dan 2 jaar, niet voor airco. Andere installateurs die "9% BTW" op een airco beloven, zitten fout — op uw factuur hoort 21% te staan. Bent u ondernemer met zakelijk gebruik, dan kunt u die 21% meestal als voorbelasting terugvragen bij de Belastingdienst.',
     },
     {
       question: 'Bestaan er gemeentelijke subsidies in Limburg voor airco-installatie?',
@@ -100,7 +88,7 @@ const AircoSubsidie: React.FC = () => {
     },
     {
       question: 'Wat als ik nu al ISDE heb aangevraagd voor mijn split-airco?',
-      answer: 'Helaas — RVO zal de aanvraag afwijzen omdat split-airco\'s niet op de ISDE-apparatenlijst staan. Geen rampscenario: u verliest geen geld, alleen de moeite van de aanvraag. Wat we adviseren: vraag wel BTW-9% terugbetaling als u die niet heeft gehad, en check uw gemeentewebsite. Heeft u twijfels over de installateur die ISDE beloofde? Vraag schriftelijk waar in het ISDE-reglement het staat. Bij ons werk: geen valse beloftes.',
+      answer: 'Helaas — RVO zal de aanvraag afwijzen omdat split-airco\'s niet op de ISDE-apparatenlijst staan. Geen rampscenario: u verliest geen geld, alleen de moeite van de aanvraag. Wat we adviseren: check uw gemeentewebsite op lokale energieregelingen, en houd er rekening mee dat op airco gewoon 21% BTW geldt (geen verlaagd tarief). Heeft u twijfels over de installateur die ISDE beloofde? Vraag schriftelijk waar in het ISDE-reglement het staat. Bij ons werk: geen valse beloftes.',
     },
   ];
 
@@ -119,7 +107,7 @@ const AircoSubsidie: React.FC = () => {
         '@type': 'Article',
         '@id': `${CANONICAL_URL}#article`,
         headline: 'Airco subsidie 2026 — eerlijke uitleg over ISDE en BTW',
-        description: 'Krijg je ISDE-subsidie voor een split-airco? Nee. Dit bevestigt RVO. Wat je wél krijgt: 9% BTW + soms gemeentelijke regelingen. Volledige uitleg.',
+        description: 'Krijg je ISDE-subsidie voor een split-airco? Nee — dit bevestigt RVO. En 9% BTW? Dat geldt niet voor airco: het tarief is 21%. Het eerlijke verhaal, met bronnen.',
         url: CANONICAL_URL,
         datePublished: '2026-05-06',
         dateModified: '2026-05-06',
@@ -151,7 +139,7 @@ const AircoSubsidie: React.FC = () => {
     <>
       <MetaTags
         title="Airco Subsidie 2026 | Eerlijke Uitleg ISDE + BTW | StayCool"
-        description="Krijg ik ISDE-subsidie voor een airco in 2026? Nee — RVO bevestigt: split-airco's vallen niet onder ISDE. Wel: 9% BTW (~€155 korting) + gemeentelijke regelingen. Eerlijk verhaal."
+        description="Krijg ik ISDE-subsidie voor een airco in 2026? Nee — RVO bevestigt: split-airco's vallen niet onder ISDE. En 9% BTW geldt niet voor airco: het tarief is 21%. Eerlijk verhaal."
         canonicalUrl={CANONICAL_URL}
         type="article"
       />
@@ -169,7 +157,7 @@ const AircoSubsidie: React.FC = () => {
             Airco subsidie 2026 — eerlijke uitleg
           </h1>
           <p className="text-xl md:text-2xl text-amber-50 mb-4 max-w-3xl">
-            Korte versie: voor een gewone split-airco krijgt u <strong>geen ISDE-subsidie</strong> in 2026 — andere sites claimen dat soms ten onrechte. Wat u <strong>wél</strong> krijgt: 9% BTW (~€155 korting) en soms gemeentelijke regelingen.
+            Korte versie: voor een gewone split-airco krijgt u <strong>geen ISDE-subsidie</strong> in 2026 — andere sites claimen dat soms ten onrechte. Ook een verlaagd 9% BTW-tarief geldt <strong>niet</strong> voor airco (dat is voor isolatie); u betaalt gewoon 21%. Wat telt: de energiebesparing, en soms een gemeentelijke regeling.
           </p>
           <p className="text-base text-amber-100 max-w-3xl">
             Hieronder de feiten — zonder valse hoop, met concrete bedragen en bronvermelding naar RVO.
@@ -194,7 +182,7 @@ const AircoSubsidie: React.FC = () => {
           <nav className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
             <a href="#waarom-niet" className="text-amber-700 hover:underline">Waarom geen ISDE</a>
             <a href="#vergelijking" className="text-amber-700 hover:underline">Welk systeem wel?</a>
-            <a href="#btw-9" className="text-amber-700 hover:underline">BTW 9% besparing</a>
+            <a href="#btw" className="text-amber-700 hover:underline">BTW op airco (21%)</a>
             <a href="#gemeente" className="text-amber-700 hover:underline">Gemeentelijke regeling</a>
             <a href="#aanvragen" className="text-amber-700 hover:underline">ISDE aanvragen</a>
             <a href="#waarschuwing" className="text-amber-700 hover:underline">Pas op voor</a>
@@ -245,7 +233,6 @@ const AircoSubsidie: React.FC = () => {
                     <tr>
                       <th className="text-left p-3 font-semibold text-gray-900">Systeem</th>
                       <th className="text-center p-3 font-semibold text-gray-900">ISDE</th>
-                      <th className="text-center p-3 font-semibold text-gray-900">9% BTW</th>
                       <th className="text-left p-3 font-semibold text-gray-900 hidden md:table-cell">Voorbeeld bedrag 2026</th>
                     </tr>
                   </thead>
@@ -255,9 +242,6 @@ const AircoSubsidie: React.FC = () => {
                         <td className="p-3 align-top font-semibold text-gray-900">{row.type}</td>
                         <td className="p-3 align-top text-center">
                           {row.isde ? <Check className="h-5 w-5 text-green-600 inline" /> : <X className="h-5 w-5 text-red-500 inline" />}
-                        </td>
-                        <td className="p-3 align-top text-center">
-                          {row.btw9 ? <Check className="h-5 w-5 text-green-600 inline" /> : <X className="h-5 w-5 text-red-500 inline" />}
                         </td>
                         <td className="p-3 align-top text-gray-700 hidden md:table-cell">{row.voorbeeld}</td>
                       </tr>
@@ -271,39 +255,18 @@ const AircoSubsidie: React.FC = () => {
               <strong>Belangrijke nuance:</strong> wij installeren split-airco's en multi-split — onze specialisatie. Voor een lucht-water warmtepomp (totale gas-CV-vervanging) verwijzen we klanten naar gespecialiseerde partners. We kunnen wél eerlijk doorrekenen welk systeem voor uw situatie financieel het beste werkt — soms is een split-airco zonder subsidie voordeliger dan een lucht-water mét subsidie. Zie onze pagina <Link to="/airco-warmtepomp" className="text-amber-700 underline">over airco als warmtepomp</Link> voor de techniek en het besparingsmodel.
             </p>
 
-            <h2 id="btw-9" className="text-3xl font-bold text-gray-900 mt-12 mb-4">Wel beschikbaar: 9% BTW (~€155 korting)</h2>
+            <h2 id="btw" className="text-3xl font-bold text-gray-900 mt-12 mb-4">Let op: geen verlaagd BTW-tarief op airco (het is 21%)</h2>
 
             <p>
-              Het meest praktische financiële voordeel voor split-airco's is het verlaagde BTW-tarief van 9% (in plaats van 21%) op installatiewerk in woningen ouder dan 2 jaar. Geen aanvraag nodig — wij verrekenen dit direct in de offerte als u kwalificeert.
+              Een hardnekkig misverstand: dat u op een airco-installatie 9% BTW zou betalen in plaats van 21%. Dat klopt niet. Het verlaagde 9%-tarief geldt in Nederland voor specifiek isolatiewerk aan woningen ouder dan 2 jaar — niet voor de installatie van een airco of lucht-lucht warmtepomp. Op airco-installatie geldt gewoon het standaardtarief van <strong>21% BTW</strong>. Wij rekenen dat ook zo op de offerte — eerlijk, zonder verrassingen achteraf op uw factuur. Komt u een installateur tegen die "9% BTW" op een airco belooft? Vraag dan hoe dat op de factuur onderbouwd wordt — uiteindelijk moet daar 21% staan.
             </p>
 
-            <div className="bg-white rounded-lg shadow-md my-8 overflow-hidden border border-gray-200">
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead className="bg-amber-50">
-                    <tr>
-                      <th className="text-left p-3 font-semibold text-gray-900">Service</th>
-                      <th className="text-right p-3 font-semibold text-gray-900">Excl. BTW</th>
-                      <th className="text-right p-3 font-semibold text-gray-900">Met 9% BTW</th>
-                      <th className="text-right p-3 font-semibold text-gray-900">Met 21% BTW</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {btw9Verschil.map((row, i) => (
-                      <tr key={i} className={i !== btw9Verschil.length - 1 ? 'border-b border-gray-200' : ''}>
-                        <td className="p-3 font-semibold text-gray-900">{row.item}</td>
-                        <td className="p-3 text-right text-gray-700">{row.exclBtw}</td>
-                        <td className="p-3 text-right font-semibold text-green-700">{row.btw9}</td>
-                        <td className="p-3 text-right text-gray-500">{row.btw21}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
+            <p>
+              Wat wél scheelt: <strong>als u ondernemer bent</strong> en de airco zakelijk gebruikt, kunt u de 21% BTW in de meeste gevallen als voorbelasting terugvragen bij de Belastingdienst. Voor particulieren is dat niet mogelijk. Overleg dit met uw boekhouder of belastingadviseur.
+            </p>
 
             <p>
-              Concrete besparing voor de meeste klanten: <strong>€130-€400</strong> direct, afhankelijk van installatie-omvang. Geen formulier, geen wachttijd, geen aanvraag bij RVO. Voorwaarde: woning ouder dan 2 jaar (vrijwel alle bestaande bouw kwalificeert).
+              En het echte financiële plaatje voor particulieren zit niet in een subsidie of BTW-korting, maar in de <strong>energiebesparing</strong>: een goed gedimensioneerde A+++ split-airco verwarmt voor ~€0,07 per kWh warmte en bespaart op een Limburgs rijtjeshuis typisch €700-€1.200 per jaar ten opzichte van gas. Terugverdientijd zonder subsidie: 4-6 jaar. Zie ons <Link to="/airco-warmtepomp" className="text-amber-700 underline">besparingsmodel bij airco-warmtepomp</Link>.
             </p>
 
             <h2 id="gemeente" className="text-3xl font-bold text-gray-900 mt-12 mb-4">Gemeentelijke regelingen — soms beschikbaar</h2>
@@ -377,7 +340,7 @@ const AircoSubsidie: React.FC = () => {
                   "U vraagt de subsidie zelf later aan"
                 </h3>
                 <p className="text-gray-700">
-                  Klassieke truc: installateur factureert vol incl. 21% BTW, en zegt "u krijgt €X van de subsidie terug, dus netto valt het mee". In de praktijk komt die subsidie nooit op uw rekening. Bij ons: BTW 9% staat direct op de offerte als u kwalificeert. Lucht-water-installateurs kunnen ISDE direct in de offerte verrekenen — eis dat ook van hen.
+                  Klassieke truc: installateur factureert vol incl. 21% BTW, en zegt "u krijgt €X van de subsidie terug, dus netto valt het mee". In de praktijk komt die subsidie nooit op uw rekening. Bij ons ziet u gewoon de netto prijs incl. 21% BTW — het bedrag in de offerte is wat u betaalt. Lucht-water-installateurs kunnen ISDE direct in de offerte verrekenen — eis dat ook van hen.
                 </p>
               </div>
 
@@ -411,7 +374,7 @@ const AircoSubsidie: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Eerlijke offerte — zonder verzonnen subsidies</h2>
           <p className="text-xl mb-8 text-amber-50">
-            Bij ons staat in de offerte wat u écht kunt verwachten: BTW-9% direct verrekend, geen valse ISDE-beloftes, geen "u kunt later aanvragen". We laten zien wat de installatie netto kost, zonder fictieve aftrekposten.
+            Bij ons staat in de offerte wat u écht kunt verwachten: de nette prijs incl. 21% BTW, geen valse ISDE-beloftes, geen "u kunt later aanvragen". We laten zien wat de installatie netto kost, zonder fictieve aftrekposten.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:0462021430" className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-600 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg">

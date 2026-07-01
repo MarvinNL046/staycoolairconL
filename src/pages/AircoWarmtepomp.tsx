@@ -108,7 +108,7 @@ const AircoWarmtepomp: React.FC = () => {
     },
     {
       question: 'Krijg ik subsidie voor een airco-warmtepomp?',
-      answer: 'Geen ISDE in 2026 (zie onze pagina over airco subsidie voor de uitleg). Wel: 9% BTW op installatie bij woning >2 jaar oud (~€155 besparing). Soms gemeentelijke energieregelingen — wisselend per gemeente. Een airco-warmtepomp is in de meeste Limburgse situaties zonder subsidie financieel rendabel: terugverdientijd 3-7 jaar door lager stroomverbruik en gas-CV-besparing.',
+      answer: 'Geen ISDE in 2026 (zie onze pagina over airco subsidie voor de uitleg). En let op: een verlaagd 9% BTW-tarief geldt niet voor airco — dat is voor isolatie; op airco-installatie betaalt u gewoon 21% BTW. Soms zijn er gemeentelijke energieregelingen (wisselend per gemeente), en als ondernemer kunt u de BTW meestal terugvragen. Het echte voordeel: een airco-warmtepomp is in de meeste Limburgse situaties óók zonder subsidie financieel rendabel — terugverdientijd 3-7 jaar door lager stroomverbruik en gas-CV-besparing.',
     },
     {
       question: 'Hoeveel kW moet mijn airco-warmtepomp hebben?',
@@ -194,7 +194,7 @@ const AircoWarmtepomp: React.FC = () => {
             Airco-warmtepomp — 55% goedkoper dan gas, vanaf €1.600
           </h1>
           <p className="text-xl md:text-2xl text-emerald-50 mb-8 max-w-3xl">
-            Een moderne airco IS een lucht-lucht warmtepomp. SCOP 4-5,3, verwarmt én koelt, en bespaart u €450-€1.500 per jaar op stookkosten. Geen ISDE — wel 9% BTW + snelle terugverdientijd.
+            Een moderne airco IS een lucht-lucht warmtepomp. SCOP 4-5,3, verwarmt én koelt, en bespaart u €450-€1.500 per jaar op stookkosten. Geen ISDE nodig — de snelle terugverdientijd doet het werk.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -395,7 +395,7 @@ const AircoWarmtepomp: React.FC = () => {
             </ul>
 
             <p>
-              Prijzen all-in incl. BTW: single-split €1.600-€3.500, multi-split (2 binnenunits) €2.800-€4.000, multi-split (3+ binnenunits) €4.000-€5.500. BTW 9% verrekend bij woningen ouder dan 2 jaar. Volledige uitleg over montage en wat erin zit: zie onze <Link to="/airco-installatie" className="text-emerald-700 underline">airco-installatie pagina</Link>.
+              Prijzen all-in incl. 21% BTW: single-split €1.600-€3.500, multi-split (2 binnenunits) €2.800-€4.000, multi-split (3+ binnenunits) €4.000-€5.500. Op airco geldt het standaard BTW-tarief van 21% (geen verlaagd tarief). Volledige uitleg over montage en wat erin zit: zie onze <Link to="/airco-installatie" className="text-emerald-700 underline">airco-installatie pagina</Link>.
             </p>
 
             <h2 id="nadelen" className="text-3xl font-bold text-gray-900 mt-12 mb-4">Eerlijke nadelen — niet alles is positief</h2>
@@ -429,7 +429,7 @@ const AircoWarmtepomp: React.FC = () => {
                   Geen ISDE-subsidie
                 </h3>
                 <p className="text-gray-700 text-sm">
-                  Lucht-lucht warmtepompen (= airco's) zijn uitgesloten van ISDE in 2026. Wel BTW-9% bij woningen &gt;2 jaar oud. Voor mensen die specifiek aanjager-subsidies willen: een lucht-water warmtepomp krijgt wel ISDE, maar kost €8.000-€15.000 i.p.v. €1.600. Zie onze pagina <Link to="/airco-subsidie" className="text-amber-700 underline">airco subsidie</Link> voor de eerlijke uitleg.
+                  Lucht-lucht warmtepompen (= airco's) zijn uitgesloten van ISDE in 2026. Ook een verlaagd 9% BTW-tarief geldt niet voor airco — u betaalt gewoon 21%. Voor mensen die specifiek aanjager-subsidies willen: een lucht-water warmtepomp krijgt wel ISDE, maar kost €8.000-€15.000 i.p.v. €1.600. Zie onze pagina <Link to="/airco-subsidie" className="text-amber-700 underline">airco subsidie</Link> voor de eerlijke uitleg.
                 </p>
               </div>
               <div className="bg-amber-50 border-l-4 border-amber-500 rounded-lg p-6">

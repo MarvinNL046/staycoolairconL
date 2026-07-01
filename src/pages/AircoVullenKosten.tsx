@@ -78,7 +78,7 @@ const AircoVullenKosten: React.FC = () => {
     },
     {
       question: 'Zit BTW in de prijs?',
-      answer: 'Ja, al onze prijzen zijn all-in incl. BTW. Voor woningen ouder dan 2 jaar geldt 9% verlaagd BTW-tarief op installatie-werkzaamheden, voor jongere woningen 21%. Voor zakelijke klanten kunt u BTW terugvragen.',
+      answer: 'Ja, al onze prijzen zijn all-in incl. 21% BTW. Op airco-installatie geldt het standaardtarief van 21% — er is geen verlaagd 9%-tarief voor airco (dat geldt alleen voor isolatiewerk). Bent u ondernemer en gebruikt u de airco zakelijk? Dan kunt u de BTW meestal terugvragen.',
     },
     {
       question: 'Welke kosten kan ik niet voorzien?',

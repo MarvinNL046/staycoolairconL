@@ -28,7 +28,7 @@ const HybrideWarmtepompAirco: React.FC = () => {
       titel: 'Praktische hybride (airco-warmtepomp + behoud gas-CV)',
       uitleg: 'U behoudt uw gas-CV exact zoals hij is, en plaatst er een airco-warmtepomp bij. Airco verwarmt 80-90% van het seizoen; gas-CV alleen op echt koude dagen of in kamers zonder airco.',
       kosten: '€1.600 – €5.500 (alleen airco)',
-      isde: 'Nee (lucht-lucht), wel 9% BTW',
+      isde: 'Nee (lucht-lucht), 21% BTW',
       voor: 'Verreweg de meeste Limburgse rijtjeshuizen — kleinste investering, snelste terugverdientijd, geen ingrepen in CV',
       doenWij: true,
     },
@@ -74,7 +74,7 @@ const HybrideWarmtepompAirco: React.FC = () => {
     },
     {
       question: 'Welke krijgt ISDE-subsidie?',
-      answer: 'Alleen de officiële hybride warmtepomp (lucht-water + gas-CV) komt in aanmerking voor ISDE: €2.125 voor 4 kW unit + €200 label-bonus + extra bij isolatie-combinatie. Een airco-warmtepomp toegevoegd aan een bestaande gas-CV is technisch een lucht-lucht warmtepomp en krijgt geen ISDE — wel BTW-9% (~€155 besparing op de installatie).',
+      answer: 'Alleen de officiële hybride warmtepomp (lucht-water + gas-CV) komt in aanmerking voor ISDE: €2.125 voor 4 kW unit + €200 label-bonus + extra bij isolatie-combinatie. Een airco-warmtepomp toegevoegd aan een bestaande gas-CV is technisch een lucht-lucht warmtepomp en krijgt geen ISDE — en ook geen verlaagd BTW-tarief: op airco geldt gewoon 21% BTW. Het voordeel zit hier in de lage investering en snelle terugverdientijd.',
     },
     {
       question: 'Is een hybride opzet zuiniger dan vol-elektrisch?',

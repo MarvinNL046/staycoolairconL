@@ -75,7 +75,7 @@ const IsdeAanvragenAirco: React.FC = () => {
     },
     {
       question: 'Combineren met andere subsidies?',
-      answer: 'ISDE laat zich combineren met: 9% BTW-tarief op installatiewerk (bij woning >2 jaar), gemeentelijke energiepremies (wisselend), Energiebespaarlening (laagrentend, €2.500-€65.000). Niet combineerbaar met: regionale ROZ-regelingen voor zelfde investering. Houd er rekening mee dat sommige gemeenten een ISDE-trekking als reden gebruiken om gemeente-subsidie te weigeren — vraag vooraf bij beide partijen.',
+      answer: 'ISDE laat zich combineren met: gemeentelijke energiepremies (wisselend) en de Energiebespaarlening (laagrentend, €2.500-€65.000). Let op het BTW-tarief: op de warmtepomp zelf geldt 21% (er is geen verlaagd 9%-tarief voor warmtepompen). Alleen als u tegelijk isolatiewerk laat doen, valt dat isolatie-deel onder het 9%-tarief. Niet combineerbaar met: regionale ROZ-regelingen voor dezelfde investering. Houd er rekening mee dat sommige gemeenten een ISDE-trekking als reden gebruiken om gemeente-subsidie te weigeren — vraag vooraf bij beide partijen.',
     },
   ];
 
@@ -180,7 +180,7 @@ const IsdeAanvragenAirco: React.FC = () => {
             </p>
 
             <p>
-              <strong>Voor wie geldt deze pagina:</strong> klanten die een lucht-water warmtepomp, hybride warmtepomp of bodemwarmtepomp hebben laten installeren (of overwegen). Voor split-airco-eigenaars is ISDE niet van toepassing — zie onze <Link to="/airco-subsidie" className="text-amber-700 underline">algemene subsidie-pagina</Link> voor alternatieven (BTW-9%, gemeentelijke regelingen).
+              <strong>Voor wie geldt deze pagina:</strong> klanten die een lucht-water warmtepomp, hybride warmtepomp of bodemwarmtepomp hebben laten installeren (of overwegen). Voor split-airco-eigenaars is ISDE niet van toepassing — zie onze <Link to="/airco-subsidie" className="text-amber-700 underline">algemene subsidie-pagina</Link> voor het eerlijke plaatje (gemeentelijke regelingen, zakelijke BTW-aftrek en de terugverdientijd — géén verlaagd BTW-tarief op airco).
             </p>
 
             <h2 id="bedragen" className="text-3xl font-bold text-gray-900 mt-12 mb-4">ISDE-bedragen 2026 — wat krijgt u terug?</h2>
@@ -327,7 +327,7 @@ const IsdeAanvragenAirco: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Eerst zeker weten welk systeem het beste past?</h2>
           <p className="text-lg text-gray-700 mb-6">
-            Wij installeren split-airco's (zonder ISDE, wel BTW-9%). Voor lucht-water warmtepomp verwijzen we naar gespecialiseerde partners. Bij twijfel: bel ons, we rekenen het door zonder verkooppraat.
+            Wij installeren split-airco's (zonder ISDE, en met het gewone 21% BTW-tarief). Voor lucht-water warmtepomp verwijzen we naar gespecialiseerde partners. Bij twijfel: bel ons, we rekenen het door zonder verkooppraat.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="tel:0462021430" className="inline-flex items-center justify-center px-6 py-3 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700">

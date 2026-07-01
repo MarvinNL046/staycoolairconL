@@ -281,7 +281,7 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
     },
     {
       question: 'Zijn er subsidies voor een woonkamer airco?',
-      answer: 'Ja, warmtepomp-airco\'s komen in aanmerking voor ISDE subsidie (€500-1.000). Daarnaast bieden veel gemeenten duurzaamheidsleningen tegen 1-2% rente. Ook is de BTW op arbeidskosten verlaagd naar 9% voor energiebesparende maatregelen.'
+      answer: 'Eerlijk antwoord: een split-airco (lucht-lucht warmtepomp) komt in 2026 niet in aanmerking voor ISDE-subsidie, en er geldt ook geen verlaagd 9% BTW-tarief — op airco betaalt u gewoon 21% BTW. Wat wél kan: sommige gemeenten bieden duurzaamheidsleningen tegen lage rente, en als ondernemer kunt u de BTW meestal terugvragen. Het grootste voordeel zit in de energiebesparing: een woonkamer-airco verdient zich doorgaans in 4-6 jaar terug.'
     }
   ];
 

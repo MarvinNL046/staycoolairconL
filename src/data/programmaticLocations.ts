@@ -63,7 +63,7 @@ export const programmaticLocations: ProgrammaticLocationProfile[] = [
         },
         {
           question: 'Welke financiële regelingen gelden voor airco-installatie in Maastricht?',
-          answer: 'Eerlijk: voor een split-airco (lucht-lucht warmtepomp) geldt géén ISDE-subsidie in 2026 — andere sites claimen dat soms ten onrechte. Wat wél: 9% verlaagd BTW-tarief op installatie als uw woning ouder is dan 2 jaar (bespaart u direct ~€190 op een €1.600-installatie). Soms gemeentelijke energieregelingen. Voor de volledige uitleg over wat wel en niet in aanmerking komt: zie onze airco-subsidie-pagina.',
+          answer: 'Eerlijk: voor een split-airco (lucht-lucht warmtepomp) geldt géén ISDE-subsidie in 2026 — andere sites claimen dat soms ten onrechte. Ook een verlaagd 9% BTW-tarief geldt niet voor airco: dat is voor isolatiewerk, op een airco-installatie betaalt u gewoon 21% BTW. Wat wél kan schelen: soms gemeentelijke energieregelingen, en als ondernemer kunt u de BTW meestal terugvragen. Het echte voordeel zit in de energiebesparing. Voor de volledige uitleg: zie onze airco-subsidie-pagina.',
         },
         {
           question: 'Kan ik een airco laten installeren in een studentenwoning in Maastricht?',

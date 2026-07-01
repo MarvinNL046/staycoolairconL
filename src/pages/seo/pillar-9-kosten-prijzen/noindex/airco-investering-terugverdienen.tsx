@@ -550,11 +550,12 @@ const AircoInvesteringTerugverdienen = () => {
             <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
               <div className="flex items-start gap-3 mb-3">
                 <PiggyBank className="w-6 h-6 text-blue-600 flex-shrink-0" />
-                <h3 className="font-bold text-lg text-gray-900">Claim Alle Subsidies</h3>
+                <h3 className="font-bold text-lg text-gray-900">Check wat écht kan</h3>
               </div>
               <p className="text-gray-600 text-sm">
-                ISDE subsidie + gemeentelijke regelingen + BTW-verlaging kunnen samen
-                €450-950 opleveren. Direct van je investering af.
+                Voor een split-airco geen ISDE en geen verlaagd 9% BTW-tarief (dat is voor isolatie) —
+                op airco geldt 21% BTW. Wel: soms een gemeentelijke regeling, en zakelijke BTW-teruggave
+                voor ondernemers. Het grootste voordeel is de energiebesparing zelf.
               </p>
             </div>
 

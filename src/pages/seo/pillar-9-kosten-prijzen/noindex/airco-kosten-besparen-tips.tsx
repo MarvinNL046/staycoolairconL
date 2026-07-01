@@ -53,12 +53,12 @@ const AircoKostenBesparenTips = () => {
       actie: ['Houd 23-25°C aan', 'Gebruik timer functie', 'Niet te koud instellen']
     },
     {
-      titel: 'Profiteer Van Subsidies',
+      titel: 'Check Gemeentelijke Regelingen',
       icon: Euro,
       besparing: '€150 - €500',
       niveau: 'Gemiddeld',
-      uitleg: 'Verschillende gemeenten en provincies bieden subsidies voor energiezuinige airco\'s. Ook BTW-teruggave mogelijk bij renovatie ouder dan 2 jaar (21% → 9% BTW).',
-      actie: ['Check gemeentelijke subsidies', 'Vraag naar BTW-verlaging', 'Combineer met andere maatregelen']
+      uitleg: 'Sommige gemeenten en provincies bieden regelingen voor verduurzaming. Let op: op airco geldt gewoon 21% BTW — het verlaagde 9%-tarief is voor isolatiewerk, niet voor airco. Ondernemers kunnen de BTW wél terugvragen.',
+      actie: ['Check gemeentelijke regelingen', 'Zakelijk? Vraag BTW terug', 'Combineer met andere maatregelen']
     },
     {
       titel: 'Onderhoudscontract Afsluiten',
@@ -124,10 +124,10 @@ const AircoKostenBesparenTips = () => {
       link: 'Informeer bij je gemeente'
     },
     {
-      naam: 'BTW-Verlaging Renovatie',
-      bedrag: '12% besparing',
-      voorwaarden: 'Woning ouder dan 2 jaar (21% → 9%)',
-      link: 'Via erkend installateur'
+      naam: 'BTW terugvragen (zakelijk)',
+      bedrag: 'Tot 21% terug',
+      voorwaarden: 'Alleen ondernemers met zakelijk gebruik (particulier: 21%, geen verlaagd tarief)',
+      link: 'Via je boekhouder'
     },
     {
       naam: 'Energiebespaarlening',
@@ -282,11 +282,12 @@ const AircoKostenBesparenTips = () => {
           </div>
 
           <div className="mt-8 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg max-w-4xl mx-auto">
-            <h3 className="font-bold text-lg mb-2 text-blue-900">💡 Tip: Combineer Subsidies</h3>
+            <h3 className="font-bold text-lg mb-2 text-blue-900">💡 Tip: wees eerlijk over wat wél kan</h3>
             <p className="text-blue-800">
-              Je kunt vaak meerdere regelingen combineren! Bijvoorbeeld: ISDE subsidie +
-              gemeentelijke subsidie + BTW-verlaging = tot €950 besparing. Vraag je installateur
-              naar de mogelijkheden.
+              Voor een split-airco is er in 2026 geen ISDE-subsidie en geen verlaagd 9% BTW-tarief (dat
+              is voor isolatie) — op airco geldt gewoon 21% BTW. Wat wél kan schelen: een gemeentelijke
+              energieregeling, zakelijke BTW-teruggave voor ondernemers, en vooral de energiebesparing
+              zelf. Vraag je installateur een eerlijke doorrekening — geen verzonnen subsidieposten.
             </p>
           </div>
         </div>
