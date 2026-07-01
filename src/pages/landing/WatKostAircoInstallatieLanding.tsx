@@ -159,7 +159,7 @@ const WatKostAircoInstallatieLanding: React.FC = () => {
     },
     {
       question: 'Kan ik subsidie krijgen voor airco installatie?',
-      answer: 'Er is geen directe subsidie voor airco\'s, maar een warmtepomp-airco kan wel in aanmerking komen voor de ISDE-subsidie (€500-1.000). Ook zijn er gemeentelijke duurzaamheidsleningen beschikbaar tegen lage rente.'
+      answer: 'Een airco is een lucht-lucht warmtepomp en komt niet in aanmerking voor de ISDE-subsidie — die geldt alleen voor lucht-water, hybride en bodemwarmtepompen. Het voordeel van een airco zit in de energiebesparing zelf: als warmtepomp verwarmt hij veel efficiënter dan gas, waardoor u de investering doorgaans in 4 tot 6 jaar terugverdient. Daarnaast kunnen ondernemers de BTW terugvragen en zijn er soms gemeentelijke energieregelingen of duurzaamheidsleningen tegen lage rente.'
     },
     {
       question: 'Hoeveel kost het onderhoud van een airco?',

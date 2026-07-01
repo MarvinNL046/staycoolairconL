@@ -111,7 +111,7 @@ const AircoInstallatieLimburgFAQPage = () => {
         },
         {
           q: "Zijn er subsidiemogelijkheden voor airco in Limburg?",
-          a: "Voor lucht-lucht warmtepompen (airco's met verwarmingsfunctie) zijn regelmatig subsidies beschikbaar via ISDE-regeling, gemeentelijke regelingen, of energieleningen. Bedragen variëren van €300-€1.500 afhankelijk van vermogen en situatie. Let op: niet alle airco's komen in aanmerking - het moet een volwaardige warmtepomp zijn met hoog rendement. Wij helpen graag bij aanvragen. Check altijd vooraf de actuele regelingen op www.rvo.nl of bij uw gemeente. Vraag ons om de laatste stand van zaken."
+          a: "Belangrijk om te weten: een split-airco (lucht-lucht warmtepomp) komt in 2026 NIET in aanmerking voor ISDE-subsidie. De ISDE-apparatenlijst van RVO bevat alleen lucht-water warmtepompen, hybride warmtepompen, bodemwarmtepompen, warmtepompboilers en zonneboilers - geen airco's. Wat wél kan: sommige gemeenten hebben eigen energieregelingen (wisselt per gemeente), en ondernemers kunnen de BTW terugvragen. Het grootste voordeel zit in de energiebesparing zelf: bij verwarmen met een airco is de terugverdientijd doorgaans 4-6 jaar. Check gemeentelijke regelingen op www.rvo.nl of bij uw gemeente."
         },
         {
           q: "Wat is de terugverdientijd van een airco?",
@@ -457,10 +457,10 @@ const AircoInstallatieLimburgFAQPage = () => {
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-purple-600">
-              <h3 className="font-bold text-lg text-purple-600 mb-3">✓ Check Subsidies</h3>
+              <h3 className="font-bold text-lg text-purple-600 mb-3">✓ Check Regelingen</h3>
               <p className="text-gray-700">
-                Voor warmtepompen zijn vaak subsidies beschikbaar. Check voor installatie de actuele
-                regelingen bij ISDE of uw gemeente.
+                Een split-airco krijgt geen ISDE-subsidie, maar sommige gemeenten hebben eigen
+                energieregelingen. Check de actuele regelingen bij uw gemeente.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-orange-600">

@@ -18,7 +18,7 @@ export default function AircoVerwarmingVoordelen() {
         type="Article"
         data={{
           headline: "Voordelen van Airco Verwarming: Bespaar tot 60% op Verwarmingskosten",
-          description: "Overweegt u een airco voor verwarming? Ontdek alle voordelen: lagere energiekosten, snelle verwarming en jaar-rond comfort. Inclusief kostenindicatie en subsidiemogelijkheden.",
+          description: "Overweegt u een airco voor verwarming? Ontdek alle voordelen: lagere energiekosten, snelle verwarming en jaar-rond comfort. Inclusief kostenindicatie en terugverdientijd.",
           image: "https://staycoolairco.nl/images/logo.svg",
           mainEntityOfPage: {
             "@type": "WebPage",
@@ -36,9 +36,9 @@ export default function AircoVerwarmingVoordelen() {
             - Lange levensduur
             - Milieuvriendelijk
             
-            Inclusief subsidiemogelijkheden en praktische kostenindicatie.
+            Inclusief terugverdientijd en praktische kostenindicatie.
           `,
-          keywords: "airco verwarming voordelen, kosten airco verwarming, energiebesparing airco, duurzaam verwarmen, airco subsidie",
+          keywords: "airco verwarming voordelen, kosten airco verwarming, energiebesparing airco, duurzaam verwarmen, terugverdientijd airco",
           articleSection: "Klimaatbeheersing",
           wordCount: 1500,
           inLanguage: "nl-NL"
@@ -46,13 +46,13 @@ export default function AircoVerwarmingVoordelen() {
       />
       <Helmet>
         <title>Voordelen van Airco Verwarming | Tot 60% Besparing | StayCool</title>
-        <meta 
-          name="description" 
-          content="Overweegt u een airco voor verwarming? Ontdek alle voordelen: lagere energiekosten, snelle verwarming en jaar-rond comfort. Inclusief kostenindicatie en subsidiemogelijkheden."
+        <meta
+          name="description"
+          content="Overweegt u een airco voor verwarming? Ontdek alle voordelen: lagere energiekosten, snelle verwarming en jaar-rond comfort. Inclusief kostenindicatie en terugverdientijd."
         />
-        <meta 
-          name="keywords" 
-          content="airco verwarming voordelen, kosten airco verwarming, energiebesparing airco, duurzaam verwarmen, airco subsidie"
+        <meta
+          name="keywords"
+          content="airco verwarming voordelen, kosten airco verwarming, energiebesparing airco, duurzaam verwarmen, terugverdientijd airco"
         />
       </Helmet>
 
@@ -88,8 +88,8 @@ export default function AircoVerwarmingVoordelen() {
                 </div>
                 <ul className="space-y-2">
                   <li>✓ 60% lagere energiekosten</li>
-                  <li>✓ ISDE subsidie mogelijk</li>
-                  <li>✓ Snelle terugverdientijd</li>
+                  <li>✓ Terugverdientijd 4-6 jaar</li>
+                  <li>✓ BTW terugvragen voor ondernemers</li>
                   <li>✓ Waardevermeerdering huis</li>
                 </ul>
               </div>
@@ -127,9 +127,9 @@ export default function AircoVerwarmingVoordelen() {
                 <div>
                   <h3 className="font-semibold mb-2">Aanschaf en Installatie</h3>
                   <p>
-                    De initiële investering varieert tussen €1.500 en €2.500 voor een standaard installatie. 
-                    Met de ISDE subsidie kunt u tot €2.000 terugkrijgen, waardoor de netto investering zeer 
-                    aantrekkelijk wordt.
+                    De initiële investering varieert tussen €1.500 en €2.500 voor een standaard installatie.
+                    Let op: een airco is een lucht-lucht warmtepomp en komt niet in aanmerking voor ISDE-subsidie.
+                    De investering betaalt zich terug via de lagere stookkosten; ondernemers kunnen bovendien de BTW terugvragen.
                   </p>
                 </div>
                 <div>
@@ -143,8 +143,8 @@ export default function AircoVerwarmingVoordelen() {
                 <div>
                   <h3 className="font-semibold mb-2">Terugverdientijd</h3>
                   <p>
-                    Met de huidige energieprijzen en beschikbare subsidies verdient u de investering vaak 
-                    binnen 3-5 jaar terug. Daarna profiteert u jarenlang van lagere energiekosten.
+                    Met de huidige energieprijzen verdient u de investering vaak binnen 4-6 jaar terug via
+                    de lagere stookkosten. Daarna profiteert u jarenlang van lagere energiekosten.
                   </p>
                 </div>
               </div>
@@ -156,16 +156,16 @@ export default function AircoVerwarmingVoordelen() {
                 <div>
                   <h3 className="font-semibold mb-2">Hoe Snel Verdien Ik de Investering Terug?</h3>
                   <p>
-                    Met de huidige energieprijzen en beschikbare subsidies is de gemiddelde terugverdientijd 
-                    3-5 jaar. Dit hangt af van uw specifieke situatie en energieverbruik.
+                    Met de huidige energieprijzen is de gemiddelde terugverdientijd 4-6 jaar, volledig via
+                    de besparing op uw stookkosten. Dit hangt af van uw specifieke situatie en energieverbruik.
                   </p>
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Welke Subsidies Zijn Er Beschikbaar?</h3>
                   <p>
-                    Via de ISDE-regeling kunt u tot €2.000 subsidie krijgen. Daarnaast zijn er vaak 
-                    lokale subsidieregelingen beschikbaar. Onze adviseurs helpen u graag bij het 
-                    aanvragen.
+                    Een airco is een lucht-lucht warmtepomp en valt buiten de ISDE-regeling; die geldt alleen
+                    voor lucht-water, hybride en bodemwarmtepompen. Wel zijn er soms lokale energieregelingen
+                    per gemeente, en ondernemers kunnen de BTW terugvragen. Onze adviseurs helpen u graag verder.
                   </p>
                 </div>
                 <div>

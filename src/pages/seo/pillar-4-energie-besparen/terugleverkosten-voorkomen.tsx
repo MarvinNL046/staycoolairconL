@@ -68,7 +68,7 @@ const TerugleverKostenVoorkomen: React.FC = () => {
     },
     {
       question: 'Welke subsidies zijn beschikbaar voor warmtepompen en thuisbatterijen?',
-      answer: 'Voor 2024-2025 zijn er diverse subsidiemogelijkheden: ISDE subsidie (Investeringssubsidie Duurzame Energie) tot €2.550 voor warmtepompen, BTW-verlaging van 21% naar 0% voor zonnepanelen en thuisbatterijen sinds 2023, en gemeentelijke subsidieregelingen in Limburg (wisselend per gemeente). Daarnaast zijn energiebesparende investeringen fiscaal aftrekbaar via de Energie-investeringsaftrek (EIA) voor ondernemers. Check altijd de actuele regelingen, want subsidiepotjes wisselen per jaar en raken snel uitgeput. Wij helpen u graag met het aanvragen van subsidies.'
+      answer: 'Er zijn diverse mogelijkheden. Let op: een split-airco (lucht-lucht warmtepomp) komt niet in aanmerking voor ISDE - die regeling geldt alleen voor lucht-water, hybride en bodemwarmtepompen (tot €2.550). Wel is er sinds 2023 BTW-verlaging naar 0% voor zonnepanelen en thuisbatterijen, en zijn er gemeentelijke energieregelingen in Limburg (wisselend per gemeente). Daarnaast zijn energiebesparende investeringen fiscaal aftrekbaar via de Energie-investeringsaftrek (EIA) voor ondernemers, die ook de BTW op de airco kunnen terugvragen. Check altijd de actuele regelingen, want potjes wisselen per jaar en raken snel uitgeput. Wij helpen u graag verder.'
     }
   ];
 
@@ -535,8 +535,8 @@ const TerugleverKostenVoorkomen: React.FC = () => {
                     Subsidieondersteuning
                   </h4>
                   <p className="text-gray-700">
-                    Wij helpen met aanvraag van ISDE-subsidie en andere subsidieregelingen. Zo haalt u maximaal rendement
-                    uit uw investering.
+                    Wij helpen met de 0%-BTW-regeling voor zonnepanelen en thuisbatterijen en met gemeentelijke
+                    energieregelingen. Voor een lucht-water of hybride warmtepomp is ook ISDE mogelijk (niet voor een split-airco).
                   </p>
                 </div>
               </div>

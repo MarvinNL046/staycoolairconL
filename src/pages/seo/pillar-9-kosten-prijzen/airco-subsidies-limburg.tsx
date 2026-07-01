@@ -16,30 +16,30 @@ const AircoSubsidiesLimburg: React.FC = () => {
   const usps = [
     {
       icon: <Euro className="h-12 w-12 text-sky-500" />,
-      title: "Tot €500 ISDE Subsidie",
-      description: "Voor hybride warmtepompen en lucht-lucht warmtepompen (airco's met verwarmingsfunctie)."
-    },
-    {
-      icon: <FileText className="h-12 w-12 text-sky-500" />,
-      title: "Hulp bij Aanvraag",
-      description: "Wij helpen u met het aanvragen van subsidies en leveren alle benodigde documentatie."
-    },
-    {
-      icon: <Shield className="h-12 w-12 text-sky-500" />,
-      title: "Gecertificeerde Installatie",
-      description: "F-gassen certificaat verplicht voor subsidie. Wij zijn volledig gecertificeerd."
+      title: "Eerlijk over subsidie",
+      description: "Een split-airco krijgt geen ISDE en geen 9% BTW. Wij vertellen u wat wél kan."
     },
     {
       icon: <TrendingUp className="h-12 w-12 text-sky-500" />,
-      title: "Extra Voordeel",
-      description: "Combineer subsidie met energiebesparing van 60% voor maximaal rendement."
+      title: "Energiebesparing",
+      description: "Het echte voordeel: tot 60% lagere stookkosten, terugverdientijd 4-6 jaar."
+    },
+    {
+      icon: <FileText className="h-12 w-12 text-sky-500" />,
+      title: "Gemeentelijke regelingen",
+      description: "Soms zijn er lokale leningen of premies. Wij wijzen u de weg per gemeente."
+    },
+    {
+      icon: <Shield className="h-12 w-12 text-sky-500" />,
+      title: "Zakelijk BTW terug",
+      description: "Ondernemers kunnen de 21% BTW meestal als voorbelasting terugvragen."
     }
   ];
 
   const isdeVoorwaarden = [
     {
       criterium: "Type Systeem",
-      voorwaarde: "Lucht-lucht warmtepomp (airco met verwarmingsfunctie) of hybride warmtepomp",
+      voorwaarde: "Lucht-water, hybride of bodemwarmtepomp — géén split-airco (die staat niet op de RVO-lijst)",
       voldoet: true
     },
     {
@@ -71,16 +71,16 @@ const AircoSubsidiesLimburg: React.FC = () => {
 
   const subsidieBedragen = [
     {
-      categorie: "Lucht-lucht Warmtepomp (Airco)",
-      beschrijving: "Volwaardige airco met verwarmingsfunctie, SCOP ≥ 4.0",
-      bedrag: "€300 - €500",
-      voorwaarden: "Capaciteit afhankelijk, min. 2.5 kW verwarmingsvermogen"
+      categorie: "Split-airco (lucht-lucht warmtepomp)",
+      beschrijving: "De gewone airco met verwarmingsfunctie die wij installeren",
+      bedrag: "Geen ISDE",
+      voorwaarden: "Staat niet op de RVO ISDE-apparatenlijst; hierop geldt 21% BTW"
     },
     {
       categorie: "Hybride Warmtepomp",
-      beschrijving: "Combinatie warmtepomp + HR-ketel als back-up",
+      beschrijving: "Lucht-water warmtepomp + HR-ketel als back-up",
       bedrag: "€1.500 - €2.000",
-      voorwaarden: "Minimale SCOP 4.0, modulerende capaciteit vereist"
+      voorwaarden: "Minimale SCOP 4.0; via gespecialiseerde installateur"
     },
     {
       categorie: "Volledig Elektrische Warmtepomp",
@@ -163,12 +163,12 @@ const AircoSubsidiesLimburg: React.FC = () => {
 
   const faqItems = [
     {
-      question: "Komen alle airco's in aanmerking voor ISDE-subsidie?",
-      answer: "Nee, alleen airco's die als volwaardige warmtepomp functioneren komen in aanmerking. Het systeem moet een minimale SCOP-waarde van 4.0 hebben en geschikt zijn voor verwarming van de woning. Gewone koeling-only airco's komen niet in aanmerking. Alle door ons geleverde premium merken (Daikin, Mitsubishi Heavy, Samsung, LG) voldoen aan deze eisen wanneer geïnstalleerd als verwarming systeem. Wij adviseren u graag over de meest geschikte optie voor uw situatie."
+      question: "Komen airco's in aanmerking voor ISDE-subsidie?",
+      answer: "Nee. Een split-airco is technisch een lucht-lucht warmtepomp en die staat niet op de ISDE-apparatenlijst van RVO — ook niet als de airco kan verwarmen. ISDE geldt alleen voor lucht-water warmtepompen, hybride warmtepompen, bodemwarmtepompen, warmtepompboilers en zonneboilers. Andere installateurs beloven soms ten onrechte ISDE op een airco. Wij zijn daar eerlijk over: op een airco geldt geen ISDE en geen verlaagd BTW-tarief."
     },
     {
-      question: "Hoeveel ISDE-subsidie kan ik krijgen voor een airco?",
-      answer: "Voor een lucht-lucht warmtepomp (airco met verwarmingsfunctie) kunt u in 2024 een subsidie ontvangen van €300 tot €500, afhankelijk van het verwarmingsvermogen van het systeem. Voor een hybride warmtepomp (airco gecombineerd met HR-ketel) kan de subsidie oplopen tot €1.500-€2.000. Het exacte bedrag wordt bepaald door de RVO op basis van uw aanvraag en de specificaties van het geïnstalleerde systeem. Wij berekenen vooraf het te verwachten subsidiebedrag voor uw situatie."
+      question: "Wat kan ik dan wél aan voordeel krijgen op een airco?",
+      answer: "Drie dingen. (1) De energiebesparing zelf is het grootste voordeel: als warmtepomp verwarmt een airco veel efficiënter dan gas, met een terugverdientijd van doorgaans 4-6 jaar. (2) Bent u ondernemer met zakelijk gebruik, dan kunt u de 21% BTW meestal als voorbelasting terugvragen. (3) Sommige Limburgse gemeenten bieden aanvullende leningen of premies voor verduurzaming — zie de tabel verderop. Een verlaagd 9% BTW-tarief geldt níét voor airco (dat is voor isolatie)."
     },
     {
       question: "Moet ik de subsidie aanvragen vóór of na installatie?",
@@ -199,16 +199,16 @@ const AircoSubsidiesLimburg: React.FC = () => {
   return (
     <>
       <MetaTags
-        title="Airco Subsidies Limburg 2024 | ISDE Regeling Tot €500 | StayCool"
-        description="ISDE subsidie airco tot €500 ✓ Hulp bij aanvraag ✓ Gecertificeerde installatie verplicht ✓ Gemeentelijke regelingen ✓ Gratis advies subsidies!"
+        title="Airco Subsidie Limburg 2026 | Geen ISDE — wat kan wél? | StayCool"
+        description="Eerlijk: een split-airco krijgt geen ISDE en geen 9% BTW (het is 21%). Wat wél kan: gemeentelijke regelingen, zakelijke BTW-teruggave en vooral energiebesparing."
       />
 
       <SchemaMarkup
         type="Service"
         data={{
           "@type": "Service",
-          name: "Airco Subsidie Advies & Aanvraag Hulp",
-          description: "Professionele begeleiding bij ISDE subsidieaanvragen voor warmtepomp airco's in Limburg. Inclusief installatie door gecertificeerde monteurs en complete documentatie.",
+          name: "Airco Subsidie Advies Limburg",
+          description: "Eerlijk advies over airco en subsidie in Limburg: een split-airco krijgt geen ISDE. Wij leggen uit wat wél kan (gemeentelijke regelingen, zakelijke BTW-teruggave, energiebesparing).",
           provider: {
             "@type": "LocalBusiness",
             name: "StayCool Airco",
@@ -229,11 +229,11 @@ const AircoSubsidiesLimburg: React.FC = () => {
           <Breadcrumbs items={breadcrumbItems} className="mb-4 text-sky-50" />
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Airco Subsidies Limburg: ISDE Tot €500 + Gemeentelijke Regelingen
+            Airco Subsidie Limburg: het eerlijke verhaal
           </h1>
 
           <p className="text-xl md:text-2xl text-sky-50 mb-8 leading-relaxed">
-            Profiteer van ISDE-subsidie tot €500 voor uw warmtepomp airco. Wij helpen u met de aanvraag en zorgen voor alle benodigde documentatie en certificering.
+            Eerlijk: een split-airco krijgt geen ISDE-subsidie en geen verlaagd BTW-tarief. Wij vertellen u wat wél kan — gemeentelijke regelingen, zakelijke BTW-teruggave en vooral de energiebesparing die uw investering terugverdient.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -256,11 +256,11 @@ const AircoSubsidiesLimburg: React.FC = () => {
           <div className="flex flex-wrap gap-4 text-sm md:text-base">
             <span className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />
-              Tot €500 ISDE subsidie
+              Eerlijk over subsidie
             </span>
             <span className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />
-              Hulp bij aanvraag
+              Terugverdientijd 4-6 jaar
             </span>
             <span className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />
@@ -292,35 +292,35 @@ const AircoSubsidiesLimburg: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-              ISDE Subsidie voor Airco's: Alles wat u Moet Weten
+              Airco en ISDE-subsidie: hoe zit het echt?
             </h2>
 
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              De ISDE (Investeringssubsidie Duurzame Energie) is een belangrijke financiële tegemoetkoming van de overheid voor het verduurzamen van uw woning. Als u een warmtepomp airco laat installeren, kunt u in aanmerking komen voor een subsidie tot €500. Dit helpt de aanschafkosten te verlagen en maakt de investering in duurzame klimaatbeheersing aantrekkelijker.
+              De ISDE (Investeringssubsidie Duurzame Energie) is een belangrijke financiële tegemoetkoming van de overheid voor het verduurzamen van uw woning. Maar let op: een split-airco valt er niet onder. Technisch is een airco een <strong>lucht-lucht warmtepomp</strong>, en die staat niet op de ISDE-apparatenlijst van RVO — ook niet als de airco kan verwarmen. Andere sites en installateurs claimen dat soms ten onrechte.
             </p>
 
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              De ISDE-regeling wordt beheerd door de RVO (Rijksdienst voor Ondernemend Nederland) en is bedoeld om huiseigenaren te stimuleren over te stappen op duurzame energiebronnen. Airco's met verwarmingsfunctie (lucht-lucht warmtepompen) vallen onder deze regeling omdat ze significant bijdragen aan CO2-reductie en energiebesparing vergeleken met traditionele verwarmingssystemen.
+              De ISDE-regeling (beheerd door RVO) is bedoeld om de gasketel te vervangen. Daarom geldt hij alleen voor <strong>lucht-water warmtepompen, hybride warmtepompen en bodemwarmtepompen</strong> — systemen die uw cv-water verwarmen. Een airco verwarmt de kamerlucht en komt dus niet in aanmerking. Ook een verlaagd 9% BTW-tarief geldt niet voor airco (dat is voor isolatie); op airco betaalt u 21% BTW.
             </p>
 
             <div className="bg-sky-50 border-l-4 border-sky-500 p-6 rounded-lg my-8">
               <div className="flex items-start">
                 <AlertCircle className="h-6 w-6 text-sky-600 mr-3 flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Belangrijk: Aanvraag na Installatie</h4>
+                  <h4 className="text-xl font-semibold text-gray-900 mb-2">Belangrijk: laat u niet misleiden</h4>
                   <p className="text-gray-700">
-                    De ISDE-subsidie moet worden aangevraagd na installatie van het systeem, binnen 4 maanden na de installatiedatum. Vooraf reserveren is niet mogelijk. Bewaar alle documenten zorgvuldig vanaf dag één van de installatie.
+                    Belooft een installateur "ISDE-subsidie" of "9% BTW" op een split-airco? Vraag om een schriftelijke onderbouwing (de ISDE-categorie of de wettelijke grond). Voor een airco bestaan die niet — op de factuur hoort 21% BTW te staan en er komt geen ISDE-uitkering.
                   </p>
                 </div>
               </div>
             </div>
 
             <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-6 mt-12">
-              Subsidiebedragen per Type Systeem
+              Welk systeem krijgt wél ISDE?
             </h3>
 
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              Het subsidiebedrag hangt af van het type warmtepompsysteem dat u laat installeren. De overheid maakt onderscheid tussen verschillende categorieën op basis van capaciteit en functionaliteit:
+              ISDE bestaat en is actief — alleen niet voor split-airco's. Het geldt voor systemen die uw gas-cv (deels) vervangen. Wij installeren split-airco's; kiest u voor een lucht-water of hybride warmtepomp, dan verwijzen we u naar gespecialiseerde partners die de ISDE direct in de offerte verrekenen.
             </p>
           </div>
 
@@ -356,7 +356,7 @@ const AircoSubsidiesLimburg: React.FC = () => {
             </h3>
 
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              Om in aanmerking te komen voor de ISDE-subsidie voor uw airco, moet aan een aantal technische en administratieve voorwaarden worden voldaan. Wij zorgen ervoor dat alle voorwaarden worden nageleefd:
+              Kiest u voor een kwalificerende warmtepomp (lucht-water, hybride of bodem — dus geen split-airco), dan gelden voor de ISDE een aantal technische en administratieve voorwaarden:
             </p>
           </div>
 
@@ -392,7 +392,7 @@ const AircoSubsidiesLimburg: React.FC = () => {
             </h3>
 
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              Het aanvragen van ISDE-subsidie vergt enige administratie, maar met de juiste voorbereiding en documentatie is het goed te doen. Wij begeleiden u door het hele proces:
+              Ter info, voor wie een kwalificerende warmtepomp (lucht-water/hybride/bodem) laat plaatsen — voor een split-airco is dit niet van toepassing. Het ISDE-aanvraagproces verloopt zo:
             </p>
           </div>
 
@@ -419,51 +419,51 @@ const AircoSubsidiesLimburg: React.FC = () => {
 
           <div className="prose prose-lg max-w-none">
             <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-6 mt-12">
-              Hoe Helpt StayCool Airco bij uw Subsidieaanvraag?
+              Hoe Helpt StayCool Airco u Verder?
             </h3>
 
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Subsidies aanvragen kan complex en tijdrovend zijn. Daarom bieden wij uitgebreide ondersteuning tijdens het hele proces, van advies tot aanvraag en zelfs eventuele bezwaarprocedures. Onze service omvat:
+              We beloven geen subsidie die er niet is. Wel nemen we u het uitzoekwerk uit handen en zorgen we voor een eerlijke, complete offerte. Onze service omvat:
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-sky-50 p-6 rounded-lg border-l-4 border-sky-500">
                 <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
                   <FileText className="h-6 w-6 text-sky-500 mr-2" />
-                  Complete Documentatie
+                  Transparante offerte
                 </h4>
                 <p className="text-gray-700">
-                  Wij leveren alle benodigde documenten: gedetailleerde factuur met BTW, installatiebewijzen, productspecificaties met SCOP-waarde, F-gassen certificaat, en foto's van de installatie. Alles wat de RVO vereist krijgt u automatisch van ons.
+                  Alle posten op een rij, de nette prijs incl. 21% BTW, en geen verzonnen subsidie-aftrek. Het bedrag in de offerte is wat u betaalt.
                 </p>
               </div>
 
               <div className="bg-sky-50 p-6 rounded-lg border-l-4 border-sky-500">
                 <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
                   <CheckCircle className="h-6 w-6 text-sky-500 mr-2" />
-                  Vooringevuld Formulier
+                  Gemeentelijke regelingen
                 </h4>
                 <p className="text-gray-700">
-                  Wij vullen het aanvraagformulier voor u in met alle technische specificaties en installatiegegevens. U hoeft alleen nog uw persoonlijke gegevens toe te voegen en digitaal in te dienen. Maximale gemak en minimale tijdsinvestering.
+                  We wijzen u op lokale leningen of premies die voor uw gemeente kunnen gelden (zie de tabel hieronder) en hoe u ze checkt via energiesubsidiewijzer.nl.
                 </p>
               </div>
 
               <div className="bg-sky-50 p-6 rounded-lg border-l-4 border-sky-500">
                 <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
                   <Award className="h-6 w-6 text-sky-500 mr-2" />
-                  Garantie op Voorwaarden
+                  Zakelijke BTW-teruggave
                 </h4>
                 <p className="text-gray-700">
-                  Als F-gassen gecertificeerde installateurs garanderen wij dat uw systeem voldoet aan alle ISDE-voorwaarden. Verkeerde installatie of documentatie die tot afwijzing leidt, komt nooit voor bij onze klanten.
+                  Bent u ondernemer en gebruikt u de airco zakelijk? Dan kunt u de 21% BTW meestal als voorbelasting terugvragen. We leveren een correcte factuur met het typenummer.
                 </p>
               </div>
 
               <div className="bg-sky-50 p-6 rounded-lg border-l-4 border-sky-500">
                 <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
                   <Phone className="h-6 w-6 text-sky-500 mr-2" />
-                  Persoonlijke Begeleiding
+                  Eerlijke doorrekening
                 </h4>
                 <p className="text-gray-700">
-                  Vragen over de aanvraag? Onduidelijkheden in het proces? Wij staan u bij met persoonlijke telefonische begeleiding. Ook helpen wij gratis bij eventuele vragen van de RVO of bezwaarprocedures indien nodig.
+                  We rekenen uw werkelijke besparing en terugverdientijd voor. Overweegt u lucht-water of hybride (mét ISDE)? Dan verwijzen we u naar de juiste partner.
                 </p>
               </div>
             </div>
@@ -473,7 +473,7 @@ const AircoSubsidiesLimburg: React.FC = () => {
             </h3>
 
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              Naast de nationale ISDE-subsidie bieden veel Limburgse gemeenten aanvullende financiële regelingen voor energiebesparende maatregelen. Deze zijn meestal in de vorm van leningen met zeer lage rente (0-1%) en lange looptijden. U kunt deze combineren met de ISDE-subsidie voor optimale financiering:
+              Hier wordt het voor uw airco wél interessant: veel Limburgse gemeenten bieden aanvullende financiële regelingen voor energiebesparende maatregelen. Deze zijn meestal in de vorm van leningen met zeer lage rente (0-1%) en lange looptijden — een handige manier om uw airco-investering te financieren:
             </p>
           </div>
 
@@ -513,7 +513,7 @@ const AircoSubsidiesLimburg: React.FC = () => {
             </h3>
 
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Het werkelijke voordeel van een warmtepomp airco gaat ver voorbij de eenmalige subsidie. Door de combinatie van subsidie en structurele energiebesparing verdient uw investering zich sneller terug dan u denkt:
+              Het werkelijke voordeel van een airco als warmtepomp zit niet in een subsidie, maar in de structurele energiebesparing. Daardoor verdient uw investering zich sneller terug dan u denkt:
             </p>
 
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-lg border border-green-200 mb-8">
@@ -523,18 +523,8 @@ const AircoSubsidiesLimburg: React.FC = () => {
 
               <div className="space-y-4">
                 <div className="flex justify-between items-center border-b border-green-200 pb-3">
-                  <span className="text-gray-700 font-semibold">Investering premium airco (incl. installatie):</span>
+                  <span className="text-gray-700 font-semibold">Investering premium airco (incl. installatie, 21% BTW):</span>
                   <span className="text-xl font-bold text-gray-900">€2.495</span>
-                </div>
-
-                <div className="flex justify-between items-center border-b border-green-200 pb-3">
-                  <span className="text-gray-700 font-semibold">ISDE subsidie terug:</span>
-                  <span className="text-xl font-bold text-green-600">- €500</span>
-                </div>
-
-                <div className="flex justify-between items-center border-b border-green-200 pb-3">
-                  <span className="text-gray-700 font-semibold">Netto investering:</span>
-                  <span className="text-xl font-bold text-gray-900">€1.995</span>
                 </div>
 
                 <div className="flex justify-between items-center border-b border-green-200 pb-3">
@@ -549,11 +539,11 @@ const AircoSubsidiesLimburg: React.FC = () => {
 
                 <div className="flex justify-between items-center pt-4 bg-green-100 p-4 rounded-lg mt-4">
                   <span className="text-lg font-bold text-gray-900">TOTAAL NETTO VOORDEEL (10 jaar):</span>
-                  <span className="text-3xl font-bold text-green-700">+ €5.005</span>
+                  <span className="text-3xl font-bold text-green-700">+ €3.005</span>
                 </div>
 
                 <p className="text-sm text-gray-600 italic mt-4 text-center">
-                  Dit rekenvoorbeeld gaat uit van gemiddeld gebruik en energieprijzen 2024. Individuele resultaten kunnen variëren afhankelijk van woninggrootte, isolatie en gebruikspatroon.
+                  Dit rekenvoorbeeld gaat uit van gemiddeld gebruik en energieprijzen, zonder subsidie (die geldt niet voor een split-airco). Individuele resultaten variëren met woninggrootte, isolatie en gebruikspatroon.
                 </p>
               </div>
             </div>
@@ -563,29 +553,29 @@ const AircoSubsidiesLimburg: React.FC = () => {
             </h3>
 
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Bij StayCool Airco krijgt u niet alleen een professionele airco installatie, maar ook complete begeleiding bij uw subsidieaanvraag. Onze klanten hebben een succesr success rate van vrijwel 100% bij ISDE-aanvragen dankzij onze expertise en zorgvuldige documentatie. Wij nemen u alle zorgen uit handen, van advies tot uitbetaling.
+              Bij StayCool Airco krijgt u een professionele airco-installatie én een eerlijk verhaal over de kosten. We beloven geen subsidie die er niet is, maar rekenen wél helder voor wat een airco u aan energie bespaart. Zo weet u precies waar u aan toe bent.
             </p>
 
             <ul className="space-y-3 mb-8">
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-sky-500 mr-3 flex-shrink-0 mt-1" />
-                <span className="text-gray-700"><strong>Gratis subsidie adviesgesprek:</strong> Wij berekenen vooraf uw te verwachten subsidie en besparing</span>
+                <span className="text-gray-700"><strong>Gratis adviesgesprek:</strong> Wij berekenen vooraf uw besparing en terugverdientijd</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-sky-500 mr-3 flex-shrink-0 mt-1" />
-                <span className="text-gray-700"><strong>Complete documentatie:</strong> Alle benodigde stukken automatisch geleverd na installatie</span>
+                <span className="text-gray-700"><strong>Eerlijke offerte:</strong> De nette prijs incl. 21% BTW, geen verzonnen subsidieposten</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-sky-500 mr-3 flex-shrink-0 mt-1" />
-                <span className="text-gray-700"><strong>F-gassen gecertificeerd:</strong> Voldoet aan wettelijke eis voor subsidie</span>
+                <span className="text-gray-700"><strong>F-gassen gecertificeerd:</strong> Vakkundige, veilige installatie</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-sky-500 mr-3 flex-shrink-0 mt-1" />
-                <span className="text-gray-700"><strong>Persoonlijke begeleiding:</strong> Hulp bij invullen en indienen aanvraag</span>
+                <span className="text-gray-700"><strong>Gemeentelijke regelingen:</strong> We wijzen u op lokale leningen en premies</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-sky-500 mr-3 flex-shrink-0 mt-1" />
-                <span className="text-gray-700"><strong>Garantie op goedkeuring:</strong> Bij afwijzing door onze fout, gratis hulp bij bezwaar</span>
+                <span className="text-gray-700"><strong>Zakelijk voordeel:</strong> Ondernemers kunnen de BTW meestal terugvragen</span>
               </li>
             </ul>
           </div>
@@ -599,7 +589,7 @@ const AircoSubsidiesLimburg: React.FC = () => {
             Profiteer van Subsidie en Energiebesparing
           </h2>
           <p className="text-xl mb-8 text-orange-50">
-            Vraag nu gratis advies aan over uw subsidiemogelijkheden en ontdek hoeveel u kunt besparen met een warmtepomp airco.
+            Vraag nu gratis, eerlijk advies aan en ontdek hoeveel u met een airco op uw stookkosten bespaart — zonder verzonnen subsidies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

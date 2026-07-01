@@ -346,23 +346,23 @@ export default function AircoOfferteAanvragenChecklist() {
               </p>
 
               {/* ==================== PUNT 7 ==================== */}
-              <h3>7. ISDE-meldcode beschikbaarheid</h3>
+              <h3>7. Eerlijkheid over subsidie</h3>
               <p>
-                <strong>Context:</strong> de ISDE-subsidie geeft minimaal €500 voor een airco met verwarmingsfunctie
-                (lucht-lucht warmtepomp). <strong>Zonder ISDE-meldcode kun je de subsidie niet aanvragen</strong> — deze
-                code krijgt de installateur van de fabrikant en moet op de factuur staan. Niet elke installateur
-                is hiermee bekend of bereid dit te regelen.
+                <strong>Context:</strong> een split-airco (lucht-lucht warmtepomp) krijgt <strong>géén ISDE-subsidie</strong>
+                {' '}— ook niet als de airco kan verwarmen — en <strong>geen verlaagd 9% BTW-tarief</strong>. ISDE is alleen
+                voor lucht-water/hybride/bodemwarmtepompen; op airco geldt 21% BTW. Andere sites en installateurs
+                beloven dit soms ten onrechte.
               </p>
               <p>
-                <strong>Red flag:</strong> "Subsidies regelt u zelf" — technisch klopt dat, maar een goede installateur
-                helpt je minstens met het leveren van de meldcode en de juiste productspecificaties. Als hij het
-                woord "meldcode" niet kent: volgende.
+                <strong>Red flag:</strong> een offerte die "ISDE tot €500" of "9% BTW" op de airco belooft. Vraag om
+                een schriftelijke onderbouwing (de ISDE-categorie of de wettelijke grond). Krijg je die niet, dan
+                klopt de belofte niet — en zijn de andere posten ook het dubbelchecken waard.
               </p>
               <p>
-                <strong>Template-vraag:</strong> <em>"Levert het gekozen model de ISDE-meldcode? Kunt u deze meldcode
-                én het subsidiebedrag waarop ik recht heb in de offerte vermelden? Zie ook{' '}</em>
+                <strong>Template-vraag:</strong> <em>"Ik ga ervan uit dat op deze airco 21% BTW geldt en geen ISDE —
+                klopt dat? En zijn er lokale gemeentelijke regelingen die wél van toepassing zijn?" Zie ook{' '}</em>
                 <Link to="/blog/airco-subsidie-2026-limburg" className="text-blue-600 hover:underline">
-                  onze ISDE-gids 2026
+                  onze eerlijke subsidie-gids 2026
                 </Link>.
               </p>
 

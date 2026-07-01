@@ -60,7 +60,7 @@ const blogPosts: BlogPostPreview[] = [
   {
     slug: 'airco-offerte-heerlen',
     title: 'Airco offerte Heerlen: wat kost het in 2026 + Parkstad-specifieke tips',
-    description: 'Heerlense rijtjeshuizen en Parkstad-woningen hebben betere ROI voor airco. Prijzen, ISDE-combi met isolatie en corporatie-woning overwegingen.',
+    description: 'Heerlense rijtjeshuizen en Parkstad-woningen hebben betere ROI voor airco. Prijzen, snelle terugverdientijd en corporatie-woning overwegingen.',
     date: '18 april 2026',
     imageUrl: '/images/blog/airco-offerte-heerlen.webp',
     readingTime: '8 min',
@@ -96,7 +96,7 @@ const blogPosts: BlogPostPreview[] = [
   {
     slug: 'airco-maastricht-complete-gids-2026',
     title: 'Airco in Maastricht 2026: complete gids met kosten, subsidies en wijktips',
-    description: 'Complete gids voor airco in Maastricht: kosten €1.500–€3.500, ISDE-subsidie, wijkspecifieke tips voor Binnenstad, Wyck, Heer en meer. Inclusief monumenten-advies en VvE-hulp.',
+    description: 'Complete gids voor airco in Maastricht: kosten €1.500–€3.500, eerlijk over subsidie (split-airco krijgt geen ISDE), wijkspecifieke tips voor Binnenstad, Wyck, Heer en meer. Inclusief monumenten-advies en VvE-hulp.',
     date: '18 april 2026',
     imageUrl: '/images/blog/airco-maastricht-complete-gids-2026.webp',
     readingTime: '10 min',
@@ -114,7 +114,7 @@ const blogPosts: BlogPostPreview[] = [
   {
     slug: 'airco-subsidie-2026-limburg',
     title: 'Airco subsidie 2026: wanneer wel, wanneer niet + Limburgse regelingen',
-    description: 'Pure koel-airco krijgt geen subsidie. Een airco met verwarmingsfunctie (lucht-lucht warmtepomp) komt wél in aanmerking voor minimaal €500 ISDE. Plus gemeentelijke regelingen in Limburg.',
+    description: 'Een split-airco (ook lucht-lucht warmtepomp of airco met verwarmingsfunctie) krijgt geen ISDE en geen 9% BTW. ISDE geldt alleen voor lucht-water/hybride/bodemwarmtepompen. Wél: soms gemeentelijke regelingen en vooral flinke energiebesparing.',
     date: '17 april 2026',
     imageUrl: '/images/blog/airco-subsidie-2026-limburg.webp',
     readingTime: '8 min',

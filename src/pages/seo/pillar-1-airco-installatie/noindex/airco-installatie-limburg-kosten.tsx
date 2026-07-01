@@ -710,11 +710,12 @@ const AircoInstallatieLimburgKostenPage = () => {
               <div className="flex items-start gap-3">
                 <div className="bg-yellow-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">💡</div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-2">Bonus: Check subsidies</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">Bonus: Check lokale regelingen</h3>
                   <p className="text-gray-600 text-sm">
-                    Informeer bij gemeente naar ISDE subsidie of lokale regelingen voor duurzame verwarming.
+                    Let op: een split-airco krijgt geen ISDE-subsidie. Informeer wel bij uw gemeente naar
+                    lokale energieregelingen; ondernemers kunnen bovendien de BTW terugvragen.
                   </p>
-                  <div className="mt-2 text-yellow-700 font-semibold text-sm">Mogelijk tot €500 - €1.500 subsidie</div>
+                  <div className="mt-2 text-yellow-700 font-semibold text-sm">Verschilt per gemeente</div>
                 </div>
               </div>
             </div>

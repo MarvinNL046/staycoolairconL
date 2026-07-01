@@ -111,7 +111,7 @@ const AircoAPlusPlusVerwarmen: React.FC = () => {
     {
       question: 'Geldt subsidie voor A+++ airco\'s?',
       answer:
-        'Via de ISDE-subsidie (Investeringssubsidie Duurzame Energie) kunt u subsidie aanvragen voor lucht-lucht warmtepompen met een SCOP van minimaal 3,5. A+++ modellen kwalificeren altijd. De subsidie bedraagt momenteel €400-1.800 afhankelijk van het model. Vraag ons naar de actuele regelingen.',
+        'Nee. Een split-airco is een lucht-lucht warmtepomp en staat niet op de ISDE-apparatenlijst — ISDE geldt alleen voor lucht-water, hybride en bodemwarmtepompen. Een A+++ airco levert het voordeel juist via de energiebesparing zelf: door de hoge SCOP verwarmt u fors goedkoper dan met gas, met een terugverdientijd van doorgaans 4-6 jaar. Ondernemers kunnen daarnaast de BTW terugvragen en soms geldt een gemeentelijke energieregeling (wisselt per gemeente). Vraag ons naar de actuele mogelijkheden.',
     },
   ];
 

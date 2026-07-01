@@ -273,8 +273,9 @@ const WatKostEenAircoPlaatsen = () => {
 
         <h2 id="subsidies">Subsidies en Regelingen</h2>
         <p>
-          Er zijn verschillende subsidies en regelingen beschikbaar voor de aanschaf 
-          van een airco, vooral als deze ook kan verwarmen:
+          Let op: een split-airco is een lucht-lucht warmtepomp en krijgt géén ISDE-subsidie.
+          De ISDE geldt alleen voor lucht-water-, hybride- en bodemwarmtepompen. Toch zijn er
+          voordelen die de investering in een airco aantrekkelijk maken:
         </p>
 
         <div className="bg-blue-50 rounded-lg p-6 my-8">
@@ -282,19 +283,19 @@ const WatKostEenAircoPlaatsen = () => {
             <li className="flex items-start">
               <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-1" />
               <div>
-                <strong>ISDE-subsidie:</strong> Tot €2.000 voor warmtepompen
+                <strong>Energiebesparing:</strong> Terugverdientijd doorgaans 4-6 jaar via lagere stookkosten
               </div>
             </li>
             <li className="flex items-start">
               <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-1" />
               <div>
-                <strong>BTW-teruggave:</strong> Mogelijk bij zonnepanelen combinatie
+                <strong>BTW-teruggave:</strong> Ondernemers kunnen de 21% BTW terugvragen
               </div>
             </li>
             <li className="flex items-start">
               <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-1" />
               <div>
-                <strong>Gemeentelijke regelingen:</strong> Afhankelijk van je woonplaats
+                <strong>Gemeentelijke regelingen:</strong> Soms een lokale energieregeling, afhankelijk van je woonplaats
               </div>
             </li>
           </ul>
@@ -309,7 +310,7 @@ const WatKostEenAircoPlaatsen = () => {
           <li>Kies de juiste capaciteit voor je ruimte</li>
           <li>Vergelijk verschillende aanbieders</li>
           <li>Plan de installatie in het laagseizoen</li>
-          <li>Onderzoek beschikbare subsidies</li>
+          <li>Reken op de energiebesparing (terugverdientijd 4-6 jaar), niet op ISDE</li>
         </ul>
 
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 text-white my-12">

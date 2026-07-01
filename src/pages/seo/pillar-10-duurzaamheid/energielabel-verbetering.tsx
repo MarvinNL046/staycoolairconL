@@ -122,7 +122,7 @@ const EnergielabelVerbeteringPage = () => {
     "3-8% hogere verkoopprijs (€10.000-28.000)",
     "30% sneller verkopen bij label A vs D-G",
     "€600-1.500 lagere energiekosten per jaar",
-    "Tot €3.000 subsidie via ISDE en gemeenten",
+    "ISDE + gemeenten voor lucht-water/hybride (niet voor split-airco)",
     "Lagere hypotheekrente (groene hypotheek)",
     "Bijdrage aan CO2-reductiedoelen",
     "Comfortabeler binnenklimaat",
@@ -144,7 +144,7 @@ const EnergielabelVerbeteringPage = () => {
     },
     {
       question: "Krijg ik subsidie voor energielabelverbetering?",
-      answer: "Ja, er zijn meerdere subsidiemogelijkheden. ISDE regeling (Investeringssubsidie Duurzame Energie): €2.500 voor warmtepomp, €2.000 voor hybride warmtepomp. Gemeentelijke regelingen in Limburg: Maastricht €1.500 extra voor gasafsluiting, Heerlen €1.000 voor energetische renovatie, Venlo €750 voor sociale huurwoningen, Sittard-Geleen €500 voor isolatie pakket. Subsidieregeling Energiebesparing Eigen Huis (SEEH): tot €2.000 voor isolatiemaatregelen. Totale subsidies kunnen oplopen tot €3.000-5.000 voor een compleet renovatiepakket. Voorwaarden: erkend installatiebedrijf (F-gassen gecertificeerd), energielabel berekening, aanvraag binnen 6 maanden. Wij verzorgen de volledige subsidieaanvraag inclusief documentatie."
+      answer: "Ja, er zijn meerdere subsidiemogelijkheden. ISDE regeling (Investeringssubsidie Duurzame Energie): tot €2.500 voor een lucht-water warmtepomp, €2.000 voor een hybride warmtepomp. Let op: een lucht-lucht warmtepomp (split-airco) komt niet in aanmerking voor ISDE. Gemeentelijke regelingen in Limburg: Maastricht €1.500 extra voor gasafsluiting, Heerlen €1.000 voor energetische renovatie, Venlo €750 voor sociale huurwoningen, Sittard-Geleen €500 voor isolatie pakket. Subsidieregeling Energiebesparing Eigen Huis (SEEH): tot €2.000 voor isolatiemaatregelen. Totale subsidies kunnen oplopen tot €3.000-5.000 voor een compleet renovatiepakket. Voorwaarden: erkend installatiebedrijf (F-gassen gecertificeerd), energielabel berekening, aanvraag binnen 6 maanden. Wij verzorgen de volledige subsidieaanvraag inclusief documentatie."
     },
     {
       question: "Wat is een groene hypotheek en hoe werkt deze?",
@@ -319,7 +319,7 @@ const EnergielabelVerbeteringPage = () => {
                   Warmtepomp: Snelste Labelverbetering
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  De installatie van een warmtepomp is veruit de effectiefste maatregel voor snelle labelverbetering. Een lucht-lucht warmtepomp verbetert het label direct met 2 stappen door het hoge rendement (COP 4-5) en lage primaire energiebehoefte. Investering €4.500-8.000 na subsidie, terugverdientijd 5-6 jaar via besparingen en waardestijging. Een lucht-water warmtepomp die de complete CV-ketel vervangt verbetert het label met 3 stappen. Investering €10.000-15.000 na subsidie, terugverdientijd 8-10 jaar.
+                  De installatie van een warmtepomp is veruit de effectiefste maatregel voor snelle labelverbetering. Een lucht-lucht warmtepomp (split-airco) verbetert het label direct met 2 stappen door het hoge rendement (COP 4-5) en lage primaire energiebehoefte. Investering €4.500-8.000 (let op: een lucht-lucht warmtepomp krijgt geen ISDE-subsidie), terugverdientijd 5-6 jaar via besparingen en waardestijging. Een lucht-water warmtepomp die de complete CV-ketel vervangt verbetert het label met 3 stappen. Investering €10.000-15.000 na ISDE-subsidie, terugverdientijd 8-10 jaar.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed">
@@ -461,7 +461,7 @@ const EnergielabelVerbeteringPage = () => {
               ISDE Subsidie
             </h3>
             <p className="text-gray-700 leading-relaxed">
-              De belangrijkste subsidieregeling voor energielabelverbetering is ISDE (Investeringssubsidie Duurzame Energie). Voor warmtepompen ontvangt u €2.500 (volledige warmtepomp) of €2.000 (hybride). Voorwaarden: erkend installatiebedrijf met F-gassen certificering, minimaal energielabel A++ voor het systeem, aanvraag binnen 6 maanden na installatie. De subsidie wordt binnen 13 weken uitbetaald na goedkeuring. Budget is beperkt en geldt op = op basis, dus tijdig aanvragen is cruciaal.
+              De belangrijkste subsidieregeling voor energielabelverbetering is ISDE (Investeringssubsidie Duurzame Energie). Voor een lucht-water warmtepomp ontvangt u tot €2.500, voor een hybride warmtepomp €2.000. Let op: een lucht-lucht warmtepomp (split-airco) komt niet in aanmerking voor ISDE - de regeling geldt alleen voor lucht-water, hybride en bodemwarmtepompen, warmtepompboilers en zonneboilers. Voorwaarden: erkend installatiebedrijf met F-gassen certificering, het systeem staat op de ISDE-apparatenlijst, aanvraag binnen 6 maanden na installatie. De subsidie wordt binnen 13 weken uitbetaald na goedkeuring. Budget is beperkt en geldt op = op basis, dus tijdig aanvragen is cruciaal.
             </p>
 
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">

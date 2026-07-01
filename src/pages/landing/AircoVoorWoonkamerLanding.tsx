@@ -862,7 +862,7 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
               Extra Voordelen
             </h4>
             <ul className="grid md:grid-cols-2 gap-3 text-sm text-amber-800">
-              <li>✓ ISDE subsidie mogelijk (€500-1.000)</li>
+              <li>✓ Terugverdientijd doorgaans 4-6 jaar</li>
               <li>✓ 15% hogere woningwaarde</li>
               <li>✓ Geen gasaansluiting meer nodig</li>
               <li>✓ Lagere onderhoudskosten</li>

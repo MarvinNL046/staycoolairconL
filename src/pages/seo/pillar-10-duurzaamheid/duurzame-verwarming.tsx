@@ -125,7 +125,7 @@ const DuurzameVerwarmingPage = () => {
     "2,8-3,4 ton CO2-reductie per jaar",
     "3-8% waardestijging van uw woning",
     "Energielabel verbetering (minimaal 2 stappen)",
-    "Subsidie tot €2.500 via ISDE regeling",
+    "ISDE tot €2.500 voor lucht-water/hybride (niet voor split-airco)",
     "Koeling in de zomer (lucht-lucht systemen)"
   ];
 
@@ -152,7 +152,7 @@ const DuurzameVerwarmingPage = () => {
     },
     {
       question: "Krijg ik subsidie voor duurzame verwarming?",
-      answer: "Ja, via de ISDE regeling (Investeringssubsidie Duurzame Energie) krijgt u substantiële subsidie: €2.500 voor een volledige warmtepomp (lucht-water of lucht-lucht), €2.000 voor een hybride warmtepomp. Voorwaarden: installatie door erkend bedrijf (F-gassen gecertificeerd), minimaal energielabel A++ voor het systeem, aanvraag binnen 6 maanden na installatie. Gemeenten in Limburg bieden vaak aanvullende regelingen: Maastricht geeft €1.500 extra bij gasafsluiting, Heerlen €1.000 voor energetische renovatie, Venlo €750 voor sociale huurwoningen. Totale subsidies kunnen oplopen tot €4.000-4.500. Wij verzorgen de volledige subsidieaanvraag inclusief documentatie, energielabel berekening, en communicatie met RVO, zodat u gegarandeerd de maximale subsidie ontvangt zonder administratieve rompslomp."
+      answer: "Ja, via de ISDE regeling (Investeringssubsidie Duurzame Energie) krijgt u substantiële subsidie: tot €2.500 voor een lucht-water warmtepomp, €2.000 voor een hybride warmtepomp. Let op: een lucht-lucht warmtepomp (split-airco) komt niet in aanmerking voor ISDE - die geldt alleen voor lucht-water, hybride en bodemwarmtepompen, warmtepompboilers en zonneboilers. Voorwaarden: installatie door erkend bedrijf (F-gassen gecertificeerd), het systeem staat op de ISDE-apparatenlijst, aanvraag binnen 6 maanden na installatie. Gemeenten in Limburg bieden vaak aanvullende regelingen: Maastricht geeft €1.500 extra bij gasafsluiting, Heerlen €1.000 voor energetische renovatie, Venlo €750 voor sociale huurwoningen. Totale subsidies kunnen oplopen tot €4.000-4.500. Wij verzorgen de volledige subsidieaanvraag inclusief documentatie, energielabel berekening, en communicatie met RVO, zodat u gegarandeerd de maximale subsidie ontvangt zonder administratieve rompslomp."
     },
     {
       question: "Hoe lang duurt de installatie?",
@@ -297,7 +297,7 @@ const DuurzameVerwarmingPage = () => {
                   De Vier Alternatieven voor Gasverwarming
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Er zijn vier hoofdalternatieven voor gasverwarming, elk met specifieke voor- en nadelen. De keuze hangt af van uw woningsituatie, budget, en duurzaamheidsambitie. Lucht-lucht warmtepompen zijn de meest toegepaste oplossing voor bestaande woningen: ze zijn betaalbaar (€4.500-8.000 na subsidie), snel te installeren (1 dag), en bieden ook koeling in de zomer. Nadeel is dat ze geen tapwater verwarmen, waarvoor een aparte oplossing nodig is (elektrische boiler of zonneboiler).
+                  Er zijn vier hoofdalternatieven voor gasverwarming, elk met specifieke voor- en nadelen. De keuze hangt af van uw woningsituatie, budget, en duurzaamheidsambitie. Lucht-lucht warmtepompen (split-airco's) zijn de meest toegepaste oplossing voor bestaande woningen: ze zijn betaalbaar (€4.500-8.000; let op: hierop is geen ISDE-subsidie van toepassing), snel te installeren (1 dag), en bieden ook koeling in de zomer. Nadeel is dat ze geen tapwater verwarmen, waarvoor een aparte oplossing nodig is (elektrische boiler of zonneboiler).
                 </p>
 
                 <p className="text-gray-700 leading-relaxed">
@@ -308,11 +308,11 @@ const DuurzameVerwarmingPage = () => {
                   Financiële Analyse: Wat Bespaart U Echt?
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Laten we de financiële kant realistisch doorrekenen voor een gemiddelde woning. Gasverwarming kost momenteel ongeveer €1.800 per jaar (1.200 m³ à €1,50), plus €250 vaste aansluitkosten = €2.050 totaal. Een lucht-lucht warmtepomp met COP 4,5 verbruikt 2.700 kWh elektriciteit (à €0,30) = €810 per jaar. Plus €150 voor elektrisch tapwater = €960 totaal. Besparing: €1.090 per jaar (53%). Over 20 jaar levensduur: €21.800 besparing, minus €5.000 investering (na subsidie) = €16.800 netto voordeel.
+                  Laten we de financiële kant realistisch doorrekenen voor een gemiddelde woning. Gasverwarming kost momenteel ongeveer €1.800 per jaar (1.200 m³ à €1,50), plus €250 vaste aansluitkosten = €2.050 totaal. Een lucht-lucht warmtepomp met COP 4,5 verbruikt 2.700 kWh elektriciteit (à €0,30) = €810 per jaar. Plus €150 voor elektrisch tapwater = €960 totaal. Besparing: €1.090 per jaar (53%). Over 20 jaar levensduur: €21.800 besparing, minus circa €5.000 investering (een lucht-lucht warmtepomp krijgt geen ISDE-subsidie) = €16.800 netto voordeel.
                 </p>
 
                 <p className="text-gray-700 leading-relaxed">
-                  Met zonnepanelen wordt het plaatje nog beter. 10 zonnepanelen (€4.000) produceren 3.000 kWh per jaar, waarmee u 60-70% van uw warmtepomp-elektriciteit kunt dekken. Kosten dalen naar €360 (40% zelfgebruik) + €150 tapwater = €510 per jaar. Besparing ten opzichte van gas: €1.540 per jaar (75%). Over 20 jaar: €30.800 besparing, minus €9.000 totale investering (warmtepomp + zonnepanelen na subsidies) = €21.800 netto voordeel. En dit is conservatief gerekend - bij stijgende gasprijzen en dalende elektriciteitsprijzen worden besparingen alleen maar groter.
+                  Met zonnepanelen wordt het plaatje nog beter. 10 zonnepanelen (€4.000) produceren 3.000 kWh per jaar, waarmee u 60-70% van uw warmtepomp-elektriciteit kunt dekken. Kosten dalen naar €360 (40% zelfgebruik) + €150 tapwater = €510 per jaar. Besparing ten opzichte van gas: €1.540 per jaar (75%). Over 20 jaar: €30.800 besparing, minus circa €9.000 totale investering (lucht-lucht warmtepomp zonder ISDE + zonnepanelen met 0% BTW) = €21.800 netto voordeel. En dit is conservatief gerekend - bij stijgende gasprijzen en dalende elektriciteitsprijzen worden besparingen alleen maar groter.
                 </p>
 
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">

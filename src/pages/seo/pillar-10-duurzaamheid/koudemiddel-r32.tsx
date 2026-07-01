@@ -79,7 +79,7 @@ const KoudemiddelR32Page = () => {
     },
     {
       question: "Wat zijn de kosten voor een R32 airco-installatie?",
-      answer: "Een complete R32 airco-installatie met vakkundige montage begint vanaf €1.795 voor een single-split systeem. De investering verdient zichzelf gemiddeld binnen 7-9 jaar terug door lagere energiekosten en de langere levensduur van moderne R32 systemen. U komt in aanmerking voor ISDE subsidie tot €750, waardoor de netto investering nog lager uitvalt. Wij bieden gratis advies aan huis om de optimale capaciteit en positie te bepalen, inclusief een kosten-batenanalyse op maat voor uw situatie."
+      answer: "Een complete R32 airco-installatie met vakkundige montage begint vanaf €1.795 voor een single-split systeem. De investering verdient zichzelf gemiddeld binnen 7-9 jaar terug door lagere energiekosten en de langere levensduur van moderne R32 systemen. Let op: een split-airco komt niet in aanmerking voor ISDE-subsidie - die geldt alleen voor lucht-water, hybride en bodemwarmtepompen. Wel kunnen ondernemers de BTW terugvragen en zijn er soms gemeentelijke energieregelingen. Wij bieden gratis advies aan huis om de optimale capaciteit en positie te bepalen, inclusief een kosten-batenanalyse op maat voor uw situatie."
     },
     {
       question: "Hoe lang gaat een R32 airco mee?",
@@ -399,11 +399,11 @@ const KoudemiddelR32Page = () => {
               ROI en Financiële Voordelen
             </h3>
             <p className="text-gray-700 leading-relaxed">
-              De terugverdientijd van een R32 airco is aantrekkelijk, vooral in vergelijking met oudere systemen. Een gemiddelde investering van €2.500 voor een complete installatie (na ISDE subsidie) verdient zichzelf terug binnen 7-9 jaar door lagere energiekosten. Indien u een bestaand R410A of R22 systeem vervangt, is de terugverdientijd zelfs korter door de hogere efficiëntiewinst.
+              De terugverdientijd van een R32 airco is aantrekkelijk, vooral in vergelijking met oudere systemen. Een gemiddelde investering van €2.500 voor een complete installatie verdient zichzelf terug binnen 7-9 jaar door lagere energiekosten. Indien u een bestaand R410A of R22 systeem vervangt, is de terugverdientijd zelfs korter door de hogere efficiëntiewinst.
             </p>
 
             <p className="text-gray-700 leading-relaxed">
-              De financiële voordelen bestaan uit meerdere componenten: 10-15% lagere energiekosten (€150-250/jaar), lagere onderhoudskosten door betrouwbaardere technologie, vermijden van toekomstige retrofitkosten, ISDE subsidie tot €750, geen risico op prijsstijgingen van uitgefaseerde koudemiddelen, en potentiële waardestijging van uw woning door een energiezuinig systeem. Over een levensduur van 15 jaar resulteert dit in een totale besparing van €3.000-5.000 ten opzichte van oudere technologie.
+              De financiële voordelen bestaan uit meerdere componenten: 10-15% lagere energiekosten (€150-250/jaar), lagere onderhoudskosten door betrouwbaardere technologie, vermijden van toekomstige retrofitkosten, BTW-teruggave voor ondernemers, geen risico op prijsstijgingen van uitgefaseerde koudemiddelen, en potentiële waardestijging van uw woning door een energiezuinig systeem. Over een levensduur van 15 jaar resulteert dit in een totale besparing van €3.000-5.000 ten opzichte van oudere technologie.
             </p>
 
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-4">
@@ -479,7 +479,7 @@ const KoudemiddelR32Page = () => {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5" />
-              <span>Tot €750 Subsidie</span>
+              <span>10-15% Energiezuiniger</span>
             </div>
             <div className="flex items-center gap-2">
               <Leaf className="h-5 w-5" />

@@ -43,7 +43,7 @@ export default function AircoOfferteOnlineVsInmeting() {
             },
             {
             "question": "Wat als ik al een online offerte heb en die wil laten checken?",
-            "answer": "Dat kan. Veel klanten sturen ons een concurrerende offerte als vergelijkingsmateriaal. We kijken er eerlijk naar: soms zit er een scherpe deal in, vaak missen er elementen (elektrawerk, ISDE-meldcode, lengte koelleiding). Daar is onze offerte-checklist handig bij om zelf mee te kijken."
+            "answer": "Dat kan. Veel klanten sturen ons een concurrerende offerte als vergelijkingsmateriaal. We kijken er eerlijk naar: soms zit er een scherpe deal in, vaak missen er elementen (elektrawerk, lengte koelleiding, hak- en breekwerk). Daar is onze offerte-checklist handig bij om zelf mee te kijken."
             },
             {
             "question": "Klaar om de juiste route te kiezen?",
@@ -308,9 +308,9 @@ export default function AircoOfferteOnlineVsInmeting() {
                       <td className="border border-gray-300 px-4 py-2">Nul bij directe aanvraag lokaal</td>
                     </tr>
                     <tr className="bg-gray-50">
-                      <td className="border border-gray-300 px-4 py-2"><strong>ISDE-subsidieklaar</strong></td>
-                      <td className="border border-gray-300 px-4 py-2">Meldcode vaak vergeten</td>
-                      <td className="border border-gray-300 px-4 py-2">Wordt direct meegenomen</td>
+                      <td className="border border-gray-300 px-4 py-2"><strong>Hak- en breekwerk ingeschat</strong></td>
+                      <td className="border border-gray-300 px-4 py-2">Vaak niet zichtbaar vooraf</td>
+                      <td className="border border-gray-300 px-4 py-2">Wordt ter plaatse bekeken</td>
                     </tr>
                   </tbody>
                 </table>
@@ -490,8 +490,8 @@ export default function AircoOfferteOnlineVsInmeting() {
               <h3>Wat als ik al een online offerte heb en die wil laten checken?</h3>
               <p>
                 Dat kan. Veel klanten sturen ons een concurrerende offerte als vergelijkingsmateriaal. We kijken er
-                eerlijk naar: soms zit er een scherpe deal in, vaak missen er elementen (elektrawerk, ISDE-meldcode,
-                lengte koelleiding). Daar is onze{' '}
+                eerlijk naar: soms zit er een scherpe deal in, vaak missen er elementen (elektrawerk, lengte
+                koelleiding, hak- en breekwerk). Daar is onze{' '}
                 <Link to="/blog/airco-offerte-aanvragen-checklist" className="text-blue-600 hover:underline">offerte-checklist</Link>
                 {' '}handig bij om zelf mee te kijken.
               </p>
