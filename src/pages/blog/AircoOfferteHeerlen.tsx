@@ -10,7 +10,7 @@ export default function AircoOfferteHeerlen() {
     <>
       <MetaTags
         title="Airco offerte Heerlen 2026: prijzen Parkstad + wijk-specifieke tips | StayCool"
-        description="Airco offerte Heerlen: reken op €1.400–€3.200 voor een complete installatie in Parkstad. Inclusief ISDE-combi met isolatie, wijkgids Heerlerbaan tot Hoensbroek en corporatie-tips."
+        description="Airco offerte Heerlen: reken op €1.400–€3.200 voor een complete installatie in Parkstad (incl. 21% BTW). Snelle terugverdientijd, wijkgids Heerlerbaan tot Hoensbroek en corporatie-tips."
         keywords="airco offerte heerlen, airco heerlen kosten, airco parkstad, airco hoensbroek, airco heerlerheide, airco offerte limburg, airco installateur heerlen"
         canonicalUrl="https://staycoolairco.nl/blog/airco-offerte-heerlen"
         type="article"
@@ -20,7 +20,7 @@ export default function AircoOfferteHeerlen() {
         type="Article"
         data={{
           name: "Airco offerte Heerlen: wat kost het in 2026 + Parkstad-specifieke tips",
-          description: "Complete offerte-gids voor airco in Heerlen en Parkstad. Prijs-ranges per woningtype, ISDE-combi met isolatie en tips voor oudere Parkstad-woningen.",
+          description: "Complete offerte-gids voor airco in Heerlen en Parkstad. Prijs-ranges per woningtype (incl. 21% BTW), snelle terugverdientijd en tips voor oudere Parkstad-woningen.",
           datePublished: "2026-04-18",
           image: "https://staycoolairco.nl/images/blog/airco-offerte-heerlen.webp"
         }}
@@ -47,7 +47,7 @@ export default function AircoOfferteHeerlen() {
             },
             {
             "question": "Vraag nu uw Heerlen-offerte aan",
-            "answer": "Binnen 48 uur weet u exact wat een airco voor úw Parkstad-woning kost — inclusief ISDE-berekening, combi-voordeel en terugverdientijd. Geen verkooppraatjes, geen verplichtingen."
+            "answer": "Binnen 48 uur weet u exact wat een airco voor úw Parkstad-woning kost — de nette prijs incl. 21% BTW en uw verwachte terugverdientijd. Geen verzonnen subsidies, geen verkooppraatjes, geen verplichtingen."
             }
             ]
         }}
@@ -112,7 +112,7 @@ export default function AircoOfferteHeerlen() {
                     </tr>
                     <tr>
                       <td className="py-2 pr-4">Subsidie 2026?</td>
-                      <td className="py-2">ISDE min. €500 + isolatiebonus mogelijk</td>
+                      <td className="py-2">Geen ISDE op split-airco; soms gemeentelijk</td>
                     </tr>
                     <tr>
                       <td className="py-2 pr-4">Goedkoper dan Maastricht?</td>
@@ -232,8 +232,8 @@ export default function AircoOfferteHeerlen() {
                     aanstaande of lopende renovatie-projecten.
                   </p>
                   <p className="text-sm text-gray-700 mb-0">
-                    <strong>Tip:</strong> combineer airco-offerte met isolatie-aanpak voor maximum
-                    ISDE-voordeel (zie sectie 4).
+                    <strong>Tip:</strong> combineer airco met een isolatie-aanpak. De airco zelf krijgt geen
+                    subsidie, maar isolatie heeft eigen voordelen — en samen verbetert het rendement flink (zie sectie 5).
                   </p>
                 </div>
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
@@ -277,8 +277,7 @@ export default function AircoOfferteHeerlen() {
                     <tr>
                       <th className="border border-gray-300 px-4 py-2 text-left">Woningtype</th>
                       <th className="border border-gray-300 px-4 py-2 text-left">Aanbevolen vermogen</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Prijs incl. installatie</th>
-                      <th className="border border-gray-300 px-4 py-2 text-left">Na ISDE-subsidie</th>
+                      <th className="border border-gray-300 px-4 py-2 text-left">Prijs incl. installatie (21% BTW)</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -286,37 +285,31 @@ export default function AircoOfferteHeerlen() {
                       <td className="border border-gray-300 px-4 py-2">Slaapkamer (rijtjeshuis)</td>
                       <td className="border border-gray-300 px-4 py-2">2,5 kW single-split</td>
                       <td className="border border-gray-300 px-4 py-2">€1.300 – €1.800</td>
-                      <td className="border border-gray-300 px-4 py-2">€800 – €1.300</td>
                     </tr>
                     <tr className="bg-gray-50">
                       <td className="border border-gray-300 px-4 py-2">Woonkamer rijtjeshuis (jaren 60–80)</td>
                       <td className="border border-gray-300 px-4 py-2">3,5 kW single-split</td>
                       <td className="border border-gray-300 px-4 py-2">€1.500 – €2.200</td>
-                      <td className="border border-gray-300 px-4 py-2">€1.000 – €1.700</td>
                     </tr>
                     <tr>
                       <td className="border border-gray-300 px-4 py-2">Appartement (Centrum / Heerlerheide)</td>
                       <td className="border border-gray-300 px-4 py-2">2,5–3,5 kW single-split</td>
                       <td className="border border-gray-300 px-4 py-2">€1.400 – €2.300</td>
-                      <td className="border border-gray-300 px-4 py-2">€900 – €1.800</td>
                     </tr>
                     <tr className="bg-gray-50">
                       <td className="border border-gray-300 px-4 py-2">Open woonkamer/keuken</td>
                       <td className="border border-gray-300 px-4 py-2">5,0 kW single-split</td>
                       <td className="border border-gray-300 px-4 py-2">€2.100 – €3.000</td>
-                      <td className="border border-gray-300 px-4 py-2">€1.600 – €2.500</td>
                     </tr>
                     <tr>
                       <td className="border border-gray-300 px-4 py-2">Twee-onder-een-kap (2 units)</td>
                       <td className="border border-gray-300 px-4 py-2">Multisplit 2x (bv. 2,5 + 3,5 kW)</td>
                       <td className="border border-gray-300 px-4 py-2">€2.800 – €4.000</td>
-                      <td className="border border-gray-300 px-4 py-2">€2.300 – €3.500</td>
                     </tr>
                     <tr className="bg-gray-50">
                       <td className="border border-gray-300 px-4 py-2">Vrijstaande woning (Welten/Aarveld)</td>
                       <td className="border border-gray-300 px-4 py-2">Multisplit 3–4 units</td>
                       <td className="border border-gray-300 px-4 py-2">€4.200 – €7.000</td>
-                      <td className="border border-gray-300 px-4 py-2">€3.700 – €6.500</td>
                     </tr>
                   </tbody>
                 </table>
@@ -352,10 +345,10 @@ export default function AircoOfferteHeerlen() {
                     ruwweg <strong>€600 – €900 per jaar</strong>
                   </li>
                   <li>
-                    Airco-investering na ISDE: €1.000–€1.700
+                    Airco-investering (incl. 21% BTW): €1.500–€2.200
                   </li>
                   <li>
-                    <strong>Terugverdientijd: ongeveer 2–3 jaar</strong> — in nieuwbouwwoningen met
+                    <strong>Terugverdientijd: ongeveer 3–4 jaar</strong> — in nieuwbouwwoningen met
                     lagere warmtevraag is dat vaak 5–7 jaar.
                   </li>
                 </ul>
@@ -386,34 +379,35 @@ export default function AircoOfferteHeerlen() {
                 </Link>
               </div>
 
-              {/* ==================== SECTION 5: ISDE COMBI ==================== */}
-              <h2>5. ISDE-combi: dubbele subsidie door isolatie + airco</h2>
+              {/* ==================== SECTION 5: ISOLATIE COMBI ==================== */}
+              <h2>5. Airco + isolatie: waarom die combinatie in Parkstad slim is</h2>
 
               <p>
-                Dit is een van de belangrijkste tips voor Heerlense huizenbezitters in 2026. Veel
-                Parkstad-woningen hebben tegelijkertijd <em>twee</em> achterstanden: slechte isolatie én
-                verouderde verwarming. De rijksoverheid heeft de ISDE-regeling hierop aangepast — u krijgt
-                een hogere subsidie als u <strong>minstens twee verduurzamingsmaatregelen combineert</strong>.
+                Eerst het misverstand rechtzetten: <strong>een airco (split-airco / lucht-lucht warmtepomp)
+                krijgt géén ISDE-subsidie</strong> — ook niet in combinatie met isolatie, en ook niet als de
+                airco kan verwarmen. ISDE geldt alleen voor lucht-water, hybride en bodemwarmtepompen. Op de
+                airco zelf geldt gewoon 21% BTW.
+              </p>
+
+              <p>
+                Wat wél klopt: veel Parkstad-woningen hebben tegelijk <em>twee</em> achterstanden — matige
+                isolatie én verouderde verwarming. De <strong>isolatie</strong> heeft eigen gunstige regels,
+                los van de airco:
               </p>
 
               <div className="not-prose bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r my-6">
-                <h4 className="font-bold text-amber-900 mb-2">Hoe werkt de combi-bonus?</h4>
-                <p className="text-sm text-gray-700 mb-3">
-                  Als u binnen 24 maanden zowel airco (lucht-lucht warmtepomp) én een
-                  isolatiemaatregel (spouwmuur, dak, vloer, HR++ glas) laat uitvoeren, verdubbelt de
-                  ISDE-subsidie per maatregel. Concreet voor een typische Heerlense woning:
-                </p>
+                <h4 className="font-bold text-amber-900 mb-2">Wat levert de isolatie-kant op?</h4>
                 <ul className="text-sm text-gray-700 space-y-1 mb-0">
-                  <li>Airco 3,5 kW zonder combi: ISDE ca. €500</li>
-                  <li>Airco 3,5 kW mét spouwisolatie in combi: ISDE ca. €1.000 + isolatie-subsidie</li>
-                  <li>
-                    <strong>Netto voordeel Heerlen: vaak €500–€1.200 extra door slim combineren</strong>
-                  </li>
+                  <li><strong>9% BTW</strong> op het arbeidsloon van isolatiewerk aan woningen ouder dan 2 jaar (i.p.v. 21%)</li>
+                  <li>Vaak een eigen <strong>ISDE-bedrag voor isolatie</strong>, dat verdubbelt bij twee isolatiemaatregelen binnen 24 maanden</li>
+                  <li>Een beter geïsoleerd huis = lagere warmtevraag = de airco werkt efficiënter en verdient zich sneller terug</li>
                 </ul>
               </div>
 
               <p>
-                Bedragen worden jaarlijks aangepast. Voor de actuele regels en bedragen zie onze gids{' '}
+                Dus: de winst van "combineren" zit in de isolatie plus de energiebesparing van de airco —
+                niet in ISDE op de airco zelf. Bedragen en regels wijzigen jaarlijks. Voor het volledige,
+                eerlijke plaatje zie onze gids{' '}
                 <Link to="/blog/airco-subsidie-2026-limburg" className="text-blue-600 hover:underline">
                   Airco subsidie 2026 Limburg
                 </Link>.
@@ -515,7 +509,7 @@ export default function AircoOfferteHeerlen() {
                   <h4 className="font-bold mb-2">Offerte op maat</h4>
                   <p className="text-sm text-gray-700 m-0">
                     Binnen 48 uur krijgt u een vaste offerte met minimaal 2 merk-opties, transparante
-                    kostenopbouw, en de te verwachten ISDE-subsidie voor uw situatie.
+                    kostenopbouw (incl. 21% BTW), en uw verwachte terugverdientijd via de energiebesparing.
                   </p>
                 </div>
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
@@ -531,7 +525,7 @@ export default function AircoOfferteHeerlen() {
                   <h4 className="font-bold mb-2">1 werkdag</h4>
                   <p className="text-sm text-gray-700 m-0">
                     Standaard single-split wordt in 1 dag gemonteerd, getest en opgeleverd. U krijgt
-                    F-gassen-rapport + meldcode voor uw ISDE-aanvraag.
+                    een F-gassen-rapport en volledige oplevering.
                   </p>
                 </div>
               </div>
@@ -632,9 +626,9 @@ export default function AircoOfferteHeerlen() {
               <div className="not-prose bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6 rounded-lg shadow-lg my-10">
                 <h3 className="text-2xl font-bold mb-3">Vraag nu uw Heerlen-offerte aan</h3>
                 <p className="mb-4">
-                  Binnen 48 uur weet u exact wat een airco voor úw Parkstad-woning kost — inclusief
-                  ISDE-berekening, combi-voordeel en terugverdientijd. Geen verkooppraatjes, geen
-                  verplichtingen.
+                  Binnen 48 uur weet u exact wat een airco voor úw Parkstad-woning kost — de nette prijs
+                  incl. 21% BTW en uw verwachte terugverdientijd. Geen verzonnen subsidies, geen
+                  verkooppraatjes, geen verplichtingen.
                 </p>
                 <Link
                   to="/contact"

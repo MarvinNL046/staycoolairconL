@@ -226,8 +226,8 @@ export default function AircoOfferteMaastricht() {
                   typenummer (bijv. Daikin FTXM35R). Zonder dit kan de installateur achteraf schuiven met kwaliteit.
                 </li>
                 <li>
-                  <strong>COP- en SEER-waarde</strong> — voor ISDE-aanvraag essentieel én voor uw stroomverbruik
-                  belangrijk. Zie ook onze uitleg over <Link to="/blog/wat-kost-1-uur-airco-draaien" className="text-blue-600 hover:underline">stroomkosten per uur</Link>.
+                  <strong>COP- en SEER-waarde</strong> — bepalend voor uw stroomverbruik en de efficiëntie van de unit.
+                  Zie ook onze uitleg over <Link to="/blog/wat-kost-1-uur-airco-draaien" className="text-blue-600 hover:underline">stroomkosten per uur</Link>.
                 </li>
                 <li>
                   <strong>Locatie binnen- en buitenunit</strong> — letterlijk beschreven. "Buitenunit op achtergevel
@@ -260,8 +260,9 @@ export default function AircoOfferteMaastricht() {
                   bij installatie via ons.
                 </li>
                 <li>
-                  <strong>Meldcode voor ISDE-subsidie</strong> — de offerte moet een model bevatten dat op de RVO-lijst
-                  staat, anders krijgt u geen subsidie.
+                  <strong>Eerlijkheid over subsidie</strong> — een split-airco (lucht-lucht warmtepomp) krijgt geen ISDE
+                  en geen 9% BTW. Loop weg bij een offerte die dat wél belooft; ISDE geldt alleen voor lucht-water-,
+                  hybride- en bodemwarmtepompen.
                 </li>
               </ol>
 
@@ -405,7 +406,7 @@ export default function AircoOfferteMaastricht() {
                   <h4 className="font-bold mb-2">Installatie</h4>
                   <p className="text-sm text-gray-700 m-0">
                     Na schriftelijke VvE-goedkeuring plannen we installatie. Meestal 1 werkdag. Inclusief F-gassen-
-                    rapport en ISDE-meldcode voor uw aanvraag.
+                    rapport en volledige oplevering.
                   </p>
                 </div>
               </div>
@@ -520,7 +521,7 @@ export default function AircoOfferteMaastricht() {
               <div className="not-prose bg-gray-50 border border-gray-200 p-6 rounded-lg my-8">
                 <h3 className="text-xl font-bold text-gray-800 mb-3">🔗 Andere Limburgse offerte-gidsen</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>➤ <Link to="/blog/airco-offerte-heerlen" className="text-blue-600 hover:underline font-medium">Airco offerte Heerlen</Link> — Parkstad-woningen met ISDE-combi voordeel</li>
+                  <li>➤ <Link to="/blog/airco-offerte-heerlen" className="text-blue-600 hover:underline font-medium">Airco offerte Heerlen</Link> — Parkstad-woningen en snelle terugverdientijd</li>
                   <li>➤ <Link to="/blog/airco-offerte-sittard" className="text-blue-600 hover:underline font-medium">Airco offerte Sittard</Link> — Sittard-Geleen pragmatische prijsranges</li>
                   <li>➤ <Link to="/blog/airco-offerte-aanvragen-checklist" className="text-blue-600 hover:underline font-medium">12-punts offerte-checklist</Link> — wat vraag je installateurs?</li>
                   <li>➤ <Link to="/blog/waarom-verschillen-airco-offertes" className="text-blue-600 hover:underline font-medium">Waarom verschillen offertes 30-50%?</Link> — 10 redenen uitgelegd</li>

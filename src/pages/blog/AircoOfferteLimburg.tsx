@@ -44,7 +44,7 @@ export default function AircoOfferteLimburg() {
             },
             {
             "question": "Is subsidie beschikbaar?",
-            "answer": "In 2025 zijn er beperkte subsidies voor airco's met warmtepompfunctie. Vraag je installateur naar de voorwaarden."
+            "answer": "Voor een split-airco (ook 'airco met verwarmingsfunctie' of lucht-lucht warmtepomp genoemd) is er geen ISDE-subsidie en geen 9% BTW. ISDE geldt alleen voor lucht-water-, hybride- en bodemwarmtepompen. Wat wél kan: soms een gemeentelijke energieregeling en voor ondernemers BTW-teruggave. De grootste winst zit in de energiebesparing."
             },
             {
             "question": "Kan ik de offerte online aanvragen?",
@@ -243,11 +243,14 @@ export default function AircoOfferteLimburg() {
                 {' '}voor meer signalen.
               </p>
 
-              <h2>ISDE-rekenvoorbeeld: netto kosten na subsidie</h2>
+              <h2>Rekenvoorbeeld: subsidie op isolatie, niet op de airco</h2>
               <p>
-                Voor een lucht-lucht warmtepomp (airco met verwarmingsfunctie) geldt ISDE-subsidie van minimaal €500.
-                Bij combinatie met isolatie binnen 24 maanden verdubbelt het isolatie-subsidiebedrag. Concreet voor
-                een gemiddelde Limburgse situatie:
+                Belangrijk om eerst helder te hebben: een split-airco (ook &quot;airco met verwarmingsfunctie&quot; of
+                lucht-lucht warmtepomp genoemd) krijgt in 2026 <strong>geen ISDE-subsidie</strong>. De ISDE geldt alleen
+                voor lucht-water- en hybride warmtepompen, bodemwarmtepompen, warmtepompboilers en zonneboilers.
+                Wél kan de <strong>isolatie</strong> die je apart laat uitvoeren voor ISDE in aanmerking komen — en bij
+                twee of meer maatregelen binnen 24 maanden verdubbelt dat isolatie-subsidiebedrag. Concreet voor een
+                gemiddelde Limburgse situatie:
               </p>
 
               <table className="min-w-full border-collapse border border-gray-200 my-6">
@@ -255,7 +258,7 @@ export default function AircoOfferteLimburg() {
                   <tr className="bg-gray-100">
                     <th className="border border-gray-200 px-4 py-2 text-left">Scenario</th>
                     <th className="border border-gray-200 px-4 py-2 text-left">Bruto kosten</th>
-                    <th className="border border-gray-200 px-4 py-2 text-left">ISDE</th>
+                    <th className="border border-gray-200 px-4 py-2 text-left">ISDE (alleen isolatie)</th>
                     <th className="border border-gray-200 px-4 py-2 text-left">Netto</th>
                   </tr>
                 </thead>
@@ -263,20 +266,20 @@ export default function AircoOfferteLimburg() {
                   <tr>
                     <td className="border border-gray-200 px-4 py-2">Alleen airco (3,5 kW)</td>
                     <td className="border border-gray-200 px-4 py-2">€2.200</td>
-                    <td className="border border-gray-200 px-4 py-2">€500</td>
-                    <td className="border border-gray-200 px-4 py-2"><strong>€1.700</strong></td>
+                    <td className="border border-gray-200 px-4 py-2">€0 (geen ISDE op airco)</td>
+                    <td className="border border-gray-200 px-4 py-2"><strong>€2.200</strong></td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="border border-gray-200 px-4 py-2">Airco + dakisolatie</td>
                     <td className="border border-gray-200 px-4 py-2">€2.200 + €2.400</td>
-                    <td className="border border-gray-200 px-4 py-2">€500 + €1.040</td>
-                    <td className="border border-gray-200 px-4 py-2"><strong>€3.060</strong> totaal</td>
+                    <td className="border border-gray-200 px-4 py-2">€1.040 (op isolatie)</td>
+                    <td className="border border-gray-200 px-4 py-2"><strong>€3.560</strong> totaal</td>
                   </tr>
                   <tr>
                     <td className="border border-gray-200 px-4 py-2">Airco + 2× isolatie</td>
                     <td className="border border-gray-200 px-4 py-2">€2.200 + €4.000</td>
-                    <td className="border border-gray-200 px-4 py-2">€500 + €2.000</td>
-                    <td className="border border-gray-200 px-4 py-2"><strong>€3.700</strong> totaal</td>
+                    <td className="border border-gray-200 px-4 py-2">€2.000 (op isolatie)</td>
+                    <td className="border border-gray-200 px-4 py-2"><strong>€4.200</strong> totaal</td>
                   </tr>
                 </tbody>
               </table>
@@ -374,7 +377,10 @@ export default function AircoOfferteLimburg() {
               
               <h3>4. Is subsidie beschikbaar?</h3>
               <p>
-                In 2025 zijn er beperkte subsidies voor airco's met warmtepompfunctie. Vraag je installateur naar de voorwaarden.
+                Voor een split-airco (ook &quot;airco met verwarmingsfunctie&quot; of lucht-lucht warmtepomp genoemd) is
+                er geen ISDE-subsidie en geen 9% BTW — daarop geldt 21% BTW. ISDE geldt alleen voor lucht-water-,
+                hybride- en bodemwarmtepompen. Wat wél kan: soms een gemeentelijke energieregeling en voor ondernemers
+                BTW-teruggave. De grootste winst zit in de energiebesparing zelf.
               </p>
               
               <h3>5. Kan ik de offerte online aanvragen?</h3>
@@ -396,7 +402,7 @@ export default function AircoOfferteLimburg() {
                   <li><strong>Elektrawerk inbegrepen?</strong> Aparte groep (verplicht vanaf 5 kW) kost €180-€350 extra als niet inbegrepen.</li>
                   <li><strong>Garantie onderdelen + installatie apart?</strong> Minimum: 3 jaar onderdelen. Premium: 5 jaar. Installatiefouten moeten los gegarandeerd zijn.</li>
                   <li><strong>Eerste jaaronderhoud inbegrepen?</strong> Scheelt €85-€120.</li>
-                  <li><strong>Meldcode voor ISDE-subsidie beschikbaar?</strong> Nodig voor subsidie-aanvraag. Zonder = je mist €500+.</li>
+                  <li><strong>Eerlijk over subsidie?</strong> Een split-airco krijgt geen ISDE en geen 9% BTW — pas op voor offertes die dat wél beloven. ISDE geldt alleen voor lucht-water/hybride/bodemwarmtepompen.</li>
                   <li><strong>Aggregator of direct?</strong> Werkspot / Homedeal / Zoofy nemen 15-25% marge op de offerte — je betaalt dus meer voor hetzelfde.</li>
                   <li><strong>Opruim- en beschermings-werk inbegrepen?</strong> Boren creëert gips-stof. Fatsoenlijke installateurs schoonmaken of rekenen dit apart.</li>
                   <li><strong>BTW inbegrepen?</strong> Particulieren zien vaak offertes exclusief BTW. 21% verschil = groot.</li>
@@ -420,11 +426,13 @@ export default function AircoOfferteLimburg() {
                 {' '}voor lokale kosten.
               </p>
 
-              <h2>Subsidie opnemen in de offerte</h2>
+              <h2>Subsidie: wat kan wél en wat niet</h2>
               <p>
-                Laat de installateur direct verwerken welke subsidies je verwacht. De <strong>ISDE</strong> geeft
-                minimaal €500 voor een airco met verwarmingsfunctie (lucht-lucht warmtepomp). Verdien je dat binnen
-                3-5 jaar terug door lagere stookkosten? Check onze volledige{' '}
+                Reken je niet rijk: een split-airco (lucht-lucht warmtepomp) krijgt <strong>geen ISDE</strong> en
+                <strong> geen 9% BTW</strong> — daarop geldt gewoon 21% BTW. De <strong>ISDE</strong> is er alleen voor
+                lucht-water-, hybride- en bodemwarmtepompen. Wat voor een gewone airco wél kan: soms een gemeentelijke
+                energieregeling, en voor ondernemers BTW-teruggave. De grootste winst zit in de energiebesparing zelf
+                (terugverdientijd doorgaans 4-6 jaar). Check onze volledige{' '}
                 <Link to="/blog/airco-subsidie-2026-limburg" className="text-blue-600 hover:underline">subsidie-uitleg 2026</Link>.
               </p>
 

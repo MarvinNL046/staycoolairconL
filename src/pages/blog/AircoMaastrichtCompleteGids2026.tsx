@@ -10,7 +10,7 @@ export default function AircoMaastrichtCompleteGids2026() {
     <>
       <MetaTags
         title="Airco Maastricht 2026: Installateur, Kosten, Subsidie + Wijkgids | StayCool"
-        description="Complete gids voor airco in Maastricht: kosten €1.500–€3.500, ISDE-subsidie voor lucht-lucht warmtepomp, wijkspecifieke overwegingen voor Binnenstad, Wyck, Heer en meer."
+        description="Complete gids voor airco in Maastricht: kosten €1.500–€3.500, 21% BTW (geen ISDE voor split-airco), wijkspecifieke overwegingen voor Binnenstad, Wyck, Heer en meer."
         keywords="airco maastricht, airco installateur maastricht, airco kosten maastricht, airco subsidie maastricht, airco binnenstad maastricht, airco wyck, airco heer"
         canonicalUrl="https://staycoolairco.nl/blog/airco-maastricht-complete-gids-2026"
         type="article"
@@ -31,7 +31,7 @@ export default function AircoMaastrichtCompleteGids2026() {
           questions: [
             {
             "question": "Wat kost een airco in Maastricht inclusief montage?",
-            "answer": "Voor een gangbare woonkamer (3,5 kW single-split): €1.700–€2.400 inclusief installatie. Na ISDE-subsidie voor lucht-lucht warmtepomp: €1.200–€1.900 netto. Voor grotere of complexere installaties (villa, monumenten, multisplit): €3.000–€7.500."
+            "answer": "Voor een gangbare woonkamer (3,5 kW single-split): €1.700–€2.400 inclusief installatie en 21% BTW. Voor grotere of complexere installaties (villa, monumenten, multisplit): €3.000–€7.500. Let op: op een split-airco is er geen ISDE-subsidie en geen verlaagd BTW-tarief — het voordeel zit in de energiebesparing."
             },
             {
             "question": "Mag ik zomaar een airco plaatsen in een monument?",
@@ -39,7 +39,7 @@ export default function AircoMaastrichtCompleteGids2026() {
             },
             {
             "question": "Kan ik subsidie krijgen voor airco in Maastricht?",
-            "answer": "Alleen als de airco verwarmingsfunctie heeft (lucht-lucht warmtepomp), én het model op de RVO-meldcode- lijst staat. Minimum €500 ISDE. Aanvullende gemeentelijke regelingen variëren; check gemeente Maastricht of energiesubsidiewijzer.nl."
+            "answer": "Voor een split-airco niet via ISDE — ook niet als de airco kan verwarmen, want dat blijft een lucht-lucht warmtepomp en die staat niet op de RVO-lijst. ISDE is voor lucht-water/hybride/bodemwarmtepompen. Wat wél kan: aanvullende gemeentelijke regelingen (wisselend; check gemeente Maastricht of energiesubsidiewijzer.nl) en zakelijke BTW-teruggave voor ondernemers."
             },
             {
             "question": "Hoe lang duurt installatie in Maastricht?",
@@ -92,9 +92,9 @@ export default function AircoMaastrichtCompleteGids2026() {
 
               <p className="text-xl text-gray-600 leading-relaxed">
                 Airco laten plaatsen in <Link to="/werkgebied/maastricht" className="text-blue-600 hover:underline">Maastricht</Link>
-                {' '}kost gemiddeld <strong>€1.500 tot €3.500</strong> inclusief F-gassen-gecertificeerde installatie.
-                Met ISDE-subsidie voor lucht-lucht warmtepompen (min. €500) blijft het netto €1.000–€3.000.
-                Maar Maastricht is bijzonder: monumentale binnenstad, steile straten in Sint-Pieter, moderne
+                {' '}kost gemiddeld <strong>€1.500 tot €3.500</strong> inclusief F-gassen-gecertificeerde installatie
+                en 21% BTW. Let op: op een split-airco is er geen ISDE-subsidie en geen verlaagd BTW-tarief — het
+                voordeel zit in de energiebesparing. Maar Maastricht is bijzonder: monumentale binnenstad, steile straten in Sint-Pieter, moderne
                 nieuwbouw in Céramique. Hier vertellen we per wijk en woningtype wat u écht moet weten.
               </p>
             </header>
@@ -118,7 +118,7 @@ export default function AircoMaastrichtCompleteGids2026() {
                     </tr>
                     <tr>
                       <td className="py-2 pr-4">Subsidie beschikbaar?</td>
-                      <td className="py-2">ISDE min. €500 voor lucht-lucht warmtepomp</td>
+                      <td className="py-2">Geen ISDE op split-airco; soms gemeentelijk</td>
                     </tr>
                     <tr>
                       <td className="py-2 pr-4">Monumentale woning (binnenstad)?</td>
@@ -330,8 +330,9 @@ export default function AircoMaastrichtCompleteGids2026() {
                 <h4 className="font-bold text-green-900 mb-2">💰 Beschikbare regelingen</h4>
                 <ul className="text-sm text-gray-700 space-y-2 mb-0">
                   <li>
-                    <strong>ISDE (landelijk)</strong> — min. €500 voor lucht-lucht warmtepomp, meer bij combinatie
-                    met isolatie.{' '}
+                    <strong>ISDE (landelijk)</strong> — geldt <em>niet</em> voor een split-airco (lucht-lucht warmtepomp),
+                    wél voor lucht-water/hybride/bodemwarmtepompen. Combineert u met isolatie, dan heeft dat isolatie-deel
+                    eigen gunstige regels.{' '}
                     <Link to="/blog/airco-subsidie-2026-limburg" className="text-blue-600 hover:underline">Lees volledige uitleg</Link>.
                   </li>
                   <li>
@@ -484,9 +485,9 @@ export default function AircoMaastrichtCompleteGids2026() {
 
               <h3>Wat kost een airco in Maastricht inclusief montage?</h3>
               <p>
-                Voor een gangbare woonkamer (3,5 kW single-split): €1.700–€2.400 inclusief installatie. Na ISDE-subsidie
-                voor lucht-lucht warmtepomp: €1.200–€1.900 netto. Voor grotere of complexere installaties (villa,
-                monumenten, multisplit): €3.000–€7.500.
+                Voor een gangbare woonkamer (3,5 kW single-split): €1.700–€2.400 inclusief installatie en 21% BTW.
+                Voor grotere of complexere installaties (villa, monumenten, multisplit): €3.000–€7.500. Let op: op een
+                split-airco is er geen ISDE-subsidie en geen verlaagd BTW-tarief — het voordeel zit in de energiebesparing.
               </p>
 
               <h3>Mag ik zomaar een airco plaatsen in een monument?</h3>
@@ -498,9 +499,10 @@ export default function AircoMaastrichtCompleteGids2026() {
 
               <h3>Kan ik subsidie krijgen voor airco in Maastricht?</h3>
               <p>
-                Alleen als de airco verwarmingsfunctie heeft (lucht-lucht warmtepomp), én het model op de RVO-meldcode-
-                lijst staat. Minimum €500 ISDE. Aanvullende gemeentelijke regelingen variëren; check gemeente Maastricht
-                of energiesubsidiewijzer.nl.
+                Voor een split-airco niet via ISDE — ook niet als de airco kan verwarmen, want dat blijft een lucht-lucht
+                warmtepomp en die staat niet op de RVO-lijst. ISDE is voor lucht-water/hybride/bodemwarmtepompen. Wat wél
+                kan: aanvullende gemeentelijke regelingen (wisselend; check gemeente Maastricht of energiesubsidiewijzer.nl)
+                en zakelijke BTW-teruggave voor ondernemers.
               </p>
 
               <h3>Hoe lang duurt installatie in Maastricht?</h3>

@@ -102,7 +102,7 @@ const AircoFinanciering: React.FC = () => {
       bedrag: "Tot €20.000",
       rente: "0,5% rente",
       looptijd: "Max. 12 jaar",
-      bijzonderheden: "Combineerbaar met ISDE-subsidie"
+      bijzonderheden: "Voor diverse verduurzamingsmaatregelen"
     },
     {
       gemeente: "Sittard-Geleen",
@@ -177,7 +177,7 @@ const AircoFinanciering: React.FC = () => {
     },
     {
       question: "Moet ik een aanbetaling doen?",
-      answer: "Dit hangt af van de gekozen financieringsvorm. Bij consumentenkrediet is vaak 0% aanbetaling mogelijk, maar een aanbetaling van 10-20% verlaagt uw maandlasten en rentekosten aanzienlijk. Bij gemeentelijke leningen is geen aanbetaling vereist. Bij hypotheekverhoging is het afhankelijk van uw overwaarde en leencapaciteit. Wij adviseren een aanbetaling als u deze comfortabel kunt doen, maar het is geen verplichting. Ook eventuele subsidies (€300-€500 ISDE) kunnen als 'achteraf aanbetaling' worden gebruikt."
+      answer: "Dit hangt af van de gekozen financieringsvorm. Bij consumentenkrediet is vaak 0% aanbetaling mogelijk, maar een aanbetaling van 10-20% verlaagt uw maandlasten en rentekosten aanzienlijk. Bij gemeentelijke leningen is geen aanbetaling vereist. Bij hypotheekverhoging is het afhankelijk van uw overwaarde en leencapaciteit. Wij adviseren een aanbetaling als u deze comfortabel kunt doen, maar het is geen verplichting. Let op: een split-airco komt niet in aanmerking voor ISDE-subsidie; wel kunnen ondernemers de BTW terugvragen en zijn er soms gemeentelijke energieregelingen."
     },
     {
       question: "Kan ik vervroegd aflossen?",
@@ -567,7 +567,7 @@ const AircoFinanciering: React.FC = () => {
               </li>
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-sky-500 mr-3 flex-shrink-0 mt-1" />
-                <span className="text-gray-700"><strong>Combineer met ISDE-subsidie:</strong> Vraag €300-€500 subsidie aan en los hiermee vervroegd af om rentekosten te besparen.</span>
+                <span className="text-gray-700"><strong>Benut BTW-teruggave (ondernemers):</strong> Een split-airco krijgt geen ISDE, maar ondernemers kunnen de BTW terugvragen en hiermee vervroegd aflossen om rentekosten te besparen.</span>
               </li>
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-sky-500 mr-3 flex-shrink-0 mt-1" />
@@ -606,7 +606,7 @@ const AircoFinanciering: React.FC = () => {
               </li>
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-sky-500 mr-3 flex-shrink-0 mt-1" />
-                <span className="text-gray-700"><strong>Subsidie integratie:</strong> Wij adviseren over combineren van financiering met ISDE-subsidie voor maximaal voordeel</span>
+                <span className="text-gray-700"><strong>Regeling-integratie:</strong> Wij adviseren over combineren van financiering met BTW-teruggave en gemeentelijke energieregelingen voor maximaal voordeel (een split-airco krijgt geen ISDE)</span>
               </li>
             </ul>
           </div>

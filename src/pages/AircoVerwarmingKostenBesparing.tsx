@@ -14,7 +14,7 @@ export default function AircoVerwarmingKostenBesparing() {
         type="Article"
         data={{
           headline: "Bespaar tot 60% op Verwarmingskosten met een Airco | StayCool",
-          description: "Ontdek hoe u tot 60% kunt besparen op uw verwarmingskosten met een moderne airco. Inclusief ISDE subsidie tot €2.000. ✓ Energiezuinig ✓ Werkt tot -15°C ✓ Professionele installatie",
+          description: "Ontdek hoe u tot 60% kunt besparen op uw verwarmingskosten met een moderne airco. Terugverdientijd doorgaans 4-6 jaar. ✓ Energiezuinig ✓ Werkt tot -15°C ✓ Professionele installatie",
           image: "https://staycoolairco.nl/images/logo.svg",
           mainEntityOfPage: {
             "@type": "WebPage",
@@ -35,7 +35,7 @@ export default function AircoVerwarmingKostenBesparing() {
         <title>Bespaar tot 60% op Verwarmingskosten met een Airco | StayCool</title>
         <meta 
           name="description" 
-          content="Ontdek hoe u tot 60% kunt besparen op uw verwarmingskosten met een moderne airco. Inclusief ISDE subsidie tot €2.000. ✓ Energiezuinig ✓ Werkt tot -15°C ✓ Professionele installatie"
+          content="Ontdek hoe u tot 60% kunt besparen op uw verwarmingskosten met een moderne airco. Terugverdientijd doorgaans 4-6 jaar. ✓ Energiezuinig ✓ Werkt tot -15°C ✓ Professionele installatie"
         />
         <meta 
           name="keywords" 
@@ -55,7 +55,7 @@ export default function AircoVerwarmingKostenBesparing() {
                 animate={{ opacity: 1, y: 0 }}
                 className="bg-blue-500/20 backdrop-blur-sm rounded-lg p-2 inline-block mb-4"
               >
-                <span className="text-blue-100 font-medium">✨ Inclusief ISDE subsidie tot €2.000</span>
+                <span className="text-blue-100 font-medium">✨ Terugverdientijd doorgaans 4-6 jaar</span>
               </m.div>
               <m.h1 
                 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100"
@@ -122,8 +122,8 @@ export default function AircoVerwarmingKostenBesparing() {
                 <div className="bg-blue-50 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
                   <PiggyBank className="h-10 w-10 text-blue-600" />
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">€2.000 Subsidie</h3>
-                <p className="text-gray-600">Profiteer van ISDE subsidie en maak uw investering nog aantrekkelijker</p>
+                <h3 className="text-2xl font-bold mb-3 text-gray-900">Snel terugverdiend</h3>
+                <p className="text-gray-600">Geen subsidie nodig: door de lage stookkosten verdient een airco zich doorgaans in 4-6 jaar terug</p>
               </m.div>
               <m.div
                 initial={{ opacity: 0, y: 20 }}
@@ -183,7 +183,7 @@ export default function AircoVerwarmingKostenBesparing() {
                     <span className="flex-shrink-0 h-6 w-6 bg-blue-50 rounded-full flex items-center justify-center mr-3">
                       <span className="text-blue-600 text-sm">✓</span>
                     </span>
-                    <span className="text-gray-600 text-lg">ISDE subsidie tot €2.000</span>
+                    <span className="text-gray-600 text-lg">Lage stookkosten, terugverdientijd 4-6 jaar</span>
                   </li>
                   <li className="flex items-start">
                     <span className="flex-shrink-0 h-6 w-6 bg-blue-50 rounded-full flex items-center justify-center mr-3">
@@ -348,9 +348,9 @@ export default function AircoVerwarmingKostenBesparing() {
                 transition={{ delay: 0.3 }}
                 className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border border-gray-100"
               >
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Welke Subsidies Zijn Beschikbaar?</h3>
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">Is er subsidie op een airco?</h3>
                 <p className="text-gray-600 text-lg">
-                  Via de ISDE-regeling kunt u tot €2.000 subsidie ontvangen. Onze adviseurs helpen u graag bij het aanvragen van alle beschikbare subsidies.
+                  Eerlijk: een split-airco krijgt geen ISDE-subsidie (die geldt alleen voor lucht-water, hybride en bodemwarmtepompen) en ook geen verlaagd BTW-tarief — op airco geldt 21% BTW. Het echte voordeel zit in de lage stookkosten. Bent u ondernemer? Dan kunt u de BTW meestal terugvragen. Onze adviseurs rekenen uw besparing eerlijk voor.
                 </p>
               </m.div>
             </div>

@@ -48,7 +48,7 @@ const faqItems = [
   },
   {
     question: 'Kan ik ISDE subsidie krijgen voor een airco?',
-    answer: 'Voor lucht-lucht warmtepompen (airco\'s die ook verwarmen) is onder bepaalde voorwaarden ISDE subsidie mogelijk. De subsidie is afhankelijk van het type systeem, energieprestatie en de situatie. Wij informeren u graag over de actuele subsidiemogelijkheden tijdens de offerte.',
+    answer: 'Nee. Een airco is een lucht-lucht warmtepomp en komt niet in aanmerking voor ISDE — die regeling geldt alleen voor lucht-water, hybride en bodemwarmtepompen. Het voordeel van een airco zit in de energiebesparing zelf: doordat hij als warmtepomp veel efficiënter verwarmt, verdient u de investering doorgaans in 4 tot 6 jaar terug via lagere stookkosten. Ondernemers kunnen bovendien de BTW terugvragen en in sommige gemeenten geldt een lokale energieregeling.',
   },
   {
     question: 'Hoe snel verdient een airco zichzelf terug?',
@@ -268,9 +268,9 @@ export default function AircoInstallatiePrijs() {
               <p className="text-base text-gray-600">Bij gebruik als verwarming in de winter is de gemiddelde terugverdientijd 4 tot 6 jaar voor een complete installatie.</p>
             </div>
             <div className="bg-sky-50 rounded-2xl p-6 border border-sky-100 text-center">
-              <p className="text-4xl font-bold text-sky-600 mb-2">ISDE</p>
-              <p className="text-lg font-semibold text-gray-900 mb-2">Subsidie Mogelijk</p>
-              <p className="text-base text-gray-600">Voor kwalificerende lucht-lucht warmtepompen kunt u ISDE subsidie aanvragen. Vraag ons naar de actuele mogelijkheden.</p>
+              <p className="text-4xl font-bold text-sky-600 mb-2">Zakelijk</p>
+              <p className="text-lg font-semibold text-gray-900 mb-2">BTW Terugvragen</p>
+              <p className="text-base text-gray-600">Een split-airco krijgt geen ISDE, maar ondernemers kunnen de 21% BTW terugvragen. Soms geldt ook een gemeentelijke energieregeling.</p>
             </div>
           </div>
         </div>

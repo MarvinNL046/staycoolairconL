@@ -257,7 +257,7 @@ const AircoKopenLimburg: React.FC = () => {
     },
     {
       question: 'Kan ik subsidie krijgen bij aankoop van een airco in Limburg?',
-      answer: 'Ja! Voor energiezuinige airco\'s (warmtepompen) kunt u in aanmerking komen voor ISDE subsidie. Dit kan oplopen tot €300-€500 per systeem. Ook zijn er gemeentelijke regelingen in enkele Limburgse gemeenten. Wij helpen u graag bij het aanvragen van subsidies en controleren of uw situatie in aanmerking komt. Let op: subsidies wijzigen regelmatig, vraag naar de actuele mogelijkheden.'
+      answer: 'Voor een split-airco (lucht-lucht warmtepomp) is er geen ISDE-subsidie — die geldt alleen voor lucht-water, hybride en bodemwarmtepompen. Wel zijn er soms gemeentelijke energieregelingen in Limburgse gemeenten, en ondernemers kunnen de BTW terugvragen. Het grootste voordeel zit echter in de energiebesparing zelf: door de hoge efficiëntie verdient u een airco doorgaans in 4 tot 6 jaar terug via lagere stookkosten. Let op: gemeentelijke regelingen wijzigen regelmatig, vraag naar de actuele mogelijkheden.'
     },
     {
       question: 'Hoe lang duurt het van bestelling tot installatie?',

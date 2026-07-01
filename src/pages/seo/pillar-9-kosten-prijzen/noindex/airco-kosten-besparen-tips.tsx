@@ -345,11 +345,13 @@ const AircoKostenBesparenTips = () => {
                   <li>Multi-split gekozen i.p.v. 2 losse units: €600 bespaard</li>
                   <li>In oktober geïnstalleerd: €300 korting</li>
                   <li>3 offertes vergeleken: €400 bespaard</li>
-                  <li>ISDE subsidie ontvangen: €300</li>
                   <li>A+++ model: €250/jaar minder energiekosten</li>
                 </ul>
                 <p className="font-bold text-green-600 mt-3">
-                  Totaal bespaard: €1.600 aanschaf + €250/jaar
+                  Totaal bespaard: €1.300 aanschaf + €250/jaar
+                </p>
+                <p className="text-xs text-gray-500 mt-1">
+                  Let op: geen ISDE-subsidie op een split-airco — dat voordeel komt uit slimme keuzes en energiebesparing.
                 </p>
               </div>
             </div>

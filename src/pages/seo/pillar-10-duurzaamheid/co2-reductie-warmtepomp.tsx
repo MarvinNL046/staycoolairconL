@@ -43,7 +43,7 @@ const CO2ReductieWarmtepompPage = () => {
     "60% lagere stookkosten bij juist gebruik",
     "Onafhankelijk van fossiele brandstoffen",
     "Energielabel verbetering (minimaal 2 stappen)",
-    "Subsidie tot €2.500 via ISDE regeling",
+    "ISDE tot €2.500 voor lucht-water/hybride (niet voor split-airco)",
     "Waardestijging woning (3-8%)"
   ];
 
@@ -92,7 +92,7 @@ const CO2ReductieWarmtepompPage = () => {
     },
     {
       question: "Wat kost de overstap naar een warmtepomp?",
-      answer: "Een complete warmtepomp-installatie kost tussen €4.500 (lucht-lucht) en €15.000 (lucht-water met vloerverwarming). De ISDE subsidie bedraagt tot €2.500, waardoor netto investeringen beginnen vanaf €2.000. Door 60% lagere stookkosten verdient de investering zich gemiddeld binnen 8-12 jaar terug. Bij stijgende gasprijzen en dalende elektriciteitsprijzen (door zonnepanelen) wordt dit 6-10 jaar. Over de levensduur van 20 jaar bespaart u €12.000-24.000 aan stookkosten, naast de CO2-reductie. Extra voordelen: €4.000-12.000 waardestijging van uw woning en energielabel verbetering."
+      answer: "Een complete warmtepomp-installatie kost tussen €4.500 (lucht-lucht) en €15.000 (lucht-water met vloerverwarming). Let op: een lucht-lucht warmtepomp (split-airco) krijgt géén ISDE-subsidie; die geldt alleen voor lucht-water, hybride en bodemwarmtepompen (tot €2.500). Voor een lucht-water systeem beginnen netto investeringen daardoor vanaf circa €10.000. Door 60% lagere stookkosten verdient de investering zich gemiddeld binnen 8-12 jaar terug. Bij stijgende gasprijzen en dalende elektriciteitsprijzen (door zonnepanelen) wordt dit 6-10 jaar. Over de levensduur van 20 jaar bespaart u €12.000-24.000 aan stookkosten, naast de CO2-reductie. Extra voordelen: €4.000-12.000 waardestijging van uw woning en energielabel verbetering."
     },
     {
       question: "Werkt een warmtepomp ook in de winter?",
@@ -100,7 +100,7 @@ const CO2ReductieWarmtepompPage = () => {
     },
     {
       question: "Kan ik subsidie krijgen voor een warmtepomp?",
-      answer: "Ja, via de ISDE regeling (Investeringssubsidie Duurzame Energie) ontvangt u €2.500 subsidie voor een volledige warmtepomp of €2.000 voor een hybride warmtepomp. Voorwaarde is dat de installatie wordt uitgevoerd door een erkend installatiebedrijf (zoals StayCool Airco) en de warmtepomp minimaal energielabel A++ heeft. Daarnaast kunnen gemeenten in Limburg aanvullende subsidies bieden, variërend van €500-1.500. Check altijd eerst de beschikbaarheid, want ISDE-budget is beperkt en op = op. Wij regelen de volledige subsidieaanvraag voor u, inclusief alle benodigde documentatie en certificaten."
+      answer: "Ja, via de ISDE regeling (Investeringssubsidie Duurzame Energie) ontvangt u tot €2.500 subsidie voor een lucht-water warmtepomp of €2.000 voor een hybride warmtepomp. Let op: een lucht-lucht warmtepomp (split-airco) komt niet in aanmerking voor ISDE - de apparatenlijst van RVO bevat alleen lucht-water, hybride en bodemwarmtepompen, warmtepompboilers en zonneboilers. Voorwaarde is dat de installatie wordt uitgevoerd door een erkend installatiebedrijf (zoals StayCool Airco) en de warmtepomp op de ISDE-apparatenlijst staat. Daarnaast kunnen gemeenten in Limburg aanvullende subsidies bieden, variërend van €500-1.500. Check altijd eerst de beschikbaarheid, want ISDE-budget is beperkt en op = op. Wij regelen de volledige subsidieaanvraag voor u, inclusief alle benodigde documentatie en certificaten."
     },
     {
       question: "Hoe verhoudt een warmtepomp zich tot de geplande gasverboden?",
@@ -410,7 +410,7 @@ const CO2ReductieWarmtepompPage = () => {
               Subsidies en Financiële Ondersteuning
             </h3>
             <p className="text-gray-700 leading-relaxed">
-              De overheid stimuleert de overstap naar warmtepompen via de ISDE regeling (Investeringssubsidie Duurzame Energie). Voor een volledige warmtepomp ontvangt u €2.500 subsidie, voor een hybride warmtepomp €2.000. Dit reduceert de netto investering aanzienlijk: een lucht-lucht warmtepomp van €6.500 kost na subsidie €4.000, een lucht-water systeem van €12.500 kost €10.000.
+              De overheid stimuleert de overstap naar warmtepompen via de ISDE regeling (Investeringssubsidie Duurzame Energie). Let op: een lucht-lucht warmtepomp (split-airco) komt niet in aanmerking voor ISDE - deze subsidie geldt alleen voor lucht-water, hybride en bodemwarmtepompen. Voor een lucht-water warmtepomp ontvangt u tot €2.500 subsidie, voor een hybride warmtepomp €2.000. Dit reduceert de netto investering aanzienlijk: een lucht-water systeem van €12.500 kost na subsidie €10.000.
             </p>
 
             <p className="text-gray-700 leading-relaxed">

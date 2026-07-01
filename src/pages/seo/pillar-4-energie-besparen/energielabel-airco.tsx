@@ -208,7 +208,7 @@ const EnergielabelAirco: React.FC = () => {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-1" />
-                    <span><strong>Subsidie mogelijk:</strong> Tot €2.550 ISDE-subsidie voor A++ en A+++ modellen</span>
+                    <span><strong>Snel terugverdiend:</strong> lage stookkosten, terugverdientijd doorgaans 4-6 jaar (geen ISDE op split-airco)</span>
                   </li>
                 </ul>
               </div>

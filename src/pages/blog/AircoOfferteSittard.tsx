@@ -454,8 +454,8 @@ export default function AircoOfferteSittard() {
               <ol>
                 <li>
                   <strong>Merk en exact modelnummer</strong> — niet "Daikin 3,5 kW" maar bijv. "Daikin
-                  FTXM35R + RXM35R". Alleen dan kunt u COP-waarde en ISDE-subsidie verifiëren op de
-                  RVO-meldcodelijst.
+                  FTXM35R + RXM35R". Alleen dan kunt u de energielabel- en SCOP-waarde (het rendement)
+                  echt vergelijken.
                 </li>
                 <li>
                   <strong>Aantal meter leidingwerk</strong> — standaard is 5 m. Is het meer, dan
@@ -541,8 +541,9 @@ export default function AircoOfferteSittard() {
               <h2>8. Subsidie en fiscaal voordeel in Sittard-Geleen</h2>
 
               <p>
-                De landelijke ISDE-subsidie (minstens €500 voor lucht-lucht warmtepomp) geldt ook voor
-                Sittardse en Gelense installaties. Daarnaast:
+                Eerst het misverstand rechtzetten: een split-airco (lucht-lucht warmtepomp) krijgt géén
+                ISDE-subsidie en geen verlaagd 9% BTW-tarief — op airco geldt 21% BTW. ISDE is alleen voor
+                lucht-water/hybride/bodemwarmtepompen. Wat in Sittard-Geleen wél kan:
               </p>
 
               <ul>

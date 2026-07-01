@@ -148,7 +148,7 @@ const KostenAircoPlaatsen: React.FC = () => {
     },
     {
       question: "Kan ik de kosten spreiden of gebruik maken van subsidie?",
-      answer: "Ja, beide opties zijn beschikbaar. Voor financiering bieden wij geschikte betaalregelingen aan waarbij u de kosten kunt spreiden over 12-60 maanden. Ook kunt u in aanmerking komen voor de ISDE subsidie (Investeringssubsidie Duurzame Energie) voor warmtepompen, die kan oplopen tot €300-€500 per unit. Wij helpen u graag met de aanvraag en adviseren over de beste financieringsoptie voor uw situatie."
+      answer: "Ja, u kunt de kosten spreiden. Voor financiering bieden wij geschikte betaalregelingen aan waarbij u de kosten kunt spreiden over 12-60 maanden. Let op met subsidie: een split-airco (lucht-lucht warmtepomp) komt niet in aanmerking voor de ISDE-subsidie - die geldt alleen voor lucht-water, hybride en bodemwarmtepompen. Wel kunnen ondernemers de BTW terugvragen en zijn er soms gemeentelijke energieregelingen (wisselend per gemeente). Wij adviseren u graag over de beste financieringsoptie voor uw situatie."
     },
     {
       question: "Wat bepaalt de uiteindelijke prijs voor mijn woning?",
