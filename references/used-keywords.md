@@ -97,7 +97,7 @@ Bij het bouwen van een cluster voor een nieuwe page:
 | `isde subsidie aanvragen 2026` | ~200 | `/isde-aanvragen-airco` | ✓ research | secondary |
 
 **Cluster 3 architectuur:**
-- Pillar `/airco-subsidie` (2.011w) — eerlijke positie: split-airco GEEN ISDE; wel BTW-9% + soms gemeente
+- Pillar `/airco-subsidie` (2.011w) — eerlijke positie: split-airco GEEN ISDE én GEEN verlaagd 9% BTW (airco = 21%; 9% is voor isolatie). Wél: soms gemeentelijke regeling, zakelijke BTW-aftrek, en energiebesparing als echte terugverdiener
 - Supporting `/isde-aanvragen-airco` (1.309w) — stappenplan voor wie wél lucht-water heeft
 - Cross-link bestaand: `/blog/airco-subsidie-2026-limburg`, `/seo/pillar-9-kosten-prijzen/airco-subsidies-limburg`
 

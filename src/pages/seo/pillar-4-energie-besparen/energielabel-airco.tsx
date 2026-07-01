@@ -63,7 +63,7 @@ const EnergielabelAirco: React.FC = () => {
     },
     {
       question: 'Krijg ik subsidie voor een A+++ airco?',
-      answer: 'Voor 2024-2025 zijn er diverse subsidiemogelijkheden voor energiezuinige warmtepompen. De ISDE-subsidie (Investeringssubsidie Duurzame Energie) biedt tot €2.550 voor lucht-lucht warmtepompen (airco\'s) met minimaal energielabel A++. Aanvragen gaat via RVO.nl. Let op: het subsidiebudget raakt vaak binnen enkele maanden uitgeput, dus wees er snel bij. Daarnaast zijn er gemeentelijke regelingen in Limburg die wisselen per gemeente. Ook kunt u in sommige gevallen in aanmerking komen voor een energiebespaarlening met lage rente. BTW-verlaging geldt helaas alleen voor zonnepanelen en thuisbatterijen, niet voor airco\'s. Wij helpen graag bij het aanvragen van subsidies.'
+      answer: 'Eerlijk antwoord: een split-airco (lucht-lucht warmtepomp) komt in 2026 niet in aanmerking voor ISDE-subsidie — die geldt alleen voor lucht-water, hybride en bodemwarmtepompen (bron: RVO.nl). Andere sites claimen dat soms ten onrechte. Ook een verlaagd BTW-tarief geldt niet voor airco: op airco betaalt u 21% BTW (het 9%-tarief is voor isolatie, 0% voor zonnepanelen). Wat wél kan schelen: gemeentelijke regelingen in Limburg (wisselend per gemeente), een energiebespaarlening met lage rente, zakelijke BTW-teruggave voor ondernemers, en vooral de energiebesparing zelf. Zie onze airco-subsidie-pagina voor het volledige, eerlijke verhaal.'
     },
     {
       question: 'Is een A+++ energielabel ook beter voor het milieu?',

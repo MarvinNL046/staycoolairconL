@@ -484,8 +484,8 @@ export default function AircoOfferteSittard() {
                   zolang u klant bent.
                 </li>
                 <li>
-                  <strong>BTW-tarief</strong> — lucht-lucht warmtepompen vallen soms onder 9% i.p.v. 21%
-                  BTW. Vraag expliciet of uw offerte dit correct toepast.
+                  <strong>BTW-tarief</strong> — op airco-installatie geldt 21% BTW; er is geen verlaagd
+                  9%-tarief voor airco. Belooft een installateur toch 9%? Dan klopt de factuur niet.
                 </li>
               </ol>
 
@@ -552,13 +552,14 @@ export default function AircoOfferteSittard() {
                   actuele voorwaarden.
                 </li>
                 <li>
-                  <strong>9% BTW-tarief</strong> — bij plaatsing van de buitenunit op of aan de woning
-                  mag soms 9% in plaats van 21% BTW worden gerekend. Wij passen dit automatisch toe
-                  waar het mag.
+                  <strong>BTW-tarief</strong> — let op: op airco-installatie geldt gewoon 21% BTW. Er is
+                  géén verlaagd 9%-tarief voor airco (dat is voor isolatie). Bent u ondernemer met zakelijk
+                  gebruik? Dan kunt u de 21% BTW meestal als voorbelasting terugvragen.
                 </li>
                 <li>
-                  <strong>Combinatie-subsidies</strong> — combineer airco-installatie met isolatie of
-                  zonnepanelen voor hogere ISDE-uitkering.
+                  <strong>Andere maatregelen apart</strong> — isolatie (9% BTW op arbeid) en zonnepanelen
+                  (0% BTW) hebben hun eigen gunstige regelingen. Die staan los van de airco, maar zijn samen
+                  met een airco-warmtepomp een sterke verduurzamingscombinatie.
                 </li>
               </ul>
 

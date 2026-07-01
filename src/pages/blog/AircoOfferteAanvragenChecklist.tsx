@@ -409,16 +409,19 @@ export default function AircoOfferteAanvragenChecklist() {
               <p>
                 <strong>Context:</strong> particulieren krijgen offertes meestal inclusief 21% BTW. Bedrijven zien
                 vaak exclusief. Een offerte van €2.000 ex. BTW is €2.420 inc. BTW — dat is een groot verschil.
-                <strong> Per 2024 geldt voor warmtepompen (dus ook airco met verwarmingsfunctie) het lage BTW-tarief
-                van 9%</strong> in bepaalde situaties. Check of dit van toepassing is.
+                <strong> Let op: op een airco-installatie geldt gewoon het standaardtarief van 21% BTW — ook als de
+                airco kan verwarmen.</strong> Het verlaagde 9%-tarief geldt voor isolatiewerk, niet voor airco of
+                lucht-lucht warmtepompen. Een installateur die "9% BTW" op de airco belooft, zit fout.
               </p>
               <p>
                 <strong>Red flag:</strong> de totaalprijs staat wel op de offerte maar BTW-percentage is niet
-                gespecificeerd. Dit is geen acceptabele offerte — vraag explicitering.
+                gespecificeerd — óf er wordt 9% BTW op de airco gerekend. Beide zijn reden om door te vragen; op de
+                factuur hoort 21% te staan.
               </p>
               <p>
-                <strong>Template-vraag:</strong> <em>"Graag de offerte met BTW-percentage per regel (21% of 9%). Als
-                ik recht heb op het lage tarief voor warmtepompfunctie, graag dit verwerken en aantonen."</em>
+                <strong>Template-vraag:</strong> <em>"Graag de offerte met het BTW-percentage per regel. Op de
+                airco-installatie ga ik uit van 21% — klopt dat?"</em> Bent u ondernemer met zakelijk gebruik? Dan
+                kunt u die 21% meestal als voorbelasting terugvragen.
               </p>
 
               {/* ==================== PUNT 11: NIEUW ==================== */}
@@ -581,7 +584,7 @@ Graag in de offerte:
 7. ISDE-meldcode + verwachte subsidiebedrag
 8. Aggregator/platform-fee ja/nee
 9. Opruim- en beschermwerk inbegrepen
-10. BTW-percentage per regel (21% of 9% bij warmtepompfunctie)
+10. BTW-percentage per regel — op airco-installatie hoort 21% te staan (geen verlaagd 9%-tarief)
 11. Aanbetalingspercentage + tenaamgestelde bankrekening
 12. Levertijd opdracht-installatie + weer-voorbehoud
 
