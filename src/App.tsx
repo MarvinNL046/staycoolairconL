@@ -29,6 +29,7 @@ import { requestIdleCallbackPolyfill } from './utils/requestIdleCallback';
 import PerformanceOptimizer from './utils/performanceOptimizations';
 import { Chatbot } from './components/Chatbot';
 import ExitIntentPopup from './components/ExitIntentPopup';
+import ServiceNoticePopup from './components/ServiceNoticePopup';
 import MobileStickyCTA from './components/MobileStickyCTA';
 import FloatingReviewBadge from './components/FloatingReviewBadge';
 import { servicePages } from './data/servicePages';
@@ -972,6 +973,10 @@ const App = () => {
             <FeedbackRibbon />
           </>
         )}
+
+        {/* Tijdelijke service-melding (telefoon minder bereikbaar) — óók op /lp/,
+            want juist daar is bellen vaak de hoofd-CTA. Zet uit via ENABLED in het component. */}
+        <ServiceNoticePopup />
 
         <CookieConsentLite />
         <PerformanceMonitor />
