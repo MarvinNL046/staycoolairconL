@@ -41,7 +41,7 @@ const AircoOnderhoudKosten: React.FC = () => {
       service: "Onderhoudsbeurt (zonder contract)",
       omschrijving: "Complete onderhoudsbeurt: filters reinigen/vervangen, binnen- en buitenunit reinigen, condensafvoer, koudemiddeldruk en elektrische connecties controleren",
       frequentie: "1x per jaar",
-      prijs: "€179",
+      prijs: "€189",
       duur: "60-90 min"
     },
     {
@@ -91,8 +91,8 @@ const AircoOnderhoudKosten: React.FC = () => {
   const onderhoudsContracten = [
     {
       pakket: "Standaard Onderhoudscontract",
-      prijs: "€11/maand",
-      prijsJaar: "(€132/jaar)",
+      prijs: "€13/maand",
+      prijsJaar: "(€156/jaar)",
       inclusief: [
         "1x jaarlijkse complete onderhoudsbeurt",
         "Filters reinigen en controle alle onderdelen",
@@ -132,20 +132,20 @@ const AircoOnderhoudKosten: React.FC = () => {
     },
     {
       scenario: "Losse Onderhoudsbeurt",
-      onderhoud: "€179",
+      onderhoud: "€189",
       filters: "Inbegrepen",
       energie: "€240 (-15%)",
       reparaties: "€50 (gemiddeld)",
-      totaal: "€469/jaar",
+      totaal: "€479/jaar",
       risico: "Gemiddeld - garantiebehoud, storingskans 8%"
     },
     {
-      scenario: "Standaard Contract (€11/mnd)",
-      onderhoud: "€132",
+      scenario: "Basis Contract (€13/mnd)",
+      onderhoud: "€156",
       filters: "Inbegrepen",
       energie: "€240 (-15%)",
       reparaties: "€25 (gedekt)",
-      totaal: "€397/jaar",
+      totaal: "€421/jaar",
       risico: "Laag - voorrang service, storingskans 5%"
     },
     {
@@ -211,7 +211,7 @@ const AircoOnderhoudKosten: React.FC = () => {
     },
     {
       question: "Wat kost een jaarlijkse airco onderhoudsbeurt?",
-      answer: "Een losse onderhoudsbeurt kost €179 voor één single-split systeem. Dit omvat reiniging van filters en units, controle van alle onderdelen inclusief koudemiddeldruk en elektrische connecties. Voordeliger is een onderhoudscontract: Standaard €11/maand (€132/jaar) of Premium €16/maand (€192/jaar). Met een contract krijgt u extra voordelen zoals voorrang bij storingen, geen voorrijkosten en garantiebehoud."
+      answer: "Een losse onderhoudsbeurt kost €189 voor één single-split systeem. Dit omvat reiniging van filters en units, controle van alle onderdelen inclusief koudemiddeldruk en elektrische connecties. Voordeliger is een onderhoudscontract: Basis €13/maand (€156/jaar) of Premium €16/maand (€192/jaar). Met een contract krijgt u extra voordelen zoals voorrang bij storingen, geen voorrijkosten en garantiebehoud."
     },
     {
       question: "Kan ik mijn airco zelf onderhouden of is professioneel onderhoud nodig?",
@@ -223,7 +223,7 @@ const AircoOnderhoudKosten: React.FC = () => {
     },
     {
       question: "Is een onderhoudscontract voordeliger dan losse beurten?",
-      answer: "Absoluut! Een Standaard contract (€11/maand = €132/jaar) is €47 goedkoper dan een losse beurt (€179) én u krijgt extra voordelen: vaste jaarlijkse afspraak, geen voorrijkosten bij storingen, voorrang bij service en garantiebehoud. Het Premium contract (€16/maand = €192/jaar) biedt nog meer: voorrang binnen 24u, 15% korting op reparaties en onderdelen, en een vervangend toestel bij langdurige reparatie. Voor intensief gebruik of zakelijke toepassingen is Premium de beste keuze."
+      answer: "Absoluut! Een Basis contract (€13/maand = €156/jaar) is €33 goedkoper dan een losse beurt (€189) én u krijgt extra voordelen: vaste jaarlijkse afspraak, geen voorrijkosten bij storingen, voorrang bij service en garantiebehoud. Het Premium contract (€16/maand = €192/jaar) biedt nog meer: alle onderdelen inbegrepen en een vervangend toestel bij defect. Voor intensief gebruik of zakelijke toepassingen is Premium de beste keuze."
     },
     {
       question: "Welke onderdelen slijten het snelst en moeten vervangen worden?",
@@ -231,19 +231,19 @@ const AircoOnderhoudKosten: React.FC = () => {
     },
     {
       question: "Wat zijn de totale jaarlijkse kosten van een airco?",
-      answer: "De totale jaarkosten bestaan uit: onderhoudscontract €132-192/jaar (Standaard €11/mnd of Premium €16/mnd), elektriciteitskosten €180-400/jaar (afhankelijk van gebruik en efficiency), en eventuele reparaties (bij contract krijgt u korting en voorrang). Totaal: €312-592/jaar, gemiddeld €400/jaar. Dit is ruimschoots gecompenseerd door de energiebesparing van €400-800/jaar bij gebruik als verwarming. Netto profiteert u dus €50-400/jaar, terwijl u geniet van optimaal comfort."
+      answer: "De totale jaarkosten bestaan uit: onderhoudscontract €156-192/jaar (Basis €13/mnd of Premium €16/mnd), elektriciteitskosten €180-400/jaar (afhankelijk van gebruik en efficiency), en eventuele reparaties (bij contract krijgt u korting en voorrang). Totaal: €336-592/jaar, gemiddeld €400/jaar. Dit is ruimschoots gecompenseerd door de energiebesparing van €400-800/jaar bij gebruik als verwarming. Netto profiteert u dus €50-400/jaar, terwijl u geniet van optimaal comfort."
     },
     {
       question: "Waarom is onderhoud belangrijk voor de garantie?",
-      answer: "Alle airco fabrikanten eisen jaarlijks professioneel onderhoud als voorwaarde voor garantie. Zonder onderhoudsbewijzen vervalt uw garantie (5-10 jaar afhankelijk van merk) en bent u zelf verantwoordelijk voor alle reparatiekosten. Een nieuwe compressor kost €800-1500, printplaat €150-350, volledige unit €1200-3000. Een onderhoudscontract vanaf €11/maand is dus een fractie van deze kosten en beschermt uw investering volledig. Wij leveren na elke beurt digitale onderhoudsbewijzen die uw garantie waarborgen en overdraagbaar zijn bij verhuizing/verkoop."
+      answer: "Alle airco fabrikanten eisen jaarlijks professioneel onderhoud als voorwaarde voor garantie. Zonder onderhoudsbewijzen vervalt uw garantie (5-10 jaar afhankelijk van merk) en bent u zelf verantwoordelijk voor alle reparatiekosten. Een nieuwe compressor kost €800-1500, printplaat €150-350, volledige unit €1200-3000. Een onderhoudscontract vanaf €13/maand is dus een fractie van deze kosten en beschermt uw investering volledig. Wij leveren na elke beurt digitale onderhoudsbewijzen die uw garantie waarborgen en overdraagbaar zijn bij verhuizing/verkoop."
     }
   ];
 
   return (
     <>
       <MetaTags
-        title="Airco Onderhoud Kosten Limburg | Vanaf €11/maand | StayCool Airco"
-        description="Airco onderhoud vanaf €11/maand ✓ Voorkomt storingen 80% ✓ Bespaart 15% energie ✓ Onderhoudscontract beschikbaar ✓ Gratis advies onderhoud!"
+        title="Airco Onderhoud Kosten Limburg | Vanaf €13/maand | StayCool Airco"
+        description="Airco onderhoud vanaf €13/maand ✓ Voorkomt storingen 80% ✓ Bespaart 15% energie ✓ Onderhoudscontract beschikbaar ✓ Gratis advies onderhoud!"
       />
 
       <SchemaMarkup
@@ -278,11 +278,11 @@ const AircoOnderhoudKosten: React.FC = () => {
           <Breadcrumbs items={breadcrumbItems} className="mb-4 text-sky-50" />
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Airco Onderhoud Kosten: Vanaf €11/maand voor Optimale Prestaties
+            Airco Onderhoud Kosten: Vanaf €13/maand voor Optimale Prestaties
           </h1>
 
           <p className="text-xl md:text-2xl text-sky-50 mb-8 leading-relaxed">
-            Professioneel airco onderhoud voorkomt 80% van storingen, bespaart 15% energie en verlengt de levensduur. Met onderhoudscontract vanaf €11/maand zorgeloos genieten.
+            Professioneel airco onderhoud voorkomt 80% van storingen, bespaart 15% energie en verlengt de levensduur. Met onderhoudscontract vanaf €13/maand zorgeloos genieten.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -349,7 +349,7 @@ const AircoOnderhoudKosten: React.FC = () => {
             </p>
 
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Goed onderhouden airco's presteren 15-25% efficiënter, hebben 80% minder storingen, gaan 5-8 jaar langer mee en behouden hun volledige capaciteit. Met een onderhoudscontract vanaf €11/maand (€132/jaar) verdienen de kosten zich ruimschoots terug door lagere energiekosten, minder reparaties en langere levensduur. U bespaart netto honderden euro's per jaar en geniet van betrouwbaar comfort.
+              Goed onderhouden airco's presteren 15-25% efficiënter, hebben 80% minder storingen, gaan 5-8 jaar langer mee en behouden hun volledige capaciteit. Met een onderhoudscontract vanaf €13/maand (€156/jaar) verdienen de kosten zich ruimschoots terug door lagere energiekosten, minder reparaties en langere levensduur. U bespaart netto honderden euro's per jaar en geniet van betrouwbaar comfort.
             </p>
 
             <div className="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-lg my-8">
@@ -499,10 +499,10 @@ const AircoOnderhoudKosten: React.FC = () => {
               <div>
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">Conclusie: Onderhoudscontract Bespaart Geld</h4>
                 <p className="text-gray-700 mb-3">
-                  Het Standaard Contract (€11/maand) is met €397/jaar het voordeligst én het meest betrouwbaar. Vergeleken met een losse onderhoudsbeurt (€179) bespaart u €47/jaar en krijgt u extra voordelen zoals voorrang bij storingen en geen voorrijkosten. Over 10 jaar bespaart u €470 netto, terwijl uw airco optimaal blijft presteren.
+                  Het Basis Contract (€13/maand) is met €421/jaar het voordeligst én het meest betrouwbaar. Vergeleken met een losse onderhoudsbeurt (€189) bespaart u €33/jaar en krijgt u extra voordelen zoals voorrang bij storingen en geen voorrijkosten. Over 10 jaar bespaart u €330 netto, terwijl uw airco optimaal blijft presteren.
                 </p>
                 <p className="text-gray-700">
-                  Het Premium contract (€16/maand) biedt extra zorgeloosheid met 15% korting op reparaties en een vervangend toestel bij langdurige reparatie, ideaal voor zakelijk gebruik of intensieve toepassingen.
+                  Het Premium contract (€16/maand) biedt extra zorgeloosheid met alle onderdelen inbegrepen en een vervangend toestel bij defect, ideaal voor zakelijk gebruik of intensieve toepassingen.
                 </p>
               </div>
             </div>

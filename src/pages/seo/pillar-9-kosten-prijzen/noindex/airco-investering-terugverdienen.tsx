@@ -485,8 +485,8 @@ const AircoInvesteringTerugverdienen = () => {
                     <span className="text-red-600">-€160</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-700">• Onderhoud (€11/maand)</span>
-                    <span className="text-red-600">-€132</span>
+                    <span className="text-gray-700">• Onderhoud (€13/maand)</span>
+                    <span className="text-red-600">-€156</span>
                   </div>
                   <div className="flex justify-between pt-2 border-t">
                     <span className="font-semibold text-gray-900">Totaal kosten</span>
@@ -576,7 +576,7 @@ const AircoInvesteringTerugverdienen = () => {
                 <h3 className="font-bold text-lg text-gray-900">Preventief Onderhoud</h3>
               </div>
               <p className="text-gray-600 text-sm">
-                Onderhoudscontract vanaf €11/maand voorkomt dure reparaties en houdt
+                Onderhoudscontract vanaf €13/maand voorkomt dure reparaties en houdt
                 je airco efficiënt. Bespaart tot €250/jaar aan extra kosten.
               </p>
             </div>

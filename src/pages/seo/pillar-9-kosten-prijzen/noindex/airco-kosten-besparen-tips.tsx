@@ -65,8 +65,8 @@ const AircoKostenBesparenTips = () => {
       icon: Award,
       besparing: '€100 - €250/jaar',
       niveau: 'Gemakkelijk',
-      uitleg: 'Met onderhoudscontract vanaf €11/maand voorkom je dure reparaties en blijft je airco efficiënt werken. Vermijdt storingen die tot 30% meer verbruik kunnen geven.',
-      actie: ['Neem contract vanaf €11/maand', 'Jaarlijks onderhoud verplicht', 'Voorkomt dure reparaties']
+      uitleg: 'Met onderhoudscontract vanaf €13/maand voorkom je dure reparaties en blijft je airco efficiënt werken. Vermijdt storingen die tot 30% meer verbruik kunnen geven.',
+      actie: ['Neem contract vanaf €13/maand', 'Jaarlijks onderhoud verplicht', 'Voorkomt dure reparaties']
     },
     {
       titel: 'Multi-Split Bij Meerdere Ruimtes',

@@ -187,7 +187,7 @@ const AircoProblemenVoorkomen = () => {
             <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-600 text-center">
               <Euro className="h-12 w-12 text-green-600 mx-auto mb-3" />
               <h3 className="font-bold text-green-900 mb-2">Kostenbesparing</h3>
-              <p className="text-green-800">Voorkom reparaties van €300-800 met onderhoud van €11/maand</p>
+              <p className="text-green-800">Voorkom reparaties van €300-800 met onderhoud van €13/maand</p>
             </div>
             <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600 text-center">
               <TrendingDown className="h-12 w-12 text-blue-600 mx-auto mb-3" />
@@ -516,7 +516,7 @@ const AircoProblemenVoorkomen = () => {
             Voorkom Problemen met Professioneel Onderhoud
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Investeer €11/maand en bespaar honderden euro's aan reparaties
+            Investeer €13/maand en bespaar honderden euro's aan reparaties
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

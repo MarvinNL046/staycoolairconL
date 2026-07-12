@@ -14,7 +14,7 @@ const AircoServiceContractVoordelenPage = () => {
   const prijzen = [
     {
       type: 'Losse Servicebeurt',
-      prijs: '€179',
+      prijs: '€189',
       periode: 'per beurt',
       color: 'gray',
       features: [
@@ -35,9 +35,9 @@ const AircoServiceContractVoordelenPage = () => {
     },
     {
       type: 'Servicecontract 1 Unit',
-      prijs: '€11',
+      prijs: '€13',
       periode: 'per maand',
-      jaarprijs: '€132 per jaar',
+      jaarprijs: '€156 per jaar',
       color: 'blue',
       highlight: true,
       features: [
@@ -81,7 +81,7 @@ const AircoServiceContractVoordelenPage = () => {
       items: [
         {
           punt: 'Lagere kosten per servicebeurt',
-          uitleg: 'Met contract betaalt u €132/jaar voor 1 unit vs €179 voor losse beurt - een besparing van €47.'
+          uitleg: 'Met contract betaalt u €156/jaar voor 1 unit vs €189 voor losse beurt - een besparing van €33.'
         },
         {
           punt: 'Korting op reparaties',
@@ -158,8 +158,8 @@ const AircoServiceContractVoordelenPage = () => {
   const vergelijking = [
     {
       aspect: 'Jaarlijkse servicekosten',
-      losseBeurt: '€179 per beurt',
-      contract1: '€132 per jaar',
+      losseBeurt: '€189 per beurt',
+      contract1: '€156 per jaar',
       contract2: '€192 voor alle units',
       winner: 'contract'
     },
@@ -245,7 +245,7 @@ const AircoServiceContractVoordelenPage = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <MetaTags
         title="Airco Servicecontract Voordelen | Bespaar met Contract | StayCool"
-        description="Voordelen airco servicecontract in Limburg. Bespaar geld, krijg voorrang en zorgeloos onderhoud. Vanaf €11/maand."
+        description="Voordelen airco servicecontract in Limburg. Bespaar geld, krijg voorrang en zorgeloos onderhoud. Vanaf €13/maand."
         canonicalUrl="https://staycoolairco.nl/airco-service/noindex/contract-voordelen"
         noIndex={true}
       />
@@ -634,7 +634,7 @@ const AircoServiceContractVoordelenPage = () => {
             </Link>
           </div>
           <p className="mt-6 text-blue-200">
-            Vanaf €11/maand | Opzegbaar per jaar | Inclusief voorrang bij storingen
+            Vanaf €13/maand | Opzegbaar per jaar | Inclusief voorrang bij storingen
           </p>
         </div>
       </section>

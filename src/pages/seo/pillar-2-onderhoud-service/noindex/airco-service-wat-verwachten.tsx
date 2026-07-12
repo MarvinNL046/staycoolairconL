@@ -528,7 +528,7 @@ const AircoServiceWatVerwachtenPage = () => {
             </Link>
           </div>
           <p className="mt-6 text-blue-200">
-            Losse beurt €179 | Servicecontract vanaf €11/maand
+            Losse beurt €189 | Servicecontract vanaf €13/maand
           </p>
         </div>
       </section>

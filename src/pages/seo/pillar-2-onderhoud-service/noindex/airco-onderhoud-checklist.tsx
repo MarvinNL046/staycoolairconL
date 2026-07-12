@@ -233,7 +233,7 @@ const AircoOnderhoudsChecklist = () => {
                   </div>
                   <div className="flex justify-between items-center pb-3 border-b border-gray-200">
                     <span className="text-gray-600">Contract 1 unit</span>
-                    <span className="font-bold text-green-600">€11/maand</span>
+                    <span className="font-bold text-green-600">€13/maand</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-600">Contract 2+ units</span>
