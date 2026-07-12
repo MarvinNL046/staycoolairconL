@@ -69,7 +69,7 @@ const AircoService: React.FC = () => {
     },
     {
       label: 'Storingsbezoek + diagnose',
-      prijs: '€89 voorrijden',
+      prijs: '€125 eerste uur',
       details: 'Verrekend in totaalbedrag bij reparatie. Diagnose krijgt u op papier voordat we doorgaan.',
     },
     {
@@ -132,7 +132,7 @@ const AircoService: React.FC = () => {
     },
     {
       question: 'Wat kost een airco-storing oplossen?',
-      answer: 'Storingsbezoek (voorrijden + diagnose op locatie) is €89. Bij reparatie verrekenen we dat bedrag in de totaalprijs. Reparatiekosten variëren: kleine onderdelen €95-€175, grote onderdelen €225-€450, compressor-defect €600+ (vaak rendabeler om te vervangen). Exact bedrag staat in de offerte voordat we beginnen.',
+      answer: 'Een storingsbezoek kost €125 voor het eerste uur, inclusief voorrijkosten en diagnose. Duurt de reparatie langer, dan rekenen we daarna €84,70 per uur (€70 excl. btw). Grote onderdelen worden apart geoffreerd — het exacte bedrag staat op papier voordat we beginnen. Compressor-defect €600+ (vaak rendabeler om te vervangen).',
     },
     {
       question: 'Kan ik losse beurt boeken zonder contract?',
@@ -208,7 +208,7 @@ const AircoService: React.FC = () => {
           lowPrice: '11',
           highPrice: '650',
           offerCount: '7',
-          description: 'Onderhoudscontract vanaf €13/mnd. Losse onderhoudsbeurt €189. Storingsbezoek €89 voorrijden. Reparaties €95-€450. Lekdetectie + bijvullen €149-€650.',
+          description: 'Onderhoudscontract vanaf €13/mnd. Losse onderhoudsbeurt €189. Storingsbezoek €125 eerste uur incl. voorrijkosten, daarna €84,70/uur. Lekdetectie + bijvullen €149-€650.',
         },
         hasOfferCatalog: {
           '@type': 'OfferCatalog',

@@ -70,7 +70,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
       name: 'Reparatie Service',
       icon: Wrench,
       description: 'Snelle storingsdienst in heel Limburg',
-      price: '€45 voorrijkosten + arbeid',
+      price: '€125 eerste uur (incl. voorrijkosten), daarna €84,70/uur',
       features: [
         'Binnen 24u ter plaatse',
         'Met contract: geen voorrijkosten',
@@ -150,8 +150,8 @@ const AircoServiceLimburgLanding: React.FC = () => {
     },
     {
       service: 'Storing verhelpen',
-      residential: '€45 voorrijkosten + arbeid',
-      commercial: '€109 + €89/uur',
+      residential: '€125 eerste uur, daarna €84,70/uur',
+      commercial: '€125 eerste uur, daarna €84,70/uur',
       includes: 'Met contract: geen voorrijkosten'
     },
     {
@@ -192,7 +192,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
   const faqItems = [
     {
       question: 'Wat kost airco service in Limburg?',
-      answer: 'Een eenmalige onderhoudsbeurt kost €189. Voordeliger zijn onze onderhoudscontracten: Basis pakket €13/maand (€156/jaar) of Premium pakket €16/maand (€192/jaar). Met een contract bespaart u €33 op onderhoud en heeft u geen voorrijkosten bij storing. Storing verhelpen zonder contract: €45 voorrijkosten + arbeid.'
+      answer: 'Een eenmalige onderhoudsbeurt kost €189. Voordeliger zijn onze onderhoudscontracten: Basis pakket €13/maand (€156/jaar) of Premium pakket €16/maand (€192/jaar). Met een contract bespaart u €33 op onderhoud en heeft u geen voorrijkosten bij storing. Storing verhelpen zonder contract: €125 voor het eerste uur (incl. voorrijkosten), daarna €84,70 per uur.'
     },
     {
       question: 'Hoe snel kunnen jullie ter plaatse zijn?',
