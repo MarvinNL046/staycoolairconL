@@ -277,7 +277,7 @@ const AircoKopenLimburg: React.FC = () => {
     },
     {
       question: 'Wat zijn de kosten van airco onderhoud?',
-      answer: 'Een losse onderhoudsbeurt kost €179. Voordeliger is een onderhoudscontract: Standaard €11/maand (€132/jaar) of Premium €16/maand (€192/jaar). Dit omvat jaarlijkse beurt met reiniging filters, controle koelvloeistof, inspectie werking en prestatie-optimalisatie. Met een contract krijgt u ook voorrang bij storing en geen voorrijkosten.'
+      answer: 'Een losse onderhoudsbeurt kost €189. Voordeliger is een onderhoudscontract: Basis €13/maand (€156/jaar) of Premium €16/maand (€192/jaar). Dit omvat jaarlijkse beurt met reiniging filters, controle koelvloeistof, inspectie werking en prestatie-optimalisatie. Met een contract krijgt u ook voorrang bij storing en geen voorrijkosten.'
     },
     {
       question: 'Maken jullie ook offertes voor zakelijke klanten in Limburg?',

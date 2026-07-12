@@ -163,7 +163,7 @@ const WatKostAircoInstallatieLanding: React.FC = () => {
     },
     {
       question: 'Hoeveel kost het onderhoud van een airco?',
-      answer: 'Een losse onderhoudsbeurt kost €179. Voordeliger is een onderhoudscontract: Standaard €11/maand (€132/jaar) of Premium €16/maand (€192/jaar). Dit omvat reiniging filters, controle koelvloeistof, desinfectie en algemene inspectie. Met een contract krijgt u ook voorrang bij storingen.'
+      answer: 'Een losse onderhoudsbeurt kost €189. Voordeliger is een onderhoudscontract: Basis €13/maand (€156/jaar) of Premium €16/maand (€192/jaar). Dit omvat reiniging filters, controle koelvloeistof, desinfectie en algemene inspectie. Met een contract krijgt u ook voorrang bij storingen.'
     },
     {
       question: 'Wat kost een multi-split airco installatie?',
@@ -202,8 +202,8 @@ const WatKostAircoInstallatieLanding: React.FC = () => {
     },
     {
       feature: 'Onderhoudskosten/jaar',
-      split: '€132 (contract)',
-      multi: '€179 - €249',
+      split: '€156 (contract)',
+      multi: '€189 - €249',
       mobiel: '€49'
     },
     {

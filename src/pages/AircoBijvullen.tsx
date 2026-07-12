@@ -686,7 +686,7 @@ const AircoBijvullen: React.FC = () => {
                     <strong>Buitenunit vrijhouden</strong> — bladeren, sneeuw, bloembakken tegen de buitenunit verminderen de luchtstroom en verhogen de druk in het systeem. Hogere druk = sneller lekkage bij verbindingen. Houdt de unit minimaal 30 cm vrij aan alle kanten.
                   </li>
                   <li>
-                    <strong>Onderhoudscontract afsluiten</strong> — voor €99-€150 per jaar krijgt u een vaste jaarlijkse onderhoudsbeurt inclusief drukcheck. Wij detecteren beginnende lekken vroeg en repareren ze meestal voor &lt;€100 — voordat ze uitgroeien tot een €650-bijvulling-met-reparatie.
+                    <strong>Onderhoudscontract afsluiten</strong> — voor €156 per jaar (€13/mnd) krijgt u een vaste jaarlijkse onderhoudsbeurt inclusief drukcheck. Wij detecteren beginnende lekken vroeg en repareren ze meestal voor &lt;€100 — voordat ze uitgroeien tot een €650-bijvulling-met-reparatie.
                   </li>
                   <li>
                     <strong>Bij installatie kiezen voor R32 ipv R410A</strong> — als u nog moet kiezen of een upgrade overweegt: R32 is goedkoper bij te vullen (€175-€275 vs €225-€375 voor R410A) en zal langer leverbaar blijven. R410A wordt uitgefaseerd, waardoor de koudemiddelprijs jaarlijks stijgt.

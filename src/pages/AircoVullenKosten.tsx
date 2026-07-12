@@ -287,7 +287,7 @@ const AircoVullenKosten: React.FC = () => {
                 De goedkoopste bijvulling is de bijvulling die u niet nodig heeft
               </h3>
               <ol className="space-y-3 text-gray-700 list-decimal ml-6">
-                <li><strong>Onderhoudscontract</strong> — voor €99-€150 per jaar voert ons team jaarlijks onderhoud uit incl. drukcheck. Beginnende lekken pakken we vroeg, vaak voor &lt;€100. Zonder contract groeit datzelfde lek uit tot een €350-€650 reparatie.</li>
+                <li><strong>Onderhoudscontract</strong> — voor €156 per jaar (€13/mnd) voert ons team jaarlijks onderhoud uit incl. drukcheck. Beginnende lekken pakken we vroeg, vaak voor &lt;€100. Zonder contract groeit datzelfde lek uit tot een €350-€650 reparatie.</li>
                 <li><strong>Vroeg signaleren</strong> — bij verminderde koeling, ijsvorming of een sissend geluid: wachten kost geld. Een tijdige detectie kost €350; doordraaien tot compressor-defect kost €1.500+.</li>
                 <li><strong>Bij installatie kiezen voor R32</strong> — als u nog overweegt of upgrade plant: R32 is structureel goedkoper bij te vullen (€175-€275 vs €225-€375 voor R410A) én blijft langer leverbaar. R410A wordt uitgefaseerd, marktprijs koudemiddel stijgt jaarlijks 8-15%.</li>
               </ol>

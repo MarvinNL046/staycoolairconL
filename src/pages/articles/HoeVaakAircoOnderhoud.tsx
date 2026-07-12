@@ -69,7 +69,7 @@ const HoeVaakAircoOnderhoud = () => {
   return (
     <ArticleLayout
       title="Hoe Vaak Airco Onderhoud? Schema & Tips 2026"
-      description="Hoe vaak heeft je airco onderhoud nodig? Ontdek het ideale schema, bespaar tot 30% energie en voorkom storingen. Onderhoudscontract vanaf €11/mnd."
+      description="Hoe vaak heeft je airco onderhoud nodig? Ontdek het ideale schema, bespaar tot 30% energie en voorkom storingen. Onderhoudscontract vanaf €13/mnd."
       publishDate="2025-01-22"
       modifiedDate="2026-03-22"
       author="StayCool Airconditioning"

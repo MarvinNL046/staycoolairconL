@@ -461,7 +461,7 @@ const CirculaireAircoPage = () => {
               Onze Onderhoudscontracten
             </h3>
             <p className="text-gray-700 leading-relaxed">
-              Wij bieden drie onderhoudscontracten: (1) Basis Contract (€120/jaar): jaarlijkse service, 10% korting op onderdelen, voorrang bij storing. (2) Standaard Contract (€180/jaar): 2x per jaar service (voorjaar + najaar), gratis kleine reparaties (minder dan €100), 15% korting onderdelen, 24/7 storingsdienst. (3) Premium Contract (€280-350/jaar afhankelijk van systeem): 2x service, gratis reparaties tot €500, preventieve component vervanging, parts & labor garantie, prioriteit ondersteuning. Alle contracten: online dashboard met service geschiedenis, automatische planning, SMS herinnering, tevredenheidsgarantie. Korting bij meerdere units.
+              Wij bieden twee onderhoudscontracten: Basis (€13/maand, €156/jaar): jaarlijkse onderhoudsbeurt, voorrang bij storing en geen voorrijkosten. Premium (€16/maand, €192/jaar): daarbovenop alle onderdelen inbegrepen en een vervangend toestel bij defect. Extra binnendelen: €8/maand (Basis) of €11/maand (Premium), en 5% korting bij 3 of meer units. Aanmelden kan online via aanmelden.staycoolairco.nl.
             </p>
           </div>
         </div>

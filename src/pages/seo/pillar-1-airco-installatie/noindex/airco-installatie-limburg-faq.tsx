@@ -80,7 +80,7 @@ const AircoInstallatieLimburgFAQPage = () => {
       questions: [
         {
           q: "Hoe onderhoud ik mijn airco na installatie?",
-          a: "Basisonderhoud doet u zelf: reinig de filters om de 2 weken (uitnemen, afzuigen of uitwassen, drogen en terugplaatsen), veeg de binnenunit af met vochtige doek, houd de buitenunit vrij van bladeren en vuil. Professioneel onderhoud adviseren we 1x per jaar: reiniging verdamper en condensor, controle koudemiddel, check van elektrische aansluitingen en meten van prestaties. Dit verlengt de levensduur en bespaart energie. Wij bieden onderhoudscontracten vanaf €11/maand."
+          a: "Basisonderhoud doet u zelf: reinig de filters om de 2 weken (uitnemen, afzuigen of uitwassen, drogen en terugplaatsen), veeg de binnenunit af met vochtige doek, houd de buitenunit vrij van bladeren en vuil. Professioneel onderhoud adviseren we 1x per jaar: reiniging verdamper en condensor, controle koudemiddel, check van elektrische aansluitingen en meten van prestaties. Dit verlengt de levensduur en bespaart energie. Wij bieden onderhoudscontracten vanaf €13/maand."
         },
         {
           q: "Welke garantie krijg ik op de installatie?",
@@ -96,7 +96,7 @@ const AircoInstallatieLimburgFAQPage = () => {
         },
         {
           q: "Hoe vaak moet ik professioneel onderhoud laten doen?",
-          a: "Wij adviseren 1x per jaar groot onderhoud, bij voorkeur in het voorjaar (voor het koelseizoen). Bij intensief gebruik (horeca, serverruimtes) of in stoffige omgevingen 2x per jaar. Minimum is 1x per 2 jaar, maar dit verkort de levensduur en verhoogt energieverbruik. Professioneel onderhoud kost €89 los, of vanaf €11/maand bij een onderhoudscontract. Het voorkomt 80% van de storingen en bespaart tot 25% energiekosten. Onderhoudscontract is bovendien garantievoorwaarde."
+          a: "Wij adviseren 1x per jaar groot onderhoud, bij voorkeur in het voorjaar (voor het koelseizoen). Bij intensief gebruik (horeca, serverruimtes) of in stoffige omgevingen 2x per jaar. Minimum is 1x per 2 jaar, maar dit verkort de levensduur en verhoogt energieverbruik. Professioneel onderhoud kost €189 los, of vanaf €13/maand bij een onderhoudscontract. Het voorkomt 80% van de storingen en bespaart tot 25% energiekosten. Onderhoudscontract is bovendien garantievoorwaarde."
         }
       ]
     },
@@ -123,7 +123,7 @@ const AircoInstallatieLimburgFAQPage = () => {
         },
         {
           q: "Wat kost het onderhoud van mijn airco per jaar?",
-          a: "Professioneel onderhoud kost €89 per systeem per beurt (bij los onderhoud). Met een onderhoudscontract betaalt u €11/maand voor 1 systeem (€132/jaar) of €16/maand voor 2-3 systemen (€192/jaar) en krijgt u voorrang bij storing, 10% korting op reparaties, gratis spoedservice, en jaarlijkse controle. Filters reinigt u zelf (gratis). Stroomkosten koelen: €30-€60/zomer. Stroomkosten verwarmen: €200-€400/winter (maar besparing op gas is groter). Totale jaarkosten: €150-€250 inclusief onderhoud."
+          a: "Professioneel onderhoud kost €189 per beurt (bij los onderhoud). Met een onderhoudscontract betaalt u €13/maand per complete airco-unit (Basis, €156/jaar) of €16/maand (Premium, incl. onderdelen en vervangend toestel) en krijgt u voorrang bij storing, geen voorrijkosten en een jaarlijkse controle. Filters reinigt u zelf (gratis). Stroomkosten koelen: €30-€60/zomer. Stroomkosten verwarmen: €200-€400/winter (maar besparing op gas is groter). Totale jaarkosten: €150-€250 inclusief onderhoud."
         }
       ]
     },

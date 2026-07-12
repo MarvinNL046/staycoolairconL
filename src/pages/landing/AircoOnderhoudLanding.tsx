@@ -35,10 +35,10 @@ export default function AircoOnderhoudLanding() {
   return (
     <>
       <Helmet>
-        <title>Airco Onderhoudscontract vanaf €11/mnd | StayCool Limburg</title>
+        <title>Airco Onderhoudscontract vanaf €13/mnd | StayCool Limburg</title>
         <meta
           name="description"
-          content="Airco onderhoudscontract vanaf €11/mnd: jaarlijks onderhoud + voorrang bij storing + 10% korting op reparatie. F-gas gecertificeerd, heel Limburg. Bel 046 202 1430."
+          content="Airco onderhoudscontract vanaf €13/mnd: jaarlijks onderhoud + voorrang bij storing + geen voorrijkosten. F-gas gecertificeerd, heel Limburg. Bel 046 202 1430."
         />
         <meta
           name="keywords"
@@ -208,11 +208,11 @@ export default function AircoOnderhoudLanding() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg border border-gray-200">
               <div className="bg-blue-600 p-6 text-center relative">
-                <h3 className="text-xl font-bold text-white">Premium Pakket</h3>
+                <h3 className="text-xl font-bold text-white">Basis Pakket</h3>
               </div>
               <div className="p-6">
                 <div className="text-center mb-6">
-                  <p className="text-4xl font-bold text-gray-900">€11,-</p>
+                  <p className="text-4xl font-bold text-gray-900">€13,-</p>
                   <p className="text-sm text-gray-500">p.m.</p>
                 </div>
 
@@ -257,7 +257,7 @@ export default function AircoOnderhoudLanding() {
 
                 <div className="text-center">
                   <Link to="/contact" className="inline-block px-6 py-3 rounded bg-blue-600 text-white font-medium hover:bg-blue-700">
-                    Kies Premium Pakket
+                    Kies Basis Pakket
                   </Link>
                 </div>
               </div>
@@ -268,11 +268,11 @@ export default function AircoOnderhoudLanding() {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-blue-900 text-xs font-bold py-1 px-3 rounded-full">
                   MEEST GEKOZEN
                 </div>
-                <h3 className="text-xl font-bold text-white">All-Inclusive Pakket</h3>
+                <h3 className="text-xl font-bold text-white">Premium Pakket</h3>
               </div>
               <div className="p-6">
                 <div className="text-center mb-6">
-                  <p className="text-4xl font-bold text-gray-900">€15,95</p>
+                  <p className="text-4xl font-bold text-gray-900">€16,-</p>
                   <p className="text-sm text-gray-500">p.m.</p>
                 </div>
 

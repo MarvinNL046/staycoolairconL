@@ -60,7 +60,7 @@ const AircoInstallatieKantoor: React.FC = () => {
     },
     {
       question: "Welk onderhoud heeft een kantoor airco nodig?",
-      answer: "Professioneel onderhoud jaarlijks aanbevolen, bij intensief gebruik ( meer dan 2000 uur/jaar) halfjaarlijks. Onderhoud omvat: reiniging filters en units, controle koudemiddel, elektrische verbindingen, condensafvoer, algemene werking. Eigen onderhoud: filters maandelijks reinigen (belangrijk bij kantoren met veel stof/papier). Wij bieden onderhoudscontracten vanaf €120/jaar inclusief jaarlijkse servicebeurt, prioriteit bij storingen, 10% korting op reparaties en vervangingsonderdelen."
+      answer: "Professioneel onderhoud jaarlijks aanbevolen, bij intensief gebruik ( meer dan 2000 uur/jaar) halfjaarlijks. Onderhoud omvat: reiniging filters en units, controle koudemiddel, elektrische verbindingen, condensafvoer, algemene werking. Eigen onderhoud: filters maandelijks reinigen (belangrijk bij kantoren met veel stof/papier). Wij bieden onderhoudscontracten vanaf €13/maand (€156/jaar) inclusief jaarlijkse servicebeurt, prioriteit bij storingen en geen voorrijkosten; het Premium pakket (€16/maand) heeft alle onderdelen inbegrepen."
     },
     {
       question: "Is een airco in kantoor verplicht volgens arbowetgeving?",
@@ -465,7 +465,7 @@ const AircoInstallatieKantoor: React.FC = () => {
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                        <span>10% korting op reparaties</span>
+                        <span>Geen voorrijkosten bij storing</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />

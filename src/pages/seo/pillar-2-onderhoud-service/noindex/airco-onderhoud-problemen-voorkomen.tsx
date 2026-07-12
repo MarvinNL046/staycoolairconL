@@ -143,13 +143,13 @@ const AircoProblemenVoorkomen = () => {
     },
     {
       scenario: 'Energie-efficiëntie',
-      kosten: '€179/jaar onderhoud',
+      kosten: '€189/jaar onderhoud',
       besparing: '€150-300/jaar energiebesparing',
       roi: '84-168%'
     },
     {
       scenario: 'Levensduur verlenging',
-      kosten: '€179/jaar onderhoud',
+      kosten: '€189/jaar onderhoud',
       besparing: '3-5 jaar extra levensduur (€1500-3000)',
       roi: '838-1677%'
     }

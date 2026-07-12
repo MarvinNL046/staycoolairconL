@@ -463,7 +463,7 @@ const AircoOnderhoudsSeizoen = () => {
                   <div className="pt-2">
                     <div className="flex justify-between items-center mb-1">
                       <span className="font-semibold text-gray-700">Losse beurt</span>
-                      <span className="text-xl font-bold text-gray-600">€179</span>
+                      <span className="text-xl font-bold text-gray-600">€189</span>
                     </div>
                     <span className="text-sm text-gray-500">eenmalig</span>
                   </div>

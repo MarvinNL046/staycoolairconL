@@ -111,7 +111,7 @@ const AircoInstallatieLimburgKostenPage = () => {
     {
       titel: 'Onderhoud kosten',
       beschrijving: 'Jaarlijks onderhoud voor optimale werking',
-      kosten: '€11/mnd of €179 losse beurt',
+      kosten: '€13/mnd of €189 losse beurt',
       vermijden: 'Sluit onderhoudscontract af voor beste prijs'
     }
   ];
@@ -673,7 +673,7 @@ const AircoInstallatieLimburgKostenPage = () => {
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">Sluit onderhoudscontract af</h3>
                   <p className="text-gray-600 text-sm">
-                    €11-€16/maand is goedkoper dan losse beurten (€179) en verlengt levensduur.
+                    €13-€16/maand is goedkoper dan losse beurten (€189) en verlengt levensduur.
                   </p>
                   <div className="mt-2 text-red-700 font-semibold text-sm">Besparing: €47 per jaar + langere levensduur</div>
                 </div>

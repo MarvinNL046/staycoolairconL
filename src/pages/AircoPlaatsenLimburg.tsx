@@ -101,7 +101,7 @@ const AircoPlaatsenLimburg: React.FC = () => {
     },
     {
       question: 'Hoe vaak moet de airco onderhoud krijgen?',
-      answer: 'Eén keer per jaar groot onderhoud is de norm — filter, drukcheck, lekcontrole, condensafvoer. Daarnaast adviseren we de filter zelf maandelijks even uit te kloppen of af te spoelen — dat voorkomt 70% van de servicebellen. Bij ons kost een losse onderhoudsbeurt vanaf €99, of je sluit een onderhoudscontract af voor €11/mnd (€132/jaar) met voorrang bij storing. Meer info op <a href="/airco-service">/airco-service</a>.',
+      answer: 'Eén keer per jaar groot onderhoud is de norm — filter, drukcheck, lekcontrole, condensafvoer. Daarnaast adviseren we de filter zelf maandelijks even uit te kloppen of af te spoelen — dat voorkomt 70% van de servicebellen. Bij ons kost een losse onderhoudsbeurt €189, of je sluit een onderhoudscontract af voor €13/mnd (€156/jaar) met voorrang bij storing en geen voorrijkosten. Meer info op <a href="/airco-service">/airco-service</a>.',
     },
     {
       question: 'Welke gemeenten in Limburg bedienen jullie?',
@@ -427,8 +427,8 @@ const AircoPlaatsenLimburg: React.FC = () => {
 
             <p>
               Een airco is een mechanisch apparaat met koudemiddel onder druk — die wil één keer per jaar gecheckt worden:
-              filter reinigen, druk meten, lekkage controleren, condensafvoer doorblazen. Dat is bij ons <strong>€99 per beurt</strong>{' '}
-              of <strong>€11/mnd</strong> in onderhoudscontract (€132/jaar) met voorrang bij storing en 10% korting op reparaties.
+              filter reinigen, druk meten, lekkage controleren, condensafvoer doorblazen. Dat is bij ons <strong>€189 per beurt</strong>{' '}
+              of <strong>€13/mnd</strong> in onderhoudscontract (€156/jaar) met voorrang bij storing en geen voorrijkosten.
             </p>
 
             <p>

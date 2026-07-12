@@ -21,7 +21,7 @@ const AircoService: React.FC = () => {
     {
       icon: <Calendar className="h-10 w-10 text-sky-500" />,
       titel: 'Jaarlijks onderhoud',
-      tekst: 'Preventief, eenmaal per jaar. Filter, drukcheck, lekcontrole, algehele inspectie. Vanaf €99 per beurt of €11/mnd in onderhoudscontract.',
+      tekst: 'Preventief, eenmaal per jaar. Filter, drukcheck, lekcontrole, algehele inspectie. €189 per beurt of vanaf €13/mnd in onderhoudscontract.',
       url: '/seo/pillar-2-onderhoud-service/jaarlijks-airco-onderhoud',
       cta: 'Bekijk jaarlijks onderhoud →',
     },
@@ -59,12 +59,12 @@ const AircoService: React.FC = () => {
   const prijsTabel = [
     {
       label: 'Onderhoudscontract single-unit',
-      prijs: 'vanaf €11/mnd',
-      details: 'Premium pakket: jaarlijks onderhoud + voorrang bij storing + 10% korting op reparaties. €132/jaar incl. BTW.',
+      prijs: 'vanaf €13/mnd',
+      details: 'Basis pakket: jaarlijks onderhoud + voorrang bij storing + geen voorrijkosten. €156/jaar incl. BTW; Premium (incl. onderdelen en vervangend toestel) €192/jaar.',
     },
     {
       label: 'Losse onderhoudsbeurt',
-      prijs: '€99 – €150',
+      prijs: '€189',
       details: 'Filter, drukcheck, lekcontrole, algehele inspectie. Eenmalig of zonder contract.',
     },
     {
@@ -124,11 +124,11 @@ const AircoService: React.FC = () => {
   const faqItems = [
     {
       question: 'Hoe vaak moet airco onderhoud gedaan worden?',
-      answer: 'Eén keer per jaar minimaal — bij voorkeur in het voorjaar voor het hoogseizoen. Bij intensief gebruik (zakelijk, 8+ uur per dag) of voor multi-split-systemen adviseren we twee beurten per jaar. In ons onderhoudscontract van €11/mnd zit één jaarlijkse beurt standaard inbegrepen — meer afspraken op aanvraag.',
+      answer: 'Eén keer per jaar minimaal — bij voorkeur in het voorjaar voor het hoogseizoen. Bij intensief gebruik (zakelijk, 8+ uur per dag) of voor multi-split-systemen adviseren we twee beurten per jaar. In ons onderhoudscontract van €13/mnd zit één jaarlijkse beurt standaard inbegrepen — meer afspraken op aanvraag.',
     },
     {
       question: 'Wat zit er in een onderhoudscontract van StayCool?',
-      answer: 'Ons Premium pakket vanaf €11/mnd bevat: jaarlijks preventief onderhoud (filter, drukcheck, lekcontrole, inspectie van alle componenten), voorrang bij spoed-storingen tijdens het seizoen, en 10% korting op alle reparaties die buiten het preventief onderhoud vallen. Voor 2 of meer binnenunits hebben we een tweede pakket — zie de details op de pagina airco onderhoud.',
+      answer: 'Ons Basis pakket kost €13/mnd per complete airco-unit en bevat: jaarlijks preventief onderhoud (filter, drukcheck, lekcontrole, inspectie van alle componenten), voorrang bij spoed-storingen en geen voorrijkosten. Het Premium pakket (€16/mnd) voegt daar alle onderdelen én een vervangend toestel bij defect aan toe. Extra binnendelen: €8/mnd (Basis) of €11/mnd (Premium).',
     },
     {
       question: 'Wat kost een airco-storing oplossen?',
@@ -136,7 +136,7 @@ const AircoService: React.FC = () => {
     },
     {
       question: 'Kan ik losse beurt boeken zonder contract?',
-      answer: 'Zeker. Een losse onderhoudsbeurt kost €99-€150 afhankelijk van type systeem. Praktisch verschil met een contract: bij een contract betaalt u €132/jaar (€11×12) en krijgt u priority bij storingen. Bij losse beurten is de prijs vergelijkbaar maar zonder voorrang — in piekweken (juli-augustus) kan u 2-3 weken moeten wachten.',
+      answer: 'Zeker. Een losse onderhoudsbeurt kost €189. Praktisch verschil met een contract: bij een contract betaalt u €156/jaar (€13×12) en krijgt u voorrang bij storingen zonder voorrijkosten. Bij losse beurten betaalt u meer én zonder voorrang — in piekweken (juli-augustus) kan u 2-3 weken moeten wachten.',
     },
     {
       question: 'Hoe snel kunnen jullie ter plaatse zijn bij storing?',
@@ -172,7 +172,7 @@ const AircoService: React.FC = () => {
         '@id': `${CANONICAL_URL}#service`,
         serviceType: 'Airco service en onderhoud',
         name: 'Airco service Limburg — onderhoud, storing, reparatie, bijvullen',
-        description: 'Complete airco service in Limburg: jaarlijks onderhoud vanaf €11/mnd, storing oplossen, reparatie, koudemiddel bijvullen. F-gassen + STEK gecertificeerd, 1 jaar garantie op werk.',
+        description: 'Complete airco service in Limburg: jaarlijks onderhoud vanaf €13/mnd, storing oplossen, reparatie, koudemiddel bijvullen. F-gassen + STEK gecertificeerd, 1 jaar garantie op werk.',
         url: CANONICAL_URL,
         provider: {
           '@type': 'LocalBusiness',
@@ -208,7 +208,7 @@ const AircoService: React.FC = () => {
           lowPrice: '11',
           highPrice: '650',
           offerCount: '7',
-          description: 'Onderhoudscontract vanaf €11/mnd. Losse onderhoudsbeurt €99-€150. Storingsbezoek €89 voorrijden. Reparaties €95-€450. Lekdetectie + bijvullen €149-€650.',
+          description: 'Onderhoudscontract vanaf €13/mnd. Losse onderhoudsbeurt €189. Storingsbezoek €89 voorrijden. Reparaties €95-€450. Lekdetectie + bijvullen €149-€650.',
         },
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
@@ -234,8 +234,8 @@ const AircoService: React.FC = () => {
   return (
     <>
       <MetaTags
-        title="Airco Service Limburg | Onderhoud vanaf €11/mnd | StayCool"
-        description="Airco service in Limburg: onderhoudscontract vanaf €11/mnd, storing oplossen, reparatie, koudemiddel bijvullen. F-gas + STEK gecertificeerd. 1 jaar garantie. Bel 046 202 1430"
+        title="Airco Service Limburg | Onderhoud vanaf €13/mnd | StayCool"
+        description="Airco service in Limburg: onderhoudscontract vanaf €13/mnd, storing oplossen, reparatie, koudemiddel bijvullen. F-gas + STEK gecertificeerd. 1 jaar garantie. Bel 046 202 1430"
         canonicalUrl={CANONICAL_URL}
         type="service"
         serviceType="Airco service"
@@ -254,7 +254,7 @@ const AircoService: React.FC = () => {
             Airco service in Limburg — alles op één plek
           </h1>
           <p className="text-xl md:text-2xl text-sky-50 mb-8 max-w-3xl">
-            Onderhoud vanaf €11/mnd, storing oplossen binnen 1-3 werkdagen, reparatie, lekdetectie en bijvullen.
+            Onderhoud vanaf €13/mnd, storing oplossen binnen 1-3 werkdagen, reparatie, lekdetectie en bijvullen.
             F-gassen + STEK gecertificeerd — heel Limburg, vanaf Nieuwstadt.
           </p>
 
@@ -373,7 +373,7 @@ const AircoService: React.FC = () => {
             </div>
 
             <p>
-              Ter vergelijking: Werkspot en Homedeal melden marktprijzen van €75-€150 per losse onderhoudsbeurt en €110-€190 per jaar voor een onderhoudscontract. Onze €11/mnd (€132/jaar) zit precies in de markt — niet de allergoedkoopste, niet duur, maar wel met voorrang en 10% korting op reparaties die andere partijen niet bieden.
+              Ter vergelijking: Werkspot en Homedeal melden marktprijzen van €75-€150 per losse onderhoudsbeurt en €110-€190 per jaar voor een onderhoudscontract. Onze €13/mnd (€156/jaar) zit precies in de markt — niet de allergoedkoopste, niet duur, maar wel met voorrang bij storingen en zonder voorrijkosten, wat andere partijen vaak niet bieden.
             </p>
 
             <h2 id="wanneer-bellen" className="text-3xl font-bold text-gray-900 mt-12 mb-4">Wanneer belt u ons (en wanneer kunt u zelf wat)</h2>
@@ -418,7 +418,7 @@ const AircoService: React.FC = () => {
                   <li>• U vindt vaste maandkosten prettig boven onverwachte rekeningen</li>
                 </ul>
                 <Link to="/airco-onderhoud" className="inline-block mt-4 text-sky-700 font-semibold hover:text-sky-900">
-                  → Bekijk de pakketten vanaf €11/mnd
+                  → Bekijk de pakketten vanaf €13/mnd
                 </Link>
               </div>
 
@@ -434,13 +434,13 @@ const AircoService: React.FC = () => {
                   <li>• Niet bezwaarlijk losse facturen te krijgen</li>
                 </ul>
                 <p className="text-sm text-gray-700 mt-4">
-                  Losse beurt: €99-€150 per jaar. Plan in via 046 202 1430.
+                  Losse beurt: €189. Plan in via 046 202 1430.
                 </p>
               </div>
             </div>
 
             <p>
-              Praktisch verschil over 5 jaar: contract €660 totaal, losse beurten €595-€750. Comparable kostprijs — het verschil zit in de voorrang bij storingen en de 10% korting op reparaties. Bij één enkele reparatie van €350 hebt u die korting al terugverdiend.
+              Praktisch verschil over 5 jaar: contract €780 totaal, losse beurten €945. Het contract is goedkoper én u heeft voorrang bij storingen zonder voorrijkosten — bij één storing per vijf jaar loopt het verschil verder op.
             </p>
 
             <h2 id="onderhoudsbeurt-stappen" className="text-3xl font-bold text-gray-900 mt-12 mb-4">
@@ -615,7 +615,7 @@ const AircoService: React.FC = () => {
               to="/airco-onderhoud"
               className="inline-flex items-center justify-center px-8 py-4 bg-orange-800 text-white font-bold rounded-lg hover:bg-orange-900 transition-colors text-lg"
             >
-              Contract vanaf €11/mnd →
+              Contract vanaf €13/mnd →
             </Link>
           </div>
         </div>

@@ -58,7 +58,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
       name: 'Onderhoudscontract',
       icon: Settings,
       description: 'Zorgeloos en voordeliger dan losse beurten',
-      price: 'vanaf €11/maand (€132/jaar)',
+      price: 'vanaf €13/maand (€156/jaar)',
       features: [
         'Jaarlijkse onderhoudsbeurt',
         'Geen voorrijkosten bij storing',
@@ -132,13 +132,13 @@ const AircoServiceLimburgLanding: React.FC = () => {
   const pricingTable = [
     {
       service: 'Onderhoudsbeurt (eenmalig)',
-      residential: '€179',
+      residential: '€189',
       commercial: '€199',
       includes: 'Inspectie, reiniging, rapportage'
     },
     {
       service: 'Onderhoudscontract Basis',
-      residential: '€11/mnd (€132/jaar)',
+      residential: '€13/mnd (€156/jaar)',
       commercial: '€149/jaar',
       includes: 'Jaarlijks onderhoud + voorrang + geen voorrijkosten'
     },
@@ -192,7 +192,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
   const faqItems = [
     {
       question: 'Wat kost airco service in Limburg?',
-      answer: 'Een eenmalige onderhoudsbeurt kost €179. Voordeliger zijn onze onderhoudscontracten: Basis pakket €11/maand (€132/jaar) of Premium pakket €16/maand (€192/jaar). Met een contract bespaart u €47 op onderhoud en heeft u geen voorrijkosten bij storing. Storing verhelpen zonder contract: €45 voorrijkosten + arbeid.'
+      answer: 'Een eenmalige onderhoudsbeurt kost €189. Voordeliger zijn onze onderhoudscontracten: Basis pakket €13/maand (€156/jaar) of Premium pakket €16/maand (€192/jaar). Met een contract bespaart u €33 op onderhoud en heeft u geen voorrijkosten bij storing. Storing verhelpen zonder contract: €45 voorrijkosten + arbeid.'
     },
     {
       question: 'Hoe snel kunnen jullie ter plaatse zijn?',
@@ -278,7 +278,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
 
   const schemaData = {
     name: "StayCool Airco Service Limburg",
-    description: "Airco service in heel Limburg met snelle responstijd. Onderhoudscontract vanaf €11/maand, binnen 24u ter plaatse. Alle merken.",
+    description: "Airco service in heel Limburg met snelle responstijd. Onderhoudscontract vanaf €13/maand, binnen 24u ter plaatse. Alle merken.",
     url: "https://staycoolairco.nl/airco-service-limburg",
     telephone: "046-202-1430",
     address: {
@@ -361,7 +361,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
                   <div className="text-sm opacity-90">Response tijd</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold">€11/mnd</div>
+                  <div className="text-2xl font-bold">€13/mnd</div>
                   <div className="text-sm opacity-90">Contract</div>
                 </div>
               </div>
@@ -500,7 +500,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
             <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-green-500">
               <Calendar className="w-10 h-10 text-green-500 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Onderhoudscontract</h3>
-              <p className="text-gray-600 mb-4">Zorgeloos genieten vanaf €11/maand</p>
+              <p className="text-gray-600 mb-4">Zorgeloos genieten vanaf €13/maand</p>
               <a href="https://aanmelden.staycoolairco.nl/" target="_blank" rel="noopener noreferrer" className="text-green-500 font-semibold flex items-center gap-2 hover:text-green-600">
                 Direct Aanmelden <ArrowRight className="w-4 h-4" />
               </a>
@@ -757,7 +757,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
             <div className="bg-green-50 rounded-xl p-6 text-center">
               <Settings className="w-12 h-12 text-green-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-3">Onderhoudscontract?</h3>
-              <p className="text-gray-600 mb-4">Vanaf €11/mnd all-in</p>
+              <p className="text-gray-600 mb-4">Vanaf €13/mnd all-in</p>
               <a href="https://aanmelden.staycoolairco.nl/" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 transition inline-flex items-center gap-2">
                 <FileText className="w-5 h-5" />
                 Meld Je Aan

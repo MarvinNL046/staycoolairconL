@@ -53,7 +53,7 @@ const JaarlijksAircoOnderhoud: React.FC = () => {
   const contractVoordelen = [
     "Jaarlijkse onderhoudsbeurt op afgesproken tijdstip",
     "Voorrang bij storingen en spoedmeldingen",
-    "10% korting op reparaties en onderdelen",
+    "Geen voorrijkosten bij storing",
     "Gratis adviesgesprekken over energie-optimalisatie",
     "Garantieverlenging op bepaalde onderdelen",
     "Vaste contactpersoon die uw systeem kent",
@@ -68,7 +68,7 @@ const JaarlijksAircoOnderhoud: React.FC = () => {
     },
     {
       question: "Wat kost een jaarlijks onderhoudscontract?",
-      answer: "Wij bieden twee onderhoudscontracten: Standaard €11/maand (€132/jaar) en Premium €16/maand (€192/jaar). Beide inclusief jaarlijkse onderhoudsbeurt, voorrang bij storingen en geen voorrijkosten. Premium biedt ook 15% korting op reparaties en een vervangend toestel bij langdurige reparatie. Een losse onderhoudsbeurt zonder contract kost €179."
+      answer: "Wij bieden twee onderhoudscontracten: Basis €13/maand (€156/jaar) en Premium €16/maand (€192/jaar). Beide inclusief jaarlijkse onderhoudsbeurt, voorrang bij storingen en geen voorrijkosten. Premium biedt ook alle onderdelen inbegrepen en een vervangend toestel bij defect. Een losse onderhoudsbeurt zonder contract kost €189."
     },
     {
       question: "Wat houdt een onderhoudsbeurt precies in?",
@@ -80,7 +80,7 @@ const JaarlijksAircoOnderhoud: React.FC = () => {
     },
     {
       question: "Wat gebeurt er als mijn airco tijdens het contract stuk gaat?",
-      answer: "Met een onderhoudscontract krijgt u voorrang bij storingen en spoedmeldingen. In veel gevallen kunnen we binnen 24-48 uur ter plaatse zijn. Onderdelen en arbeidsloon voor reparaties zijn niet standaard inbegrepen maar contracthouders ontvangen 10% korting. Bij sommige contractvormen is een beperkte reparatiedekking mogelijk. We bespreken tijdens onderhoud preventief mogelijke risico's."
+      answer: "Met een onderhoudscontract krijgt u voorrang bij storingen en spoedmeldingen. In veel gevallen kunnen we binnen 24-48 uur ter plaatse zijn. Onderdelen en arbeidsloon voor reparaties zijn niet standaard inbegrepen maar Premium-contracthouders hebben onderdelen inbegrepen. Bij sommige contractvormen is een beperkte reparatiedekking mogelijk. We bespreken tijdens onderhoud preventief mogelijke risico's."
     },
     {
       question: "Zijn er seizoensgebonden voordelen voor onderhoud?",
@@ -395,7 +395,7 @@ const JaarlijksAircoOnderhoud: React.FC = () => {
                     </li>
                     <li>
                       <Link to="/airco-onderhoud" className="text-sky-600 hover:text-sky-700">
-                        → Onderhoudscontract vanaf €11/mnd
+                        → Onderhoudscontract vanaf €13/mnd
                       </Link>
                     </li>
                     <li>

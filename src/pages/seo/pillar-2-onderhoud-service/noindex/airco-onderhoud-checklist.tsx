@@ -229,7 +229,7 @@ const AircoOnderhoudsChecklist = () => {
                 <div className="space-y-3">
                   <div className="flex justify-between items-center pb-3 border-b border-gray-200">
                     <span className="text-gray-600">Losse onderhoudsbeurt</span>
-                    <span className="font-bold text-gray-900">€179</span>
+                    <span className="font-bold text-gray-900">€189</span>
                   </div>
                   <div className="flex justify-between items-center pb-3 border-b border-gray-200">
                     <span className="text-gray-600">Contract 1 unit</span>
