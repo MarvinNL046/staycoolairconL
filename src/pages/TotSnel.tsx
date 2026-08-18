@@ -62,7 +62,12 @@ const TotSnel: React.FC = () => {
                     </div>
                   </div>
                   <p className="ml-3 text-gray-700">
-                    Een van onze specialisten neemt contact met u op om uw wensen te bespreken
+                    Een van onze specialisten neemt contact met u op om uw wensen te
+                    bespreken — meestal telefonisch vanaf{' '}
+                    <a href="tel:0462021430" className="text-blue-600 hover:text-blue-700 font-medium">
+                      046 202 1430
+                    </a>
+                    . Sla dit nummer gerust op, dan weet u dat wij het zijn.
                   </p>
                 </div>
                 <div className="flex items-start">
