@@ -291,6 +291,15 @@ Create `/app/sitemap.ts`:
 ```typescript
 import { MetadataRoute } from 'next'
 
+// lastmod must be the date the CONTENT changed, never `new Date()`.
+// `new Date()` is the build time, so every deploy claims the whole site was
+// rewritten. Google stops trusting a lastmod that behaves that way: on one
+// site in this fleet Search Console stopped refetching the sitemap for four
+// months, and a newly published page stayed "unknown to Google" despite being
+// linked, canonical and listed in the sitemap.
+//
+// Publish a real date per page, or publish none. A missing lastmod is honest —
+// Google just reads no signal — a wrong one costs you the whole channel.
 export default function sitemap(): MetadataRoute.Sitemap {
   const items = getAllItems();
   const categories = getAllCategories();
@@ -298,21 +307,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const itemPages = items.map(item => ({
     url: `https://yourdomain.com/${item.id}`,
-    lastModified: new Date(),
+    // The item's own updated/published date. Omit the field if it has none.
     changeFrequency: 'weekly',
     priority: 0.8,
   }));
 
   const categoryPages = categories.map(cat => ({
     url: `https://yourdomain.com/category/${cat}`,
-    lastModified: new Date(),
+    // Newest item in the category; omit when the category has no dated items.
     changeFrequency: 'weekly',
     priority: 0.7,
   }));
 
   const tagPages = tags.map(tag => ({
     url: `https://yourdomain.com/tag/${tag}`,
-    lastModified: new Date(),
+    // Newest item carrying the tag; omit when none is dated.
     changeFrequency: 'monthly',
     priority: 0.6,
   }));
@@ -320,7 +329,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: 'https://yourdomain.com',
-      lastModified: new Date(),
+      // Newest date anywhere on the site.
       changeFrequency: 'daily',
       priority: 1,
     },
