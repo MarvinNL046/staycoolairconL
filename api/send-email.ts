@@ -1,14 +1,11 @@
 
 import { Resend } from 'resend';
 
-// Initialize Resend with the API key from environment variables
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export const config = {
     runtime: 'nodejs',
 };
 
-export default async function handler(req: Request) {
+async function handler(req: Request) {
     // CORS Handling
     if (req.method === 'OPTIONS') {
         return new Response('OK', {
@@ -99,6 +96,8 @@ export default async function handler(req: Request) {
     </html>
     `;
 
+        // Initialize only after method and payload validation.
+        const resend = new Resend(process.env.RESEND_API_KEY);
         // Send email via Resend
         const data = await resend.emails.send({
             from: 'StayCool Website <onboarding@resend.dev>', // Should be updated to a verified domain later
@@ -128,3 +127,6 @@ export default async function handler(req: Request) {
         });
     }
 }
+
+// Vercel Node.js distinguishes Web Request/Response handlers from Node (req, res).
+export default { fetch: handler };
