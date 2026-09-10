@@ -643,7 +643,7 @@ const AircoBijvullen: React.FC = () => {
                 </p>
 
                 <p>
-                  Onze ervaring: in negen van de tien gevallen waarbij iemand belt over een mobiele airco die niet meer koelt, is reparatie + bijvulling rond de €200-€300 geen rendabele keuze. Een nieuwe mobiele unit kost €400-€700. Een vaste single-split-installatie vanaf €1.600 all-in is binnen 3-4 jaar terugverdiend door lager stroomverbruik én de mogelijkheid om in tussenseizoenen mee te verwarmen. Zie ook onze <Link to="/seo/pillar-2-onderhoud-service/mobiele-vs-split-airco" className="text-sky-600 underline">vergelijking mobiele vs vaste airco</Link>.
+                  Vergelijk bij een defecte mobiele airco de reparatiekosten met vervanging. Een vaste split-airco kan ook verwarmen, maar de installatiekosten en het stroomverbruik hangen af van het toestel, uw woning en het gebruik. Bekijk onze <Link to="/kennisbank/mobiele-vs-split-airco" className="text-sky-600 underline">vergelijking mobiele vs vaste airco</Link> om de verschillen af te wegen.
                 </p>
 
                 <h3 id="zakelijk-vrf" className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
