@@ -14,7 +14,7 @@ export const tosotData: Brand = {
     {
       name: 'Cosmo',
       slug: 'cosmo',
-      description: 'De TOSOT COSMO 3,2 kW R32 Inverter Airco Set by GREE is een krachtige en efficiënte airconditioningoplossing, ontworpen om betrouwbare koeling en verwarming te bieden met een capaciteit van 3,2 kW. Deze set maakt gebruik van het moderne R32 koelmiddel en Inverter-technologie, wat zorgt voor uitstekende energieprestaties en lage operationele kosten. Met een energielabel van A++ biedt dit systeem niet alleen uitstekende prestaties, maar ook een geluidsniveau van slechts 24 dB(A) voor de binnenunit.',
+      description: 'De Tosot Cosmo is een R32 single-split aircoset voor koelen en verwarmen. Bekijk hieronder de uitvoeringen van 2,5, 3,5, 5,0 en 7,0 kW met WiFi. Samen bepalen we welk vermogen past bij uw ruimte.',
       imageUrl: '/images/products/787-cosmo-indoor-vooraanzicht.webp',
       images: [
         {
@@ -32,7 +32,7 @@ export const tosotData: Brand = {
       ],
       price: 'Vanaf €1.395,- inclusief standaard installatie',
       energyLabel: 'A++',
-      capacity: '2,5 kW - 6,1 kW',
+      capacity: '2,5 / 3,5 / 5,0 / 7,0 kW',
       features: [
         'Laag geluidsniveau (slechts 24 dB(A) binnenunit)',
         'Plasma ionisatie filter voor schonere lucht',
@@ -44,9 +44,9 @@ export const tosotData: Brand = {
         'Auto-herstart functie na stroomuitval'
       ],
       specifications: [
-        { label: 'Beschikbare capaciteiten', value: '2,5 kW, 3,2 kW, 4,6 kW, 6,1 kW' },
-        { label: 'Koelcapaciteit', value: '3,2 kW' },
-        { label: 'Verwarmingscapaciteit', value: '3,2 kW' },
+        { label: 'Beschikbare capaciteiten', value: '2,5 / 3,5 / 5,0 / 7,0 kW' },
+        { label: 'Koelcapaciteit', value: 'Afhankelijk van de gekozen uitvoering' },
+        { label: 'Verwarmingscapaciteit', value: 'Afhankelijk van de gekozen uitvoering' },
         { label: 'SEER (koeling)', value: '6,1' },
         { label: 'SCOP (verwarming)', value: '4,0' },
         { label: 'Geluidsdrukniveau binnenunit', value: '24 dB(A)' },
@@ -61,7 +61,7 @@ export const tosotData: Brand = {
     {
       name: 'Pular',
       slug: 'pular',
-      description: 'De Tosot PULAR by GREE single split airco R32 2,2 kW set is een efficiënte en betrouwbare oplossing voor klimaatregeling, ontworpen voor zowel zakelijke als particuliere toepassingen. Met een koelcapaciteit van 2,2 kW en het milieuvriendelijke R32 koelmiddel, biedt deze airco uitstekende prestaties met een lage impact op het milieu. Deze airco combineert een laag energieverbruik met krachtige koeling en verwarming, wat ideaal is voor kleinere ruimtes zoals slaapkamers, kantoren of vergaderruimtes.',
+      description: "De Tosot PULAR by GREE single split airco R32 2,2 kW set is een efficiënte en betrouwbare oplossing voor klimaatregeling, ontworpen voor zowel zakelijke als particuliere toepassingen. Met een koelcapaciteit van 2,2 kW en het R32-koudemiddel, biedt deze airco uitstekende prestaties met een lage impact op het milieu. Deze airco combineert een laag energieverbruik met krachtige koeling en verwarming, wat ideaal is voor kleinere ruimtes zoals slaapkamers, kantoren of vergaderruimtes.",
       imageUrl: '/images/products/568-Pular-indoor-vooraanzicht.webp',
       images: [
         {
@@ -81,7 +81,7 @@ export const tosotData: Brand = {
         'Koelen en verwarmen met invertertechnologie',
         '4-way Swing en plasmafilter voor optimale luchtverdeling',
         'Energieklasse A++ voor lage energiekosten',
-        'Milieuvriendelijk R32 koelmiddel met lage impact op broeikaseffect',
+        "R32-koudemiddel met lage impact op broeikaseffect",
         'Smart control via Google Assistant en Amazon Alexa',
         'Ingebouwde wifi-besturing',
         'Uitgebreide timerfuncties en auto-reiniging'
@@ -225,7 +225,7 @@ export const tosotData: Brand = {
         'Standaard WiFi-besturing voor bediening op afstand',
         'Invertertechnologie voor nauwkeurige temperatuurregeling',
         'Compact en stijlvol ontwerp, ideaal voor kleine ruimtes',
-        'Milieuvriendelijk R32 koelmiddel',
+        "R32-koudemiddel",
         'Timer functie voor geprogrammeerd aan/uit schakelen',
         'Smart Control via Google Assistant en Amazon Alexa'
       ],

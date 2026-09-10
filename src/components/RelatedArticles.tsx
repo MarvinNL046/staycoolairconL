@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, FileText, HelpCircle, Calculator, Wrench, MapPin } from 'lucide-react';
+import { ArrowRight,FileText,HelpCircle,Calculator,Wrench,MapPin } from 'lucide-react';
 
 interface RelatedArticle {
   title: string;

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Calculator, Home, Sun, Users, Thermometer, Wind, AlertCircle, Info, ChevronDown, ChevronUp, Settings, Check, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { Home,Info,Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import MetaTags from '../components/MetaTags';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -15,7 +15,7 @@ export default function CapacityCalculator() {
   const [isolatie, setIsolatie] = useState<'slecht' | 'gemiddeld' | 'goed'>('gemiddeld');
 
   const kamerGrootte = parseFloat(kamerLengte || '0') * parseFloat(kamerBreedte || '0');
-  const kamerVolume = kamerGrootte * parseFloat(kamerHoogte || '2.6');
+
 
   let basisCapaciteit = kamerGrootte * 100;
   const zonlichtFactor = { weinig: 0.9, gemiddeld: 1.0, veel: 1.2 };
@@ -151,6 +151,7 @@ export default function CapacityCalculator() {
 
           </div>
         </div>
+        <div className="mx-auto max-w-5xl px-4 py-8"><Link to="/airco-kopen-limburg" className="text-blue-800 underline">Vergelijk aircosets en installatieprijzen na uw vermogensberekening</Link><p className="mt-2 text-gray-600">De berekening is een indicatie. Laat het benodigde vermogen voor uw woning bevestigen voordat u kiest.</p></div>
       </section>
     </div>
   );

@@ -1,8 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import MetaTags from '../../components/MetaTags';
 import Breadcrumbs from '../../components/SEO/Breadcrumbs';
-import { Check, X, ArrowRight, Info, Phone, Download, Calendar, Home } from 'lucide-react';
+import { Check,X,ArrowRight,Phone,Download,Calendar,Home } from 'lucide-react';
 
 export default function SplitVsMonoblock() {
   const schemaData = {
@@ -15,7 +14,7 @@ export default function SplitVsMonoblock() {
       "name": "StayCool Airco"
     },
     "datePublished": "2024-01-15",
-    "dateModified": new Date().toISOString()
+
   };
 
   return (
@@ -32,7 +31,7 @@ export default function SplitVsMonoblock() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
       />
 
-      <Breadcrumbs 
+      <Breadcrumbs
         items={[
           { name: "Vergelijkingen", path: "/vergelijkingen" },
           { name: "Split vs Monoblock", path: "/vergelijkingen/split-vs-monoblock" }
@@ -47,7 +46,7 @@ export default function SplitVsMonoblock() {
               Split vs Monoblock Airco Systemen
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Een complete vergelijking tussen split units en monoblock systemen. 
+              Een complete vergelijking tussen split units en monoblock systemen.
               Ontdek welk type airconditioning het beste past bij uw situatie.
             </p>
           </div>
@@ -67,7 +66,7 @@ export default function SplitVsMonoblock() {
                     </p>
                   </div>
                 </div>
-                
+
                 <h3 className="font-bold text-lg mb-3 text-green-600">Voordelen</h3>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
@@ -91,7 +90,7 @@ export default function SplitVsMonoblock() {
                     <span>Multi-split mogelijkheden</span>
                   </li>
                 </ul>
-                
+
                 <h3 className="font-bold text-lg mb-3 text-red-600">Nadelen</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start">
@@ -127,7 +126,7 @@ export default function SplitVsMonoblock() {
                     </p>
                   </div>
                 </div>
-                
+
                 <h3 className="font-bold text-lg mb-3 text-green-600">Voordelen</h3>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
@@ -151,7 +150,7 @@ export default function SplitVsMonoblock() {
                     <span>Direct gebruiksklaar</span>
                   </li>
                 </ul>
-                
+
                 <h3 className="font-bold text-lg mb-3 text-red-600">Nadelen</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start">
@@ -265,7 +264,7 @@ export default function SplitVsMonoblock() {
                 </li>
               </ul>
             </div>
-            
+
             <div className="bg-green-50 rounded-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Kies een Monoblock als...
@@ -302,18 +301,18 @@ export default function SplitVsMonoblock() {
                 Bereken Uw Besparing
               </h3>
               <p className="text-gray-700 max-w-2xl mx-auto">
-                Ontdek hoeveel u kunt besparen met een split systeem versus een monoblock. 
+                Ontdek hoeveel u kunt besparen met een split systeem versus een monoblock.
                 Onze calculator houdt rekening met aanschaf, installatie en energieverbruik.
               </p>
             </div>
-            
+
             <div className="bg-blue-50 rounded-lg p-6 mb-6">
               <div className="text-center">
                 <p className="text-lg font-semibold text-gray-900 mb-2">
                   Split systemen zijn op lange termijn veel voordeliger!
                 </p>
                 <p className="text-gray-700 mb-4">
-                  Door het lagere energieverbruik verdient een split systeem zich snel terug. 
+                  Door het lagere energieverbruik verdient een split systeem zich snel terug.
                   Vraag een persoonlijke berekening aan om te zien hoeveel u kunt besparen.
                 </p>
                 <div className="grid md:grid-cols-3 gap-4 text-center">
@@ -332,7 +331,7 @@ export default function SplitVsMonoblock() {
                 </div>
               </div>
             </div>
-            
+
             <div className="text-center">
               <Link
                 to="/contact?request=kostencalculatie"
@@ -352,7 +351,7 @@ export default function SplitVsMonoblock() {
                   Twijfelt u nog? Vraag gratis advies!
                 </h3>
                 <p className="text-gray-700 mb-6">
-                  Onze specialisten helpen u graag bij het maken van de juiste keuze. 
+                  Onze specialisten helpen u graag bij het maken van de juiste keuze.
                   We kijken naar uw specifieke situatie, wensen en budget.
                 </p>
                 <ul className="space-y-2 text-gray-700">
@@ -395,7 +394,7 @@ export default function SplitVsMonoblock() {
               Download Onze Gratis Keuzehulp
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Een uitgebreide gids met alle informatie over split en monoblock systemen, 
+              Een uitgebreide gids met alle informatie over split en monoblock systemen,
               inclusief checklist voor uw situatie.
             </p>
             <Link
@@ -415,7 +414,7 @@ export default function SplitVsMonoblock() {
                 Gratis Thuisadvies voor de Juiste Keuze
               </h3>
               <p className="text-green-100 mb-6 max-w-2xl mx-auto">
-                Twijfelt u tussen een split of monoblock systeem? Onze expert komt graag bij u thuis 
+                Twijfelt u tussen een split of monoblock systeem? Onze expert komt graag bij u thuis
                 om uw situatie te bekijken en het beste advies te geven.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

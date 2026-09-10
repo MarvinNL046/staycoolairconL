@@ -1,7 +1,6 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, CheckCircle, XCircle, ArrowRight, ThermometerSun } from 'lucide-react';
+import { ArrowLeft,CheckCircle,XCircle,ArrowRight,ThermometerSun } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function SplitVsMono() {
@@ -73,6 +72,7 @@ export default function SplitVsMono() {
           name="keywords" 
           content="split unit airco, mono block airco, mobiele airco, vaste airco, airco vergelijking, airco voor- en nadelen"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/split-vs-mono-systemen" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">

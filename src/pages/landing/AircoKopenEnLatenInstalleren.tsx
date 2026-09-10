@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ShoppingCart, Wrench, Calculator, CheckCircle, ArrowRight, Star, Shield, Zap, ThermometerSun, Wind, Phone, ChevronDown } from 'lucide-react';
+import { ShoppingCart,Wrench,Calculator,CheckCircle,ArrowRight,Star,Shield,Zap,ThermometerSun,Wind,Phone,ChevronDown } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import FAQSchema from '../../components/SEO/FAQSchema';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -10,7 +10,7 @@ import { m } from 'framer-motion';
 const faqItems = [
   {
     question: 'Wat kost een airco kopen en laten installeren?',
-    answer: 'Een complete split airco inclusief installatie kost tussen €1.600 en €3.250 voor een enkele ruimte. Een multi-split systeem voor meerdere kamers kost €3.000 tot €5.550. Deze prijzen zijn inclusief apparatuur, standaard leidingwerk (tot 3 meter), montage, vacumeren, inbedrijfstelling en 5 jaar garantie.',
+    answer: "Een complete split airco inclusief installatie kost tussen €1.600 en €3.250 voor een enkele ruimte. Een multi-split systeem voor meerdere kamers kost €3.000 tot €5.550. Deze prijzen zijn inclusief apparatuur, standaard leidingwerk (tot 3 meter), montage, vacumeren, inbedrijfstelling en garantie volgens offerte.",
   },
   {
     question: 'Kan ik zelf een airco kopen en apart laten installeren?',
@@ -34,7 +34,7 @@ const faqItems = [
   },
   {
     question: 'Welk merk airco heeft de beste prijs-kwaliteit verhouding?',
-    answer: 'Tosot (onderdeel van Gree, \'s werelds grootste aircofabrikant) biedt de beste prijs-kwaliteitverhouding. Vanaf €1.600 inclusief installatie krijgt u een energiezuinig systeem met wifi-bediening en 5 jaar garantie. Voor wie het beste van het beste wil, raden wij Daikin of Mitsubishi Heavy aan — premium merken met SCOP-waarden tot 5,15.',
+    answer: "Tosot (onderdeel van Gree, 's werelds grootste aircofabrikant) biedt de beste prijs-kwaliteitverhouding. Vanaf €1.600 inclusief installatie krijgt u een energiezuinig systeem met wifi-bediening en garantie volgens offerte. Voor wie het beste van het beste wil, raden wij Daikin of Mitsubishi Heavy aan — premium merken met SCOP-waarden tot 5,15.",
   },
   {
     question: 'Heb ik een vergunning nodig voor een airco?',
@@ -159,7 +159,7 @@ export default function AircoKopenEnLatenInstalleren() {
       <main>
         {/* Hero Section */}
         <section className="pt-32 pb-16 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/images/pattern-grid.svg')] opacity-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-transparent opacity-10" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <Breadcrumbs items={breadcrumbItems} />
             <m.div
@@ -181,11 +181,13 @@ export default function AircoKopenEnLatenInstalleren() {
                 </span>
                 <span className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-5 py-2 text-lg font-semibold">
                   <Shield className="w-5 h-5 mr-2" />
-                  5 jaar garantie
+
+                  garantie volgens offerte
                 </span>
                 <span className="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-5 py-2 text-lg font-semibold">
                   <Star className="w-5 h-5 mr-2" />
-                  500+ installaties
+
+                  ervaring met installaties
                 </span>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -271,8 +273,9 @@ export default function AircoKopenEnLatenInstalleren() {
                 Vergelijk Typen Airco met Prijzen
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Alle prijzen zijn inclusief apparatuur, standaard installatie en 5 jaar garantie.
-                Op basis van onze ervaring met meer dan 500 installaties in Limburg.
+
+                Alle prijzen zijn inclusief apparatuur, standaard installatie en garantie volgens offerte.
+                Op basis van onze ervaring met ervaring in energieopslag in Limburg.
               </p>
             </m.div>
 
@@ -395,7 +398,8 @@ export default function AircoKopenEnLatenInstalleren() {
                   Waar Moet U Op Letten bij het Kopen van een Airco?
                 </h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  Met meer dan 500 installaties in Limburg weten wij precies waar u op moet letten. Deze checklist helpt u de juiste keuze te maken.
+
+                  Met ervaring met installaties in Limburg weten wij precies waar u op moet letten. Deze checklist helpt u de juiste keuze te maken.
                 </p>
                 <div className="space-y-4">
                   {checklistItems.map((item, index) => (
@@ -506,8 +510,8 @@ export default function AircoKopenEnLatenInstalleren() {
                 },
                 {
                   icon: Star,
-                  titel: '500+ tevreden klanten',
-                  beschrijving: 'Met een gemiddelde beoordeling van 4,8 uit 5 sterren en meer dan 500 installaties in Limburg.',
+                  titel: "klanten in ons werkgebied",
+                  beschrijving: "Met een gemiddelde beoordeling van 4,8 uit 5 sterren en ervaring met installaties in Limburg.",
                 },
               ].map((item, index) => (
                 <m.div

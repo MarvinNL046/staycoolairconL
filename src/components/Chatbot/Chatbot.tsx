@@ -1,21 +1,18 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { m, AnimatePresence } from 'framer-motion';
-import { X, MessageCircle, Send, Loader2, MessageSquare, ArrowLeft, RotateCcw } from 'lucide-react';
+import React,{ useState,useRef,useEffect } from 'react';
+import { m,AnimatePresence } from 'framer-motion';
+import { X,MessageCircle,MessageSquare,ArrowLeft,RotateCcw } from 'lucide-react';
 import { useChatbot } from './useChatbot';
 import { ChatMessage } from './ChatMessage';
 import { ChatInput } from './ChatInput';
 import { QuickReplies } from './QuickReplies';
 import { ContactForm } from './ContactForm';
 import { ProgressIndicator } from './ProgressIndicator';
-import { isBusinessOpen, getNextOpeningTime, getBusinessHoursText } from '../../utils/businessHours';
-import type { ChatbotMessage } from './types';
+import { isBusinessOpen,getNextOpeningTime } from '../../utils/businessHours';
 
 export const Chatbot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [inputValue, setInputValue] = useState('');
-  const [isDesktop, setIsDesktop] = useState(() =>
-    typeof window === 'undefined' ? true : window.matchMedia('(min-width: 768px)').matches
-  );
+  const [isDesktop, setIsDesktop] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   
   const {

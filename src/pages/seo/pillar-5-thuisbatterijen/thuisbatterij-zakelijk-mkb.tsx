@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Briefcase, Battery, CheckCircle, Euro, TrendingUp, Phone, Zap, Sun, Building2, Shield } from 'lucide-react';
+import { Briefcase,Battery,CheckCircle,Euro,TrendingUp,Phone,Zap,Sun,Building2,Shield } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';

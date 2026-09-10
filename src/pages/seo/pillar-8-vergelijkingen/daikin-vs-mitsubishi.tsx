@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Award, Shield, Zap, Star, Phone, Calculator, Euro } from 'lucide-react';
+import { CheckCircle,Award,Shield,Zap,Star,Phone } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
@@ -21,7 +20,7 @@ const DaikinVsMitsubishi = () => {
     },
     {
       icon: <Shield className="h-12 w-12 text-sky-500" />,
-      title: "10 Jaar Garantie",
+      title: "garantie volgens offerte",
       description: "Uitgebreide garantie op beide merken beschikbaar"
     },
     {
@@ -99,7 +98,7 @@ const DaikinVsMitsubishi = () => {
     },
     {
       question: "Zijn onderdelen en reparaties duurder bij Daikin of Mitsubishi?",
-      answer: "Daikin onderdelen zijn gemiddeld 10-15% duurder dan Mitsubishi. Echter: beide merken hebben zeer lage storingskans ( minder dan 2%) en 5-10 jaar garantie. Reparaties zijn zeldzaam bij beide merken. Over de levensduur zijn de onderhoudskosten vergelijkbaar: €95-€125 per jaar jaarlijks onderhoud, ongeacht het merk."
+      answer: "Daikin onderdelen zijn gemiddeld 10-15% duurder dan Mitsubishi. Echter: beide merken hebben zeer lage storingskans ( minder dan 2%) en garantie volgens offerte. Reparaties zijn zeldzaam bij beide merken. Over de levensduur zijn de onderhoudskosten vergelijkbaar: €95-€125 per jaar jaarlijks onderhoud, ongeacht het merk."
     },
     {
       question: "Welk merk adviseren jullie?",
@@ -111,7 +110,7 @@ const DaikinVsMitsubishi = () => {
     <>
       <MetaTags
         title="Daikin vs Mitsubishi Airco | Kwaliteitsvergelijking | StayCool Limburg"
-        description="Daikin vs Mitsubishi airco ✓ Kwaliteit & betrouwbaarheid ✓ Prijsverschil ✓ Energie-efficiëntie ✓ Voor- en nadelen ✓ Expert advies ✓ 10 jaar garantie"
+        description="Daikin vs Mitsubishi airco ✓ Kwaliteit & betrouwbaarheid ✓ Prijsverschil ✓ Energie-efficiëntie ✓ Voor- en nadelen ✓ Expert advies ✓ garantie volgens offerte"
       />
 
       <SchemaMarkup
@@ -173,7 +172,7 @@ const DaikinVsMitsubishi = () => {
             {usps.map((usp, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
                 <div className="flex justify-center mb-4">{usp.icon}</div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}
@@ -604,7 +603,8 @@ const DaikinVsMitsubishi = () => {
             Klaar voor Premium Japanse Kwaliteit?
           </h2>
           <p className="text-xl mb-8 text-sky-50">
-            Of u nu kiest voor Daikin of Mitsubishi - bij StayCool Airco krijgt u expertinstallatie, 10 jaar garantie en jarenlang professioneel onderhoud.
+
+            Of u nu kiest voor Daikin of Mitsubishi - bij StayCool Airco krijgt u expertinstallatie, garantie volgens offerte en jarenlang professioneel onderhoud.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

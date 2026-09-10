@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, AlertTriangle, Phone, TrendingDown, Calculator } from 'lucide-react';
+import { Phone,TrendingDown,Calculator } from 'lucide-react';
 import MetaTags from '../components/MetaTags';
 import Breadcrumbs from '../components/Breadcrumbs';
-import { aggregateReviews } from '../data/reviews';
 
 const CANONICAL_URL = 'https://staycoolairco.nl/airco-vullen-kosten';
 
@@ -22,7 +21,7 @@ const AircoVullenKosten: React.FC = () => {
     { label: 'Bijvulling R32 (single-split tot 3,5 kW)', prijs: '€175 – €275', uitleg: 'Inclusief koudemiddel + vacuümtrekken + drukcontrole' },
     { label: 'Bijvulling R410A (single- of multi-split)', prijs: '€225 – €375', uitleg: 'R410A wordt uitgefaseerd, prijs koudemiddel stijgt jaarlijks' },
     { label: 'Bijvulling R407C (oudere systemen)', prijs: '€275 – €425', uitleg: 'Lastig leverbaar koudemiddel; vervanging vaak voordeliger' },
-    { label: 'Lekreparatie + bijvulling combinatie', prijs: '€350 – €650', uitleg: 'Lek lokaliseren, repareren, vacumeren, bijvullen + 1 jaar garantie' },
+    { label: 'Lekreparatie + bijvulling combinatie', prijs: '€350 – €650', uitleg: "Lek lokaliseren, repareren, vacumeren, bijvullen + garantie volgens offerte" },
     { label: 'Bijvulling VRF-systeem (zakelijk, tot 5 kg)', prijs: '€450 – €1.200', uitleg: 'Inclusief verplichte logbook-registratie' },
   ];
 
@@ -66,7 +65,7 @@ const AircoVullenKosten: React.FC = () => {
     },
     {
       question: 'Waarom zit er zo veel verschil tussen "vanaf €65" en €275 prijzen?',
-      answer: 'Drie hoofdredenen. Eén: bij goedkope prijzen zit lekdetectie er niet in — u betaalt alleen het bijvullen, en staat over enkele weken weer aan de beurt omdat het lek niet is gevonden. Twee: bij ons zit vacuümtrekken altijd in de prijs (essentieel voor compressor-bescherming), bij goedkope services regelmatig niet. Drie: vergelijkings-platforms werken met onderaannemers zonder garantie — wij komen zelf, geven 1 jaar garantie op het werk.',
+      answer: "Drie hoofdredenen. Eén: bij goedkope prijzen zit lekdetectie er niet in — u betaalt alleen het bijvullen, en staat over enkele weken weer aan de beurt omdat het lek niet is gevonden. Twee: bij ons zit vacuümtrekken altijd in de prijs (essentieel voor compressor-bescherming), bij goedkope services regelmatig niet. Drie: vergelijkings-platforms werken met onderaannemers zonder garantie — wij komen zelf, geven garantie volgens offerte op het werk.",
     },
     {
       question: 'Goedkoop airco bijvullen — kan dat ook bij StayCool?',
@@ -115,12 +114,7 @@ const AircoVullenKosten: React.FC = () => {
           '@id': 'https://staycoolairco.nl/#organization',
           name: 'StayCool Airco',
           telephone: '+31462021430',
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: aggregateReviews.averageRating.toString(),
-            reviewCount: aggregateReviews.totalReviews.toString(),
-            bestRating: '5',
-          },
+
         },
         offers: {
           '@type': 'AggregateOffer',
@@ -212,7 +206,7 @@ const AircoVullenKosten: React.FC = () => {
             </p>
 
             <p>
-              Alle bedragen zijn <strong>all-in incl. BTW</strong> en bevatten lekdetectie, koudemiddel, vacuümtrekken, drukcontrole volgens fabrieksspec, NEa-registratie én 1 jaar garantie op het werk. Wat in de offerte staat is wat u betaalt — geen meerwerk-verrassingen achteraf.
+              Alle bedragen zijn <strong>all-in incl. BTW</strong>  en bevatten lekdetectie, koudemiddel, vacuümtrekken, drukcontrole volgens fabrieksspec, NEa-registratie én garantie volgens offerte op het werk. Wat in de offerte staat is wat u betaalt — geen meerwerk-verrassingen achteraf.
             </p>
 
             <h2 id="prijstabel" className="text-3xl font-bold text-gray-900 mt-12 mb-4">Prijstabel 2026 per service-type</h2>

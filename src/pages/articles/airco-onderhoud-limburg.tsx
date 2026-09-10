@@ -1,8 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { m } from 'framer-motion';
-import { Phone, Mail, MapPin, Wrench, Calendar, CheckCircle } from 'lucide-react';
+import { Phone,Mail,MapPin,Wrench,Calendar,CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AircoOnderhoudLimburg() {
@@ -23,6 +22,7 @@ export default function AircoOnderhoudLimburg() {
           name="keywords" 
           content="airco onderhoud limburg, airconditioning onderhoud, airco service, airco preventief onderhoud, airco inspectie"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/airco-onderhoud-limburg" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">

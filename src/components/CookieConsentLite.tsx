@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState,useEffect } from 'react';
 import { Cookie } from 'lucide-react';
 import { requestIdleCallbackPolyfill } from '../utils/requestIdleCallback';
 

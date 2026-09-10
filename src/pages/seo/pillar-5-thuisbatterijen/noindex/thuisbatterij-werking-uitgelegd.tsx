@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Battery, Zap, ArrowRight, Phone, Sun, Home, Repeat, TrendingDown, Shield, Lightbulb, Cpu, AlertCircle } from 'lucide-react';
+import { Battery,Zap,ArrowRight,Phone,Sun,Home,Repeat,TrendingDown,Shield,Lightbulb,Cpu,AlertCircle } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
 

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React,{ useState } from 'react';
 import { m } from 'framer-motion';
-import { Phone, Mail, MapPin, MessageSquare, Send } from 'lucide-react';
+import { Phone,Mail,MapPin,MessageSquare,Send } from 'lucide-react';
 import { sendEmail } from '../../utils/email';
-import { trackFormSubmission, trackInteraction } from '../../utils/analytics';
+import { trackFormSubmission,trackInteraction } from '../../utils/analytics';
 import { trackPixelFormSubmission } from '../../utils/facebook';
 import { trackAPIFormSubmission } from '../../utils/conversionsAPI';
-import toast, { Toaster } from 'react-hot-toast';
+import toast,{ Toaster } from 'react-hot-toast';
 
 interface FormData {
   name: string;

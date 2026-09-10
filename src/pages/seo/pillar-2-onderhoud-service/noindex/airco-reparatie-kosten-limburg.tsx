@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Euro, Wrench, Phone, Clock, TrendingUp, CheckCircle, AlertCircle, Calculator } from 'lucide-react';
+import { Euro,Wrench,Phone,Clock,TrendingUp,CheckCircle,AlertCircle,Calculator } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
 

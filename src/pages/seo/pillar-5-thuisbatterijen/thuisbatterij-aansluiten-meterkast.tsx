@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Zap, CheckCircle, Wrench, Phone, AlertTriangle, ArrowRight, Battery, Home, Settings } from 'lucide-react';
+import { Zap,CheckCircle,Wrench,Phone,AlertTriangle,ArrowRight,Battery,Home,Settings } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
@@ -31,7 +30,7 @@ const ThuisbatterijAansluitenMeterkaastPage = () => {
     },
     {
       icon: <CheckCircle className="h-12 w-12 text-yellow-500" />,
-      title: "10 Jaar Garantie",
+      title: "garantie volgens offerte",
       description: "Volledige garantie op installatie, systeem en componenten"
     }
   ];
@@ -339,7 +338,8 @@ const ThuisbatterijAansluitenMeterkaastPage = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-yellow-900 mb-8 max-w-3xl">
-            Professionele aansluiting van uw thuisbatterij op de meterkast. Van inventarisatie tot inbedrijfstelling - met CT-meetsensor, certificering en 10 jaar garantie.
+
+            Professionele aansluiting van uw thuisbatterij op de meterkast. Van inventarisatie tot inbedrijfstelling - met CT-meetsensor, certificering en garantie volgens offerte.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -381,7 +381,8 @@ const ThuisbatterijAansluitenMeterkaastPage = () => {
               Professionele Installatie, Direct Operationeel
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Gecertificeerde monteurs, 10 jaar garantie, volgens NEN1010 norm
+
+              Gecertificeerde monteurs, garantie volgens offerte, volgens NEN1010 norm
             </p>
           </div>
 
@@ -701,7 +702,8 @@ const ThuisbatterijAansluitenMeterkaastPage = () => {
             Plan Uw Professionele Installatie
           </h2>
           <p className="text-xl mb-8 text-orange-50">
-            Gratis inspectie meterkast, transparante offerte, planning binnen 2 weken. Gecertificeerde monteurs met &gt;00 installaties ervaring.
+
+            Gratis inspectie meterkast, transparante offerte, planning binnen 2 weken. Gecertificeerde monteurs met &gt;ervaring met installaties ervaring.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -788,7 +790,8 @@ const ThuisbatterijAansluitenMeterkaastPage = () => {
             Veilig, Vakkundig, Volledig Gecertificeerd
           </h2>
           <p className="text-xl mb-8 text-yellow-900">
-            Met &gt;00 succesvolle installaties weten we precies hoe het moet. NEN1010 gecertificeerd, 10 jaar garantie op installatie en systeem. Plan vandaag uw gratis inspectie.
+
+            Met &gt;ervaring met installaties weten we precies hoe het moet. NEN1010 gecertificeerd, garantie volgens offerte op installatie en systeem. Plan vandaag uw gratis inspectie.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

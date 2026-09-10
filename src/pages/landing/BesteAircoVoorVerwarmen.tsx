@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React,{ useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
-  Thermometer, Zap, TrendingUp, CheckCircle, Phone, ArrowRight,
-  Star, Shield, Award, Leaf, Euro, ChevronDown, ChevronUp, Snowflake
+Thermometer,TrendingUp,CheckCircle,Phone,ArrowRight,
+Star,Shield,Award,Leaf,Euro,ChevronDown,ChevronUp,Snowflake
 } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -102,7 +102,7 @@ const BesteAircoVoorVerwarmen: React.FC = () => {
       prijs: 'Laag',
       badge: 'Budget keuze',
       badgeColor: 'bg-gray-400 text-white',
-      pros: ['Beste prijs in segment', 'Gree technologie', 'Betrouwbare componenten', '5 jaar garantie'],
+      pros: ['Beste prijs in segment', 'Gree technologie', 'Betrouwbare componenten', "garantie volgens offerte"],
       highlight: false,
     },
   ];
@@ -160,10 +160,10 @@ const BesteAircoVoorVerwarmen: React.FC = () => {
         {/* Trust bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {[
-            { icon: <Star className="h-5 w-5 text-yellow-500" />, text: '4.9 ster (127 reviews)' },
+            { icon: <Star className="h-5 w-5 text-yellow-500" />, text: "4.9 ster (klantervaringen)" },
             { icon: <Shield className="h-5 w-5 text-blue-600" />, text: 'F-gassen gecertificeerd' },
             { icon: <Award className="h-5 w-5 text-blue-600" />, text: 'STEK erkend' },
-            { icon: <CheckCircle className="h-5 w-5 text-green-600" />, text: '5 jaar garantie' },
+            { icon: <CheckCircle className="h-5 w-5 text-green-600" />, text: "garantie volgens offerte" },
           ].map((item, i) => (
             <div key={i} className="bg-white rounded-2xl shadow-lg p-4 border border-gray-100 flex items-center gap-3">
               {item.icon}
@@ -360,7 +360,7 @@ const BesteAircoVoorVerwarmen: React.FC = () => {
               {[
                 { icon: <Leaf className="h-5 w-5" />, text: 'Tot 63% goedkoper dan gas' },
                 { icon: <TrendingUp className="h-5 w-5" />, text: 'Stijgende huiswaarde' },
-                { icon: <Shield className="h-5 w-5" />, text: '5 jaar garantie' },
+                { icon: <Shield className="h-5 w-5" />, text: "garantie volgens offerte" },
                 { icon: <CheckCircle className="h-5 w-5" />, text: 'STEK erkend installateur' },
               ].map((item, i) => (
                 <div key={i} className="bg-white/10 rounded-xl p-4 flex items-center gap-3">

@@ -1,21 +1,12 @@
-import React, { Suspense, lazy, useEffect, useCallback } from 'react';
+import React,{ Suspense,lazy,useEffect,useCallback } from 'react';
 import ScrollToTop from './components/ScrollToTop';
-import { Routes, Route, useLocation, Navigate, useParams } from 'react-router-dom';
-
-function WerkgebiedRedirect() {
-  const { city } = useParams();
-  return <Navigate to={`/airco-installatie/${city ?? ''}`} replace />;
-}
-import { trackPageView, trackError, trackPerformance } from './utils/analytics';
-import UruruSararaPage from './pages/products/ururu-sarara';
-import StylishPage from './pages/products/stylish';
-import Daiseikai10Page from './pages/products/daiseikai-10';
+import { Routes,Route,useLocation,Navigate,useParams } from 'react-router-dom';
+import { trackPageView,trackError,trackPerformance } from './utils/analytics';
 import { AnimatePresence } from 'framer-motion';
 import { throttle } from './utils/helpers';
 import { ErrorBoundary } from 'react-error-boundary';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import AnnouncementBar from './components/AnnouncementBar';
 import CookieConsentLite from './components/CookieConsentLite';
 import ErrorFallback from './components/ErrorFallback';
 import BackToTop from './components/BackToTop';
@@ -24,13 +15,17 @@ import WebVitalsReporter from './components/WebVitalsReporter';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import FeedbackRibbon from './components/FeedbackRibbon';
 import LoadingSkeleton from './components/LoadingSkeleton';
-import LoadingFallbackWithTimeout from './components/LoadingFallbackWithTimeout';
 import { requestIdleCallbackPolyfill } from './utils/requestIdleCallback';
 import PerformanceOptimizer from './utils/performanceOptimizations';
 import { Chatbot } from './components/Chatbot';
 import ExitIntentPopup from './components/ExitIntentPopup';
 import ServiceNoticePopup from './components/ServiceNoticePopup';
-import MobileStickyCTA from './components/MobileStickyCTA';
+
+function WerkgebiedRedirect() {
+  const { city } = useParams();
+  return <Navigate to={`/airco-installatie/${city ?? ''}`} replace />;
+}
+
 import FloatingReviewBadge from './components/FloatingReviewBadge';
 import { servicePages } from './data/servicePages';
 
@@ -404,18 +399,7 @@ const SEOMilieuvriendelijkeKoelingTips = lazy(() => import('./pages/seo/pillar-1
 const SEOAircoCO2FootprintVerlagen = lazy(() => import('./pages/seo/pillar-10-duurzaamheid/noindex/airco-co2-footprint-verlagen'));
 
 // Loading fallback component with timeout and auto-reload
-const LoadingFallback = React.memo(() => (
-  <LoadingFallbackWithTimeout
-    timeout={5000}
-    onTimeout={() => {
-      console.warn('Page loading timeout - will auto-reload');
-      // Track this event for monitoring
-      if (typeof trackError === 'function') {
-        trackError('loading_timeout', 'Page took too long to load');
-      }
-    }}
-  />
-));
+
 
 // More efficient preloading with requestIdleCallback
 const preloadCriticalRoutes = () => {
@@ -533,12 +517,10 @@ const App = () => {
         {!isBareLayout && <Navbar />}
         <main id="main-content" tabIndex={-1}>
           {/* Removed "wait" mode to improve performance - no need to wait for exit animations */}
-          <AnimatePresence mode="sync">
+          <AnimatePresence mode="sync" initial={false}>
             <Suspense fallback={<LoadingSkeleton />}>
               <Routes>
-                <Route path="/products/daikin/ururu-sarara" element={<UruruSararaPage />} />
-                <Route path="/products/daikin/stylish" element={<StylishPage />} />
-                <Route path="/products/mitsubishi/daiseikai-10" element={<Daiseikai10Page />} />
+                <Route path="/products/mitsubishi/daiseikai-10" element={<Navigate to="/products/toshiba/daiseikai-10" replace />} />
                 <Route path="/products/lg-mobiele-airco" element={<LGMobieleAircoPage />} />
                 <Route path="/products/tosot-mobiele-airco" element={<TosotMobieleAircoPage />} />
                 <Route path="/" element={<Home />} />
@@ -957,6 +939,7 @@ const App = () => {
                 {/* 404 Page - Catch all */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
+              <RouteReady />
             </Suspense>
           </AnimatePresence>
         </main>
@@ -968,7 +951,7 @@ const App = () => {
         {!isBareLayout && (
           <>
             <ExitIntentPopup />
-            <MobileStickyCTA />
+
             <FloatingReviewBadge />
             <FeedbackRibbon />
           </>
@@ -976,7 +959,7 @@ const App = () => {
 
         {/* Tijdelijke service-melding (telefoon minder bereikbaar) — óók op /lp/,
             want juist daar is bellen vaak de hoofd-CTA. Zet uit via ENABLED in het component. */}
-        <ServiceNoticePopup />
+        {isBareLayout && <div className="mx-auto max-w-3xl px-4"><ServiceNoticePopup /></div>}
 
         <CookieConsentLite />
         <PerformanceMonitor />
@@ -986,3 +969,10 @@ const App = () => {
 };
 
 export default React.memo(App);
+
+// A route is interactive only after its lazy component has hydrated or mounted.
+function RouteReady() {
+  const location = useLocation();
+  useEffect(() => { document.documentElement.dataset.routeReady = location.pathname; }, [location.pathname]);
+  return null;
+}

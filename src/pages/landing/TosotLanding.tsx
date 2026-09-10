@@ -1,12 +1,12 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Zap, Wind, Wifi, DollarSign } from 'lucide-react';
+import { Zap,Wind,Wifi,DollarSign } from 'lucide-react';
 import ProductLandingHero from '../../components/landing/ProductLandingHero';
 import ProductLandingFeatures from '../../components/landing/ProductLandingFeatures';
 import ProductLandingModels from '../../components/landing/ProductLandingModels';
 import ProductLandingContact from '../../components/landing/ProductLandingContact';
-import { tosotData } from '../../data/brands/tosot';
+import { productData } from '../../data/products';
 import SchemaMarkup from '../../components/SchemaMarkup';
+const tosotData = productData.brands.find(b => b.name === 'Tosot by Gree')!;
 
 export default function TosotLanding() {
   // Select top models to showcase
@@ -39,19 +39,19 @@ export default function TosotLanding() {
   return (
     <>
       <Helmet>
-        <title>Tosot Airco vanaf €1.395 Incl. Montage | GREE Kwaliteit</title>
+        <title>Tosot airco modellen en installatieprijzen | StayCool Airco</title>
         <meta
           name="description"
-          content="Tosot airco vanaf €1.395 incl. installatie. A++ energielabel, G-Tech Inverter, GREE kwaliteit. Erkend installateur Limburg. Vraag gratis offerte aan!"
+          content="Bekijk Tosot airco modellen en prijzen per uitvoering, inclusief btw, installatie en materialen. Vraag een offerte aan voor uw woning in Limburg."
         />
-        <meta 
-          name="keywords" 
+        <meta
+          name="keywords"
           content="Tosot, Gree, airconditioning, G-Tech Inverter, energiezuinig, wifi-ready, Clivia, Pular, Cosmo, Limburg"
         />
         <link rel="canonical" href="https://staycoolairco.nl/landing/tosot" />
       </Helmet>
 
-      <SchemaMarkup 
+      <SchemaMarkup
         type="Product"
         data={{
           "@type": "Product",
@@ -61,36 +61,13 @@ export default function TosotLanding() {
             "@type": "Brand",
             "name": "Tosot by Gree"
           },
-          "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "EUR",
-            "lowPrice": "1395",
-            "highPrice": "1845",
-            "offerCount": tosotData.models.length,
-            "availability": "https://schema.org/InStock"
-          },
           "image": tosotData.imageUrl,
-          "review": {
-            "@type": "Review",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "4.6",
-              "bestRating": "5"
-            },
-            "author": {
-              "@type": "Person",
-              "name": "StayCool Airco Klanten"
-            }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.6",
-            "reviewCount": "78"
-          }
+
+
         }}
       />
 
-      <ProductLandingHero 
+      <ProductLandingHero
         title="Tosot Airconditioning: Premium Kwaliteit voor een Scherpe Prijs"
         subtitle="G-Tech Inverter • Energiezuinig • Wifi-Ready"
         description="Tosot is het premium merk van GREE, één van de grootste airco fabrikanten ter wereld. Ontdek waarom deze moderne airconditioners met uitstekende prijs-kwaliteitverhouding steeds populairder worden."
@@ -107,13 +84,13 @@ export default function TosotLanding() {
         ]}
       />
 
-      <ProductLandingFeatures 
+      <ProductLandingFeatures
         title="Waarom Kiezen voor Tosot?"
         subtitle="Ontdek de unieke voordelen van Tosot airconditioners"
         features={features}
       />
 
-      <ProductLandingModels 
+      <ProductLandingModels
         title="Populaire Tosot Modellen"
         subtitle="Ontdek onze bestsellers voor optimaal comfort"
         brandName="Tosot"
@@ -121,7 +98,7 @@ export default function TosotLanding() {
         models={featuredModels}
       />
 
-      <ProductLandingContact 
+      <ProductLandingContact
         title="Vraag een Vrijblijvende Offerte Aan"
         subtitle="Ontvang persoonlijk advies en een scherpe prijsopgave voor uw Tosot airconditioning"
         brandName="Tosot"

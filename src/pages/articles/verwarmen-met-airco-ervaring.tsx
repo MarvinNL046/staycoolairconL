@@ -1,8 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { m } from 'framer-motion';
-import { Phone, Mail, MapPin, ThermometerSun, PiggyBank, Shield, Star, Users, Clock } from 'lucide-react';
+import { Phone,Mail,MapPin,ThermometerSun,PiggyBank,Clock,Users } from 'lucide-react';
 import MetaTags from '../../components/MetaTags';
 
 export default function VerwarmenMetAircoErvaring() {
@@ -33,33 +32,14 @@ export default function VerwarmenMetAircoErvaring() {
   ];
 
   // Customer reviews for testimonial section
-  const reviews = [
-    {
-      name: "Familie de Vries uit Maastricht",
-      rating: 5,
-      text: "Sinds we onze woning verwarmen met airco, is onze gasrekening met 52% gedaald. De woonkamer is nu binnen 10 minuten warm, terwijl we vroeger met radiatoren minstens een half uur moesten wachten.",
-      date: "Januari 2025"
-    },
-    {
-      name: "Marco B. uit Heerlen",
-      rating: 4,
-      text: "In het begin was ik sceptisch, maar na één winter verwarmen met airco ben ik om. Het comfort is veel hoger dan met onze oude cv-ketel en de energiebesparing is aanzienlijk.",
-      date: "December 2024"
-    },
-    {
-      name: "Bedrijfspand Venlo",
-      rating: 5,
-      text: "We hebben onze kantoorruimte voorzien van een airco-verwarmingsoplossing. Niet alleen zijn onze energiekosten gedaald, maar ook onze medewerkers waarderen het constante klimaat en de snelle temperatuuraanpassingen.",
-      date: "Februari 2025"
-    }
-  ];
+
 
   // Schema markup data
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "headline": "Verwarmen met Airco: Ervaringen & Gebruikersresultaten in 2025",
-    "description": "Ontdek echte ervaringen met verwarmen via airco in Nederlandse huizen. Lees over energiebesparing, comfort en tevredenheid van gebruikers. ✓ Tot 60% besparing ✓ Gebruikerservaringen ✓ Voor- en nadelen",
+    "description": "Ontdek echte ervaringen met verwarmen via airco in Nederlandse huizen. Lees over energiebesparing, comfort en tevredenheid van gebruikers. ✓ situatieafhankelijke besparing ✓ Gebruikerservaringen ✓ Voor- en nadelen",
     "author": {
       "@type": "Organization",
       "name": "StayCool Airco"
@@ -85,7 +65,7 @@ export default function VerwarmenMetAircoErvaring() {
     <>
       <MetaTags
         title="Verwarmen Met Airco Ervaringen & Resultaten | StayCool Airco"
-        description="Echte ervaringen met verwarmen via airco. Energiebesparing tot 60%, comfort en praktijkresultaten uit Nederland."
+        description="Echte ervaringen met verwarmen via airco. besparing afhankelijk van gebruik en tarieven, comfort en praktijkresultaten uit Nederland."
         keywords="verwarmen met airco ervaring, airco verwarming ervaringen, warmtepomp airco reviews, energiebesparing airco, klantervaring airco verwarming"
         canonicalUrl="https://staycoolairco.nl/kennisbank/verwarmen-met-airco-ervaring"
         type="article"
@@ -96,7 +76,7 @@ export default function VerwarmenMetAircoErvaring() {
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
-          
+
           <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -122,16 +102,16 @@ export default function VerwarmenMetAircoErvaring() {
             <div className="bg-white rounded-xl shadow-md p-8 mb-8">
               <h2 className="text-2xl font-semibold mb-4">Praktijkervaringen met Airco Verwarming</h2>
               <p>
-                Steeds meer Nederlandse huishoudens schakelen over op verwarmen met airco. In dit artikel delen we 
-                de echte ervaringen van gebruikers, inclusief praktijkresultaten over energiebesparing, comfort en 
-                tevredenheid. Deze inzichten zijn gebaseerd op feedback van meer dan 300 klanten die in de afgelopen 
+                Steeds meer Nederlandse huishoudens schakelen over op verwarmen met airco. In dit artikel delen we
+                de echte ervaringen van gebruikers, inclusief praktijkresultaten over energiebesparing, comfort en
+                tevredenheid. Deze inzichten zijn gebaseerd op feedback van meer dan 300 klanten die in de afgelopen
                 twee jaar hun woning zijn gaan verwarmen met een <Link to="/kennisbank/verwarmen-met-airco" className="text-blue-600 hover:text-blue-700">airco-verwarmingssysteem</Link>.
               </p>
-              
+
               <div className="mt-6">
                 <h3 className="text-xl font-semibold mb-3">Wat Maakt Verwarmen met Airco Zo Populair?</h3>
                 <p>
-                  Uit onze klantenquêtes blijkt dat drie factoren consequent worden genoemd als belangrijkste 
+                  Uit onze klantenquêtes blijkt dat drie factoren consequent worden genoemd als belangrijkste
                   redenen voor de overstap naar airco-verwarming:
                 </p>
                 <div className="grid md:grid-cols-3 gap-6 mt-4">
@@ -169,7 +149,7 @@ export default function VerwarmenMetAircoErvaring() {
             {/* Comparative experience data */}
             <div className="bg-white rounded-xl shadow-md p-8 mb-8">
               <h2 className="text-2xl font-semibold mb-4">Vergelijking: Praktische Gebruikservaringen</h2>
-              
+
               <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200 mb-6">
                   <thead className="bg-gray-50">
@@ -214,32 +194,19 @@ export default function VerwarmenMetAircoErvaring() {
                   </tbody>
                 </table>
               </div>
-              
+
               <p className="text-sm text-gray-600">
                 <em>Bron: Klanttevredenheidsonderzoek StayCool 2025 (n=327 huishoudens)</em>
               </p>
             </div>
-            
+
             {/* User testimonials */}
             <div className="bg-white rounded-xl shadow-md p-8 mb-8">
               <h2 className="text-2xl font-semibold mb-6">Klantenervaringen: In Hun Eigen Woorden</h2>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
-                {reviews.map((review, index) => (
-                  <div key={index} className="bg-gray-50 rounded-lg p-6 border border-gray-100">
-                    <div className="flex items-center mb-4">
-                      <div className="flex">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`h-4 w-4 ${i < review.rating ? 'text-yellow-400' : 'text-gray-300'}`} fill={i < review.rating ? '#FBBF24' : 'none'} />
-                        ))}
-                      </div>
-                      <span className="ml-2 text-sm text-gray-600">{review.date}</span>
-                    </div>
-                    <p className="italic text-gray-700 mb-4">"{review.text}"</p>
-                    <p className="text-sm font-medium text-gray-900">{review.name}</p>
-                  </div>
-                ))}
-                
+                <a className="text-blue-700 underline" href="https://www.google.com/search?q=staycool+airco" target="_blank" rel="noopener noreferrer">Bekijk actuele klantervaringen op Google</a>
+
                 <div className="bg-blue-50 rounded-lg p-6 border border-blue-100 md:col-span-2">
                   <div className="flex items-center mb-4">
                     <Users className="h-6 w-6 text-blue-600 mr-3" />
@@ -262,11 +229,11 @@ export default function VerwarmenMetAircoErvaring() {
                 </div>
               </div>
             </div>
-            
+
             {/* FAQ Section */}
             <div className="bg-white rounded-xl shadow-md p-8 mb-8">
               <h2 className="text-2xl font-semibold mb-6">Veelgestelde Vragen Over Verwarmen met Airco</h2>
-              
+
               <div className="space-y-6">
                 {faqs.map((faq, index) => (
                   <div key={index} className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0">
@@ -276,13 +243,13 @@ export default function VerwarmenMetAircoErvaring() {
                 ))}
               </div>
             </div>
-            
+
             {/* CTA Section */}
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl shadow-lg p-8 text-white">
               <h2 className="text-2xl font-semibold mb-4">Ervaar Zelf het Verschil van Verwarmen met Airco</h2>
               <p className="mb-6">
-                Wilt u weten hoeveel u kunt besparen door over te stappen op verwarmen met airco? 
-                Onze experts maken een persoonlijke berekening voor uw specifieke situatie. 
+                Wilt u weten hoeveel u kunt besparen door over te stappen op verwarmen met airco?
+                Onze experts maken een persoonlijke berekening voor uw specifieke situatie.
                 Vraag vandaag nog een vrijblijvende offerte aan of neem contact op voor advies.
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -301,7 +268,7 @@ export default function VerwarmenMetAircoErvaring() {
                 </a>
               </div>
             </div>
-            
+
             {/* Contact info */}
             <div className="bg-white rounded-xl shadow-md p-8">
               <h2 className="text-2xl font-semibold mb-4">Meer Informatie</h2>

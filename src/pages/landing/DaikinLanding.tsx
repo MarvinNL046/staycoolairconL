@@ -1,12 +1,12 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ThermometerSun, Wind, Zap, Wifi } from 'lucide-react';
+import { ThermometerSun,Wind,Zap,Wifi } from 'lucide-react';
 import ProductLandingHero from '../../components/landing/ProductLandingHero';
 import ProductLandingFeatures from '../../components/landing/ProductLandingFeatures';
 import ProductLandingModels from '../../components/landing/ProductLandingModels';
 import ProductLandingContact from '../../components/landing/ProductLandingContact';
-import { daikinData } from '../../data/brands/daikin';
+import { productData } from '../../data/products';
 import SchemaMarkup from '../../components/SchemaMarkup';
+const daikinData = productData.brands.find(b => b.name === 'Daikin')!;
 
 export default function DaikinLanding() {
   // Select top models to showcase
@@ -42,16 +42,16 @@ export default function DaikinLanding() {
         <title>Daikin Airconditioning | Topkwaliteit Aircosystemen | StayCool Airco</title>
         <meta
           name="description"
-          content="Daikin airco: Marktleider klimaatbeheersing | A+++ energiezuinig | 60% besparing | 5 jaar garantie. Erkend installateur Limburg. Gratis advies!"
+          content="Daikin airco: Marktleider klimaatbeheersing | A+++ energiezuinig | situatieafhankelijke besparing | garantie volgens offerte. Erkend installateur Limburg. Gratis advies!"
         />
-        <meta 
-          name="keywords" 
+        <meta
+          name="keywords"
           content="Daikin, airconditioning, warmtepomp, energiezuinig, A+++, fluisterstil, smart home, Limburg"
         />
         <link rel="canonical" href="https://staycoolairco.nl/landing/daikin" />
       </Helmet>
 
-      <SchemaMarkup 
+      <SchemaMarkup
         type="Product"
         data={{
           "@type": "Product",
@@ -61,59 +61,36 @@ export default function DaikinLanding() {
             "@type": "Brand",
             "name": "Daikin"
           },
-          "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "EUR",
-            "lowPrice": "1599",
-            "highPrice": "4500",
-            "offerCount": daikinData.models.length,
-            "availability": "https://schema.org/InStock"
-          },
           "image": daikinData.imageUrl,
-          "review": {
-            "@type": "Review",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "4.8",
-              "bestRating": "5"
-            },
-            "author": {
-              "@type": "Person",
-              "name": "StayCool Airco Klanten"
-            }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "124"
-          }
+
+
         }}
       />
 
-      <ProductLandingHero 
+      <ProductLandingHero
         title="Daikin Airconditioning: Japanse Topkwaliteit voor Optimaal Comfort"
         subtitle="Energiezuinig • Fluisterstil • Smart Home Integratie"
         description="Daikin is wereldwijd marktleider in klimaatbeheersing en staat bekend om betrouwbaarheid, innovatie en energiezuinigheid. Ontdek waarom Daikin de voorkeur geniet van miljoenen huishoudens."
         backgroundImage="/images/products/daikin-stylish-wit.webp"
         brandName="Daikin"
         features={[
-          "Tot 60% besparing op verwarmingskosten",
+          "situatieafhankelijke besparing op verwarmingskosten",
           "Energielabel tot A+++",
           "Fluisterstille werking vanaf 19dB",
           "Smart Home integratie",
           "Flash Streamer luchtzuivering",
-          "5 jaar garantie",
+          "garantie volgens offerte",
           "Professionele installatie"
         ]}
       />
 
-      <ProductLandingFeatures 
+      <ProductLandingFeatures
         title="Waarom Kiezen voor Daikin?"
         subtitle="Ontdek de unieke voordelen van Daikin airconditioners"
         features={features}
       />
 
-      <ProductLandingModels 
+      <ProductLandingModels
         title="Populaire Daikin Modellen"
         subtitle="Ontdek onze bestsellers voor optimaal comfort"
         brandName="Daikin"
@@ -121,7 +98,7 @@ export default function DaikinLanding() {
         models={featuredModels}
       />
 
-      <ProductLandingContact 
+      <ProductLandingContact
         title="Vraag een Vrijblijvende Offerte Aan"
         subtitle="Ontvang persoonlijk advies en een scherpe prijsopgave voor uw Daikin airconditioning"
         brandName="Daikin"

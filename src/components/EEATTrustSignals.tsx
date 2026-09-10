@@ -1,6 +1,5 @@
-import React from 'react';
 import { m } from 'framer-motion';
-import { ShieldCheck, Award, CheckCircle, Calendar, Star, ArrowRight, Phone } from 'lucide-react';
+import { ShieldCheck,Award,CheckCircle,Calendar,Star,ArrowRight,Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface EEATTrustSignalsProps {
@@ -11,10 +10,10 @@ interface EEATTrustSignalsProps {
 
 const trustBadges = [
   { icon: ShieldCheck, label: 'F-Gassen Gecertificeerd' },
-  { icon: Award, label: '5 Jaar Garantie' },
-  { icon: CheckCircle, label: '500+ Installaties' },
-  { icon: Calendar, label: 'Sinds 2019 Actief' },
-  { icon: Star, label: '\u2605 4.8/5 Klantwaardering' },
+  { icon: Award, label: 'Garantievoorwaarden bij offerte' },
+  { icon: CheckCircle, label: 'Installatie in Limburg' },
+  { icon: Calendar, label: 'Planning in overleg' },
+  { icon: Star, label: 'Persoonlijk advies' },
 ];
 
 const expertiseColumns = [
@@ -22,7 +21,7 @@ const expertiseColumns = [
     title: 'Ervaring & Expertise',
     icon: ShieldCheck,
     points: [
-      'Meer dan 500 installaties in heel Limburg',
+      'Installatie voor woningen en bedrijven in Limburg',
       'Gecertificeerde F-gassen monteurs',
       'Alle grote merken: Tosot, Daikin, LG, Toshiba, Mitsubishi Heavy',
     ],
@@ -31,8 +30,8 @@ const expertiseColumns = [
     title: 'Kwaliteit & Garantie',
     icon: Award,
     points: [
-      '5 jaar garantie op installatiewerkzaamheden',
-      'Behoud van fabrieksgarantie',
+      'Garantievoorwaarden per toestel en installatie in de offerte',
+      'Uitleg over gebruik en onderhoud',
       'Professionele afwerking met oog voor detail',
     ],
   },
@@ -40,8 +39,8 @@ const expertiseColumns = [
     title: 'Service & Betrouwbaarheid',
     icon: CheckCircle,
     points: [
-      'Reactie binnen 24 uur',
-      'Installatie binnen 5 werkdagen mogelijk',
+      'Persoonlijk contact over uw aanvraag',
+      'Installatiedatum in overleg',
       'Transparante prijzen, geen verborgen kosten',
     ],
   },

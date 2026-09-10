@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Check } from 'lucide-react';
 import HeroRedesign from '../components/HeroRedesign';
@@ -58,7 +57,7 @@ export default function Home() {
   const homepageFAQs = [
     {
       question: "Wat kost een airco laten installeren in Limburg?",
-      answer: "Een airco laten installeren in Limburg kost vanaf €1.600 inclusief montage en BTW. De exacte prijs hangt af van het merk, het vermogen en de complexiteit van de installatie. Voor een single-split systeem rekent u op €1.600-€2.500, voor een multi-split systeem €2.800-€5.000. Vraag een vrijblijvende offerte aan voor een prijs op maat."
+      answer: "Bekijk onze kostengids voor actuele prijsvoorbeelden inclusief installatie, materialen en btw. Uw prijs hangt af van de gekozen uitvoering en de werkzaamheden in uw woning. Vraag een offerte aan voor een compleet voorstel."
     },
     {
       question: "Hoe lang duurt een airco-installatie?",
@@ -66,7 +65,7 @@ export default function Home() {
     },
     {
       question: "Hoeveel bespaar ik door te verwarmen met een airco?",
-      answer: "Door te verwarmen met een moderne A+++ airco bespaart u tot 60% op uw stookkosten ten opzichte van gas. Een airco werkt als warmtepomp met een SCOP-waarde van 4-5: voor elke kWh stroom levert de airco 4-5 kWh warmte. Concreet: een gemiddeld huishouden bespaart €800-€1.500 per jaar."
+      answer: "Dat hangt af van uw woning, de ruimtes die u verwarmt, het gebruik en de energieprijzen. Een airco verplaatst warmte met elektriciteit. Of dit goedkoper is dan uw huidige verwarming moet voor uw situatie worden berekend; we beloven geen vast besparingspercentage."
     },
     {
       question: "Wat is het verschil tussen single-split en multi-split airco?",
@@ -123,25 +122,25 @@ export default function Home() {
         data={{ questions: homepageFAQs }}
       />
       <Helmet>
-        <title>Airco Installateur Limburg | Vanaf €1.600 Incl. Montage</title>
+        <title>StayCool Airco | Installatie en onderhoud in Limburg</title>
         <meta
           name="description"
-          content="Erkend airco installateur in Limburg. F-gassen gecertificeerd ✓ 5 jaar garantie ✓ Vanaf €1.600 incl. montage ✓ Gratis offerte binnen 24u. ★ 4.8/5"
+          content="Airco kopen in Limburg? StayCool helpt u met modelkeuze, installatie en onderhoud. Bekijk onze airco’s en onderhoudsabonnementen of vraag advies aan."
         />
         <link rel="canonical" href="https://staycoolairco.nl" />
 
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://staycoolairco.nl" />
-        <meta property="og:title" content="Airco Installateur Limburg | Vanaf €1.600 Incl. Montage" />
-        <meta property="og:description" content="Erkend airco installateur in Limburg. F-gassen gecertificeerd ✓ 5 jaar garantie ✓ Vanaf €1.600 incl. montage ✓ Gratis offerte binnen 24u. ★ 4.8/5" />
+        <meta property="og:title" content="StayCool Airco | Installatie en onderhoud in Limburg" />
+        <meta property="og:description" content="Airco kopen in Limburg? StayCool helpt u met modelkeuze, installatie en onderhoud. Bekijk onze airco’s en onderhoudsabonnementen of vraag advies aan." />
         <meta property="og:image" content="https://staycoolairco.nl/og-image.jpg" />
         <meta property="og:locale" content="nl_NL" />
 
         {/* Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Airco Installateur Limburg | Vanaf €1.600 Incl. Montage" />
-        <meta name="twitter:description" content="Erkend airco installateur in Limburg. F-gassen gecertificeerd ✓ 5 jaar garantie ✓ Vanaf €1.600 incl. montage ✓ Gratis offerte binnen 24u. ★ 4.8/5" />
+        <meta name="twitter:title" content="StayCool Airco | Installatie en onderhoud in Limburg" />
+        <meta name="twitter:description" content="Airco kopen in Limburg? StayCool helpt u met modelkeuze, installatie en onderhoud. Bekijk onze airco’s en onderhoudsabonnementen of vraag advies aan." />
         <meta name="twitter:image" content="https://staycoolairco.nl/og-image.jpg" />
       </Helmet>
 
@@ -154,18 +153,18 @@ export default function Home() {
         subtitle="Bekijk onze bestsellers - complete sets inclusief binnen- en buitenunit"
       />
 
-      {/* Static H1 Section - Critical for SEO */}
+      {/* Regional service introduction */}
       <section className="py-32 bg-quatt-warm border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-quatt-orange font-black tracking-[0.2em] uppercase text-xs mb-8 block">StayCool Airco Installateur</span>
-          <h1 className="text-6xl sm:text-7xl lg:text-9xl font-black text-quatt-dark mb-10 leading-[0.85] tracking-tighter italic">
+          <h2 className="text-6xl sm:text-7xl lg:text-9xl font-black text-quatt-dark mb-10 leading-[0.85] tracking-tighter italic">
             Airco Installateur <br />
             <span className="text-quatt-orange">Limburg</span>
-          </h1>
+          </h2>
           <p className="text-xl sm:text-2xl text-gray-500 max-w-4xl mx-auto mb-16 leading-relaxed">
             Erkende <strong>airco installateur in Limburg</strong> voor installatie, onderhoud en reparatie.
             F-gassen gecertificeerde monteurs in Maastricht, Heerlen, Sittard, Geleen, Roermond, Venlo en Weert.
-            Bespaar direct tot <span className="text-quatt-dark font-black">60% op uw gasrekening</span> door slim te verwarmen.
+            Bespreek <span className="text-quatt-dark font-black">koelen én verwarmen</span> voor de ruimtes die u gebruikt.
           </p>
 
           <div className="flex flex-wrap justify-center gap-10 text-quatt-dark/40 font-black uppercase text-xs tracking-widest">
@@ -179,7 +178,7 @@ export default function Home() {
               <div className="bg-white p-1.5 rounded-full text-quatt-orange shadow-sm border border-gray-100">
                 <Check className="h-4 w-4" />
               </div>
-              <span>500+ Tevreden klanten</span>
+              <span>Persoonlijk installatieadvies</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="bg-white p-1.5 rounded-full text-quatt-orange shadow-sm border border-gray-100">
@@ -201,8 +200,8 @@ export default function Home() {
             <div className="prose prose-xl prose-slate max-w-none text-gray-500 space-y-8 leading-relaxed">
               <p>
                 Zoekt u een betrouwbare <strong>airco installateur in Limburg</strong>? StayCool Airco is uw lokale specialist voor professionele
-                klimaatbeheersing in heel Limburg. Met meer dan 500+ tevreden klanten zijn wij dé erkende airco monteur voor installatie,
-                onderhoud en reparatie van airconditioningsystemen.
+                klimaatbeheersing in heel Limburg. Wij adviseren over de keuze en plaatsing van uw airco en verzorgen de installatie.
+                Voor door StayCool geleverde en geïnstalleerde systemen kunt u ook terecht voor onderhoud en service.
               </p>
 
               <div className="grid md:grid-cols-2 gap-12 my-20 not-prose">

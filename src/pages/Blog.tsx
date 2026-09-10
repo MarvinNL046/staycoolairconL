@@ -1,4 +1,3 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import BlogList from '../components/BlogList';
 import SchemaMarkup from '../components/SchemaMarkup';

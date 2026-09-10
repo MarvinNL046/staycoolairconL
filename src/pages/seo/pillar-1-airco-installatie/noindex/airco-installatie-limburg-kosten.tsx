@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Euro, Calculator, CheckCircle, Phone, ArrowRight, TrendingUp, AlertCircle, Info, Zap, Home } from 'lucide-react';
+import { Euro,Calculator,CheckCircle,Phone,ArrowRight,TrendingUp,AlertCircle,Info,Zap,Home } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
 

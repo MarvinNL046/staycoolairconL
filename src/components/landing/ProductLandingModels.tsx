@@ -1,4 +1,3 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -100,7 +99,7 @@ export default function ProductLandingModels({
                   </Link>
                   {model.price && (
                     <div className="text-center text-gray-600">
-                      Vanaf <span className="font-semibold text-gray-900">{model.price}</span>
+                      <span className="font-semibold text-gray-900">{model.price}</span>
                     </div>
                   )}
                 </div>

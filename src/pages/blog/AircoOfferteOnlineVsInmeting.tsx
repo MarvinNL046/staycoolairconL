@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -187,35 +186,35 @@ export default function AircoOfferteOnlineVsInmeting() {
 
               <div className="not-prose space-y-3 my-6">
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">1. Warmte/koudebelasting per ruimte</h4>
+                  <h3 className="font-bold text-green-900 mb-1">1. Warmte/koudebelasting per ruimte</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Oppervlakte, raamoriëntatie, isolatiewaarde, hoogte plafond en warmtebelastende apparatuur
                     (tv, server, keuken). Dit bepaalt het juiste kW-vermogen.
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">2. Plaatsing binnenunit én buitenunit</h4>
+                  <h3 className="font-bold text-green-900 mb-1">2. Plaatsing binnenunit én buitenunit</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Akoestiek, luchtstroom, esthetiek (monumentaal?), vorstgevoeligheid, afstand tot slaapkamer buren.
                     Op foto's zie je deze afwegingen niet.
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">3. Kabel- en leidingtracé</h4>
+                  <h3 className="font-bold text-green-900 mb-1">3. Kabel- en leidingtracé</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Waar kunnen we koelleiding én elektra leggen zonder dragende wanden te doorboren? Soms 2 meter
                     verschil = €150 minder installatiekosten.
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">4. Elektrische situatie</h4>
+                  <h3 className="font-bold text-green-900 mb-1">4. Elektrische situatie</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Meterkast-capaciteit, aparte groep nodig (verplicht vanaf 5 kW), afstand tot meterkast, aanwezige
                     beveiligingen. Dit is niet in te schatten vanaf een foto.
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">5. Condensafvoer</h4>
+                  <h3 className="font-bold text-green-900 mb-1">5. Condensafvoer</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Waar kan water weg? In een nieuwbouwwoning vaak simpel; in een bovenverdieping van een vooroorlogse
                     woning soms ingewikkeld met condenspomp nodig (€120 extra).

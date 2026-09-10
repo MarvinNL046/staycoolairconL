@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -91,9 +90,9 @@ export default function BesteAircoMerken2026() {
               </h1>
 
               <p className="text-xl text-gray-600 leading-relaxed">
-                Kort antwoord: <strong>Daikin, Mitsubishi Electric en Toshiba</strong> zijn de drie merken die wij
+                Kort antwoord: <strong>Daikin, Mitsubishi Electric en Toshiba</strong>  zijn de drie merken die wij
                 in Limburg het vaakst zonder problemen zien draaien. Panasonic en LG volgen op afstand. Dit zijn niet
-                de "mooiste" merken op papier — maar wél de merken waar onze monteurs na 1.500+ installaties het minste
+                de "mooiste" merken op papier — maar wél de merken waar onze monteurs bij hun installatiewerk het minste
                 terug moeten komen. Hieronder eerlijke details: wat werkt, wat irriteert, en waar u op moet letten.
               </p>
             </header>
@@ -319,7 +318,7 @@ export default function BesteAircoMerken2026() {
               </p>
 
               <div className="not-prose bg-red-50 border-l-4 border-red-500 p-4 rounded-r my-6">
-                <h4 className="font-bold text-red-900 mb-2">⚠️ Rode vlaggen bij airco-aanschaf</h4>
+                <h3 className="font-bold text-red-900 mb-2">⚠️ Rode vlaggen bij airco-aanschaf</h3>
                 <ul className="text-sm text-gray-700 space-y-2 mb-0">
                   <li><strong>Geen CE-markering</strong> — illegaal in EU, vaak bij marktplaats-verkopen</li>
                   <li><strong>Geen Nederlandse dealer</strong> — garantie-afhandeling via buitenland is een nachtmerrie</li>
@@ -503,6 +502,7 @@ export default function BesteAircoMerken2026() {
 
               {/* ==================== RELATED ==================== */}
               <h2>Verder lezen</h2>
+              <p><Link to="/airco-kopen-limburg" className="text-blue-600 underline">Vergelijk aircosets met prijzen inclusief btw, installatie en materialen</Link>. Kies op de kooppagina een concrete uitvoering en vraag een offerte voor uw woning aan.</p>
               <ul>
                 <li>
                   <Link to="/blog/wat-kost-1-uur-airco-draaien" className="text-blue-600 hover:underline">

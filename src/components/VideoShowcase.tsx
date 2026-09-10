@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { m } from 'framer-motion';
-import { Play, Clock, Eye, ChevronRight } from 'lucide-react';
+import { Play,Clock,Eye,ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import VideoPlayer from './VideoPlayer';
 

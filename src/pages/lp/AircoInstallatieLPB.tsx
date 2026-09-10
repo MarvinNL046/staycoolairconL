@@ -1,5 +1,4 @@
-import React from 'react';
-import AircoInstallatieLPView, { LPVariant } from './AircoInstallatieLPView';
+import AircoInstallatieLPView,{ LPVariant } from './AircoInstallatieLPView';
 
 // Variant B — hoek: snelheid & gemak ("binnen enkele dagen geïnstalleerd").
 // A/B-test tegen variant A (comfort/seizoen). Body is identiek; alleen de hero
@@ -17,7 +16,7 @@ const variantB: LPVariant = {
     'Snel ingepland — geen weken wachten',
     'Gecertificeerde eigen monteurs (F-gas & STEK)',
     'Vaste offerte vooraf — geen verrassingen',
-    'Tot 5 jaar garantie op installatie',
+    "garantie volgens offerte op installatie",
   ],
 };
 

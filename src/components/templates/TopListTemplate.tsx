@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { m } from 'framer-motion';
-import { Check, Star, ChevronRight, Phone, ArrowRight } from 'lucide-react';
+import { Check,Star,ChevronRight,Phone,ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AircoProduct } from '../../data/aircoProducts';
 import Button from '../ui/Button';
@@ -65,7 +65,7 @@ export default function TopListTemplate({
                         <div className="prose prose-lg prose-blue max-w-none bg-white p-8 rounded-3xl border border-gray-100 shadow-sm mb-12">
                             {introText}
 
-                            <h3 className="text-xl font-bold text-quatt-dark mt-8 mb-4">Hoe we deze lijst hebben samengesteld:</h3>
+                            <h2 className="text-xl font-bold text-quatt-dark mt-8 mb-4">Hoe we deze lijst hebben samengesteld:</h2>
                             <ul className="grid sm:grid-cols-2 gap-3 not-prose">
                                 {rankingCriteria.map((criteria, idx) => (
                                     <li key={idx} className="flex items-center gap-3 text-gray-600 bg-gray-50 p-3 rounded-xl border border-gray-100/50">
@@ -184,7 +184,7 @@ export default function TopListTemplate({
 
                         {/* CTA at bottom of list */}
                         <div className="mt-16 bg-quatt-dark rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden">
-                            <div className="absolute top-0 left-0 w-full h-full bg-[url('/patterns/grid.svg')] opacity-10" />
+                            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-100 to-transparent opacity-10" />
                             <div className="relative z-10">
                                 <h3 className="text-3xl font-bold text-white mb-4">Nog niet zeker welke airco het beste bij u past?</h3>
                                 <p className="text-gray-300 mb-8 max-w-2xl mx-auto">

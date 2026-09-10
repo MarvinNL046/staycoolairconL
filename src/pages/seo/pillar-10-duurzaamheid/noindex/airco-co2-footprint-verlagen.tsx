@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import MetaTags from '../../../../components/MetaTags';
 
@@ -360,7 +359,7 @@ export default function AircoCO2FootprintVerlagen() {
                     <ul className="text-sm text-gray-700 space-y-1">
                       <li>• Alleen aan bij aanwezigheid</li>
                       <li>• Timer/WiFi voor optimaal gebruik</li>
-                      <li>• Eco-modus voor 20% besparing</li>
+                      <li>• Eco-modus voor situatieafhankelijke besparing</li>
                     </ul>
                   </div>
                   <div className="bg-purple-50 p-4 rounded-lg">

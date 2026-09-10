@@ -1,7 +1,8 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { m } from 'framer-motion';
 import MetaTags from './MetaTags';
 import Breadcrumbs from './Breadcrumbs';
+import { useLocation } from 'react-router-dom';
 
 interface ArticleLayoutProps {
   children: ReactNode;
@@ -24,6 +25,7 @@ export default function ArticleLayout({
   tags = [],
   canonicalUrl
 }: ArticleLayoutProps) {
+  const location = useLocation();
   return (
     <m.article
       initial={{ opacity: 0, y: 20 }}
@@ -39,7 +41,7 @@ export default function ArticleLayout({
 
       <Breadcrumbs items={[
         { label: 'Kennisbank', path: '/kennisbank' },
-        { label: title, path: window.location.pathname }
+        { label: title, path: location.pathname }
       ]} />
       
       <header className="mb-8 mt-6">

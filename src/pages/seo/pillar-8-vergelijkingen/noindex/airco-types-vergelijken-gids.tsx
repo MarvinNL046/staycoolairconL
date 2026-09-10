@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
@@ -122,7 +121,7 @@ export default function AircoTypesVergelijkenGids() {
                 <h4 className="font-semibold text-gray-900 mb-2">Inverter Airco</h4>
                 <ul className="list-disc list-inside text-gray-700 space-y-2">
                   <li>Variabel toerental compressor</li>
-                  <li>30-50% energiebesparing</li>
+                  <li>situatieafhankelijke besparing</li>
                   <li>Constante temperatuur</li>
                   <li>Stiller in werking</li>
                   <li>Hogere aanschafprijs</li>

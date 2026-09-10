@@ -1,6 +1,5 @@
-import React from 'react';
 import ArticleLayout from '../../components/ArticleLayout';
-import { ThermometerSun, Zap, Wifi, Volume2, Wind, CheckCircle, AlertTriangle, HelpCircle } from 'lucide-react';
+import { ThermometerSun,Wifi,Volume2,Wind,CheckCircle,AlertTriangle,HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const MitsubishiVsLgAirco = () => {
@@ -124,7 +123,7 @@ const MitsubishiVsLgAirco = () => {
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
             {tocItems.map((item) => (
               <li key={item.id}>
-                <a 
+                <a
                   href={`#${item.id}`}
                   className="text-blue-600 hover:text-blue-800 no-underline hover:underline"
                 >
@@ -141,8 +140,8 @@ const MitsubishiVsLgAirco = () => {
             <div>
               <h3 className="text-blue-900 mt-0 mb-2">Snelle Vergelijking</h3>
               <p className="m-0 text-blue-800">
-                Mitsubishi blinkt uit in prestaties en innovatie, terwijl LG uitstekende 
-                prijs-kwaliteitverhouding biedt met slimme features. Lees verder voor een 
+                Mitsubishi blinkt uit in prestaties en innovatie, terwijl LG uitstekende
+                prijs-kwaliteitverhouding biedt met slimme features. Lees verder voor een
                 gedetailleerde analyse.
               </p>
             </div>
@@ -151,8 +150,8 @@ const MitsubishiVsLgAirco = () => {
 
         <h2 id="inleiding">Inleiding</h2>
         <p>
-          Mitsubishi en LG behoren tot de meest populaire airco merken in Nederland. 
-          Beide fabrikanten bieden hoogwaardige airconditioners, maar er zijn belangrijke 
+          Mitsubishi en LG behoren tot de meest populaire airco merken in Nederland.
+          Beide fabrikanten bieden hoogwaardige airconditioners, maar er zijn belangrijke
           verschillen die je keuze kunnen beïnvloeden.
         </p>
 
@@ -163,7 +162,7 @@ const MitsubishiVsLgAirco = () => {
 
         <div className="space-y-8 my-12">
           {comparisonPoints.map((point) => (
-            <div 
+            <div
               key={point.title}
               className="bg-white rounded-lg shadow-lg p-6 border border-gray-100"
             >
@@ -175,7 +174,7 @@ const MitsubishiVsLgAirco = () => {
                   {point.title}
                 </h3>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold text-blue-900 mb-3">Mitsubishi</h4>
@@ -248,7 +247,7 @@ const MitsubishiVsLgAirco = () => {
               <h3 className="text-xl font-bold mb-4">{brand.brand} Series</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {brand.models.map((model) => (
-                  <div 
+                  <div
                     key={model.name}
                     className="bg-gray-50 rounded-lg p-6"
                   >
@@ -277,8 +276,8 @@ const MitsubishiVsLgAirco = () => {
             <div>
               <h3 className="text-yellow-900 mt-0 mb-2">Belangrijk bij Keuze</h3>
               <p className="m-0 text-yellow-800">
-                De beste keuze hangt af van je specifieke situatie. Bekijk onze 
-                <Link to="/kennisbank/wat-kost-een-airco-plaatsen" className="text-yellow-800 underline"> prijzengids</Link> voor 
+                De beste keuze hangt af van je specifieke situatie. Bekijk onze
+                <Link to="/kennisbank/wat-kost-een-airco-plaatsen" className="text-yellow-800 underline"> prijzengids</Link> voor
                 meer informatie over kosten en mogelijkheden.
               </p>
             </div>
@@ -287,7 +286,7 @@ const MitsubishiVsLgAirco = () => {
 
         <h2 id="installatie">Installatie & Onderhoud</h2>
         <p>
-          Beide merken vereisen professionele installatie en regelmatig onderhoud. 
+          Beide merken vereisen professionele installatie en regelmatig onderhoud.
           Lees meer in onze <Link to="/kennisbank/hoe-vaak-airco-onderhoud" className="text-blue-600 hover:text-blue-800">onderhoudsgids</Link>.
         </p>
 
@@ -307,7 +306,8 @@ const MitsubishiVsLgAirco = () => {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
-                  5 jaar garantie
+
+                  garantie volgens offerte
                 </li>
               </ul>
             </div>
@@ -377,7 +377,7 @@ const MitsubishiVsLgAirco = () => {
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 text-white my-12">
           <h2 className="text-white mt-0">Persoonlijk Advies?</h2>
           <p className="text-blue-100 mb-6">
-            Wil je weten welk merk en model het beste bij jouw situatie past? 
+            Wil je weten welk merk en model het beste bij jouw situatie past?
             Onze experts helpen je graag met een persoonlijk advies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">

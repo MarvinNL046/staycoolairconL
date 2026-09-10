@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, XCircle, Euro, Zap, TrendingDown, Activity, Phone, Calculator, ThermometerSun } from 'lucide-react';
+import { CheckCircle,XCircle,Euro,Zap,TrendingDown,Activity,Phone,Calculator,ThermometerSun } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
@@ -16,7 +15,7 @@ const InverterVsOnOffAirco = () => {
   const usps = [
     {
       icon: <Euro className="h-12 w-12 text-sky-500" />,
-      title: "60% Energiebesparing",
+      title: "situatieafhankelijke besparing",
       description: "Inverter airco's verbruiken 40-60% minder energie dan on-off"
     },
     {
@@ -75,7 +74,7 @@ const InverterVsOnOffAirco = () => {
   const faqs = [
     {
       question: "Wat is het verschil tussen inverter en on-off airco?",
-      answer: "Een on-off airco werkt met vaste snelheid: 100% aan of 100% uit. Dit veroorzaakt temperatuurschommelingen en hoog verbruik. Een inverter airco past de compressorsnelheid continu aan (10-100%) om de exacte temperatuur te handhaven. Dit resulteert in 40-60% energiebesparing, stabiele temperatuur en stiller gebruik."
+      answer: "Een on-off airco werkt met vaste snelheid: 100% aan of 100% uit. Dit veroorzaakt temperatuurschommelingen en hoog verbruik. Een inverter airco past de compressorsnelheid continu aan (10-100%) om de exacte temperatuur te handhaven. Dit resulteert in situatieafhankelijke besparing, stabiele temperatuur en stiller gebruik."
     },
     {
       question: "Hoeveel kan ik besparen met een inverter airco?",
@@ -110,8 +109,8 @@ const InverterVsOnOffAirco = () => {
   return (
     <>
       <MetaTags
-        title="Inverter vs On-off Airco | 60% Energiebesparing | StayCool Limburg"
-        description="Inverter vs on-off airco ✓ 60% besparing ✓ Stabiele temperatuur ✓ 30% langere levensduur ✓ Stiller ✓ Complete vergelijking ✓ Expert advies Limburg"
+        title="Inverter vs On-off Airco | situatieafhankelijke besparing | StayCool Limburg"
+        description="Inverter vs on-off airco ✓ situatieafhankelijke besparing ✓ Stabiele temperatuur ✓ 30% langere levensduur ✓ Stiller ✓ Complete vergelijking ✓ Expert advies Limburg"
       />
 
       <SchemaMarkup
@@ -142,7 +141,8 @@ const InverterVsOnOffAirco = () => {
       <section className="bg-gradient-to-br from-sky-400 to-sky-500 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Inverter vs On-off Airco: 60% Energiebesparing
+
+            Inverter vs On-off Airco: situatieafhankelijke besparing
           </h1>
           <p className="text-xl md:text-2xl text-sky-50 mb-8 max-w-3xl">
             Inverter airco's verbruiken 40-60% minder energie, werken stiller en gaan 30% langer mee. Ontdek waarom inverter technologie de beste investering is.
@@ -173,7 +173,7 @@ const InverterVsOnOffAirco = () => {
             {usps.map((usp, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
                 <div className="flex justify-center mb-4">{usp.icon}</div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}
@@ -664,10 +664,12 @@ const InverterVsOnOffAirco = () => {
       <section className="py-16 bg-gradient-to-br from-sky-500 to-sky-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Klaar voor 60% Energiebesparing?
+
+            Klaar voor situatieafhankelijke besparing?
           </h2>
           <p className="text-xl mb-8 text-sky-50">
-            Investeer in inverter technologie en bespaar jarenlang op uw energierekening. StayCool Airco installeert uitsluitend hoogwaardige inverter systemen met 10 jaar garantie.
+
+            Investeer in inverter technologie en bespaar jarenlang op uw energierekening. StayCool Airco installeert uitsluitend hoogwaardige inverter systemen met garantie volgens offerte.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

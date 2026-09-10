@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calculator, CheckCircle, Euro, Phone, Mail, Zap, TrendingDown, ThermometerSun, Wind, Sun, Snowflake } from 'lucide-react';
+import { Calculator,CheckCircle,Euro,Phone,Mail,Zap,TrendingDown,ThermometerSun,Snowflake } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
@@ -21,7 +21,7 @@ const AircoVerbruikskosten: React.FC = () => {
     },
     {
       icon: <TrendingDown className="h-12 w-12 text-sky-500" />,
-      title: "60% Besparing Verwarmen",
+      title: "situatieafhankelijke besparing Verwarmen",
       description: "Warmtepomp-airco verbruikt 60% minder dan elektrische verwarming."
     },
     {
@@ -213,7 +213,7 @@ const AircoVerbruikskosten: React.FC = () => {
     },
     {
       question: "Wat kosten airco's aan elektriciteit per jaar?",
-      answer: "Bij gemiddeld gebruik (900-1200 uur per jaar voor koelen en verwarmen) kost een airco €180-400 per jaar aan elektriciteit, afhankelijk van capaciteit, gebruik en tarief. Een 2.5 kW unit kost circa €200-280/jaar, een 3.5 kW unit €280-380/jaar, en een 5.0 kW unit €380-520/jaar. Dit is inclusief zowel koelen in de zomer als verwarmen in voor-/naseizoen. Belangrijk: wanneer u de airco gebruikt ter vervanging van elektrische verwarming, bespaart u 60% op verwarmingskosten, waardoor netto kosten vaak lager zijn."
+      answer: "Bij gemiddeld gebruik (900-1200 uur per jaar voor koelen en verwarmen) kost een airco €180-400 per jaar aan elektriciteit, afhankelijk van capaciteit, gebruik en tarief. Een 2.5 kW unit kost circa €200-280/jaar, een 3.5 kW unit €280-380/jaar, en een 5.0 kW unit €380-520/jaar. Dit is inclusief zowel koelen in de zomer als verwarmen in voor-/naseizoen. Belangrijk: wanneer u de airco gebruikt ter vervanging van elektrische verwarming, kunt u mogelijk besparen op uw verwarmingskosten, waardoor netto kosten vaak lager zijn."
     },
     {
       question: "Is een airco goedkoper of duurder dan verwarmen met gas?",
@@ -221,11 +221,11 @@ const AircoVerbruikskosten: React.FC = () => {
     },
     {
       question: "Hoeveel bespaar ik door airco als verwarming te gebruiken?",
-      answer: "Vergeleken met elektrische verwarming bespaart u 60% op verwarmingskosten. Een elektrische kachel kost €650/jaar voor dezelfde warmte die een airco levert voor €240/jaar - een besparing van €410 per jaar. Vergeleken met infraroodpanelen bespaart u €310/jaar. Alleen gasverwarming is goedkoper in directe kosten (€180 verschil/jaar), maar u heeft dan ook geen koeling in de zomer en mist u de mogelijkheid eigen zonnestroom slim te benutten. Over 10 jaar bespaart u €4.100 ten opzichte van elektrische verwarming."
+      answer: "Vergeleken met elektrische verwarming kunt u mogelijk besparen op uw verwarmingskosten. Een elektrische kachel kost €650/jaar voor dezelfde warmte die een airco levert voor €240/jaar - een besparing van €410 per jaar. Vergeleken met infraroodpanelen bespaart u €310/jaar. Alleen gasverwarming is goedkoper in directe kosten (€180 verschil/jaar), maar u heeft dan ook geen koeling in de zomer en mist u de mogelijkheid eigen zonnestroom slim te benutten. Over 10 jaar bespaart u €4.100 ten opzichte van elektrische verwarming."
     },
     {
       question: "Kan ik mijn elektriciteitskosten voor airco verlagen?",
-      answer: "Ja, aanzienlijk! Volg deze tips: 1) Filters maandelijks reinigen (15% besparing), 2) Jaarlijks professioneel onderhoud (15-20%), 3) Temperatuur optimaal instellen: 22-24°C verwarmen, 24-26°C koelen (15-18% per graad), 4) Timer/nachtstand gebruiken (18-25%), 5) Deuren en ramen dicht tijdens gebruik (15-22%), 6) Zonwering tijdens hitte (10-15%), 7) Eco-modus waar mogelijk (8-12%). Door alle tips te combineren kunt u 40-60% besparen op de basis verbruikskosten, wat €120-200/jaar oplevert."
+      answer: "Ja, aanzienlijk! Volg deze tips: 1) Filters maandelijks reinigen (situatieafhankelijke besparing), 2) Jaarlijks professioneel onderhoud (15-20%), 3) Temperatuur optimaal instellen: 22-24°C verwarmen, 24-26°C koelen (15-18% per graad), 4) Timer/nachtstand gebruiken (18-25%), 5) Deuren en ramen dicht tijdens gebruik (15-22%), 6) Zonwering tijdens hitte (10-15%), 7) Eco-modus waar mogelijk (8-12%). Door alle tips te combineren kunt u 40-60% besparen op de basis verbruikskosten, wat €120-200/jaar oplevert."
     },
     {
       question: "Verbruikt een inverter airco minder dan een gewone airco?",
@@ -233,7 +233,7 @@ const AircoVerbruikskosten: React.FC = () => {
     },
     {
       question: "Wat is SEER en SCOP en hoe beïnvloedt dit mijn kosten?",
-      answer: "SEER (Seasonal Energy Efficiency Ratio) meet koelefficiency, SCOP (Seasonal Coefficient of Performance) meet verwarmingsefficiency. Hoe hoger, hoe efficiënter en goedkoper. SEER 6.0 betekent 6 kW koeling uit 1 kW stroom, SCOP 4.0 betekent 4 kW warmte uit 1 kW stroom. Verschil tussen A+ (SCOP 3.0) en A+++ (SCOP 4.5): bij A+ kost verwarmen €0.43/uur, bij A+++ €0.29/uur - een besparing van 33% (€100/jaar). Premium merken zoals Daikin Perfera en Mitsubishi Heavy scoren SCOP 4.5-5.0, wat de hoogste efficiency en laagste kosten oplevert."
+      answer: "SEER (Seasonal Energy Efficiency Ratio) meet koelefficiency, SCOP (Seasonal Coefficient of Performance) meet verwarmingsefficiency. Hoe hoger, hoe efficiënter en goedkoper. SEER 6.0 betekent 6 kW koeling uit 1 kW stroom, SCOP 4.0 betekent 4 kW warmte uit 1 kW stroom. Verschil tussen A+ (SCOP 3.0) en A+++ (SCOP 4.5): bij A+ kost verwarmen €0.43/uur, bij A+++ €0.29/uur - een besparing afhankelijk van gebruik en tarieven (€100/jaar). Premium merken zoals Daikin Perfera en Mitsubishi Heavy scoren SCOP 4.5-5.0, wat de hoogste efficiency en laagste kosten oplevert."
     },
     {
       question: "Hoe kan ik mijn exacte verbruikskosten berekenen?",
@@ -278,7 +278,8 @@ const AircoVerbruikskosten: React.FC = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-sky-50 mb-8 leading-relaxed">
-            Moderne airco's verbruiken €0.28-0.41 per uur en besparen 60% op verwarmingskosten. Bereken uw exacte kosten en ontdek hoe u maximaal kunt besparen.
+
+            Moderne airco's verbruiken €0.28-0.41 per uur en Bekijk de mogelijke besparing op verwarmingskosten. Bereken uw exacte kosten en ontdek hoe u maximaal kunt besparen.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -324,7 +325,7 @@ const AircoVerbruikskosten: React.FC = () => {
                 <div className="flex justify-center mb-4">
                   {usp.icon}
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}
@@ -743,7 +744,8 @@ const AircoVerbruikskosten: React.FC = () => {
             Start met Besparen op Energiekosten
           </h2>
           <p className="text-xl mb-8 text-sky-50">
-            Moderne airco's besparen tot 60% op verwarmingskosten. Ontdek hoeveel u kunt besparen.
+
+            Moderne airco's Bekijk de mogelijke besparing op verwarmingskosten. Ontdek hoeveel u kunt besparen.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

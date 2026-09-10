@@ -117,7 +117,8 @@ for (const page of pages) {
 assert(appSource.includes('servicePages.map'), 'App.tsx must map servicePages to root-level routes');
 assert(appSource.includes('ServiceLandingPage'), 'App.tsx must render ServiceLandingPage');
 assert(templateSource.includes('Ontvang vrijblijvend een offerte'), 'Template missing primary CTA');
-assert(templateSource.includes('Binnen 24 uur reactie'), 'Template missing response-time CTA');
+assert(templateSource.includes('Persoonlijk advies'), 'Template missing advice CTA');
+assert(templateSource.includes('ClusterNextStep'), 'Template missing paths to purchase and subscription hubs');
 assert(templateSource.includes('Veelgestelde vragen'), 'Template missing FAQ section');
 assert(templateSource.includes('relatedSlugs'), 'Template missing automatic related link block');
 assert(sitemapGeneratorSource.includes('getServicePages'), 'Sitemap generator must read servicePages');

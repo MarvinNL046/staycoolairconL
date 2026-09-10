@@ -136,7 +136,7 @@ Bij het bouwen van een cluster voor een nieuwe page:
 - Pillar `/airco-plaatsen-limburg` (~2.200w) — installatie-actie + Limburg-regio + Bbl 4.107-regelgeving
 - Anti-cannib: legacy `/kennisbank/airco-plaatsen-limburg` → 301 Navigate naar pillar (oude artikel-content uitgefaseerd, signalen geconsolideerd)
 - Cross-cluster links: `/airco-kopen-limburg` (cluster Limburg pillar), `/airco-service` (cluster 1 hub), `/airco-bijvullen` (cluster 1), `/airco-service-limburg` (regio-modifier), `/blog/airco-installatie-zuid-limburg` (geo-blog)
-- Anti-cannib outlinks naar bestaande deepdives: `/seo/pillar-9-kosten-prijzen/kosten-airco-plaatsen` (kosten-deepdive) + `/seo/pillar-7-technische-gidsen/airco-buitenunit-plaatsing` (regelgeving deepdive)
+- Anti-cannib outlinks naar bestaande deepdives: `/kosten-airco-plaatsen` (kosten-deepdive) + `/seo/pillar-7-technische-gidsen/airco-buitenunit-plaatsing` (regelgeving deepdive)
 
 **Cluster 5 differentiator:** enige page in deze SERP die per Limburgse gemeente onderscheid maakt (Maastricht beschermd stadsgezicht ≠ Sittard/Heerlen/Roermond standaard vergunningvrij) + concrete **Bbl 4.107** geluidsnorm 45 dB(A) overdag / 40 dB(A) 's nachts op erfgrens (sinds 1 jan 2024). Concurrenten blijven generiek. Bron: IPLO + Omgevingsloket. Gecombineerd met StayCool's USP-stem (Marvin + vaste monteur Danny + 1.000+ installaties + €1.600 startprijs uit `references/stats.md`).
 
@@ -226,3 +226,23 @@ Pattern: `airco installatie [stad]` als primary, plus 4–5 same-intent secondar
 - [ ] Voeg same-intent-secondaries toe per primary (nu nog onvolledig)
 - [ ] Markeer welke pages echt live zijn vs. nog placeholder (route bestaat in code, page niet geschreven)
 - [ ] Identificeer mogelijke cannibalisatie: bv. `/airco` vs. `/products/[merk]` — zelfde intent?
+
+## Kostencluster — lokale update 10 september 2026
+
+- Primair: kosten airco plaatsen / wat kost een airco inclusief installatie.
+- Voorkeurs-URL: `/kosten-airco-plaatsen` (bestaand adres behouden).
+- Status: lokaal vernieuwd en gecontroleerd, nog niet gepubliceerd.
+- Intentie: MOFU; concrete prijsvoorbeelden voor één, twee en drie ruimtes, inclusief btw, installatie en materialen.
+- Secondair: airco montage kosten, single-split prijs, duo-split prijs, triple-split prijs. Geen apart zoekvolume geclaimd.
+- Bron prioriteit: opgeslagen GSC-pagina-export (179 klikken, 47.528 vertoningen in eerdere driemaandsmeting) en gecontroleerde Cashflow-catalogusregels van 10 september 2026.
+- BOFU blijft `/airco-kopen-limburg`: modelselectie en offerte. Productpagina's bedienen de merk/modelintentie.
+- Exacte legacy-kopie `/seo/pillar-9-kosten-prijzen/kosten-airco-plaatsen` wordt permanent doorverwezen; verwijderd uit sitemaps en interne verwijzing gecorrigeerd.
+- Overige prijsroutes worden pas samengevoegd na query × pagina-analyse; deze update stelt geen bewezen cannibalisatie vast voor die routes.
+
+## Splitvergelijking — lokale update 10 september 2026
+
+- Primair: single-split of multi-split airco; secondair: mono-split versus multi-split, airco één of meerdere ruimtes, later uitbreiden.
+- Bestaande URL behouden: `/seo/pillar-8-vergelijkingen/mono-split-vs-multi-split`.
+- MOFU: praktische systeemkeuze. Kostenpagina beheert prijsintentie; koop- en productpagina's bedienen de offerte/modelkeuze.
+- Bestaande GSC-export: 58 klikken, 4.343 vertoningen. Geen nieuwe zoekvolumes of bewezen cannibalisatie geclaimd.
+- Status: lokaal vernieuwd, prijsvoorbeelden uit gecontroleerde Cashflow-regels; HTML vooraf gerenderd en browser-CTA's getest. Niet gepubliceerd.

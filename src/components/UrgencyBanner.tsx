@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { X, Clock, Zap, Calendar } from 'lucide-react';
+import { useState,useEffect } from 'react';
+import { X,Clock,Zap,Calendar } from 'lucide-react';
 import { trackEvent } from '../utils/analytics';
 
 interface UrgencyBannerProps {

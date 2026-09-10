@@ -1,4 +1,4 @@
-import { GtagEventParams, GtagFunction } from '../types/gtag';
+import { GtagEventParams,GtagFunction } from '../types/gtag';
 
 declare global {
   interface Window {
@@ -14,7 +14,7 @@ declare global {
       ) => any;
     };
     clarity?: {
-      (action: string, ...args: any[]): void;
+      (action: string, ..._args: any[]): void;
       q?: any[];
     };
   }
@@ -23,7 +23,7 @@ declare global {
 export function initAnalytics() {
   // Initialize dataLayer
   window.dataLayer = window.dataLayer || [];
-  const gtag: GtagFunction = function(...args: any[]) {
+  const gtag: GtagFunction = function(..._args: any[]) {
     window.dataLayer.push(arguments);
   } as GtagFunction;
   window.gtag = gtag;
@@ -106,10 +106,10 @@ export function initAnalytics() {
     const clarityId = "tfbd5a2vc8"; // Your Clarity project ID
     try {
       // Create Clarity function
-      (function(c: any, l: any, a: string, r: string, i: string, t: any, y: any){
+      (function(c: any, l: any, a: string, r: string, i: string){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        const t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        const y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", clarityId);
       console.log('Microsoft Clarity initialized with ID:', clarityId);
     } catch (error) {

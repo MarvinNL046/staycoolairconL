@@ -59,6 +59,7 @@ function getServicePages() {
 }
 
 function shouldIndexRoute(routePath) {
+  if (routePath === '/seo/pillar-9-kosten-prijzen/kosten-airco-plaatsen') return false;
   if (!routePath) return false;
   if (routePath.includes(':') || routePath.includes('*')) return false;
   if (routePath.includes('/noindex/')) return false;

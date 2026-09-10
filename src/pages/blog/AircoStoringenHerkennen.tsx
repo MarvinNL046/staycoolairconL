@@ -1,4 +1,4 @@
-import React from 'react';
+import MaintenanceNextStep from '../../components/MaintenanceNextStep';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -389,7 +389,7 @@ export default function AircoStoringenHerkennen() {
               </div>
 
               <div className="not-prose bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r my-6">
-                <h4 className="font-bold text-amber-900 mb-2">Waarom geen fix-instructies per code?</h4>
+                <h3 className="font-bold text-amber-900 mb-2">Waarom geen fix-instructies per code?</h3>
                 <p className="text-sm text-gray-700 m-0">
                   Veel "doe-het-zelf oplossingen" op internet adviseren om de unit te resetten door de stekker eruit te
                   trekken. Dat kan helpen bij een tijdelijke communicatiefout, maar bij een échte storing (druk,
@@ -409,7 +409,7 @@ export default function AircoStoringenHerkennen() {
 
               <div className="not-prose grid md:grid-cols-2 gap-4 my-6">
                 <div className="bg-green-50 border-l-4 border-green-500 p-5 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-3">Dit mag u zelf doen</h4>
+                  <h3 className="font-bold text-green-900 mb-3">Dit mag u zelf doen</h3>
                   <ul className="text-sm text-gray-700 space-y-2 mb-0">
                     <li><strong>Filters uitnemen en uitspoelen</strong> met lauw water + mild afwasmiddel, laten drogen,
                         terugplaatsen. Eens per 2 maanden.</li>
@@ -423,7 +423,7 @@ export default function AircoStoringenHerkennen() {
                   </ul>
                 </div>
                 <div className="bg-red-50 border-l-4 border-red-500 p-5 rounded-r">
-                  <h4 className="font-bold text-red-900 mb-3">Altijd monteur (wettelijk verplicht)</h4>
+                  <h3 className="font-bold text-red-900 mb-3">Altijd monteur (wettelijk verplicht)</h3>
                   <ul className="text-sm text-gray-700 space-y-2 mb-0">
                     <li><strong>Alles met koudemiddel / F-gas</strong> — bijvullen, leksporen, afpompen. Wettelijk
                         alleen toegestaan voor gecertificeerden.</li>
@@ -567,42 +567,42 @@ export default function AircoStoringenHerkennen() {
 
               <div className="not-prose space-y-4 my-6">
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">1. Filters elke 2 maanden uitspoelen</h4>
+                  <h3 className="font-bold text-green-900 mb-1">1. Filters elke 2 maanden uitspoelen</h3>
                   <p className="text-sm text-gray-700 m-0">
                     De belangrijkste preventieve actie. Vies filter = minder koeling, hoger verbruik, snellere slijtage.
                     Kosten: €0. Tijd: 10 minuten.
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">2. Jaarlijks professioneel onderhoud</h4>
+                  <h3 className="font-bold text-green-900 mb-1">2. Jaarlijks professioneel onderhoud</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Buitenunit chemisch reinigen, drukcontrole, elektrische check, condensaatafvoer doorspuiten.
                     Verlengt levensduur met gemiddeld 3–5 jaar.
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">3. Buitenunit vrijhouden</h4>
+                  <h3 className="font-bold text-green-900 mb-1">3. Buitenunit vrijhouden</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Minimaal 30 cm rond de unit geen bladeren, takken of schuttingen. Een unit tegen een muur gedrukt
                     verbruikt 10–15% meer stroom.
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">4. In winter niet volledig uitschakelen</h4>
+                  <h3 className="font-bold text-green-900 mb-1">4. In winter niet volledig uitschakelen</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Laat de vorstbeveiliging staan. Dit voorkomt condensatie en bevriezing van het koelcircuit. Verbruik
                     standby &lt; €3 per jaar.
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">5. Setpoint rustig kiezen</h4>
+                  <h3 className="font-bold text-green-900 mb-1">5. Setpoint rustig kiezen</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Extreme setpoints (18°C koelen of 26°C verwarmen) laten de compressor uren op maximaal draaien.
                     Comfortabele waardes (22–24°C koelen, 19–21°C verwarmen) sparen de machine.
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">6. Afstandsbediening-instellingen controleren</h4>
+                  <h3 className="font-bold text-green-900 mb-1">6. Afstandsbediening-instellingen controleren</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Veel "storingen" blijken verkeerde modus (dry/fan i.p.v. cool), verkeerde setpoint of een
                     kindersloten-toggle. Check altijd eerst het display.
@@ -744,6 +744,7 @@ export default function AircoStoringenHerkennen() {
                 </Link>
               </div>
 
+              <MaintenanceNextStep serviceFirst />
               {/* ==================== RELATED ==================== */}
               <h2>Verder lezen</h2>
               <ul>

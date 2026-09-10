@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { aircoCoverData } from '../data/brands/airco-covers';
+import { productData } from '../data/products';
 import Breadcrumbs from '../components/Breadcrumbs';
-import StripeBuyButton from '../components/StripeBuyButton';
+import Contact from '../components/Contact';
 import ProductCarousel from '../components/ProductCarousel';
 import { Check } from 'lucide-react';
+const aircoCoverData = productData.brands.find(b => b.name === 'Airco Bescherming/Omkasting')!;
 
 export default function AircoCovers() {
   const [selectedModel, setSelectedModel] = useState(aircoCoverData.models[0]);
@@ -26,7 +27,7 @@ export default function AircoCovers() {
         <link rel="canonical" href="https://staycoolairco.nl/products/airco-covers" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
+      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24 break-words">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto lg:max-w-none">
             <Breadcrumbs items={breadcrumbItems} />
@@ -80,14 +81,13 @@ export default function AircoCovers() {
                       <div className="text-center py-4">
                         <div className="text-sm text-gray-600 mb-1">Prijs</div>
                         <div className="text-3xl font-bold text-blue-600">
-                          € {selectedModel.price}
+                          {selectedModel.price}
                         </div>
                       </div>
                     )}
                     
-                    {selectedModel.stripeBuyUrl && (
-                      <StripeBuyButton url={selectedModel.stripeBuyUrl} />
-                    )}
+                    <p className="text-sm text-gray-600">We controleren de afmetingen en geschiktheid voor uw buitenunit en bevestigen de prijs in uw offerte.</p>
+                    <a href="#contact-aanvraag" className="block rounded-lg bg-blue-700 px-4 py-3 text-center font-semibold text-white">Vraag een prijsopgave aan</a>
                   </div>
                 </div>
               </div>
@@ -100,6 +100,7 @@ export default function AircoCovers() {
                   <button
                     key={model.slug}
                     onClick={() => setSelectedModel(model)}
+                    aria-pressed={selectedModel.slug === model.slug}
                     className={`p-4 rounded-lg border-2 transition-all duration-200 ${
                       selectedModel.slug === model.slug
                         ? 'border-blue-600 bg-blue-50'
@@ -113,7 +114,7 @@ export default function AircoCovers() {
                     />
                     <p className="text-sm font-medium text-gray-900 line-clamp-2">{model.name}</p>
                     {model.price && (
-                      <p className="text-sm text-blue-600">€ {model.price}</p>
+                      <p className="text-sm text-blue-600">{model.price}</p>
                     )}
                   </button>
                 ))}
@@ -145,6 +146,7 @@ export default function AircoCovers() {
           </div>
         </div>
       </div>
+      <Contact inquiryContext={`${selectedModel.name} — prijs op aanvraag`} />
     </>
   );
 }

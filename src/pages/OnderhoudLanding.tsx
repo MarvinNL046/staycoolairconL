@@ -1,6 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, CheckCircle, Shield, Clock, Wrench } from 'lucide-react';
+import { Phone,Mail,CheckCircle,Shield,Clock,Wrench } from 'lucide-react';
 import { trackInteraction } from '../utils/analytics';
 
 export default function OnderhoudLanding() {
@@ -21,9 +20,9 @@ export default function OnderhoudLanding() {
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Heading */}
           <div className="mb-8 text-center">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
               Professioneel Airco <span className="text-orange-400">Onderhoud</span>
-            </h2>
+            </h1>
             <p className="text-xl sm:text-2xl text-gray-200 max-w-2xl mx-auto">
               Houd uw airconditioning in topconditie voor optimale prestaties en een langere levensduur
             </p>
@@ -164,15 +163,15 @@ export default function OnderhoudLanding() {
         </div>
       </section>
 
-      {/* Static H1 Section - Critical for SEO with beautiful sky gradient! ☁️ */}
+      {/* Local service introduction ☁️ */}
       <section className="py-16 bg-gradient-to-br from-sky-50 to-blue-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
             Airco Onderhoud Limburg
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-sky-500 mt-2">
               Professioneel & Betrouwbaar Service
             </span>
-          </h1>
+          </h2>
           <p className="text-xl sm:text-2xl text-gray-700 max-w-4xl mx-auto mb-8">
             StayCool Airco is uw <strong className="text-blue-600">F-gassen gecertificeerde specialist</strong> voor professioneel airco onderhoud.
             Voorkom storingen en verleng de levensduur van uw airconditioning.

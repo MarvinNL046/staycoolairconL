@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Wifi, CheckCircle, Smartphone, Clock, TrendingDown, Home, Zap, Award, Phone, Mail, Calendar, Settings } from 'lucide-react';
+import { Wifi,CheckCircle,Smartphone,Clock,TrendingDown,Home,Zap,Phone,Mail,Settings } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const AircoWifiBediening = () => {
   const breadcrumbItems = [
@@ -22,7 +20,7 @@ const AircoWifiBediening = () => {
     },
     {
       icon: <TrendingDown className="h-12 w-12 text-sky-500" />,
-      title: "20-30% Besparing",
+      title: "situatieafhankelijke besparing",
       description: "Slimme planning en automatisering reduceert energiekosten aanzienlijk"
     },
     {
@@ -181,7 +179,7 @@ const AircoWifiBediening = () => {
       scenario: "Geofencing Automatisering",
       setup: "Stel geofencing zone in rond uw huis (500m-2km radius)",
       automation: "Airco schakelt automatisch aan bij betreden zone, uit bij verlaten",
-      benefit: "25-35% energiebesparing door alleen koelen/verwarmen bij aanwezigheid"
+      benefit: "situatieafhankelijke besparing door alleen koelen/verwarmen bij aanwezigheid"
     },
     {
       scenario: "Weerintegratie",
@@ -199,7 +197,7 @@ const AircoWifiBediening = () => {
       scenario: "Multi-room Intelligentie",
       setup: "Multi-split systeem met aanwezigheidsdetectie per kamer",
       automation: "Alleen actief koelen/verwarmen in bezette kamers, automatische aanpassing",
-      benefit: "30-45% energiebesparing vergeleken met continue koeling alle kamers"
+      benefit: "situatieafhankelijke besparing vergeleken met continue koeling alle kamers"
     }
   ];
 
@@ -210,7 +208,7 @@ const AircoWifiBediening = () => {
     },
     {
       question: "Hoeveel kan ik besparen met slimme WiFi bediening?",
-      answer: "Realistische besparingen door WiFi bediening liggen tussen 20-35% op jaarlijkse energiekosten, afhankelijk van gebruikssituatie en toegepaste functies. Hier is de breakdown: Automatisch uitschakelen bij afwezigheid bespaart 15-25% - zonder WiFi laten mensen de airco vaak onnodig aanstaan bij vertrek, met WiFi schakelt geofencing of handmatige remote controle dit uit. Optimale temperaturen (1°C verschil = 6-8% energiebesparing) - slimme planning voorkomt te lage instellingen en past temperatuur aan tijdens slaap/afwezigheid. Schema-gebaseerde werking bespaart 10-20% - airco draait alleen tijdens geplande periodes in plaats van preventief continu. Energiemonitoring en bewustwording reduceert verspilling met 5-15% - realtime verbruiksinzicht motiveert gebruikers tot efficiënter gedrag. Voor een gemiddeld gezin met €500-600 jaarlijkse airco-kosten betekent 25-30% besparing €125-180 per jaar. De investering in WiFi-functionaliteit (meestal €80-150 voor nachrüst module, of gratis bij nieuwe units) verdient zich binnen 1-2 jaar terug. Maximale besparing (30-35%) vereist wel actief gebruik van functies: regelmatig schema's aanpassen, geofencing activeren, energie-dashboard controleren en temperaturen optimaliseren. Passief gebruik (alleen remote aan/uit) levert 10-15% besparing. Voor zakelijke toepassingen en multi-room systemen kunnen besparingen oplopen tot 40-50% door geavanceerde automatisering en zone-controle."
+      answer: "Realistische besparingen door WiFi bediening liggen tussen 20-35% op jaarlijkse energiekosten, afhankelijk van gebruikssituatie en toegepaste functies. Hier is de breakdown: Automatisch uitschakelen bij afwezigheid bespaart 15-25% - zonder WiFi laten mensen de airco vaak onnodig aanstaan bij vertrek, met WiFi schakelt geofencing of handmatige remote controle dit uit. Optimale temperaturen (1°C verschil = situatieafhankelijke besparing) - slimme planning voorkomt te lage instellingen en past temperatuur aan tijdens slaap/afwezigheid. Schema-gebaseerde werking bespaart 10-20% - airco draait alleen tijdens geplande periodes in plaats van preventief continu. Energiemonitoring en bewustwording reduceert verspilling met 5-15% - realtime verbruiksinzicht motiveert gebruikers tot efficiënter gedrag. Voor een gemiddeld gezin met €500-600 jaarlijkse airco-kosten betekent situatieafhankelijke besparing €125-180 per jaar. De investering in WiFi-functionaliteit (meestal €80-150 voor nachrüst module, of gratis bij nieuwe units) verdient zich binnen 1-2 jaar terug. Maximale besparing (30-35%) vereist wel actief gebruik van functies: regelmatig schema's aanpassen, geofencing activeren, energie-dashboard controleren en temperaturen optimaliseren. Passief gebruik (alleen remote aan/uit) levert situatieafhankelijke besparing. Voor zakelijke toepassingen en multi-room systemen kunnen besparingen oplopen tot 40-50% door geavanceerde automatisering en zone-controle."
     },
     {
       question: "Welke functies heeft een goede airco WiFi app?",
@@ -222,7 +220,7 @@ const AircoWifiBediening = () => {
     },
     {
       question: "Hoe stel ik slimme schema's in voor optimale besparing?",
-      answer: "Effectieve schema's balanceren comfort en energiebesparing door de airco alleen actief te laten wanneer nodig. Hier is een stap-voor-stap aanpak voor doordeweekse schema's: Ochtend (06:00-08:00) - schakel 30 min voor opstaan in op comforttemperatuur (21-23°C verwarmen, 23-24°C koelen) voor comfortabele start van de dag. Werkdag overdag (08:00-17:00) - bij niemand thuis: schakel uit of stel eco-modus in met +3°C zomer/-3°C winter om extreme temperaturen te voorkomen zonder actief te koelen. Thuiskomst (17:00-17:30) - schakel 30 min voor thuiskomst in om huis op te warmen/koelen, of gebruik geofencing voor automatische start. Avond (17:30-23:00) - normale comforttemperatuur 21-23°C met volledige werking. Slaap (23:00-06:00) - verhoog naar 24-26°C (zomer) of verlaag naar 18-20°C (winter), slaapstand zorgt voor stille werking + energiebesparing 15-25%. Weekend schema's: flexibeler omdat u vaker thuis bent, maar vermijd continu draaien - schakel uit bij activiteiten buiten. Vakantie-modus: complete uitschakeling voor optimale besparing, of minimale werking (eco-modus) om extreme temperaturen/vocht te voorkomen bij langdurige afwezigheid. Finetuning tips: start met conservatieve instellingen (minder vaak aan) en pas geleidelijk aan op basis van comfort, gebruik energiemonitoring om impact van wijzigingen te zien (lagere pieken = betere schema's), pas seizoensgebonden aan (zomer/winter schema's verschillen), en experimenteer met voorverwarmen/-koelen tijden (misschien 45 min nodig ipv 30 min voor grote ruimtes). Geavanceerde automatisering: geofencing vervangt vaste tijden - automatisch aan bij thuiskomst binnen 15 min ETA, weergestuurde aanpassingen - bij hittegolf eerder/langer koelen, voorkom extreme pieken, en multi-zone optimalisatie - alleen bezette kamers actief koelen/verwarmen (30-45% besparing). De app toont verbruikstrends - als pieken zichtbaar zijn bij ongebruikte perioden, pas schema's aan tot verbruik alleen in geplande tijden optreedt."
+      answer: "Effectieve schema's balanceren comfort en energiebesparing door de airco alleen actief te laten wanneer nodig. Hier is een stap-voor-stap aanpak voor doordeweekse schema's: Ochtend (06:00-08:00) - schakel 30 min voor opstaan in op comforttemperatuur (21-23°C verwarmen, 23-24°C koelen) voor comfortabele start van de dag. Werkdag overdag (08:00-17:00) - bij niemand thuis: schakel uit of stel eco-modus in met +3°C zomer/-3°C winter om extreme temperaturen te voorkomen zonder actief te koelen. Thuiskomst (17:00-17:30) - schakel 30 min voor thuiskomst in om huis op te warmen/koelen, of gebruik geofencing voor automatische start. Avond (17:30-23:00) - normale comforttemperatuur 21-23°C met volledige werking. Slaap (23:00-06:00) - verhoog naar 24-26°C (zomer) of verlaag naar 18-20°C (winter), slaapstand zorgt voor stille werking + besparing afhankelijk van gebruik en tarieven. Weekend schema's: flexibeler omdat u vaker thuis bent, maar vermijd continu draaien - schakel uit bij activiteiten buiten. Vakantie-modus: complete uitschakeling voor optimale besparing, of minimale werking (eco-modus) om extreme temperaturen/vocht te voorkomen bij langdurige afwezigheid. Finetuning tips: start met conservatieve instellingen (minder vaak aan) en pas geleidelijk aan op basis van comfort, gebruik energiemonitoring om impact van wijzigingen te zien (lagere pieken = betere schema's), pas seizoensgebonden aan (zomer/winter schema's verschillen), en experimenteer met voorverwarmen/-koelen tijden (misschien 45 min nodig ipv 30 min voor grote ruimtes). Geavanceerde automatisering: geofencing vervangt vaste tijden - automatisch aan bij thuiskomst binnen 15 min ETA, weergestuurde aanpassingen - bij hittegolf eerder/langer koelen, voorkom extreme pieken, en multi-zone optimalisatie - alleen bezette kamers actief koelen/verwarmen (situatieafhankelijke besparing). De app toont verbruikstrends - als pieken zichtbaar zijn bij ongebruikte perioden, pas schema's aan tot verbruik alleen in geplande tijden optreedt."
     },
     {
       question: "Kan ik mijn airco koppelen met Google Home of Alexa?",
@@ -242,7 +240,7 @@ const AircoWifiBediening = () => {
     <>
       <MetaTags
         title="Airco WiFi Bediening Limburg | Slimme Klimaatregeling | StayCool Airco"
-        description="Airco WiFi bediening ✓ Bedien overal via app ✓ 20-30% energiebesparing ✓ Slimme schema's ✓ Google Home & Alexa ✓ Gratis advies en installatie!"
+        description="Airco WiFi bediening ✓ Bedien overal via app ✓ situatieafhankelijke besparing ✓ Slimme schema's ✓ Google Home & Alexa ✓ Gratis advies en installatie!"
       />
 
       <SchemaMarkup
@@ -298,7 +296,7 @@ const AircoWifiBediening = () => {
             </div>
             <div className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />
-              <span>20-30% besparing</span>
+              <span>situatieafhankelijke besparing</span>
             </div>
             <div className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />
@@ -317,7 +315,7 @@ const AircoWifiBediening = () => {
                 <div className="flex justify-center mb-4">
                   {usp.icon}
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}
@@ -353,7 +351,8 @@ const AircoWifiBediening = () => {
               De grootste besparingen komen van slimme automatisering waarbij het systeem zelfstandig optimaliseert zonder handmatige interventie. Tijdschema's laten u automatische aan/uit cycli programmeren op basis van uw dagelijkse routine - bijvoorbeeld: airco aan om 06:30 voor comfortabele ochtend, uit om 08:00 als iedereen naar werk/school gaat, aan om 17:00 (30 min voor thuiskomst), naar eco-modus om 23:00 voor slaap. Deze schema's herhalen dagelijks automatisch en kunnen verschillend zijn voor weekdagen vs. weekend.
             </p>
             <p className="text-gray-600 mb-4">
-              Geofencing brengt automatisering naar een hoger niveau door uw smartphone-locatie te gebruiken. Wanneer u zich meer dan 2km van huis bevindt, schakelt het systeem automatisch naar eco-modus of uit. Wanneer u binnen 1km komt (ongeveer 15 minuten voor thuiskomst), schakelt het systeem in om het huis te koelen/verwarmen. Dit werkt perfect voor onregelmatige werkschema's of spontane plannen waarbij vaste tijdschema's niet optimaal zijn. Geofencing kan 25-35% energiebesparing realiseren vergeleken met handmatige bediening waarbij mensen vergeten uit te schakelen bij vertrek.
+
+              Geofencing brengt automatisering naar een hoger niveau door uw smartphone-locatie te gebruiken. Wanneer u zich meer dan 2km van huis bevindt, schakelt het systeem automatisch naar eco-modus of uit. Wanneer u binnen 1km komt (ongeveer 15 minuten voor thuiskomst), schakelt het systeem in om het huis te koelen/verwarmen. Dit werkt perfect voor onregelmatige werkschema's of spontane plannen waarbij vaste tijdschema's niet optimaal zijn. Geofencing kan situatieafhankelijke besparing realiseren vergeleken met handmatige bediening waarbij mensen vergeten uit te schakelen bij vertrek.
             </p>
             <p className="text-gray-600 mb-4">
               Geavanceerde systemen bieden AI-lerende optimalisatie waarbij het systeem uw voorkeuren leert en automatisch aanpassingen voorstelt. Na enkele weken merkt het bijvoorbeeld dat u op zondagochtenden liever 1°C warmer heeft, of dat de airco 45 minuten nodig heeft om uw grote woonkamer te koelen (niet 30 minuten), en past schema's hierop aan. Premium merken zoals Daikin en LG investeren zwaar in deze intelligente functies die het verschil maken tussen simpele remote controle en echt smart klimaatmanagement.

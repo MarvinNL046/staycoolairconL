@@ -1,7 +1,6 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, Sun, Zap, PiggyBank, LineChart, ThermometerSun, Battery } from 'lucide-react';
+import { ArrowLeft,Sun,PiggyBank,LineChart,ThermometerSun,Battery } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function PreventFeedIn() {
@@ -24,7 +23,7 @@ export default function PreventFeedIn() {
     {
       icon: LineChart,
       title: 'Hogere Besparing',
-      description: 'Bespaar tot 60% op verwarmingskosten én voorkom terugleverkosten.'
+      description: "Bekijk de mogelijke besparing op verwarmingskosten én voorkom terugleverkosten."
     }
   ];
 
@@ -40,6 +39,7 @@ export default function PreventFeedIn() {
           name="keywords" 
           content="terugleverkosten, zonnepanelen airco, energiebesparing, slim verwarmen, duurzaam verwarmen"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/terugleverkosten-voorkomen" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
@@ -81,9 +81,9 @@ export default function PreventFeedIn() {
                 className="bg-white p-6 rounded-xl shadow-lg"
               >
                 <benefit.icon className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h2 className="text-lg font-semibold text-gray-900 mb-2">
                   {benefit.title}
-                </h3>
+                </h2>
                 <p className="text-gray-600">
                   {benefit.description}
                 </p>

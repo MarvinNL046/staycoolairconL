@@ -1,7 +1,6 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, Leaf, AlertTriangle, ThermometerSun, Scale, Recycle } from 'lucide-react';
+import { ArrowLeft,Leaf,AlertTriangle,Scale } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Refrigerants() {
@@ -53,6 +52,7 @@ export default function Refrigerants() {
           name="keywords" 
           content="koudemiddel airco, R32, R410A, R290, natuurlijke koudemiddelen, F-gassen, GWP"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/koudemiddelen" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">

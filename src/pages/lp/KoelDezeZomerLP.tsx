@@ -1,5 +1,4 @@
-import React from 'react';
-import DealLPView, { DealVariant } from './DealLPView';
+import DealLPView,{ DealVariant } from './DealLPView';
 
 // Variant: hitte / pijn-hoek ("32°C binnen? Niet deze zomer.").
 const variant: DealVariant = {

@@ -1,31 +1,26 @@
-import React, { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { m } from 'framer-motion';
+import Contact from '../components/Contact';
+import { formatPrice,priceIncludingVat } from '../utils/installationPricing';
+import { useState,useEffect } from 'react';
+import { useParams,Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Phone, Check, ThermometerSun, Wind, Zap, Timer, Ruler, Info, X, Star, Calendar, Shield, ArrowRight } from 'lucide-react';
+import { Phone,Check,Wind,Zap,Timer,X,Calendar,Shield } from 'lucide-react';
 import { productData } from '../data/products';
 import ProductCarousel from '../components/ProductCarousel';
 import MetaTags from '../components/MetaTags';
 import Breadcrumbs from '../components/SEO/Breadcrumbs';
 import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
+import { matchesProductBrand,productBrandSlug } from '../utils/productBrands';
 
 export default function ProductDetail() {
   const { brand, model } = useParams();
-  const [showInstallationInfo, setShowInstallationInfo] = useState(false);
-
-  const brandData = productData.brands.find(b => {
-    if (!brand) return false;
-    if (brand === 'lg-mobiele-airco' && b.name === 'LG Mobiele Airco') return true;
-    if (brand === 'tosot-mobiele-airco' && b.name === 'Tosot Mobiele Airco') return true;
-    const brandLower = brand.toLowerCase();
-    const nameLower = b.name.toLowerCase();
-    return nameLower === brandLower ||
-      nameLower.startsWith(brandLower) ||
-      nameLower.includes(brandLower) ||
-      nameLower.replace(/ /g, '-') === brandLower ||
-      brandLower.replace(/-/g, ' ') === nameLower;
-  });
+  const [inquiry, setInquiry] = useState('');
+  useEffect(() => { setInquiry(''); }, [brand, model]);
+  useEffect(() => {
+    if (!inquiry) return;
+    const frame = requestAnimationFrame(() => document.getElementById('contact-aanvraag')?.scrollIntoView({ behavior: 'smooth' }));
+    return () => cancelAnimationFrame(frame);
+  }, [inquiry]);
+  const brandData = productData.brands.find(b => matchesProductBrand(b.name, brand));
   const modelData = brandData?.models.find(m => m.slug === model);
 
   if (!brandData || !modelData) {
@@ -40,13 +35,23 @@ export default function ProductDetail() {
   }
 
   const productImages = modelData.images || [{ url: modelData.imageUrl, alt: `${brandData.name} ${modelData.name}` }];
+  const prices = modelData.cashflowOffers?.map(p => priceIncludingVat(p.netCents,p.vatRate)/100);
+  const brandPath = productBrandSlug(brandData.name);
+  const canonicalUrl = `https://staycoolairco.nl/products/${brandPath}/${model}`;
+  const isInstalledAirco = !/AlphaESS|Omkasting|Mobiele/i.test(brandData.name);
+  const modelInquiry = `${brandData.name} ${modelData.name} — ${prices ? 'advies over de passende uitvoering' : 'prijs op aanvraag'}`;
 
   return (
-    <div className="bg-quatt-warm min-h-screen">
+    <div className="bg-quatt-warm min-h-screen break-words">
+      {prices && <Helmet><script type="application/ld+json">{JSON.stringify({
+        '@context': 'https://schema.org', '@type': 'Product', name: `${brandData.name} ${modelData.name}`,
+        offers: { '@type': 'AggregateOffer', priceCurrency: 'EUR', lowPrice: Math.min(...prices).toFixed(2), highPrice: Math.max(...prices).toFixed(2), offerCount: prices.length,
+          description: 'Complete single-split sets inclusief btw, installatie en materialen', url: canonicalUrl }
+      })}</script></Helmet>}
       <MetaTags
         title={`${brandData.name} ${modelData.name} | StayCool Airco`}
         description={modelData.description}
-        canonicalUrl={`https://staycoolairco.nl/products/${brand}/${model}`}
+        canonicalUrl={canonicalUrl}
         type="product"
         ogImage={productImages[0].url}
       />
@@ -55,8 +60,8 @@ export default function ProductDetail() {
         <Breadcrumbs
           items={[
             { name: "Producten", path: "/products" },
-            { name: brandData.name, path: `/products/${brand}` },
-            { name: modelData.name, path: `/products/${brand}/${model}` }
+            { name: brandData.name, path: `/products/${brandPath}` },
+            { name: modelData.name, path: `/products/${brandPath}/${model}` }
           ]}
         />
       </div>
@@ -73,28 +78,16 @@ export default function ProductDetail() {
 
               {/* Secondary Specs Grid (Mobile/Desktop) */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-                <SpecBadge icon={Shield} label="5 Jaar" sub="Garantie" />
+                <SpecBadge icon={Shield} label="Op maat" sub="Advies" />
                 <SpecBadge icon={Zap} label={modelData.energyLabel} sub="Energielabel" />
                 <SpecBadge icon={Wind} label={modelData.capacity} sub="Capaciteit" />
-                <SpecBadge icon={Timer} label="2 Weken" sub="Levertijd" />
+                <SpecBadge icon={Timer} label="In overleg" sub="Planning" />
               </div>
             </div>
 
             {/* Right: Product Details */}
             <div className="lg:col-span-5 space-y-10">
               <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="bg-quatt-orange text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
-                    Bestseller
-                  </span>
-                  <div className="flex text-yellow-400">
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                    <Star className="w-4 h-4 fill-current" />
-                  </div>
-                </div>
                 <h1 className="text-4xl sm:text-5xl font-extrabold text-quatt-dark mb-6 tracking-tight leading-tight">
                   {brandData.name} <span className="text-gray-400">{modelData.name}</span>
                 </h1>
@@ -103,12 +96,12 @@ export default function ProductDetail() {
                 </p>
               </div>
 
-              <div className="bg-white rounded-[2rem] p-8 border border-gray-100 shadow-xl shadow-gray-100">
+              <div className="bg-white rounded-[2rem] p-5 sm:p-8 border border-gray-100 shadow-xl shadow-gray-100">
                 <div className="mb-6">
-                  <p className="text-gray-500 font-bold text-xs uppercase tracking-widest mb-2">Vanaf prijs (All-in)</p>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-black text-quatt-dark">{modelData.price?.split(' ')[0]}</span>
-                    <span className="text-gray-400 font-bold">inclusief installatie</span>
+                  <p className="text-gray-500 font-bold text-xs uppercase tracking-widest mb-2">Prijsindicatie</p>
+                  <div className="min-w-0">
+                    <span className="text-2xl sm:text-3xl font-black text-quatt-dark">{modelData.price || 'Prijs op aanvraag'}</span>
+
                   </div>
                 </div>
 
@@ -123,12 +116,12 @@ export default function ProductDetail() {
                   ))}
                 </div>
 
-                <Button href="/contact" variant="primary" size="lg" className="w-full text-lg py-5 rounded-2xl shadow-quatt-orange/20 shadow-lg">
-                  Plan gratis adviesgesprek
+                <Button href={modelData.cashflowOffers ? '#cashflow-uitvoeringen' : '#contact-aanvraag'} variant="primary" size="lg" className="w-full text-base sm:text-lg py-5 rounded-2xl shadow-quatt-orange/20 shadow-lg whitespace-normal">
+                  {modelData.cashflowOffers ? 'Bekijk uitvoeringen en prijzen' : 'Vraag een prijsopgave aan'}
                 </Button>
 
                 <p className="text-center text-xs text-gray-400 mt-4 font-medium italic">
-                  Geen aanbetaling nodig • Betaal pas na installatie
+                  Uw offerte vermeldt de gekozen uitvoering en wat inbegrepen is.
                 </p>
               </div>
 
@@ -139,8 +132,8 @@ export default function ProductDetail() {
                     <Calendar className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="font-bold text-quatt-dark">Binnen 2 weken koud</p>
-                    <p className="text-sm text-gray-500">Snelste installatie van Limburg</p>
+                    <p className="font-bold text-quatt-dark">Planning in overleg</p>
+                    <p className="text-sm text-gray-500">We stemmen levering en eventuele installatie met u af.</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 p-5 bg-quatt-warm rounded-2xl">
@@ -165,7 +158,7 @@ export default function ProductDetail() {
             <h2 className="text-3xl font-bold text-quatt-dark mb-12 text-center tracking-tight">Technische Specificaties</h2>
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-4 border-t border-gray-100 pt-8">
               {modelData.specifications.map((spec) => (
-                <div key={spec.label} className="flex justify-between py-4 border-b border-gray-50">
+                <div key={spec.label} className="grid grid-cols-1 sm:grid-cols-2 gap-2 py-4 border-b border-gray-50 min-w-0">
                   <span className="text-gray-500 font-medium">{spec.label}</span>
                   <span className="text-quatt-dark font-bold">{spec.value}</span>
                 </div>
@@ -180,37 +173,38 @@ export default function ProductDetail() {
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-quatt-dark mb-12 text-center tracking-tight">Veelgestelde vragen</h2>
           <div className="space-y-4">
-            {brand === 'alphaess' ? (
-              <FAQItem question="Wat is de terugverdientijd?" answer="De gemiddelde terugverdientijd ligt tussen de 4 en 7 jaar, afhankelijk van uw verbruikspatroon." />
-            ) : (
-              <>
-                <FAQItem question="Is de installatie echt inbegrepen?" answer="Ja, onze prijzen zijn inclusief standaard installatie door onze gecertificeerde monteurs." />
-                <FAQItem question="Hoe stil is deze binnenunit?" answer={`Dankzij moderne inverter techniek produceert deze unit slechts ${modelData.specifications.find(s => s.label.includes('Geluids'))?.value || '19'} dB.`} />
-              </>
-            )}
+            <FAQItem question="Hoe ontvang ik een prijs voor mijn situatie?" answer="Vraag hieronder een vrijblijvende offerte aan. Het gekozen model wordt meegestuurd. Beschrijf uw wensen, zodat we de uitvoering, levering en eventuele werkzaamheden kunnen afstemmen." />
+            {prices && <FAQItem question="Wat is inbegrepen in de getoonde prijs?" answer="De prijzen bij de uitvoeringen zijn inclusief 21% btw, installatie en materialen. De offerte bevestigt de exacte plaatsing en eventuele aanvullende werkzaamheden." />}
+            {isInstalledAirco && <FAQItem question="Kan ik na aanschaf ook onderhoud regelen?" answer="Voor airco’s die StayCool heeft geplaatst, kunt u onderhoud of een onderhoudsabonnement aanvragen. Bespreek dit bij uw offerte of bekijk onze onderhoudspakketten." />}
           </div>
         </div>
       </section>
 
-      {/* Sticky Mobile CTA */}
-      <div className="fixed bottom-0 inset-x-0 p-4 bg-white/80 backdrop-blur-md border-t border-gray-100 lg:hidden z-50">
-        <div className="flex items-center justify-between gap-4">
-          <div>
-            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Totaalprijs</p>
-            <p className="text-xl font-black text-quatt-dark">{modelData.price?.split(' ')[0]}</p>
+      {modelData.cashflowOffers && <>
+        <section id="cashflow-uitvoeringen" className="mx-auto max-w-6xl px-4 py-12 scroll-mt-28">
+          <h2 className="text-2xl font-bold">Uitvoeringen en installatieprijzen</h2>
+          <p className="mt-3 text-gray-700">Prijzen per complete single-split set, inclusief 21% btw, installatie en materialen. De hieronder genoemde uitvoering en capaciteit zijn bepalend; de algemene modelspecificaties kunnen per uitvoering verschillen. Uw offerte bevestigt de plaatsing en eventuele aanvullende werkzaamheden.</p>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+            {modelData.cashflowOffers.map(offer => <article key={offer.sourceSlug} className="min-w-0 rounded-xl border bg-white p-5">
+              <h3 className="text-lg font-bold">{offer.name}</h3><p className="mt-2">{offer.configuration}</p>
+              <p className="mt-3 text-2xl font-bold text-blue-800">{formatPrice(priceIncludingVat(offer.netCents,offer.vatRate))}</p>
+              <p className="mt-1 text-sm">Inclusief btw, installatie en materialen</p>
+              <a href="#contact-aanvraag" className="mt-4 inline-block rounded-lg bg-blue-700 px-4 py-3 font-bold text-white" onClick={()=>setInquiry(offer.name+' — '+offer.configuration+' — '+formatPrice(priceIncludingVat(offer.netCents,offer.vatRate))+' incl. btw, installatie en materialen')}>Offerte voor deze uitvoering</a>
+            </article>)}
           </div>
-          <Button href="/contact" variant="primary" className="px-8 shadow-xl shadow-quatt-orange/20">
-            Adviesgesprek
-          </Button>
-        </div>
-      </div>
+          <p className="mt-4 text-sm text-gray-600">Prijspeil 10 september 2026. Kies het vermogen samen met de installateur op basis van uw woning.</p>
+        </section>
+      </>}
+      {isInstalledAirco && <div className="mx-auto max-w-6xl px-4 pb-8"><Link to="/onderhoud" className="font-semibold text-blue-700 underline">Onderhoud en abonnementen voor uw door StayCool geplaatste airco</Link></div>}
+      <Contact inquiryContext={inquiry || modelInquiry} />
+
     </div>
   );
 }
 
 function SpecBadge({ icon: Icon, label, sub }: { icon: any, label: string, sub: string }) {
   return (
-    <div className="bg-white rounded-3xl p-5 border border-gray-100 text-center shadow-sm">
+    <div className="bg-white rounded-3xl p-3 sm:p-5 border border-gray-100 text-center shadow-sm min-w-0">
       <div className="w-10 h-10 rounded-full bg-quatt-warm flex items-center justify-center text-quatt-orange mx-auto mb-3">
         <Icon className="w-5 h-5" />
       </div>

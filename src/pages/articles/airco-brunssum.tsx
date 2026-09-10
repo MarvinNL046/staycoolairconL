@@ -1,8 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { m } from 'framer-motion';
-import { Phone, Mail, MapPin, ThermometerSun, Award, Clock } from 'lucide-react';
+import { Phone,Mail,MapPin,ThermometerSun,Award,Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AircoBrunssum() {
@@ -23,6 +22,7 @@ export default function AircoBrunssum() {
           name="keywords" 
           content="airco brunssum, airconditioning brunssum, airco installatie brunssum, airco onderhoud brunssum, klimaatbeheersing brunssum"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/airco-brunssum" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
@@ -72,7 +72,7 @@ export default function AircoBrunssum() {
                   <li>✓ F-gassen gecertificeerd</li>
                   <li>✓ <Link to="/kennisbank/scop-4-6" className="text-blue-600 hover:text-blue-700">Hoge SCOP waarden</Link></li>
                   <li>✓ Erkend installateur</li>
-                  <li>✓ 5 jaar garantie</li>
+                  <li>✓ garantie volgens offerte</li>
                 </ul>
               </div>
 

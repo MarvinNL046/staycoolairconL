@@ -1,4 +1,3 @@
-import React from 'react';
 import TopListTemplate from '../../components/templates/TopListTemplate';
 import { aircoProducts } from '../../data/aircoProducts';
 

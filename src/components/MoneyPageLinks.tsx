@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { primaryMoneyPageLinks, type MoneyPageLink } from '../data/moneyPageLinks';
+import { primaryMoneyPageLinks,type MoneyPageLink } from '../data/moneyPageLinks';
 
 interface MoneyPageLinksProps {
   title?: string;
@@ -31,9 +31,9 @@ export default function MoneyPageLinks({
             <Link
               key={link.path}
               to={link.path}
-              className="group rounded-3xl border border-gray-100 bg-[#f7f3ec] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-quatt-orange/30 hover:shadow-xl"
+              className="group min-w-0 rounded-3xl border border-gray-100 bg-[#f7f3ec] p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-quatt-orange/30 hover:shadow-xl"
             >
-              <h3 className="mb-3 text-xl font-black text-quatt-dark">{link.title}</h3>
+              <h3 className="mb-3 break-words text-xl font-black text-quatt-dark">{link.title}</h3>
               <p className="mb-6 text-sm leading-6 text-gray-600">{link.description}</p>
               <span className="inline-flex items-center text-sm font-black text-quatt-orange">
                 Bekijk pagina

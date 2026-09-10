@@ -1,15 +1,13 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState,useCallback,useEffect } from 'react';
 import { sendEmail } from '../../utils/email';
 import { trackEvent } from '../../utils/analytics';
-import { isBusinessOpen, getNextOpeningTime, getBusinessHoursText } from '../../utils/businessHours';
-import type { 
-  ChatbotMessage, 
-  ChatbotState, 
-  ChatbotFlow, 
-  SalesStep, 
-  SupportStep,
-  QuickReply,
-  ContactData 
+import { isBusinessOpen,getNextOpeningTime } from '../../utils/businessHours';
+import type {
+ChatbotMessage,
+ChatbotState,SalesStep,
+SupportStep,
+QuickReply,
+ContactData
 } from './types';
 
 // LocalStorage key
@@ -18,7 +16,7 @@ const CHAT_STORAGE_KEY = 'staycool_chatbot_state';
 // Load state from localStorage
 const loadStateFromStorage = (): ChatbotState => {
   try {
-    const stored = localStorage.getItem(CHAT_STORAGE_KEY);
+    const stored = typeof localStorage === 'undefined' ? null : localStorage.getItem(CHAT_STORAGE_KEY);
     if (stored) {
       const parsed = JSON.parse(stored);
       // Convert timestamp strings back to Date objects
@@ -280,7 +278,7 @@ export const useChatbot = () => {
           
           // Add specific info about home batteries if interested
           if (value === 'battery' || value === 'both') {
-            message = "Uitstekende keuze! 🔋 Met een AlphaESS thuisbatterij kun je:\n\n• Tot 40% besparen op je energierekening\n• Profiteren van dynamische energieprijzen\n• 10 jaar garantie of 10.000 cycli\n• Terugverdientijd van 4-7 jaar\n• 21% BTW terugkrijgen met hulp van AlphaESS\n\n";
+            message = "Met een thuisbatterij kun je zonnestroom bewaren voor later gebruik. De passende capaciteit, kosten en mogelijke besparing hangen af van jouw verbruik en contract. Btw-teruggave is alleen onder voorwaarden mogelijk. We bekijken graag jouw situatie.\n\n";
           }
           
           message += isBusinessOpen() 

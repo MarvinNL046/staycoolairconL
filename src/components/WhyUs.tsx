@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Award, Clock, ThumbsUp, Banknote } from 'lucide-react';
+import { Award,Clock,ThumbsUp,Banknote } from 'lucide-react';
 import Card from './ui/Card';
 
 export default function WhyUs() {
@@ -12,13 +11,13 @@ export default function WhyUs() {
     },
     {
       icon: Clock,
-      title: 'Binnen 2 weken',
-      description: 'Geen lange wachttijden. Wij installeren vaak al binnen 2 weken na goedkeuring van de offerte.'
+      title: 'Planning in overleg',
+      description: 'Wij bespreken de werkzaamheden en stemmen de installatiedatum met u af.'
     },
     {
       icon: ThumbsUp,
-      title: '5 Jaar Garantie',
-      description: 'Standaard 5 jaar garantie op zowel de airco als de installatie bij jaarlijks onderhoud.'
+      title: 'Duidelijke garantievoorwaarden',
+      description: 'Uw offerte beschrijft welke garantievoorwaarden gelden voor het gekozen toestel en het installatiewerk.'
     },
     {
       icon: Banknote,

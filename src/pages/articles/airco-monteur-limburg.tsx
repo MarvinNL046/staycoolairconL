@@ -1,8 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { m } from 'framer-motion';
-import { Phone, Mail, MapPin, UserCheck, Wrench, Shield } from 'lucide-react';
+import { Phone,Mail,MapPin,UserCheck,Wrench,Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AircoMonteurLimburg() {
@@ -82,7 +81,7 @@ export default function AircoMonteurLimburg() {
                   <h3 className="text-xl font-semibold">Garanties</h3>
                 </div>
                 <ul className="space-y-2">
-                  <li>✓ 5 jaar garantie</li>
+                  <li>✓ garantie volgens offerte</li>
                   <li>✓ Kwaliteitsgarantie</li>
                   <li>✓ Vaste prijsafspraken</li>
                   <li>✓ Snelle service</li>

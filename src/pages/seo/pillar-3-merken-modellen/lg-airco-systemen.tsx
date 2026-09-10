@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Shield, Euro, Zap, Wind, ThermometerSun, Phone, Calculator, TrendingUp, Star, Award, Snowflake, Wifi } from 'lucide-react';
+import { CheckCircle,Shield,Euro,Zap,Wind,ThermometerSun,Phone,Calculator,TrendingUp,Star,Award,Wifi } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const LGAircoSystemen = () => {
   const breadcrumbItems = [
@@ -18,7 +16,7 @@ const LGAircoSystemen = () => {
     {
       icon: <Zap className="h-12 w-12 text-sky-500" />,
       title: "ThinQ Technologie",
-      description: "Slimme AI-gestuurde klimaatbeheersing via smartphone met energiebesparing tot 40%"
+      description: "Slimme AI-gestuurde klimaatbeheersing via smartphone met besparing afhankelijk van gebruik en tarieven"
     },
     {
       icon: <Shield className="h-12 w-12 text-sky-500" />,
@@ -28,7 +26,7 @@ const LGAircoSystemen = () => {
     {
       icon: <Wind className="h-12 w-12 text-sky-500" />,
       title: "Dual Inverter Compressor",
-      description: "Revolutionair compressordesign voor 70% energiebesparing en ultrastille werking"
+      description: "Revolutionair compressordesign voor situatieafhankelijke besparing en ultrastille werking"
     },
     {
       icon: <Star className="h-12 w-12 text-sky-500" />,
@@ -82,7 +80,7 @@ const LGAircoSystemen = () => {
   const technicalInnovations = [
     {
       title: "Dual Inverter Compressor™",
-      description: "De revolutionaire Dual Inverter Compressor™ van LG heeft twee rotors in plaats van één, wat resulteert in snellere koeling/verwarming, 70% energiebesparing, 25% stiller werking en een langere levensduur. Deze technologie is beschermd door 23 internationale patenten en heeft meerdere innovatie awards gewonnen."
+      description: "De revolutionaire Dual Inverter Compressor™ van LG heeft twee rotors in plaats van één, wat resulteert in snellere koeling/verwarming, situatieafhankelijke besparing, 25% stiller werking en een langere levensduur. Deze technologie is beschermd door 23 internationale patenten en heeft meerdere innovatie awards gewonnen."
     },
     {
       title: "ThinQ AI Technologie",
@@ -117,7 +115,7 @@ const LGAircoSystemen = () => {
     },
     {
       question: "Is LG betrouwbaar genoeg voor lange termijn?",
-      answer: "Absoluut. LG is een van de grootste elektronica fabrikanten ter wereld met strikte kwaliteitscontrole. De 10 jaar garantie op de Dual Inverter Compressor (het belangrijkste en duurste onderdeel) toont het vertrouwen in betrouwbaarheid. LG investeert jaarlijks miljarden in R&D en heeft 23 patenten alleen al op de Dual Inverter technologie. Onze ervaring met LG installaties toont een zeer lage storingskans en uitstekende klanttevredenheid. De levensduur ligt gemiddeld op 15-20 jaar bij correct onderhoud."
+      answer: "Absoluut. LG is een van de grootste elektronica fabrikanten ter wereld met strikte kwaliteitscontrole. De garantie volgens offerte op de Dual Inverter Compressor (het belangrijkste en duurste onderdeel) toont het vertrouwen in betrouwbaarheid. LG investeert jaarlijks miljarden in R&D en heeft 23 patenten alleen al op de Dual Inverter technologie. Onze ervaring met LG installaties toont een zeer lage storingskans en uitstekende klanttevredenheid. De levensduur ligt gemiddeld op 15-20 jaar bij correct onderhoud."
     },
     {
       question: "Werkt een LG airco ook goed bij verwarmen in de winter?",
@@ -137,7 +135,7 @@ const LGAircoSystemen = () => {
     <>
       <MetaTags
         title="LG Airco Systemen Limburg | ThinQ, Dual Inverter, ARTCOOL | StayCool"
-        description="LG airco systemen ✓ Dual Inverter ✓ ThinQ smart control ✓ ARTCOOL design ✓ 10 jaar garantie ✓ Erkend installateur. Gratis advies!"
+        description="LG airco systemen ✓ Dual Inverter ✓ ThinQ smart control ✓ ARTCOOL design ✓ garantie volgens offerte ✓ Erkend installateur. Gratis advies!"
       />
 
       <SchemaMarkup
@@ -162,11 +160,7 @@ const LGAircoSystemen = () => {
               name: "Limburg"
             }
           },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.8",
-            reviewCount: "143"
-          }
+
         }}
       />
 
@@ -221,7 +215,7 @@ const LGAircoSystemen = () => {
                 <div className="flex justify-center mb-4">
                   {usp.icon}
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}
@@ -238,7 +232,7 @@ const LGAircoSystemen = () => {
 
           <div className="prose prose-lg max-w-none mb-12">
             <p className="text-gray-700 leading-relaxed mb-6">
-              LG Electronics is een wereldwijd technologie innovator die bekend staat om <strong>cutting-edge R&D en gebruiksvriendelijk design</strong>. In de wereld van airconditioning heeft LG een reputatie opgebouwd met de revolutionaire Dual Inverter Compressor™ - een technologie beschermd door 23 internationale patenten die 70% energiebesparing realiseert ten opzichte van conventionele systemen.
+              LG Electronics is een wereldwijd technologie innovator die bekend staat om <strong>cutting-edge R&D en gebruiksvriendelijk design</strong>. In de wereld van airconditioning heeft LG een reputatie opgebouwd met de revolutionaire Dual Inverter Compressor™ - een technologie beschermd door 23 internationale patenten die situatieafhankelijke besparing realiseert ten opzichte van conventionele systemen.
             </p>
 
             <p className="text-gray-700 leading-relaxed mb-6">
@@ -331,7 +325,8 @@ const LGAircoSystemen = () => {
               Dual Inverter Compressor™: De Revolutie In Efficiency
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              23 internationale patenten beschermen deze doorbraak technologie die 70% energiebesparing realiseert
+
+              23 internationale patenten beschermen deze doorbraak technologie die situatieafhankelijke besparing realiseert
             </p>
           </div>
 
@@ -409,7 +404,7 @@ const LGAircoSystemen = () => {
                 <div className="flex items-start">
                   <Wifi className="h-6 w-6 text-sky-500 mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Bediening Overal</h4>
+                    <h3 className="font-semibold text-gray-900 mb-1">Bediening Overal</h3>
                     <p className="text-gray-600">Bedien uw airco vanaf smartphone, tablet of via Google/Alexa spraakassistent</p>
                   </div>
                 </div>
@@ -417,7 +412,7 @@ const LGAircoSystemen = () => {
                 <div className="flex items-start">
                   <Zap className="h-6 w-6 text-sky-500 mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">AI Leergedrag</h4>
+                    <h3 className="font-semibold text-gray-900 mb-1">AI Leergedrag</h3>
                     <p className="text-gray-600">Systeem leert uw voorkeuren en past automatisch instellingen aan voor optimaal comfort</p>
                   </div>
                 </div>
@@ -425,7 +420,7 @@ const LGAircoSystemen = () => {
                 <div className="flex items-start">
                   <TrendingUp className="h-6 w-6 text-sky-500 mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Energiemonitoring</h4>
+                    <h3 className="font-semibold text-gray-900 mb-1">Energiemonitoring</h3>
                     <p className="text-gray-600">Real-time inzicht in verbruik met tips om nog meer te besparen</p>
                   </div>
                 </div>
@@ -433,7 +428,7 @@ const LGAircoSystemen = () => {
                 <div className="flex items-start">
                   <Shield className="h-6 w-6 text-sky-500 mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Proactieve Meldingen</h4>
+                    <h3 className="font-semibold text-gray-900 mb-1">Proactieve Meldingen</h3>
                     <p className="text-gray-600">Ontvang onderhoudsmeldingen en waarschuwingen voordat problemen ontstaan</p>
                   </div>
                 </div>
@@ -441,7 +436,7 @@ const LGAircoSystemen = () => {
                 <div className="flex items-start">
                   <ThermometerSun className="h-6 w-6 text-sky-500 mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Weersintegratie</h4>
+                    <h3 className="font-semibold text-gray-900 mb-1">Weersintegratie</h3>
                     <p className="text-gray-600">Gebruikt weersverwachtingen om proactief te koelen of verwarmen</p>
                   </div>
                 </div>

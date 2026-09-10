@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ShieldCheck, Clock, Award, Wrench, MapPin, Phone, Star, CheckCircle, Users, Thermometer, ChevronDown } from 'lucide-react';
+import { ShieldCheck,Clock,Award,Wrench,MapPin,Phone,Star,CheckCircle,Users,Thermometer,ChevronDown } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
@@ -28,7 +28,7 @@ const faqItems = [
   },
   {
     question: 'Bieden jullie garantie op de installatie?',
-    answer: 'Ja, StayCool Airco biedt 5 jaar garantie op alle installatiewerkzaamheden. Dit komt bovenop de fabrieksgarantie van de airconditioner zelf. Doordat wij een erkend installateur zijn, blijft de fabrieksgarantie volledig behouden — iets dat bij onbevoegde installatie vervalt.',
+    answer: "Ja, StayCool Airco biedt garantie volgens offerte op alle installatiewerkzaamheden. Dit komt bovenop de fabrieksgarantie van de airconditioner zelf. Doordat wij een erkend installateur zijn, blijft de fabrieksgarantie volledig behouden — iets dat bij onbevoegde installatie vervalt.",
   },
 ];
 
@@ -98,14 +98,14 @@ export default function AircoInstallateurLanding() {
   return (
     <>
       <Helmet>
-        <title>Airco Installateur | F-Gassen Gecertificeerd | Sinds 2019</title>
+        <title>Airco Installateur | F-Gassen Gecertificeerd | Limburg</title>
         <meta
           name="description"
-          content="Erkend airco installateur in Limburg. F-gassen gecertificeerd, 5 jaar garantie, 500+ installaties. Gratis offerte binnen 24 uur. ★ 4.8/5 reviews."
+          content="Erkend airco installateur in Limburg. F-gassen gecertificeerd, garantie volgens offerte, ervaring met installaties. Gratis offerte binnen 24 uur. klantervaringen."
         />
         <link rel="canonical" href="https://staycoolairco.nl/airco-installateur" />
-        <meta property="og:title" content="Airco Installateur | F-Gassen Gecertificeerd | Sinds 2019" />
-        <meta property="og:description" content="Erkend airco installateur in Limburg. F-gassen gecertificeerd, 5 jaar garantie, 500+ installaties." />
+        <meta property="og:title" content="Airco Installateur | F-Gassen Gecertificeerd | Limburg" />
+        <meta property="og:description" content="Erkend airco installateur in Limburg. F-gassen gecertificeerd, garantie volgens offerte, ervaring met installaties." />
         <meta property="og:url" content="https://staycoolairco.nl/airco-installateur" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">
@@ -135,7 +135,7 @@ export default function AircoInstallateurLanding() {
         type="LocalBusiness"
         data={{
           name: 'StayCool Airco - Erkend Airco Installateur Limburg',
-          description: 'Erkend airco installateur in Limburg. F-gassen gecertificeerd, 500+ installaties sinds 2019. Professionele airco installatie met 5 jaar garantie.',
+          description: "Erkend airco installateur in Limburg. F-gassen gecertificeerd, ervaring met installaties in Limburg. Professionele airco installatie met garantie volgens offerte.",
           url: 'https://staycoolairco.nl/airco-installateur',
           telephone: '046 202 1430',
           foundingDate: '2019',
@@ -218,7 +218,8 @@ export default function AircoInstallateurLanding() {
               Uw Erkende Airco Installateur in Limburg
             </h1>
             <p className="text-lg md:text-xl text-blue-100 mb-8">
-              F-gassen gecertificeerd, 500+ installaties sinds 2019. Van advies tot installatie en nazorg
+
+              F-gassen gecertificeerd, ervaring met installaties in Limburg. Van advies tot installatie en nazorg
               — StayCool Airco is uw betrouwbare partner voor professionele airconditioning in heel Limburg.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -252,10 +253,10 @@ export default function AircoInstallateurLanding() {
               <Award className="h-4 w-4" /> 5 Jaar Installatiegarantie
             </span>
             <span className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
-              <Users className="h-4 w-4" /> 500+ Installaties
+              <Users className="h-4 w-4" />  ervaring met installaties
             </span>
             <span className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
-              <Star className="h-4 w-4" /> 4.8/5 Sterren
+              <Star className="h-4 w-4" /> Persoonlijk
             </span>
             <span className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium">
               <Clock className="h-4 w-4" /> Reactie binnen 24 uur
@@ -351,16 +352,16 @@ export default function AircoInstallateurLanding() {
               Onze Ervaring als Airco Installateur
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Sinds 2019 hebben wij meer dan 500 aircosystemen geïnstalleerd in heel Limburg.
+              We verzorgen airco-installaties in Limburg en bespreken de uitvoering per woning.
               Van compacte studio-appartementen tot grote villa's — wij kennen elke situatie.
             </p>
           </m.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: <Users className="h-8 w-8 text-blue-600" />, getal: '500+', label: 'Installaties voltooid' },
-              { icon: <Clock className="h-8 w-8 text-blue-600" />, getal: 'Sinds 2019', label: 'Actief in Limburg' },
-              { icon: <Star className="h-8 w-8 text-blue-600" />, getal: '4.8/5', label: 'Gemiddelde beoordeling' },
+              { icon: <Users className="h-8 w-8 text-blue-600" />, getal: 'Op maat', label: 'Installatieadvies' },
+              { icon: <Clock className="h-8 w-8 text-blue-600" />, getal: 'Limburg', label: 'Werkgebied' },
+              { icon: <Star className="h-8 w-8 text-blue-600" />, getal: 'Persoonlijk', label: 'Advies' },
               { icon: <Thermometer className="h-8 w-8 text-blue-600" />, getal: '5 Merken', label: 'Erkend installateur' },
             ].map((item, index) => (
               <m.div
@@ -657,7 +658,7 @@ export default function AircoInstallateurLanding() {
                 <CheckCircle className="h-5 w-5" /> F-gassen gecertificeerd
               </span>
               <span className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5" /> 5 jaar garantie
+                <CheckCircle className="h-5 w-5" />  garantie volgens offerte
               </span>
               <span className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5" /> Geen voorrijkosten

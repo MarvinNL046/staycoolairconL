@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Shield, Euro, Zap, Wind, ThermometerSun, Phone, Mail, Calculator, TrendingUp, Star, Award, Users, Factory } from 'lucide-react';
+import { CheckCircle,Shield,Phone,Mail,Calculator,Award,Users,Factory } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const AircoMonteurSittardGeleen = () => {
   const breadcrumbItems = [
@@ -364,10 +362,10 @@ const AircoMonteurSittardGeleen = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h4 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
                     <Award className="h-5 w-5 mr-2 text-sky-500" />
                     Daikin Premium
-                  </h4>
+                  </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
@@ -379,16 +377,16 @@ const AircoMonteurSittardGeleen = () => {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
-                      <span>10 jaar garantie met juiste installatie</span>
+                      <span>garantie volgens offerte met juiste installatie</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h4 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
                     <Award className="h-5 w-5 mr-2 text-sky-500" />
                     Mitsubishi Heavy Industries
-                  </h4>
+                  </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
@@ -406,10 +404,10 @@ const AircoMonteurSittardGeleen = () => {
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h4 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
                     <Award className="h-5 w-5 mr-2 text-sky-500" />
                     LG & Samsung
-                  </h4>
+                  </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
@@ -427,10 +425,10 @@ const AircoMonteurSittardGeleen = () => {
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h4 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
                     <Award className="h-5 w-5 mr-2 text-sky-500" />
                     Industriële Merken
-                  </h4>
+                  </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
@@ -458,7 +456,7 @@ const AircoMonteurSittardGeleen = () => {
                     1
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Locatiebezoek & Advies</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Locatiebezoek & Advies</h3>
                     <p className="text-gray-600">
                       Een van onze monteurs bezoekt uw locatie voor een grondige analyse. We bespreken uw wensen, bekijken de technische mogelijkheden, meten de ruimtes en adviseren over het meest geschikte systeem.
                     </p>
@@ -470,7 +468,7 @@ const AircoMonteurSittardGeleen = () => {
                     2
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Technisch Ontwerp</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Technisch Ontwerp</h3>
                     <p className="text-gray-600">
                       Voor grotere projecten maken we een technisch ontwerp met leidingroutes, plaatsing units, elektrische aansluitingen en capaciteitsberekeningen. U ontvangt een gedetailleerde offerte met alle specificaties.
                     </p>
@@ -482,7 +480,7 @@ const AircoMonteurSittardGeleen = () => {
                     3
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Professionele Montage</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Professionele Montage</h3>
                     <p className="text-gray-600">
                       Onze gecertificeerde monteurs installeren het systeem volgens fabrieksspecificaties en geldende normen. We werken netjes, veilig en efficiënt. Bij zakelijke en industriële projecten volgen we uw huisregels en veiligheidsprotocollen.
                     </p>
@@ -494,7 +492,7 @@ const AircoMonteurSittardGeleen = () => {
                     4
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Inbedrijfstelling & Documentatie</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Inbedrijfstelling & Documentatie</h3>
                     <p className="text-gray-600">
                       Na installatie voeren we een volledige functietest uit, stellen het systeem optimaal in en geven uitgebreide uitleg over bediening en onderhoud. U ontvangt alle documentatie, certificaten en garantiebewijzen.
                     </p>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -161,21 +160,24 @@ export default function WaaromVerschillenAircoOffertes() {
 
               <div className="not-prose grid md:grid-cols-3 gap-4 my-6">
                 <div className="bg-green-50 border border-green-200 p-5 rounded-lg">
-                  <h4 className="font-bold text-green-900 mb-2">Offerte A — €1.800</h4>
+                  <h3 className="font-bold text-green-900 mb-2">Offerte A — €1.800</h3>
                   <p className="text-sm text-gray-700 mb-0">
-                    Tosot 3,5 kW, 3 jaar garantie, 5 m leidingen, geen onderhoud inbegrepen, installatie in november.
+
+                    Tosot 3,5 kW, garantie volgens offerte, 5 m leidingen, geen onderhoud inbegrepen, installatie in november.
                   </p>
                 </div>
                 <div className="bg-yellow-50 border border-yellow-200 p-5 rounded-lg">
-                  <h4 className="font-bold text-yellow-900 mb-2">Offerte B — €2.400</h4>
+                  <h3 className="font-bold text-yellow-900 mb-2">Offerte B — €2.400</h3>
                   <p className="text-sm text-gray-700 mb-0">
-                    Mitsubishi Heavy 3,5 kW, 5 jaar garantie, 7 m leidingen, 1e jaaronderhoud inbegrepen, installatie juni.
+
+                    Mitsubishi Heavy 3,5 kW, garantie volgens offerte, 7 m leidingen, 1e jaaronderhoud inbegrepen, installatie juni.
                   </p>
                 </div>
                 <div className="bg-red-50 border border-red-200 p-5 rounded-lg">
-                  <h4 className="font-bold text-red-900 mb-2">Offerte C — €3.100</h4>
+                  <h3 className="font-bold text-red-900 mb-2">Offerte C — €3.100</h3>
                   <p className="text-sm text-gray-700 mb-0">
-                    Daikin 3,5 kW, 5 jaar garantie, 7 m leidingen, aparte groep, via Werkspot, installatie juli.
+
+                    Daikin 3,5 kW, garantie volgens offerte, 7 m leidingen, aparte groep, via Werkspot, installatie juli.
                   </p>
                 </div>
               </div>
@@ -285,7 +287,8 @@ export default function WaaromVerschillenAircoOffertes() {
                 <li>Premium: 5 jaar totaal op installatie én unit</li>
               </ul>
               <p>
-                De "extra" 2 jaar garantie is niet gratis — die kost de installateur geld (reserveringen voor eventuele
+
+                De "extra" garantie volgens offerte is niet gratis — die kost de installateur geld (reserveringen voor eventuele
                 claims, duurdere onderdelen). Reken op <strong>5 tot 12% prijsverschil</strong> tussen 3- en 5-jaars garanties
                 op installatie.
               </p>

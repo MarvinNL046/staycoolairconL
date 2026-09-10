@@ -24,6 +24,7 @@ function getTsxFiles(dir) {
 function filePathToUrl(filePath) {
   // Convert Windows path separators to forward slashes
   filePath = filePath.replace(/\\/g, '/');
+  if (filePath.endsWith('/seo/pillar-9-kosten-prijzen/kosten-airco-plaatsen.tsx')) return null;
   
   // Extract the relative path from src/pages
   const pagesIndex = filePath.indexOf('src/pages/');

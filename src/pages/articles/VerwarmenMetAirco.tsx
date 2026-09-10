@@ -1,8 +1,7 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '../../components/Breadcrumbs';
-import { ArrowLeft, ThermometerSun, Zap, Sun, PiggyBank, LineChart } from 'lucide-react';
+import { ArrowLeft,ThermometerSun,Zap,Sun,PiggyBank,LineChart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function HeatingWithAirco() {
@@ -47,6 +46,7 @@ export default function HeatingWithAirco() {
           name="keywords" 
           content="verwarmen met airco, warmtepomp airco, energiebesparing, zonnepanelen airco, terugleverkosten voorkomen"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/verwarmen-met-airco" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
@@ -91,9 +91,9 @@ export default function HeatingWithAirco() {
                 className="bg-white p-6 rounded-xl shadow-lg"
               >
                 <benefit.icon className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h2 className="text-lg font-semibold text-gray-900 mb-2">
                   {benefit.title}
-                </h3>
+                </h2>
                 <p className="text-gray-600">
                   {benefit.description}
                 </p>

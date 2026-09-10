@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import { build } from 'esbuild';
+const bundled=await build({entryPoints:['src/utils/batteryEstimate.ts'],bundle:true,platform:'node',format:'esm',write:false});
+const {estimateBattery}=await import('data:text/javascript;base64,'+Buffer.from(bundled.outputFiles[0].text).toString('base64'));
+const input={annualConsumption:4500,solarProduction:5000,currentSelfUsePercent:30,additionalSelfUsePercent:30,roundTripEfficiencyPercent:90,importPrice:.30,exportPrice:.05,investment:6000};
+const standard=estimateBattery(input);
+assert.deepEqual(standard,{directUse:1500,stored:1500,delivered:1350,annualBenefit:330,simplePayback:6000/330});
+assert.equal(estimateBattery({...input,solarProduction:0}).annualBenefit,0);
+assert.equal(estimateBattery({...input,annualConsumption:0}).delivered,0);
+assert.equal(estimateBattery({...input,annualConsumption:1000}).delivered,0);
+assert.equal(estimateBattery({...input,roundTripEfficiencyPercent:0}).simplePayback,null);
+assert.equal(estimateBattery({...input,exportPrice:1}).simplePayback,null);
+assert.equal(estimateBattery({...input,investment:0}).simplePayback,null);
+assert.equal(estimateBattery({...input,solarProduction:NaN}).stored,0);
+assert.ok(estimateBattery({...input,additionalSelfUsePercent:100,annualConsumption:1600}).delivered<=100);
+console.log('Battery estimate: 9 checks passed; zero demand/production, losses and negative benefit covered.');

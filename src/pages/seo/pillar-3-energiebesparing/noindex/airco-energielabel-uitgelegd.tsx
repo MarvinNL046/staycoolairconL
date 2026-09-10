@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Zap, TrendingDown, Award, Leaf, Euro, Phone, Info } from 'lucide-react';
+import { Zap,TrendingDown,Award,Leaf,Euro,Phone,Info } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
 

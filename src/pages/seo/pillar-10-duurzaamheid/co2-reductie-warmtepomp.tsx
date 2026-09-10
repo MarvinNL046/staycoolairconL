@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { TrendingDown, CheckCircle, Shield, Leaf, ThermometerSun, Wind, Phone, Calculator, Award, Zap, Euro } from 'lucide-react';
+import { TrendingDown,CheckCircle,Leaf,ThermometerSun,Wind,Phone,Calculator,Award,Zap,Euro } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
@@ -27,7 +26,7 @@ const CO2ReductieWarmtepompPage = () => {
     {
       icon: <Euro className="h-12 w-12 text-orange-600" />,
       title: "60% Lagere Kosten",
-      description: "Bespaar tot 60% op stookkosten vergeleken met gasverwarming"
+      description: "Bekijk de mogelijke besparing op stookkosten vergeleken met gasverwarming"
     },
     {
       icon: <Award className="h-12 w-12 text-sky-600" />,
@@ -159,7 +158,8 @@ const CO2ReductieWarmtepompPage = () => {
               CO2 Reductie met Warmtepomp: Haal Nederland's Klimaatdoelen in Uw Eigen Woning
             </h1>
             <p className="text-xl md:text-2xl text-blue-50 mb-8 leading-relaxed">
-              Reduceer uw CO2-voetafdruk met 4-6 ton per jaar, bespaar 60% op stookkosten, en draag actief bij aan de klimaatdoelstelling van 49% CO2-reductie in 2030
+
+              Reduceer uw CO2-voetafdruk met 4-6 ton per jaar, Bekijk de mogelijke besparing op stookkosten, en draag actief bij aan de klimaatdoelstelling van 49% CO2-reductie in 2030
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link
@@ -351,7 +351,7 @@ const CO2ReductieWarmtepompPage = () => {
             <div className="flex items-start gap-4">
               <TrendingDown className="h-8 w-8 text-green-600 flex-shrink-0 mt-1" />
               <div>
-                <h4 className="text-xl font-bold text-gray-900 mb-2">Dramatische CO2-Reductie</h4>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Dramatische CO2-Reductie</h3>
                 <p className="text-gray-700 leading-relaxed">
                   Een warmtepomp reduceert CO2-uitstoot met 80% (2,8 ton per jaar) vergeleken met gasverwarming. In combinatie met zonnepanelen zelfs 97% (3,4 ton). Over 20 jaar levensduur bespaart u 56-68 ton CO2 - equivalent aan 700.000 kilometer autorijden of het planten van 2.600 bomen.
                 </p>
@@ -473,7 +473,8 @@ const CO2ReductieWarmtepompPage = () => {
             Start Vandaag met CO2-Reductie
           </h2>
           <p className="text-xl mb-8 text-blue-50 leading-relaxed">
-            Reduceer uw CO2-voetafdruk met 4-6 ton per jaar, bespaar 60% op stookkosten, en draag bij aan Nederland's klimaatdoelen. Vraag nu gratis advies en bereken uw persoonlijke CO2-reductie en kostenbesparing.
+
+            Reduceer uw CO2-voetafdruk met 4-6 ton per jaar, Bekijk de mogelijke besparing op stookkosten, en draag bij aan Nederland's klimaatdoelen. Vraag nu gratis advies en bereken uw persoonlijke CO2-reductie en kostenbesparing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link

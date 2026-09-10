@@ -1,11 +1,13 @@
-import React from 'react';
-import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MapPin, Clock, Shield, Star } from 'lucide-react';
+import { Phone,Clock,Shield,Star } from 'lucide-react';
 import ContactForm from '../components/Contact';
 import Breadcrumbs from '../components/Breadcrumbs';
+import { useSearchParams } from 'react-router-dom';
 
 export default function Contact() {
+  const [searchParams] = useSearchParams();
+  const topics: Record<string,string> = { thuisbatterij: 'Advies over een thuisbatterij', verwarmen: 'Een airco gebruiken om te verwarmen', 'airco-sittard': 'Een airco laten installeren in Sittard', 'airco-maastricht': 'Een airco laten installeren in Maastricht' };
+  const inquiry = topics[searchParams.get('onderwerp') || ''] || '';
   const breadcrumbItems = [
     { label: 'Contact', path: '/contact' }
   ];
@@ -14,7 +16,7 @@ export default function Contact() {
     {
       icon: <Phone className="h-8 w-8 text-sky-500" />,
       titel: "Direct contact",
-      beschrijving: "Binnen 24 uur reactie op uw aanvraag"
+      beschrijving: "Bel ons of stuur uw vraag via het formulier"
     },
     {
       icon: <Shield className="h-8 w-8 text-sky-500" />,
@@ -24,12 +26,12 @@ export default function Contact() {
     {
       icon: <Clock className="h-8 w-8 text-sky-500" />,
       titel: "Snelle service",
-      beschrijving: "Vaak installatie binnen 2 weken mogelijk"
+      beschrijving: "We bespreken de mogelijkheden en planning met u"
     },
     {
       icon: <Star className="h-8 w-8 text-sky-500" />,
-      titel: "5 sterren service",
-      beschrijving: "Beoordeeld met 4.9/5 door onze klanten"
+      titel: "Persoonlijke begeleiding",
+      beschrijving: "Een aanspreekpunt voor uw vragen over de installatie"
     }
   ];
 
@@ -41,6 +43,7 @@ export default function Contact() {
           name="description" 
           content="Neem contact op met StayCool Airco voor al uw vragen over airconditioning of voor een vrijblijvende offerte."
         />
+        <link rel="canonical" href="https://staycoolairco.nl/contact" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
@@ -95,7 +98,7 @@ export default function Contact() {
         {/* Contact Form Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <ContactForm />
+            <ContactForm inquiryContext={inquiry} inquiryLabel="Uw aanvraag:" />
           </div>
         </section>
       </div>

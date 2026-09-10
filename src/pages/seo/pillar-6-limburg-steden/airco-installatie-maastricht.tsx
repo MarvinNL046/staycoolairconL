@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Shield, Euro, Zap, Wind, ThermometerSun, Phone, Mail, Calculator, TrendingUp, Star, Award } from 'lucide-react';
+import { CheckCircle,Shield,Euro,Phone,Mail,Calculator,TrendingUp,Star,Award } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const AircoInstallatieMaastricht = () => {
   const breadcrumbItems = [
@@ -22,12 +20,12 @@ const AircoInstallatieMaastricht = () => {
     },
     {
       icon: <Euro className="h-12 w-12 text-sky-500" />,
-      title: "60% Energiebesparing",
-      description: "Bespaar tot 60% op energiekosten met warmtepomptechnologie"
+      title: "situatieafhankelijke besparing",
+      description: "Bekijk de mogelijke besparing op energiekosten met warmtepomptechnologie"
     },
     {
       icon: <Shield className="h-12 w-12 text-sky-500" />,
-      title: "10 Jaar Garantie",
+      title: "garantie volgens offerte",
       description: "Premium merken met uitgebreide fabrieksgarantie"
     },
     {
@@ -71,11 +69,11 @@ const AircoInstallatieMaastricht = () => {
     },
     {
       question: "Kunnen airco's ook verwarmen in de winter?",
-      answer: "Ja, moderne airco systemen met warmtepomptechnologie zijn uiterst geschikt voor verwarming. Met een rendement van 400-500% zijn ze veel efficiënter dan traditionele verwarming. In Maastricht, met relatief milde winters, is een airco warmtepomp ideaal als hoofdverwarming of aanvulling op cv. U bespaart tot 60% op energiekosten en vermijdt hoge teruglevering aan het energienet bij zonnepanelen."
+      answer: "Ja, moderne airco systemen met warmtepomptechnologie zijn uiterst geschikt voor verwarming. Met een rendement van 400-500% zijn ze veel efficiënter dan traditionele verwarming. In Maastricht, met relatief milde winters, is een airco warmtepomp ideaal als hoofdverwarming of aanvulling op cv. U kan mogelijk besparen op energiekosten en vermijdt hoge teruglevering aan het energienet bij zonnepanelen."
     },
     {
       question: "Wat zijn de voordelen van airco voor Maastrichtse woningen?",
-      answer: "Airco biedt Maastrichtse bewoners comfort het hele jaar door: koeling tijdens warme zomers, efficiënte verwarming in de winter, en luchtfiltering voor betere luchtkwaliteit. Met 60% energiebesparing ten opzichte van traditionele verwarming en het vermijden van dure terugleververgoedingen bij zonnepanelen, is airco een slimme investering voor Maastrichtse huishoudens. Bovendien verhoogt het de waarde van uw woning aanzienlijk."
+      answer: "Airco biedt Maastrichtse bewoners comfort het hele jaar door: koeling tijdens warme zomers, efficiënte verwarming in de winter, en luchtfiltering voor betere luchtkwaliteit. Met situatieafhankelijke besparing ten opzichte van traditionele verwarming en het vermijden van dure terugleververgoedingen bij zonnepanelen, is airco een slimme investering voor Maastrichtse huishoudens. Bovendien verhoogt het de waarde van uw woning aanzienlijk."
     }
   ];
 
@@ -83,7 +81,7 @@ const AircoInstallatieMaastricht = () => {
     <>
       <MetaTags
         title="Airco Installatie Maastricht | Klimaatbeheersing Hoofdstad Limburg | StayCool"
-        description="Airco installatie Maastricht ✓ F-gassen gecertificeerd ✓ 60% besparing ✓ 10 jaar garantie ✓ Centrum, Wyck ✓ Gratis offerte!"
+        description="Airco installatie Maastricht ✓ F-gassen gecertificeerd ✓ situatieafhankelijke besparing ✓ garantie volgens offerte ✓ Centrum, Wyck ✓ Gratis offerte!"
       />
 
       <SchemaMarkup
@@ -91,7 +89,7 @@ const AircoInstallatieMaastricht = () => {
         data={{
           "@type": "Service",
           "name": "Airco Installatie Maastricht",
-          "description": "Professionele airco installatie en onderhoud in Maastricht en omgeving. F-gassen gecertificeerd met 10 jaar garantie op premium A-merken.",
+          "description": "Professionele airco installatie en onderhoud in Maastricht en omgeving. F-gassen gecertificeerd met garantie volgens offerte op premium A-merken.",
           "provider": {
             "@type": "LocalBusiness",
             "name": "StayCool Airco",
@@ -148,7 +146,8 @@ const AircoInstallatieMaastricht = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-sky-50 mb-8 max-w-3xl">
-              Professionele klimaatbeheersing voor de hoofdstad van Limburg. F-gassen gecertificeerde installatie met 60% energiebesparing en 10 jaar garantie op premium A-merken.
+
+              Professionele klimaatbeheersing voor de hoofdstad van Limburg. F-gassen gecertificeerde installatie met situatieafhankelijke besparing en garantie volgens offerte op premium A-merken.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -181,11 +180,13 @@ const AircoInstallatieMaastricht = () => {
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-5 w-5 mr-2" />
-                60% Energiebesparing
+
+                situatieafhankelijke besparing
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-5 w-5 mr-2" />
-                10 Jaar Garantie
+
+                garantie volgens offerte
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-5 w-5 mr-2" />
@@ -261,7 +262,8 @@ const AircoInstallatieMaastricht = () => {
                   Energiebesparing met Zonnepanelen
                 </h4>
                 <p className="text-gray-600">
-                  Heeft u zonnepanelen op uw Maastrichtse woning? Dan is een airco warmtepomp de slimste investering. U vermijdt de lage terugleververgoeding (slechts €0,09 per kWh) door uw eigen opgewekte stroom te gebruiken voor verwarming. Met een rendement van 400-500% bespaart u tot 60% op energiekosten en vergroot u uw onafhankelijkheid van het energienet.
+
+                  Heeft u zonnepanelen op uw Maastrichtse woning? Dan is een airco warmtepomp de slimste investering. U vermijdt de lage terugleververgoeding (slechts €0,09 per kWh) door uw eigen opgewekte stroom te gebruiken voor verwarming. Met een rendement van 400-500% kunt u mogelijk besparen op uw energiekosten en vergroot u uw onafhankelijkheid van het energienet.
                 </p>
               </div>
 
@@ -292,10 +294,10 @@ const AircoInstallatieMaastricht = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h4 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
                     <Award className="h-5 w-5 mr-2 text-sky-500" />
                     Daikin Premium
-                  </h4>
+                  </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
@@ -307,16 +309,16 @@ const AircoInstallatieMaastricht = () => {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
-                      <span>10 jaar volledige garantie</span>
+                      <span>garantie volgens offerte</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h4 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
                     <Award className="h-5 w-5 mr-2 text-sky-500" />
                     Mitsubishi Heavy Industries
-                  </h4>
+                  </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
@@ -334,10 +336,10 @@ const AircoInstallatieMaastricht = () => {
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h4 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
                     <Award className="h-5 w-5 mr-2 text-sky-500" />
                     LG Premium
-                  </h4>
+                  </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
@@ -349,16 +351,16 @@ const AircoInstallatieMaastricht = () => {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
-                      <span>10 jaar garantie op compressor</span>
+                      <span>garantie volgens offerte op compressor</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h4 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
                     <Award className="h-5 w-5 mr-2 text-sky-500" />
                     Samsung & Gree
-                  </h4>
+                  </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
@@ -386,7 +388,7 @@ const AircoInstallatieMaastricht = () => {
                     1
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Gratis Adviesgesprek</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Gratis Adviesgesprek</h3>
                     <p className="text-gray-600">
                       We bezoeken uw locatie in Maastricht voor een persoonlijk adviesgesprek. We bespreken uw wensen, bekijken de technische mogelijkheden en adviseren over het meest geschikte systeem voor uw situatie.
                     </p>
@@ -398,7 +400,7 @@ const AircoInstallatieMaastricht = () => {
                     2
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Offerte op Maat</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Offerte op Maat</h3>
                     <p className="text-gray-600">
                       U ontvangt binnen 24 uur een gedetailleerde offerte met specificaties, installatieplanning en totaalprijs. Geen verborgen kosten, alles transparant en duidelijk.
                     </p>
@@ -410,7 +412,7 @@ const AircoInstallatieMaastricht = () => {
                     3
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Professionele Installatie</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Professionele Installatie</h3>
                     <p className="text-gray-600">
                       Onze F-gassen gecertificeerde monteurs installeren uw airco systeem vakkundig en netjes. We werken volgens de hoogste kwaliteitsnormen en laten uw woning schoon achter.
                     </p>
@@ -422,7 +424,7 @@ const AircoInstallatieMaastricht = () => {
                     4
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Uitleg en Nazorg</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Uitleg en Nazorg</h3>
                     <p className="text-gray-600">
                       Na installatie krijgt u uitgebreide uitleg over de bediening en functies. We bieden uitstekende nazorg en zijn altijd bereikbaar voor vragen of onderhoud.
                     </p>

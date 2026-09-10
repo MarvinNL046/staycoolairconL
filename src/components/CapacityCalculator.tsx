@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState,useEffect } from 'react';
 import { m } from 'framer-motion';
-import { Info, Download } from 'lucide-react';
+import { Info,Download } from 'lucide-react';
 import { jsPDF } from 'jspdf';
 
 interface CalculatorInputs {
@@ -12,9 +12,7 @@ interface CalculatorInputs {
 }
 
 export default function CapacityCalculator() {
-  // Load saved inputs from localStorage
-  const savedInputs = localStorage.getItem('capacityCalculatorInputs');
-  const initialInputs = savedInputs ? JSON.parse(savedInputs) : {
+  const initialInputs: CalculatorInputs = {
     roomSize: 0,
     sunExposure: 'medium',
     insulation: 'average',
@@ -23,11 +21,19 @@ export default function CapacityCalculator() {
   };
 
   const [inputs, setInputs] = useState<CalculatorInputs>(initialInputs);
+  const [restored, setRestored] = useState(false);
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('capacityCalculatorInputs');
+      if (saved) setInputs({ ...initialInputs, ...JSON.parse(saved) });
+    } catch { /* A damaged local preference must not break the calculator. */ }
+    setRestored(true);
+  }, []);
 
   // Save inputs to localStorage when they change
   useEffect(() => {
-    localStorage.setItem('capacityCalculatorInputs', JSON.stringify(inputs));
-  }, [inputs]);
+    if (restored) localStorage.setItem('capacityCalculatorInputs', JSON.stringify(inputs));
+  }, [inputs, restored]);
 
   const resetCalculator = () => {
     setInputs({

@@ -1,13 +1,11 @@
-import React, { useState, useMemo, memo } from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import React,{ useState,useMemo,memo } from 'react';
 
 interface LazyImageProps {
   src: string;
   alt: string;
   className?: string;
-  width: number | string;
-  height: number | string;
+  width?: number | string;
+  height?: number | string;
   priority?: boolean;
   aspectRatio?: number;
   objectFit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
@@ -17,14 +15,13 @@ function LazyImageBase({
   src, 
   alt, 
   className = '', 
-  width,
-  height,
+  width = '100%',
+  height = '100%',
   priority = false,
   aspectRatio = 1, // Default to square aspect ratio
   objectFit = 'contain' // Default to contain to ensure the entire image is visible
 }: LazyImageProps) {
   const [error, setError] = useState(false);
-  const [loaded, setLoaded] = useState(false);
 
   // Memoize styles to prevent recalculation on each render
   const { wrapperStyle, imageContainerStyle } = useMemo(() => {
@@ -65,35 +62,17 @@ function LazyImageBase({
         </div>
       ) : (
         <div style={imageContainerStyle}>
-          <LazyLoadImage
+          <img
             src={src}
             alt={alt}
-            effect="blur"
-            className={`${className} object-${objectFit} w-full h-full transition-opacity duration-150 ${
-              loaded ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`${className} block w-full h-full`}
+            style={{ objectFit }}
             loading={priority ? 'eager' : 'lazy'}
-            width="100%"
-            height="100%"
+            decoding="async"
+            width={typeof width === 'number' ? width : undefined}
+            height={typeof height === 'number' ? height : undefined}
             onError={() => setError(true)}
-            afterLoad={() => setLoaded(true)}
-            threshold={300}
-            placeholder={
-              <div className="absolute inset-0 bg-gray-100" />
-            }
-            wrapperProps={{
-              style: {
-                width: '100%',
-                height: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }
-            }}
           />
-          {!loaded && !error && (
-            <div className="absolute inset-0 bg-gray-100" />
-          )}
         </div>
       )}
     </div>

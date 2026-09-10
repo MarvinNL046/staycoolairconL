@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -340,7 +339,7 @@ export default function AircoOfferteLimburg() {
               <ul>
                 <li>Persoonlijk advies bij u thuis (gratis en vrijblijvend)</li>
                 <li>F-gassen-gecertificeerde monteurs, eigen vaste team</li>
-                <li>Standaard 3 jaar garantie op onderdelen, uitbreidbaar tot 5 jaar</li>
+                <li>Standaard garantie volgens offerte op onderdelen, uitbreidbaar tot 5 jaar</li>
                 <li>Eerste jaar onderhoud inbegrepen bij elke installatie</li>
                 <li>Directe offertes zonder aggregator-marge</li>
                 <li>Werkgebied heel Limburg, gemiddeld binnen 2 weken ingepland</li>

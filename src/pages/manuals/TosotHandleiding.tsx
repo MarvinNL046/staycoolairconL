@@ -1,5 +1,6 @@
+import MaintenanceNextStep from '../../components/MaintenanceNextStep';
 import React from 'react';
-import { Phone, Mail, MapPin, Clock, CheckCircle, AlertCircle, Settings, Thermometer, Wind, Snowflake } from 'lucide-react';
+import { Phone,Mail,MapPin,Clock,CheckCircle,AlertCircle,Thermometer,Wind,Snowflake } from 'lucide-react';
 import ArticleLayout from '../../components/ArticleLayout';
 import MetaTags from '../../components/MetaTags';
 
@@ -185,17 +186,17 @@ const TosotHandleiding: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-4 mb-8">
             <div className="bg-blue-50 p-4 rounded-lg text-center">
               <Snowflake className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-              <h4 className="font-bold mb-1">Koelen</h4>
+              <h3 className="font-bold mb-1">Koelen</h3>
               <p className="text-sm">16°C - 30°C</p>
             </div>
             <div className="bg-orange-50 p-4 rounded-lg text-center">
               <Thermometer className="w-8 h-8 text-orange-600 mx-auto mb-2" />
-              <h4 className="font-bold mb-1">Verwarmen</h4>
+              <h3 className="font-bold mb-1">Verwarmen</h3>
               <p className="text-sm">16°C - 30°C</p>
             </div>
             <div className="bg-green-50 p-4 rounded-lg text-center">
               <Wind className="w-8 h-8 text-green-600 mx-auto mb-2" />
-              <h4 className="font-bold mb-1">Ventilator</h4>
+              <h3 className="font-bold mb-1">Ventilator</h3>
               <p className="text-sm">Alleen circulatie</p>
             </div>
           </div>
@@ -575,7 +576,8 @@ const TosotHandleiding: React.FC = () => {
             bij StayCool Airco aan het juiste adres. Wij zijn officieel dealer en servicepoint.
           </p>
         </div>
-      </ArticleLayout>
+      <MaintenanceNextStep />
+    </ArticleLayout>
     </>
   );
 };

@@ -1,8 +1,7 @@
-import { m } from 'framer-motion';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { MapPin, Shield, Clock, Star } from 'lucide-react';
+import { MapPin,Shield,Clock,Star } from 'lucide-react';
 import { programmaticLocations } from '../data/programmaticLocations';
 
 export default function ServiceArea() {
@@ -28,7 +27,7 @@ export default function ServiceArea() {
     },
     {
       icon: <Star className="h-8 w-8 text-sky-500" />,
-      titel: "200+ reviews",
+      titel: "klantervaringen",
       beschrijving: "Beoordeeld met 4.7/5 door onze klanten"
     }
   ];

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Calendar, Info } from 'lucide-react';
+import { Calendar,Info } from 'lucide-react';
 import type { City } from '../utils/cityService';
 import { createCitySlug } from '../utils/cityService';
 

@@ -1,8 +1,7 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import MetaTags from '../../components/MetaTags';
 import Breadcrumbs from '../../components/Breadcrumbs';
-import { BarChart, ThermometerSun, Zap, ArrowLeft } from 'lucide-react';
+import { BarChart,ThermometerSun,Zap,ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ScopSeerArticle() {
@@ -85,7 +84,7 @@ export default function ScopSeerArticle() {
             "@id": "https://staycoolairco.nl/kennisbank/scop-seer-waarden"
           },
           "datePublished": "2024-01-01",
-          "dateModified": new Date().toISOString().split('T')[0]
+
         }}
       />
 
@@ -93,10 +92,10 @@ export default function ScopSeerArticle() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumbs */}
           <Breadcrumbs items={breadcrumbItems} />
-          
+
           {/* Back to Knowledge Base Link */}
           <nav className="mb-8">
-            <Link 
+            <Link
               to="/kennisbank"
               className="inline-flex items-center text-blue-600 hover:text-blue-700"
             >
@@ -123,9 +122,9 @@ export default function ScopSeerArticle() {
           <div className="prose prose-lg max-w-none">
             <h2>Wat betekenen SCOP en SEER?</h2>
             <p>
-              SCOP en SEER zijn belangrijke maatstaven voor de efficiëntie van een 
-              airconditioner. Deze waarden geven aan hoeveel energie het systeem 
-              produceert (koeling of verwarming) in verhouding tot de gebruikte 
+              SCOP en SEER zijn belangrijke maatstaven voor de efficiëntie van een
+              airconditioner. Deze waarden geven aan hoeveel energie het systeem
+              produceert (koeling of verwarming) in verhouding tot de gebruikte
               elektriciteit.
             </p>
 
@@ -156,7 +155,7 @@ export default function ScopSeerArticle() {
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
                   {value.ranges.map((range) => (
-                    <div 
+                    <div
                       key={range.class}
                       className="bg-gray-50 rounded-lg p-4"
                     >
@@ -175,8 +174,8 @@ export default function ScopSeerArticle() {
 
             <h2>Hoe worden deze waarden berekend?</h2>
             <p>
-              SCOP en SEER worden berekend door de totale koel- of verwarmingscapaciteit 
-              te delen door het totale energieverbruik over een heel seizoen. Hierbij 
+              SCOP en SEER worden berekend door de totale koel- of verwarmingscapaciteit
+              te delen door het totale energieverbruik over een heel seizoen. Hierbij
               wordt rekening gehouden met:
             </p>
 
@@ -193,8 +192,8 @@ export default function ScopSeerArticle() {
                 Rekenvoorbeeld
               </h3>
               <p className="mb-0">
-                Een SCOP van 4.0 betekent dat voor elke kWh elektriciteit die de airco 
-                verbruikt, er 4 kWh aan warmte wordt geproduceerd. Dit komt neer op 
+                Een SCOP van 4.0 betekent dat voor elke kWh elektriciteit die de airco
+                verbruikt, er 4 kWh aan warmte wordt geproduceerd. Dit komt neer op
                 een rendement van 400%.
               </p>
             </div>
@@ -202,19 +201,19 @@ export default function ScopSeerArticle() {
             <h2>Waarom zijn deze waarden belangrijk?</h2>
             <ol>
               <li>
-                <strong>Energieverbruik:</strong> Hogere waarden betekenen lager 
+                <strong>Energieverbruik:</strong> Hogere waarden betekenen lager
                 energieverbruik en lagere kosten.
               </li>
               <li>
-                <strong>Milieu-impact:</strong> Efficiëntere systemen hebben een 
+                <strong>Milieu-impact:</strong> Efficiëntere systemen hebben een
                 lagere CO2-uitstoot.
               </li>
               <li>
-                <strong>Subsidies:</strong> Minimumwaarden kunnen vereist zijn voor 
+                <strong>Subsidies:</strong> Minimumwaarden kunnen vereist zijn voor
                 bepaalde subsidies.
               </li>
               <li>
-                <strong>Vergelijking:</strong> Maakt het mogelijk om verschillende 
+                <strong>Vergelijking:</strong> Maakt het mogelijk om verschillende
                 systemen objectief te vergelijken.
               </li>
             </ol>
@@ -228,7 +227,7 @@ export default function ScopSeerArticle() {
             className="mt-16"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Veelgestelde vragen over SCOP en SEER</h2>
-            
+
             <div className="space-y-6">
               <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
                 <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
@@ -279,7 +278,7 @@ export default function ScopSeerArticle() {
               Hulp nodig bij het kiezen?
             </h2>
             <p className="text-blue-100 mb-8">
-              Onze experts helpen u graag bij het selecteren van de meest efficiënte 
+              Onze experts helpen u graag bij het selecteren van de meest efficiënte
               airco voor uw situatie
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">

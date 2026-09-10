@@ -1,4 +1,3 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Shield } from 'lucide-react';
@@ -12,6 +11,7 @@ export default function Privacy() {
           name="description" 
           content="Lees ons privacybeleid. Ontdek hoe wij uw persoonlijke gegevens beschermen en verwerken volgens de AVG-richtlijnen."
         />
+        <link rel="canonical" href="https://staycoolairco.nl/privacy" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">

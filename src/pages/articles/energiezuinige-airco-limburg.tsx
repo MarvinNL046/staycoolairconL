@@ -1,8 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { m } from 'framer-motion';
-import { Phone, Mail, MapPin, Leaf, Award, Calculator } from 'lucide-react';
+import { Phone,Mail,MapPin,Leaf,Award,Calculator } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SchemaMarkup from '../../components/SchemaMarkup';
 
@@ -24,21 +23,7 @@ export default function EnergiezuinigeAircoLimburg() {
             "@type": "WebPage",
             "@id": "https://staycoolairco.nl/kennisbank/energiezuinige-airco-limburg"
           },
-          articleBody: `
-            Als specialist in klimaatbeheersing begrijpen we het belang van energiezuinige oplossingen. 
-            Een moderne airco met hoge SCOP-waarden kan significant bijdragen aan lagere energiekosten. 
-            Een energiezuinige airco met hoge SCOP-waarde kan tot wel 60% energie besparen vergeleken met traditionele systemen.
-            
-            Voordelen van energiezuinige airco's:
-            - Lagere energiekosten
-            - Milieuvriendelijk
-            - Toekomstbestendig
-            - A+++ classificatie
-            - Premium merken
-            - 5 jaar garantie
-            
-            Onze aanpak omvat expert advies, professionele installatie en regelmatig onderhoud voor optimale prestaties.
-          `,
+          articleBody: "\n            Als specialist in klimaatbeheersing begrijpen we het belang van energiezuinige oplossingen. \n            Een moderne airco met hoge SCOP-waarden kan significant bijdragen aan lagere energiekosten. \n            Een energiezuinige airco met hoge SCOP-waarde kan tot wel 60% energie besparen vergeleken met traditionele systemen.\n            \n            Voordelen van energiezuinige airco's:\n            - Lagere energiekosten\n            - Milieuvriendelijk\n            - Toekomstbestendig\n            - A+++ classificatie\n            - Premium merken\n            - garantie volgens offerte\n            \n            Onze aanpak omvat expert advies, professionele installatie en regelmatig onderhoud voor optimale prestaties.\n          ",
           keywords: "energiezuinige airco limburg, zuinige airconditioning, duurzame airco, scop seer waarden, energiebesparing airco",
           articleSection: "Klimaatbeheersing",
           wordCount: 1500,
@@ -55,6 +40,7 @@ export default function EnergiezuinigeAircoLimburg() {
           name="keywords" 
           content="energiezuinige airco limburg, zuinige airconditioning, duurzame airco, scop seer waarden, energiebesparing airco"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/energiezuinige-airco-limburg" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
@@ -107,7 +93,7 @@ export default function EnergiezuinigeAircoLimburg() {
                   <li>✓ A+++ classificatie</li>
                   <li>✓ Premium merken</li>
                   <li>✓ Erkend installateur</li>
-                  <li>✓ 5 jaar garantie</li>
+                  <li>✓ garantie volgens offerte</li>
                 </ul>
               </div>
 

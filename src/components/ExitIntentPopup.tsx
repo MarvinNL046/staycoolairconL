@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { X, Gift, Phone, Mail, ArrowRight, Loader2, Check } from 'lucide-react';
+import React,{ useState,useEffect,useCallback } from 'react';
+import { X,Gift,Mail,ArrowRight,Loader2,Check } from 'lucide-react';
 import { trackEvent } from '../utils/analytics';
 import { sendEmail } from '../utils/email';
 

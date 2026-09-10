@@ -8,7 +8,7 @@ export const lgData: Brand = {
     'ThinQ Smart Diagnosis',
     'Dual Inverter Compressor',
     'UVnano technologie',
-    '10 jaar garantie op compressor'
+    "garantie volgens offerte op compressor"
   ],
   models: [
     {

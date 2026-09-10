@@ -1,8 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { m } from 'framer-motion';
-import { Phone, Mail, MapPin, UserCheck, Award, Star } from 'lucide-react';
+import { Phone,Mail,MapPin,UserCheck,Award,Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AircoInstallateurLimburg() {
@@ -23,6 +22,7 @@ export default function AircoInstallateurLimburg() {
           name="keywords" 
           content="airco installateur limburg, airconditioning monteur, airco specialist, erkend installateur, f-gassen gecertificeerd"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/airco-installateur-limburg" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">

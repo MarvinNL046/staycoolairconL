@@ -1,399 +1,77 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { getCoordinatesForCity } from '../data/geoCoordinates';
-import { aggregateReviews, getAggregateRatingSchema } from '../data/reviews';
 
+type SchemaType = 'LocalBusiness' | 'Service' | 'Product' | 'Article' | 'Review' | 'FAQPage' | 'HowTo' | 'CollectionPage' | 'Organization' | 'WebSite' | 'BreadcrumbList' | 'Table' | 'WebPage' | 'ItemList';
 interface SchemaMarkupProps {
-  type: 'LocalBusiness' | 'Service' | 'Product' | 'Article' | 'Review' | 'FAQPage' | 'HowTo' | 'CollectionPage' | 'Organization' | 'WebSite' | 'BreadcrumbList';
-  data: any;
-  location?: {
-    city?: string;
-    region?: string;
-    postalCode?: string;
-    latitude?: number;
-    longitude?: number;
-  };
+  type: SchemaType;
+  data: Record<string, any>;
+  location?: { city?: string; region?: string; postalCode?: string; latitude?: number; longitude?: number };
 }
 
+// A service area is not a branch address. Keep one business identity across pages.
+const organization = {
+  '@type': 'Organization',
+  '@id': 'https://staycoolairco.nl/#organization',
+  name: 'StayCool Airco',
+  url: 'https://staycoolairco.nl',
+  telephone: '+31462021430',
+  email: 'info@staycoolairco.nl',
+  logo: 'https://staycoolairco.nl/images/logo.svg',
+  address: {
+    '@type': 'PostalAddress', streetAddress: 'Aan de Bogen 11',
+    addressLocality: 'Nieuwstadt', postalCode: '6118 AS', addressRegion: 'Limburg', addressCountry: 'NL',
+  },
+};
+
 export default function SchemaMarkup({ type, data, location }: SchemaMarkupProps) {
-  const baseSchema = {
-    "@context": "https://schema.org",
-    "@type": type
-  };
-
-  const getLocalBusinessSchema = () => {
-    // Get accurate geo coordinates from database or use HQ as default
-    const cityCoordinates = location?.city ? getCoordinatesForCity(location.city) : null;
-    const latitude = location?.latitude || cityCoordinates?.latitude || 51.0186;
-    const longitude = location?.longitude || cityCoordinates?.longitude || 5.8408;
-
-    // Determine postal address based on location data; fall back to HQ.
-    const postalAddress = location?.city ? {
-      "@type": "PostalAddress",
-      addressLocality: location.city,
-      addressRegion: location.region || "Limburg",
-      postalCode: location.postalCode,
-      addressCountry: "NL"
-    } : {
-      "@type": "PostalAddress",
-      streetAddress: "Aan De Bogen 11",
-      addressLocality: "Nieuwstadt",
-      addressRegion: "Limburg",
-      postalCode: "6118 AS",
-      addressCountry: "NL"
-    };
-    
-    // Determine area served based on location
-    const areaServed = location?.city ? {
-      "@type": "City",
-      name: location.city,
-      ...(location.region && { 
-        containedIn: {
-          "@type": "AdministrativeArea",
-          name: location.region
-        }
-      })
-    } : {
-      "@type": "State",
-      name: "Limburg"
-    };
-    
-    return {
-      ...baseSchema,
-      name: "StayCool Airco",
-      image: "https://staycoolairco.nl/images/logo.svg",
-      "@id": "https://staycoolairco.nl",
-      url: "https://staycoolairco.nl",
-      telephone: "046 202 1430",
-      address: postalAddress,
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude,
-        longitude
-      },
-      areaServed,
-      openingHoursSpecification: {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        opens: "09:00",
-        closes: "17:00"
-      },
-      paymentAccepted: ["Cash", "Credit Card", "Debit Card", "Bank Transfer"],
-      priceRange: "€€",
-      currenciesAccepted: "EUR",
-      aggregateRating: getAggregateRatingSchema(),
-      ...data
-    };
-  };
-
-  const getServiceSchema = () => {
-    // Determine area served based on location
-    const areaServed = location?.city ? {
-      "@type": "City",
-      name: location.city,
-      ...(location.region && { 
-        containedIn: {
-          "@type": "AdministrativeArea",
-          name: location.region
-        }
-      })
-    } : {
-      "@type": "State",
-      name: "Limburg"
-    };
-    
-    // Create address for provider
-    const address = location?.city ? {
-      "@type": "PostalAddress",
-      addressLocality: location.city,
-      addressRegion: location.region || "Limburg",
-      ...(location.postalCode && { postalCode: location.postalCode }),
-      addressCountry: "NL"
-    } : {
-      "@type": "PostalAddress",
-      addressRegion: "Limburg",
-      addressCountry: "NL"
-    };
-    
-    return {
-      ...baseSchema,
-      provider: {
-        "@type": "LocalBusiness",
-        name: "StayCool Airco",
-        url: "https://staycoolairco.nl",
-        address,
-        aggregateRating: getAggregateRatingSchema()
-      },
-      areaServed,
-      // Add aggregate rating for service itself
-      ...(!data.aggregateRating && {
-        aggregateRating: getAggregateRatingSchema()
-      }),
-      ...data
-    };
-  };
-
-  const getProductSchema = () => {
-    // Enhanced seller information with location
-    const seller = {
-      "@type": "LocalBusiness",
-      name: "StayCool Airco",
-      ...(location?.city && {
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: location.city,
-          addressRegion: location.region || "Limburg",
-          ...(location.postalCode && { postalCode: location.postalCode }),
-          addressCountry: "NL"
-        }
-      })
-    };
-    
-    // Add area served to offers if location is available
-    const areaServed = location?.city ? {
-      areaServed: {
-        "@type": "City",
-        name: location.city,
-        ...(location.region && { 
-          containedIn: {
-            "@type": "AdministrativeArea",
-            name: location.region
-          }
-        })
+  const areaServed = location?.city
+    ? { '@type': 'City', name: location.city }
+    : { '@type': 'AdministrativeArea', name: 'Limburg' };
+  const base = { '@context': 'https://schema.org', '@type': type };
+  let schema: Record<string, any> = { ...base, ...data };
+  switch (type) {
+    case 'LocalBusiness':
+    case 'Organization':
+      schema = { ...organization, ...base, areaServed, ...data };
+      break;
+    case 'Service':
+      schema = { ...base, provider: organization, areaServed, ...data };
+      break;
+    case 'Product':
+      schema = { ...base, ...data, brand: typeof data.brand === 'string' ? { '@type': 'Brand', name: data.brand } : data.brand };
+      // Never fabricate an offer, stock status, expiry date or product rating.
+      if (data.offers) {
+        const enhance = (offer: Record<string, unknown>) => ({ seller: organization, ...offer });
+        schema.offers = Array.isArray(data.offers) ? data.offers.map(enhance) : enhance(data.offers);
       }
-    } : {};
-    
-    // Handle offers based on whether it's already provided in data
-    let offers;
-    if (data.offers) {
-      // If offers is provided, ensure it has priceValidUntil
-      offers = {
-        ...data.offers,
-        // Add priceValidUntil if not already present
-        ...((!data.offers.priceValidUntil) && {
-          priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString()
-        }),
-        seller,
-        ...areaServed
+      break;
+    case 'Article':
+      schema = { ...base, publisher: organization, author: organization, ...data };
+      break;
+    case 'FAQPage':
+      schema = { ...base, mainEntity: data.mainEntity ?? (data.questions ?? []).map((item: any) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) };
+      break;
+    case 'HowTo': {
+      const { supplies, tools, steps, ...rest } = data;
+      schema = {
+        ...base, ...rest,
+        ...(supplies && { supply: supplies.map((name: string) => ({ '@type': 'HowToSupply', name })) }),
+        ...(tools && { tool: tools.map((name: string) => ({ '@type': 'HowToTool', name })) }),
+        ...(steps && { step: steps.map((step: any, index: number) => ({ '@type': 'HowToStep', position: index + 1, ...step })) }),
       };
-    } else {
-      // Default offers object
-      offers = {
-        "@type": "Offer",
-        priceCurrency: "EUR",
-        priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString(),
-        availability: "https://schema.org/InStock",
-        seller,
-        ...areaServed
-      };
+      break;
     }
-    
-    // Create the schema object, ensuring we include all data properties
-    const schema = {
-      ...baseSchema,
-      ...data,
-      // Ensure brand is properly formatted
-      brand: data.brand && typeof data.brand === 'string'
-        ? { "@type": "Brand", name: data.brand }
-        : data.brand,
-      // Replace offers with our enhanced version
-      offers,
-      // Add aggregate rating if not provided (for rich snippets)
-      ...(!data.aggregateRating && {
-        aggregateRating: getAggregateRatingSchema()
-      })
-    };
-
-    return schema;
-  };
-
-  const getArticleSchema = () => ({
-    ...baseSchema,
-    publisher: {
-      "@type": "Organization",
-      name: "StayCool Airco",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://staycoolairco.nl/images/logo.svg"
-      }
-    },
-    author: {
-      "@type": "Organization",
-      name: "StayCool Airco"
-    },
-    datePublished: new Date().toISOString(),
-    dateModified: new Date().toISOString(),
-    ...data
-  });
-
-  const getReviewSchema = () => ({
-    ...baseSchema,
-    itemReviewed: {
-      "@type": "LocalBusiness",
-      name: "StayCool Airco"
-    },
-    author: {
-      "@type": "Person",
-      name: data.author
-    },
-    ...data
-  });
-
-  const getFAQPageSchema = () => ({
-    ...baseSchema,
-    mainEntity: data.questions.map((item: any) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer
-      }
-    }))
-  });
-  
-  const getHowToSchema = () => ({
-    ...baseSchema,
-    name: data.name,
-    description: data.description,
-    totalTime: data.totalTime || "PT1H", // Default 1 hour if not specified
-    supply: Array.isArray(data.supplies) ? data.supplies.map((supply: string) => ({
-      "@type": "HowToSupply",
-      name: supply
-    })) : [],
-    tool: Array.isArray(data.tools) ? data.tools.map((tool: string) => ({
-      "@type": "HowToTool",
-      name: tool
-    })) : [],
-    step: Array.isArray(data.steps) ? data.steps.map((step: any, index: number) => ({
-      "@type": "HowToStep",
-      position: index + 1,
-      name: step.name,
-      text: step.text,
-      ...(step.image && { 
-        image: {
-          "@type": "ImageObject",
-          url: step.image
-        } 
-      })
-    })) : [],
-    ...(location?.city && {
-      locationCreated: {
-        "@type": "Place",
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: location.city,
-          addressRegion: location.region || "Limburg",
-          addressCountry: "NL"
-        }
-      }
-    })
-  });
-  
-  const getCollectionPageSchema = () => ({
-    ...baseSchema,
-    url: "https://staycoolairco.nl/blog",
-    publisher: {
-      "@type": "Organization",
-      name: "StayCool Airco",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://staycoolairco.nl/images/logo.svg"
-      }
-    },
-    ...data
-  });
-  
-  const getOrganizationSchema = () => ({
-    ...baseSchema,
-    name: "StayCool Airco",
-    url: "https://staycoolairco.nl",
-    logo: "https://staycoolairco.nl/images/logo.svg",
-    image: "https://staycoolairco.nl/images/logo.svg",
-    telephone: "046 202 1430",
-    email: "info@staycoolairco.nl",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Aan De Bogen 11",
-      addressLocality: "Nieuwstadt",
-      addressRegion: "Limburg",
-      postalCode: "6118 AS",
-      addressCountry: "NL"
-    },
-    sameAs: [
-      "https://www.facebook.com/staycoolairco",
-      "https://www.instagram.com/staycoolairco",
-      "https://www.linkedin.com/company/staycoolairco"
-    ],
-    ...data
-  });
-
-  const getWebSiteSchema = () => ({
-    ...baseSchema,
-    name: "StayCool Airco",
-    url: "https://staycoolairco.nl",
-    inLanguage: "nl-NL",
-    publisher: {
-      "@type": "Organization",
-      name: "StayCool Airco",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://staycoolairco.nl/images/logo.svg"
-      }
-    },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: "https://staycoolairco.nl/?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    },
-    ...data
-  });
-
-  const getBreadcrumbListSchema = () => ({
-    ...baseSchema,
-    itemListElement: (data.items || []).map((item: { name: string; url: string }, index: number) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: item.name,
-      item: item.url
-    }))
-  });
-
-  const schemaMap = {
-    LocalBusiness: getLocalBusinessSchema,
-    Service: getServiceSchema,
-    Product: getProductSchema,
-    Article: getArticleSchema,
-    Review: getReviewSchema,
-    FAQPage: getFAQPageSchema,
-    HowTo: getHowToSchema,
-    CollectionPage: getCollectionPageSchema,
-    Organization: getOrganizationSchema,
-    WebSite: getWebSiteSchema,
-    BreadcrumbList: getBreadcrumbListSchema
-  };
-
-  // Check if the type exists in schemaMap
-  if (!schemaMap[type]) {
-    console.error(`Invalid schema type: ${type}. Available types: ${Object.keys(schemaMap).join(', ')}`);
-    return null;
+    case 'CollectionPage':
+    case 'WebSite':
+      schema = { ...base, publisher: organization, ...data };
+      break;
+    case 'BreadcrumbList':
+      schema = { ...base, itemListElement: data.itemListElement ?? (data.items ?? []).map((item: any, index: number) => ({ '@type': 'ListItem', position: index + 1, name: item.name, item: item.url })) };
+      break;
+    case 'Table': {
+      const { items, ...rest } = data;
+      schema = { ...base, ...rest, ...(items && { about: items }) };
+      break;
+    }
   }
-
-  const schema = schemaMap[type]();
-
-  return (
-    <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
-    </Helmet>
-  );
+  return <Helmet><script type="application/ld+json">{JSON.stringify(schema).replace(/</g, '\\u003c')}</script></Helmet>;
 }

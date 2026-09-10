@@ -1,6 +1,5 @@
-import React from 'react';
 import ArticleLayout from '../../components/ArticleLayout';
-import { MapPin, ThermometerSun, Euro, Wrench, CheckCircle, AlertTriangle, Clock, HelpCircle } from 'lucide-react';
+import { MapPin,ThermometerSun,Euro,Wrench,CheckCircle,AlertTriangle,Clock,HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AircoInHerkenbosch = () => {

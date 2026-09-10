@@ -2,10 +2,10 @@ import { Brand } from '../../types/products';
 
 export const alphaessData: Brand = {
   name: 'AlphaESS',
-  description: 'Wereldwijde top 5 speler in geavanceerde energieopslagsystemen met meer dan 200.000 installaties wereldwijd. Specialist in slimme thuisbatterijen voor optimaal profiteren van dynamische energiecontracten.',
+  description: "Wereldwijde top 5 speler in geavanceerde energieopslagsystemen met ervaring in energieopslag. Specialist in slimme thuisbatterijen voor optimaal profiteren van dynamische energiecontracten.",
   imageUrl: '/images/products/thuisbatterij/alphaess/alpha-ess-thuisbatterij-3580x3580.webp',
   features: [
-    '10 jaar garantie of 10.000 cycli',
+    "garantie volgens offerte",
     'Slimme sturing voor dynamische energiecontracten',
     'Modulair systeem',
     'Toekomstvast en onafhankelijk'
@@ -32,7 +32,7 @@ export const alphaessData: Brand = {
       capacity: '3,85 kWh',
       features: [
         'Verwachte terugverdientijd: 4-7 jaar',
-        '10 jaar garantie of 10.000 cycli',
+        "garantie volgens offerte",
         'Binnen 4 weken geïnstalleerd',
         'Geschikt voor 1-fase aansluiting',
         'Modulair uit te breiden',
@@ -67,7 +67,7 @@ export const alphaessData: Brand = {
       capacity: '7,7 kWh',
       features: [
         'Verwachte terugverdientijd: 4-7 jaar',
-        '10 jaar garantie of 10.000 cycli',
+        "garantie volgens offerte",
         'Binnen 4 weken geïnstalleerd',
         'Geschikt voor 1-fase aansluiting',
         'Populairste keuze voor gezinnen',
@@ -102,7 +102,7 @@ export const alphaessData: Brand = {
       capacity: '10,1 kWh',
       features: [
         'Verwachte terugverdientijd: 4-7 jaar',
-        '10 jaar garantie of 10.000 cycli',
+        "garantie volgens offerte",
         'Binnen 4 weken geïnstalleerd',
         'Geschikt voor 1-fase aansluiting',
         'Ideaal voor groter energieverbruik',
@@ -137,7 +137,7 @@ export const alphaessData: Brand = {
       capacity: '20,2 kWh',
       features: [
         'Verwachte terugverdientijd: 4-7 jaar',
-        '10 jaar garantie of 10.000 cycli',
+        "garantie volgens offerte",
         'Binnen 4 weken geïnstalleerd',
         'Geschikt voor 1-fase aansluiting',
         'Maximale capaciteit 1-fase',
@@ -173,7 +173,7 @@ export const alphaessData: Brand = {
       capacity: '7,7 kWh',
       features: [
         'Verwachte terugverdientijd: 4-7 jaar',
-        '10 jaar garantie of 10.000 cycli',
+        "garantie volgens offerte",
         'Binnen 4 weken geïnstalleerd',
         'Geschikt voor 3-fase aansluiting',
         '10 kW laad- en ontlaadvermogen',
@@ -208,7 +208,7 @@ export const alphaessData: Brand = {
       capacity: '11,55 kWh',
       features: [
         'Verwachte terugverdientijd: 4-7 jaar',
-        '10 jaar garantie of 10.000 cycli',
+        "garantie volgens offerte",
         'Binnen 4 weken geïnstalleerd',
         'Geschikt voor 3-fase aansluiting',
         'Meest populaire 3-fase model',
@@ -243,7 +243,7 @@ export const alphaessData: Brand = {
       capacity: '15,4 kWh',
       features: [
         'Verwachte terugverdientijd: 4-7 jaar',
-        '10 jaar garantie of 10.000 cycli',
+        "garantie volgens offerte",
         'Binnen 4 weken geïnstalleerd',
         'Geschikt voor 3-fase aansluiting',
         'Extra capaciteit voor groot verbruik',
@@ -278,7 +278,7 @@ export const alphaessData: Brand = {
       capacity: '19,25 kWh',
       features: [
         'Verwachte terugverdientijd: 4-7 jaar',
-        '10 jaar garantie of 10.000 cycli',
+        "garantie volgens offerte",
         'Binnen 4 weken geïnstalleerd',
         'Geschikt voor 3-fase aansluiting',
         'Bijna volledige onafhankelijkheid',
@@ -313,7 +313,7 @@ export const alphaessData: Brand = {
       capacity: '23,1 kWh',
       features: [
         'Verwachte terugverdientijd: 4-7 jaar',
-        '10 jaar garantie of 10.000 cycli',
+        "garantie volgens offerte",
         'Binnen 4 weken geïnstalleerd',
         'Geschikt voor 3-fase aansluiting',
         'Voor zeer hoog energieverbruik',
@@ -348,7 +348,7 @@ export const alphaessData: Brand = {
       capacity: '30,8 kWh',
       features: [
         'Verwachte terugverdientijd: 4-7 jaar',
-        '10 jaar garantie of 10.000 cycli',
+        "garantie volgens offerte",
         'Binnen 4 weken geïnstalleerd',
         'Geschikt voor 3-fase aansluiting',
         'Zakelijke toepassingen',
@@ -383,7 +383,7 @@ export const alphaessData: Brand = {
       capacity: '38,5 kWh',
       features: [
         'Verwachte terugverdientijd: 4-7 jaar',
-        '10 jaar garantie of 10.000 cycli',
+        "garantie volgens offerte",
         'Binnen 4 weken geïnstalleerd',
         'Geschikt voor 3-fase aansluiting',
         'Industriële capaciteit',
@@ -418,7 +418,7 @@ export const alphaessData: Brand = {
       capacity: '46,2 kWh',
       features: [
         'Verwachte terugverdientijd: 4-7 jaar',
-        '10 jaar garantie of 10.000 cycli',
+        "garantie volgens offerte",
         'Binnen 4 weken geïnstalleerd',
         'Geschikt voor 3-fase aansluiting',
         'Maximale configuratie',

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React,{ useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
-  Moon, Volume2, CheckCircle, Phone, ArrowRight, Star, Shield, Award,
-  ChevronDown, ChevronUp, Thermometer, Ruler, Clock, Zap
+Moon,Volume2,CheckCircle,Phone,ArrowRight,Star,Shield,Award,
+ChevronDown,ChevronUp,Thermometer,Clock
 } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -138,10 +138,10 @@ const AircoSlaapkamerWelkeKw: React.FC = () => {
         {/* Trust bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {[
-            { icon: <Star className="h-5 w-5 text-yellow-500" />, text: '4.9 ster (127 reviews)' },
+            { icon: <Star className="h-5 w-5 text-yellow-500" />, text: "4.9 ster (klantervaringen)" },
             { icon: <Shield className="h-5 w-5 text-blue-600" />, text: 'F-gassen gecertificeerd' },
             { icon: <Award className="h-5 w-5 text-blue-600" />, text: 'STEK erkend' },
-            { icon: <CheckCircle className="h-5 w-5 text-green-600" />, text: '5 jaar garantie' },
+            { icon: <CheckCircle className="h-5 w-5 text-green-600" />, text: "garantie volgens offerte" },
           ].map((item, i) => (
             <div key={i} className="bg-white rounded-2xl shadow-lg p-4 border border-gray-100 flex items-center gap-3">
               {item.icon}
@@ -207,7 +207,7 @@ const AircoSlaapkamerWelkeKw: React.FC = () => {
                 nauwelijks in een normale slaapkamer.
               </p>
               <div className="bg-sky-50 rounded-xl p-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Geluidsniveaus ter vergelijking</h4>
+                <h3 className="font-semibold text-gray-900 mb-2">Geluidsniveaus ter vergelijking</h3>
                 <ul className="space-y-1 text-sm text-gray-600">
                   {[
                     { db: '19 dB', label: 'Daikin Stylish stille modus (slaapkamer-ideaal)' },
@@ -340,7 +340,7 @@ const AircoSlaapkamerWelkeKw: React.FC = () => {
             <div className="grid grid-cols-2 gap-3">
               {[
                 { icon: <Clock className="h-5 w-5" />, text: 'Installatie op 1 dag' },
-                { icon: <Shield className="h-5 w-5" />, text: '5 jaar garantie' },
+                { icon: <Shield className="h-5 w-5" />, text: "garantie volgens offerte" },
                 { icon: <CheckCircle className="h-5 w-5" />, text: 'STEK gecertificeerd' },
                 { icon: <Star className="h-5 w-5" />, text: '4.9 ster beoordeeld' },
               ].map((item, i) => (

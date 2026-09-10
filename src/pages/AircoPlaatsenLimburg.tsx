@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
-  CheckCircle, Phone, MapPin, ShieldCheck, Clock, Calendar, AlertTriangle, Wrench, Home as HomeIcon, Building2,
+CheckCircle,Phone,MapPin,ShieldCheck,Clock,Home as HomeIcon,Building2
 } from 'lucide-react';
 import MetaTags from '../components/MetaTags';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -144,13 +144,7 @@ const AircoPlaatsenLimburg: React.FC = () => {
             addressRegion: 'Limburg',
             addressCountry: 'NL',
           },
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: aggregateReviews.averageRating.toString(),
-            reviewCount: aggregateReviews.totalReviews.toString(),
-            bestRating: '5',
-            worstRating: '1',
-          },
+
         },
         areaServed: {
           '@type': 'AdministrativeArea',
@@ -278,7 +272,7 @@ const AircoPlaatsenLimburg: React.FC = () => {
 
             <p>
               We benoemen al deze posten al bij de opname. Voor een diepere uitleg per type airco en alle prijscomponenten,
-              zie onze <Link to="/seo/pillar-9-kosten-prijzen/kosten-airco-plaatsen">kosten-deepdive airco plaatsen</Link>.
+              zie onze <Link to="/kosten-airco-plaatsen">kosten-deepdive airco plaatsen</Link>.
               Op zoek naar specifieke modellen en de bijbehorende prijzen?
               {' '}<Link to="/airco-kopen-limburg">Bekijk onze prijslijst voor airco kopen in Limburg</Link>.
             </p>
@@ -455,7 +449,8 @@ const AircoPlaatsenLimburg: React.FC = () => {
             </ul>
 
             <p>
-              We hebben sinds 2021 ruim 1.000 installaties achter de rug, en eerlijk gezegd: telefonische bereikbaarheid
+
+              We installeren airco’s in Limburg, en eerlijk gezegd: telefonische bereikbaarheid
               is bij ons niet altijd top — we zijn vaak op pad bij klanten. WhatsApp (06 36481054) is meestal de snelste
               route voor een eerste reactie. Voor de praktijk-context van een installatie in Zuid-Limburg, lees ook
               {' '}<Link to="/blog/airco-installatie-zuid-limburg">de Zuid-Limburg installatie-praktijk</Link>.

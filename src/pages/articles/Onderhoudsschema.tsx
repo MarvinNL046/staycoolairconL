@@ -1,7 +1,6 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, Calendar, Clock, Wrench, Shield, AlertTriangle } from 'lucide-react';
+import { ArrowLeft,Calendar,Clock,Wrench,Shield,AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function MaintenanceSchedule() {
@@ -59,6 +58,7 @@ export default function MaintenanceSchedule() {
           name="keywords" 
           content="airco onderhoud, onderhoudsplanning, airco service, airco filterreiniging, airco levensduur"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/onderhoudsschema" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">

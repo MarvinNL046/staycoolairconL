@@ -1,7 +1,6 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, Wind, ThermometerSun, Zap, ArrowRight } from 'lucide-react';
+import { ArrowLeft,Wind,ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function CoandaEffect() {
@@ -17,6 +16,7 @@ export default function CoandaEffect() {
           name="keywords" 
           content="coanda effect, airco luchtverdeling, daikin stylish, comfort airco, luchtstroming airco"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/coanda-effect" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
@@ -98,7 +98,7 @@ export default function CoandaEffect() {
               <ul className="mb-0">
                 <li>Traditionele airco: Ongelijkmatige temperatuurverdeling met 3-4°C verschil</li>
                 <li>Met Coanda effect: Maximaal 1-2°C temperatuurverschil in de ruimte</li>
-                <li>Resultaat: Meer comfort en 15-20% energiebesparing</li>
+                <li>Resultaat: Meer comfort en situatieafhankelijke besparing</li>
               </ul>
             </div>
 

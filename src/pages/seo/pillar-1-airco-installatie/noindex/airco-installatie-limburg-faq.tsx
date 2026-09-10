@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { HelpCircle, ChevronDown, ChevronUp, Phone, ArrowRight, CheckCircle, Clock, Euro, Wrench, Shield } from 'lucide-react';
+import { HelpCircle,ChevronDown,ChevronUp,Phone,ArrowRight,CheckCircle,Clock,Euro,Wrench,Shield } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
 import FAQSchema from '../../../../components/SEO/FAQSchema';
@@ -115,7 +115,7 @@ const AircoInstallatieLimburgFAQPage = () => {
         },
         {
           q: "Wat is de terugverdientijd van een airco?",
-          a: "Bij vervanging van elektrische verwarming: 3-5 jaar door energiebesparing tot 50%. Bij vervanging van gaskachels: 5-8 jaar afhankelijk van gasprijzen. Bij alleen koelen: 8-12 jaar vooral door comfort en waardestijging woning. Moderne inverter airco's gebruiken 50-70% minder energie dan oude systemen. Gemiddeld gezin bespaart €200-€400/jaar op energiekosten bij verwarmen met airco vs elektrische verwarming. Koelfunctie kost ongeveer €30-€60 per zomer bij normaal gebruik."
+          a: "Bij vervanging van elektrische verwarming: 3-5 jaar door besparing afhankelijk van gebruik en tarieven. Bij vervanging van gaskachels: 5-8 jaar afhankelijk van gasprijzen. Bij alleen koelen: 8-12 jaar vooral door comfort en waardestijging woning. Moderne inverter airco's gebruiken 50-70% minder energie dan oude systemen. Gemiddeld gezin bespaart €200-€400/jaar op energiekosten bij verwarmen met airco vs elektrische verwarming. Koelfunctie kost ongeveer €30-€60 per zomer bij normaal gebruik."
         },
         {
           q: "Kan ik de airco financieren of in termijnen betalen?",
@@ -156,14 +156,7 @@ const AircoInstallatieLimburgFAQPage = () => {
     }
   ];
 
-  const allQuestions = faqCategories.flatMap((category, catIndex) =>
-    category.questions.map((q, qIndex) => ({
-      ...q,
-      category: category.title,
-      color: category.color,
-      index: catIndex * 100 + qIndex
-    }))
-  );
+
 
   const quickLinks = [
     { title: "Complete Installatie Gids", href: "/kennisbank/airco-installatie-limburg", desc: "Alles over airco installatie in Limburg", color: "blue" },

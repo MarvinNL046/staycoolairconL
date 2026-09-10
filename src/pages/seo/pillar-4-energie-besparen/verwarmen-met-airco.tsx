@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Zap, Euro, ThermometerSun, TrendingUp, Phone, Calculator, Shield, Wind } from 'lucide-react';
+import { CheckCircle,Zap,Euro,ThermometerSun,TrendingUp,Phone,Calculator,Shield } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const VerwarmenMetAirco: React.FC = () => {
   const breadcrumbItems = [
@@ -18,7 +17,7 @@ const VerwarmenMetAirco: React.FC = () => {
     {
       icon: <Euro className="h-12 w-12 text-sky-500" />,
       title: '60% Lagere Verwarmingskosten',
-      description: 'Bespaar tot 60% op uw energierekening vergeleken met traditionele CV-ketel of elektrische verwarming.'
+      description: "Bekijk de mogelijke besparing op energierekening vergeleken met traditionele CV-ketel of elektrische verwarming."
     },
     {
       icon: <ThermometerSun className="h-12 w-12 text-orange-500" />,
@@ -32,8 +31,8 @@ const VerwarmenMetAirco: React.FC = () => {
     },
     {
       icon: <Shield className="h-12 w-12 text-blue-600" />,
-      title: '10 Jaar Garantie',
-      description: 'Tot 10 jaar volledige garantie op premium warmtepomp airco\'s van Daikin, Mitsubishi en LG.'
+      title: "garantie volgens offerte",
+      description: "garantie volgens offerte op premium warmtepomp airco's van Daikin, Mitsubishi en LG."
     }
   ];
 
@@ -60,7 +59,7 @@ const VerwarmenMetAirco: React.FC = () => {
     },
     {
       question: 'Welke airco merken zijn het beste voor verwarmen?',
-      answer: 'Voor verwarmen raden wij vooral Daikin, Mitsubishi Heavy Industries en LG aan. Deze merken hebben bewezen warmtepomp technologie met hoge SCOP-waarden (4,5-5,2) en uitstekende prestaties bij lage temperaturen. Daikin Emura en Perfera series, Mitsubishi SRK-ZS Diamond en LG Artcool Mirror zijn topmodellen met A+++ energielabels. Wij installeren alleen F-gassen gecertificeerd en bieden tot 10 jaar garantie op deze premium systemen.'
+      answer: "Voor verwarmen raden wij vooral Daikin, Mitsubishi Heavy Industries en LG aan. Deze merken hebben bewezen warmtepomp technologie met hoge SCOP-waarden (4,5-5,2) en uitstekende prestaties bij lage temperaturen. Daikin Emura en Perfera series, Mitsubishi SRK-ZS Diamond en LG Artcool Mirror zijn topmodellen met A+++ energielabels. Wij installeren alleen F-gassen gecertificeerd en bieden garantie volgens offerte op deze premium systemen."
     },
     {
       question: 'Wat kost het om te verwarmen met een airco per jaar?',
@@ -75,7 +74,7 @@ const VerwarmenMetAirco: React.FC = () => {
   return (
     <>
       <MetaTags
-        title="Verwarmen met Airco - 60% Besparing | Warmtepomp Limburg | StayCool"
+        title="Verwarmen met Airco - situatieafhankelijke besparing | Warmtepomp Limburg | StayCool"
         description="Verwarmen met airco ✓ Tot 60% lagere kosten ✓ Warmtepomp efficiency ✓ Ideaal met zonnepanelen ✓ F-gassen gecertificeerd ✓ Gratis advies Limburg!"
       />
 
@@ -84,7 +83,7 @@ const VerwarmenMetAirco: React.FC = () => {
         data={{
           "@type": "Service",
           name: "Verwarmen met Airco - Warmtepomp",
-          description: "Professionele installatie van energiezuinige warmtepomp airco's voor verwarming met tot 60% besparing. F-gassen gecertificeerd, A-merken, 10 jaar garantie.",
+          description: "Professionele installatie van energiezuinige warmtepomp airco's voor verwarming met situatieafhankelijke besparing. F-gassen gecertificeerd, A-merken, garantie volgens offerte.",
           provider: {
             "@type": "LocalBusiness",
             name: "StayCool Airco",
@@ -118,7 +117,8 @@ const VerwarmenMetAirco: React.FC = () => {
           </h1>
 
           <p className="text-xl md:text-2xl text-sky-50 mb-8 max-w-4xl">
-            Bespaar tot 60% op uw verwarmingskosten met een moderne warmtepomp airco.
+
+            Bekijk de mogelijke besparing op verwarmingskosten met een moderne warmtepomp airco.
             Haal 4-5 kW warmte uit 1 kW stroom. Ideaal in combinatie met zonnepanelen.
           </p>
 
@@ -146,7 +146,7 @@ const VerwarmenMetAirco: React.FC = () => {
             </div>
             <div className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />
-              <span>Tot 10 jaar garantie</span>
+              <span>garantie volgens offerte</span>
             </div>
             <div className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />
@@ -169,7 +169,7 @@ const VerwarmenMetAirco: React.FC = () => {
                 <div className="flex justify-center mb-4">
                   {usp.icon}
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}
@@ -253,10 +253,10 @@ const VerwarmenMetAirco: React.FC = () => {
               </p>
 
               <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">
-                <h4 className="font-bold text-gray-900 mb-2 flex items-center">
+                <h3 className="font-bold text-gray-900 mb-2 flex items-center">
                   <TrendingUp className="h-5 w-5 mr-2 text-blue-600" />
                   Rekenvoorbeeld SCOP-besparing
-                </h4>
+                </h3>
                 <p className="text-gray-700">
                   <strong>Situatie:</strong> Verwarming van 120m² woning in Limburg, 1500 uur verwarming per jaar, 8 kW warmtevraag.
                 </p>
@@ -616,8 +616,9 @@ const VerwarmenMetAirco: React.FC = () => {
             Professioneel Advies over Verwarmen met Airco
           </h2>
           <p className="text-xl mb-8 text-blue-50">
+
             Onze specialisten berekenen gratis welke warmtepomp airco perfect past bij uw woning en besparing.
-            F-gassen gecertificeerd, 10 jaar garantie, heel Limburg.
+            F-gassen gecertificeerd, garantie volgens offerte, heel Limburg.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link

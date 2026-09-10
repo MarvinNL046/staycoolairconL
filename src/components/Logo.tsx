@@ -6,7 +6,7 @@ interface LogoProps {
   inverted?: boolean;
 }
 
-export default function Logo({ className = "h-12 w-auto", style, inverted }: LogoProps) {
+export default function Logo({ className = "h-12 w-auto", style }: LogoProps) {
   return (
     <img
       src="/images/staycoolairco_logo.png"

@@ -1,9 +1,8 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import { ArrowRight, ArrowLeft, Send, CheckCircle, User, Mail, Phone, MapPin, MessageSquare } from 'lucide-react';
+import React,{ useState,useCallback,useEffect } from 'react';
+import { ArrowRight,ArrowLeft,Send,CheckCircle,User,Mail,Phone,MapPin,MessageSquare } from 'lucide-react';
 import { sendEmail } from '../utils/email';
 import toast from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
-import { trackEvent, trackInteraction } from '../utils/analytics';
+import { trackEvent,trackInteraction } from '../utils/analytics';
 import { trackPixelFormSubmission } from '../utils/facebook';
 import { trackAPIFormSubmission } from '../utils/conversionsAPI';
 
@@ -33,7 +32,7 @@ export default function MultiStepForm({ variant = 'hero', className = '' }: Mult
     message: ''
   });
   const [errors, setErrors] = useState<Partial<FormData>>({});
-  const navigate = useNavigate();
+
 
   // Load saved form data from session storage
   useEffect(() => {

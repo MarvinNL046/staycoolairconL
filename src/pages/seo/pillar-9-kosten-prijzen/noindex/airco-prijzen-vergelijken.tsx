@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Euro, Calculator, TrendingUp, Phone, Award, CheckCircle, XCircle } from 'lucide-react';
+import { Calculator,Phone,Award,CheckCircle,XCircle } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
 
@@ -185,7 +184,7 @@ const AircoPrijzenVergelijken = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">2 jaar garantie</span>
+                  <span className="text-sm">garantie volgens offerte</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <XCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
@@ -216,7 +215,7 @@ const AircoPrijzenVergelijken = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">3 jaar garantie</span>
+                  <span className="text-sm">garantie volgens offerte</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -244,7 +243,7 @@ const AircoPrijzenVergelijken = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">5 jaar garantie</span>
+                  <span className="text-sm">garantie volgens offerte</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />

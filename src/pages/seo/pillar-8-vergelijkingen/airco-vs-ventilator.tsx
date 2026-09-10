@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, XCircle, Euro, ThermometerSun, Wind, Droplets, Phone, Calculator, TrendingDown } from 'lucide-react';
+import { CheckCircle,XCircle,Euro,ThermometerSun,Wind,Droplets,Phone,Calculator,TrendingDown } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
@@ -178,7 +177,7 @@ const AircoVsVentilator = () => {
             {usps.map((usp, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
                 <div className="flex justify-center mb-4">{usp.icon}</div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}
@@ -330,7 +329,7 @@ const AircoVsVentilator = () => {
                 </tr>
                 <tr>
                   <td className="px-6 py-4 font-semibold text-gray-900">Verwarmingsfunctie</td>
-                  <td className="px-6 py-4 text-green-600">✓ Warmtepomp (60% besparing)</td>
+                  <td className="px-6 py-4 text-green-600">✓ Warmtepomp (situatieafhankelijke besparing)</td>
                   <td className="px-6 py-4 text-red-600">✗ Alleen koeling (gevoeld)</td>
                 </tr>
                 <tr className="bg-gray-50">
@@ -579,7 +578,7 @@ const AircoVsVentilator = () => {
                   <CheckCircle className="h-6 w-6 text-orange-600 mr-3 flex-shrink-0 mt-1" />
                   <div>
                     <strong className="text-gray-900">Als aanvulling op airco</strong>
-                    <p className="text-gray-700">Extra luchtcirculatie - 20% energiebesparing</p>
+                    <p className="text-gray-700">Extra luchtcirculatie - situatieafhankelijke besparing</p>
                   </div>
                 </li>
               </ul>

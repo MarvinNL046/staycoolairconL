@@ -41,7 +41,7 @@ export class PerformanceOptimizer {
     if (typeof document === 'undefined') return;
 
     // Only preload resources that actually exist and are used
-    const criticalResources = [
+    const criticalResources: { href: string; as: string; type?: string; crossorigin?: string }[] = [
       // Logo is used in navbar
       { href: '/images/staycoolairco_logo.png', as: 'image' }
     ];
@@ -219,7 +219,10 @@ export class PerformanceOptimizer {
       // First Input Delay
       new PerformanceObserver((entryList) => {
         const entries = entryList.getEntries();
-        metrics.fid = entries[0].processingStart - entries[0].startTime;
+        const firstInput = entries[0];
+        if (firstInput && 'processingStart' in firstInput && typeof firstInput.processingStart === 'number') {
+          metrics.fid = firstInput.processingStart - firstInput.startTime;
+        }
       }).observe({ entryTypes: ['first-input'] });
 
       // Cumulative Layout Shift

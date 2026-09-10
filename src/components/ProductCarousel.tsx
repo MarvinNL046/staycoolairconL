@@ -1,6 +1,6 @@
-import React, { useState, useCallback, memo } from 'react';
-import { m, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState,useCallback,memo } from 'react';
+import { m,AnimatePresence } from 'framer-motion';
+import { ChevronLeft,ChevronRight } from 'lucide-react';
 import LazyImage from './LazyImage';
 
 interface ProductImage {
@@ -78,7 +78,7 @@ function ProductCarouselBase({ images }: ProductCarouselProps) {
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.7}
-            onDragEnd={(e, { offset, velocity }) => {
+            onDragEnd={(_e, { offset, velocity }) => {
               const swipe = swipePower(offset.x, velocity.x);
               if (swipe < -swipeConfidenceThreshold) {
                 paginate(1);

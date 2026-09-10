@@ -1,4 +1,4 @@
-interface SchemaValidationResult {
+export interface SchemaValidationResult {
   isValid: boolean;
   errors: string[];
   warnings: string[];

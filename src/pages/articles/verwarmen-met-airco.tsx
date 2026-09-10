@@ -1,8 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { m } from 'framer-motion';
-import { Phone, Mail, MapPin, ThermometerSun, PiggyBank, Shield } from 'lucide-react';
+import { Phone,Mail,MapPin,ThermometerSun,PiggyBank,Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SchemaMarkup from '../../components/SchemaMarkup';
 
@@ -18,26 +17,13 @@ export default function VerwarmenMetAirco() {
         type="Article"
         data={{
           headline: "Verwarmen met Airco: De Slimme Manier van Duurzaam Verwarmen",
-          description: "Ontdek hoe u uw huis efficiënt kunt verwarmen met een airco. Bespaar tot 60% op uw energierekening met deze moderne verwarmingsoplossing. ✓ Energiezuinig ✓ Duurzaam ✓ Professionele installatie",
+          description: "Ontdek hoe u uw huis efficiënt kunt verwarmen met een airco. Bekijk de mogelijke besparing op energierekening met deze moderne verwarmingsoplossing. ✓ Energiezuinig ✓ Duurzaam ✓ Professionele installatie",
           image: "https://staycoolairco.nl/images/logo.svg",
           mainEntityOfPage: {
             "@type": "WebPage",
             "@id": "https://staycoolairco.nl/kennisbank/verwarmen-met-airco"
           },
-          articleBody: `
-            Een moderne airco is niet alleen voor koeling, maar ook een efficiënte manier van verwarmen.
-            Door gebruik te maken van warmtepomp technologie kan een airco tot 60% energie besparen op verwarmingskosten.
-            
-            Voordelen van verwarmen met airco:
-            - Zeer energiezuinig (tot 60% besparing)
-            - Werkt ook bij lage temperaturen
-            - Snelle opwarming
-            - Eenvoudige installatie
-            - Koeling in de zomer
-            - Lage onderhoudskosten
-            
-            Onze aanpak omvat deskundig advies, professionele installatie en uitgebreide garantie.
-          `,
+          articleBody: "\n            Een moderne airco is niet alleen voor koeling, maar ook een efficiënte manier van verwarmen.\n            Door gebruik te maken van warmtepomp technologie kan een airco tot 60% energie besparen op verwarmingskosten.\n            \n            Voordelen van verwarmen met airco:\n            - Zeer energiezuinig (situatieafhankelijke besparing)\n            - Werkt ook bij lage temperaturen\n            - Snelle opwarming\n            - Eenvoudige installatie\n            - Koeling in de zomer\n            - Lage onderhoudskosten\n            \n            Onze aanpak omvat deskundig advies, professionele installatie en uitgebreide garantie.\n          ",
           keywords: "verwarmen met airco, airco verwarming, warmtepomp airco, energiezuinig verwarmen, duurzame verwarming",
           articleSection: "Klimaatbeheersing",
           wordCount: 1500,
@@ -48,7 +34,7 @@ export default function VerwarmenMetAirco() {
         <title>Verwarmen met Airco | Efficiënt & Duurzaam Verwarmen | StayCool</title>
         <meta 
           name="description" 
-          content="Ontdek hoe u uw huis efficiënt kunt verwarmen met een airco. Bespaar tot 60% op uw energierekening met deze moderne verwarmingsoplossing. ✓ Energiezuinig ✓ Duurzaam ✓ Professionele installatie"
+          content="Ontdek hoe u uw huis efficiënt kunt verwarmen met een airco. Bekijk de mogelijke besparing op energierekening met deze moderne verwarmingsoplossing. ✓ Energiezuinig ✓ Duurzaam ✓ Professionele installatie"
         />
         <meta 
           name="keywords" 
@@ -87,7 +73,7 @@ export default function VerwarmenMetAirco() {
                   <h3 className="text-xl font-semibold">Efficiëntie</h3>
                 </div>
                 <ul className="space-y-2">
-                  <li>✓ Tot 60% energiebesparing</li>
+                  <li>✓ situatieafhankelijke besparing</li>
                   <li>✓ Snelle opwarming</li>
                   <li>✓ Werkt bij lage temperaturen</li>
                   <li>✓ Optimale temperatuurregeling</li>
@@ -113,7 +99,7 @@ export default function VerwarmenMetAirco() {
                   <h3 className="text-xl font-semibold">Zekerheid</h3>
                 </div>
                 <ul className="space-y-2">
-                  <li>✓ 5 jaar garantie</li>
+                  <li>✓ garantie volgens offerte</li>
                   <li>✓ Erkend installateur</li>
                   <li>✓ Priority storingsdienst</li>
                   <li>✓ Professioneel advies</li>

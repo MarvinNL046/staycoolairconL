@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Shield, Wrench, Clock, Phone, AlertCircle, ThermometerSnowflake, Wind, Settings, Award, Zap } from 'lucide-react';
+import { CheckCircle,Shield,Wrench,Clock,Phone,AlertCircle,Settings,Award } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const AircoReparatieService: React.FC = () => {
   const breadcrumbItems = [
@@ -118,7 +117,7 @@ const AircoReparatieService: React.FC = () => {
     },
     {
       question: "Krijg ik garantie op de reparatie?",
-      answer: "Ja, op al onze reparaties geven we standaard garantie. Op arbeid geeft StayCool Airco 6 maanden tot 1 jaar garantie, afhankelijk van het type werkzaamheden. Op nieuwe onderdelen geldt de fabrieksgarantie (meestal 1-2 jaar). Bij grotere reparaties zoals compressor vervanging kan de garantieperiode langer zijn. Alle garantievoorwaarden worden duidelijk vermeld op de factuur."
+      answer: "Ja, op al onze reparaties geven we standaard garantie. Op arbeid geeft StayCool Airco 6 maanden garantie volgens offerte, afhankelijk van het type werkzaamheden. Op nieuwe onderdelen geldt de fabrieksgarantie (meestal 1-2 jaar). Bij grotere reparaties zoals compressor vervanging kan de garantieperiode langer zijn. Alle garantievoorwaarden worden duidelijk vermeld op de factuur."
     },
     {
       question: "Mijn airco is ouder dan 10 jaar, is reparatie nog zinvol?",

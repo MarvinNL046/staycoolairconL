@@ -1,8 +1,7 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Award, Users, MapPin, Wrench, Leaf, ShieldCheck, Phone, ArrowRight } from 'lucide-react';
+import { Award,Users,MapPin,Wrench,Leaf,ShieldCheck,Phone,ArrowRight } from 'lucide-react';
 
 export default function Over() {
   return (
@@ -93,7 +92,7 @@ export default function Over() {
               {
                 icon: Leaf,
                 title: 'Duurzaam',
-                body: 'Verwarmen met airco bespaart tot 60% op uw stookkosten. Plus thuisbatterij voor 100% eigen energie.',
+                body: "Verwarmen met airco kan mogelijk besparen op stookkosten. Plus thuisbatterij voor 100% eigen energie.",
               },
             ].map((item) => (
               <div

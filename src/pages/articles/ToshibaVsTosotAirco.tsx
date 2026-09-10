@@ -1,6 +1,5 @@
-import React from 'react';
 import ArticleLayout from '../../components/ArticleLayout';
-import { ThermometerSun, Zap, Wifi, Volume2, Wind, CheckCircle, AlertTriangle, HelpCircle } from 'lucide-react';
+import { ThermometerSun,Wifi,Volume2,Wind,CheckCircle,AlertTriangle,HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ToshibaVsTosotAirco = () => {

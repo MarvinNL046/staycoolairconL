@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "build:seo": "node scripts/build-seo.mjs",
     "dev": "vite",
-    "build": "npm run build:brands && npm run optimize-images && npm run generate-sitemaps && npm run build:clean && npm run build:client && npm run validate:build",
+    "build": "node scripts/build-seo.mjs",
     "build:clean": "rimraf dist",
-    "build:client": "tsc && vite build",
+    "build:client": "npm run typecheck && vite build",
     "build:prod": "cross-env NODE_ENV=production npm run build",
     "build:brands": "node scripts/build-brands-data.js && node scripts/bundle-brands-data.js",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
@@ -28,7 +29,8 @@
     "check-links:rendered": "node scripts/check-links-rendered.js",
     "check-links:rendered:local": "node scripts/check-links-rendered.js http://localhost:4173",
     "crawl-links": "node scripts/crawl-links.js",
-    "crawl-links:local": "node scripts/crawl-links.js http://localhost:4173"
+    "crawl-links:local": "node scripts/crawl-links.js http://localhost:4173",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json && tsc --noEmit -p tsconfig.node.json"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

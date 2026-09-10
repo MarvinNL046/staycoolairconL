@@ -2,11 +2,11 @@ import '@fontsource/plus-jakarta-sans/400.css';
 import '@fontsource/plus-jakarta-sans/500.css';
 import '@fontsource/plus-jakarta-sans/600.css';
 import '@fontsource/plus-jakarta-sans/800.css';
-import { StrictMode, useEffect } from 'react';
-import { createRoot } from 'react-dom/client';
+import { StrictMode } from 'react';
+import { createRoot,hydrateRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import { LazyMotion } from 'framer-motion';
+import { LazyMotion,domAnimation } from 'framer-motion';
 
 // Import chunk error handler early
 import './utils/chunkErrorHandler';
@@ -37,9 +37,6 @@ if (!('requestIdleCallback' in window)) {
   };
 }
 
-// Load only essential features for better performance
-const loadFeatures = () =>
-  import('./utils/motionFeatures').then(res => res.default);
 import App from './App';
 import { initAnalytics } from './utils/initAnalytics';
 import './index.css';
@@ -53,21 +50,24 @@ if (!container) {
   throw new Error('Failed to find the root element');
 }
 
-const root = createRoot(container);
-
 // Wrap render in try-catch for additional safety
 try {
-  root.render(
+  const application = (
     <StrictMode>
       <BrowserRouter>
         <HelmetProvider>
-          <LazyMotion features={loadFeatures} strict>
+          <LazyMotion features={domAnimation} strict>
             <App />
           </LazyMotion>
         </HelmetProvider>
       </BrowserRouter>
     </StrictMode>
   );
+  if (container.dataset.prerendered === 'true') {
+    hydrateRoot(container, application);
+  } else {
+    createRoot(container).render(application);
+  }
   
   // Signaleer aan het index.html-vangnet dat de app daadwerkelijk gemount is,
   // zodat de 10s auto-reload niet onnodig afvuurt.

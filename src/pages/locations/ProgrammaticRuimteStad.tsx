@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
-import { Navigate, useParams, Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Navigate,useParams,Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
-  MapPin,
-  Phone,
-  CheckCircle,
-  Star,
-  ChevronDown,
-  ArrowRight,
-  Home,
-  Thermometer,
-  Wind,
-  Shield,
-  Zap,
-  Clock,
+MapPin,
+Phone,
+CheckCircle,
+Star,
+ChevronDown,
+ArrowRight,
+Home,
+Thermometer,
+Wind,
+Shield,
+Zap,
+Clock,
 } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import Contact from '../../components/Contact';
-import { getProgrammaticLocationBySlug, programmaticLocations } from '../../data/programmaticLocations';
+import { getProgrammaticLocationBySlug,programmaticLocations } from '../../data/programmaticLocations';
 import { getRuimteBySlug } from '../../data/programmaticRuimteStad';
 
 export default function ProgrammaticRuimteStadPage() {
@@ -44,11 +44,11 @@ export default function ProgrammaticRuimteStadPage() {
   const genericCityFaqs = [
     {
       question: `Hoe snel kunt u in ${city.city} installeren?`,
-      answer: `Voor ${city.city} plannen wij doorgaans binnen 1 tot 3 weken een installatieafspraak. Tijdens drukke hitteperiodes kan de wachttijd iets oplopen, maar we doen ons best om u zo snel mogelijk te helpen. Neem contact op voor de actuele beschikbaarheid.`,
+      answer: `Voor ${city.city} stemmen we de planning met u af op basis van de werkzaamheden en de beschikbaarheid van toestellen en monteurs. Neem contact op om een concrete installatiedatum te bespreken.`,
     },
     {
       question: `Zijn er vergunningen nodig in ${city.city}?`,
-      answer: `Voor de meeste standaard split-unit installaties in ${city.city} is geen bouwvergunning nodig, mits de buitenunit niet aan de straatzijde of op een monument geplaatst wordt. In geval van beschermd stadsgezicht of monumentale panden (wat in ${city.city} voorkomt bij ${city.localConstraint}) adviseren wij altijd vooraf de gemeente te raadplegen. Wij helpen u hierbij.`,
+      answer: `Controleer de regels voor uw adres en de gewenste buitenunitpositie via het Omgevingsloket en zo nodig bij de gemeente. Bij een monument, beschermd gebied, huurwoning of appartement kunnen aanvullende voorwaarden of toestemmingen gelden. Bespreek dit vóór u opdracht geeft.`,
     },
   ];
 
@@ -66,7 +66,7 @@ export default function ProgrammaticRuimteStadPage() {
         </title>
         <meta
           name="description"
-          content={`Op zoek naar airco voor uw ${ruimte.nameArticle} in ${city.city}? StayCool Airco installeert vakkundig. \u2713 F-gassen gecertificeerd \u2713 Binnen 1-3 weken \u2713 Gratis offerte`}
+          content={`Airco voor uw ${ruimte.nameArticle} in ${city.city}? Bespreek vermogen, plaatsing en installatie met StayCool. Vraag een offerte voor uw woning aan.`}
         />
         <link
           rel="canonical"
@@ -140,11 +140,11 @@ export default function ProgrammaticRuimteStadPage() {
                 </span>
                 <span className="flex items-center gap-1">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  {city.installationCount}+ installaties
+                  Installatie in {city.city}
                 </span>
                 <span className="flex items-center gap-1">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  5 jaar garantie
+                  Garantievoorwaarden bij offerte
                 </span>
               </div>
             </div>
@@ -232,10 +232,9 @@ export default function ProgrammaticRuimteStadPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div>
               <p className="text-lg text-gray-700 mb-4">
-                In {city.city} ({city.region}) installeren wij al{' '}
-                <strong>{city.installationCount}+</strong> airco systemen. Wij kennen de lokale
-                woningtypen, bouwkundige uitdagingen en de beste installatieoplossingen voor uw
-                buurt.
+                Voor uw woning in {city.city} ({city.region}) beoordelen we de plaatsing,
+                het benodigde vermogen en het leidingwerk. Zo stemmen we de installatie af
+                op uw ruimte en de bouwkundige mogelijkheden.
               </p>
 
               <div className="space-y-4">

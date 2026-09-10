@@ -1,9 +1,9 @@
-import React from 'react';
+import type { ComparisonItem } from '../../components/ComparisonTable';
 import ComparisonTable from '../../components/ComparisonTable';
 import MetaTags from '../../components/MetaTags';
 import Breadcrumbs from '../../components/SEO/Breadcrumbs';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Phone, Download, Calendar, Home } from 'lucide-react';
+import { ArrowRight,Phone,Download,Calendar,Home } from 'lucide-react';
 
 export default function DaikinVsMitsubishiHeavy() {
   const comparisonData = {
@@ -47,7 +47,7 @@ export default function DaikinVsMitsubishiHeavy() {
     }
   };
 
-  const comparisonItems = [
+  const comparisonItems: ComparisonItem[] = [
     { feature: 'Energielabel koelen', product1: 'A+++', product2: 'A++', highlight: 'product1' },
     { feature: 'Energielabel verwarmen', product1: 'A+++', product2: 'A++', highlight: 'product1' },
     { feature: 'SEER waarde', product1: '8.75', product2: '8.5', highlight: 'product1' },
@@ -130,7 +130,7 @@ export default function DaikinVsMitsubishiHeavy() {
           {/* Quick Summary */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="bg-white rounded-lg shadow-lg p-6 border-t-4 border-blue-600">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Kies voor Daikin als...</h3>
+              <h2 className="text-lg font-bold text-gray-900 mb-3">Kies voor Daikin als...</h2>
               <ul className="space-y-2 text-gray-700">
                 <li>✓ Energiebesparing topprioriteit is (laagste verbruik)</li>
                 <li>✓ U waarde hecht aan design en stijl</li>
@@ -140,7 +140,7 @@ export default function DaikinVsMitsubishiHeavy() {
             </div>
             
             <div className="bg-white rounded-lg shadow-lg p-6 border-t-4 border-green-600">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Kies voor Mitsubishi Heavy als...</h3>
+              <h2 className="text-lg font-bold text-gray-900 mb-3">Kies voor Mitsubishi Heavy als...</h2>
               <ul className="space-y-2 text-gray-700">
                 <li>✓ Betrouwbaarheid en duurzaamheid voorop staan</li>
                 <li>✓ U een scherper geprijsd alternatief zoekt</li>
@@ -161,9 +161,9 @@ export default function DaikinVsMitsubishiHeavy() {
           <div className="mt-16 space-y-8">
             {/* Download CTA */}
             <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 Download Gratis Vergelijkingsgids
-              </h3>
+              </h2>
               <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
                 Ontvang een uitgebreide PDF met alle specificaties, prijzen en ons expertoordeel 
                 over welke airco het beste past bij verschillende situaties.
@@ -181,9 +181,9 @@ export default function DaikinVsMitsubishiHeavy() {
             <div className="bg-blue-50 rounded-lg p-8">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
                     Persoonlijk advies van onze experts?
-                  </h3>
+                  </h2>
                   <p className="text-gray-700 mb-4">
                     Elke situatie is uniek. Onze specialisten helpen u graag met een 
                     advies op maat, gebaseerd op uw specifieke wensen en woonsituatie.
@@ -214,15 +214,15 @@ export default function DaikinVsMitsubishiHeavy() {
 
             {/* Related Comparisons */}
             <div className="bg-gray-100 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
                 Andere Interessante Vergelijkingen
-              </h3>
+              </h2>
               <div className="grid md:grid-cols-3 gap-6">
                 <Link
                   to="/vergelijkingen/split-vs-monoblock"
                   className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow"
                 >
-                  <h4 className="font-semibold text-gray-900 mb-2">Split vs Monoblock</h4>
+                  <h3 className="font-semibold text-gray-900 mb-2">Split vs Monoblock</h3>
                   <p className="text-gray-600 text-sm mb-4">
                     Ontdek de verschillen tussen split en monoblock aircosystemen
                   </p>
@@ -235,7 +235,7 @@ export default function DaikinVsMitsubishiHeavy() {
                   to="/vergelijkingen/tosot-vs-lg"
                   className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow"
                 >
-                  <h4 className="font-semibold text-gray-900 mb-2">Tosot vs LG</h4>
+                  <h3 className="font-semibold text-gray-900 mb-2">Tosot vs LG</h3>
                   <p className="text-gray-600 text-sm mb-4">
                     Vergelijk betaalbare kwaliteit met premium innovatie
                   </p>
@@ -248,7 +248,7 @@ export default function DaikinVsMitsubishiHeavy() {
                   to="/vergelijkingen/energie-labels"
                   className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow"
                 >
-                  <h4 className="font-semibold text-gray-900 mb-2">Energielabels Uitgelegd</h4>
+                  <h3 className="font-semibold text-gray-900 mb-2">Energielabels Uitgelegd</h3>
                   <p className="text-gray-600 text-sm mb-4">
                     Wat betekenen A+++, SEER en SCOP voor uw energierekening?
                   </p>
@@ -263,9 +263,9 @@ export default function DaikinVsMitsubishiHeavy() {
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg p-8 mt-8">
               <div className="text-center">
                 <Home className="h-12 w-12 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold mb-4">
+                <h2 className="text-2xl font-bold mb-4">
                   Plan een Gratis Adviesgesprek bij u Thuis
-                </h3>
+                </h2>
                 <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
                   Onze specialist komt bij u thuis om de situatie te bekijken en u te adviseren 
                   over de beste keuze tussen Daikin en Mitsubishi Heavy.

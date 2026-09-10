@@ -1,4 +1,3 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { ScrollText } from 'lucide-react';
@@ -12,6 +11,7 @@ export default function Terms() {
           name="description" 
           content="Lees onze algemene voorwaarden voor airconditioning installatie, onderhoud en service. Duidelijke afspraken voor een zorgeloze samenwerking."
         />
+        <link rel="canonical" href="https://staycoolairco.nl/voorwaarden" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
@@ -80,7 +80,7 @@ export default function Terms() {
             <p>50% aanbetaling vereist vóór montage. Resterende betaling binnen 8 dagen na oplevering.</p>
 
             <h2>7. Garantie</h2>
-            <p>2 jaar garantie op montage. Afhankelijke fabrieksgaranties kunnen van toepassing zijn.</p>
+            <p>garantie volgens offerte op montage. Afhankelijke fabrieksgaranties kunnen van toepassing zijn.</p>
 
             <h2>8. Verantwoordelijkheid</h2>
             <p>

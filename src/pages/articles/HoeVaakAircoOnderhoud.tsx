@@ -1,7 +1,7 @@
-import React from 'react';
+import MaintenanceNextStep from '../../components/MaintenanceNextStep';
 import ArticleLayout from '../../components/ArticleLayout';
 import RelatedArticles from '../../components/RelatedArticles';
-import { Calendar, Wrench, AlertTriangle, CheckCircle, ThermometerSun, Clock, PiggyBank, Leaf } from 'lucide-react';
+import { Calendar,Wrench,AlertTriangle,CheckCircle,ThermometerSun,Clock,PiggyBank,Leaf } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HoeVaakAircoOnderhoud = () => {
@@ -36,7 +36,7 @@ const HoeVaakAircoOnderhoud = () => {
     {
       icon: PiggyBank,
       title: "Lagere Energiekosten",
-      description: "Tot 30% besparing op energieverbruik door optimale werking"
+      description: "situatieafhankelijke besparing op energieverbruik door optimale werking"
     },
     {
       icon: Clock,
@@ -118,7 +118,7 @@ const HoeVaakAircoOnderhoud = () => {
             </li>
             <li className="flex items-start">
               <CheckCircle className="h-6 w-6 text-blue-600 mr-2 flex-shrink-0 mt-1" />
-              <span>30% energiebesparing door goed onderhoud</span>
+              <span>situatieafhankelijke besparing door goed onderhoud</span>
             </li>
           </ul>
         </div>
@@ -131,7 +131,7 @@ const HoeVaakAircoOnderhoud = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
-          {benefits.map((benefit, index) => (
+          {benefits.map((benefit) => (
             <div 
               key={benefit.title}
               className="bg-white rounded-lg shadow-lg p-6 border border-gray-100"
@@ -318,6 +318,7 @@ const HoeVaakAircoOnderhoud = () => {
           },
         ]}
       />
+    <MaintenanceNextStep />
     </ArticleLayout>
   );
 };

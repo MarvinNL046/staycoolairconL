@@ -1,6 +1,5 @@
-import React from 'react';
 import { m } from 'framer-motion';
-import { Phone, Calendar } from 'lucide-react';
+import { Phone,Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface ProductLandingHeroProps {
@@ -10,6 +9,8 @@ interface ProductLandingHeroProps {
   backgroundImage: string;
   brandName: string;
   features: string[];
+  primaryTo?: string;
+  primaryLabel?: string;
 }
 
 export default function ProductLandingHero({
@@ -18,7 +19,9 @@ export default function ProductLandingHero({
   description,
   backgroundImage,
   brandName,
-  features
+  features,
+  primaryTo = '/contact',
+  primaryLabel = 'Gratis Offerte Aanvragen'
 }: ProductLandingHeroProps) {
   return (
     <section className="relative min-h-[80vh] bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 overflow-hidden">
@@ -60,11 +63,11 @@ export default function ProductLandingHero({
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
-                to="/contact"
+                to={primaryTo}
                 className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-transparent text-base sm:text-lg font-medium rounded-lg text-blue-600 bg-white hover:bg-blue-50 transition-colors duration-300"
               >
                 <Calendar className="h-5 w-5 mr-2" />
-                Gratis Offerte Aanvragen
+                {primaryLabel}
               </Link>
               <a
                 href="tel:0462021430"

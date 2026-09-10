@@ -1,8 +1,7 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import MetaTags from '../../components/MetaTags';
 import Breadcrumbs from '../../components/Breadcrumbs';
-import { ArrowLeft, Wrench, Calendar, ThermometerSun, Filter, Shield } from 'lucide-react';
+import { ArrowLeft,Wrench,Calendar,ThermometerSun,Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function MaintenanceTips() {

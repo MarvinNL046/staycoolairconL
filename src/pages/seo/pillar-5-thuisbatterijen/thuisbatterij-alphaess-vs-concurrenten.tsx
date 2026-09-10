@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Award, CheckCircle, Euro, Phone, Battery, Shield, TrendingUp, ArrowRight, Star, AlertCircle } from 'lucide-react';
+import { Award,CheckCircle,Phone,Battery,Shield,TrendingUp,Star,AlertCircle } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
@@ -21,12 +20,12 @@ const ThuisbatterijAlphaESSVsConcurrentenPage = () => {
     },
     {
       icon: <Shield className="h-12 w-12 text-yellow-500" />,
-      title: "10 Jaar Garantie",
+      title: "garantie volgens offerte",
       description: "Ruimere garantie dan Tesla (10 jaar vs 10 jaar/80% capaciteit) en BYD (10 jaar)"
     },
     {
       icon: <Star className="h-12 w-12 text-yellow-500" />,
-      title: "500.000+ Installaties",
+      title: "ervaring met installaties",
       description: "Bewezen technologie wereldwijd - meer ervaring dan nieuwere merken"
     },
     {
@@ -51,7 +50,7 @@ const ThuisbatterijAlphaESSVsConcurrentenPage = () => {
       installations: "500.000+ wereldwijd",
       pros: [
         "Beste EPEX handelsresultaten",
-        "10 jaar volledige garantie",
+        "garantie volgens offerte",
         "Modulair uitbreidbaar systeem",
         "AlphaCloud monitoring inclusief",
         "Nederlandse support en service",
@@ -138,7 +137,7 @@ const ThuisbatterijAlphaESSVsConcurrentenPage = () => {
         "Grote batterijproducent",
         "Solide constructie",
         "Modulaire uitbreiding",
-        "10 jaar garantie"
+        "garantie volgens offerte"
       ],
       cons: [
         "Beperkte EPEX functionaliteit",
@@ -259,7 +258,7 @@ const ThuisbatterijAlphaESSVsConcurrentenPage = () => {
     },
     {
       question: "Hoe vergelijkt de garantie van AlphaESS met andere merken?",
-      answer: "AlphaESS biedt 10 jaar garantie op 10.000 cycli zonder capaciteitslimiet. Tesla geeft 10 jaar maar alleen tot 80% capaciteit. Huawei en BYD bieden ook 10 jaar maar met minder duidelijke voorwaarden. LG Chem 10 jaar standaard. AlphaESS garantie is dus ruimer omdat er geen capaciteitsdrempel is - het systeem moet gewoon werken. Plus: AlphaESS heeft Nederlandse support voor snelle afhandeling."
+      answer: "AlphaESS biedt garantie volgens offerte op 10.000 cycli zonder capaciteitslimiet. Tesla geeft 10 jaar maar alleen tot 80% capaciteit. Huawei en BYD bieden ook 10 jaar maar met minder duidelijke voorwaarden. LG Chem 10 jaar standaard. AlphaESS garantie is dus ruimer omdat er geen capaciteitsdrempel is - het systeem moet gewoon werken. Plus: AlphaESS heeft Nederlandse support voor snelle afhandeling."
     },
     {
       question: "Waarom is Huawei LUNA2000 goedkoper maar toch niet beter?",
@@ -271,11 +270,11 @@ const ThuisbatterijAlphaESSVsConcurrentenPage = () => {
     },
     {
       question: "Wat als ik geen EPEX-handel wil doen - welk merk dan?",
-      answer: "Ook zonder EPEX is AlphaESS vaak beste keuze door: (1) Betere efficiency (97% vs 95-96%), (2) Lagere prijs dan Tesla, (3) Nederlandse support, (4) 10 jaar garantie zonder restricties, (5) Modulaire uitbreiding, (6) Optie EPEX later alsnog in te schakelen. Alternatieven: Huawei (goed maar lagere efficiency) of Tesla (als merk belangrijk is). BYD en LG Chem zijn minder aantrekkelijk door lagere efficiency en hogere prijs/kWh."
+      answer: "Ook zonder EPEX is AlphaESS vaak beste keuze door: (1) Betere efficiency (97% vs 95-96%), (2) Lagere prijs dan Tesla, (3) Nederlandse support, (4) garantie volgens offerte zonder restricties, (5) Modulaire uitbreiding, (6) Optie EPEX later alsnog in te schakelen. Alternatieven: Huawei (goed maar lagere efficiency) of Tesla (als merk belangrijk is). BYD en LG Chem zijn minder aantrekkelijk door lagere efficiency en hogere prijs/kWh."
     },
     {
       question: "Hoe betrouwbaar is AlphaESS vergeleken met grote merken als Tesla?",
-      answer: "AlphaESS heeft wereldwijd 500.000+ installaties (meer dan Tesla's 100.000+ Powerwall 3). Het merk bestaat sinds 2012 en is specialist in energieopslag. Tesla is nieuwer in thuisbatterijen (2015) en richt zich breed op auto's en energie. AlphaESS focus op batterijen resulteert in betere optimalisatie. Beide merken zijn betrouwbaar, maar AlphaESS heeft meer ervaring specifiek in thuisopslag en betere track record in EPEX-toepassingen."
+      answer: "AlphaESS heeft wereldwijd ervaring met installaties (meer dan Tesla's 100.000+ Powerwall 3). Het merk bestaat sinds 2012 en is specialist in energieopslag. Tesla is nieuwer in thuisbatterijen (2015) en richt zich breed op auto's en energie. AlphaESS focus op batterijen resulteert in betere optimalisatie. Beide merken zijn betrouwbaar, maar AlphaESS heeft meer ervaring specifiek in thuisopslag en betere track record in EPEX-toepassingen."
     },
     {
       question: "Kan ik met BYD of LG ook geld verdienen met energiehandel?",
@@ -343,7 +342,8 @@ const ThuisbatterijAlphaESSVsConcurrentenPage = () => {
               <div>
                 <p className="font-bold mb-1">AlphaESS Scoort Hoogste Rating</p>
                 <p className="text-sm">
-                  9,5/10 punten door beste EPEX resultaten, 10 jaar garantie, Nederlandse support en uitstekende prijs/prestatie.
+
+                  9,5/10 punten door beste EPEX resultaten, garantie volgens offerte, Nederlandse support en uitstekende prijs/prestatie.
                 </p>
               </div>
             </div>

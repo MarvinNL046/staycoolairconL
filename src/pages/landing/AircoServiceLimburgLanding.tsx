@@ -1,41 +1,29 @@
-import React, { useState } from 'react';
+import React,{ useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Wrench,
-  Clock,
-  Shield,
-  Phone,
-  MapPin,
-  CheckCircle,
-  AlertCircle,
-  Calendar,
-  Users,
-  Award,
-  Zap,
-  ThermometerSun,
-  Settings,
-  FileText,
-  HelpCircle,
-  ArrowRight,
-  Package,
-  Star,
-  ChevronRight,
-  Euro,
-  Truck,
-  HeartHandshake,
-  Building2,
-  Home,
-  Timer,
-  PhoneCall,
-  Mail,
-  Navigation,
-  Check,
-  X,
-  Info,
-  TrendingUp,
-  BarChart3,
-  ClipboardCheck
+import {
+Wrench,
+Clock,
+Shield,
+Phone,
+MapPin,
+CheckCircle,
+AlertCircle,
+Calendar,
+Users,
+Award,Settings,
+FileText,
+HelpCircle,
+ArrowRight,
+Package,
+Star,
+ChevronRight,
+Euro,
+Truck,Building2,
+Home,
+Timer,
+PhoneCall,Check,Info,
+TrendingUp,ClipboardCheck
 } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import FAQSchema from '../../components/SEO/FAQSchema';
@@ -87,7 +75,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
         'Gratis adviesgesprek',
         'A+++ toestellen',
         'Gecertificeerde montage',
-        '2 jaar garantie'
+        "garantie volgens offerte"
       ]
     }
   };
@@ -162,32 +150,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
     }
   ];
 
-  const reviews = [
-    {
-      name: 'Johan Bakker',
-      location: 'Maastricht',
-      rating: 5,
-      text: 'Binnen 2 uur ter plaatse voor spoedservice. Top service!',
-      date: '1 week geleden',
-      service: 'Spoedreparatie'
-    },
-    {
-      name: 'Maria de Vries',
-      location: 'Roermond',
-      rating: 5,
-      text: 'Jaarlijks onderhoud perfect uitgevoerd. Zeer tevreden met het onderhoudscontract.',
-      date: '2 weken geleden',
-      service: 'Onderhoudscontract'
-    },
-    {
-      name: 'Restaurant De Zwaan',
-      location: 'Venlo',
-      rating: 5,
-      text: 'Uitstekende zakelijke service. Altijd snel ter plaatse bij problemen.',
-      date: '1 maand geleden',
-      service: 'Zakelijke service'
-    }
-  ];
+
 
   const faqItems = [
     {
@@ -208,7 +171,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
     },
     {
       question: 'Bieden jullie onderhoudscontracten aan?',
-      answer: 'Ja, wij bieden voordelige onderhoudscontracten vanaf €11 per maand. Dit includeert jaarlijks onderhoud, voorrang bij storingen, geen voorrijkosten en korting op reparaties. Voor zakelijke klanten hebben we speciale service level agreements.'
+      answer: 'Ja, voor bestaande klanten met een door StayCool geleverde en geïnstalleerde airco: Basis €13 of Premium €16 per maand per complete unit. Beide bevatten jaarlijks onderhoud, voorrang bij storingen en geen voorrijkosten. Premium bevat daarnaast alle onderdelen en een vervangend toestel bij een defect dat niet te repareren is. Extra binnendelen kosten €8 (Basis) of €11 (Premium) per maand.'
     },
     {
       question: 'Werken jullie in het weekend?',
@@ -224,7 +187,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
     },
     {
       question: 'Geven jullie garantie op service?',
-      answer: 'Ja, wij geven 6 maanden garantie op alle reparaties en 1 jaar garantie op vervangen onderdelen. Bij onderhoudscontracten verlenen we zelfs uitgebreide garantie op de gehele installatie.'
+      answer: "Ja, wij geven 6 maanden garantie op alle reparaties en garantie volgens offerte op vervangen onderdelen. Bij onderhoudscontracten verlenen we zelfs uitgebreide garantie op de gehele installatie."
     },
     {
       question: 'Kan ik online een afspraak maken?',
@@ -271,7 +234,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
     },
     {
       icon: Users,
-      title: '2.500+ klanten',
+      title: 'Op maat klanten',
       description: 'Vertrouwd door particulieren en bedrijven'
     }
   ];
@@ -349,12 +312,12 @@ const AircoServiceLimburgLanding: React.FC = () => {
               <p className="text-base mb-8 leading-relaxed opacity-90">
                 Op zoek naar een algemeen overzicht van onze service-typen (onderhoud, reparatie, bijvullen, storing)? Bekijk de <Link to="/airco-service" className="underline font-semibold">service-hub</Link>.
               </p>
-              
+
               {/* Quick Stats */}
               <div className="grid grid-cols-3 gap-4 mb-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold">&lt;24u</div>
-                  <div className="text-sm opacity-90">Ter plaatse</div>
+                  <div className="text-2xl font-bold">Overleg</div>
+                  <div className="text-sm opacity-90">Planning</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
                   <div className="text-2xl font-bold">&lt;2u</div>
@@ -377,7 +340,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
                 </a>
               </div>
             </div>
-            
+
             <div className="relative">
               <LazyImage
                 src="/images/onze_monteurs/O1V_9671.jpg"
@@ -476,8 +439,8 @@ const AircoServiceLimburgLanding: React.FC = () => {
               </div>
               <div>
                 <LazyImage
-                  src={activeTab === 'onderhoud' ? '/images/onze_monteurs/O1V_9673.jpg' : 
-                       activeTab === 'reparatie' ? '/images/onze_monteurs/O1V_9717.jpg' : 
+                  src={activeTab === 'onderhoud' ? '/images/onze_monteurs/O1V_9673.jpg' :
+                       activeTab === 'reparatie' ? '/images/onze_monteurs/O1V_9717.jpg' :
                        '/images/onze_monteurs/O1V_9719.jpg'}
                   alt={`StayCool ${serviceTypes[activeTab as keyof typeof serviceTypes].name} service`}
                   className="rounded-lg shadow-md"
@@ -496,7 +459,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
                 Bel Direct <Phone className="w-4 h-4" />
               </a>
             </div>
-            
+
             <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-green-500">
               <Calendar className="w-10 h-10 text-green-500 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Onderhoudscontract</h3>
@@ -505,7 +468,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
                 Direct Aanmelden <ArrowRight className="w-4 h-4" />
               </a>
             </div>
-            
+
             <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-blue-500">
               <Building2 className="w-10 h-10 text-blue-500 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Zakelijke Service</h3>
@@ -661,7 +624,7 @@ const AircoServiceLimburgLanding: React.FC = () => {
                 <li>✓ Jaarlijkse APK voor uw airco</li>
               </ul>
             </div>
-            
+
             <div className="bg-blue-50 rounded-lg p-6">
               <h3 className="font-semibold text-blue-900 mb-3 flex items-center gap-2">
                 <Info className="w-5 h-5" />
@@ -705,16 +668,16 @@ const AircoServiceLimburgLanding: React.FC = () => {
                 <div className="opacity-90">Specialist sinds 2021</div>
               </div>
               <div>
-                <div className="text-3xl font-bold mb-2">2.500+</div>
-                <div className="opacity-90">Tevreden klanten</div>
+                <div className="text-3xl font-bold mb-2">Op maat</div>
+                <div className="opacity-90">Passend advies</div>
               </div>
               <div>
-                <div className="text-3xl font-bold mb-2">&lt;24u</div>
-                <div className="opacity-90">Ter plaatse</div>
+                <div className="text-3xl font-bold mb-2">Overleg</div>
+                <div className="opacity-90">Planning</div>
               </div>
               <div>
-                <div className="text-3xl font-bold mb-2">4.8/5</div>
-                <div className="opacity-90">Klantbeoordeling</div>
+                <div className="text-3xl font-bold mb-2">Persoonlijk</div>
+                <div className="opacity-90">Advies</div>
               </div>
             </div>
           </div>
@@ -768,9 +731,8 @@ const AircoServiceLimburgLanding: React.FC = () => {
 
           <div id="contactform" className="bg-white rounded-xl shadow-lg p-8">
             <h3 className="text-xl font-semibold mb-6">Service Aanvraagformulier</h3>
-            <ContactForm 
-              source="Airco Service Limburg Landing"
-              showPrivacyPolicy={true}
+            <ContactForm
+              inquiryContext="Airco Service Limburg Landing"
             />
           </div>
         </div>
@@ -785,36 +747,12 @@ const AircoServiceLimburgLanding: React.FC = () => {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-6 h-6 fill-current" />
               ))}
-              <span className="text-gray-700 ml-2">4.8/5 op basis van 250+ reviews</span>
+              <span className="text-gray-700 ml-2">klantervaringen</span>
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((review, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-1">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
-                  <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">
-                    {review.service}
-                  </span>
-                </div>
-                <p className="text-gray-700 mb-4 italic">"{review.text}"</p>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="font-semibold">{review.name}</p>
-                    <p className="text-sm text-gray-500 flex items-center gap-1">
-                      <MapPin className="w-3 h-3" />
-                      {review.location}
-                    </p>
-                  </div>
-                  <p className="text-sm text-gray-500">{review.date}</p>
-                </div>
-              </div>
-            ))}
+            <a className="text-blue-700 underline" href="https://www.google.com/search?q=staycool+airco" target="_blank" rel="noopener noreferrer">Bekijk actuele klantervaringen op Google</a>
           </div>
 
           <div className="text-center mt-8">

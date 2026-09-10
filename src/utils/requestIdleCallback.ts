@@ -3,7 +3,7 @@ export const requestIdleCallbackPolyfill = (
   callback: IdleRequestCallback,
   options?: IdleRequestOptions
 ): number => {
-  if ('requestIdleCallback' in window) {
+  if (typeof window.requestIdleCallback === 'function') {
     return window.requestIdleCallback(callback, options);
   }
   
@@ -20,7 +20,7 @@ export const requestIdleCallbackPolyfill = (
 };
 
 export const cancelIdleCallbackPolyfill = (handle: number): void => {
-  if ('cancelIdleCallback' in window) {
+  if (typeof window.cancelIdleCallback === 'function') {
     window.cancelIdleCallback(handle);
   } else {
     window.clearTimeout(handle);

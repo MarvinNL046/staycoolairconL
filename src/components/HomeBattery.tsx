@@ -1,6 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Battery, TrendingUp, Shield, Clock, ArrowRight, Zap, Check } from 'lucide-react';
+import { TrendingUp,Shield,Clock,Zap,Check } from 'lucide-react';
 import Card from './ui/Card';
 import Button from './ui/Button';
 
@@ -20,18 +18,18 @@ export default function HomeBattery() {
             </div>
 
             <h2 className="text-4xl sm:text-5xl font-extrabold text-quatt-dark mb-6 tracking-tight leading-tight">
-              Bespaar tot wel <br />
-              <span className="text-quatt-orange">€1.500 per jaar</span>
+              Bekijk de mogelijkheden <br />
+              <span className="text-quatt-orange">van energieopslag</span>
             </h2>
 
             <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-              Met een AlphaESS thuisbatterij slaat u zonne-energie op wanneer het gratis is, en gebruikt u het wanneer u het nodig heeft. Of handel automatisch op de energiemarkt voor maximaal rendement.
+              Met een AlphaESS thuisbatterij kunt u elektriciteit opslaan voor later gebruik. Of de investering bij u past, hangt af van uw verbruik, opwek, energiecontract en de gekozen uitvoering.
             </p>
 
             <div className="space-y-6 mb-12">
               <Benefit icon={TrendingUp} title="Slim Stroom Handelen" description="Koopt automatisch in bij lage prijzen en ontlaadt bij pieken." color="text-green-600" bg="bg-green-50" />
-              <Benefit icon={Shield} title="10 Jaar Garantie" description="Gecertificeerde veiligheid met 24/7 monitoring." color="text-blue-600" bg="bg-blue-50" />
-              <Benefit icon={Clock} title="Snel Geïnstalleerd" description="Binnen 4 weken operationeel in heel Limburg." color="text-quatt-orange" bg="bg-orange-50" />
+              <Benefit icon={Shield} title="Voorwaarden per uitvoering" description="Bespreek de garantiedekking en het beoogde gebruik." color="text-blue-600" bg="bg-blue-50" />
+              <Benefit icon={Clock} title="Planning in overleg" description="Afgestemd op de installatie en beschikbaarheid." color="text-quatt-orange" bg="bg-orange-50" />
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -54,8 +52,8 @@ export default function HomeBattery() {
 
               <div className="absolute top-8 left-8">
                 <div className="bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-xl border border-white/20">
-                  <p className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-1">Terugverdientijd</p>
-                  <p className="text-3xl font-black text-quatt-dark">4-7 Jaar</p>
+                  <p className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-1">Energieopslag</p>
+                  <p className="text-3xl font-black text-quatt-dark">Advies op maat</p>
                 </div>
               </div>
 
@@ -64,7 +62,7 @@ export default function HomeBattery() {
                   <div className="w-10 h-10 rounded-full bg-quatt-orange flex items-center justify-center">
                     <Check className="h-6 w-6" />
                   </div>
-                  <p className="font-bold text-lg">Inclusief 21% BTW teruggaaf hulp</p>
+                  <p className="font-bold text-lg">Vergelijk kosten, gebruik en mogelijkheden</p>
                 </div>
               </div>
             </Card>

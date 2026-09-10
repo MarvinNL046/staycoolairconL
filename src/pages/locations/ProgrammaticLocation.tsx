@@ -1,8 +1,7 @@
-import React from 'react';
-import { Navigate, useParams } from 'react-router-dom';
+import { Navigate,useParams } from 'react-router-dom';
 import LocationLandingPage from '../../templates/LocationLandingPage';
 import { getLocalizedReviews } from '../../utils/googleReviews';
-import { buildProgrammaticLandingProps, getProgrammaticLocationBySlug } from '../../data/programmaticLocations';
+import { buildProgrammaticLandingProps,getProgrammaticLocationBySlug } from '../../data/programmaticLocations';
 
 export default function ProgrammaticLocationPage() {
   const { citySlug } = useParams<{ citySlug: string }>();
@@ -20,5 +19,5 @@ export default function ProgrammaticLocationPage() {
   const localizedReviews = getLocalizedReviews(profile.city, 4);
   const landingProps = buildProgrammaticLandingProps(profile);
 
-  return <LocationLandingPage {...landingProps} testimonials={localizedReviews} />;
+  return <LocationLandingPage {...landingProps} citySlug={profile.slug} testimonials={localizedReviews} />;
 }

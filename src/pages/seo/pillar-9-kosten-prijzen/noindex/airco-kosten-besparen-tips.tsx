@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { PiggyBank, TrendingDown, Phone, Calculator, Lightbulb, Award, CheckCircle, Euro, Sun, Thermometer } from 'lucide-react';
+import { PiggyBank,TrendingDown,Phone,Calculator,Lightbulb,Award,CheckCircle,Euro,Sun,Thermometer } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
 
@@ -113,25 +112,25 @@ const AircoKostenBesparenTips = () => {
   const subsidieRegelingen = [
     {
       naam: 'ISDE Subsidie (Rijksoverheid)',
-      bedrag: '€150 - €500',
-      voorwaarden: 'Warmtepomp airco met label A+++',
+      bedrag: 'Niet van toepassing op split-airco',
+      voorwaarden: 'Een split-airco valt buiten de ISDE voor woningeigenaren',
       link: 'Check RVO.nl voor actuele regeling'
     },
     {
       naam: 'Gemeentelijke Subsidies',
-      bedrag: '€100 - €300',
+      bedrag: 'Controleer uw gemeente',
       voorwaarden: 'Verschilt per gemeente',
       link: 'Informeer bij je gemeente'
     },
     {
       naam: 'BTW terugvragen (zakelijk)',
-      bedrag: 'Tot 21% terug',
+      bedrag: 'Afhankelijk van uw btw-situatie',
       voorwaarden: 'Alleen ondernemers met zakelijk gebruik (particulier: 21%, geen verlaagd tarief)',
       link: 'Via je boekhouder'
     },
     {
       naam: 'Energiebespaarlening',
-      bedrag: 'Vanaf 0,5% rente',
+      bedrag: 'Controleer actuele voorwaarden',
       voorwaarden: 'Voor energiebesparende maatregelen',
       link: 'Via Nationaal Energiebespaarfonds'
     }

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React,{ useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
-  Award, CheckCircle, Phone, ArrowRight, Star, Shield,
-  ChevronDown, ChevronUp, Zap, Euro, Leaf, Home
+Award,CheckCircle,Phone,ArrowRight,Star,Shield,
+ChevronDown,ChevronUp,Euro,Leaf,Home
 } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -149,7 +149,7 @@ gebruikt door diverse private labels.`,
         'Betrouwbare basiscomponenten',
         'WiFi standaard ingebouwd',
         'SCOP 4,0 (A+ label)',
-        '5 jaar garantie',
+        "garantie volgens offerte",
       ],
       nadelen: ['Lagere SCOP dan A-merken', 'Minder servicecentra in NL', 'Beperktere smart home integratie'],
       bestVoor: 'Budget kopers, vakantiewoningen, incidenteel gebruik',
@@ -178,7 +178,7 @@ Japanse kwaliteit willen voor een Koreaans prijspunt.`,
       voordelen: [
         'Japans merk met goede reputatie',
         'Seiya model: uitstekende instapkeuze',
-        '7 jaar garantie (beter dan gemiddeld)',
+        "garantie volgens offerte (beter dan gemiddeld)",
         'Breed installateursnetwerk',
         'WiFi uitbreidbaar',
         'Goede prijs/kwaliteit',
@@ -208,7 +208,7 @@ Japanse kwaliteit willen voor een Koreaans prijspunt.`,
     {
       question: 'Welk merk heeft de langste garantie?',
       answer:
-        'Daikin en Mitsubishi Heavy geven beide 10 jaar garantie op de compressor. Toshiba biedt 7 jaar garantie. LG geeft 10 jaar compressorgarantie. Tosot biedt 5 jaar garantie op het gehele systeem. Bovenop de fabrieksgarantie geeft StayCool 5 jaar installatiegarantie.',
+        "Daikin en Mitsubishi Heavy geven beide garantie volgens offerte op de compressor. Toshiba biedt garantie volgens offerte. LG geeft 10 jaar compressorgarantie. Tosot biedt garantie volgens offerte op het gehele systeem. Bovenop de fabrieksgarantie geeft StayCool 5 jaar installatiegarantie.",
     },
     {
       question: 'Welk merk raadt StayCool aan voor een gemiddelde woning in Limburg?',
@@ -270,10 +270,10 @@ Japanse kwaliteit willen voor een Koreaans prijspunt.`,
         {/* Trust bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {[
-            { icon: <Star className="h-5 w-5 text-yellow-500" />, text: '4.9 ster (127 reviews)' },
+            { icon: <Star className="h-5 w-5 text-yellow-500" />, text: "4.9 ster (klantervaringen)" },
             { icon: <Shield className="h-5 w-5 text-blue-600" />, text: 'F-gassen gecertificeerd' },
             { icon: <Award className="h-5 w-5 text-blue-600" />, text: 'STEK erkend' },
-            { icon: <CheckCircle className="h-5 w-5 text-green-600" />, text: '5 jaar garantie' },
+            { icon: <CheckCircle className="h-5 w-5 text-green-600" />, text: "garantie volgens offerte" },
           ].map((item, i) => (
             <div key={i} className="bg-white rounded-2xl shadow-lg p-4 border border-gray-100 flex items-center gap-3">
               {item.icon}

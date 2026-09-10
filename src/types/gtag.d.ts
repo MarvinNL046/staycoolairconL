@@ -16,6 +16,8 @@ type GtagFunction = {
 
 declare global {
   interface Window {
+    'ga-disable-G-8JJ3BRSW92'?: boolean;
+    'ga-disable-AW-10789737434'?: boolean;
     dataLayer: any[];
     gtag: GtagFunction;
   }

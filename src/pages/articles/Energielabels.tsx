@@ -1,7 +1,6 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, Zap, LineChart, PiggyBank, ThermometerSun, BarChart2 } from 'lucide-react';
+import { ArrowLeft,Zap,PiggyBank,ThermometerSun,BarChart2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function EnergyLabels() {
@@ -44,6 +43,7 @@ export default function EnergyLabels() {
           name="keywords" 
           content="airco energielabel, SEER waarde, SCOP waarde, energiezuinige airco, A+++ airco, energiebesparing airco"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/energielabels" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">

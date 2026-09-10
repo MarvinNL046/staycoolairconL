@@ -1,9 +1,9 @@
-import React from 'react';
+import type { ComparisonItem } from '../../components/ComparisonTable';
 import ComparisonTable from '../../components/ComparisonTable';
 import MetaTags from '../../components/MetaTags';
 import Breadcrumbs from '../../components/SEO/Breadcrumbs';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Phone, Star, TrendingUp, Check, Calendar, Home } from 'lucide-react';
+import { ArrowRight,Phone,Star,TrendingUp,Check,Calendar,Home } from 'lucide-react';
 
 export default function TosotVsLG() {
   const comparisonData = {
@@ -17,7 +17,7 @@ export default function TosotVsLG() {
         'Betrouwbare kwaliteit (onderdeel van Gree)',
         'Goede energiezuinigheid (A++)',
         'WiFi standaard inbegrepen',
-        '10 jaar garantie op compressor',
+        "garantie volgens offerte op compressor",
         'Golden Fin anti-corrosie coating'
       ],
       cons: [
@@ -47,7 +47,7 @@ export default function TosotVsLG() {
     }
   };
 
-  const comparisonItems = [
+  const comparisonItems: ComparisonItem[] = [
     { feature: 'Energielabel koelen', product1: 'A++', product2: 'A+++', highlight: 'product2' },
     { feature: 'Energielabel verwarmen', product1: 'A++', product2: 'A+++', highlight: 'product2' },
     { feature: 'SEER waarde', product1: '6.1', product2: '8.5', highlight: 'product2' },

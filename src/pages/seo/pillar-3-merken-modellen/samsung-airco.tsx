@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Shield, Euro, Zap, Wind, ThermometerSun, Phone, Calculator, TrendingUp, Star, Award, Snowflake, Wifi, Smartphone } from 'lucide-react';
+import { CheckCircle,Shield,Euro,Zap,Wind,Phone,Calculator,TrendingUp,Award,Wifi,Smartphone } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const SamsungAirco = () => {
   const breadcrumbItems = [
@@ -27,13 +25,13 @@ const SamsungAirco = () => {
     },
     {
       icon: <Shield className="h-12 w-12 text-sky-500" />,
-      title: "10 Jaar Garantie",
+      title: "garantie volgens offerte",
       description: "Uitgebreide garantie op de Digital Inverter compressor toont vertrouwen in kwaliteit"
     },
     {
       icon: <Zap className="h-12 w-12 text-sky-500" />,
       title: "A+++ Efficiency",
-      description: "Digital Inverter 8-Pole technologie voor 73% energiebesparing en uitzonderlijke stilte"
+      description: "Digital Inverter 8-Pole technologie voor situatieafhankelijke besparing en uitzonderlijke stilte"
     }
   ];
 
@@ -139,7 +137,7 @@ const SamsungAirco = () => {
     },
     {
       question: "Wat is de Digital Inverter 8-Pole compressor?",
-      answer: "De Digital Inverter 8-Pole compressor is Samsung's meest geavanceerde compressor met 8 magnetische polen (conventionele inverters hebben 4-6). Dit resulteert in 73% lagere energiekosten vergeleken met niet-inverter modellen, 43% stiller werking door minder trillingen, snellere koeling en verwarming, en langere levensduur door verminderde slijtage. Samsung biedt 10 jaar garantie op deze compressor als bewijs van betrouwbaarheid. De technologie past vermogen 128 keer per seconde aan voor extreem nauwkeurige temperatuurcontrole."
+      answer: "De Digital Inverter 8-Pole compressor is Samsung's meest geavanceerde compressor met 8 magnetische polen (conventionele inverters hebben 4-6). Dit resulteert in 73% lagere energiekosten vergeleken met niet-inverter modellen, 43% stiller werking door minder trillingen, snellere koeling en verwarming, en langere levensduur door verminderde slijtage. Samsung biedt garantie volgens offerte op deze compressor als bewijs van betrouwbaarheid. De technologie past vermogen 128 keer per seconde aan voor extreem nauwkeurige temperatuurcontrole."
     },
     {
       question: "Is een Samsung airco geschikt voor gebruik in de slaapkamer?",
@@ -147,7 +145,7 @@ const SamsungAirco = () => {
     },
     {
       question: "Hoeveel energie bespaart een Samsung airco?",
-      answer: "Samsung airco's met Digital Inverter 8-Pole compressor scoren energielabel A+++ met SCOP waarden tot 5,1 voor verwarming. Dit betekent 410% gratis energie uit de buitenlucht. Vergeleken met oude niet-inverter systemen bespaart u 73% op energiekosten. Praktisch: waar een oud systeem €1.500/jaar kost, betaalt u met Samsung €400-600/jaar - een besparing van €900-1.100. Over 5 jaar bespaart u €4.500-5.500. De AI Auto Comfort functie optimaliseert verder voor 20-30% extra besparing door slim energieverbruik te sturen."
+      answer: "Samsung airco's met Digital Inverter 8-Pole compressor scoren energielabel A+++ met SCOP waarden tot 5,1 voor verwarming. Dit betekent 410% gratis energie uit de buitenlucht. Vergeleken met oude niet-inverter systemen kunt u mogelijk besparen op uw energiekosten. Praktisch: waar een oud systeem €1.500/jaar kost, betaalt u met Samsung €400-600/jaar - een besparing van €900-1.100. Over 5 jaar bespaart u €4.500-5.500. De AI Auto Comfort functie optimaliseert verder voor 20-30% extra besparing door slim energieverbruik te sturen."
     },
     {
       question: "Wat is de garantie op een Samsung airco?",
@@ -163,7 +161,7 @@ const SamsungAirco = () => {
     <>
       <MetaTags
         title="Samsung Airco Limburg | Wind-Free™ SmartThings A+++ | StayCool Airco"
-        description="Samsung airco systemen ✓ Wind-Free™ windvrije koeling ✓ SmartThings ✓ 10 jaar garantie ✓ A+++ efficiency ✓ Erkend installateur. Gratis advies!"
+        description="Samsung airco systemen ✓ Wind-Free™ windvrije koeling ✓ SmartThings ✓ garantie volgens offerte ✓ A+++ efficiency ✓ Erkend installateur. Gratis advies!"
       />
 
       <SchemaMarkup
@@ -188,11 +186,7 @@ const SamsungAirco = () => {
               name: "Limburg"
             }
           },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.8",
-            reviewCount: "134"
-          }
+
         }}
       />
 
@@ -207,7 +201,8 @@ const SamsungAirco = () => {
             Samsung Airco: Revolutionaire Wind-Free™ Technologie
           </h1>
           <p className="text-xl md:text-2xl text-sky-50 mb-8 max-w-3xl">
-            Ervaar comfort zonder tocht met Samsung's innovatieve Wind-Free™ koeling. Naadloze SmartThings integratie, AI-besturing en 10 jaar garantie op de Digital Inverter compressor.
+
+            Ervaar comfort zonder tocht met Samsung's innovatieve Wind-Free™ koeling. Naadloze SmartThings integratie, AI-besturing en garantie volgens offerte op de Digital Inverter compressor.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -247,7 +242,7 @@ const SamsungAirco = () => {
                 <div className="flex justify-center mb-4">
                   {usp.icon}
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}
@@ -440,7 +435,8 @@ const SamsungAirco = () => {
       <section className="py-16 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-            73% Energiebesparing Met Digital Inverter
+
+            situatieafhankelijke besparing Met Digital Inverter
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -483,10 +479,10 @@ const SamsungAirco = () => {
               <div>
                 <h4 className="font-semibold text-gray-900 mb-4">Samsung Digital Inverter 8-Pole</h4>
                 <ul className="space-y-2 text-gray-700">
-                  <li>✓ Continu variabel vermogen → 73% besparing</li>
+                  <li>✓ Continu variabel vermogen → situatieafhankelijke besparing</li>
                   <li>✓ Stabiele temperatuur binnen 0,5°C</li>
                   <li>✓ Ultrastil (19-23 dB)</li>
-                  <li>✓ Lange levensduur (20+ jaar) met 10 jaar garantie</li>
+                  <li>✓ Lange levensduur (20+ jaar) met garantie volgens offerte</li>
                   <li>✓ Zachte start → geen stroompieken</li>
                 </ul>
               </div>
@@ -537,7 +533,7 @@ const SamsungAirco = () => {
                 <li className="flex items-start">
                   <Shield className="h-6 w-6 text-sky-500 mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <strong className="text-gray-900">10 Jaar Garantie Activatie</strong>
+                    <strong className="text-gray-900">garantie volgens offerte Activatie</strong>
                     <p className="text-gray-600 mt-1">Registratie bij Samsung voor maximale garantiedekking</p>
                   </div>
                 </li>

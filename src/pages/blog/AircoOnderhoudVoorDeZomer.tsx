@@ -1,6 +1,5 @@
-import React from 'react';
 import { m } from 'framer-motion';
-import { ArrowLeft, CheckCircle, AlertTriangle, Filter, Wrench, Calendar, ThermometerSun } from 'lucide-react';
+import { ArrowLeft,CheckCircle,AlertTriangle,Filter,Wrench,Calendar,ThermometerSun } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import MetaTags from '../../components/MetaTags';
 

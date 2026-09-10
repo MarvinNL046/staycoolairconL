@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
@@ -220,7 +219,7 @@ export default function AircoTechnischeSpecificatiesUitleg() {
                   <div className="bg-green-50 p-6 rounded-lg">
                     <h4 className="font-semibold text-gray-900 mb-3">Voordelen Inverter:</h4>
                     <ul className="space-y-2 text-gray-700">
-                      <li>30-50% energiebesparing</li>
+                      <li>situatieafhankelijke besparing</li>
                       <li>Constante temperatuur</li>
                       <li>Stiller in gebruik</li>
                       <li>Sneller koelen/verwarmen</li>

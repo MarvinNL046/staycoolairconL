@@ -1,6 +1,3 @@
-import React from 'react';
-import { Sun, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 export default function AnnouncementBar() {
   // Zomeractie tijdelijk uitgeschakeld - kan later weer geactiveerd worden

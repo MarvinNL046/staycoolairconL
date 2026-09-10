@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Wrench, AlertTriangle, Phone, Clock, Thermometer, Wind, Droplets, Volume2, Settings, CheckCircle } from 'lucide-react';
+import { Wrench,AlertTriangle,Phone,Clock,Thermometer,Wind,Droplets,Volume2,Settings,CheckCircle } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
 

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wrench, AlertTriangle, CheckCircle, Clock, Shield, Zap, ThermometerSun, BookOpen, ArrowRight, Phone } from 'lucide-react';
+import { Wrench,AlertTriangle,CheckCircle,Clock,Shield,Zap,ThermometerSun,BookOpen,ArrowRight,Phone } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
@@ -694,8 +694,9 @@ export default function AircoInstallerenGids() {
                 Laat uw airco vakkundig installeren
               </h2>
               <p className="text-xl text-blue-100 mb-10 leading-relaxed">
+
                 Liever het installatieproces aan een professional overlaten? Onze F-gassen gecertificeerde monteurs
-                zorgen voor een vlekkeloze installatie met 5 jaar garantie op het installatiewerk.
+                zorgen voor een vlekkeloze installatie met garantie volgens offerte op het installatiewerk.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

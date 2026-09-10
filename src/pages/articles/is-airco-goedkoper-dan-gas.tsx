@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { TrendingDown, Euro, CheckCircle, ChevronDown, ChevronUp, Phone } from 'lucide-react';
+import { CheckCircle,ChevronDown,ChevronUp,Phone } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import ContactForm from '../../components/Contact';
@@ -236,8 +236,9 @@ export default function IsAircoGoedkoperDanGas() {
           ))}
         </div>
         <p className="text-lg text-gray-700 leading-relaxed mb-8">
+
           Bij een gemiddeld Limburgs klimaat verwarmt de airco circa 95% van de verwarmingsuren.
-          Dat levert een besparing van 50-60% op de totale verwarmingskosten.
+          Dat levert een besparing afhankelijk van gebruik en tarieven op de totale verwarmingskosten.
         </p>
 
         {/* Conclusie */}

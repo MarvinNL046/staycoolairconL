@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { CheckCircle, XCircle, ThermometerSun, ChevronDown, ChevronUp, Phone, Star } from 'lucide-react';
+import { CheckCircle,XCircle,ChevronDown,ChevronUp,Phone } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import ContactForm from '../../components/Contact';

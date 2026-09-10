@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React,{ useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
-  Ruler, Home, CheckCircle, Phone, ArrowRight, Star, Shield, Award,
-  ChevronDown, ChevronUp, AlertCircle, Sun, Thermometer, Calculator
+Ruler,CheckCircle,Phone,ArrowRight,Star,Shield,Award,
+ChevronDown,ChevronUp,AlertCircle,Sun,Calculator
 } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -149,10 +149,10 @@ const Airco35KwHoevelM2: React.FC = () => {
         {/* Trust bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {[
-            { icon: <Star className="h-5 w-5 text-yellow-500" />, text: '4.9 ster (127 reviews)' },
+            { icon: <Star className="h-5 w-5 text-yellow-500" />, text: "4.9 ster (klantervaringen)" },
             { icon: <Shield className="h-5 w-5 text-blue-600" />, text: 'F-gassen gecertificeerd' },
             { icon: <Award className="h-5 w-5 text-blue-600" />, text: 'STEK erkend' },
-            { icon: <CheckCircle className="h-5 w-5 text-green-600" />, text: '5 jaar garantie' },
+            { icon: <CheckCircle className="h-5 w-5 text-green-600" />, text: "garantie volgens offerte" },
           ].map((item, i) => (
             <div key={i} className="bg-white rounded-2xl shadow-lg p-4 border border-gray-100 flex items-center gap-3">
               {item.icon}

@@ -20,7 +20,7 @@ export const initGoogleMaps = async (): Promise<typeof google.maps> => {
   }
 
   try {
-    return await mapsLoader.load();
+    return (await mapsLoader.load()).maps;
   } catch (error) {
     console.error('Error loading Google Maps:', error);
     throw new Error('Failed to load Google Maps');

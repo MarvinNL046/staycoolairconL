@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, AlertTriangle, CheckCircle, Phone, Wrench, XCircle, TrendingDown, Clock, Euro } from 'lucide-react';
+import { Shield,AlertTriangle,CheckCircle,Phone,Wrench,XCircle,TrendingDown,Clock,Euro } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
 
@@ -137,7 +136,7 @@ const AircoProblemenVoorkomen = () => {
   const kostenBesparing = [
     {
       scenario: 'Preventief onderhoud',
-      kosten: '€11-16/maand',
+      kosten: '€13-16/maand',
       besparing: 'Voorkom reparaties van €300-800',
       roi: '600-2000%'
     },
@@ -192,7 +191,7 @@ const AircoProblemenVoorkomen = () => {
             <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600 text-center">
               <TrendingDown className="h-12 w-12 text-blue-600 mx-auto mb-3" />
               <h3 className="font-bold text-blue-900 mb-2">Energie-efficiëntie</h3>
-              <p className="text-blue-800">Bespaar 20-40% op energiekosten met optimaal onderhoud</p>
+              <p className="text-blue-800">Bekijk de mogelijke besparing op energiekosten met optimaal onderhoud</p>
             </div>
             <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-600 text-center">
               <Clock className="h-12 w-12 text-purple-600 mx-auto mb-3" />

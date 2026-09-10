@@ -1,9 +1,8 @@
-import React from 'react';
+import MaintenanceOffer from '../../components/MaintenanceOffer';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Calendar, AlertTriangle, Clock } from 'lucide-react';
+import { CheckCircle,Calendar,AlertTriangle,Clock } from 'lucide-react';
 import ProductLandingHero from '../../components/landing/ProductLandingHero';
 import ProductLandingFeatures from '../../components/landing/ProductLandingFeatures';
-import ProductLandingContact from '../../components/landing/ProductLandingContact';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import { Link } from 'react-router-dom';
 
@@ -33,12 +32,12 @@ export default function AircoOnderhoudLanding() {
   ];
 
   return (
-    <>
+    <div className="break-words">
       <Helmet>
-        <title>Airco Onderhoudscontract vanaf €13/mnd | StayCool Limburg</title>
+        <title>Airco onderhoud: werkzaamheden en controles | StayCool</title>
         <meta
           name="description"
-          content="Airco onderhoudscontract vanaf €13/mnd: jaarlijks onderhoud + voorrang bij storing + geen voorrijkosten. F-gas gecertificeerd, heel Limburg. Bel 046 202 1430."
+          content="Wat gebeurt er bij airco onderhoud? Bekijk reiniging, controles en onderhoud voor bestaande StayCool-klanten. Lees verder over frequentie, kosten en pakketten."
         />
         <meta
           name="keywords"
@@ -47,7 +46,7 @@ export default function AircoOnderhoudLanding() {
         <link rel="canonical" href="https://staycoolairco.nl/airco-onderhoud" />
       </Helmet>
 
-      <SchemaMarkup 
+      <SchemaMarkup
         type="Service"
         data={{
           "@type": "Service",
@@ -65,35 +64,20 @@ export default function AircoOnderhoudLanding() {
           "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "EUR",
-            "lowPrice": "11",
-            "highPrice": "15.95",
+            "lowPrice": "13",
+            "highPrice": "16",
             "offerCount": "2",
             "availability": "https://schema.org/InStock"
           },
-          "review": {
-            "@type": "Review",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "4.8",
-              "bestRating": "5"
-            },
-            "author": {
-              "@type": "Person",
-              "name": "StayCool Airco Klanten"
-            }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "112"
-          }
+
+
         }}
       />
 
-      <ProductLandingHero 
-        title="Airco Onderhoud: Optimale Prestaties Garanderen"
+      <ProductLandingHero primaryTo="/onderhoud" primaryLabel="Vergelijk onderhoudspakketten"
+        title="Wat houdt airco onderhoud in?"
         subtitle="Vakkundig • Betrouwbaar • Betaalbaar"
-        description="Verleng de levensduur van uw airconditioning en zorg voor een gezond binnenklimaat. Onze ervaren, F-gassen gecertificeerde monteurs voeren het onderhoud aan uw airconditioning professioneel en grondig uit."
+        description="Bij een onderhoudsbeurt worden uw airco, filters en afvoer gereinigd en gecontroleerd. Hier leest u welke werkzaamheden daarbij horen. StayCool verzorgt onderhoud aan airco’s die wij zelf hebben geleverd en geïnstalleerd."
         backgroundImage="/images/products/570-Pular-indoor-right.webp"
         brandName="Airco Onderhoud"
         features={[
@@ -107,7 +91,7 @@ export default function AircoOnderhoudLanding() {
         ]}
       />
 
-      <ProductLandingFeatures 
+      <ProductLandingFeatures
         title="Waarom is Regelmatig Onderhoud Essentieel?"
         subtitle="Voordelen van ons professionele airco-onderhoud"
         features={features}
@@ -128,7 +112,7 @@ export default function AircoOnderhoudLanding() {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-lg font-medium text-gray-900 mb-4">Standaard onderhoudsbeurt</h3>
               <ul className="space-y-3">
-                <li className="flex items-start">
+                <li className="flex flex-col sm:flex-row items-start">
                   <svg className="h-5 w-5 text-green-500 mt-0.5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
@@ -157,7 +141,7 @@ export default function AircoOnderhoudLanding() {
                 </li>
               </ul>
             </div>
-            
+
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-lg font-medium text-gray-900 mb-4">Uitgebreide onderhoudsbeurt</h3>
               <ul className="space-y-3">
@@ -205,142 +189,31 @@ export default function AircoOnderhoudLanding() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg border border-gray-200">
-              <div className="bg-blue-600 p-6 text-center relative">
-                <h3 className="text-xl font-bold text-white">Basis Pakket</h3>
-              </div>
-              <div className="p-6">
-                <div className="text-center mb-6">
-                  <p className="text-4xl font-bold text-gray-900">€13,-</p>
-                  <p className="text-sm text-gray-500">p.m.</p>
-                </div>
-
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <svg className="h-5 w-5 text-green-500 mt-0.5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700">Jaarlijks onderhoud</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="h-5 w-5 text-green-500 mt-0.5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700">Reiniging van binnen- en buitenunit</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="h-5 w-5 text-green-500 mt-0.5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700">Controle koudemiddel en druk</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="h-5 w-5 text-green-500 mt-0.5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700">Inspectie elektrische aansluitingen</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="h-5 w-5 text-green-500 mt-0.5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700">Controle condensafvoer</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="h-5 w-5 text-green-500 mt-0.5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700">Voorrang bij storingen</span>
-                  </li>
-                </ul>
-
-                <div className="text-center">
-                  <Link to="/contact" className="inline-block px-6 py-3 rounded bg-blue-600 text-white font-medium hover:bg-blue-700">
-                    Kies Basis Pakket
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg border-2 border-blue-600">
-              <div className="bg-blue-700 p-6 text-center relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-blue-900 text-xs font-bold py-1 px-3 rounded-full">
-                  MEEST GEKOZEN
-                </div>
-                <h3 className="text-xl font-bold text-white">Premium Pakket</h3>
-              </div>
-              <div className="p-6">
-                <div className="text-center mb-6">
-                  <p className="text-4xl font-bold text-gray-900">€16,-</p>
-                  <p className="text-sm text-gray-500">p.m.</p>
-                </div>
-
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <svg className="h-5 w-5 text-green-500 mt-0.5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700">Alles uit het Premium Pakket</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="h-5 w-5 text-green-500 mt-0.5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700">Directe vervanging bij defecten</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="h-5 w-5 text-green-500 mt-0.5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700">Geen onverwachte kosten</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="h-5 w-5 text-green-500 mt-0.5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700">Priority storingsdienst</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="h-5 w-5 text-green-500 mt-0.5 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-gray-700">Garantie op onderdelen</span>
-                  </li>
-                </ul>
-
-                <div className="text-center">
-                  <Link to="/contact" className="inline-block px-6 py-3 rounded bg-blue-700 text-white font-medium hover:bg-blue-800">
-                    Kies All-Inclusive Pakket
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-gray-600">Prijzen zijn per maand. Jaarlijks onderhoud inbegrepen in beide pakketten.</p>
-            <p className="text-gray-600 mt-2">Vraag naar onze zakelijke onderhoudscontracten voor meerdere units.</p>
-          </div>
+          <MaintenanceOffer />
+          <nav aria-label="Meer over onderhoud" className="mt-6 flex flex-col gap-3">
+            <Link to="/kennisbank/hoe-vaak-airco-onderhoud" className="text-blue-800 underline">Hoe vaak heeft uw airco onderhoud nodig?</Link>
+            <Link to="/seo/pillar-9-kosten-prijzen/airco-onderhoud-kosten" className="text-blue-800 underline">Kosten van los onderhoud en abonnementen vergelijken</Link>
+            <Link to="/airco-onderhoud-limburg" className="text-blue-800 underline">Onderhoud voor bestaande klanten in Limburg</Link>
+          </nav>
         </div>
       </div>
 
       {/* Important Notice Section */}
       <div className="py-16 bg-orange-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow-xl p-8 md:p-12">
-            <div className="flex items-start">
+          <div className="bg-white rounded-lg shadow-xl p-4 sm:p-8 md:p-12">
+            <div className="flex flex-col sm:flex-row items-start">
               <div className="flex-shrink-0">
                 <AlertTriangle className="h-12 w-12 text-orange-500" />
               </div>
-              <div className="ml-6">
+              <div className="mt-4 sm:mt-0 sm:ml-6 min-w-0">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">
                   Belangrijk: Onderhoudsbeleid StayCool Airco
                 </h2>
                 <div className="prose prose-lg text-gray-700">
                   <p className="mb-4">
-                    Bij StayCool Airco streven we naar de hoogste kwaliteit en service voor onze klanten. 
-                    Om dit te kunnen garanderen, voeren wij <strong>uitsluitend onderhoud en reparaties</strong> uit 
+                    Bij StayCool Airco streven we naar de hoogste kwaliteit en service voor onze klanten.
+                    Om dit te kunnen garanderen, voeren wij <strong>uitsluitend onderhoud en reparaties</strong> uit
                     aan airconditioningsystemen die door ons zijn geleverd en geïnstalleerd.
                   </p>
                   <p className="mb-4">
@@ -354,11 +227,11 @@ export default function AircoOnderhoudLanding() {
                   </ul>
                   <p className="mb-4">
                     <strong>Heeft u een airco die niet door StayCool is geïnstalleerd?</strong><br />
-                    Wij adviseren u contact op te nemen met de oorspronkelijke installateur of een algemene 
+                    Wij adviseren u contact op te nemen met de oorspronkelijke installateur of een algemene
                     onderhoudspartij voor airconditioningsystemen.
                   </p>
                   <p className="text-sm text-gray-600 italic">
-                    Wij begrijpen dat dit mogelijk ongemak veroorzaakt en bieden hiervoor onze excuses aan. 
+                    Wij begrijpen dat dit mogelijk ongemak veroorzaakt en bieden hiervoor onze excuses aan.
                     Deze keuze is gemaakt om de beste service aan onze klanten te kunnen blijven bieden.
                   </p>
                 </div>
@@ -368,11 +241,7 @@ export default function AircoOnderhoudLanding() {
         </div>
       </div>
 
-      <ProductLandingContact 
-        title="Vraag een Vrijblijvende Offerte Aan"
-        subtitle="Ontvang persoonlijk advies en een scherpe prijsopgave voor uw airco onderhoud"
-        brandName="Airco Onderhoud"
-      />
-    </>
+<div className="py-10 text-center"><Link to="/onderhoud" className="inline-block rounded-lg bg-blue-700 px-6 py-4 font-bold text-white">Vergelijk Basis en Premium</Link></div>
+    </div>
   );
 }

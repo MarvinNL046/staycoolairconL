@@ -52,7 +52,7 @@ export const lgMobieleAircoData: Brand = {
         'R290 milieuvriendelijk koudemiddel',
         'Verrijdbaar op wieltjes',
         'Dual Inverter Technologie',
-        'Energiebesparing tot 40%',
+        "besparing afhankelijk van gebruik en tarieven",
         'Wifi-connectiviteit met LG ThinQ-app',
         'Lage geluidsproductie (42 dB(A))'
       ],

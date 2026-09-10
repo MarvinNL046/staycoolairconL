@@ -1,6 +1,5 @@
-import React from 'react';
 import ArticleLayout from '../../components/ArticleLayout';
-import { AlertCircle, CheckCircle, Info, Phone, Calendar } from 'lucide-react';
+import { AlertCircle,CheckCircle,Info,Phone,Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function LGStoringscode() {

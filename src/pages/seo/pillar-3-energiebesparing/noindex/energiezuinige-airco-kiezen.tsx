@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Zap, Leaf, TrendingDown, Star, Award, Phone, CheckCircle2 } from 'lucide-react';
+import { Zap,Leaf,TrendingDown,Star,Award,Phone,CheckCircle2 } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
 
@@ -71,7 +70,7 @@ const EnergiezuinigeAircoKiezen = () => {
       icon: <Zap className="w-6 h-6 text-yellow-600" />,
       titel: 'Inverter Technologie',
       beschrijving: 'Essentieel voor zuinig en stil gebruik',
-      waarden: 'Tot 30% besparing vs on/off'
+      waarden: "situatieafhankelijke besparing vs on/off"
     },
     {
       icon: <Leaf className="w-6 h-6 text-green-600" />,
@@ -97,7 +96,7 @@ const EnergiezuinigeAircoKiezen = () => {
         <div className="max-w-4xl mx-auto px-4 text-center text-white">
           <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
             <Leaf className="w-5 h-5" />
-            <span className="font-semibold">Bespaar tot 42% op energiekosten</span>
+            <span className="font-semibold">Bekijk de mogelijke besparing op energiekosten</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Zo Kies Je de Zuinigste Airco

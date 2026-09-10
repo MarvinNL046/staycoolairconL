@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Shield, Euro, Zap, Wind, ThermometerSun, Phone, Calculator, TrendingUp, Star, Award, Snowflake } from 'lucide-react';
+import { CheckCircle,Shield,Euro,Zap,Wind,Phone,Calculator,TrendingUp,Star,Award,Snowflake } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const TosotGreeAirco = () => {
   const breadcrumbItems = [
@@ -32,7 +30,7 @@ const TosotGreeAirco = () => {
     },
     {
       icon: <Shield className="h-12 w-12 text-sky-500" />,
-      title: "5 Jaar Garantie",
+      title: "garantie volgens offerte",
       description: "Uitgebreide fabrieksgarantie als bewijs van kwaliteit en betrouwbaarheid"
     }
   ];
@@ -86,7 +84,7 @@ const TosotGreeAirco = () => {
     },
     {
       title: "Uitstekende Prijs-Kwaliteitverhouding",
-      description: "Tosot/Gree biedt 30-40% lagere prijzen dan Daikin of Mitsubishi, terwijl de technische specificaties vergelijkbaar zijn. U krijgt inverter technologie, A++ energielabels, WiFi-bediening en 5 jaar garantie - zonder de premium prijzen. Dit maakt Tosot perfect voor wie slimme keuzes maakt en niet wil betalen voor merknaam maar voor functionaliteit."
+      description: "Tosot/Gree biedt 30-40% lagere prijzen dan Daikin of Mitsubishi, terwijl de technische specificaties vergelijkbaar zijn. U krijgt inverter technologie, A++ energielabels, WiFi-bediening en garantie volgens offerte - zonder de premium prijzen. Dit maakt Tosot perfect voor wie slimme keuzes maakt en niet wil betalen voor merknaam maar voor functionaliteit."
     },
     {
       title: "Bewezen Betrouwbaarheid",
@@ -149,7 +147,7 @@ const TosotGreeAirco = () => {
   const faqs = [
     {
       question: "Is Tosot/Gree betrouwbaar genoeg vergeleken met Daikin of Mitsubishi?",
-      answer: "Absoluut. Gree is 's werelds grootste airco fabrikant sinds 2005 met 200+ miljoen verkochte units wereldwijd. Het merk heeft 30 jaar ervaring, ISO 9001 certificering en strikte kwaliteitscontroles. Hoewel Tosot/Gree voordeliger is dan Daikin of Mitsubishi, zijn de technische specificaties vergelijkbaar: inverter technologie, A++ labels, 5 jaar garantie en verwarmingscapaciteit tot -15°C. Het verschil zit vooral in merk-prestige en enkele premium features (zoals nog stiller werking of -20°C verwarming). Voor de meeste toepassingen is Tosot/Gree een uitstekende keuze met bewezen betrouwbaarheid."
+      answer: "Absoluut. Gree is 's werelds grootste airco fabrikant sinds 2005 met 200+ miljoen verkochte units wereldwijd. Het merk heeft 30 jaar ervaring, ISO 9001 certificering en strikte kwaliteitscontroles. Hoewel Tosot/Gree voordeliger is dan Daikin of Mitsubishi, zijn de technische specificaties vergelijkbaar: inverter technologie, A++ labels, garantie volgens offerte en verwarmingscapaciteit tot -15°C. Het verschil zit vooral in merk-prestige en enkele premium features (zoals nog stiller werking of -20°C verwarming). Voor de meeste toepassingen is Tosot/Gree een uitstekende keuze met bewezen betrouwbaarheid."
     },
     {
       question: "Wat is het verschil tussen Tosot en Gree?",
@@ -161,11 +159,11 @@ const TosotGreeAirco = () => {
     },
     {
       question: "Welke garantie krijg ik op een Tosot/Gree airco?",
-      answer: "Bij installatie door StayCool Airco krijgt u 5 jaar volledige fabrieksgarantie op alle componenten inclusief compressor. Dit geldt bij correcte installatie en jaarlijks onderhoud. De garantie dekt materiaal- en fabricagefouten, onderdelen én arbeidsloon. StayCool Airco is erkend Tosot/Gree partner, wat betekent dat we garantieclaims direct kunnen afhandelen zonder gedoe. De 5 jaar garantie toont het vertrouwen in kwaliteit - dit is standaard bij premium merken, maar opmerkelijk bij deze prijsklasse."
+      answer: "Bij installatie door StayCool Airco krijgt u 5 jaar volledige fabrieksgarantie op alle componenten inclusief compressor. Dit geldt bij correcte installatie en jaarlijks onderhoud. De garantie dekt materiaal- en fabricagefouten, onderdelen én arbeidsloon. StayCool Airco is erkend Tosot/Gree partner, wat betekent dat we garantieclaims direct kunnen afhandelen zonder gedoe. De garantie volgens offerte toont het vertrouwen in kwaliteit - dit is standaard bij premium merken, maar opmerkelijk bij deze prijsklasse."
     },
     {
       question: "Hoe energiezuinig is een Tosot/Gree airco?",
-      answer: "Tosot/Gree airconditioners hebben energielabel A++ met SCOP waarden tot 4,6 voor verwarming. Dit betekent 360% gratis energie uit de buitenlucht - voor elke kWh stroom produceert het systeem 4,6 kWh warmte. Vergeleken met elektrische verwarming bespaart u 75% op energiekosten. De inverter technologie past continu het vermogen aan voor optimale efficiency. Jaarlijkse kosten liggen tussen €600-900 voor een gemiddelde woning, wat 50-60% lager is dan conventionele verwarming. Het verschil met A+++ topmerken is minimaal (5-10% extra besparing)."
+      answer: "Tosot/Gree airconditioners hebben energielabel A++ met SCOP waarden tot 4,6 voor verwarming. Dit betekent 360% gratis energie uit de buitenlucht - voor elke kWh stroom produceert het systeem 4,6 kWh warmte. Vergeleken met elektrische verwarming kunt u mogelijk besparen op uw energiekosten. De inverter technologie past continu het vermogen aan voor optimale efficiency. Jaarlijkse kosten liggen tussen €600-900 voor een gemiddelde woning, wat 50-60% lager is dan conventionele verwarming. Het verschil met A+++ topmerken is minimaal (5-10% extra besparing)."
     },
     {
       question: "Kan ik een Tosot/Gree airco op afstand bedienen?",
@@ -185,7 +183,7 @@ const TosotGreeAirco = () => {
     <>
       <MetaTags
         title="Tosot/Gree Airco Limburg | Betaalbare Kwaliteit A++ | StayCool Airco"
-        description="Tosot/Gree airco ✓ Beste prijs-kwaliteit ✓ A++ efficiency ✓ 5 jaar garantie ✓ WiFi bediening ✓ Erkend installateur. Gratis advies!"
+        description="Tosot/Gree airco ✓ Beste prijs-kwaliteit ✓ A++ efficiency ✓ garantie volgens offerte ✓ WiFi bediening ✓ Erkend installateur. Gratis advies!"
       />
 
       <SchemaMarkup
@@ -194,7 +192,7 @@ const TosotGreeAirco = () => {
           "@context": "https://schema.org",
           "@type": "Product",
           name: "Tosot/Gree Airco",
-          description: "Betaalbare Tosot en Gree airconditioners met inverter technologie en 5 jaar garantie. Professionele installatie door StayCool Airco in Limburg",
+          description: "Betaalbare Tosot en Gree airconditioners met inverter technologie en garantie volgens offerte. Professionele installatie door StayCool Airco in Limburg",
           brand: {
             "@type": "Brand",
             name: "Tosot/Gree"
@@ -210,11 +208,7 @@ const TosotGreeAirco = () => {
               name: "Limburg"
             }
           },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.7",
-            reviewCount: "98"
-          }
+
         }}
       />
 
@@ -229,7 +223,8 @@ const TosotGreeAirco = () => {
             Tosot/Gree Airco: Betaalbare Kwaliteit A++
           </h1>
           <p className="text-xl md:text-2xl text-sky-50 mb-8 max-w-3xl">
-            De slimme keuze voor wie niet te veel wil betalen maar wel degelijke kwaliteit eist. Tosot/Gree is 's werelds grootste airco fabrikant met bewezen betrouwbaarheid en 5 jaar garantie.
+
+            De slimme keuze voor wie niet te veel wil betalen maar wel degelijke kwaliteit eist. Tosot/Gree is 's werelds grootste airco fabrikant met bewezen betrouwbaarheid en garantie volgens offerte.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -269,7 +264,7 @@ const TosotGreeAirco = () => {
                 <div className="flex justify-center mb-4">
                   {usp.icon}
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}
@@ -290,7 +285,7 @@ const TosotGreeAirco = () => {
             </p>
 
             <p className="text-gray-700 leading-relaxed mb-6">
-              <strong>Tosot is het premium consumentenmerk van Gree</strong>, speciaal ontwikkeld voor de Europese markt met focus op modern design en gebruiksvriendelijkheid. U krijgt inverter technologie, A++ energielabels, WiFi-bediening en 5 jaar garantie - voor 30-40% minder dan vergelijkbare Daikin of Mitsubishi modellen. Dit maakt Tosot perfect voor bewuste consumenten die slimme keuzes maken.
+              <strong>Tosot is het premium consumentenmerk van Gree</strong>, speciaal ontwikkeld voor de Europese markt met focus op modern design en gebruiksvriendelijkheid. U krijgt inverter technologie, A++ energielabels, WiFi-bediening en garantie volgens offerte - voor 30-40% minder dan vergelijkbare Daikin of Mitsubishi modellen. Dit maakt Tosot perfect voor bewuste consumenten die slimme keuzes maken.
             </p>
 
             <p className="text-gray-700 leading-relaxed mb-6">
@@ -431,7 +426,8 @@ const TosotGreeAirco = () => {
                 Alle Essentials
               </h3>
               <p className="text-gray-700">
-                WiFi, zelfreiniging, turbo-modus en 5 jaar garantie - niets mist voor dagelijks gebruik
+
+                WiFi, zelfreiniging, turbo-modus en garantie volgens offerte - niets mist voor dagelijks gebruik
               </p>
             </div>
           </div>
@@ -442,7 +438,8 @@ const TosotGreeAirco = () => {
       <section className="py-16 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Bespaar Tot 60% Op Energiekosten
+
+            Bekijk de mogelijke besparing op energiekosten
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -544,7 +541,7 @@ const TosotGreeAirco = () => {
                 <li className="flex items-start">
                   <Shield className="h-6 w-6 text-sky-500 mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <strong className="text-gray-900">5 Jaar Garantie Activatie</strong>
+                    <strong className="text-gray-900">garantie volgens offerte Activatie</strong>
                     <p className="text-gray-600 mt-1">Registratie bij Gree voor volledige garantiedekking</p>
                   </div>
                 </li>

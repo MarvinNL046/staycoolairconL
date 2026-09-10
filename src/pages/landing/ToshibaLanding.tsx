@@ -1,12 +1,12 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Zap, Wind, Wifi, Shield } from 'lucide-react';
+import { Zap,Wind,Wifi,Shield } from 'lucide-react';
 import ProductLandingHero from '../../components/landing/ProductLandingHero';
 import ProductLandingFeatures from '../../components/landing/ProductLandingFeatures';
 import ProductLandingModels from '../../components/landing/ProductLandingModels';
 import ProductLandingContact from '../../components/landing/ProductLandingContact';
-import { toshibaData } from '../../data/brands/toshiba';
+import { productData } from '../../data/products';
 import SchemaMarkup from '../../components/SchemaMarkup';
+const toshibaData = productData.brands.find(b => b.name === 'Toshiba')!;
 
 export default function ToshibaLanding() {
   // Select top models to showcase
@@ -44,14 +44,14 @@ export default function ToshibaLanding() {
           name="description"
           content="Toshiba airco: Ultra Pure filter (94% PM2.5) | Plasma Ionizer | A+++ energielabel | Uniek Haori design. Erkend installateur Limburg. Gratis offerte!"
         />
-        <meta 
-          name="keywords" 
+        <meta
+          name="keywords"
           content="Toshiba, airconditioning, Ultra Pure filter, Magic Coil, Plasma Ionizer, Haori, Daiseikai, Japanse kwaliteit, Limburg"
         />
         <link rel="canonical" href="https://staycoolairco.nl/landing/toshiba" />
       </Helmet>
 
-      <SchemaMarkup 
+      <SchemaMarkup
         type="Product"
         data={{
           "@type": "Product",
@@ -61,36 +61,13 @@ export default function ToshibaLanding() {
             "@type": "Brand",
             "name": "Toshiba"
           },
-          "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "EUR",
-            "lowPrice": "1299",
-            "highPrice": "2499",
-            "offerCount": toshibaData.models.length,
-            "availability": "https://schema.org/InStock"
-          },
           "image": toshibaData.imageUrl,
-          "review": {
-            "@type": "Review",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "4.8",
-              "bestRating": "5"
-            },
-            "author": {
-              "@type": "Person",
-              "name": "StayCool Airco Klanten"
-            }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "92"
-          }
+
+
         }}
       />
 
-      <ProductLandingHero 
+      <ProductLandingHero
         title="Toshiba Airconditioning: Premium Japanse Technologie voor Stijlvol Comfort"
         subtitle="Ultra Pure Filter • Uniek Design • Plasma Ionizer"
         description="Toshiba staat bekend om premium Japanse technologie met focus op design, duurzaamheid en innovatie. Ontdek waarom deze hoogwaardige airconditioners met unieke features de voorkeur genieten van designbewuste gebruikers."
@@ -107,13 +84,13 @@ export default function ToshibaLanding() {
         ]}
       />
 
-      <ProductLandingFeatures 
+      <ProductLandingFeatures
         title="Waarom Kiezen voor Toshiba?"
         subtitle="Ontdek de unieke voordelen van Toshiba airconditioners"
         features={features}
       />
 
-      <ProductLandingModels 
+      <ProductLandingModels
         title="Populaire Toshiba Modellen"
         subtitle="Ontdek onze bestsellers voor optimaal comfort"
         brandName="Toshiba"
@@ -121,7 +98,7 @@ export default function ToshibaLanding() {
         models={featuredModels}
       />
 
-      <ProductLandingContact 
+      <ProductLandingContact
         title="Vraag een Vrijblijvende Offerte Aan"
         subtitle="Ontvang persoonlijk advies en een scherpe prijsopgave voor uw Toshiba airconditioning"
         brandName="Toshiba"

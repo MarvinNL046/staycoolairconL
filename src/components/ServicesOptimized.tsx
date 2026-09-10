@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Fan, Wrench, ThermometerSun, ShoppingCart, Calendar, Play, Check } from 'lucide-react';
+import { useState } from 'react';
+import { Fan,Wrench,ThermometerSun,ShoppingCart,Calendar,Play,Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Card from './ui/Card';
 import Button from './ui/Button';
@@ -12,16 +12,16 @@ export default function ServicesOptimized() {
       icon: Fan,
       title: 'Airco Installatie',
       description: 'Professionele installatie van A-merk airconditioners. Wij zorgen voor een perfecte montage en afwerking.',
-      features: ['Gratis opname aan huis', 'Installatie binnen 2 weken', 'Stofvrije montage'],
-      link: '/airco-installatie-limburg',
+      features: ['Gratis opname aan huis', 'Planning in overleg', 'Afwerking in overleg'],
+      link: '/airco-kopen-limburg',
       color: 'text-blue-500',
       bg: 'bg-blue-50'
     },
     {
       icon: ThermometerSun,
       title: 'Bespaar op Gas',
-      description: 'Verwarm uw woning efficiënt met een airco en bespaar tot 60% op uw huidige gasrekening.',
-      features: ['Hoge SCOP/SEER waarden', 'Rendement tot 500%', 'Geschikt voor elke ruimte'],
+      description: 'Verwarm gericht de ruimtes die u gebruikt. Het verbruik hangt af van uw woning, gebruik en de gekozen airco.',
+      features: ['Hoge SCOP/SEER waarden', 'Vermogen afgestemd op uw woning', 'Plaatsing vooraf beoordeeld'],
       link: '/kennisbank/verwarmen-met-airco',
       color: 'text-orange-500',
       bg: 'bg-orange-50'
@@ -29,9 +29,9 @@ export default function ServicesOptimized() {
     {
       icon: Wrench,
       title: 'Onderhoud & Service',
-      description: 'Verleng de levensduur van uw systeem met ons vakkundige onderhoudsplan.',
+      description: 'Onderhoud voor airco’s die door StayCool zijn geleverd en geïnstalleerd. Kies het pakket dat bij u past.',
       features: ['Jaarlijkse controle', 'Reinigen filters', 'Storingsdienst'],
-      link: '/airco-onderhoud-limburg',
+      link: '/onderhoud',
       color: 'text-green-500',
       bg: 'bg-green-50'
     }

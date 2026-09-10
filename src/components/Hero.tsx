@@ -1,13 +1,11 @@
-import React, { useState, lazy, Suspense, useEffect } from 'react';
+import React,{ useState,useEffect } from 'react';
 import { m } from 'framer-motion';
-import { Phone, Mail, Send, Calendar, Shield, Clock, Thermometer } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Phone,Send,Shield,Clock,Thermometer } from 'lucide-react';
 import { sendEmail } from '../utils/email';
-import { trackFormSubmission, trackInteraction } from '../utils/analytics';
-import toast, { Toaster } from 'react-hot-toast';
+import { trackFormSubmission,trackInteraction } from '../utils/analytics';
+import toast,{ Toaster } from 'react-hot-toast';
 
-import CompactGoogleReviews from './CompactGoogleReviews';
-import { ArrowRight, Timer, ShieldCheck } from 'lucide-react';
+import { ArrowRight,Timer,ShieldCheck } from 'lucide-react';
 
 const inputClasses = "mt-1 block w-full h-12 rounded-md bg-white/10 border-gray-300 text-white placeholder-gray-400 shadow-sm focus:border-orange-500 focus:ring-orange-500";
 
@@ -79,7 +77,7 @@ export default function Hero() {
     city: '',
     message: ''
   });
-  const navigate = useNavigate();
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -102,10 +100,10 @@ export default function Hero() {
 
     try {
       await sendEmail(formData);
-      
+
       // Track successful form submission
       trackFormSubmission('hero_form', true);
-      
+
       // Show success message briefly before redirecting
       toast.success('Bericht succesvol verzonden!');
       setFormData({
@@ -115,7 +113,7 @@ export default function Hero() {
         city: '',
         message: ''
       });
-      
+
       // Redirect to thank you page after a short delay
       setTimeout(() => {
         window.location.href = 'https://staycoolairco.nl/tot-snel';
@@ -123,7 +121,7 @@ export default function Hero() {
     } catch (error) {
       console.error('Form submission error:', error);
       toast.error('Er is iets misgegaan. Probeer het later opnieuw of neem telefonisch contact op.');
-      
+
       // Track form submission error
       trackFormSubmission('hero_form', false);
     } finally {
@@ -135,7 +133,7 @@ export default function Hero() {
     <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
       <Toaster position="top-center" />
       <div className="absolute inset-0 bg-gradient-radial from-blue-500/30 to-transparent"></div>
-      
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <m.div
@@ -151,16 +149,16 @@ export default function Hero() {
                 <span className="font-medium">Direct duidelijkheid: Wij maken de offerte direct ter plekke bij u thuis</span>
               </div>
             </div>
-            
+
             <div className="h-[42px]">
               <span className="inline-block px-4 py-2 rounded-full bg-blue-500/20 text-blue-100">
-                ⚡ Bespaar tot 60% op verwarmingskosten
+                Koelen en verwarmen met één systeem
               </span>
             </div>
             {/* Headline Text Carousel */}
             <TextCarousel />
             <p className="mt-6 text-lg sm:text-xl text-gray-200 max-w-[45ch]">
-              Voorkom hoge terugleverkosten van uw zonnepanelen door slim te verwarmen met een airco. 
+              Voorkom hoge terugleverkosten van uw zonnepanelen door slim te verwarmen met een airco.
               Efficiënt verwarmen én koelen met één systeem.
             </p>
 
@@ -196,10 +194,10 @@ export default function Hero() {
                 </div>
                 <span className="relative z-10 text-sm mt-1">Bel direct: 046 202 1430</span>
               </a>
-              
+
               <a
                 href="/products"
-                onClick={() => trackInteraction('hero', 'click', 'products_button')} 
+                onClick={() => trackInteraction('hero', 'click', 'products_button')}
                 className="inline-flex items-center justify-center px-8 sm:px-10 py-5 sm:py-6 border-2 border-blue-400 text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300"
               >
                 <span className="mr-2">Bekijk Producten</span>
@@ -233,12 +231,12 @@ export default function Hero() {
             <div className="absolute top-6 -right-12 w-40 bg-orange-500 text-white text-center transform rotate-45 py-1 z-10 shadow-md">
               <span className="text-sm font-medium">Binnen 24u reactie</span>
             </div>
-            
+
             <h2 className="text-2xl font-bold text-white mb-2">
               Ontvang <span className="text-orange-400">Gratis</span> Een Offerte Op Maat
             </h2>
             <p className="text-gray-200 mb-6">Én een persoonlijk besparingsadvies van onze experts</p>
-            
+
             {/* Trust badges above form */}
             <div className="flex justify-between items-center mb-6 px-2 py-1 bg-white/5 rounded-lg">
               <div className="flex items-center text-xs text-white">
@@ -346,7 +344,7 @@ export default function Hero() {
                   </>
                 )}
               </button>
-              
+
               {/* Form incentives and reassurance */}
               <div className="mt-4 text-center">
                 <p className="text-sm text-gray-300">

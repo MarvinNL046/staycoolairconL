@@ -1,6 +1,5 @@
-import React from 'react';
 import ArticleLayout from '../../components/ArticleLayout';
-import { AlertCircle, CheckCircle, Info } from 'lucide-react';
+import { AlertCircle,CheckCircle,Info } from 'lucide-react';
 
 export default function StoringscodeGids() {
   return (

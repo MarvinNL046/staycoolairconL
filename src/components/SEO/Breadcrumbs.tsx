@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
+import { ChevronRight,Home } from 'lucide-react';
 
 export interface BreadcrumbItem {
   name: string;
@@ -42,7 +42,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items }) => {
       {/* Visual Breadcrumbs */}
       <nav aria-label="Breadcrumb" className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ol className="flex items-center space-x-2 py-3 text-sm">
+          <ol className="flex flex-wrap items-center gap-y-2 py-3 text-sm">
             <li>
               <Link 
                 to="/" 
@@ -54,11 +54,11 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items }) => {
             </li>
             
             {items.map((item, index) => (
-              <li key={item.path} className="flex items-center">
-                <ChevronRight className="h-4 w-4 text-gray-400 mx-2" />
+              <li key={item.path} className="flex min-w-0 max-w-full items-center break-words">
+                <ChevronRight className="h-4 w-4 shrink-0 text-gray-400 mx-2" />
                 
                 {index === items.length - 1 ? (
-                  <span className="text-gray-700 font-medium" aria-current="page">
+                  <span className="min-w-0 text-gray-700 font-medium" aria-current="page">
                     {item.name}
                   </span>
                 ) : (

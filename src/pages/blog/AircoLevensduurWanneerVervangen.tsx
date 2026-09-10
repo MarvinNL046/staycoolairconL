@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -242,7 +241,7 @@ export default function AircoLevensduurWanneerVervangen() {
 
               <div className="not-prose space-y-4 my-6">
                 <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r">
-                  <h4 className="font-bold text-blue-900 mb-1">1. Jaarlijks onderhoud</h4>
+                  <h3 className="font-bold text-blue-900 mb-1">1. Jaarlijks onderhoud</h3>
                   <p className="text-sm text-gray-700 m-0">
                     De grootste factor. Een airco zonder onderhoud verliest 10-15% efficiëntie per jaar door vervuiling
                     van de warmtewisselaar. De compressor moet harder werken, elektronica krijgt meer belasting en
@@ -250,7 +249,7 @@ export default function AircoLevensduurWanneerVervangen() {
                   </p>
                 </div>
                 <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r">
-                  <h4 className="font-bold text-blue-900 mb-1">2. Gebruiksintensiteit</h4>
+                  <h3 className="font-bold text-blue-900 mb-1">2. Gebruiksintensiteit</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Een airco die 12+ uur per dag draait in een kantoor slijt sneller dan een die 2-4 uur per dag
                     gebruikt wordt. Vooral aan/uit-cycli zijn belastend voor de compressor. Inverter-technologie
@@ -258,7 +257,7 @@ export default function AircoLevensduurWanneerVervangen() {
                   </p>
                 </div>
                 <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r">
-                  <h4 className="font-bold text-blue-900 mb-1">3. Merk en bouwkwaliteit</h4>
+                  <h3 className="font-bold text-blue-900 mb-1">3. Merk en bouwkwaliteit</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Premium Japanse merken gebruiken robuustere compressoren, betere elektronica en corrosiebestendigere
                     behuizingen. Chinese budget-merken kunnen op papier gelijkwaardig lijken maar hebben vaak
@@ -266,7 +265,7 @@ export default function AircoLevensduurWanneerVervangen() {
                   </p>
                 </div>
                 <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r">
-                  <h4 className="font-bold text-blue-900 mb-1">4. Isolatie van de woning</h4>
+                  <h3 className="font-bold text-blue-900 mb-1">4. Isolatie van de woning</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Slecht geïsoleerde woningen dwingen de airco continu op vol vermogen te draaien om de temperatuur
                     vast te houden. Dat is slopend. In goed geïsoleerde nieuwbouw of na-geïsoleerde rijwoningen in
@@ -276,7 +275,7 @@ export default function AircoLevensduurWanneerVervangen() {
                   </p>
                 </div>
                 <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r">
-                  <h4 className="font-bold text-blue-900 mb-1">5. Woonomgeving en plaatsing</h4>
+                  <h3 className="font-bold text-blue-900 mb-1">5. Woonomgeving en plaatsing</h3>
                   <p className="text-sm text-gray-700 m-0">
                     De buitenunit is de meest kwetsbare component. Directe zon de hele dag, zoutlucht (Zuid-Limburg kent
                     dat nauwelijks, maar stedelijke vervuiling wel), bladafval in de ventilator en plaatsing vlak bij
@@ -296,49 +295,49 @@ export default function AircoLevensduurWanneerVervangen() {
 
               <div className="not-prose space-y-3 my-6">
                 <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r">
-                  <h4 className="font-bold text-amber-900 mb-1">1. Veel minder koelvermogen dan vroeger</h4>
+                  <h3 className="font-bold text-amber-900 mb-1">1. Veel minder koelvermogen dan vroeger</h3>
                   <p className="text-sm text-gray-700 m-0">
                     De ruimte wordt niet meer echt koud, of het duurt uren om op temperatuur te komen. Dit wijst
                     meestal op koudemiddel-verlies, een versleten compressor of dichtgeslibde warmtewisselaar.
                   </p>
                 </div>
                 <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r">
-                  <h4 className="font-bold text-amber-900 mb-1">2. Sterk gestegen stroomverbruik</h4>
+                  <h3 className="font-bold text-amber-900 mb-1">2. Sterk gestegen stroomverbruik</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Als uw airco-rekening 30-50% hoger is dan vroeger bij vergelijkbaar gebruik, draait het systeem
                     inefficiënt. Vaak onomkeerbaar bij units ouder dan 10-12 jaar.
                   </p>
                 </div>
                 <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r">
-                  <h4 className="font-bold text-amber-900 mb-1">3. Vreemde geluiden (gerommel, fluiten, kloppen)</h4>
+                  <h3 className="font-bold text-amber-900 mb-1">3. Vreemde geluiden (gerommel, fluiten, kloppen)</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Lagers van de ventilator of compressor lopen vast. Op korte termijn te repareren, maar bij een
                     10+ jaar oude unit vaak een voorbode van grotere defecten.
                   </p>
                 </div>
                 <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r">
-                  <h4 className="font-bold text-amber-900 mb-1">4. Lekkend water uit de binnenunit</h4>
+                  <h3 className="font-bold text-amber-900 mb-1">4. Lekkend water uit de binnenunit</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Verstopte condensafvoer is makkelijk te verhelpen. Maar bij oude units zit het probleem vaak in
                     gescheurde afvoerbakjes of corrosie van de lekbak — daar gaat een reparatie niet meer helpen.
                   </p>
                 </div>
                 <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r">
-                  <h4 className="font-bold text-amber-900 mb-1">5. Steeds vaker fout-codes of automatisch uitschakelen</h4>
+                  <h3 className="font-bold text-amber-900 mb-1">5. Steeds vaker fout-codes of automatisch uitschakelen</h3>
                   <p className="text-sm text-gray-700 m-0">
                     De elektronische printplaat degradeert. Als dezelfde fout meermaals per seizoen terugkomt
                     ondanks reparatie, is het apparaat op.
                   </p>
                 </div>
                 <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r">
-                  <h4 className="font-bold text-amber-900 mb-1">6. IJsvorming op de leidingen of buitenunit</h4>
+                  <h3 className="font-bold text-amber-900 mb-1">6. IJsvorming op de leidingen of buitenunit</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Wijst op koudemiddel-problemen of sensor-defecten. Kan bij jonge units eenmalig voorkomen.
                     Bij oude units terugkerend en duur om op te lossen.
                   </p>
                 </div>
                 <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r">
-                  <h4 className="font-bold text-amber-900 mb-1">7. Bedrijfsgeur of vochtige geur bij opstarten</h4>
+                  <h3 className="font-bold text-amber-900 mb-1">7. Bedrijfsgeur of vochtige geur bij opstarten</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Schimmelvorming in onbereikbare delen van de verdamper. Slecht voor de luchtkwaliteit én een
                     teken dat de binnenunit niet meer grondig te reinigen is.
@@ -453,7 +452,7 @@ export default function AircoLevensduurWanneerVervangen() {
 
               <div className="not-prose space-y-4 my-6">
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">1. Laat jaarlijks professioneel onderhoud uitvoeren</h4>
+                  <h3 className="font-bold text-green-900 mb-1">1. Laat jaarlijks professioneel onderhoud uitvoeren</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Het belangrijkste advies. Een professionele servicebeurt kost €80-€130 per jaar en verlengt de
                     levensduur met 4-7 jaar in onze ervaring. De warmtewisselaar wordt chemisch gereinigd, het
@@ -461,7 +460,7 @@ export default function AircoLevensduurWanneerVervangen() {
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">2. Reinig zelf de filters elke 4-6 weken</h4>
+                  <h3 className="font-bold text-green-900 mb-1">2. Reinig zelf de filters elke 4-6 weken</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Binnenunit openen, filter eruit nemen, uitspoelen onder lauw water, laten drogen, terugplaatsen.
                     Kost 5 minuten en bespaart 10-15% stroomverbruik. Een schoon filter betekent minder belasting op
@@ -469,7 +468,7 @@ export default function AircoLevensduurWanneerVervangen() {
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">3. Houd de buitenunit vrij van blad en vuil</h4>
+                  <h3 className="font-bold text-green-900 mb-1">3. Houd de buitenunit vrij van blad en vuil</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Check maandelijks de ventilator en lamellen van de buitenunit. Blad, pluis en spinnenwebben
                     belemmeren de luchtstroom, waardoor de unit harder moet werken. 2-3 keer per jaar voorzichtig met
@@ -477,7 +476,7 @@ export default function AircoLevensduurWanneerVervangen() {
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">4. Vermijd aan/uit-gedrag</h4>
+                  <h3 className="font-bold text-green-900 mb-1">4. Vermijd aan/uit-gedrag</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Elke keer dat de compressor start, krijgt hij een piekbelasting. 10x per dag aan/uit is slopender
                     dan continu modulerend draaien. Stel een vast setpoint in (21-22°C bij verwarmen, 24-25°C bij
@@ -485,7 +484,7 @@ export default function AircoLevensduurWanneerVervangen() {
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">5. Zorg voor een goed geplaatste buitenunit</h4>
+                  <h3 className="font-bold text-green-900 mb-1">5. Zorg voor een goed geplaatste buitenunit</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Niet in direct zonlicht de hele dag, niet te dicht op de grond (minimaal 30 cm), niet onder een
                     dakrand waar regenwater op valt, en niet ingeklemd tussen muren (luchtstroom belemmerd).
@@ -493,7 +492,7 @@ export default function AircoLevensduurWanneerVervangen() {
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">6. Gebruik de airco jaarrond, niet alleen in de zomer</h4>
+                  <h3 className="font-bold text-green-900 mb-1">6. Gebruik de airco jaarrond, niet alleen in de zomer</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Tegenintuïtief, maar waar: een airco die 8 maanden per jaar stilstaat, krijgt afdichtingen die
                     uitdrogen, olie die scheidt in de compressor en vochtvorming in de elektronica. Schakel hem in de
@@ -501,7 +500,7 @@ export default function AircoLevensduurWanneerVervangen() {
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">7. Laat reparaties direct uitvoeren</h4>
+                  <h3 className="font-bold text-green-900 mb-1">7. Laat reparaties direct uitvoeren</h3>
                   <p className="text-sm text-gray-700 m-0">
                     "Het doet het nog wel, ik laat het later maken" is de klassieke valkuil. Een kleine koudemiddel-lekkage
                     die 6 maanden doorloopt, laat de compressor oververhitten — en die vervangen kost €600-€1.000.

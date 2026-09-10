@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect,useState } from 'react';
 import PerformanceOptimizer from '../utils/performanceOptimizations';
 
 interface WebVitalMetrics {

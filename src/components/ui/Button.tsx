@@ -52,7 +52,7 @@ const Button: React.FC<ButtonProps> = ({
     );
 
     if (href) {
-        if (href.startsWith('http') || href.startsWith('tel:') || href.startsWith('mailto:')) {
+        if (href.startsWith('#') || href.startsWith('http') || href.startsWith('tel:') || href.startsWith('mailto:')) {
             return (
                 <a href={href} className={combinedClasses}>
                     {children}

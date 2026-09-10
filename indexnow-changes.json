@@ -1,0 +1,6 @@
+{
+  "host": "staycoolairco.nl",
+  "keyFile": "e0de79cc528a36c914d4350dd4def61f.txt",
+  "changes": [],
+  "note": "Page revisions are generated in dist/indexnow-manifest.json. Use indexnow.mjs --live-manifest after publication."
+}

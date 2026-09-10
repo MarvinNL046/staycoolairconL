@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Leaf, CheckCircle, Shield, RefreshCw, Zap, Wind, Phone, Calculator, Award, TrendingDown, ThermometerSun, Home } from 'lucide-react';
+import { Leaf,CheckCircle,RefreshCw,Zap,Phone,Calculator,Award,TrendingDown,ThermometerSun,Home } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
@@ -26,7 +25,7 @@ const CirculaireAircoPage = () => {
     },
     {
       icon: <Leaf className="h-12 w-12 text-emerald-600" />,
-      title: "Milieuvriendelijk R32",
+      title: "R32-koudemiddel",
       description: "Nieuwste koudemiddel met 75% lagere klimaatimpact en volledige recyclebaarheid"
     },
     {
@@ -138,7 +137,7 @@ const CirculaireAircoPage = () => {
     },
     {
       question: "Is refurbished airco een goed alternatief?",
-      answer: "Refurbished airconditioners kunnen een interessant alternatief zijn met 30-50% kostenbesparing. Ons refurbishment proces: (1) Selectie: alleen premium merken (Daikin, Mitsubishi Heavy)  minder dan 7 jaar oud, (2) Inspectie: 50-punten controle van alle componenten, (3) Reiniging: professioneel reinigen warmtewisselaars en behuizing, (4) Vervanging: alle slijtdelen (filters, pakkingen, lagers) worden vervangen, (5) Testing: 72 uur testen op prestaties en betrouwbaarheid, (6) Garantie: 2 jaar volledige garantie zoals nieuw. Voordelen: €900-1.800 besparing (60% van nieuwprijs), 95% CO2-besparing vergeleken met nieuw, zelfde prestaties als nieuwe unit, officiële garantie. Geschikt voor: huurwoningen, bedrijfsruimtes, budget-bewuste kopers. Niet geschikt voor: woningen waar airco 20+ jaar moet functioneren, situaties met hoge eisen aan nieuwste technologie. Beschikbaarheid varieert - vraag naar actuele voorraad."
+      answer: "Refurbished airconditioners kunnen een interessant alternatief zijn met 30-50% kostenbesparing. Ons refurbishment proces: (1) Selectie: alleen premium merken (Daikin, Mitsubishi Heavy)  minder dan 7 jaar oud, (2) Inspectie: 50-punten controle van alle componenten, (3) Reiniging: professioneel reinigen warmtewisselaars en behuizing, (4) Vervanging: alle slijtdelen (filters, pakkingen, lagers) worden vervangen, (5) Testing: 72 uur testen op prestaties en betrouwbaarheid, (6) Garantie: garantie volgens offerte zoals nieuw. Voordelen: €900-1.800 besparing (60% van nieuwprijs), 95% CO2-besparing vergeleken met nieuw, zelfde prestaties als nieuwe unit, officiële garantie. Geschikt voor: huurwoningen, bedrijfsruimtes, budget-bewuste kopers. Niet geschikt voor: woningen waar airco 20+ jaar moet functioneren, situaties met hoge eisen aan nieuwste technologie. Beschikbaarheid varieert - vraag naar actuele voorraad."
     },
     {
       question: "Hoe draagt circulaire airco bij aan CO2-reductie?",

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -268,7 +267,7 @@ export default function WatKostEenUurAircoDraaien() {
 
               <div className="not-prose grid md:grid-cols-2 gap-4 my-6">
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 p-5 rounded-lg">
-                  <h4 className="font-bold text-blue-900 mb-2">☀️ Zomerdag koelen</h4>
+                  <h3 className="font-bold text-blue-900 mb-2">☀️ Zomerdag koelen</h3>
                   <p className="text-sm text-gray-700 mb-2">
                     Airco aan van 14:00–22:00 (8 uur), in deeltijd op vol vermogen, grotendeels in modulerende modus.
                   </p>
@@ -277,7 +276,7 @@ export default function WatKostEenUurAircoDraaien() {
                   </p>
                 </div>
                 <div className="bg-gradient-to-br from-amber-50 to-amber-100 border border-amber-200 p-5 rounded-lg">
-                  <h4 className="font-bold text-amber-900 mb-2">❄️ Winterdag verwarmen</h4>
+                  <h3 className="font-bold text-amber-900 mb-2">❄️ Winterdag verwarmen</h3>
                   <p className="text-sm text-gray-700 mb-2">
                     Airco aan van 07:00–23:00 (16 uur) op 20°C, buiten 2°C. Continu modulerend, geen aan/uit.
                   </p>
@@ -393,7 +392,7 @@ export default function WatKostEenUurAircoDraaien() {
 
               <div className="not-prose space-y-4 my-6">
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">1. Laat hem aanstaan, niet continu aan/uit</h4>
+                  <h3 className="font-bold text-green-900 mb-1">1. Laat hem aanstaan, niet continu aan/uit</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Een moderne inverter-airco heeft 3–5× meer stroom nodig om een koude woning op te warmen dan om
                     een al-verwarmde woning op temperatuur te houden. Zet hem 's ochtends aan en laat hem de hele dag
@@ -401,28 +400,28 @@ export default function WatKostEenUurAircoDraaien() {
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">2. Setpoint iets lager dan gewenste temperatuur</h4>
+                  <h3 className="font-bold text-green-900 mb-1">2. Setpoint iets lager dan gewenste temperatuur</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Zet bij verwarmen de thermostaat op 19–20°C in plaats van 22°C. Elke graad minder = 6–8% minder
                     energieverbruik. Bij koelen: 24–25°C is comfortabel, niet 20°C.
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">3. Deuren dicht, ramen dicht</h4>
+                  <h3 className="font-bold text-green-900 mb-1">3. Deuren dicht, ramen dicht</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Klinkt vanzelfsprekend maar is de grootste besparing. Een airco in een open gang met kieren is
                     tot 50% minder efficiënt dan in een afgesloten ruimte.
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">4. Filters schoonhouden</h4>
+                  <h3 className="font-bold text-green-900 mb-1">4. Filters schoonhouden</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Een vies filter kost 10–15% extra stroom. Filters binnen elke 2 maanden uitspoelen. Buitenunit:
                     1× per jaar professioneel laten reinigen. Onderhoud bij StayCool is <Link to="/gratis-onderhoud" className="text-blue-600 hover:underline">gratis</Link> voor klanten die via ons installeren.
                   </p>
                 </div>
                 <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r">
-                  <h4 className="font-bold text-green-900 mb-1">5. Juist vermogen voor de ruimte</h4>
+                  <h3 className="font-bold text-green-900 mb-1">5. Juist vermogen voor de ruimte</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Een te zware airco blaast snel koud en schakelt uit — dat is het on/off-patroon dat energie verspilt.
                     Te licht vermogen draait juist continu op vol vermogen. <Link to="/capacity-calculator" className="text-blue-600 hover:underline">Bereken het benodigde vermogen</Link>.

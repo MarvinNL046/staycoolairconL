@@ -1,5 +1,4 @@
-import React, { useState, useRef } from 'react';
-import { Play, Volume2, VolumeX, Maximize, RotateCcw } from 'lucide-react';
+import { useState,useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface VideoPlayerProps {
@@ -22,12 +21,11 @@ export default function VideoPlayer({
   title,
   description,
   thumbnailUrl,
-  duration = "PT5M",
-  uploadDate = new Date().toISOString(),
-  transcript = "Volledige transcript beschikbaar op aanvraag. Neem contact op voor gedetailleerde tekstversie van deze video.",
+  duration,
+  uploadDate,
+  transcript,
   chapters = []
 }: VideoPlayerProps) {
-  const [isPlaying, setIsPlaying] = useState(false);
   const [showTranscript, setShowTranscript] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -50,7 +48,7 @@ export default function VideoPlayer({
     "thumbnailUrl": thumbnailUrl || (isYouTube ? `https://img.youtube.com/vi/${youtubeVideoId}/maxresdefault.jpg` : undefined),
     "uploadDate": uploadDate,
     "duration": duration,
-    "contentUrl": videoUrl,
+    ...(!isYouTube && { "contentUrl": videoUrl }),
     "embedUrl": isYouTube ? `https://www.youtube.com/embed/${youtubeVideoId}` : videoUrl,
     "author": {
       "@type": "Organization",
@@ -66,13 +64,10 @@ export default function VideoPlayer({
       }
     },
     ...(transcript && {
-      "transcript": {
-        "@type": "MediaObject",
-        "contentUrl": `data:text/plain;charset=utf-8,${encodeURIComponent(transcript)}`
-      }
+      "transcript": transcript
     }),
     ...(chapters.length > 0 && {
-      "hasPart": chapters.map((chapter, index) => ({
+      "hasPart": chapters.map((chapter) => ({
         "@type": "Clip",
         "name": chapter.title,
         "description": chapter.description,
@@ -82,24 +77,15 @@ export default function VideoPlayer({
     })
   };
 
-  const handlePlayPause = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
+
 
   return (
     <>
-      <Helmet>
+      {uploadDate && <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(videoSchema)}
         </script>
-      </Helmet>
+      </Helmet>}
 
       <div className="bg-white rounded-xl shadow-lg overflow-hidden">
         {/* Video Player */}
@@ -124,8 +110,6 @@ export default function VideoPlayer({
                 poster={thumbnailUrl}
                 preload="metadata"
                 controls
-                onPlay={() => setIsPlaying(true)}
-                onPause={() => setIsPlaying(false)}
               >
                 <source src={videoUrl} type="video/mp4" />
                 <track
@@ -153,7 +137,7 @@ export default function VideoPlayer({
           {/* Video Actions */}
           <div className="flex flex-wrap items-center gap-4 mb-6">
             <span className="text-sm text-gray-500">
-              Duur: {duration.replace('PT', '').replace('M', ' minuten')}
+              {duration ? `Duur: ${duration.replace('PT', '').replace('M', ' minuten')}` : 'Bekijk de video voor onze werkwijze'}
             </span>
             {transcript && (
               <button

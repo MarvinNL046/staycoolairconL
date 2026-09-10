@@ -1,15 +1,24 @@
-import React, { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useState,useEffect } from 'react';
+import { useParams,Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, Phone, Mail, Zap, Wind, Snowflake, ChevronLeft, ChevronRight, X, Ruler, FileText, ExternalLink, Leaf, Volume2, ThermometerSun, Check, Info } from 'lucide-react';
-import { aircoProducts, AircoProduct } from '../data/aircoProducts';
+import { ArrowLeft,Phone,Mail,Zap,Snowflake,ChevronLeft,ChevronRight,X,Ruler,FileText,ExternalLink,Leaf,Volume2,ThermometerSun } from 'lucide-react';
+import { aircoProducts } from '../data/aircoProducts';
+import Contact from '../components/Contact';
+import { productBrandSlug } from '../utils/productBrands';
+import { formatPrice } from '../utils/installationPricing';
 
 export default function ScrapedProductDetail() {
   const { productId } = useParams();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [showInstallationInfo, setShowInstallationInfo] = useState(false);
+  useEffect(() => {
+    setCurrentImageIndex(0); setLightboxOpen(false);
+    const frame = requestAnimationFrame(() => {
+      if (window.location.hash === '#contact-aanvraag') document.getElementById('contact-aanvraag')?.scrollIntoView();
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [productId]);
 
   const product = aircoProducts.find(p => p.id === productId);
 
@@ -52,16 +61,18 @@ export default function ScrapedProductDetail() {
     }
   };
 
+  const metaDescription = `${product.name}. Bekijk deze uitvoering en vraag een offerte aan voor installatie in Limburg.`;
+
   return (
     <>
       <Helmet>
         <title>{product.name} | StayCool Airco</title>
-        <meta name="description" content={product.description?.substring(0, 160) || `${product.name} - Complete airco set van ${product.brand}. Vraag nu een vrijblijvende offerte aan bij StayCool Airco.`} />
+        <meta name="description" content={metaDescription} />
         <link rel="canonical" href={`https://staycoolairco.nl/products/airco/${product.id}`} />
 
         {/* Open Graph */}
         <meta property="og:title" content={`${product.name} | StayCool Airco`} />
-        <meta property="og:description" content={product.description?.substring(0, 160) || `${product.name} - Complete airco set van ${product.brand}`} />
+        <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="product" />
         <meta property="og:url" content={`https://staycoolairco.nl/products/airco/${product.id}`} />
         {product.image && <meta property="og:image" content={`https://staycoolairco.nl${product.image}`} />}
@@ -71,7 +82,7 @@ export default function ScrapedProductDetail() {
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${product.name} | StayCool Airco`} />
-        <meta name="twitter:description" content={product.description?.substring(0, 160) || `${product.name} - Complete airco set van ${product.brand}`} />
+        <meta name="twitter:description" content={metaDescription} />
         {product.image && <meta name="twitter:image" content={`https://staycoolairco.nl${product.image}`} />}
 
         {/* Product Schema.org JSON-LD */}
@@ -89,7 +100,7 @@ export default function ScrapedProductDetail() {
             "sku": product.sku || product.id,
             "mpn": product.id,
             "category": "Airconditioning",
-            ...(product.capacity && {
+            ...(product.type !== 'multi-split' && product.capacity && {
               "additionalProperty": [
                 {
                   "@type": "PropertyValue",
@@ -103,22 +114,12 @@ export default function ScrapedProductDetail() {
                 }
               ]
             }),
-            "offers": {
-              "@type": "Offer",
-              "url": `https://staycoolairco.nl/products/airco/${product.id}`,
-              "priceCurrency": "EUR",
-              "availability": "https://schema.org/InStock",
-              "seller": {
-                "@type": "Organization",
-                "name": "StayCool Airco",
-                "url": "https://staycoolairco.nl"
-              }
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.8",
-              "reviewCount": "127"
-            }
+            ...(product.cashflowPrice && product.price !== undefined ? { offers: {
+              '@type': 'Offer', url: `https://staycoolairco.nl/products/airco/${product.id}`,
+              priceCurrency: 'EUR', price: product.price.toFixed(2),
+              description: 'Inclusief 21% btw, installatie en materialen',
+              seller: { '@type': 'Organization', name: 'StayCool Airco', url: 'https://staycoolairco.nl' }
+            } } : {})
           })}
         </script>
       </Helmet>
@@ -128,7 +129,7 @@ export default function ScrapedProductDetail() {
           {/* Breadcrumb */}
           <div className="mb-8">
             <Link
-              to={`/products/${product.brand.toLowerCase()}`}
+              to={`/products/${productBrandSlug(product.brand)}`}
               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -144,7 +145,7 @@ export default function ScrapedProductDetail() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="relative aspect-square bg-white rounded-2xl shadow-lg overflow-hidden mb-4 cursor-pointer w-full max-w-full"
-                onClick={() => setLightboxOpen(true)}
+                onClick={() => { if (images.length) setLightboxOpen(true); }}
               >
                 {images.length > 0 ? (
                   <img
@@ -196,7 +197,7 @@ export default function ScrapedProductDetail() {
                 </div>
 
                 {/* Capacity badge */}
-                {product.capacity && (
+                {product.type !== 'multi-split' && product.capacity && (
                   <div className="absolute top-4 right-4">
                     <span className="px-3 py-1 bg-gray-900 text-white rounded-full text-sm font-semibold">
                       {product.capacity} kW
@@ -258,33 +259,19 @@ export default function ScrapedProductDetail() {
                   </p>
                 )}
 
-                {/* Price Card */}
-                {product.price && (
-                  <div className="mb-8 bg-white p-4 rounded-xl shadow-sm border border-blue-100">
-                    <div className="flex flex-col">
-                      <span className="text-sm font-medium text-gray-500 uppercase tracking-wide">All-in prijs vanaf</span>
-                      <div className="flex items-baseline gap-2 flex-wrap">
-                        <span className="text-3xl font-bold text-gray-900">
-                          € {product.price.toLocaleString('nl-NL', { minimumFractionDigits: 2 })}
-                        </span>
-                        <span className="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-md">
-                          Inclusief montage
-                        </span>
-                      </div>
-                      <button
-                        onClick={() => setShowInstallationInfo(true)}
-                        className="text-sm text-gray-500 underline decoration-dotted hover:text-blue-600 mt-1 text-left w-fit flex items-center gap-1"
-                      >
-                        <Info className="w-3 h-3" />
-                        Wat is standaard installatie?
-                      </button>
-                    </div>
-                  </div>
-                )}
+                <div className="mb-8 bg-white p-4 rounded-xl shadow-sm border border-blue-100">
+                  <p className="text-sm font-medium text-gray-500">{product.cashflowPrice ? 'Prijs voor deze set' : 'Offerte op maat'}</p>
+                  <p className="mt-2 text-3xl font-bold text-gray-900">{product.cashflowPrice && product.price !== undefined ? formatPrice(Math.round(product.price * 100)) : 'Prijs op aanvraag'}</p>
+                  {product.cashflowPrice ? <>
+                    <p className="mt-2 text-sm text-blue-700">Inclusief 21% btw, installatie en materialen</p>
+                    <p className="mt-3 text-sm text-gray-600">Prijspeil 10 september 2026. Uw offerte bevestigt de plaatsing en eventuele aanvullende werkzaamheden.</p>
+                  </> : <p className="mt-3 text-sm text-gray-600">Vraag een prijsopgave aan voor deze uitvoering. We stemmen levering, installatie en eventuele aanvullende werkzaamheden met u af.</p>}
+                  <a href="#contact-aanvraag" className="mt-4 inline-block rounded-lg bg-blue-700 px-4 py-3 font-semibold text-white">Offerte voor deze set</a>
+                </div>
 
                 {/* Quick specs */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
-                  {product.capacity && (
+                  {product.type !== 'multi-split' && product.capacity && (
                     <div className="bg-yellow-50 rounded-lg p-3">
                       <div className="flex items-center text-yellow-700">
                         <Zap className="w-5 h-5 mr-2" />
@@ -293,7 +280,7 @@ export default function ScrapedProductDetail() {
                       <p className="text-gray-900 font-bold text-lg mt-1">{product.capacity} kW</p>
                     </div>
                   )}
-                  {product.coolingCapacity && (
+                  {product.type !== 'multi-split' && product.coolingCapacity && (
                     <div className="bg-blue-50 rounded-lg p-3">
                       <div className="flex items-center text-blue-700">
                         <Snowflake className="w-5 h-5 mr-2" />
@@ -302,7 +289,7 @@ export default function ScrapedProductDetail() {
                       <p className="text-gray-900 font-bold text-lg mt-1">{product.coolingCapacity} kW</p>
                     </div>
                   )}
-                  {product.heatingCapacity && (
+                  {product.type !== 'multi-split' && product.heatingCapacity && (
                     <div className="bg-orange-50 rounded-lg p-3">
                       <div className="flex items-center text-orange-700">
                         <ThermometerSun className="w-5 h-5 mr-2" />
@@ -434,7 +421,7 @@ export default function ScrapedProductDetail() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <a
-                      href="#contact"
+                      href="#contact-aanvraag"
                       className="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
                     >
                       <Mail className="w-5 h-5 mr-2" />
@@ -543,59 +530,7 @@ export default function ScrapedProductDetail() {
           </div>
         </div>
       )}
-      {/* Installation Info Modal */}
-      {showInstallationInfo && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={() => setShowInstallationInfo(false)}>
-          <div className="bg-white rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
-            <div className="p-6 border-b border-gray-100 flex justify-between items-center sticky top-0 bg-white">
-              <h3 className="text-xl font-bold text-gray-900">Standaard installatie</h3>
-              <button
-                onClick={() => setShowInstallationInfo(false)}
-                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-                aria-label="Sluiten"
-              >
-                <X className="w-5 h-5 text-gray-500" />
-              </button>
-            </div>
-            <div className="p-6 space-y-4">
-              <p className="text-gray-600">
-                Onze all-in prijzen zijn inclusief standaard montage. Dit omvat alles wat nodig is voor een professionele installatie in de meeste situaties:
-              </p>
-              <ul className="space-y-3">
-                {[
-                  'Volledige installatie door F-gassen gecertificeerde monteurs',
-                  'Tot 3 meter koelleiding en bekabeling',
-                  'Muurdooringen door steen/beton (excl. gewapend beton)',
-                  'Plaatsing binnenunit op gewenste locatie',
-                  'Plaatsing buitenunit op opstelmateriaal (balken/blokken) of muurbeugel',
-                  'Afwerking met luxe kabelgoten',
-                  'Elektrische aansluiting op geaard stopcontact (binnen 3 meter)',
-                  'Vacumeren en in bedrijf stellen van het systeem',
-                  'Uitleg over de werking van het systeem'
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="mt-1 bg-green-100 p-1 rounded-full">
-                      <Check className="w-3 h-3 text-green-600" />
-                    </div>
-                    <span className="text-gray-700 text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="bg-blue-50 p-4 rounded-lg mt-6">
-                <p className="text-sm text-blue-800">
-                  <strong>Let op:</strong> Voor situaties die buiten de standaard montage vallen (zoals leidinglengtes &gt; 3 meter, dakdoorvoer, hoogwerker nodig) maken we graag een maatwerk prijsopgave.
-                </p>
-              </div>
-              <button
-                onClick={() => setShowInstallationInfo(false)}
-                className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors mt-4"
-              >
-                Begrepen
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      <Contact inquiryContext={product.name + (product.cashflowPrice && product.price !== undefined ? ' — ' + formatPrice(Math.round(product.price * 100)) + ' incl. btw, installatie en materialen' : ' — prijs op aanvraag')} />
     </>
   );
 }

@@ -1,6 +1,5 @@
-import React from 'react';
 import ArticleLayout from '../../components/ArticleLayout';
-import { Snowflake, ThermometerSun, AlertTriangle, CheckCircle, Droplets, Wind, Settings, HelpCircle } from 'lucide-react';
+import { Snowflake,ThermometerSun,AlertTriangle,CheckCircle,Droplets,Wind,Settings,HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AircoBevriesstBijVerwarmen = () => {

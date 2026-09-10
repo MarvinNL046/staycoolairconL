@@ -1,6 +1,5 @@
-import React from 'react';
 import { m } from 'framer-motion';
-import { Fan, Wrench, ThermometerSun, Banknote } from 'lucide-react';
+import { Fan,Wrench,ThermometerSun,Banknote } from 'lucide-react';
 
 export default function Services() {
   const services = [

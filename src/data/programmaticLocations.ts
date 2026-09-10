@@ -1,36 +1,16 @@
 import type {
-  CityTier,
-  FaqItem,
-  LocationCaseStudy,
-  LocationExpertiseSignals,
-  ProgrammaticLocationProfile,
+FaqItem,ProgrammaticLocationProfile
 } from '../types/programmatic-locations';
 import { djb2Hash } from '../utils/djb2';
 import {
-  CITY_INTRO_VARIANTS,
-  CITY_SERVICES_VARIANTS,
-  CITY_PRACTICAL_VARIANTS,
-  FAQ_QUESTION_VARIANTS,
-  renderTemplate,
+CITY_INTRO_VARIANTS,
+CITY_SERVICES_VARIANTS,
+CITY_PRACTICAL_VARIANTS,
+FAQ_QUESTION_VARIANTS,
+renderTemplate,
 } from './cityCopyVariants';
 
-const REGION_CLIMATE_CONTEXT: Record<ProgrammaticLocationProfile['region'], string[]> = {
-  'Noord-Limburg': [
-    'Warme zomerdagen en veel vrijstaande woningen vragen om voldoende koelvermogen.',
-    'In woonkernen met veel gezinswoningen is stille nachtmodus vaak doorslaggevend.',
-    'Door open bebouwing is zonbelasting per gevel per woning sterk verschillend.',
-  ],
-  'Midden-Limburg': [
-    'In en rond het Maasgebied zorgen vochtige periodes voor extra benauwdheid binnenshuis.',
-    'Veel woningen combineren renovatie met verduurzaming, waardoor hybride gebruik belangrijk is.',
-    'Snelle omslag tussen koelen en verwarmen is relevant in voor- en najaar.',
-  ],
-  'Zuid-Limburg': [
-    'In dichtbebouwde kernen ontstaat sneller opwarming in slaapkamers en bovenverdiepingen.',
-    'Monumentale en oudere panden vragen vaker om maatwerk in leidingroutes en unitpositie.',
-    'Hoogteverschillen en compacte straten vragen om strakke logistieke planning bij montage.',
-  ],
-};
+
 
 export const programmaticLocations: ProgrammaticLocationProfile[] = [
   // ─── Groot (> 100.000 inwoners) ─────────────────────────────────────────────
@@ -614,35 +594,6 @@ function buildBaseFaqs(profile: ProgrammaticLocationProfile, seed: number): FaqI
   return picked;
 }
 
-function buildCaseStudies(profile: ProgrammaticLocationProfile): LocationCaseStudy[] {
-  const [firstNeighborhood, secondNeighborhood] = profile.neighborhoods;
-  return [
-    {
-      title: `Woningupgrade in ${firstNeighborhood} (${profile.city})`,
-      neighborhood: firstNeighborhood,
-      summary: `Gezinswoning met oververhitte bovenverdieping en beperkte buitenruimte. We kozen voor een stille wandunit met geoptimaliseerde luchtworp en een compacte buitenunitpositie.`,
-      outcome: `Temperatuur in slaapkamers stabiel op comfortniveau en aantoonbaar lager piekverbruik tijdens hittegolven.`,
-    },
-    {
-      title: `Renovatieproject in ${secondNeighborhood} (${profile.city})`,
-      neighborhood: secondNeighborhood,
-      summary: `Bij deze woning in ${profile.city} was ${profile.localConstraint}. We hebben leidingwerk esthetisch weggewerkt en de regeling gekoppeld aan weekprogramma's.`,
-      outcome: `Snelle opwarming in de ochtend, efficiënter koelen in de avond en merkbaar hoger dagelijks comfort.`,
-    },
-  ];
-}
-
-function buildExpertiseSignals(profile: ProgrammaticLocationProfile): LocationExpertiseSignals {
-  return {
-    reviewedBy: 'Marvin Smit – F-gassen gecertificeerd airco-specialist en eigenaar StayCool Airco',
-    lastReviewed: '2026-05-06',
-    certifications: ['F-gassen gecertificeerd', 'Ervaren in residentiële en lichte utiliteitsprojecten'],
-    yearsActive: 5,
-    localProjects: profile.installationCount,
-    responseTime: 'Binnen 24 uur reactie op aanvragen in heel Limburg',
-  };
-}
-
 /**
  * Token map used by `renderTemplate()` to interpolate city-specific values
  * into variant strings.
@@ -678,11 +629,7 @@ export function buildProgrammaticLandingProps(profile: ProgrammaticLocationProfi
   const practicalParagraph = renderTemplate(practicalPool[(seed + 2) % practicalPool.length], tokens);
 
   // Climate facts: region-base + tier-specific + per-city extras.
-  const climateFacts = [
-    ...REGION_CLIMATE_CONTEXT[profile.region],
-    `In ${profile.city} zien we in de praktijk extra warmtelast rondom ${profile.landmarks[0]} en ${profile.landmarks[1]}.`,
-    ...(profile.overrides?.extraClimateFacts ?? []),
-  ];
+  const climateFacts = ["Zon op ramen en dak beïnvloedt de warmtelast van de ruimte.", "Isolatie, ventilatie en het gewenste gebruik bepalen mede het benodigde vermogen."];
 
   // Special features: tier-base + per-city extras.
   const specialFeatures = [
@@ -710,7 +657,7 @@ export function buildProgrammaticLandingProps(profile: ProgrammaticLocationProfi
     climateFacts,
     specialFeatures,
     faqs,
-    caseStudies: buildCaseStudies(profile),
-    expertiseSignals: buildExpertiseSignals(profile),
+    caseStudies: [],
+    expertiseSignals: undefined,
   };
 }

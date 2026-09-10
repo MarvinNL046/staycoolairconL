@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import MetaTags from '../../../../components/MetaTags';
 
@@ -363,7 +362,8 @@ export default function DuurzameAircoKeuzeGids() {
                 </Link>
               </div>
               <p className="mt-6 text-blue-100">
-                ⭐⭐⭐⭐⭐ Meer dan 500 tevreden klanten in Limburg
+
+                ⭐⭐⭐⭐⭐ klanten in ons werkgebied in Limburg
               </p>
             </section>
 

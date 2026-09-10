@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Smartphone, CheckCircle, TrendingUp, Phone, BarChart, Battery, Euro, Zap, ArrowRight, Cloud, Wifi } from 'lucide-react';
+import { Smartphone,CheckCircle,TrendingUp,Phone,BarChart,Battery,Euro,Zap,ArrowRight,Cloud,Home } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';

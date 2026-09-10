@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Phone, CheckCircle, Clock, Shield, Wrench, Award, ChevronDown, ArrowRight } from 'lucide-react';
+import { Phone,CheckCircle,Clock,Shield,Wrench,Award,ChevronDown,ArrowRight } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import ContactForm from '../../components/Contact';
@@ -29,7 +29,7 @@ const faqItems = [
   },
   {
     question: 'Wat kost een multi-split installatie?',
-    answer: 'Een dual-zone multi-split systeem (2 kamers) kost doorgaans tussen €3.000 en €5.000 inclusief alles. Een triple-zone systeem (3 kamers) ligt tussen €5.000 en €8.000. Dit is inclusief alle units, leidingwerk, montage, inbedrijfstelling en 5 jaar garantie. Voor een exacte prijs maakt u gratis een offerte aan.',
+    answer: "Een dual-zone multi-split systeem (2 kamers) kost doorgaans tussen €3.000 en €5.000 inclusief alles. Een triple-zone systeem (3 kamers) ligt tussen €5.000 en €8.000. Dit is inclusief alle units, leidingwerk, montage, inbedrijfstelling en garantie volgens offerte. Voor een exacte prijs maakt u gratis een offerte aan.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function MultiSplitAircoInstallatie() {
         <title>Multi-Split Airco Installatie | Meerdere Kamers | StayCool</title>
         <meta
           name="description"
-          content="Multi-split airco: 1 buitenunit voor 2-5 kamers. Ideaal voor woningen in Limburg. ✓ Koelen én verwarmen ✓ Energiezuinig ✓ 5 jaar garantie. Offerte!"
+          content="Multi-split airco: 1 buitenunit voor 2-5 kamers. Ideaal voor woningen in Limburg. ✓ Koelen én verwarmen ✓ Energiezuinig ✓ garantie volgens offerte. Offerte!"
         />
         <link rel="canonical" href="https://staycoolairco.nl/multi-split-airco-installatie" />
       </Helmet>
@@ -56,7 +56,7 @@ export default function MultiSplitAircoInstallatie() {
         data={{
           name: 'Multi-Split Airco Installatie Limburg',
           serviceType: 'Multi-split Airconditioning Installatie',
-          description: 'Professionele installatie van multi-split airco systemen voor 2 tot 5 kamers in Limburg. 1 buitenunit, meerdere binnenunits. Koelen en verwarmen met 5 jaar garantie.',
+          description: "Professionele installatie van multi-split airco systemen voor 2 tot 5 kamers in Limburg. 1 buitenunit, meerdere binnenunits. Koelen en verwarmen met garantie volgens offerte.",
           areaServed: {
             '@type': 'State',
             name: 'Limburg',
@@ -131,7 +131,7 @@ export default function MultiSplitAircoInstallatie() {
             </div>
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
               <Wrench className="h-10 w-10 text-sky-500 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">5 Jaar Garantie</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">garantie volgens offerte</h3>
               <p className="text-base text-gray-600">Onze 5 jaar installatiegarantie geldt voor het complete systeem inclusief alle binnenunits, buitenunit en leidingwerk.</p>
             </div>
           </div>
@@ -292,7 +292,7 @@ export default function MultiSplitAircoInstallatie() {
               <ul className="space-y-2 mt-4">
                 <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> Daikin, Mitsubishi, LG</li>
                 <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> Volledig leidingwerk</li>
-                <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> 5 jaar garantie</li>
+                <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />  garantie volgens offerte</li>
               </ul>
             </div>
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-sky-400 ring-2 ring-sky-400">
@@ -307,7 +307,7 @@ export default function MultiSplitAircoInstallatie() {
               <ul className="space-y-2 mt-4">
                 <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> Daikin, Mitsubishi, LG</li>
                 <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> Volledig leidingwerk</li>
-                <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> 5 jaar garantie</li>
+                <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />  garantie volgens offerte</li>
               </ul>
             </div>
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
@@ -321,7 +321,7 @@ export default function MultiSplitAircoInstallatie() {
               <ul className="space-y-2 mt-4">
                 <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> Maatwerk configuratie</li>
                 <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> Gratis adviesgesprek</li>
-                <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> 5 jaar garantie</li>
+                <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />  garantie volgens offerte</li>
               </ul>
             </div>
           </div>

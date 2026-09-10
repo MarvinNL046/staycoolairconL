@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -193,7 +192,7 @@ export default function AircoOfferteAanvragenChecklist() {
                 <li><strong>Type woning</strong>: rijwoning, 2-onder-1-kap, vrijstaand, appartement, bovenwoning.</li>
                 <li><strong>Plaats binnenunit</strong>: welke wand heb je voor ogen? Foto's meesturen scheelt een bezoek.</li>
                 <li><strong>Plaats buitenunit</strong>: tuin, plat dak, gevel, balkon? Bij VvE: is toestemming geregeld?</li>
-                <li><strong>Huidige verwarming</strong>: gasketel, hybride, stadsverwarming. Relevant voor ISDE-subsidie.</li>
+                <li><strong>Huidige verwarming</strong>: gasketel, hybride, stadsverwarming. Relevant voor uw verwarmingsbehoefte.</li>
                 <li><strong>Gewenste functionaliteit</strong>: alleen koelen, ook verwarmen, of volledige warmtepomp-vervanging?</li>
                 <li><strong>Budget-indicatie</strong>: geef een range. Dit bespaart de installateur tijd en jou irrelevante voorstellen.</li>
               </ul>
@@ -314,7 +313,7 @@ export default function AircoOfferteAanvragenChecklist() {
                 Deze drie moeten in de offerte apart benoemd worden.
               </p>
               <p>
-                <strong>Red flag:</strong> "5 jaar volledige garantie" zonder onderscheid. Dit klinkt goed maar geeft
+                <strong>Red flag:</strong>  "garantie volgens offerte" zonder onderscheid. Dit klinkt goed maar geeft
                 geen dekking als de installateur failliet gaat en je naar de fabrikant moet. Fabrikanten geven
                 namelijk alleen onderdelen-garantie — de reis- en arbeidskosten (€150–€300 per bezoek) moet jij
                 betalen als de installateur er niet meer is.
@@ -495,42 +494,42 @@ export default function AircoOfferteAanvragenChecklist() {
 
               <div className="not-prose space-y-4 my-6">
                 <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r">
-                  <h4 className="font-bold text-red-900 mb-1">"We regelen het wel op locatie"</h4>
+                  <h3 className="font-bold text-red-900 mb-1">"We regelen het wel op locatie"</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Uitgeschreven: "ik schat nu maar wat en als het anders uitpakt wordt jij achteraf verrast met
                     meerwerk". Vraag écht concrete getallen, ook als ze een schatting zijn.
                   </p>
                 </div>
                 <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r">
-                  <h4 className="font-bold text-red-900 mb-1">"Subsidies regelt u zelf met de overheid"</h4>
+                  <h3 className="font-bold text-red-900 mb-1">"Subsidies regelt u zelf met de overheid"</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Kenmerkt een installateur die óf het ISDE-systeem niet kent óf geen zin heeft in de administratie.
                     Serieuze installateurs helpen met meldcode én aanvraagformulier.
                   </p>
                 </div>
                 <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r">
-                  <h4 className="font-bold text-red-900 mb-1">"Die garantie geeft de fabrikant, niet wij"</h4>
+                  <h3 className="font-bold text-red-900 mb-1">"Die garantie geeft de fabrikant, niet wij"</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Dit klopt voor onderdelen, maar installatiegarantie moet de installateur wél geven. Als hij dit
                     wegschuift, accepteert hij geen verantwoordelijkheid voor zijn eigen werk.
                   </p>
                 </div>
                 <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r">
-                  <h4 className="font-bold text-red-900 mb-1">"100% aanbetaling voor de beste prijs"</h4>
+                  <h3 className="font-bold text-red-900 mb-1">"100% aanbetaling voor de beste prijs"</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Een van de duidelijkste signalen van cashflow-problemen. Bedrijven die gezond zijn hebben geen
                     100% aanbetaling nodig om spullen te bestellen. Loop weg.
                   </p>
                 </div>
                 <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r">
-                  <h4 className="font-bold text-red-900 mb-1">"Typenummer heeft toch geen zin, allemaal hetzelfde"</h4>
+                  <h3 className="font-bold text-red-900 mb-1">"Typenummer heeft toch geen zin, allemaal hetzelfde"</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Airco's zijn net zo min "allemaal hetzelfde" als auto's hetzelfde zijn. Een installateur die dit
                     zegt, verkoopt waarschijnlijk incourant voorraad. Vraag specifiek model en modeljaar.
                   </p>
                 </div>
                 <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r">
-                  <h4 className="font-bold text-red-900 mb-1">"Contant betalen is goedkoper"</h4>
+                  <h3 className="font-bold text-red-900 mb-1">"Contant betalen is goedkoper"</h3>
                   <p className="text-sm text-gray-700 m-0">
                     BTW-fraude. Illegaal. Bij gebrek komt er ook geen factuur = geen garantie = geen ISDE-subsidie
                     = geen verzekeringsdekking bij schade. Altijd weigeren.
@@ -581,7 +580,7 @@ Graag in de offerte:
 4. Aparte elektrische groep ja/nee, inclusief kosten
 5. Garantie gesplitst: onderdelen, compressor, installatie (in jaren)
 6. Eerste jaar onderhoud inbegrepen ja/nee + prijs daarna
-7. ISDE-meldcode + verwachte subsidiebedrag
+7. Exacte modelcodes en voorwaarden; geen ISDE-aftrek voor split-airco
 8. Aggregator/platform-fee ja/nee
 9. Opruim- en beschermwerk inbegrepen
 10. BTW-percentage per regel — op airco-installatie hoort 21% te staan (geen verlaagd 9%-tarief)

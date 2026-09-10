@@ -26,8 +26,8 @@ const requiredLinksByFile = {
     'primaryMoneyPageLinks',
   ],
   'src/components/ServicesOptimized.tsx': [
-    '/airco-installatie-limburg',
-    '/airco-onderhoud-limburg',
+    '/airco-kopen-limburg',
+    '/onderhoud',
     '/airco-kopen-en-laten-installeren-limburg',
   ],
   'src/pages/landing/AircoInstallatiePrijs.tsx': [

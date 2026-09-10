@@ -1,6 +1,5 @@
-import React from 'react';
 import ArticleLayout from '../../components/ArticleLayout';
-import { Euro, PiggyBank, Wrench, ThermometerSun, Home, Package, Clock, AlertTriangle, CheckCircle } from 'lucide-react';
+import { Euro,PiggyBank,Wrench,ThermometerSun,Home,Package,Clock,AlertTriangle,CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const WatKostEenAircoPlaatsen = () => {

@@ -1,7 +1,6 @@
 // Chunk loading error handler utility
 // This helps recover from chunk loading failures due to deployment mismatches
 
-import React from 'react';
 
 export class ChunkLoadError extends Error {
   constructor(message: string) {

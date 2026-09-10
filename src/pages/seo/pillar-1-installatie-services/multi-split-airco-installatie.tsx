@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Shield, Euro, Home, Wind, Zap, Phone, Calculator, Award, TrendingUp, Settings } from 'lucide-react';
+import { CheckCircle,Shield,Euro,Home,Zap,Phone,Calculator,TrendingUp,Settings } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
@@ -75,7 +75,7 @@ const MultiSplitAircoInstallatie: React.FC = () => {
     <>
       <MetaTags
         title="Multi-split Airco Installatie Limburg | 2-8 Units op 1 Buitenunit | StayCool"
-        description="Multi-split airco ✓ Meerdere kamers op 1 buitenunit ✓ 30% goedkoper ✓ Individueel regelbaar ✓ 10 jaar garantie. Gratis advies!"
+        description="Multi-split airco ✓ Meerdere kamers op 1 buitenunit ✓ 30% goedkoper ✓ Individueel regelbaar ✓ garantie volgens offerte. Gratis advies!"
       />
 
       <SchemaMarkup
@@ -148,7 +148,7 @@ const MultiSplitAircoInstallatie: React.FC = () => {
                   <div className="flex justify-center mb-4">
                     {usp.icon}
                   </div>
-                  <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                  <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                   <p className="text-gray-600 text-center">{usp.description}</p>
                 </div>
               ))}
@@ -213,7 +213,7 @@ const MultiSplitAircoInstallatie: React.FC = () => {
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-white border-2 border-sky-500 rounded-lg p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Intelligente Vermogensverdeling</h4>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Intelligente Vermogensverdeling</h3>
                   <p className="text-gray-600 mb-4">
                     De buitenunit past continu het vermogen aan op basis van de gecombineerde vraag van alle binnenunits. Voorbeeld situatie:
                   </p>
@@ -237,7 +237,7 @@ const MultiSplitAircoInstallatie: React.FC = () => {
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Individuele Controle per Kamer</h4>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Individuele Controle per Kamer</h3>
                   <p className="text-gray-600 mb-4">
                     Elk binnenunit heeft zijn eigen:
                   </p>
@@ -280,7 +280,7 @@ const MultiSplitAircoInstallatie: React.FC = () => {
               <div className="space-y-6 mb-8">
                 <div className="border border-gray-200 rounded-lg p-6">
                   <div className="flex justify-between items-start mb-4">
-                    <h4 className="text-xl font-semibold text-gray-900">Appartement / Klein Huis (2 units)</h4>
+                    <h3 className="text-xl font-semibold text-gray-900">Appartement / Klein Huis (2 units)</h3>
                     <span className="px-3 py-1 bg-sky-100 text-sky-700 font-semibold rounded">€3.800-5.200</span>
                   </div>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -308,7 +308,7 @@ const MultiSplitAircoInstallatie: React.FC = () => {
 
                 <div className="border-2 border-sky-500 rounded-lg p-6 bg-sky-50">
                   <div className="flex justify-between items-start mb-4">
-                    <h4 className="text-xl font-semibold text-gray-900">Standaard Gezinswoning (4 units)</h4>
+                    <h3 className="text-xl font-semibold text-gray-900">Standaard Gezinswoning (4 units)</h3>
                     <span className="px-3 py-1 bg-sky-600 text-white font-semibold rounded">€6.500-8.500</span>
                   </div>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -339,7 +339,7 @@ const MultiSplitAircoInstallatie: React.FC = () => {
 
                 <div className="border border-gray-200 rounded-lg p-6">
                   <div className="flex justify-between items-start mb-4">
-                    <h4 className="text-xl font-semibold text-gray-900">Grote Woning / Villa (6-8 units)</h4>
+                    <h3 className="text-xl font-semibold text-gray-900">Grote Woning / Villa (6-8 units)</h3>
                     <span className="px-3 py-1 bg-sky-100 text-sky-700 font-semibold rounded">€9.500-12.000</span>
                   </div>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -383,7 +383,7 @@ const MultiSplitAircoInstallatie: React.FC = () => {
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Leidingwerk Specificaties</h4>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Leidingwerk Specificaties</h3>
                   <ul className="space-y-3 text-gray-600">
                     <li>
                       <strong className="text-gray-900">Maximale leidinglengte:</strong><br/>
@@ -407,7 +407,7 @@ const MultiSplitAircoInstallatie: React.FC = () => {
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Capaciteit Regels</h4>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Capaciteit Regels</h3>
                   <ul className="space-y-3 text-gray-600">
                     <li>
                       <strong className="text-gray-900">100-120% regel:</strong><br/>
@@ -440,49 +440,49 @@ const MultiSplitAircoInstallatie: React.FC = () => {
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-10 h-10 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold">1</div>
                   <div>
-                    <h5 className="font-semibold text-gray-900 mb-1">Planning en Ontwerp</h5>
+                    <h3 className="font-semibold text-gray-900 mb-1">Planning en Ontwerp</h3>
                     <p className="text-gray-600">Bepalen optimale positie binnenunits, leidingtraject tekenen, elektrisch schema maken. Planning gericht op kortste leidingen, minimale zichtbaarheid, beste prestaties.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-10 h-10 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold">2</div>
                   <div>
-                    <h5 className="font-semibold text-gray-900 mb-1">Binnenunits Monteren</h5>
+                    <h3 className="font-semibold text-gray-900 mb-1">Binnenunits Monteren</h3>
                     <p className="text-gray-600">Alle binnenunits worden gemonteerd op optimale hoogte (2.2-2.5m) en positie. Muurplaten waterpas, units stevig bevestigd. Condensafvoer voorzien per unit.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-10 h-10 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold">3</div>
                   <div>
-                    <h5 className="font-semibold text-gray-900 mb-1">Buitenunit Plaatsen</h5>
+                    <h3 className="font-semibold text-gray-900 mb-1">Buitenunit Plaatsen</h3>
                     <p className="text-gray-600">Buitenunit op stabiel fundament, vaak groter dan single-split unit. Voldoende vrije ruimte rondom voor luchtcirculatie. Anti-vibratie dempers voor geluidsreductie.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-10 h-10 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold">4</div>
                   <div>
-                    <h5 className="font-semibold text-gray-900 mb-1">Leidingnetwerk Aanleggen</h5>
+                    <h3 className="font-semibold text-gray-900 mb-1">Leidingnetwerk Aanleggen</h3>
                     <p className="text-gray-600">Hoofdleiding naar centrale verdeler, van daaruit aftakkingen naar elke binnenunit. Leidingen geïsoleerd, beschermd in goten of verborgen in spouw/schacht. Professionele lasverbindingen op aftakkingen.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-10 h-10 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold">5</div>
                   <div>
-                    <h5 className="font-semibold text-gray-900 mb-1">Elektrische Aansluiting</h5>
+                    <h3 className="font-semibold text-gray-900 mb-1">Elektrische Aansluiting</h3>
                     <p className="text-gray-600">Dedicated 16A of 20A groep in meterkast (afhankelijk van vermogen). Bekabeling naar buitenunit en communicatiekabels naar alle binnenunits. Alles volgens NEN-normen.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-10 h-10 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold">6</div>
                   <div>
-                    <h5 className="font-semibold text-gray-900 mb-1">Vacuümeren en Vullen</h5>
+                    <h3 className="font-semibold text-gray-900 mb-1">Vacuümeren en Vullen</h3>
                     <p className="text-gray-600">Compleet systeem vacuümeren (min. 1 uur) om vocht en lucht te verwijderen. Lektest op alle verbindingen. Vullen met koudemiddel volgens fabrieksspecificaties (grotere hoeveelheid dan single-split).</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <div className="flex-shrink-0 w-10 h-10 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold">7</div>
                   <div>
-                    <h5 className="font-semibold text-gray-900 mb-1">Inregelen en Testen</h5>
+                    <h3 className="font-semibold text-gray-900 mb-1">Inregelen en Testen</h3>
                     <p className="text-gray-600">Elk binnenunit testen (koelen, verwarmen, ventileren). Luchtstromingen optimaliseren. Temperatuurverschillen tussen units controleren. Uitgebreide instructie bediening per unit en centrale besturing.</p>
                   </div>
                 </div>

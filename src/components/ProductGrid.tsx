@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { formatPrice } from '../utils/installationPricing';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
-import { ChevronRight, Snowflake, Phone } from 'lucide-react';
-import { aircoProducts, AircoProduct } from '../data/aircoProducts';
+import { ChevronRight,Snowflake,Phone } from 'lucide-react';
+import { aircoProducts,AircoProduct } from '../data/aircoProducts';
 import Card from './ui/Card';
 import Button from './ui/Button';
 import { cn } from '../utils/cn';
@@ -174,7 +175,7 @@ export default function ProductGrid({
                     <div className="w-8 h-8 rounded-full bg-gray-400 border-2 border-quatt-dark" />
                   </div>
                   <p className="text-sm font-bold text-gray-400">
-                    Al <span className="text-white">500+</span> tevreden klanten
+                    <span className="text-white">Persoonlijk advies</span> voor uw woning
                   </p>
                 </div>
               </div>
@@ -236,16 +237,16 @@ function ProductCard({ product, index }: { product: AircoProduct; index: number 
           </Link>
 
           {/* Pricing & Specs */}
-          <div className="flex items-end justify-between mb-6 pt-6 border-t border-gray-50 mt-auto">
+          <div className="flex flex-wrap gap-3 items-end justify-between mb-6 pt-6 border-t border-gray-50 mt-auto">
             <div>
-              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Prijs incl. montage</p>
+              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">{product.cashflowPrice ? 'Incl. btw, installatie en materialen' : 'Offerte op maat'}</p>
               <p className="text-lg font-black text-quatt-orange leading-none group-hover:underline decoration-2 underline-offset-4">
-                Vraag offerte aan
+                {product.cashflowPrice && product.price !== undefined ? formatPrice(Math.round(product.price * 100)) : 'Prijs op aanvraag'}
               </p>
             </div>
             <div className="text-right">
-              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">Vermogen</p>
-              <p className="font-bold text-quatt-dark">{product.capacity} kW</p>
+              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">{product.type === 'multi-split' ? 'Opstelling' : 'Vermogen'}</p>
+              <p className="font-bold text-quatt-dark">{product.type === 'multi-split' ? 'Meerdere binnenunits' : `${product.capacity} kW`}</p>
             </div>
           </div>
 

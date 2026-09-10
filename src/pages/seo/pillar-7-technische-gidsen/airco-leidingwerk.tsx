@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Pipette, CheckCircle, Shield, Droplets, Wrench, Award, AlertTriangle, Phone, Mail, ThermometerSnowflake, Zap } from 'lucide-react';
+import { CheckCircle,Shield,Droplets,Wrench,Award,AlertTriangle,Phone,Mail,ThermometerSnowflake } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const AircoLeidingwerk = () => {
   const breadcrumbItems = [
@@ -205,7 +203,7 @@ const AircoLeidingwerk = () => {
     <>
       <MetaTags
         title="Airco Leidingwerk Limburg | Koude-isolatie en Afvoer | StayCool Airco"
-        description="Airco leidingwerk ✓ Professionele koude-isolatie ✓ Lekkagevrije condensafvoer ✓ F-gassen gecertificeerd ✓ Geen vochtschade ✓ 10 jaar garantie!"
+        description="Airco leidingwerk ✓ Professionele koude-isolatie ✓ Lekkagevrije condensafvoer ✓ F-gassen gecertificeerd ✓ Geen vochtschade ✓ garantie volgens offerte!"
       />
 
       <SchemaMarkup
@@ -265,7 +263,7 @@ const AircoLeidingwerk = () => {
             </div>
             <div className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />
-              <span>10 jaar garantie</span>
+              <span>garantie volgens offerte</span>
             </div>
           </div>
         </div>
@@ -280,7 +278,7 @@ const AircoLeidingwerk = () => {
                 <div className="flex justify-center mb-4">
                   {usp.icon}
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}
@@ -505,7 +503,8 @@ const AircoLeidingwerk = () => {
             Professioneel Leidingwerk - Zonder Zorgen
           </h2>
           <p className="text-xl mb-8 text-sky-50">
-            Neem contact op voor vakkundige installatie met 10 jaar garantie op materiaal en arbeid
+
+            Neem contact op voor vakkundige installatie met garantie volgens offerte op materiaal en arbeid
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

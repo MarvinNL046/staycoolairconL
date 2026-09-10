@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -323,7 +322,7 @@ export default function MultisplitAircoOfferteWanneerRendabel() {
 
               <div className="not-prose grid md:grid-cols-2 gap-4 my-6">
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 p-5 rounded-lg">
-                  <h4 className="font-bold text-blue-900 mb-2">Voorbeeld A: 2-kamer appartement Maastricht</h4>
+                  <h3 className="font-bold text-blue-900 mb-2">Voorbeeld A: 2-kamer appartement Maastricht</h3>
                   <p className="text-sm text-gray-700 mb-2">
                     Woonkamer (3,5 kW) + slaapkamer (2,5 kW). Bewoner werkt overdag thuis, slaapkamer-airco
                     wordt alleen 's zomers 's nachts gebruikt.
@@ -338,7 +337,7 @@ export default function MultisplitAircoOfferteWanneerRendabel() {
                   </p>
                 </div>
                 <div className="bg-gradient-to-br from-amber-50 to-amber-100 border border-amber-200 p-5 rounded-lg">
-                  <h4 className="font-bold text-amber-900 mb-2">Voorbeeld B: 4-slaapkamer villa Valkenburg</h4>
+                  <h3 className="font-bold text-amber-900 mb-2">Voorbeeld B: 4-slaapkamer villa Valkenburg</h3>
                   <p className="text-sm text-gray-700 mb-2">
                     Ouderslaapkamer, 2 kinderkamers, studeerkamer. Allemaal 2,5 kW. Gevel beschermd dorpsgezicht:
                     max 1 buitenunit toegestaan.

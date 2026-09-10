@@ -1,5 +1,5 @@
 // Font loading utility with error handling
-export function loadFonts() {
+export async function loadFonts() {
   if (typeof document === 'undefined') return;
 
   // Check if fonts are already loaded
@@ -65,8 +65,8 @@ export function optimizeFontDisplay() {
       for (let j = 0; j < rules.length; j++) {
         const rule = rules[j];
         if (rule instanceof CSSFontFaceRule) {
-          if (!rule.style.fontDisplay) {
-            rule.style.fontDisplay = 'swap';
+          if (!rule.style.getPropertyValue('font-display')) {
+            rule.style.setProperty('font-display', 'swap');
           }
         }
       }
@@ -79,6 +79,7 @@ export function optimizeFontDisplay() {
 
 // Initialize font optimization
 export function initFontOptimization() {
+  if (typeof document === 'undefined') return;
   // Optimize font display immediately
   optimizeFontDisplay();
 

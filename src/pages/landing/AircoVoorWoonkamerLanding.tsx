@@ -1,49 +1,23 @@
-import React, { useState } from 'react';
+import React,{ useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Sofa,
-  Users,
-  Tv,
-  Wind,
-  Thermometer,
-  Shield,
-  Phone,
-  CheckCircle,
-  AlertCircle,
-  Calendar,
-  Award,
-  Zap,
-  Home,
-  Settings,
-  FileText,
-  HelpCircle,
-  ArrowRight,
-  Star,
-  ChevronRight,
-  Euro,
-  Clock,
-  Heart,
-  Volume2,
-  Wifi,
-  Timer,
-  Package,
-  Ruler,
-  Check,
-  X,
-  Sun,
-  CloudSnow,
-  Droplets,
-  CircleOff,
-  Leaf,
-  Eye,
-  Gauge,
-  TrendingUp,
-  Lightbulb,
-  Maximize2,
-  Info,
-  BarChart3,
-  Palette
+import {
+Sofa,
+Users,Phone,
+CheckCircle,Calendar,
+Award,Home,FileText,
+HelpCircle,Star,
+ChevronRight,
+Euro,Volume2,
+Wifi,Package,Check,
+X,
+Sun,
+CloudSnow,
+Droplets,Eye,
+Gauge,
+TrendingUp,
+Lightbulb,
+Maximize2,
+Info,Palette
 } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import FAQSchema from '../../components/SEO/FAQSchema';
@@ -52,7 +26,7 @@ import ContactForm from '../../components/Contact';
 import LazyImage from '../../components/LazyImage';
 
 const AircoVoorWoonkamerLanding: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('comfort');
+
   const [showAllFAQ, setShowAllFAQ] = useState(false);
   const [activeFAQ, setActiveFAQ] = useState<number | null>(null);
   const [selectedRoomSize, setSelectedRoomSize] = useState('25-35');
@@ -84,7 +58,7 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
       icon: Gauge,
       title: 'Krachtig & Efficiënt',
       description: 'Grote ruimtes snel op temperatuur',
-      benefit: 'Tot 40% energiebesparing'
+      benefit: "situatieafhankelijke besparing"
     }
   ];
 
@@ -215,32 +189,7 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
     savings: { vs_gas: 350, vs_electric: 600 }
   };
 
-  const reviews = [
-    {
-      name: 'Familie Janssen',
-      location: 'Venlo',
-      rating: 5,
-      text: 'Perfecte temperatuur in onze grote woonkamer. Design past mooi bij interieur!',
-      product: 'Daikin Emura',
-      benefit: 'Stijlvol & effectief'
-    },
-    {
-      name: 'Robert van Dam',
-      location: 'Maastricht',
-      rating: 5,
-      text: 'Eindelijk geen ruzie meer over de temperatuur. Iedereen tevreden!',
-      product: 'Mitsubishi Zen',
-      benefit: 'Gezinsharmonie'
-    },
-    {
-      name: 'Lisa Hendricks',
-      location: 'Roermond',
-      rating: 5,
-      text: 'Zo stil dat je vergeet dat hij aanstaat. En wat een besparing op gas!',
-      product: 'LG ARTCOOL',
-      benefit: '€400/jaar bespaard'
-    }
-  ];
+
 
   const faqItems = [
     {
@@ -349,10 +298,10 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
                 Airco voor de Woonkamer
               </h1>
               <p className="text-xl mb-8 leading-relaxed opacity-90">
-                Het hart van uw huis verdient perfect klimaatcomfort. 
+                Het hart van uw huis verdient perfect klimaatcomfort.
                 Ontdek design airco's die naadloos passen bij uw interieur.
               </p>
-              
+
               {/* Key Stats */}
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
@@ -388,7 +337,7 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
                 </a>
               </div>
             </div>
-            
+
             <div className="relative">
               <LazyImage
                 src="/images/onze_monteurs/O1V_9671.jpg"
@@ -511,7 +460,7 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
                         </a>
                       </div>
                     </div>
-                    
+
                     <div className="flex gap-4 mb-4 text-sm">
                       <div className="bg-gray-100 px-3 py-1 rounded-full">
                         <Gauge className="w-4 h-4 inline mr-1" />
@@ -812,7 +761,7 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
                   </span>
                 </div>
               </div>
-              
+
               <div className="mt-6 bg-green-50 rounded-lg p-4">
                 <p className="text-sm text-green-800">
                   <Info className="w-4 h-4 inline mr-1" />
@@ -834,7 +783,7 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
                     <span className="font-medium">€{costAnalysis.yearly.heating}</span>
                   </div>
                 </div>
-                
+
                 <div className="border-t pt-4">
                   <p className="text-sm text-gray-600 mb-3">Besparing t.o.v. traditioneel:</p>
                   <div className="space-y-2">
@@ -917,9 +866,8 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
               </div>
             </div>
 
-            <ContactForm 
-              source="Airco voor Woonkamer Landing"
-              showPrivacyPolicy={true}
+            <ContactForm
+              inquiryContext="Airco voor Woonkamer Landing"
             />
           </div>
         </div>
@@ -939,30 +887,7 @@ const AircoVoorWoonkamerLanding: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((review, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-1">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
-                  <span className="text-sm text-gray-500">{review.product}</span>
-                </div>
-                <p className="text-gray-700 mb-4 italic">"{review.text}"</p>
-                <div className="pt-4 border-t">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-semibold">{review.name}</p>
-                      <p className="text-sm text-gray-500">{review.location}</p>
-                    </div>
-                    <div className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">
-                      {review.benefit}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+            <a className="text-blue-700 underline" href="https://www.google.com/search?q=staycool+airco" target="_blank" rel="noopener noreferrer">Bekijk actuele klantervaringen op Google</a>
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Shield, Euro, Building2, Wind, Zap, Phone, Calculator, Award, Users, Settings } from 'lucide-react';
+import { CheckCircle,Shield,Euro,Building2,Phone,Calculator,Settings } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
@@ -39,7 +39,7 @@ const AircoInstallatieBedrijfspand: React.FC = () => {
   const faqs = [
     {
       question: "Wat is het verschil tussen een reguliere airco en VRV/VRF systeem?",
-      answer: "VRV (Variable Refrigerant Volume) of VRF (Variable Refrigerant Flow) systemen zijn commerciële klimaatsystemen ontworpen voor grote gebouwen. Het verschil: reguliere split-units hebben max 8 binnenunits per buitenunit, VRV/VRF kan 50+ units aansturen. VRV past het koudemiddel continu aan per zone, is veel energiezuiniger (40-50% besparing), heeft warmteterugwinning (simultaan koelen en verwarmen mogelijk), en centrale besturing. Kosten: €15.000-80.000 afhankelijk van gebouwgrootte. Geschikt voor kantoorpanden, winkels, hotels, zorgcentra vanaf 200m²."
+      answer: "VRV (Variable Refrigerant Volume) of VRF (Variable Refrigerant Flow) systemen zijn commerciële klimaatsystemen ontworpen voor grote gebouwen. Het verschil: reguliere split-units hebben max 8 binnenunits per buitenunit, VRV/VRF kan 50+ units aansturen. VRV past het koudemiddel continu aan per zone, is veel energiezuiniger (situatieafhankelijke besparing), heeft warmteterugwinning (simultaan koelen en verwarmen mogelijk), en centrale besturing. Kosten: €15.000-80.000 afhankelijk van gebouwgrootte. Geschikt voor kantoorpanden, winkels, hotels, zorgcentra vanaf 200m²."
     },
     {
       question: "Hoeveel kost een airco installatie voor een bedrijfspand?",
@@ -67,7 +67,7 @@ const AircoInstallatieBedrijfspand: React.FC = () => {
     },
     {
       question: "Welke merken zijn geschikt voor bedrijfspanden?",
-      answer: "Voor commerciële toepassingen adviseren wij premium A-merken met bewezen betrouwbaarheid. Daikin VRV: marktleider, meest uitgebreid gamma, uitstekende service netwerk, vanaf €18.000. Mitsubishi Electric City Multi: zeer betrouwbaar, geschikt voor extreme omstandigheden, vanaf €16.000. LG Multi V: goede prijs-kwaliteit, snelle installatie, vanaf €14.000. Samsung DVM: innovatief, goede app-bediening, vanaf €15.000. Alle merken 3-5 jaar garantie, 10 jaar op compressor. Wij adviseren op basis van specifieke eisen (gebouwtype, budget, gewenste functies)."
+      answer: "Voor commerciële toepassingen adviseren wij premium A-merken met bewezen betrouwbaarheid. Daikin VRV: marktleider, meest uitgebreid gamma, uitstekende service netwerk, vanaf €18.000. Mitsubishi Electric City Multi: zeer betrouwbaar, geschikt voor extreme omstandigheden, vanaf €16.000. LG Multi V: goede prijs-kwaliteit, snelle installatie, vanaf €14.000. Samsung DVM: innovatief, goede app-bediening, vanaf €15.000. Alle merken garantie volgens offerte, 10 jaar op compressor. Wij adviseren op basis van specifieke eisen (gebouwtype, budget, gewenste functies)."
     }
   ];
 
@@ -111,7 +111,8 @@ const AircoInstallatieBedrijfspand: React.FC = () => {
               Airco Installatie Bedrijfspand - VRV/VRF Commerciële Systemen
             </h1>
             <p className="text-xl md:text-2xl text-sky-50 mb-8 max-w-3xl">
-              Professionele klimaatbeheersing voor bedrijfspanden tot 2000m². VRV/VRF systemen met warmteterugwinning, 40% energiebesparing en 24/7 service. All-in contracten vanaf €8.000.
+
+              Professionele klimaatbeheersing voor bedrijfspanden tot 2000m². VRV/VRF systemen met warmteterugwinning, situatieafhankelijke besparing en 24/7 service. All-in contracten vanaf €8.000.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link to="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors">
@@ -148,7 +149,7 @@ const AircoInstallatieBedrijfspand: React.FC = () => {
                   <div className="flex justify-center mb-4">
                     {usp.icon}
                   </div>
-                  <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                  <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                   <p className="text-gray-600 text-center">{usp.description}</p>
                 </div>
               ))}
@@ -200,7 +201,7 @@ const AircoInstallatieBedrijfspand: React.FC = () => {
                     <ul className="space-y-2 text-gray-600">
                       <li className="flex items-start">
                         <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                        <span>40-50% energiebesparing vs. traditioneel</span>
+                        <span>situatieafhankelijke besparing vs. traditioneel</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -233,7 +234,7 @@ const AircoInstallatieBedrijfspand: React.FC = () => {
 
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 <div className="border border-gray-200 rounded-lg p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Klein Bedrijfspand</h4>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Klein Bedrijfspand</h3>
                   <p className="text-gray-600 mb-3">100-200m² (winkel, klein kantoor)</p>
                   <ul className="space-y-2 text-gray-600 text-sm">
                     <li>• Capaciteit: 15-25 kW totaal</li>
@@ -244,7 +245,7 @@ const AircoInstallatieBedrijfspand: React.FC = () => {
                   </ul>
                 </div>
                 <div className="border border-gray-200 rounded-lg p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Middelgroot Pand</h4>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Middelgroot Pand</h3>
                   <p className="text-gray-600 mb-3">200-500m² (kantoor, showroom)</p>
                   <ul className="space-y-2 text-gray-600 text-sm">
                     <li>• Capaciteit: 25-60 kW totaal</li>
@@ -255,7 +256,7 @@ const AircoInstallatieBedrijfspand: React.FC = () => {
                   </ul>
                 </div>
                 <div className="border border-gray-200 rounded-lg p-6 bg-sky-50">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Groot Pand</h4>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Groot Pand</h3>
                   <p className="text-gray-600 mb-3">500-2000m² (fabriek, hotel)</p>
                   <ul className="space-y-2 text-gray-600 text-sm">
                     <li>• Capaciteit: 60-200+ kW</li>
@@ -276,10 +277,10 @@ const AircoInstallatieBedrijfspand: React.FC = () => {
               </p>
 
               <div className="border-2 border-sky-500 rounded-lg p-6 mb-8 bg-sky-50">
-                <h4 className="text-2xl font-semibold text-gray-900 mb-4">Enterprise Onderhoudscontract</h4>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">Enterprise Onderhoudscontract</h3>
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <h5 className="font-semibold text-gray-900 mb-3">Preventief Onderhoud</h5>
+                    <h4 className="font-semibold text-gray-900 mb-3">Preventief Onderhoud</h4>
                     <ul className="space-y-2 text-gray-600">
                       <li className="flex items-start">
                         <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -300,7 +301,7 @@ const AircoInstallatieBedrijfspand: React.FC = () => {
                     </ul>
                   </div>
                   <div>
-                    <h5 className="font-semibold text-gray-900 mb-3">Storingsdienst SLA</h5>
+                    <h4 className="font-semibold text-gray-900 mb-3">Storingsdienst SLA</h4>
                     <ul className="space-y-2 text-gray-600">
                       <li className="flex items-start">
                         <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -322,7 +323,8 @@ const AircoInstallatieBedrijfspand: React.FC = () => {
                   </div>
                 </div>
                 <p className="text-gray-700 font-semibold">
-                  Prijs: vanaf €1.200/jaar voor systemen tot 50kW, schaalbaar per capaciteit. ROI: gemiddeld 15% besparing door preventief onderhoud vs. reactief.
+
+                  Prijs: vanaf €1.200/jaar voor systemen tot 50kW, schaalbaar per capaciteit. ROI: gemiddeld situatieafhankelijke besparing door preventief onderhoud vs. reactief.
                 </p>
               </div>
             </div>

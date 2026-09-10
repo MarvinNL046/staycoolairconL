@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, CheckCircle, AlertTriangle, Shield, Wind, ThermometerSun, Volume2, Award, Phone, Mail, Wrench } from 'lucide-react';
+import { MapPin,CheckCircle,AlertTriangle,Shield,Wind,ThermometerSun,Volume2,Award,Phone,Mail,Wrench } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const AircoBuitenunitPlaatsing = () => {
   const breadcrumbItems = [
@@ -33,7 +31,7 @@ const AircoBuitenunitPlaatsing = () => {
     {
       icon: <Wrench className="h-12 w-12 text-sky-500" />,
       title: "Deskundige Installatie",
-      description: "Vakkundige montage met 10 jaar garantie op premium merken"
+      description: "Vakkundige montage met garantie volgens offerte op premium merken"
     }
   ];
 
@@ -245,7 +243,7 @@ const AircoBuitenunitPlaatsing = () => {
             </div>
             <div className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />
-              <span>10 jaar garantie</span>
+              <span>garantie volgens offerte</span>
             </div>
             <div className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />
@@ -264,7 +262,7 @@ const AircoBuitenunitPlaatsing = () => {
                 <div className="flex justify-center mb-4">
                   {usp.icon}
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}

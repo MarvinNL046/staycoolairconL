@@ -1,26 +1,24 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
-  Home,
-  Wrench,
-  Shield,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Star,
-  ThermometerSun,
-  Zap,
-  MapPin,
-  ChevronRight,
-  Award,
-  Euro,
-  Droplets,
-  TrendingUp,
-  HelpCircle,
-  FileText,
-  Users
+Home,
+Wrench,
+Shield,
+Clock,
+CheckCircle,
+ArrowRight,
+Phone,
+Star,
+ThermometerSun,
+Zap,
+MapPin,
+ChevronRight,
+Award,
+Euro,
+Droplets,
+TrendingUp,FileText,
+Users
 } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import FAQSchema from '../../components/SEO/FAQSchema';
@@ -86,7 +84,7 @@ export default function AircoLatenPlaatsenLanding() {
         <title>Airco Laten Plaatsen? Vanaf €1.600 | Gratis Offerte</title>
         <meta
           name="description"
-          content="Airco laten plaatsen door F-gassen gecertificeerde monteurs. Incl. materiaal en montage vanaf €1.600. 5 jaar garantie. Binnen 5 werkdagen geïnstalleerd!"
+          content="Airco laten plaatsen door F-gassen gecertificeerde monteurs. Incl. materiaal en montage vanaf €1.600. garantie volgens offerte. Binnen 5 werkdagen geïnstalleerd!"
         />
         <link rel="canonical" href="https://staycoolairco.nl/airco-laten-plaatsen" />
         <meta name="robots" content="index, follow" />
@@ -130,7 +128,7 @@ export default function AircoLatenPlaatsenLanding() {
               'addressCountry': 'NL'
             }
           },
-          'description': 'Professionele airco installatie door F-gassen gecertificeerde monteurs in Limburg. Inclusief materialen, montage en 5 jaar garantie.',
+          'description': "Professionele airco installatie door F-gassen gecertificeerde monteurs in Limburg. Inclusief materialen, montage en garantie volgens offerte.",
           'areaServed': {
             '@type': 'State',
             'name': 'Limburg'
@@ -142,11 +140,7 @@ export default function AircoLatenPlaatsenLanding() {
             'highPrice': '5550',
             'offerCount': '6'
           },
-          'aggregateRating': {
-            '@type': 'AggregateRating',
-            'ratingValue': '4.9',
-            'reviewCount': '127'
-          }
+
         }}
       />
 
@@ -175,7 +169,8 @@ export default function AircoLatenPlaatsenLanding() {
               </span>
               <span className="flex items-center gap-2">
                 <Award className="h-5 w-5 text-blue-200" />
-                5 Jaar Garantie
+
+                garantie volgens offerte
               </span>
               <span className="flex items-center gap-2">
                 <Euro className="h-5 w-5 text-blue-200" />

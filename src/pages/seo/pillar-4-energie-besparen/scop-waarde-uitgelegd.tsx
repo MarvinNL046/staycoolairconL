@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Zap, TrendingUp, ThermometerSun, Award, Phone, Calculator, Info } from 'lucide-react';
+import { CheckCircle,Zap,TrendingUp,ThermometerSun,Award,Phone,Calculator,Info } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
@@ -158,7 +158,7 @@ const SCOPWaardeUitgelegd: React.FC = () => {
                 <div className="flex justify-center mb-4">
                   {usp.icon}
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}
@@ -430,10 +430,10 @@ const SCOPWaardeUitgelegd: React.FC = () => {
               </div>
 
               <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">
-                <h4 className="font-bold text-gray-900 mb-3 flex items-center">
+                <h3 className="font-bold text-gray-900 mb-3 flex items-center">
                   <Award className="h-6 w-6 mr-2 text-blue-600" />
                   Onze Aanbeveling
-                </h4>
+                </h3>
                 <p className="text-gray-700">
                   Voor optimale besparing en duurzaamheid raden wij minimaal <strong>energielabel A+</strong> aan (SCOP ≥4,0).
                   Voor nieuwe installaties adviseren wij <strong>A++ of A+++</strong> (SCOP ≥4,6). Het verschil in aanschafprijs
@@ -558,7 +558,7 @@ const SCOPWaardeUitgelegd: React.FC = () => {
                 <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-red-500">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h4 className="font-bold text-xl text-gray-900">Daikin Emura FTXJ-MS</h4>
+                      <h3 className="font-bold text-xl text-gray-900">Daikin Emura FTXJ-MS</h3>
                       <p className="text-gray-600">Premium design model</p>
                     </div>
                     <div className="bg-green-600 text-white px-4 py-2 rounded-lg font-bold text-lg">
@@ -577,7 +577,7 @@ const SCOPWaardeUitgelegd: React.FC = () => {
                 <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-orange-500">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h4 className="font-bold text-xl text-gray-900">Mitsubishi Heavy SRK-ZS Diamond</h4>
+                      <h3 className="font-bold text-xl text-gray-900">Mitsubishi Heavy SRK-ZS Diamond</h3>
                       <p className="text-gray-600">Ultra stille topklasse</p>
                     </div>
                     <div className="bg-green-600 text-white px-4 py-2 rounded-lg font-bold text-lg">
@@ -596,7 +596,7 @@ const SCOPWaardeUitgelegd: React.FC = () => {
                 <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-purple-500">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h4 className="font-bold text-xl text-gray-900">LG Artcool Mirror AC12BQ</h4>
+                      <h3 className="font-bold text-xl text-gray-900">LG Artcool Mirror AC12BQ</h3>
                       <p className="text-gray-600">Design icoon met spiegelfront</p>
                     </div>
                     <div className="bg-green-600 text-white px-4 py-2 rounded-lg font-bold text-lg">
@@ -615,7 +615,7 @@ const SCOPWaardeUitgelegd: React.FC = () => {
                 <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-blue-500">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h4 className="font-bold text-xl text-gray-900">Daikin Perfera FTXM-R</h4>
+                      <h3 className="font-bold text-xl text-gray-900">Daikin Perfera FTXM-R</h3>
                       <p className="text-gray-600">Beste prijs-prestatie A+++</p>
                     </div>
                     <div className="bg-green-600 text-white px-4 py-2 rounded-lg font-bold text-lg">
@@ -643,10 +643,10 @@ const SCOPWaardeUitgelegd: React.FC = () => {
 
               <div className="space-y-6 my-8">
                 <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
-                  <h4 className="font-bold text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-bold text-gray-900 mb-3 flex items-center">
                     <CheckCircle className="h-6 w-6 mr-2 text-green-500" />
                     1. Correcte Capaciteitskeuze
-                  </h4>
+                  </h3>
                   <p className="text-gray-700">
                     Een te kleine airco moet constant op vol vermogen draaien, wat de efficiency verlaagt. Een te grote airco
                     schakelt vaak aan en uit, wat ook efficiëntieverlies geeft. Laat een professional de juiste capaciteit
@@ -655,10 +655,10 @@ const SCOPWaardeUitgelegd: React.FC = () => {
                 </div>
 
                 <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-500">
-                  <h4 className="font-bold text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-bold text-gray-900 mb-3 flex items-center">
                     <CheckCircle className="h-6 w-6 mr-2 text-blue-500" />
                     2. Optimale Plaatsing Buitenunit
-                  </h4>
+                  </h3>
                   <p className="text-gray-700">
                     Plaats de buitenunit op een locatie met goede luchtstroom, uit directe wind of zon. Zorg voor minimaal
                     30 cm vrije ruimte rondom voor luchtcirculatie. Vermijd plaatsing in een hoek of kast waar lucht niet
@@ -667,10 +667,10 @@ const SCOPWaardeUitgelegd: React.FC = () => {
                 </div>
 
                 <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-orange-500">
-                  <h4 className="font-bold text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-bold text-gray-900 mb-3 flex items-center">
                     <CheckCircle className="h-6 w-6 mr-2 text-orange-500" />
                     3. Regelmatig Onderhoud
-                  </h4>
+                  </h3>
                   <p className="text-gray-700">
                     Reinig filters elke 2-3 maanden en laat jaarlijks professioneel onderhoud uitvoeren. Vervuilde filters
                     en warmtewisselaars verlagen de efficiency met 10-20%. Een goed onderhouden systeem haalt gemakkelijk
@@ -679,10 +679,10 @@ const SCOPWaardeUitgelegd: React.FC = () => {
                 </div>
 
                 <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-purple-500">
-                  <h4 className="font-bold text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-bold text-gray-900 mb-3 flex items-center">
                     <CheckCircle className="h-6 w-6 mr-2 text-purple-500" />
                     4. Juiste Temperatuurinstelling
-                  </h4>
+                  </h3>
                   <p className="text-gray-700">
                     Stel de gewenste temperatuur niet te hoog in. Elk graadje extra kost circa 5-7% meer energie. Voor
                     optimale efficiency en comfort: 20-21°C overdag, 18-19°C 's nachts. Gebruik de slaapstand of timer-
@@ -691,10 +691,10 @@ const SCOPWaardeUitgelegd: React.FC = () => {
                 </div>
 
                 <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-red-500">
-                  <h4 className="font-bold text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-bold text-gray-900 mb-3 flex items-center">
                     <CheckCircle className="h-6 w-6 mr-2 text-red-500" />
                     5. Goede Woningisolatie
-                  </h4>
+                  </h3>
                   <p className="text-gray-700">
                     Hoe beter uw woning geïsoleerd is, hoe minder capaciteit uw airco nodig heeft en hoe efficiënter deze
                     kan werken. Investeer eerst in basismaatregelen: dubbel glas, dakisolatie, spouwmuurisolatie. Een goed
@@ -762,8 +762,9 @@ const SCOPWaardeUitgelegd: React.FC = () => {
             Klaar voor een Warmtepomp met Topefficiency?
           </h2>
           <p className="text-xl mb-8 text-blue-50">
+
             Ontdek onze selectie A+++ warmtepompen met SCOP 5,0+. Maximale besparing, minimale kosten.
-            F-gassen gecertificeerd, 10 jaar garantie.
+            F-gassen gecertificeerd, garantie volgens offerte.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link

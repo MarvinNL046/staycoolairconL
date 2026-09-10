@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import { productBrandSlug } from '../utils/productBrands';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Home, Phone } from 'lucide-react';
+import { Search,Home,Phone } from 'lucide-react';
 import MetaTags from '../components/MetaTags';
 import { productData } from '../data/products';
 import { serviceAreasData } from '../data/service-areas';
@@ -26,7 +27,7 @@ export default function NotFound() {
         results.push({
           type: 'brand',
           name: brand.name,
-          link: `/products/${brand.slug}`,
+          link: `/products/${productBrandSlug(brand.name)}`,
           description: `Bekijk alle ${brand.name} airco's`
         });
       }
@@ -37,7 +38,7 @@ export default function NotFound() {
           results.push({
             type: 'product',
             name: `${brand.name} ${model.name}`,
-            link: `/products/${brand.slug}/${model.slug}`,
+            link: `/products/${productBrandSlug(brand.name)}/${model.slug}`,
             description: model.description.substring(0, 100) + '...'
           });
         }
@@ -45,7 +46,7 @@ export default function NotFound() {
     });
 
     // Search service areas
-    serviceAreasData.serviceAreas.forEach(area => {
+    serviceAreasData.forEach(area => {
       if (area.city.toLowerCase().includes(lowerQuery)) {
         results.push({
           type: 'location',
@@ -84,7 +85,7 @@ export default function NotFound() {
         title="Pagina niet gevonden - 404 | StayCool Airco"
         description="De pagina die u zoekt bestaat niet. Zoek naar onze producten of neem contact met ons op."
         canonicalUrl="https://staycoolairco.nl/404"
-        noindex={true}
+        noIndex={true}
       />
 
       <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">

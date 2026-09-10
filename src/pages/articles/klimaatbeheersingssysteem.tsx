@@ -1,8 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { m } from 'framer-motion';
-import { ThermometerSun, Settings, Zap, Phone, Mail, MapPin } from 'lucide-react';
+import { ThermometerSun,Settings,Zap,Phone,Mail,MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Klimaatbeheersingssysteem() {

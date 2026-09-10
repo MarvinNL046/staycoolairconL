@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Clock, Phone, CheckCircle, Wrench, FileText, AlertCircle, ThermometerSun, Droplets, Zap, Filter, Search } from 'lucide-react';
+import { Shield,Clock,Phone,CheckCircle,Wrench,FileText,AlertCircle,ThermometerSun,Droplets,Zap,Search } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
 import HowToSchema from '../../../../components/SEO/HowToSchema';
@@ -433,7 +432,7 @@ const AircoServiceWatVerwachtenPage = () => {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 mr-2 flex-shrink-0 mt-0.5" />
-                  <span>24/7 storingsdienst beschikbaar</span>
+                  <span>Voorrang bij storingen met een onderhoudscontract</span>
                 </li>
               </ul>
             </div>

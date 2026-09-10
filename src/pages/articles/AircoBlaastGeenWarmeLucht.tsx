@@ -1,6 +1,5 @@
-import React from 'react';
 import ArticleLayout from '../../components/ArticleLayout';
-import { ThermometerSun, AlertTriangle, CheckCircle, Wrench, Settings, Battery, Snowflake, HelpCircle } from 'lucide-react';
+import { ThermometerSun,AlertTriangle,CheckCircle,Wrench,Settings,Battery,Snowflake,HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AircoBlaastGeenWarmeLucht = () => {

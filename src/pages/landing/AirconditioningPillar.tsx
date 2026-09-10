@@ -1,29 +1,27 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
-  Phone,
-  CheckCircle,
-  Shield,
-  Award,
-  ChevronDown,
-  ArrowRight,
-  Zap,
-  Euro,
-  ThermometerSun,
-  Wind,
-  Leaf,
-  Clock,
-  Wrench,
-  Star,
-  BadgeCheck,
-  Home,
-  Building2,
-  Smartphone,
-  Snowflake,
-  Sun,
-  Heart,
-  Volume2
+Phone,
+CheckCircle,
+Shield,
+Award,
+ChevronDown,
+ArrowRight,
+Zap,
+Euro,Wind,
+Leaf,
+Clock,
+Wrench,
+Star,
+BadgeCheck,
+Home,
+Building2,
+Smartphone,
+Snowflake,
+Sun,
+Heart,
+Volume2
 } from 'lucide-react';
 import { m } from 'framer-motion';
 import SchemaMarkup from '../../components/SchemaMarkup';
@@ -70,7 +68,7 @@ export default function AirconditioningPillar() {
         <title>Airconditioning: Complete Gids Kopen & Installeren [2026]</title>
         <meta
           name="description"
-          content="Alles over airconditioning: typen, kosten, installatie en onderhoud. Gecertificeerde installatie in Limburg met 5 jaar garantie. Vraag gratis offerte aan."
+          content="Alles over airconditioning: typen, kosten, installatie en onderhoud. Gecertificeerde installatie in Limburg met garantie volgens offerte. Vraag gratis offerte aan."
         />
         <link rel="canonical" href="https://staycoolairco.nl/airconditioning" />
         <meta name="robots" content="index, follow" />
@@ -159,7 +157,8 @@ export default function AirconditioningPillar() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              De complete gids over airconditioning in 2026. Ontdek welk type het beste bij uw situatie past, wat het kost, hoe de installatie werkt en waarom een professioneel geïnstalleerde airco de slimste investering is voor comfort in huis. Al meer dan 1.000 tevreden klanten in Limburg.
+
+              De complete gids over airconditioning in 2026. Ontdek welk type het beste bij uw situatie past, wat het kost, hoe de installatie werkt en waarom een professioneel geïnstalleerde airco de slimste investering is voor comfort in huis. Al klanten in ons werkgebied in Limburg.
             </m.p>
             <m.div
               className="flex flex-col sm:flex-row gap-4"
@@ -490,7 +489,7 @@ export default function AirconditioningPillar() {
                 step: 6,
                 icon: BadgeCheck,
                 title: 'Uitleg & Garantie',
-                description: 'U krijgt uitgebreide uitleg over de bediening, WiFi-koppeling en onderhoudstips. Uw 5 jaar garantie gaat direct in. Wij staan altijd voor u klaar.'
+                description: "U krijgt uitgebreide uitleg over de bediening, WiFi-koppeling en onderhoudstips. Uw garantie volgens offerte gaat direct in. Wij staan altijd voor u klaar."
               }
             ].map((item, index) => (
               <m.div
@@ -533,7 +532,8 @@ export default function AirconditioningPillar() {
               Waarom StayCool Airco voor Uw Airconditioning?
             </h2>
             <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-              Al sinds 2019 de vertrouwde airconditioning specialist in Limburg. Met meer dan 1.000 installaties, gecertificeerde monteurs en 5 jaar garantie bent u bij ons in goede handen.
+
+              Al in Limburg de vertrouwde airconditioning specialist in Limburg. Met ervaring met installaties, gecertificeerde monteurs en garantie volgens offerte bent u bij ons in goede handen.
             </p>
           </m.div>
 
@@ -557,9 +557,9 @@ export default function AirconditioningPillar() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: '1.000+', label: 'Installaties' },
-                  { value: 'Sinds 2019', label: 'Actief in Limburg' },
-                  { value: '4.8/5', label: 'Klantbeoordeling' },
+                  { value: 'Op maat', label: 'Installaties' },
+                  { value: 'Limburg', label: 'Werkgebied' },
+                  { value: 'Persoonlijk', label: 'Advies' },
                   { value: '15+ jaar', label: 'Vakervaring' }
                 ].map((stat, index) => (
                   <div key={index} className="bg-white rounded-xl p-4 text-center shadow-md">
@@ -595,7 +595,7 @@ export default function AirconditioningPillar() {
               <Shield className="h-10 w-10 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">5 Jaar Installatiegarantie</h3>
               <p className="text-base text-gray-600">
-                Op elke installatie geven wij <strong>5 jaar volledige garantie</strong>. Dit dekt zowel het installatiewerk als de gebruikte materialen. Daarbovenop geldt de fabrieksgarantie van het gekozen merk (2 tot 10 jaar op de compressor).
+                Op elke installatie geven wij <strong>garantie volgens offerte</strong>. Dit dekt zowel het installatiewerk als de gebruikte materialen. Daarbovenop geldt de fabrieksgarantie van het gekozen merk (2 tot 10 jaar op de compressor).
               </p>
             </m.div>
             <m.div
@@ -656,7 +656,7 @@ export default function AirconditioningPillar() {
             <div className="flex items-center gap-4 bg-green-50 rounded-xl p-4 border border-green-100">
               <Shield className="h-8 w-8 text-blue-600 flex-shrink-0" />
               <div>
-                <p className="font-bold text-gray-900">5 Jaar Garantie</p>
+                <p className="font-bold text-gray-900">garantie volgens offerte</p>
                 <p className="text-sm text-gray-600">Op installatie & materialen</p>
               </div>
             </div>

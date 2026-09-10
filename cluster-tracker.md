@@ -359,3 +359,37 @@ Project-wide infra-issues die niet in een content-cluster passen maar wel SEO/ar
   - Pattern (al toegepast op `/kennisbank/airco-plaatsen-limburg` → `/airco-plaatsen-limburg`): voeg redirect toe aan `vercel.json` voor edge-niveau 301; behoud bestaande `<Navigate>` als client-side fallback voor SPA-routing.
 
 - **Reciprocal-links sweep `/airco-plaatsen-limburg`** — 14 city/article-pages verwijzen nog naar legacy `/kennisbank/airco-plaatsen-limburg` via `<Link to>`. De 301 in `vercel.json` vangt dat op, maar directe interne links naar de canonieke pillar-URL is sterker signaal. Plus 3 nieuwe inbound links toevoegen vanaf `/seo/pillar-9-kosten-prijzen/kosten-airco-plaatsen`, `/seo/pillar-7-technische-gidsen/airco-buitenunit-plaatsing`, en `/airco-service-limburg`. Aparte commit. Schat: 15 min.
+
+## Implementatie-update 10 september 2026 — koopcluster / kosten
+
+Status: lokaal gereed, niet live. `/kosten-airco-plaatsen` is de MOFU-kostengids; `/airco-kopen-limburg` blijft de BOFU-selectiepagina. De gids verwijst naar aankoop, passende productpagina's, multi-split-installatie, capaciteitscalculator en onderhoudsabonnementen. Aankoop en `/airco-plaatsen-limburg` verwijzen terug naar de canonieke kostengids.
+
+Vijf concrete Cashflow-prijsvoorbeelden vervangen algemene oude ranges. De gids krijgt HTML tijdens de build, consistente metadata en WebPage/Service/Breadcrumb-schema. De exacte legacy-kopie krijgt een permanente serverredirect met een clientfallback. Andere prijsvarianten zijn niet automatisch samengevoegd.
+
+Volgende inhoudelijke stap: bestaande single-split/multi-split-vergelijking actualiseren (MOFU). Daarna TOFU-keuzevragen vanuit GSC prioriteren. Geen extra pagina aanmaken als een bestaande route dezelfde intentie afdekt. Meet na publicatie kostenpagina-klikken, queryverdeling, echte offerteaanvragen en doorgang naar onderhoud. Controleer serverredirect en gekozen Google-canonical na uitrol.
+
+## Implementatie-update 10 september 2026 — splitvergelijking en zoekmachines
+
+Lokaal gereed, niet gepubliceerd: bestaande `/seo/pillar-8-vergelijkingen/mono-split-vs-multi-split` vernieuwd voor MOFU. Intentie: systeemkeuze op basis van ruimtes, buitenunits, gebruik en uitbreidingsplannen. Verwijst naar BOFU-aankoop, kostengids, capaciteitscalculator, installatie en optioneel onderhoud; kostengids linkt terug. Behoudt bestaande URL (eerdere GSC-export: 58 klikken, 4.343 vertoningen); geen extra concurrerende pagina toegevoegd.
+
+De twee gidsen krijgen HTML tijdens de build. Sitebrede controle van 344 lokale sitemap-URL's: kopstructuur zonder afwijkingen, één H1/canonical/description per URL. Zeven rendercrashes en 30 ontbrekende canonicals hersteld. Ingelogd Bing-rapport: 473 geïndexeerd, maar nog meldingen over 44 ontbrekende H1's en dubbele metadata. Alle verbeteringen zijn lokaal. Volgende technische prioriteit: initiële HTML voor alle indexeerbare pagina's. IndexNow-verzending na productie-deployment voorbereid voor twee expliciet geregistreerde revisies; niet live en geen nieuwe pings verzonden.
+
+Lees `SEO-WERKSTATUS.md` voor overdracht en het actuele vervolg; oudere TODO's hierboven zijn historische context.
+
+## Implementatie-update 10 september 2026 — HTML voor de hele site
+
+Actuele status: lokaal gereed, niet live. De eerdere beperking tot twee vooraf gerenderde gidsen is opgeheven: 689 bestaande eindroutes leveren nu inhoud en metadata in initiële HTML; React hydrateert dezelfde pagina. 636 routes staan indexatie toe, 53 behouden noindex. Dit zijn geen zoekmachine-indexatieaantallen.
+
+De gegenereerde sitemaps zijn genormaliseerd naar 336 unieke voorkeurs-URL's. Serverredirects worden gedeeld afgeleid uit de routing en verwerkt door middleware; de oudere 301-migratie-TODO hierboven is daarmee deels achterhaald (permanente redirects gebruiken 308). Geen homepage-catchall. De lokale preview is getest; live hostingcontrole volgt na publicatie.
+
+Verificatie: 689 pagina's met en zonder JavaScript, 336 sitemap-URL's met correcte kopvolgorde/H1/canonical/description, 56 carrouselpagina's met werkende eerste afbeelding zonder JS. SPA-navigatie, terugknop, CTA-contexten, prijzen en offline IndexNow-checks geslaagd. Nieuwe pagina's of zoekwoordclusters zijn in deze technische ronde niet toegevoegd.
+
+Volgende inhoudelijke prioriteit: GSC-query × pagina voor cannibalisatie en interne links naar voorkeurs-URL's; bestaande claims en schema inhoudelijk controleren. Geen blind samenvoegen of nieuwe concurrerende landingspagina's. Zie SEO-WERKSTATUS.md en ../../html-rendering-2026-09-10/Resultaat-en-gebruik.md voor actuele overdracht en beperkingen.
+
+## Implementatie-update 10 september 2026 — rollen, betrouwbaarheid en CRO
+
+Lokaal uitgevoerd: drie bestaande servicepagina's onderscheiden montageproces (/airco-installatie-limburg), woningvoorbereiding (/airco-laten-plaatsen-limburg) en offertecontrole (/airco-kopen-en-laten-installeren-limburg). Aankoop blijft /airco-kopen-limburg, kosten /kosten-airco-plaatsen en abonnementen /onderhoud. Homepagekaarten en de gedeelde vervolgsectie op 40 servicepagina's versterken deze bestemmingen. Geen nieuwe routes of zoekwoorden toegevoegd.
+
+Drie subsidiepagina's hebben een afzonderlijke informatieve taak en officiële bronnen. Onbewezen lokale cases/aantallen, oude onderhoudstarieven en automatische schema-ratings zijn verwijderd uit de aangepaste templates. Alle 636 indexeerbare routes hebben unieke titles/descriptions. 56 grote productfoto's zijn geoptimaliseerd in de build. Finale build en CRO slagen; nog niet live.
+
+Volledig plan: ../../seo-afronding-2026-09-10/Kannibalisatie-en-clusterplan.md. Zoekwoordoverlap is aangetoond voor installatie en onderhoud; schade is niet bewezen en de opgeslagen querytabellen bevatten elk maar 10 detailregels. Geen massale redirectronde afleiden uit de totaalaantallen 27/31. Oude detailclaims, volledige TypeScriptcontrole en live effectmeting zijn niet als afgerond gepresenteerd. Zie Resultaat-en-open-punten.md in dezelfde map voor bewijs en grenzen.

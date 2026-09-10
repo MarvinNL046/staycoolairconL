@@ -1,12 +1,12 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wind, Shield, Zap, Snowflake } from 'lucide-react';
+import { Wind,Shield,Zap,Snowflake } from 'lucide-react';
 import ProductLandingHero from '../../components/landing/ProductLandingHero';
 import ProductLandingFeatures from '../../components/landing/ProductLandingFeatures';
 import ProductLandingModels from '../../components/landing/ProductLandingModels';
 import ProductLandingContact from '../../components/landing/ProductLandingContact';
-import { mitsubishiHeavyData } from '../../data/brands/mitsubishi-heavy';
+import { productData } from '../../data/products';
 import SchemaMarkup from '../../components/SchemaMarkup';
+const mitsubishiHeavyData = productData.brands.find(b => b.name === 'Mitsubishi Heavy Industries')!;
 
 export default function MitsubishiHeavyLanding() {
   // Select top models to showcase
@@ -44,14 +44,14 @@ export default function MitsubishiHeavyLanding() {
           name="description"
           content="Mitsubishi Heavy airco: Allergeenfilter | Stil vanaf 18dB | A+++ | 3D Auto luchtverdeling. Erkend installateur Limburg. Gratis advies!"
         />
-        <meta 
-          name="keywords" 
+        <meta
+          name="keywords"
           content="Mitsubishi Heavy Industries, airconditioning, allergeenfilter, 3D Auto, silent operation, Japanse kwaliteit, Limburg"
         />
         <link rel="canonical" href="https://staycoolairco.nl/landing/mitsubishi-heavy" />
       </Helmet>
 
-      <SchemaMarkup 
+      <SchemaMarkup
         type="Product"
         data={{
           "@type": "Product",
@@ -61,36 +61,13 @@ export default function MitsubishiHeavyLanding() {
             "@type": "Brand",
             "name": "Mitsubishi Heavy Industries"
           },
-          "offers": {
-            "@type": "AggregateOffer",
-            "priceCurrency": "EUR",
-            "lowPrice": "1099",
-            "highPrice": "1599",
-            "offerCount": mitsubishiHeavyData.models.length,
-            "availability": "https://schema.org/InStock"
-          },
           "image": mitsubishiHeavyData.imageUrl,
-          "review": {
-            "@type": "Review",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "4.9",
-              "bestRating": "5"
-            },
-            "author": {
-              "@type": "Person",
-              "name": "StayCool Airco Klanten"
-            }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "87"
-          }
+
+
         }}
       />
 
-      <ProductLandingHero 
+      <ProductLandingHero
         title="Mitsubishi Heavy Industries: Japanse Engineering voor Optimaal Comfort"
         subtitle="Allergeenfilter • Silent Operation • 3D Auto Functie"
         description="Mitsubishi Heavy Industries staat bekend om hoogwaardige Japanse engineering met focus op duurzaamheid en betrouwbaarheid. Ontdek waarom deze robuuste en efficiënte airconditioners de voorkeur genieten van veeleisende gebruikers."
@@ -107,13 +84,13 @@ export default function MitsubishiHeavyLanding() {
         ]}
       />
 
-      <ProductLandingFeatures 
+      <ProductLandingFeatures
         title="Waarom Kiezen voor Mitsubishi Heavy Industries?"
         subtitle="Ontdek de unieke voordelen van Mitsubishi Heavy Industries airconditioners"
         features={features}
       />
 
-      <ProductLandingModels 
+      <ProductLandingModels
         title="Populaire Mitsubishi Heavy Industries Modellen"
         subtitle="Ontdek onze bestsellers voor optimaal comfort"
         brandName="Mitsubishi Heavy Industries"
@@ -121,7 +98,7 @@ export default function MitsubishiHeavyLanding() {
         models={featuredModels}
       />
 
-      <ProductLandingContact 
+      <ProductLandingContact
         title="Vraag een Vrijblijvende Offerte Aan"
         subtitle="Ontvang persoonlijk advies en een scherpe prijsopgave voor uw Mitsubishi Heavy Industries airconditioning"
         brandName="Mitsubishi Heavy Industries"

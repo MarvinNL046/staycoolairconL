@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Phone, CheckCircle, Clock, Shield, Wrench, Award, ChevronDown, ArrowRight } from 'lucide-react';
+import { Phone,CheckCircle,Clock,Shield,Wrench,Award,ChevronDown,ArrowRight } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import ContactForm from '../../components/Contact';
@@ -58,7 +58,7 @@ const faqItems = [
   },
   {
     question: 'Wat kost een mono-split airco installatie?',
-    answer: 'Een complete mono-split installatie (inclusief unit, leidingwerk, montage en 5 jaar garantie) kost bij StayCool Airco doorgaans tussen €1.500 en €3.000 afhankelijk van het gekozen merk en model. Budget merken zoals Tosot of Toshiba starten vanaf €1.500, premium merken zoals Daikin of Mitsubishi Heavy kosten €2.000 tot €3.000.',
+    answer: "Een complete mono-split installatie (inclusief unit, leidingwerk, montage en garantie volgens offerte) kost bij StayCool Airco doorgaans tussen €1.500 en €3.000 afhankelijk van het gekozen merk en model. Budget merken zoals Tosot of Toshiba starten vanaf €1.500, premium merken zoals Daikin of Mitsubishi Heavy kosten €2.000 tot €3.000.",
   },
   {
     question: 'Heb ik een vergunning nodig voor een split airco?',
@@ -119,7 +119,8 @@ export default function SplitAircoInstallatie() {
               Split Airco Installatie — Mono-Split Systeem
             </h1>
             <p className="text-base md:text-lg text-sky-100 mb-8">
-              Een split airco is de meest populaire en efficiënte keuze voor het koelen en verwarmen van één ruimte. StayCool Airco installeert mono-split systemen van topmerken in heel Limburg. Snel, vakkundig en met 5 jaar garantie.
+
+              Een split airco is de meest populaire en efficiënte keuze voor het koelen en verwarmen van één ruimte. StayCool Airco installeert mono-split systemen van topmerken in heel Limburg. Snel, vakkundig en met garantie volgens offerte.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -279,7 +280,8 @@ export default function SplitAircoInstallatie() {
             Kosten Split Airco Installatie
           </h2>
           <p className="text-base md:text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Volledig inclusief: unit, leidingwerk (tot 3 meter), montage, inbedrijfstelling en 5 jaar garantie.
+
+            Volledig inclusief: unit, leidingwerk (tot 3 meter), montage, inbedrijfstelling en garantie volgens offerte.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <div className="bg-sky-50 rounded-2xl p-6 border border-sky-200">
@@ -289,7 +291,7 @@ export default function SplitAircoInstallatie() {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> Uitstekende kwaliteit</li>
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> A++ energieklasse</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> 5 jaar garantie</li>
+                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />  garantie volgens offerte</li>
               </ul>
             </div>
             <div className="bg-sky-50 rounded-2xl p-6 border border-sky-400 ring-2 ring-sky-400">
@@ -300,7 +302,7 @@ export default function SplitAircoInstallatie() {
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> A+++ energieklasse</li>
                 <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> Laagste energiekosten</li>
-                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> 5 jaar garantie</li>
+                <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />  garantie volgens offerte</li>
               </ul>
             </div>
           </div>

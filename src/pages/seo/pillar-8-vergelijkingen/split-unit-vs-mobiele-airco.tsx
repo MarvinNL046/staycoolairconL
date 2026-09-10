@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, XCircle, Euro, Zap, Wind, Home, Phone, Calculator, ThermometerSun, Volume2 } from 'lucide-react';
+import { CheckCircle,XCircle,Euro,Zap,Wind,Home,Phone,Calculator,ThermometerSun,Volume2 } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
@@ -173,7 +172,7 @@ const SplitVsMobieleAirco = () => {
             {usps.map((usp, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
                 <div className="flex justify-center mb-4">{usp.icon}</div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}
@@ -225,7 +224,7 @@ const SplitVsMobieleAirco = () => {
                 </tr>
                 <tr className="bg-gray-50">
                   <td className="px-6 py-4 font-semibold text-gray-900">Verwarmingsfunctie</td>
-                  <td className="px-6 py-4 text-green-600">✓ Warmtepomp (60% besparing)</td>
+                  <td className="px-6 py-4 text-green-600">✓ Warmtepomp (situatieafhankelijke besparing)</td>
                   <td className="px-6 py-4 text-red-600">✗ Alleen koelen</td>
                 </tr>
                 <tr>
@@ -236,7 +235,7 @@ const SplitVsMobieleAirco = () => {
                 <tr className="bg-gray-50">
                   <td className="px-6 py-4 font-semibold text-gray-900">Garantie</td>
                   <td className="px-6 py-4 text-gray-700">5-10 jaar fabrieksgarantie</td>
-                  <td className="px-6 py-4 text-gray-700">1-2 jaar garantie</td>
+                  <td className="px-6 py-4 text-gray-700">garantie volgens offerte</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 font-semibold text-gray-900">Onderhoud</td>
@@ -463,7 +462,7 @@ const SplitVsMobieleAirco = () => {
                   <CheckCircle className="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-1" />
                   <div>
                     <strong className="text-gray-900">Lagere energiekosten belangrijk zijn</strong>
-                    <p className="text-gray-700">60% besparing op energieverbruik</p>
+                    <p className="text-gray-700">situatieafhankelijke besparing op energieverbruik</p>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -588,7 +587,8 @@ const SplitVsMobieleAirco = () => {
             Klaar voor Professionele Airco Installatie?
           </h2>
           <p className="text-xl mb-8 text-sky-50">
-            StayCool Airco helpt u bij het kiezen en installeren van het perfecte systeem voor uw situatie. F-gas gecertificeerd, 10 jaar garantie op premium merken.
+
+            StayCool Airco helpt u bij het kiezen en installeren van het perfecte systeem voor uw situatie. F-gas gecertificeerd, garantie volgens offerte op premium merken.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

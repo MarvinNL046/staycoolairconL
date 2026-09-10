@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Shield, Euro, Zap, Wind, ThermometerSun, Phone, Calculator, Award, Star, TrendingUp } from 'lucide-react';
+import { CheckCircle,Shield,Euro,Zap,Wind,Phone,Calculator,Award,Star } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const AircoInstallatieWoonkamer: React.FC = () => {
   const breadcrumbItems = [
@@ -22,12 +21,12 @@ const AircoInstallatieWoonkamer: React.FC = () => {
     },
     {
       icon: <Euro className="h-12 w-12 text-sky-500" />,
-      title: "60% Energiebesparing",
-      description: "Bespaar tot 60% op uw energiekosten met efficiënte split-unit airconditioning"
+      title: "situatieafhankelijke besparing",
+      description: "Bekijk de mogelijke besparing op energiekosten met efficiënte split-unit airconditioning"
     },
     {
       icon: <Shield className="h-12 w-12 text-sky-500" />,
-      title: "10 Jaar Garantie",
+      title: "garantie volgens offerte",
       description: "Premium merken met tot 10 jaar fabrieksgarantie voor zorgeloos comfort"
     },
     {
@@ -52,7 +51,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
     },
     {
       question: "Kan een airco ook verwarmen in de winter?",
-      answer: "Ja, moderne split-unit airconditioners zijn warmtepompen die zowel kunnen koelen als verwarmen. Ze zijn zeer efficiënt in verwarmen en halen tot 60% besparing ten opzichte van elektrische verwarming. De warmtepomp functie werkt optimaal bij buitentemperaturen tot -15°C, ideaal voor Nederlandse winters."
+      answer: "Ja, moderne split-unit airconditioners zijn warmtepompen die zowel kunnen koelen als verwarmen. Ze zijn zeer efficiënt in verwarmen en halen situatieafhankelijke besparing ten opzichte van elektrische verwarming. De warmtepomp functie werkt optimaal bij buitentemperaturen tot -15°C, ideaal voor Nederlandse winters."
     },
     {
       question: "Is een airco in de woonkamer geluidsarm?",
@@ -60,7 +59,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
     },
     {
       question: "Welk merk airco is het beste voor een woonkamer?",
-      answer: "Wij adviseren Daikin, Mitsubishi Heavy of LG voor woonkamers. Daikin biedt uitstekende efficiëntie en design, Mitsubishi Heavy staat bekend om betrouwbaarheid en stilte, en LG biedt goede prijs-kwaliteit verhouding. Alle merken hebben minimaal 5 jaar garantie, premium modellen tot 10 jaar."
+      answer: "Wij adviseren Daikin, Mitsubishi Heavy of LG voor woonkamers. Daikin biedt uitstekende efficiëntie en design, Mitsubishi Heavy staat bekend om betrouwbaarheid en stilte, en LG biedt goede prijs-kwaliteit verhouding. Alle merken hebben minimaal garantie volgens offerte, premium modellen tot 10 jaar."
     },
     {
       question: "Moet ik vergunning aanvragen voor airco installatie?",
@@ -76,7 +75,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
     <>
       <MetaTags
         title="Airco Installatie Woonkamer Limburg | Split-unit vanaf €1.800 | StayCool"
-        description="Airco installatie woonkamer ✓ 60% besparing ✓ 10 jaar garantie ✓ F-gas gecertificeerd ✓ Daikin, Mitsubishi, LG. Gratis advies & offerte!"
+        description="Airco installatie woonkamer ✓ situatieafhankelijke besparing ✓ garantie volgens offerte ✓ F-gas gecertificeerd ✓ Daikin, Mitsubishi, LG. Gratis advies & offerte!"
       />
 
       <SchemaMarkup
@@ -113,7 +112,8 @@ const AircoInstallatieWoonkamer: React.FC = () => {
               Airco Installatie Woonkamer Limburg
             </h1>
             <p className="text-xl md:text-2xl text-sky-50 mb-8 max-w-3xl">
-              Geniet van optimaal comfort in uw woonkamer met een professioneel geïnstalleerde split-unit airco. Koelen én verwarmen met 60% energiebesparing. Premium A-merken vanaf €1.800 inclusief installatie.
+
+              Geniet van optimaal comfort in uw woonkamer met een professioneel geïnstalleerde split-unit airco. Koelen én verwarmen met situatieafhankelijke besparing. Premium A-merken vanaf €1.800 inclusief installatie.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link to="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors">
@@ -132,7 +132,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-5 w-5 mr-2" />
-                <span>10 Jaar Garantie</span>
+                <span>garantie volgens offerte</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-5 w-5 mr-2" />
@@ -151,7 +151,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
                   <div className="flex justify-center mb-4">
                     {usp.icon}
                   </div>
-                  <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                  <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                   <p className="text-gray-600 text-center">{usp.description}</p>
                 </div>
               ))}
@@ -185,7 +185,8 @@ const AircoInstallatieWoonkamer: React.FC = () => {
                   Energiebesparing en Duurzaamheid
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Een split-unit airco met warmtepomp functionaliteit haalt warmte uit de buitenlucht en brengt deze binnen, waarbij er per verbruikte kWh elektriciteit 3-5 kWh warmte wordt geproduceerd. Dit resulteert in een energiebesparing tot 60% vergeleken met elektrische verwarming of oude CV-systemen. Voor een gemiddelde woonkamer van 30m² betekent dit een besparing van €300-500 per jaar op uw energierekening.
+
+                  Een split-unit airco met warmtepomp functionaliteit haalt warmte uit de buitenlucht en brengt deze binnen, waarbij er per verbruikte kWh elektriciteit 3-5 kWh warmte wordt geproduceerd. Dit resulteert in een besparing afhankelijk van gebruik en tarieven vergeleken met elektrische verwarming of oude CV-systemen. Voor een gemiddelde woonkamer van 30m² betekent dit een besparing van €300-500 per jaar op uw energierekening.
                 </p>
                 <p className="text-gray-600">
                   Bovendien draagt u bij aan CO2-reductie en duurzaamheid. In combinatie met zonnepanelen kunt u zelfs klimaatneutraal verwarmen en koelen. Moderne inverter technologie past het vermogen continu aan, waardoor er geen pieken in stroomverbruik zijn en uw zonnepanelen optimaal benut worden.
@@ -215,7 +216,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="border border-gray-200 rounded-lg p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Kleine Woonkamer (15-25m²)</h4>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Kleine Woonkamer (15-25m²)</h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -237,7 +238,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
                 </div>
 
                 <div className="border border-gray-200 rounded-lg p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Standaard Woonkamer (25-35m²)</h4>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Standaard Woonkamer (25-35m²)</h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -259,7 +260,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
                 </div>
 
                 <div className="border border-gray-200 rounded-lg p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Grote Woonkamer (35-50m²)</h4>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Grote Woonkamer (35-50m²)</h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -281,7 +282,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
                 </div>
 
                 <div className="border border-gray-200 rounded-lg p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Extra Grote Ruimte (50m²+)</h4>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Extra Grote Ruimte (50m²+)</h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -320,7 +321,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
               <div className="space-y-6 mb-8">
                 <div className="border border-gray-200 rounded-lg p-6">
                   <div className="flex items-start justify-between mb-4">
-                    <h4 className="text-xl font-semibold text-gray-900">Daikin</h4>
+                    <h3 className="text-xl font-semibold text-gray-900">Daikin</h3>
                     <div className="flex gap-1">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
@@ -353,7 +354,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
 
                 <div className="border border-gray-200 rounded-lg p-6">
                   <div className="flex items-start justify-between mb-4">
-                    <h4 className="text-xl font-semibold text-gray-900">Mitsubishi Heavy Industries</h4>
+                    <h3 className="text-xl font-semibold text-gray-900">Mitsubishi Heavy Industries</h3>
                     <div className="flex gap-1">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
@@ -370,7 +371,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span>7 jaar garantie standaard</span>
+                      <span>garantie volgens offerte standaard</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -386,7 +387,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
 
                 <div className="border border-gray-200 rounded-lg p-6">
                   <div className="flex items-start justify-between mb-4">
-                    <h4 className="text-xl font-semibold text-gray-900">LG</h4>
+                    <h3 className="text-xl font-semibold text-gray-900">LG</h3>
                     <div className="flex gap-1">
                       {[...Array(4)].map((_, i) => (
                         <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
@@ -433,7 +434,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
                     1
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Gratis Adviesgesprek & Offerte</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Gratis Adviesgesprek & Offerte</h3>
                     <p className="text-gray-600">
                       Tijdens het adviesgesprek bespreken we uw wensen en situatie. We meten de ruimte op, beoordelen isolatie en raamoppervlak, en bepalen de optimale plaatsing van binnen- en buitenunit. U ontvangt een gedetailleerde offerte inclusief specificaties, garanties en verwachte installatietermijn.
                     </p>
@@ -445,7 +446,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
                     2
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Plaatsing Binnenunit</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Plaatsing Binnenunit</h3>
                     <p className="text-gray-600">
                       De binnenunit wordt op circa 2,5 meter hoogte aan de muur gemonteerd voor optimale luchtverdeling. We zorgen voor strakke afwerking met muurplaat en niveauwaterpas. Bij het boren houden we rekening met elektrische leidingen en waterleidingen in de muur. De ideale locatie is tegenover zit- en slaapplekken, uit direct zonlicht.
                     </p>
@@ -457,7 +458,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
                     3
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Doorvoer & Leidingwerk</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Doorvoer & Leidingwerk</h3>
                     <p className="text-gray-600">
                       We maken een kernboring (65-75mm) door de gevel voor koelleidingen, elektrische bekabeling en condensafvoer. Bij spouwmuren boren we schuin naar beneden voor natuurlijke waterafvoer. Leidingen worden geïsoleerd en beschermd tegen weersinvloeden. Zichtbaar leidingwerk buiten wordt netjes weggewerkt in kunststof goten of tegen de kleur van de gevel gespoten.
                     </p>
@@ -469,7 +470,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
                     4
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Plaatsing Buitenunit</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Plaatsing Buitenunit</h3>
                     <p className="text-gray-600">
                       De buitenunit plaatsen we op een stabiel betonnen pad, wandconsoles of op het platte dak. We houden minimaal 30cm vrije ruimte rondom voor luchtcirculatie. Anti-vibratiedempers voorkomen geluidoverdracht. De unit wordt waterpas geplaatst voor goede condensafvoer. We zorgen dat de unit niet direct zichtbaar is vanaf de openbare weg indien mogelijk.
                     </p>
@@ -481,7 +482,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
                     5
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Elektrische Aansluiting</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Elektrische Aansluiting</h3>
                     <p className="text-gray-600">
                       De airco wordt aangesloten op een aparte groep in de meterkast met aardlekschakelaar. Voor kleinere units (tot 3.5kW) volstaat vaak een bestaande groep, grotere units vereisen een nieuwe 16A groep. Alle elektrische verbindingen worden professioneel geklemd en geïsoleerd volgens NEN-normen. We testen de elektrische installatie grondig voor ingebruikname.
                     </p>
@@ -493,7 +494,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
                     6
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Vacuümeren & Vullen</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Vacuümeren & Vullen</h3>
                     <p className="text-gray-600">
                       Het koelsysteem wordt gevacumeerd om vocht en lucht te verwijderen - cruciaal voor optimale werking en levensduur. Vervolgens vullen we het systeem met de juiste hoeveelheid koudemiddel (R32 of R410A) volgens fabrieksspecificaties. We controleren alle lasverbindingen op lekdichtheid met elektronische lekdetectie en zeepwater.
                     </p>
@@ -505,7 +506,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
                     7
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Inbedrijfstelling & Instructie</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Inbedrijfstelling & Instructie</h3>
                     <p className="text-gray-600">
                       We starten de airco en testen alle functies: koelen, verwarmen, verschillende standen, timer en temperatuurregeling. Alle metingen worden geregistreerd. U krijgt uitgebreide uitleg over de bediening, onderhoud en optimale instellingen. We demonstreren de afstandsbediening of app en beantwoorden al uw vragen. U ontvangt handleidingen, garantiebewijzen en onderhoudsadvies.
                     </p>
@@ -517,7 +518,7 @@ const AircoInstallatieWoonkamer: React.FC = () => {
                     8
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Oplevering & Nazorg</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Oplevering & Nazorg</h3>
                     <p className="text-gray-600">
                       We ruimen netjes op en voeren al het afval professioneel af. U tekent het opleveringsformulier en ontvangt alle documenten. We registreren de installatie bij de fabrikant voor garantieactivatie. Na 2 weken bellen we voor een tevredenheidsmeting en beantwoording van eventuele vragen. U heeft daarna direct contact met ons voor eventuele service of onderhoud.
                     </p>

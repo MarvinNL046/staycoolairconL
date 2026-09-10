@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React,{ useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
-  Wifi, Smartphone, CheckCircle, Phone, ArrowRight, Star, Shield, Award,
-  ChevronDown, ChevronUp, Zap, Clock, Home, BarChart3, Settings, Leaf
+Wifi,Smartphone,CheckCircle,Phone,ArrowRight,Star,Shield,Award,
+ChevronDown,ChevronUp,Zap,Clock,Home,BarChart3,Settings,Leaf
 } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -60,7 +60,7 @@ const AircoMetWifiVoordelen: React.FC = () => {
     {
       question: 'Hoeveel kan ik besparen met een WiFi-airco?',
       answer:
-        'Gemiddeld 15–20% energiebesparing is haalbaar door slim gebruik van wifi-functies: standby modus als niemand thuis is, timer zodat de airco net voor aankomst start, en geofencing die automatisch in/uitschakelt. Bij een gemiddelde airco-rekening van €300/jaar is dat €45–60 besparing.',
+        "Gemiddeld situatieafhankelijke besparing is haalbaar door slim gebruik van wifi-functies: standby modus als niemand thuis is, timer zodat de airco net voor aankomst start, en geofencing die automatisch in/uitschakelt. Bij een gemiddelde airco-rekening van €300/jaar is dat €45–60 besparing.",
     },
     {
       question: 'Werkt een wifi-airco ook als ik geen internet heb?',
@@ -132,10 +132,10 @@ const AircoMetWifiVoordelen: React.FC = () => {
         {/* Trust bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {[
-            { icon: <Star className="h-5 w-5 text-yellow-500" />, text: '4.9 ster (127 reviews)' },
+            { icon: <Star className="h-5 w-5 text-yellow-500" />, text: "4.9 ster (klantervaringen)" },
             { icon: <Shield className="h-5 w-5 text-blue-600" />, text: 'F-gassen gecertificeerd' },
             { icon: <Award className="h-5 w-5 text-blue-600" />, text: 'STEK erkend' },
-            { icon: <CheckCircle className="h-5 w-5 text-green-600" />, text: '5 jaar garantie' },
+            { icon: <CheckCircle className="h-5 w-5 text-green-600" />, text: "garantie volgens offerte" },
           ].map((item, i) => (
             <div key={i} className="bg-white rounded-2xl shadow-lg p-4 border border-gray-100 flex items-center gap-3">
               {item.icon}
@@ -313,7 +313,7 @@ const AircoMetWifiVoordelen: React.FC = () => {
                         {item.stap}
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900">{item.titel}</h4>
+                        <h3 className="font-semibold text-gray-900">{item.titel}</h3>
                         <p className="text-sm text-gray-600">{item.desc}</p>
                       </div>
                     </div>

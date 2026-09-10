@@ -157,54 +157,14 @@ const googleReviews: GoogleReview[] = [
   }
 ];
 
-/**
- * Get a random subset of reviews for a specific city
- * @param city The city name to filter reviews for
- * @param count The number of reviews to return
- * @returns An array of Google reviews
- */
+/** Stable review selection: server HTML and browser must show the same source text. */
 export function getReviewsForCity(count: number = 4): GoogleReview[] {
-  // Shuffle the reviews array to get random selection
-  const shuffled = [...googleReviews].sort(() => 0.5 - Math.random());
-  
-  // Take the first 'count' reviews
-  return shuffled.slice(0, count);
+  return googleReviews.slice(0, count);
 }
 
-/**
- * Get a set of reviews for a specific city, with the city name inserted into the review text
- * @param city The city name to insert into reviews
- * @param count The number of reviews to return
- * @returns An array of Google reviews with the city name inserted
- */
-export function getLocalizedReviews(city: string, count: number = 4): GoogleReview[] {
-  const reviews = getReviewsForCity(count);
-  
-  // Insert the city name into some of the reviews
-  return reviews.map((review, index) => {
-    if (index % 2 === 0 && !review.comment.includes(city)) {
-      // For every other review, insert the city name if it doesn't already contain it
-      const sentences = review.comment.split('. ');
-      if (sentences.length > 1) {
-        // Insert city name in the second sentence if possible
-        sentences[1] = sentences[1].replace(
-          /((in|voor|bij|met) (ons|onze|mijn|het|de|een))/i, 
-          `$1 in ${city}`
-        );
-        return {
-          ...review,
-          comment: sentences.join('. ')
-        };
-      } else {
-        // Just append the city reference if we can't insert it naturally
-        return {
-          ...review,
-          comment: review.comment.replace(/\.$/, '') + ` in ${city}.`
-        };
-      }
-    }
-    return review;
-  });
+/** Keep the legacy API, but never insert a location into a customer's review. */
+export function getLocalizedReviews(_city: string, count: number = 4): GoogleReview[] {
+  return getReviewsForCity(count);
 }
 
 export default googleReviews;

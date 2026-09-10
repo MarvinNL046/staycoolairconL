@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ThermometerSun, Euro, TrendingDown, ChevronDown, ChevronUp, Phone } from 'lucide-react';
+import { ThermometerSun,Euro,ChevronDown,ChevronUp,Phone } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import ContactForm from '../../components/Contact';

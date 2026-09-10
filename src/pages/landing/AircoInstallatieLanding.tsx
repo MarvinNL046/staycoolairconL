@@ -1,6 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ShieldCheck, Clock, Award, Wrench } from 'lucide-react';
+import { ShieldCheck,Clock,Award,Wrench } from 'lucide-react';
 import ProductLandingHero from '../../components/landing/ProductLandingHero';
 import ProductLandingFeatures from '../../components/landing/ProductLandingFeatures';
 import ProductLandingContact from '../../components/landing/ProductLandingContact';
@@ -27,7 +26,7 @@ export default function AircoInstallatieLanding() {
     },
     {
       title: '5 jaar installatiegarantie',
-      description: 'Naast de productgarantie bieden wij 5 jaar garantie op onze installatiewerkzaamheden.',
+      description: "Naast de productgarantie bieden wij garantie volgens offerte op onze installatiewerkzaamheden.",
       icon: <Award className="h-8 w-8" />
     }
   ];
@@ -38,16 +37,16 @@ export default function AircoInstallatieLanding() {
         <title>Airco Installatie vanaf €1.600 | F-Gassen Gecertificeerd 2026</title>
         <meta
           name="description"
-          content="Airco installatie incl. montage vanaf €1.600. F-gassen gecertificeerd, 5 jaar garantie, installatie binnen 5 werkdagen. Erkend installateur Limburg. Vraag gratis offerte aan!"
+          content="Airco installatie incl. montage vanaf €1.600. F-gassen gecertificeerd, garantie volgens offerte, installatie binnen 5 werkdagen. Erkend installateur Limburg. Vraag gratis offerte aan!"
         />
-        <meta 
-          name="keywords" 
+        <meta
+          name="keywords"
           content="airco installatie, airco met montage, airco inclusief installatie, airco laten installeren, airco montage, airco plaatsen"
         />
         <link rel="canonical" href="https://staycoolairco.nl/airco-installatie" />
       </Helmet>
 
-      <SchemaMarkup 
+      <SchemaMarkup
         type="Service"
         data={{
           "@type": "Service",
@@ -70,27 +69,12 @@ export default function AircoInstallatieLanding() {
             "offerCount": "10",
             "availability": "https://schema.org/InStock"
           },
-          "review": {
-            "@type": "Review",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "4.9",
-              "bestRating": "5"
-            },
-            "author": {
-              "@type": "Person",
-              "name": "StayCool Airco Klanten"
-            }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "127"
-          }
+
+
         }}
       />
 
-      <ProductLandingHero 
+      <ProductLandingHero
         title="Airco Installatie: Professionele Montage Service"
         subtitle="Vakkundig • Verzorgd • Snel"
         description="Kwaliteit en betrouwbaarheid bij de installatie van uw airconditioning. Onze ervaren, F-gassen gecertificeerde monteurs verzorgen de complete installatie van uw airco, van A tot Z."
@@ -101,13 +85,13 @@ export default function AircoInstallatieLanding() {
           "Behoud van fabrieksgarantie",
           "Netjes afgewerkte installatie",
           "Alle materialen inbegrepen",
-          "5 jaar garantie op installatie",
+          "garantie volgens offerte op installatie",
           "Uitleg over bediening",
           "Snelle en flexibele planning"
         ]}
       />
 
-      <ProductLandingFeatures 
+      <ProductLandingFeatures
         title="Waarom Kiezen voor Onze Installatieservice?"
         subtitle="Kwaliteit en zekerheid bij de installatie van uw airconditioning"
         features={features}
@@ -263,7 +247,7 @@ export default function AircoInstallatieLanding() {
                 </div>
               </div>
               <p className="text-gray-600 text-sm">
-                * Bovenstaande prijzen zijn inclusief 3 meter leidingwerk, standaard muurdoorvoer, beugels, 
+                * Bovenstaande prijzen zijn inclusief 3 meter leidingwerk, standaard muurdoorvoer, beugels,
                 en alle benodigde materialen. Exacte prijs is afhankelijk van het specifieke model en situatie ter plaatse.
               </p>
             </div>
@@ -326,7 +310,7 @@ export default function AircoInstallatieLanding() {
         </div>
       </div>
 
-      <ProductLandingContact 
+      <ProductLandingContact
         title="Vraag een Vrijblijvende Offerte Aan"
         subtitle="Ontvang persoonlijk advies en een scherpe prijsopgave voor uw airco installatie"
         brandName="Airco Installatie"

@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Shield, Euro, Zap, Wind, ThermometerSun, Phone, Calculator, TrendingUp, Star, Award, Snowflake } from 'lucide-react';
+import { CheckCircle,Shield,Euro,Zap,Wind,Phone,Calculator,TrendingUp,Star,Award,Snowflake } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const DaikinAircoModellen = () => {
   const breadcrumbItems = [
@@ -22,13 +20,13 @@ const DaikinAircoModellen = () => {
     },
     {
       icon: <Shield className="h-12 w-12 text-sky-500" />,
-      title: "10 Jaar Garantie",
+      title: "garantie volgens offerte",
       description: "Geniet van maximaal 10 jaar fabrieksgarantie op geselecteerde Daikin premium modellen"
     },
     {
       icon: <Zap className="h-12 w-12 text-sky-500" />,
-      title: "60% Energiebesparing",
-      description: "Daikin warmtepompen besparen tot 60% op uw energiekosten vergeleken met conventionele verwarming"
+      title: "situatieafhankelijke besparing",
+      description: "Daikin warmtepompen Bekijk de mogelijke besparing op energiekosten vergeleken met conventionele verwarming"
     },
     {
       icon: <Award className="h-12 w-12 text-sky-500" />,
@@ -99,11 +97,11 @@ const DaikinAircoModellen = () => {
     },
     {
       question: "Welke garantie krijg ik op een Daikin airco?",
-      answer: "Daikin biedt standaard 3 jaar fabrieksgarantie op alle modellen. Bij registratie binnen 3 maanden na installatie door een erkende installateur (zoals StayCool Airco) wordt dit verlengd naar 5 jaar garantie. Op de Ururu Sarara en geselecteerde Perfera modellen is zelfs 10 jaar garantie mogelijk. Dit maakt Daikin een zeer betrouwbare keuze."
+      answer: "Daikin biedt standaard 3 jaar fabrieksgarantie op alle modellen. Bij registratie binnen 3 maanden na installatie door een erkende installateur (zoals StayCool Airco) wordt dit verlengd naar garantie volgens offerte. Op de Ururu Sarara en geselecteerde Perfera modellen is zelfs garantie volgens offerte mogelijk. Dit maakt Daikin een zeer betrouwbare keuze."
     },
     {
       question: "Hoeveel energie bespaart een Daikin airco vergeleken met conventionele verwarming?",
-      answer: "Een Daikin warmtepomp bespaart tot 60% op energiekosten vergeleken met elektrische of gasverwarming. Met een SCOP (Seasonal Coefficient of Performance) van 4,0 of hoger produceert de warmtepomp 4 kW warmte voor elke 1 kW elektriciteit. Dit betekent 300% gratis energie uit de buitenlucht, wat resulteert in aanzienlijk lagere maandelijkse kosten."
+      answer: "Een Daikin warmtepomp kan mogelijk besparen op energiekosten vergeleken met elektrische of gasverwarming. Met een SCOP (Seasonal Coefficient of Performance) van 4,0 of hoger produceert de warmtepomp 4 kW warmte voor elke 1 kW elektriciteit. Dit betekent 300% gratis energie uit de buitenlucht, wat resulteert in aanzienlijk lagere maandelijkse kosten."
     },
     {
       question: "Is een Daikin airco stil genoeg voor in de slaapkamer?",
@@ -131,7 +129,7 @@ const DaikinAircoModellen = () => {
     <>
       <MetaTags
         title="Daikin Airco Modellen Limburg | Stylish, Perfera, Ururu Sarara | StayCool Airco"
-        description="Daikin airco modellen ✓ Stylish, Perfera & Ururu Sarara ✓ 10 jaar garantie ✓ 60% energiebesparing ✓ Erkend installateur. Gratis advies!"
+        description="Daikin airco modellen ✓ Stylish, Perfera & Ururu Sarara ✓ garantie volgens offerte ✓ situatieafhankelijke besparing ✓ Erkend installateur. Gratis advies!"
       />
 
       <SchemaMarkup
@@ -140,7 +138,7 @@ const DaikinAircoModellen = () => {
           "@context": "https://schema.org",
           "@type": "Product",
           name: "Daikin Airco Modellen",
-          description: "Premium Daikin airconditioners: Stylish, Perfera en Ururu Sarara met 10 jaar garantie en professionele installatie door erkend Daikin partner StayCool Airco",
+          description: "Premium Daikin airconditioners: Stylish, Perfera en Ururu Sarara met garantie volgens offerte en professionele installatie door erkend Daikin partner StayCool Airco",
           brand: {
             "@type": "Brand",
             name: "Daikin"
@@ -156,11 +154,7 @@ const DaikinAircoModellen = () => {
               name: "Limburg"
             }
           },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "156"
-          }
+
         }}
       />
 
@@ -175,7 +169,8 @@ const DaikinAircoModellen = () => {
             Daikin Airco Modellen: Stylish, Perfera & Ururu Sarara
           </h1>
           <p className="text-xl md:text-2xl text-sky-50 mb-8 max-w-3xl">
-            Premium Japanse kwaliteit met 10 jaar garantie. Van stijlvol design tot de meest geavanceerde klimaatbeheersing. Ontdek welk Daikin model perfect bij uw wensen past.
+
+            Premium Japanse kwaliteit met garantie volgens offerte. Van stijlvol design tot de meest geavanceerde klimaatbeheersing. Ontdek welk Daikin model perfect bij uw wensen past.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -200,7 +195,7 @@ const DaikinAircoModellen = () => {
             </div>
             <div className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />
-              <span>Tot 10 Jaar Garantie</span>
+              <span>garantie volgens de product- en offertevoorwaarden</span>
             </div>
           </div>
         </div>
@@ -215,7 +210,7 @@ const DaikinAircoModellen = () => {
                 <div className="flex justify-center mb-4">
                   {usp.icon}
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}
@@ -308,7 +303,8 @@ const DaikinAircoModellen = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Bespaar Tot 60% Op Energiekosten
+
+              Bekijk de mogelijke besparing op energiekosten
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Een Daikin warmtepomp verbruikt slechts 1 kW stroom om 4 kW warmte te produceren. Dit betekent 300% gratis energie uit de buitenlucht.
@@ -477,7 +473,7 @@ const DaikinAircoModellen = () => {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-purple-600 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">Bereid bent te investeren in topkwaliteit met 10 jaar garantie</span>
+                  <span className="text-gray-700">Bereid bent te investeren in topkwaliteit met garantie volgens offerte</span>
                 </li>
               </ul>
               <div className="mt-6 flex items-center justify-between">

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Calculator, Zap, TrendingUp, Leaf, Euro, Phone, Info, AlertCircle } from 'lucide-react';
+import { Calculator,Zap,TrendingUp,Leaf,Phone,Info } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
 

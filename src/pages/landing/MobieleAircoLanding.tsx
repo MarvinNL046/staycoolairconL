@@ -1,6 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Zap, Wind, Truck, ArrowRight } from 'lucide-react';
+import { Zap,Wind,Truck,ArrowRight } from 'lucide-react';
 import ProductLandingHero from '../../components/landing/ProductLandingHero';
 import ProductLandingFeatures from '../../components/landing/ProductLandingFeatures';
 import ProductLandingContact from '../../components/landing/ProductLandingContact';
@@ -40,14 +39,14 @@ export default function MobieleAircoLanding() {
           name="description"
           content="Mobiele airco LG & Tosot: Direct verkoeling | Geen installatie | A+ energielabel | Tot 58m² | Wifi-besturing. Gratis verzending!"
         />
-        <meta 
-          name="keywords" 
+        <meta
+          name="keywords"
           content="mobiele airco, LG mobiele airco, Tosot mobiele airco, portable airconditioner, zonder installatie, verplaatsbare airco, energiezuinige airco, stille airco, wifi airco"
         />
         <link rel="canonical" href="https://staycoolairco.nl/mobiele-airco" />
       </Helmet>
 
-      <SchemaMarkup 
+      <SchemaMarkup
         type="Product"
         data={{
           "@type": "Product",
@@ -62,27 +61,12 @@ export default function MobieleAircoLanding() {
             "availability": "https://schema.org/InStock"
           },
           "image": "/images/products/mobiele-airco-header.webp",
-          "review": {
-            "@type": "Review",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "4.5",
-              "bestRating": "5"
-            },
-            "author": {
-              "@type": "Person",
-              "name": "StayCool Airco Klanten"
-            }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.5",
-            "reviewCount": "67"
-          }
+
+
         }}
       />
 
-      <ProductLandingHero 
+      <ProductLandingHero
         title="Mobiele Airco: Direct Verkoeling Zonder Installatie"
         subtitle="Flexibel • Energiezuinig • Geen Boren"
         description="Ontdek onze collectie hoogwaardige mobiele airconditioners. Geniet van directe verkoeling zonder vaste installatie, perfect voor huurwoningen of ruimtes waar een split airco niet mogelijk is."
@@ -99,7 +83,7 @@ export default function MobieleAircoLanding() {
         ]}
       />
 
-      <ProductLandingFeatures 
+      <ProductLandingFeatures
         title="Waarom Kiezen voor een Mobiele Airco?"
         subtitle="Ontdek de voordelen van een verplaatsbare airconditioner"
         features={features}
@@ -257,16 +241,16 @@ export default function MobieleAircoLanding() {
             {/* LG Mobiele Airco Card */}
             <div className="bg-white overflow-hidden shadow-lg rounded-lg border border-gray-200 transition-all duration-300 hover:shadow-xl">
               <div className="relative aspect-w-16 aspect-h-9 bg-gray-100">
-                <img 
-                  src="/images/products/mobiele airco/lg mobiele airco/lg-mobiele-airco-staycoolairco.webp" 
-                  alt="LG Mobiele Airco Dual Inverter Smart" 
+                <img
+                  src="/images/products/mobiele airco/lg mobiele airco/lg-mobiele-airco-staycoolairco.webp"
+                  alt="LG Mobiele Airco Dual Inverter Smart"
                   className="object-cover w-full h-64"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">LG Mobiele Airco Dual Inverter Smart</h3>
                 <p className="text-gray-600 mb-4">De krachtige en energiezuinige LG Mobiele Airco met dual inverter technologie voor ruimtes tot 43m².</p>
-                
+
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center">
                     <span className="text-sm font-medium text-gray-500">Capaciteit:</span>
@@ -298,16 +282,16 @@ export default function MobieleAircoLanding() {
             {/* Tosot Mobiele Airco Card */}
             <div className="bg-white overflow-hidden shadow-lg rounded-lg border border-gray-200 transition-all duration-300 hover:shadow-xl">
               <div className="relative aspect-w-16 aspect-h-9 bg-gray-100">
-                <img 
-                  src="/images/products/mobiele airco/tosot mobiele airco/tosot-mobiele-airco-staycoolairco-1.webp" 
-                  alt="Tosot MONA by GREE mobiele airco" 
+                <img
+                  src="/images/products/mobiele airco/tosot mobiele airco/tosot-mobiele-airco-staycoolairco-1.webp"
+                  alt="Tosot MONA by GREE mobiele airco"
                   className="object-cover w-full h-64"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Tosot MONA by GREE Mobiele Airco</h3>
                 <p className="text-gray-600 mb-4">Krachtige Tosot mobiele airco met hoge koelcapaciteit voor ruimtes tot 58m² en wifi-bediening.</p>
-                
+
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center">
                     <span className="text-sm font-medium text-gray-500">Capaciteit:</span>
@@ -339,7 +323,7 @@ export default function MobieleAircoLanding() {
         </div>
       </div>
 
-      <ProductLandingContact 
+      <ProductLandingContact
         title="Meer Informatie of Advies Nodig?"
         subtitle="Onze airco-experts helpen u graag bij het maken van de juiste keuze"
         brandName="Mobiele Airco"

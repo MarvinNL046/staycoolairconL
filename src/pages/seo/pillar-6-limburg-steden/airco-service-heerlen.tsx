@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Shield, Euro, Zap, Wind, ThermometerSun, Phone, Mail, Calculator, TrendingUp, Star, Award, Wrench } from 'lucide-react';
+import { CheckCircle,Shield,Phone,Mail,Star,Award,Wrench } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const AircoServiceHeerlen = () => {
   const breadcrumbItems = [
@@ -340,42 +338,42 @@ const AircoServiceHeerlen = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 <div className="bg-white border border-gray-200 rounded-lg p-4 text-center">
                   <Award className="h-8 w-8 mx-auto mb-2 text-sky-500" />
-                  <h4 className="font-semibold text-gray-900">Daikin</h4>
+                  <h3 className="font-semibold text-gray-900">Daikin</h3>
                   <p className="text-sm text-gray-600">Premium service</p>
                 </div>
                 <div className="bg-white border border-gray-200 rounded-lg p-4 text-center">
                   <Award className="h-8 w-8 mx-auto mb-2 text-sky-500" />
-                  <h4 className="font-semibold text-gray-900">Mitsubishi</h4>
+                  <h3 className="font-semibold text-gray-900">Mitsubishi</h3>
                   <p className="text-sm text-gray-600">Heavy & Electric</p>
                 </div>
                 <div className="bg-white border border-gray-200 rounded-lg p-4 text-center">
                   <Award className="h-8 w-8 mx-auto mb-2 text-sky-500" />
-                  <h4 className="font-semibold text-gray-900">LG</h4>
+                  <h3 className="font-semibold text-gray-900">LG</h3>
                   <p className="text-sm text-gray-600">Alle modellen</p>
                 </div>
                 <div className="bg-white border border-gray-200 rounded-lg p-4 text-center">
                   <Award className="h-8 w-8 mx-auto mb-2 text-sky-500" />
-                  <h4 className="font-semibold text-gray-900">Samsung</h4>
+                  <h3 className="font-semibold text-gray-900">Samsung</h3>
                   <p className="text-sm text-gray-600">Certified service</p>
                 </div>
                 <div className="bg-white border border-gray-200 rounded-lg p-4 text-center">
                   <Award className="h-8 w-8 mx-auto mb-2 text-sky-500" />
-                  <h4 className="font-semibold text-gray-900">Panasonic</h4>
+                  <h3 className="font-semibold text-gray-900">Panasonic</h3>
                   <p className="text-sm text-gray-600">Expert technicus</p>
                 </div>
                 <div className="bg-white border border-gray-200 rounded-lg p-4 text-center">
                   <Award className="h-8 w-8 mx-auto mb-2 text-sky-500" />
-                  <h4 className="font-semibold text-gray-900">Toshiba</h4>
+                  <h3 className="font-semibold text-gray-900">Toshiba</h3>
                   <p className="text-sm text-gray-600">Volledige service</p>
                 </div>
                 <div className="bg-white border border-gray-200 rounded-lg p-4 text-center">
                   <Award className="h-8 w-8 mx-auto mb-2 text-sky-500" />
-                  <h4 className="font-semibold text-gray-900">Fujitsu</h4>
+                  <h3 className="font-semibold text-gray-900">Fujitsu</h3>
                   <p className="text-sm text-gray-600">Onderdelen voorraad</p>
                 </div>
                 <div className="bg-white border border-gray-200 rounded-lg p-4 text-center">
                   <Award className="h-8 w-8 mx-auto mb-2 text-sky-500" />
-                  <h4 className="font-semibold text-gray-900">Gree/Tosot</h4>
+                  <h3 className="font-semibold text-gray-900">Gree/Tosot</h3>
                   <p className="text-sm text-gray-600">Specialist</p>
                 </div>
               </div>
@@ -390,7 +388,7 @@ const AircoServiceHeerlen = () => {
                     1
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Planning</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Planning</h3>
                     <p className="text-gray-600">
                       U plant uw onderhoudsbeurt online of telefonisch. We plannen bij voorkeur in het voorjaar (maart-mei) of najaar (september-november) voor optimale service-tijden.
                     </p>
@@ -402,7 +400,7 @@ const AircoServiceHeerlen = () => {
                     2
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Reiniging</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Reiniging</h3>
                     <p className="text-gray-600">
                       Onze technicus reinigt grondig de filters, binnen- en buitenunit, afvoer en ventilator. Dit verbetert de luchtkwaliteit en efficiency direct merkbaar.
                     </p>
@@ -414,7 +412,7 @@ const AircoServiceHeerlen = () => {
                     3
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Controle</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Controle</h3>
                     <p className="text-gray-600">
                       We controleren het koudemiddel niveau, testen alle functies, meten temperaturen, controleren elektrische aansluitingen en leidingen, en optimaliseren de instellingen.
                     </p>
@@ -426,7 +424,7 @@ const AircoServiceHeerlen = () => {
                     4
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Rapport</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapport</h3>
                     <p className="text-gray-600">
                       U ontvangt een uitgebreid onderhoudsrapport met bevindingen, uitgevoerde werkzaamheden en eventuele aanbevelingen voor de toekomst.
                     </p>
@@ -435,10 +433,10 @@ const AircoServiceHeerlen = () => {
               </div>
 
               <div className="bg-sky-50 border-l-4 border-sky-500 p-6 mb-8">
-                <h4 className="text-xl font-semibold text-gray-900 mb-2 flex items-center">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 flex items-center">
                   <Shield className="h-6 w-6 mr-2 text-sky-600" />
                   Onderhoudscontract Voordelen
-                </h4>
+                </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />

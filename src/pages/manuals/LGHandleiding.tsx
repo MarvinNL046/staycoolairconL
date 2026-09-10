@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Clock, CheckCircle, AlertCircle, Settings, Thermometer, Wind, Droplets } from 'lucide-react';
+import { Phone,Mail,MapPin,Clock,CheckCircle,AlertCircle,Settings,Thermometer,Wind,Droplets } from 'lucide-react';
 import ArticleLayout from '../../components/ArticleLayout';
 import MetaTags from '../../components/MetaTags';
 
@@ -230,7 +230,7 @@ const LGHandleiding: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-semibold mb-2">Dual Inverter Compressor</h4>
-                <p className="text-sm">Tot 70% energiebesparing en fluisterstil</p>
+                <p className="text-sm">situatieafhankelijke besparing en fluisterstil</p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2">ThinQ WiFi</h4>
@@ -238,7 +238,7 @@ const LGHandleiding: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-semibold mb-2">10 Year Warranty</h4>
-                <p className="text-sm">LG biedt 10 jaar garantie op de compressor</p>
+                <p className="text-sm">LG biedt garantie volgens offerte op de compressor</p>
               </div>
             </div>
           </div>

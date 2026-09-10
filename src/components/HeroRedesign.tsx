@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Play, Check, X, Calendar } from 'lucide-react';
+import { useState,useEffect } from 'react';
+import { Play,Check,X,Calendar } from 'lucide-react';
 import Button from './ui/Button';
 import MultiStepLeadForm from './MultiStepLeadForm';
 import TrustooWidget from './TrustooWidget';
@@ -44,13 +44,13 @@ export default function HeroRedesign() {
                 <span className="text-xs font-black uppercase tracking-widest text-quatt-dark">Bekijk onze bedrijfsfilm</span>
               </button>
 
-              <h2 className="text-5xl sm:text-7xl lg:text-8xl font-black text-quatt-dark leading-[0.85] tracking-tighter mb-10 italic">
-                De toekomst is <br />
-                <span className="text-quatt-orange">elektrisch <br className="hidden sm:block" /> verwarmen.</span>
-              </h2>
+              <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black text-quatt-dark leading-[0.85] tracking-tighter mb-10 italic">
+                Airco installateur <br />
+                <span className="text-quatt-orange">in Limburg</span>
+              </h1>
 
               <p className="text-xl sm:text-2xl text-gray-500 font-medium mb-12 tracking-tight max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                Schakel over op de meest efficiënte airco systemen en <span className="text-quatt-dark font-bold">bespaar direct 60%</span> op uw gasrekening.
+                Koel en verwarm uw woning met een passende airco. <span className="text-quatt-dark font-bold">Wij helpen u kiezen</span> en verzorgen de installatie in Limburg.
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-6">

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
-  CheckCircle, Shield, Droplets, AlertTriangle, Phone, Award, Settings,
+CheckCircle,Shield,Droplets,AlertTriangle,Phone,Award,Settings,
 } from 'lucide-react';
 import MetaTags from '../components/MetaTags';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -216,13 +216,7 @@ const AircoBijvullen: React.FC = () => {
             addressRegion: 'Limburg',
             addressCountry: 'NL',
           },
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: aggregateReviews.averageRating.toString(),
-            reviewCount: aggregateReviews.totalReviews.toString(),
-            bestRating: '5',
-            worstRating: '1',
-          },
+
         },
         areaServed: {
           '@type': 'AdministrativeArea',
@@ -378,10 +372,10 @@ const AircoBijvullen: React.FC = () => {
                 </p>
 
                 <div className="bg-red-50 border-l-4 border-red-500 rounded-lg p-6 my-8">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
                     <AlertTriangle className="h-6 w-6 text-red-500 mr-2" />
                     Zelf bijvullen is illegaal — en zinloos
-                  </h4>
+                  </h3>
                   <p className="text-gray-700 mb-2">
                     Particulieren mogen sinds 2015 wettelijk niet aan koudemiddel werken. Het is geen schemerzone — het is een EU-verordening (517/2014). Daarnaast:
                   </p>
@@ -469,7 +463,7 @@ const AircoBijvullen: React.FC = () => {
                   <ul className="space-y-2 text-gray-700">
                     <li>• Wij zijn geen vergelijkings-platform met onderaannemers — u krijgt elke keer ons eigen team, vaak Danny.</li>
                     <li>• Lekdetectie zit standaard in ons tarief. Bij goedkopere prijzen vrijwel altijd niet — en zonder lekdetectie staat u over zes weken weer aan de beurt.</li>
-                    <li>• 1 jaar garantie op het werk. Lekt dezelfde verbinding binnen 12 maanden? Kosteloos opgelost.</li>
+                    <li>• garantie volgens offerte op het werk. Lekt dezelfde verbinding binnen 12 maanden? Kosteloos opgelost.</li>
                     <li>• Vacuümtrekken volgens fabrieksspec — een stap die "snelle services" overslaan, en die binnen 6-12 maanden tot compressorschade leidt.</li>
                   </ul>
                   <p className="text-gray-700 mt-3">
@@ -744,7 +738,7 @@ const AircoBijvullen: React.FC = () => {
                     <li className="flex items-start"><CheckCircle className="h-5 w-5 text-sky-500 mr-2 flex-shrink-0 mt-0.5" />Vacuümtrekken</li>
                     <li className="flex items-start"><CheckCircle className="h-5 w-5 text-sky-500 mr-2 flex-shrink-0 mt-0.5" />Vullen volgens fabrieksspec</li>
                     <li className="flex items-start"><CheckCircle className="h-5 w-5 text-sky-500 mr-2 flex-shrink-0 mt-0.5" />Werkingstest en NEa-registratie</li>
-                    <li className="flex items-start"><CheckCircle className="h-5 w-5 text-sky-500 mr-2 flex-shrink-0 mt-0.5" />1 jaar garantie op het werk</li>
+                    <li className="flex items-start"><CheckCircle className="h-5 w-5 text-sky-500 mr-2 flex-shrink-0 mt-0.5" />garantie volgens offerte op het werk</li>
                   </ul>
                 </div>
 

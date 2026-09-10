@@ -1,6 +1,5 @@
-import React from 'react';
 import { m } from 'framer-motion';
-import { ArrowLeft, Thermometer, Euro, Zap, Snowflake, Sun, TrendingDown } from 'lucide-react';
+import { ArrowLeft,Thermometer,Euro,Zap,Snowflake,Sun,TrendingDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import MetaTags from '../../components/MetaTags';
 
@@ -9,7 +8,7 @@ export default function AircoInDeWinter() {
     <>
       <MetaTags
         title="Airco in de Winter: Verwarmen met Warmtepomp | StayCool Airco"
-        description="Ontdek hoe u uw airco optimaal kunt gebruiken voor verwarming in de winter. Bespaar tot 70% op verwarmingskosten met moderne warmtepomp technologie in Limburg."
+        description="Ontdek hoe u uw airco optimaal kunt gebruiken voor verwarming in de winter. Bekijk de mogelijke besparing op verwarmingskosten met moderne warmtepomp technologie in Limburg."
         keywords="airco winter, warmtepomp verwarming, airco verwarmen, energiebesparing winter, warmtepomp limburg, airco winterstand"
         canonicalUrl="https://staycoolairco.nl/blog/airco-in-de-winter"
         type="article"

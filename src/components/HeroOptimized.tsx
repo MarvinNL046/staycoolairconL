@@ -1,9 +1,8 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import { Phone, Mail, MapPin, ArrowRight, Shield, Clock, Thermometer, Timer, ShieldCheck, Send } from 'lucide-react';
+import React,{ useState,useCallback,useEffect } from 'react';
+import { Phone,ArrowRight,Shield,Clock,Thermometer,Timer,ShieldCheck,Send } from 'lucide-react';
 import { sendEmail } from '../utils/email';
 import toast from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
-import { trackInteraction, trackEvent } from '../utils/analytics';
+import { trackInteraction,trackEvent } from '../utils/analytics';
 import { trackPixelFormSubmission } from '../utils/facebook';
 import { trackAPIFormSubmission } from '../utils/conversionsAPI';
 
@@ -76,7 +75,7 @@ export default function HeroOptimized() {
     city: '',
     message: ''
   });
-  const navigate = useNavigate();
+
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -92,15 +91,15 @@ export default function HeroOptimized() {
 
     try {
       await sendEmail(formData);
-      
+
       trackEvent('form_submission', {
         form_name: 'hero_form',
         form_location: 'hero_section'
       });
-      
+
       // Track Facebook Pixel conversion (client-side) and get event ID
       const eventId = trackPixelFormSubmission('hero_form', true);
-      
+
       // Track with Conversions API (server-side) using same event ID for deduplication
       console.log('Hero form: Tracking with Conversions API...');
       trackAPIFormSubmission('hero_form', formData, 1650, eventId).catch(console.error);
@@ -113,7 +112,7 @@ export default function HeroOptimized() {
         city: '',
         message: ''
       });
-      
+
       // Redirect to thank you page after a short delay
       setTimeout(() => {
         window.location.href = 'https://staycoolairco.nl/tot-snel';
@@ -142,18 +141,18 @@ export default function HeroOptimized() {
                 <span className="font-medium">Direct duidelijkheid: Wij maken de offerte direct ter plekke bij u thuis</span>
               </div>
             </div>
-            
+
             <div className="h-[42px]">
               <span className="inline-block px-4 py-2 rounded-full bg-blue-500/20 text-blue-100">
-                ⚡ Bespaar tot 60% op verwarmingskosten
+                Koelen en verwarmen met één systeem
               </span>
             </div>
-            
+
             {/* Headline Text Carousel */}
             <TextCarousel />
-            
+
             <p className="mt-6 text-lg sm:text-xl text-gray-200 max-w-[45ch]">
-              Voorkom hoge terugleverkosten van uw zonnepanelen door slim te verwarmen met een airco. 
+              Voorkom hoge terugleverkosten van uw zonnepanelen door slim te verwarmen met een airco.
               Efficiënt verwarmen én koelen met één systeem.
             </p>
 
@@ -191,10 +190,10 @@ export default function HeroOptimized() {
                 </div>
                 <span className="relative z-10 text-sm mt-1">Kies zelf uw datum & tijd</span>
               </a>
-              
+
               <a
                 href="/products"
-                onClick={() => trackInteraction('hero', 'click', 'products_button')} 
+                onClick={() => trackInteraction('hero', 'click', 'products_button')}
                 className="inline-flex items-center justify-center px-8 sm:px-10 py-5 sm:py-6 border-2 border-blue-400 text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300"
               >
                 <span className="mr-2">Bekijk Producten</span>
@@ -224,12 +223,12 @@ export default function HeroOptimized() {
             <div className="absolute top-6 -right-12 w-40 bg-orange-500 text-white text-center transform rotate-45 py-1 z-10 shadow-md">
               <span className="text-sm font-medium">Binnen 24u reactie</span>
             </div>
-            
+
             <h2 className="text-2xl font-bold text-white mb-2">
               Ontvang <span className="text-orange-400">Gratis</span> Een Offerte Op Maat
             </h2>
             <p className="text-gray-200 mb-6">Én een persoonlijk besparingsadvies van onze experts</p>
-            
+
             {/* Trust badges above form */}
             <div className="flex justify-between items-center mb-6 px-2 py-1 bg-white/5 rounded-lg">
               <div className="flex items-center text-xs text-white">
@@ -245,7 +244,7 @@ export default function HeroOptimized() {
                 <span>Privacy Gewaarborgd</span>
               </div>
             </div>
-            
+
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-white mb-1">
@@ -343,7 +342,7 @@ export default function HeroOptimized() {
                   </>
                 )}
               </button>
-              
+
               {/* Form incentives and reassurance */}
               <div className="mt-4 text-center">
                 <p className="text-sm text-gray-300">

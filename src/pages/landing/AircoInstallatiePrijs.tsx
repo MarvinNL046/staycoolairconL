@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Phone, CheckCircle, Euro, Clock, Shield, ChevronDown, ArrowRight } from 'lucide-react';
+import { Phone,CheckCircle,Euro,Clock,Shield,ChevronDown,ArrowRight } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import ContactForm from '../../components/Contact';
@@ -11,25 +11,25 @@ const priceRows = [
     type: 'Mono-split (budget)',
     price: '€1.500 – €2.000',
     details: 'Tosot / Toshiba, 2.5–3.5 kW, A++ energie',
-    included: ['Binnenunit + buitenunit', 'Standaard leidingwerk', 'Montage & inbedrijfstelling', '5 jaar garantie'],
+    included: ['Binnenunit + buitenunit', 'Standaard leidingwerk', 'Montage & inbedrijfstelling', "garantie volgens offerte"],
   },
   {
     type: 'Mono-split (premium)',
     price: '€2.000 – €3.000',
     details: 'Daikin / Mitsubishi Heavy, A+++ energie',
-    included: ['Binnenunit + buitenunit', 'Standaard leidingwerk', 'Montage & inbedrijfstelling', '5 jaar garantie'],
+    included: ['Binnenunit + buitenunit', 'Standaard leidingwerk', 'Montage & inbedrijfstelling', "garantie volgens offerte"],
   },
   {
     type: 'Dual-zone multi-split',
     price: '€3.500 – €5.500',
     details: '1 buitenunit + 2 binnenunits, 2 kamers',
-    included: ['1 buitenunit + 2 binnenunits', 'Volledig leidingwerk', 'Montage & inbedrijfstelling', '5 jaar garantie'],
+    included: ['1 buitenunit + 2 binnenunits', 'Volledig leidingwerk', 'Montage & inbedrijfstelling', "garantie volgens offerte"],
   },
   {
     type: 'Triple-zone multi-split',
     price: '€5.500 – €8.000+',
     details: '1 buitenunit + 3 binnenunits, 3 kamers',
-    included: ['1 buitenunit + 3 binnenunits', 'Volledig leidingwerk', 'Montage & inbedrijfstelling', '5 jaar garantie'],
+    included: ['1 buitenunit + 3 binnenunits', 'Volledig leidingwerk', 'Montage & inbedrijfstelling', "garantie volgens offerte"],
   },
 ];
 
@@ -79,7 +79,7 @@ export default function AircoInstallatiePrijs() {
         data={{
           name: 'Airco Installatie Prijzen Limburg',
           serviceType: 'Airconditioning Installatie',
-          description: 'Transparante airco installatie prijzen in Limburg. Mono-split, multi-split en maatwerk systemen inclusief montage, materialen en 5 jaar garantie.',
+          description: "Transparante airco installatie prijzen in Limburg. Mono-split, multi-split en maatwerk systemen inclusief montage, materialen en garantie volgens offerte.",
           areaServed: {
             '@type': 'State',
             name: 'Limburg',
@@ -109,7 +109,8 @@ export default function AircoInstallatiePrijs() {
               Airco Installatie Prijs 2025 — Transparant &amp; Eerlijk
             </h1>
             <p className="text-base md:text-lg text-sky-100 mb-8">
-              Wat kost een airco installatie? Wij geven u een helder overzicht van de prijzen voor mono-split en multi-split systemen in Limburg. Inclusief unit, montage, leidingwerk en 5 jaar garantie. Geen verborgen kosten.
+
+              Wat kost een airco installatie? Wij geven u een helder overzicht van de prijzen voor mono-split en multi-split systemen in Limburg. Inclusief unit, montage, leidingwerk en garantie volgens offerte. Geen verborgen kosten.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -136,21 +137,21 @@ export default function AircoInstallatiePrijs() {
           <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 flex items-start gap-4">
             <Euro className="h-10 w-10 text-sky-500 flex-shrink-0" />
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-1">Vaste Transparante Prijs</h3>
+              <h2 className="text-xl font-semibold text-gray-900 mb-1">Vaste Transparante Prijs</h2>
               <p className="text-base text-gray-600">Inclusief unit, montage, leidingwerk en inbedrijfstelling. Wat u ziet is wat u betaalt.</p>
             </div>
           </div>
           <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 flex items-start gap-4">
             <Shield className="h-10 w-10 text-sky-500 flex-shrink-0" />
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-1">5 Jaar Garantie Inbegrepen</h3>
+              <h2 className="text-xl font-semibold text-gray-900 mb-1">garantie volgens offerte Inbegrepen</h2>
               <p className="text-base text-gray-600">Onze installatiegarantie is altijd inbegrepen in de prijs. U hoeft niets extra af te sluiten.</p>
             </div>
           </div>
           <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 flex items-start gap-4">
             <Clock className="h-10 w-10 text-sky-500 flex-shrink-0" />
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-1">Gratis Offerte Binnen 24u</h3>
+              <h2 className="text-xl font-semibold text-gray-900 mb-1">Gratis Offerte Binnen 24u</h2>
               <p className="text-base text-gray-600">U ontvangt een vrijblijvende offerte op maat binnen 24 uur na uw aanvraag.</p>
             </div>
           </div>

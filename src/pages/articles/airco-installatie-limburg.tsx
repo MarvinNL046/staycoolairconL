@@ -1,8 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { m } from 'framer-motion';
-import { Phone, Mail, MapPin, CheckCircle, ThermometerSun, Award } from 'lucide-react';
+import { Phone,Mail,MapPin,CheckCircle,ThermometerSun,Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AircoInstallatieLimburg() {
@@ -23,6 +22,7 @@ export default function AircoInstallatieLimburg() {
           name="keywords" 
           content="airco installatie limburg, airconditioning montage, airco plaatsing, airco monteur limburg, klimaatbeheersing installatie"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/airco-installatie-limburg" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
@@ -82,7 +82,7 @@ export default function AircoInstallatieLimburg() {
                 </div>
                 <ul className="space-y-2">
                   <li>✓ F-gassen gecertificeerd</li>
-                  <li>✓ 5 jaar garantie</li>
+                  <li>✓ garantie volgens offerte</li>
                   <li>✓ Vaste prijsafspraak</li>
                   <li>✓ 100% tevredenheid</li>
                 </ul>

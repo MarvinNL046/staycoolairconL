@@ -1,41 +1,30 @@
-import React, { useState } from 'react';
+import React,{ useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Euro, 
-  Calculator, 
-  Home, 
-  CheckCircle, 
-  Clock, 
-  Award,
-  TrendingUp,
-  Shield,
-  Phone,
-  ChevronRight,
-  Star,
-  Users,
-  Zap,
-  ThermometerSun,
-  Settings,
-  FileText,
-  HelpCircle,
-  ArrowRight,
-  Package,
-  Wrench,
-  Calendar,
-  MapPin,
-  AlertCircle,
-  Check
+import {
+Euro,
+Calculator,
+Home,
+CheckCircle,
+Clock,TrendingUp,
+Shield,
+Phone,
+ChevronRight,
+Star,Zap,Settings,
+FileText,
+HelpCircle,Package,
+Wrench,
+AlertCircle,
+Check
 } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import FAQSchema from '../../components/SEO/FAQSchema';
 import Breadcrumbs from '../../components/Breadcrumbs';
-import CallToAction from '../../components/CallToAction';
 import ContactForm from '../../components/Contact';
 import LazyImage from '../../components/LazyImage';
 
 const WatKostAircoInstallatieLanding: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('split');
+
   const [showAllFAQ, setShowAllFAQ] = useState(false);
   const [activeFAQ, setActiveFAQ] = useState<number | null>(null);
 
@@ -112,29 +101,7 @@ const WatKostAircoInstallatieLanding: React.FC = () => {
     }
   ];
 
-  const reviews = [
-    {
-      name: 'Peter van der Berg',
-      location: 'Maastricht',
-      rating: 5,
-      text: 'Transparante prijzen, geen verrassingen achteraf. Installatie binnen één dag klaar!',
-      date: '2 weken geleden'
-    },
-    {
-      name: 'Linda Jacobs',
-      location: 'Heerlen',
-      rating: 5,
-      text: 'Beste prijs-kwaliteit verhouding. Ze legden precies uit wat de kosten waren.',
-      date: '1 maand geleden'
-    },
-    {
-      name: 'Mark Hendriks',
-      location: 'Sittard',
-      rating: 5,
-      text: 'Eerlijke prijzen en uitstekende service. Aanrader!',
-      date: '3 weken geleden'
-    }
-  ];
+
 
   const faqItems = [
     {
@@ -177,7 +144,7 @@ const WatKostAircoInstallatieLanding: React.FC = () => {
     { id: 'vergelijking', label: 'Systemen Vergelijken', icon: Settings },
     { id: 'besparen', label: 'Bespaar op Kosten', icon: TrendingUp },
     { id: 'offerte', label: 'Gratis Offerte', icon: FileText },
-    { id: 'reviews', label: 'Klantbeoordelingen', icon: Star },
+    { id: 'reviews', label: 'Adviesen', icon: Star },
     { id: 'faq', label: 'Veelgestelde Vragen', icon: HelpCircle }
   ];
 
@@ -322,16 +289,16 @@ const WatKostAircoInstallatieLanding: React.FC = () => {
               </div>
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <div className="text-3xl font-bold">15+</div>
-                  <div className="text-sm opacity-90">Jaar Ervaring</div>
+                  <div className="text-3xl font-bold">Limburg</div>
+                  <div className="text-sm opacity-90">Werkgebied</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold">2.500+</div>
-                  <div className="text-sm opacity-90">Installaties</div>
+                  <div className="text-3xl font-bold">Op maat</div>
+                  <div className="text-sm opacity-90">Installatieadvies</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold">4.8/5</div>
-                  <div className="text-sm opacity-90">Klantscore</div>
+                  <div className="text-3xl font-bold">Persoonlijk</div>
+                  <div className="text-sm opacity-90">Advies</div>
                 </div>
               </div>
             </div>
@@ -400,7 +367,7 @@ const WatKostAircoInstallatieLanding: React.FC = () => {
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{data.name}</h3>
                   <p className="text-gray-600 mb-6">{data.description}</p>
-                  
+
                   <div className="space-y-2 mb-6">
                     <div className="flex justify-between">
                       <span>Airco unit:</span>
@@ -588,9 +555,8 @@ const WatKostAircoInstallatieLanding: React.FC = () => {
           </div>
 
           <div className="bg-white rounded-xl p-8 text-gray-900">
-            <ContactForm 
-              source="Wat Kost Airco Installatie Landing"
-              showPrivacyPolicy={true}
+            <ContactForm
+              inquiryContext="Wat Kost Airco Installatie Landing"
             />
           </div>
 
@@ -623,31 +589,12 @@ const WatKostAircoInstallatieLanding: React.FC = () => {
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-6 h-6 fill-current" />
               ))}
-              <span className="text-gray-700 ml-2">4.8/5 op basis van 250+ reviews</span>
+              <span className="text-gray-700 ml-2">klantervaringen</span>
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((review, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6">
-                <div className="flex items-center gap-1 mb-3">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-4 italic">"{review.text}"</p>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="font-semibold">{review.name}</p>
-                    <p className="text-sm text-gray-500 flex items-center gap-1">
-                      <MapPin className="w-3 h-3" />
-                      {review.location}
-                    </p>
-                  </div>
-                  <p className="text-sm text-gray-500">{review.date}</p>
-                </div>
-              </div>
-            ))}
+            <a className="text-blue-700 underline" href="https://www.google.com/search?q=staycool+airco" target="_blank" rel="noopener noreferrer">Bekijk actuele klantervaringen op Google</a>
           </div>
 
           <div className="text-center mt-8">

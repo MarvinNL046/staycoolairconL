@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import { build } from 'esbuild';
+const result = await build({ entryPoints: ['src/data/installationOffers.ts'], bundle: true, write: false, platform: 'node', format: 'esm' });
+const { installationOffers, priceIncludingVat } = await import('data:text/javascript;base64,' + Buffer.from(result.outputFiles[0].text).toString('base64'));
+const expected = new Map([['pular-25',157119],['pular-35',159539],['clivia-white-25',163229],['lg-standard-25',183262],['perfera-25',228901],['perfera-duo-25',384900]]);
+assert.equal(installationOffers.length, expected.size);
+assert.equal(new Set(installationOffers.map(p=>p.id)).size, expected.size);
+for (const p of installationOffers) assert.equal(priceIncludingVat(p.netCents,p.vatRate),expected.get(p.id),p.id);
+assert.equal(priceIncludingVat(10000,9),10900);
+assert.equal(priceIncludingVat(10000,0),10000);
+for (const args of [[0,21],[-1,21],[100.5,21],[10000,'reverse'],[10000,100]]) assert.throws(()=>priceIncludingVat(...args));
+console.log('Cashflow-verkoopprijzen: zes verwachte consumentenbedragen, btw-afronding en ongeldige invoer gecontroleerd.');

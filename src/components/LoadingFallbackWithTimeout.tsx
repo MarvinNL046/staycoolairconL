@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect,useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 interface LoadingFallbackWithTimeoutProps {
@@ -27,7 +27,7 @@ export default function LoadingFallbackWithTimeout({
       // Second timeout: auto-reload after additional 3 seconds
       setTimeout(() => {
         // Try to clear any problematic caches first
-        if ('caches' in window) {
+        if (typeof window.caches !== 'undefined') {
           caches.keys().then(names => {
             names.forEach(name => caches.delete(name));
           }).finally(() => {
@@ -45,7 +45,7 @@ export default function LoadingFallbackWithTimeout({
 
   const handleReload = () => {
     // Clear caches and force reload
-    if ('caches' in window) {
+    if (typeof window.caches !== 'undefined') {
       caches.keys().then(names => {
         names.forEach(name => caches.delete(name));
       }).finally(() => {

@@ -1,8 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { m } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Check, Star, Phone, Mail, MapPin } from 'lucide-react';
+import { Check,Phone } from 'lucide-react';
 import ProductCarousel from '../components/ProductCarousel';
 import SchemaMarkup from '../components/SchemaMarkup';
 import Breadcrumbs from '../components/Breadcrumbs';
@@ -43,7 +42,7 @@ export default function ProductModelTemplate({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={breadcrumbItems} />
 
-        <SchemaMarkup 
+        <SchemaMarkup
           type="Product"
           data={{
             name: `${brand} ${model}`,
@@ -58,21 +57,17 @@ export default function ProductModelTemplate({
               priceCurrency: "EUR",
               price: price ? parseFloat(price.replace(/[^0-9.]/g, '')) : undefined,
               availability: "https://schema.org/InStock",
-              priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString()
+
             },
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "4.8",
-              reviewCount: "50"
-            }
+
           }}
         />
 
         <Helmet>
           <title>{brand} {model} | Airco Specialist Limburg</title>
-          <meta 
-            name="description" 
-            content={`${brand} ${model} airconditioning - ${description} ✓ Gratis advies ✓ Professionele installatie ✓ 5 jaar garantie`}
+          <meta
+            name="description"
+            content={`${brand} ${model} airconditioning - ${description} ✓ Gratis advies ✓ Professionele installatie ✓ Garantie volgens offerte`}
           />
           <link rel="canonical" href={`https://staycoolairco.nl/products/${brand.toLowerCase()}/${slug}`} />
         </Helmet>

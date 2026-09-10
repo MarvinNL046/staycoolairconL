@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
@@ -60,13 +59,11 @@ export default function MetaTags({
   type = 'website',
   schema,
   faqs,
-  reviews,
   priceInfo,
   breadcrumbItems,
   productInfo,
   locationInfo,
   serviceType,
-  speakableContent = [],
   noIndex = false
 }: MetaTagsProps) {
   // Auto-derive canonical URL from current route when caller does not pass one.
@@ -109,12 +106,7 @@ export default function MetaTags({
     enhancedDescription += '.';
   }
   
-  // Add call-to-action if not already present
-  if (!enhancedDescription.includes('Nu')) {
-    enhancedDescription = enhancedDescription.endsWith('.') 
-      ? `${enhancedDescription.slice(0, -1)} | Nu vrijblijvend advies ontvangen.` 
-      : `${enhancedDescription} | Nu vrijblijvend advies ontvangen.`;
-  }
+  // Preserve the page author's complete description and intent-specific CTA.
   
   // Default schema for organization with enhanced local information
   const defaultSchema = {
@@ -158,30 +150,6 @@ export default function MetaTags({
   } : null;
   
   // Prepare Reviews schema if reviews provided
-  const reviewSchema = reviews && reviews.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": type === 'product' ? "Product" : "LocalBusiness",
-    "name": productInfo?.productName || "StayCool Airco",
-    "review": reviews.map(review => ({
-      "@type": "Review",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": review.rating,
-        "bestRating": "5"
-      },
-      "author": {
-        "@type": "Person",
-        "name": review.author
-      },
-      "reviewBody": review.reviewBody,
-      ...(review.datePublished && { "datePublished": review.datePublished })
-    })),
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": reviews.reduce((acc, r) => acc + r.rating, 0) / reviews.length,
-      "reviewCount": reviews.length
-    }
-  } : null;
   
   // Prepare Product schema if it's a product page with price info, enhanced with location
   const productSchema = type === 'product' && priceInfo && productInfo ? {
@@ -231,14 +199,11 @@ export default function MetaTags({
     "provider": {
       "@type": "LocalBusiness",
       "name": "StayCool Airco",
-      "address": locationInfo?.city ? {
+      "address": {
         "@type": "PostalAddress",
-        "addressLocality": locationInfo.city,
-        ...(locationInfo.region && { "addressRegion": locationInfo.region }),
-        ...(locationInfo.postalCode && { "postalCode": locationInfo.postalCode }),
-        "addressCountry": "NL"
-      } : {
-        "@type": "PostalAddress",
+        "streetAddress": "Aan de Bogen 11",
+        "addressLocality": "Nieuwstadt",
+        "postalCode": "6118 AS",
         "addressRegion": "Limburg",
         "addressCountry": "NL"
       }
@@ -256,27 +221,15 @@ export default function MetaTags({
     "description": description
   } : null;
   
-  // Prepare Speakable schema for voice search optimization
-  const speakableSchema = speakableContent.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": title,
-    "speakable": {
-      "@type": "SpeakableSpecification",
-      "cssSelector": [".faq-answer", ".speakable-content"],
-      "xpath": ["//div[@class='faq-answer']", "//div[@class='speakable-content']"]
-    }
-  } : null;
-  
+  // Combine explicit page schemas
+  // Speakable markup requires verified matching content selectors.
   // Combine all schemas
   const schemas = [
     schema || defaultSchema,
     faqSchema,
-    reviewSchema,
     productSchema,
     serviceSchema,
     breadcrumbSchema,
-    speakableSchema
   ].filter(Boolean);
 
   return (

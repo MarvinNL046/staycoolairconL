@@ -1,8 +1,7 @@
-import realReviewData from './realReviewData';
 
 // Optimized schema generators with all recommended fields and real review data
 export class OptimizedSchemaFactory {
-  
+
   // Enhanced LocalBusiness schema with all recommended fields
   static createLocalBusinessSchema(data: {
     name: string;
@@ -36,7 +35,7 @@ export class OptimizedSchemaFactory {
       "priceRange": "€€",
       "currenciesAccepted": "EUR",
       "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "Bank Transfer", "iDEAL"],
-      "description": "Specialist in airconditioning installatie, onderhoud en reparatie in Limburg. F-gassen gecertificeerd met meer dan 1000+ installaties.",
+      "description": "Specialist in airconditioning installatie, onderhoud en reparatie in Limburg. F-gassen gecertificeerd met ervaring in energieopslag.",
       "foundingDate": "2018",
       "slogan": "Koeling én Verwarming, Jaar Rond Comfort",
       "logo": {
@@ -153,13 +152,7 @@ export class OptimizedSchemaFactory {
           }
         ]
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": realReviewData.trustpilotStats.rating,
-        "reviewCount": realReviewData.trustpilotStats.reviewCount,
-        "bestRating": 5,
-        "worstRating": 1
-      },
+
       "sameAs": [
         "https://www.facebook.com/staycoolairco",
         "https://www.linkedin.com/company/staycoolairco",
@@ -217,33 +210,8 @@ export class OptimizedSchemaFactory {
           "warranty": "PT5Y"
         }
       }),
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": realReviewData.getReviewStats().averageRating,
-        "reviewCount": realReviewData.getReviewStats().totalReviews,
-        "bestRating": 5,
-        "worstRating": 1
-      },
-      "review": realReviewData.getSchemaReviews(3).map(review => ({
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": review.rating,
-          "bestRating": 5
-        },
-        "author": {
-          "@type": "Person",
-          "name": review.author
-        },
-        "reviewBody": review.reviewBody,
-        "datePublished": review.datePublished,
-        ...(review.location && {
-          "locationCreated": {
-            "@type": "Place",
-            "name": review.location
-          }
-        })
-      })),
+
+
       "additionalProperty": [
         ...(data.energyLabel ? [{
           "@type": "PropertyValue",
@@ -312,7 +280,7 @@ export class OptimizedSchemaFactory {
         }
       }),
       ...(data.chapters && data.chapters.length > 0 && {
-        "hasPart": data.chapters.map((chapter, index) => ({
+        "hasPart": data.chapters.map((chapter) => ({
           "@type": "Clip",
           "name": chapter.title,
           "description": chapter.description,

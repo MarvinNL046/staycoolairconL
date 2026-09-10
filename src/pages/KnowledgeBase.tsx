@@ -1,6 +1,5 @@
-import React from 'react';
 import { m } from 'framer-motion';
-import { BookOpen, ThermometerSun, Zap, Leaf, Settings, HelpCircle, ChevronRight, MapPin, Battery } from 'lucide-react';
+import { ThermometerSun,Zap,Leaf,Settings,HelpCircle,ChevronRight,MapPin,Battery } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Breadcrumbs from '../components/Breadcrumbs';
 import MetaTags from '../components/MetaTags';
@@ -18,7 +17,7 @@ export default function KnowledgeBase() {
     { label: 'Kennisbank', path: '/kennisbank' }
   ];
 
-  const categories = [
+  const categories: { title: string; icon: typeof MapPin; description: string; articles: Article[] }[] = [
     {
       title: 'Airco in Limburg',
       icon: MapPin,

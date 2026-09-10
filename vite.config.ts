@@ -1,8 +1,16 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { generateRoutingManifest } from './scripts/generate-routing-manifest.mjs';
+import { prerenderSite } from './scripts/prerender-site.mjs';
+import { configurePagePreview } from './scripts/preview-pages.mjs';
+import { optimizeProductImages } from './scripts/optimize-product-images.mjs';
+
+let publicEnv: Record<string, string | boolean> = {};
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), { name: 'routing-manifest', async buildStart() { await generateRoutingManifest(); } },
+    { name: 'prerender-site', apply: 'build', configResolved(config) { publicEnv = config.env; }, async closeBundle() { await optimizeProductImages('dist'); await prerenderSite('dist', publicEnv); } },
+    { name: 'page-preview', async configurePreviewServer(server) { await configurePagePreview(server); } }],
   server: {
     port: 5173,
     strictPort: true,

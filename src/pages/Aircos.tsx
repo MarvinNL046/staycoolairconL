@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Wind, Calculator, Shield, TrendingUp, Snowflake, Thermometer, Euro, Phone } from 'lucide-react';
+import { Wind,Calculator,Shield,TrendingUp,Snowflake,Thermometer,Euro,Phone } from 'lucide-react';
 import MetaTags from '../components/MetaTags';
 import Breadcrumbs from '../components/Breadcrumbs';
 import LazyImage from '../components/LazyImage';
@@ -14,12 +13,12 @@ export default function Aircos() {
   const voordelen = [
     {
       icon: <Euro className="h-8 w-8 text-sky-500" />,
-      titel: "Tot 60% energiebesparing",
+      titel: "situatieafhankelijke besparing",
       beschrijving: "Moderne warmtepompen zijn tot 5x efficiënter dan gasverwarming"
     },
     {
       icon: <Shield className="h-8 w-8 text-sky-500" />,
-      titel: "Tot 10 jaar garantie",
+      titel: "garantie volgens offerte",
       beschrijving: "LG biedt 10 jaar compressorgarantie, Daikin en Mitsubishi 7 jaar"
     },
     {
@@ -77,7 +76,7 @@ export default function Aircos() {
     <div className="min-h-screen bg-gray-50">
       <MetaTags
         title="Airco Kopen Limburg | Koelen & Verwarmen | StayCool Airco"
-        description="Airco kopen? ✓ Daikin, Mitsubishi, Tosot ✓ Tot 60% besparing ✓ 10 jaar garantie ✓ Koelen én verwarmen. Gratis advies!"
+        description="Airco kopen? ✓ Daikin, Mitsubishi, Tosot ✓ situatieafhankelijke besparing ✓ garantie volgens offerte ✓ Koelen én verwarmen. Gratis advies!"
       />
 
       {/* Hero Section */}
@@ -87,9 +86,9 @@ export default function Aircos() {
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <p className="text-4xl md:text-5xl font-bold mb-6">
                 Premium Airco Systemen
-              </h2>
+              </p>
               <p className="text-xl mb-6 text-sky-50">
                 Jaar rond comfort met energiezuinige warmtepompen. Koelen in de zomer, verwarmen in de winter.
               </p>
@@ -151,15 +150,15 @@ export default function Aircos() {
               </span>
             </h1>
             <p className="text-xl sm:text-2xl text-gray-700 max-w-4xl mx-auto mb-8">
-              Bij StayCool Airco vindt u <strong className="text-blue-600">premium warmtepompen</strong> die zowel koelen als verwarmen.
-              Tot 60% energiebesparing en 10 jaar garantie op topmerken.
+              Bij StayCool Airco vindt u <strong className="text-blue-600">premium warmtepompen</strong>  die zowel koelen als verwarmen.
+              situatieafhankelijke besparing en garantie volgens offerte op topmerken.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-gray-600">
               <div className="flex items-center">
                 <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="font-medium">Tot 60% besparing</span>
+                <span className="font-medium">situatieafhankelijke besparing</span>
               </div>
               <div className="flex items-center">
                 <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -171,7 +170,7 @@ export default function Aircos() {
                 <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="font-medium">10 jaar garantie (LG)</span>
+                <span className="font-medium">garantie volgens offerte (LG)</span>
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, CheckCircle, Star, Clock, Shield, Wrench, Award, ChevronDown, ArrowRight } from 'lucide-react';
+import { MapPin,Phone,CheckCircle,Star,Clock,Shield,Wrench,Award,ChevronDown,ArrowRight } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import ContactForm from '../../components/Contact';
@@ -59,7 +59,7 @@ export default function AircoInstallatieLimburg() {
         <title>Airco Installatie Limburg | Erkend Installateur | StayCool Airco</title>
         <meta
           name="description"
-          content="Airco installatie in Limburg door erkend installateur. ✓ F-gassen gecertificeerd ✓ Binnen 1-3 weken geïnstalleerd ✓ 5 jaar garantie. Gratis offerte aanvragen!"
+          content="Airco installatie in Limburg door erkend installateur. ✓ F-gassen gecertificeerd ✓ Binnen 1-3 weken geïnstalleerd ✓ garantie volgens offerte. Gratis offerte aanvragen!"
         />
         <link rel="canonical" href="https://staycoolairco.nl/airco-installatie-limburg" />
       </Helmet>
@@ -94,7 +94,8 @@ export default function AircoInstallatieLimburg() {
               Airco Installatie in Limburg — Erkend &amp; Betrouwbaar
             </h1>
             <p className="text-base md:text-lg text-sky-100 mb-8">
-              StayCool Airco is uw erkende airco installateur in heel Limburg. F-gassen gecertificeerd, STEK erkend en met meer dan 15 jaar ervaring. Wij installeren split airco's van topmerken als Daikin, Mitsubishi Heavy Industries en LG — inclusief 5 jaar garantie op de installatie.
+
+              StayCool Airco is uw erkende airco installateur in heel Limburg. F-gassen gecertificeerd, STEK erkend en met meer dan 15 jaar ervaring. Wij installeren split airco's van topmerken als Daikin, Mitsubishi Heavy Industries en LG — inclusief garantie volgens offerte op de installatie.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -134,7 +135,7 @@ export default function AircoInstallatieLimburg() {
             </div>
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
               <Award className="h-10 w-10 text-sky-500 mb-4" />
-              <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-2">5 Jaar Garantie</h3>
+              <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-2">garantie volgens offerte</h3>
               <p className="text-base md:text-lg text-gray-600">Naast de fabrieksgarantie bieden wij 5 jaar installatiegarantie. U bent volledig gedekt na onze werkzaamheden.</p>
             </div>
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
@@ -187,7 +188,7 @@ export default function AircoInstallatieLimburg() {
               <ul className="space-y-2">
                 <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> Binnenunit + buitenunit</li>
                 <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> Leidingwerk inbegrepen</li>
-                <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> 5 jaar garantie</li>
+                <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />  garantie volgens offerte</li>
               </ul>
             </div>
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-sky-400 ring-2 ring-sky-400">
@@ -198,7 +199,7 @@ export default function AircoInstallatieLimburg() {
               <ul className="space-y-2">
                 <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> 2 binnenunits</li>
                 <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> Alle leidingwerk</li>
-                <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" /> 5 jaar garantie</li>
+                <li className="flex items-center gap-2 text-sm text-gray-600"><CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />  garantie volgens offerte</li>
               </ul>
             </div>
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">

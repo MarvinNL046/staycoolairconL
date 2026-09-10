@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { Phone, Mail, MapPin, MessageSquare, Calendar, Clock, CheckCircle, ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import React,{ useState } from 'react';
+import { Phone,Mail,MapPin,MessageSquare,Calendar,Clock,CheckCircle,ArrowRight } from 'lucide-react';
 import { sendEmail } from '../utils/email';
-import { trackFormSubmission, trackInteraction } from '../utils/analytics';
+import { trackFormSubmission,trackInteraction } from '../utils/analytics';
 import { trackPixelFormSubmission } from '../utils/facebook';
 import { trackAPIFormSubmission } from '../utils/conversionsAPI';
-import toast, { Toaster } from 'react-hot-toast';
+import toast,{ Toaster } from 'react-hot-toast';
 import { requestIdleCallbackPolyfill } from '../utils/requestIdleCallback';
 import Card from './ui/Card';
 import Button from './ui/Button';
+import ServiceNoticePopup from './ServiceNoticePopup';
 
 interface FormData {
   name: string;
@@ -26,10 +26,9 @@ const initialFormState: FormData = {
   message: ''
 };
 
-export default function Contact() {
+export default function Contact({ inquiryContext = '', inquiryLabel = 'Uw geselecteerde set:', formTitle = 'Stuur een bericht', formIntro = 'Vul het formulier in en wij nemen contact met u op.' }: { inquiryContext?: string; inquiryLabel?: string; formTitle?: string; formIntro?: string } = {}) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormData>(initialFormState);
-  const navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -51,7 +50,7 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      await sendEmail(formData);
+      await sendEmail({ ...formData, message: inquiryContext ? `Interesse in: ${inquiryContext}\n\n${formData.message}` : formData.message });
 
       try {
         trackFormSubmission('contact_form', true);
@@ -150,18 +149,19 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
 
           {/* Contact Info Card */}
-          <Card padding="lg" className="h-full">
+          <Card padding="none" className="h-full p-4 sm:p-10">
             <h3 className="text-2xl font-bold text-quatt-dark mb-8">Direct Contact</h3>
+            <ServiceNoticePopup />
             <div className="space-y-8">
               <a
                 href="tel:0462021430"
-                className="flex items-start group"
+                className="flex flex-col sm:flex-row items-start group"
                 onClick={() => trackInteraction('contact', 'click_phone')}
               >
                 <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center text-quatt-orange group-hover:bg-quatt-orange group-hover:text-white transition-colors shrink-0">
                   <Phone className="h-6 w-6" />
                 </div>
-                <div className="ml-6">
+                <div className="min-w-0 mt-3 sm:mt-0 sm:ml-6 break-words">
                   <span className="block text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">Telefoon</span>
                   <span className="text-xl font-bold text-quatt-dark group-hover:text-quatt-orange transition-colors">046 202 1430</span>
                   <span className="block text-sm text-gray-500 mt-1">Ma-Do: 09:00 - 17:00 | Vr: 09:00 - 16:00</span>
@@ -170,13 +170,13 @@ export default function Contact() {
 
               <a
                 href="https://wa.me/31636481054"
-                className="flex items-start group"
+                className="flex flex-col sm:flex-row items-start group"
                 onClick={() => trackInteraction('contact', 'click_whatsapp')}
               >
                 <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center text-green-600 group-hover:bg-green-600 group-hover:text-white transition-colors shrink-0">
                   <MessageSquare className="h-6 w-6" />
                 </div>
-                <div className="ml-6">
+                <div className="min-w-0 mt-3 sm:mt-0 sm:ml-6 break-words">
                   <span className="block text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">WhatsApp</span>
                   <span className="text-xl font-bold text-quatt-dark group-hover:text-green-600 transition-colors">06 36481054</span>
                   <span className="block text-sm text-gray-500 mt-1">Snel antwoord</span>
@@ -185,23 +185,23 @@ export default function Contact() {
 
               <a
                 href="mailto:info@staycoolairco.nl"
-                className="flex items-start group"
+                className="flex flex-col sm:flex-row items-start group"
                 onClick={() => trackInteraction('contact', 'click_email')}
               >
                 <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors shrink-0">
                   <Mail className="h-6 w-6" />
                 </div>
-                <div className="ml-6">
+                <div className="min-w-0 mt-3 sm:mt-0 sm:ml-6 break-words">
                   <span className="block text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">Email</span>
                   <span className="text-xl font-bold text-quatt-dark group-hover:text-blue-600 transition-colors">info@staycoolairco.nl</span>
                 </div>
               </a>
 
-              <div className="flex items-start">
+              <div className="flex flex-col sm:flex-row items-start">
                 <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-gray-500 shrink-0">
                   <MapPin className="h-6 w-6" />
                 </div>
-                <div className="ml-6">
+                <div className="min-w-0 mt-3 sm:mt-0 sm:ml-6 break-words">
                   <span className="block text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">Locatie</span>
                   <p className="text-quatt-dark font-medium">Aan De Bogen 11</p>
                   <p className="text-quatt-dark font-medium">6118AS Nieuwstadt</p>
@@ -212,10 +212,11 @@ export default function Contact() {
           </Card>
 
           {/* Contact Form Card */}
-          <Card padding="lg" className="h-full">
-            <h3 className="text-2xl font-bold text-quatt-dark mb-2">Stuur een bericht</h3>
-            <p className="text-gray-600 mb-8">Vul het formulier in en wij nemen binnen 24 uur contact op.</p>
+          <Card padding="none" className="h-full p-4 sm:p-10">
+            <h3 id="contact-aanvraag" className="scroll-mt-28 text-2xl font-bold text-quatt-dark mb-2">{formTitle}</h3>
+            <p className="text-gray-600 mb-8">{formIntro}</p>
 
+            {inquiryContext && <p className="mb-5 rounded-lg bg-blue-50 p-4 text-gray-800" aria-live="polite"><strong>{inquiryLabel}</strong> {inquiryContext}</p>}
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-quatt-dark mb-1.5">
@@ -234,7 +235,7 @@ export default function Contact() {
                 />
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-quatt-dark mb-1.5">
                     E-mail

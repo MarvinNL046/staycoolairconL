@@ -1,4 +1,4 @@
-import { GA_TRACKING_ID, GA_TRACKING_ID_SECONDARY } from '../config/analytics';
+import { GA_TRACKING_ID,GA_TRACKING_ID_SECONDARY } from '../config/analytics';
 
 // Google Analytics event tracking with error handling
 export const trackEvent = (eventName: string, params?: Record<string, any>) => {

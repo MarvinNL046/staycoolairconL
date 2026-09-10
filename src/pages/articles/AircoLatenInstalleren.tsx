@@ -1,7 +1,6 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import MetaTags from '../../components/MetaTags';
-import { ArrowLeft, Wrench, Calculator, ClipboardCheck, ShieldCheck, FileWarning, HelpCircle } from 'lucide-react';
+import { ArrowLeft,Wrench,Calculator,ClipboardCheck,ShieldCheck,FileWarning,HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AircoLatenInstalleren() {
@@ -366,7 +365,7 @@ export default function AircoLatenInstalleren() {
                 <li>Meer dan 10 jaar ervaring in Limburg</li>
                 <li>Erkend dealer van toonaangevende merken</li>
                 <li>Gratis vooronderzoek en advies</li>
-                <li>5 jaar garantie op installatie</li>
+                <li>garantie volgens offerte op installatie</li>
                 <li>Jaarlijks onderhoudsplan beschikbaar</li>
                 <li>Priority service bij storingen</li>
               </ul>

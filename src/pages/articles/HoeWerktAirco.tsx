@@ -1,8 +1,7 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import MetaTags from '../../components/MetaTags';
 import Breadcrumbs from '../../components/Breadcrumbs';
-import { ArrowLeft, Thermometer, Wind, Droplets, Sun, Zap } from 'lucide-react';
+import { ArrowLeft,Thermometer,Sun,Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function HowAircoWorks() {
@@ -38,7 +37,7 @@ export default function HowAircoWorks() {
           },
           {
             question: "Hoe lang gaat een airco mee?",
-            answer: "Een kwalitatieve airco gaat bij goed onderhoud 15-20 jaar mee. De compressor heeft meestal 10 jaar garantie van de fabrikant."
+            answer: "Een kwalitatieve airco gaat bij goed onderhoud 15-20 jaar mee. De compressor heeft meestal garantie volgens offerte van de fabrikant."
           },
           {
             question: "Kan een airco ook luchtvochtigheid regelen?",
@@ -71,7 +70,7 @@ export default function HowAircoWorks() {
             "@id": "https://staycoolairco.nl/kennisbank/hoe-werkt-airco"
           },
           "datePublished": "2024-01-01",
-          "dateModified": new Date().toISOString().split('T')[0]
+
         }}
       />
 
@@ -79,10 +78,10 @@ export default function HowAircoWorks() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumbs */}
           <Breadcrumbs items={breadcrumbItems} />
-          
+
           {/* Back to Knowledge Base Link */}
           <nav className="mb-8">
-            <Link 
+            <Link
               to="/kennisbank"
               className="inline-flex items-center text-blue-600 hover:text-blue-700"
             >
@@ -109,8 +108,8 @@ export default function HowAircoWorks() {
           <div className="prose prose-lg max-w-none">
             <h2>Het basisprincipe</h2>
             <p>
-              Een airconditioner werkt volgens hetzelfde principe als een koelkast: 
-              het verplaatst warmte van binnen naar buiten. Dit proces gebeurt door 
+              Een airconditioner werkt volgens hetzelfde principe als een koelkast:
+              het verplaatst warmte van binnen naar buiten. Dit proces gebeurt door
               middel van een koudemiddel dat door verschillende componenten circuleert.
             </p>
 
@@ -128,29 +127,29 @@ export default function HowAircoWorks() {
             </div>
 
             <h2>Het proces stap voor stap</h2>
-            
+
             <h3>1. Warmte opnemen (Verdamper)</h3>
             <p>
-              Het proces begint in de verdamper, waar het vloeibare koudemiddel 
-              verdampt bij lage druk. Tijdens dit proces absorbeert het koudemiddel 
+              Het proces begint in de verdamper, waar het vloeibare koudemiddel
+              verdampt bij lage druk. Tijdens dit proces absorbeert het koudemiddel
               warmte uit de binnenlucht, waardoor deze afkoelt.
             </p>
 
             <h3>2. Compressie (Compressor)</h3>
             <p>
-              Het gasvormige koudemiddel wordt vervolgens samengeperst door de 
+              Het gasvormige koudemiddel wordt vervolgens samengeperst door de
               compressor. Hierdoor stijgt de druk en temperatuur van het gas.
             </p>
 
             <h3>3. Warmte afgeven (Condensor)</h3>
             <p>
-              In de condensor wordt de warmte afgegeven aan de buitenlucht, 
+              In de condensor wordt de warmte afgegeven aan de buitenlucht,
               waardoor het koudemiddel weer vloeibaar wordt.
             </p>
 
             <h3>4. Drukvermindering (Expansieventiel)</h3>
             <p>
-              Het expansieventiel verlaagt de druk van het vloeibare koudemiddel, 
+              Het expansieventiel verlaagt de druk van het vloeibare koudemiddel,
               waarna het proces opnieuw begint.
             </p>
 
@@ -160,8 +159,8 @@ export default function HowAircoWorks() {
                 Energiebesparing
               </h3>
               <p className="mb-0">
-                Moderne airconditioners zijn zeer efficiënt en kunnen tot wel 4-5 keer 
-                meer koeling of verwarming produceren dan de elektrische energie die 
+                Moderne airconditioners zijn zeer efficiënt en kunnen tot wel 4-5 keer
+                meer koeling of verwarming produceren dan de elektrische energie die
                 ze verbruiken.
               </p>
             </div>
@@ -172,12 +171,12 @@ export default function HowAircoWorks() {
             </p>
             <ul>
               <li>
-                <strong>Split-unit:</strong> Bestaat uit een binnen- en buitenunit. 
-                De binnenunit bevat de verdamper, de buitenunit de compressor en 
+                <strong>Split-unit:</strong> Bestaat uit een binnen- en buitenunit.
+                De binnenunit bevat de verdamper, de buitenunit de compressor en
                 condensor.
               </li>
               <li>
-                <strong>Mono-block:</strong> Alle componenten zitten in één unit, 
+                <strong>Mono-block:</strong> Alle componenten zitten in één unit,
                 meestal met een luchtslang naar buiten.
               </li>
             </ul>
@@ -188,9 +187,9 @@ export default function HowAircoWorks() {
                 Verwarmen met een airco
               </h3>
               <p>
-                Moderne airconditioners kunnen ook verwarmen door het proces om te 
-                keren. De binnenunit werkt dan als condensor en de buitenunit als 
-                verdamper. Dit maakt ze zeer geschikt voor energiezuinig verwarmen, 
+                Moderne airconditioners kunnen ook verwarmen door het proces om te
+                keren. De binnenunit werkt dan als condensor en de buitenunit als
+                verdamper. Dit maakt ze zeer geschikt voor energiezuinig verwarmen,
                 vooral in combinatie met zonnepanelen.
               </p>
             </div>
@@ -215,7 +214,7 @@ export default function HowAircoWorks() {
             className="mt-16"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Veelgestelde vragen over airco werking</h2>
-            
+
             <div className="space-y-6">
               <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
                 <h3 className="px-6 py-4 bg-gray-50 font-semibold text-gray-900">
@@ -240,7 +239,7 @@ export default function HowAircoWorks() {
                   Hoe lang gaat een airco mee?
                 </h3>
                 <div className="px-6 py-4 faq-answer speakable-content">
-                  <p>Een kwalitatieve airco gaat bij goed onderhoud 15-20 jaar mee. De compressor heeft meestal 10 jaar garantie van de fabrikant.</p>
+                  <p>Een kwalitatieve airco gaat bij goed onderhoud 15-20 jaar mee. De compressor heeft meestal garantie volgens offerte van de fabrikant.</p>
                 </div>
               </div>
 

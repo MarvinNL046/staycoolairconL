@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Check, Phone } from 'lucide-react';
+import { Menu,X,Check,Phone } from 'lucide-react';
 import Logo from './Logo';
 import Button from './ui/Button';
 import { trackEvent } from '../utils/analytics';
@@ -42,13 +42,14 @@ export default function Navbar() {
             </span>
             <span className="flex items-center gap-2 hidden lg:flex">
               <Check className="w-3.5 h-3.5 text-quatt-orange" />
-              4,7/5 uit 174 reviews
+
+              Advies voor uw woning
             </span>
           </div>
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-2">
               <Check className="w-3.5 h-3.5 text-quatt-orange" />
-              Binnen 2 weken in huis
+              Planning in overleg
             </span>
           </div>
         </div>
@@ -109,7 +110,7 @@ export default function Navbar() {
           zou `fixed inset-0` daardoor tegen de 96px navbalk rekenen i.p.v. de viewport, waardoor
           het menu een onzichtbaar strookje werd. z-[45] zit boven de sticky CTA (z-40) maar onder
           de navbalk (z-50), zodat de X-sluitknop bereikbaar blijft. */}
-      <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Hoofdmenu" className={`fixed inset-0 bg-white z-[45] transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full pointer-events-none'} md:hidden pt-24 px-6 overflow-y-auto`}>
+      <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Hoofdmenu" className={`fixed inset-0 bg-white z-[45] transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'hidden'} md:hidden pt-24 px-6 overflow-y-auto`}>
         <div className="flex flex-col space-y-6 text-2xl font-black text-quatt-dark tracking-tight">
           <Link to="/products" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Airco's</Link>
           <Link to="/thuisbatterijen" onClick={() => setIsOpen(false)} className="border-b border-gray-100 pb-4">Thuisbatterijen</Link>

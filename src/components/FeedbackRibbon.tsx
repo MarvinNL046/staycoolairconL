@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { X, MessageSquare } from 'lucide-react';
+import React,{ useState } from 'react';
+import { X,MessageSquare } from 'lucide-react';
 import { sendEmail } from '../utils/email';
 import toast from 'react-hot-toast';
 

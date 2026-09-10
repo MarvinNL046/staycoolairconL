@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -277,7 +276,7 @@ export default function AircoOfferteMaastricht() {
 
               <div className="not-prose grid md:grid-cols-2 gap-4 my-6">
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
-                  <h4 className="font-bold mb-2 text-blue-900">1. Leidinglengte onderschatten</h4>
+                  <h3 className="font-bold mb-2 text-blue-900">1. Leidinglengte onderschatten</h3>
                   <p className="text-sm text-gray-700 mb-0">
                     In een Binnenstadspand vanaf de Sint-Servaasbrug richting Maastrichter Brugstraat lopen leidingen
                     vaak 15 m door drie tussenmuren. Offertes met "5 m standaard" lijken goedkoop maar worden in de
@@ -285,7 +284,7 @@ export default function AircoOfferteMaastricht() {
                   </p>
                 </div>
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
-                  <h4 className="font-bold mb-2 text-blue-900">2. Wel of geen vergunning inbegrepen</h4>
+                  <h3 className="font-bold mb-2 text-blue-900">2. Wel of geen vergunning inbegrepen</h3>
                   <p className="text-sm text-gray-700 mb-0">
                     Eén offerte regelt de monumentenvergunning voor u (€300–€500 meer, inclusief begeleiding),
                     de andere zegt "zelf regelen". Dat lijkt €500 verschil, maar zelf doen kost u 8 weken en vaak
@@ -293,7 +292,7 @@ export default function AircoOfferteMaastricht() {
                   </p>
                 </div>
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
-                  <h4 className="font-bold mb-2 text-blue-900">3. VvE-proces meegerekend of niet</h4>
+                  <h3 className="font-bold mb-2 text-blue-900">3. VvE-proces meegerekend of niet</h3>
                   <p className="text-sm text-gray-700 mb-0">
                     In Céramique of Wyck is een VvE-traject standaard 2–4 uur werk van de installateur: tekening maken,
                     geluidsberekening, ALV-presentatie. Dat is €200–€400 die in sommige offertes wel en in andere niet
@@ -301,7 +300,7 @@ export default function AircoOfferteMaastricht() {
                   </p>
                 </div>
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
-                  <h4 className="font-bold mb-2 text-blue-900">4. Toegankelijkheid buitenunit</h4>
+                  <h3 className="font-bold mb-2 text-blue-900">4. Toegankelijkheid buitenunit</h3>
                   <p className="text-sm text-gray-700 mb-0">
                     Een 5e verdieping aan de Avenue Céramique vraagt een hoogwerker (€250–€400 dagtarief). Een
                     rijtjeshuis in Heer gewoon een ladder. Niet elke offerte benoemt dit vooraf.
@@ -340,7 +339,7 @@ export default function AircoOfferteMaastricht() {
               </p>
 
               <div className="not-prose bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r my-6">
-                <h4 className="font-bold text-amber-900 mb-3">Typische kostenposten voor een monumentale offerte</h4>
+                <h3 className="font-bold text-amber-900 mb-3">Typische kostenposten voor een monumentale offerte</h3>
                 <ul className="text-sm text-gray-700 space-y-2 mb-0">
                   <li>
                     <strong>Leges gemeente Maastricht:</strong> €150 – €500, afhankelijk van ingreep.
@@ -379,7 +378,7 @@ export default function AircoOfferteMaastricht() {
               <div className="not-prose grid md:grid-cols-2 gap-4 my-6">
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
                   <div className="text-2xl font-bold text-blue-600 mb-2">Week 1</div>
-                  <h4 className="font-bold mb-2">Inmeting + dossier</h4>
+                  <h3 className="font-bold mb-2">Inmeting + dossier</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Onze monteur meet bij u thuis, maakt gevel-tekening en geluidsberekening. U ontvangt een
                     compleet VvE-dossier dat u kunt indienen.
@@ -387,7 +386,7 @@ export default function AircoOfferteMaastricht() {
                 </div>
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
                   <div className="text-2xl font-bold text-blue-600 mb-2">Week 2–4</div>
-                  <h4 className="font-bold mb-2">VvE-bestuur beoordeelt</h4>
+                  <h3 className="font-bold mb-2">VvE-bestuur beoordeelt</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Het bestuur bekijkt het dossier. Vaak stellen ze technische vragen; onze monteur beantwoordt die
                     direct. Soms wordt verwezen naar de eerstvolgende ALV.
@@ -395,7 +394,7 @@ export default function AircoOfferteMaastricht() {
                 </div>
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
                   <div className="text-2xl font-bold text-blue-600 mb-2">Week 4–6</div>
-                  <h4 className="font-bold mb-2">ALV-besluit</h4>
+                  <h3 className="font-bold mb-2">ALV-besluit</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Bij de Algemene Ledenvergadering volgt stemming. 80% van onze klanten krijgt goedkeuring mits
                     het dossier een stille unit, trillingsisolatie en nette gevelplaatsing laat zien.
@@ -403,7 +402,7 @@ export default function AircoOfferteMaastricht() {
                 </div>
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
                   <div className="text-2xl font-bold text-blue-600 mb-2">Week 6–8</div>
-                  <h4 className="font-bold mb-2">Installatie</h4>
+                  <h3 className="font-bold mb-2">Installatie</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Na schriftelijke VvE-goedkeuring plannen we installatie. Meestal 1 werkdag. Inclusief F-gassen-
                     rapport en volledige oplevering.

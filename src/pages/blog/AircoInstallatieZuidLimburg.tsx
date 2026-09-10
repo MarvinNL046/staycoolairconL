@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -77,12 +76,12 @@ export default function AircoInstallatieZuidLimburg() {
             <div className="prose prose-lg max-w-none">
               {/* Gratis Onderhoud CTA */}
               <div className="not-prose bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6 rounded-lg shadow-lg mb-8">
-                <h3 className="text-2xl font-bold mb-3 flex items-center">
+                <h2 className="text-2xl font-bold mb-3 flex items-center">
                   <svg className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   Professionele installatie door F-gassen gecertificeerde monteurs
-                </h3>
+                </h2>
                 <p className="mb-4">
                   Al onze monteurs zijn F-gassen gecertificeerd en installeren uw airco volgens de hoogste normen. 
                   Binnen 2 dagen geïnstalleerd, inclusief garantie en de beste service in heel Zuid-Limburg!

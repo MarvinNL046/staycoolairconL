@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { m } from 'framer-motion';
-import { Check, Award } from 'lucide-react';
-import { trackProductInteraction, trackInteraction } from '../utils/analytics';
+import { Check,Award } from 'lucide-react';
+import { trackProductInteraction,trackInteraction } from '../utils/analytics';
 
 export default function Products() {
   // Track product section view

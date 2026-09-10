@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, X, ArrowRight } from 'lucide-react';
+import { Check,X,ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export interface ComparisonItem {

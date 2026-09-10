@@ -2,7 +2,6 @@
 
 // Script to run schema validation audit and generate optimization report
 import { schemaAudit } from '../utils/schemaAudit';
-import { validator } from '../utils/schemaValidator';
 
 console.log('🔍 Starting Schema Markup Audit...\n');
 

@@ -1,6 +1,5 @@
-import React from 'react';
 import ArticleLayout from '../../components/ArticleLayout';
-import { MapPin, Ruler, Volume2, Wind, AlertTriangle, CheckCircle, Sun, HelpCircle } from 'lucide-react';
+import { MapPin,Ruler,Volume2,Wind,AlertTriangle,CheckCircle,Sun,HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AircoBuitenunitPlaatsing = () => {

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { m, AnimatePresence } from 'framer-motion';
+import { useState,useEffect } from 'react';
+import { m,AnimatePresence } from 'framer-motion';
 import { Cookie } from 'lucide-react';
 
 export default function CookieConsent() {

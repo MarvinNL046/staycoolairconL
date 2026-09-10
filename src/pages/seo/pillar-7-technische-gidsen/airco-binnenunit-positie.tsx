@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Wind, CheckCircle, ThermometerSun, Maximize2, Users, Droplets, Award, Phone, Mail, Home, AlertCircle } from 'lucide-react';
+import { Wind,CheckCircle,ThermometerSun,Maximize2,Droplets,Award,Phone,Mail,Home,AlertCircle } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const AircoBinnenunitPositie = () => {
   const breadcrumbItems = [
@@ -261,7 +259,7 @@ const AircoBinnenunitPositie = () => {
                 <div className="flex justify-center mb-4">
                   {usp.icon}
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}

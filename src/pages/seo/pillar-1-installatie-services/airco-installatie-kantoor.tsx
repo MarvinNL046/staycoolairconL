@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Shield, Euro, Briefcase, Wind, Users, Phone, Calculator, Award, TrendingUp, Zap } from 'lucide-react';
+import { CheckCircle,Shield,Euro,Briefcase,Users,Phone,Calculator,TrendingUp } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const AircoInstallatieKantoor: React.FC = () => {
   const breadcrumbItems = [
@@ -151,7 +150,7 @@ const AircoInstallatieKantoor: React.FC = () => {
                   <div className="flex justify-center mb-4">
                     {usp.icon}
                   </div>
-                  <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                  <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                   <p className="text-gray-600 text-center">{usp.description}</p>
                 </div>
               ))}
@@ -222,10 +221,10 @@ const AircoInstallatieKantoor: React.FC = () => {
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
                     <Euro className="h-6 w-6 text-green-500 mr-2" />
                     Directe Investering
-                  </h4>
+                  </h3>
                   <ul className="space-y-3 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -255,10 +254,10 @@ const AircoInstallatieKantoor: React.FC = () => {
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
                     <Briefcase className="h-6 w-6 text-sky-500 mr-2" />
                     Operational Lease
-                  </h4>
+                  </h3>
                   <ul className="space-y-3 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -297,7 +296,7 @@ const AircoInstallatieKantoor: React.FC = () => {
               </p>
 
               <div className="border border-gray-200 rounded-lg p-6 mb-8">
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">Impact Temperatuur op Werkprestaties</h4>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Impact Temperatuur op Werkprestaties</h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-16 text-center">
@@ -343,7 +342,7 @@ const AircoInstallatieKantoor: React.FC = () => {
               </div>
 
               <div className="bg-sky-50 p-6 rounded-lg mb-8">
-                <h4 className="text-xl font-semibold text-gray-900 mb-3">Casestudy: Middelgroot Adviesbureau</h4>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Casestudy: Middelgroot Adviesbureau</h3>
                 <p className="text-gray-600 mb-4">
                   Een adviesbureau in Maastricht met 12 medewerkers investeerde €7.500 in een multi-split systeem. Metingen voor en na installatie toonden:
                 </p>
@@ -380,7 +379,7 @@ const AircoInstallatieKantoor: React.FC = () => {
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="border-2 border-gray-200 rounded-lg p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Single-split Systeem</h4>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Single-split Systeem</h3>
                   <p className="text-gray-600 mb-4">
                     Eén binnenunit verbonden met één buitenunit. Geschikt voor kleine kantoren, enkelvoudige ruimtes of gefaseerde uitbreiding.
                   </p>
@@ -407,7 +406,7 @@ const AircoInstallatieKantoor: React.FC = () => {
                 </div>
 
                 <div className="border-2 border-sky-500 rounded-lg p-6 bg-sky-50">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Multi-split Systeem</h4>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Multi-split Systeem</h3>
                   <p className="text-gray-600 mb-4">
                     Meerdere binnenunits (2-8) aangesloten op één krachtige buitenunit. Ideaal voor grotere kantoren met meerdere ruimtes.
                   </p>
@@ -443,10 +442,10 @@ const AircoInstallatieKantoor: React.FC = () => {
               </p>
 
               <div className="bg-white border-2 border-sky-500 rounded-lg p-6 mb-8">
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   <Shield className="inline h-6 w-6 text-sky-500 mr-2" />
                   Zakelijk Onderhoudscontract
-                </h4>
+                </h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <p className="font-semibold text-gray-900 mb-3">Basis Pakket (€180/jaar)</p>

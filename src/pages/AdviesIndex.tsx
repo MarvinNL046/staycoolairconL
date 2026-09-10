@@ -1,7 +1,6 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Wind, Zap, Volume2, LayoutGrid } from 'lucide-react';
+import { ChevronRight,Wind,Zap,Volume2,LayoutGrid } from 'lucide-react';
 import Card from '../components/ui/Card';
 
 export default function AdviesIndex() {
@@ -42,7 +41,7 @@ export default function AdviesIndex() {
             <Helmet>
                 <title>Airco Advies & Koopgidsen | StayCool Airco</title>
                 <meta name="description" content="Onafhankelijk advies en top-lijsten voor airconditioning. Kies de beste airco voor uw slaapkamer, woonkamer of kantoor." />
-                <link rel="canonical" href="https://staycoolaircon.nl/advies" />
+                <link rel="canonical" href="https://staycoolairco.nl/advies" />
             </Helmet>
 
             <div className="bg-warm-white min-h-screen pt-32 pb-20">

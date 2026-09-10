@@ -1,6 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ShieldCheck, Clock, Zap, Wrench } from 'lucide-react';
+import { ShieldCheck,Clock,Zap,Wrench } from 'lucide-react';
 import ProductLandingHero from '../../components/landing/ProductLandingHero';
 import ProductLandingFeatures from '../../components/landing/ProductLandingFeatures';
 import ProductLandingContact from '../../components/landing/ProductLandingContact';
@@ -40,14 +39,14 @@ export default function AircoReparatieLanding() {
           name="description"
           content="Airco reparatie: F-gassen gecertificeerd | Spoedservice | Alle merken | Garantie op reparaties | Transparante tarieven. Gratis advies!"
         />
-        <meta 
-          name="keywords" 
+        <meta
+          name="keywords"
           content="airco reparatie, airco storing, airco kapot, airco maken, airco service, airco problemen oplossen, airco monteur"
         />
         <link rel="canonical" href="https://staycoolairco.nl/airco-reparatie" />
       </Helmet>
 
-      <SchemaMarkup 
+      <SchemaMarkup
         type="Service"
         data={{
           "@type": "Service",
@@ -70,27 +69,12 @@ export default function AircoReparatieLanding() {
             "offerCount": "8",
             "availability": "https://schema.org/InStock"
           },
-          "review": {
-            "@type": "Review",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "4.8",
-              "bestRating": "5"
-            },
-            "author": {
-              "@type": "Person",
-              "name": "StayCool Airco Klanten"
-            }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "98"
-          }
+
+
         }}
       />
 
-      <ProductLandingHero 
+      <ProductLandingHero
         title="Airco Reparatie: Snel Weer Cool & Comfortabel"
         subtitle="Vakkundig • Betrouwbaar • Snel"
         description="Is uw airconditioning kapot, maakt deze vreemde geluiden of koelt niet meer goed? Onze ervaren, F-gassen gecertificeerde monteurs lossen uw airco-problemen snel en professioneel op."
@@ -107,7 +91,7 @@ export default function AircoReparatieLanding() {
         ]}
       />
 
-      <ProductLandingFeatures 
+      <ProductLandingFeatures
         title="Waarom Kiezen voor Onze Reparatieservice?"
         subtitle="Uw airconditioningsysteem verdient de beste zorg"
         features={features}
@@ -272,7 +256,7 @@ export default function AircoReparatieLanding() {
               </li>
             </ol>
           </div>
-          
+
           <div className="mt-12 text-center">
             <div className="inline-flex items-center px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg">
               <svg className="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -287,7 +271,7 @@ export default function AircoReparatieLanding() {
         </div>
       </div>
 
-      <ProductLandingContact 
+      <ProductLandingContact
         title="Airco Problemen? Vraag Direct Hulp Aan"
         subtitle="Onze experts staan klaar om uw airconditioning snel weer in topconditie te krijgen"
         brandName="Airco Reparatie"

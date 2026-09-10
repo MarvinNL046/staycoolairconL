@@ -1,6 +1,4 @@
-import React, { Suspense } from 'react';
 import { m } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import LazyImage from './LazyImage';
 
 interface KnowledgeBaseArticleProps {
@@ -11,16 +9,11 @@ interface KnowledgeBaseArticleProps {
 }
 
 export default function KnowledgeBaseArticle({ title, description, imageUrl, slug }: KnowledgeBaseArticleProps) {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
 
   return (
     <m.div
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      initial={false}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
     >

@@ -1,8 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { m } from 'framer-motion';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone,Mail,MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AircoWeert() {
@@ -23,6 +22,7 @@ export default function AircoWeert() {
           name="keywords" 
           content="airco weert, airconditioning weert, airco installatie weert, airco onderhoud weert, klimaatbeheersing weert"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/airco-weert" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">

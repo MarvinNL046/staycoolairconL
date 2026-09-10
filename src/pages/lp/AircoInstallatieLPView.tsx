@@ -1,14 +1,13 @@
-import React from 'react';
 import {
-  Phone,
-  CheckCircle,
-  Clock,
-  ShieldCheck,
-  Award,
-  ThermometerSun,
-  Star,
-  Wrench,
-  FileCheck,
+Phone,
+CheckCircle,
+Clock,
+ShieldCheck,
+Award,
+ThermometerSun,
+Star,
+Wrench,
+FileCheck,
 } from 'lucide-react';
 import MetaTags from '../../components/MetaTags';
 import Logo from '../../components/Logo';
@@ -101,7 +100,7 @@ const faqs = [
   },
   {
     q: 'Krijg ik garantie op de installatie?',
-    a: 'Ja. Je krijgt tot 5 jaar garantie op de installatie en daarnaast de fabrieksgarantie op het toestel zelf. We blijven ook na de montage je aanspreekpunt voor onderhoud.',
+    a: "Ja. Je krijgt garantie volgens offerte op de installatie en daarnaast de fabrieksgarantie op het toestel zelf. We blijven ook na de montage je aanspreekpunt voor onderhoud.",
   },
   {
     q: 'Zijn jullie monteurs gecertificeerd?',
@@ -192,7 +191,7 @@ export default function AircoInstallatieLPView({ variant }: { variant: LPVariant
           {[
             { icon: <Clock className="h-6 w-6" />, label: 'Snel geïnstalleerd' },
             { icon: <ShieldCheck className="h-6 w-6" />, label: 'F-gas & STEK gecertificeerd' },
-            { icon: <Award className="h-6 w-6" />, label: 'Tot 5 jaar garantie' },
+            { icon: <Award className="h-6 w-6" />, label: "garantie volgens offerte" },
             { icon: <Star className="h-6 w-6" />, label: 'Honderden 5★ reviews' },
           ].map((item) => (
             <div key={item.label} className="flex flex-col items-center gap-2">

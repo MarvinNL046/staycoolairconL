@@ -1,22 +1,27 @@
-import React, { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React,{ useState,useEffect } from 'react';
+import { useParams,Link } from 'react-router-dom';
 import { m } from 'framer-motion';
-import { ArrowRight, Star, ArrowLeft, Snowflake, Wind, Zap, ChevronRight, Eye } from 'lucide-react';
+import { Star,ArrowLeft,Snowflake,Wind,Zap,ChevronRight,Eye } from 'lucide-react';
 import { productData } from '../data/products';
-import { aircoProducts, AircoProduct } from '../data/aircoProducts';
+import { aircoProducts } from '../data/aircoProducts';
+import { matchesProductBrand,productBrandSlug } from '../utils/productBrands';
+import MetaTags from '../components/MetaTags';
+import { formatPrice } from '../utils/installationPricing';
 
 export default function BrandDetail() {
   const { brand } = useParams();
-  const brandData = productData.brands.find(b => b.name.toLowerCase() === brand);
+  const brandData = productData.brands.find(b => matchesProductBrand(b.name, brand));
 
   // Get scraped products for this brand
   const brandNameMap: Record<string, string> = {
     'lg': 'LG',
     'tosot by gree': 'Tosot',
     'tosot': 'Tosot',
-    'maxicool': 'MaxiCool'
+    'maxicool': 'MaxiCool',
+    'mitsubishi-electric': 'Mitsubishi Electric',
+    'mitsubishi electric': 'Mitsubishi Electric'
   };
-  const scrapedBrandName = brandNameMap[brand?.toLowerCase() || ''];
+  const scrapedBrandName = brandNameMap[brand?.toLowerCase() || ''] || brandNameMap[brandData?.name.toLowerCase() || ''];
   const allScrapedProducts = scrapedBrandName
     ? aircoProducts.filter(p => p.brand === scrapedBrandName)
     : [];
@@ -24,6 +29,7 @@ export default function BrandDetail() {
   // State for filtering and pagination
   const [typeFilter, setTypeFilter] = useState<string>('all');
   const [visibleCount, setVisibleCount] = useState(6);
+  useEffect(() => { setTypeFilter('all'); setVisibleCount(6); }, [brand]);
 
   // Filter products by type
   const scrapedProducts = typeFilter === 'all'
@@ -55,7 +61,8 @@ export default function BrandDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24 lg:pt-32 pb-20">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24 lg:pt-32 pb-20 break-words">
+      <MetaTags title={`${brandData.name} modellen en prijzen | StayCool Airco`} description={brandData.description} canonicalUrl={`https://staycoolairco.nl/products/${productBrandSlug(brandData.name)}`} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumbs */}
         <div className="mb-12">
@@ -132,14 +139,14 @@ export default function BrandDetail() {
 
                 <div className="space-y-4">
                   <Link
-                    to={`/products/${brand}/${model.slug}`}
+                    to={`/products/${productBrandSlug(brandData.name)}/${model.slug}`}
                     className="block w-full text-center py-3 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
                   >
                     Bekijk Details
                   </Link>
                   {model.price && (
                     <div className="text-center text-gray-600">
-                      Vanaf <span className="font-semibold text-gray-900">{model.price}</span>
+                      <span className="font-semibold text-gray-900">{model.price}</span>
                     </div>
                   )}
                 </div>
@@ -244,7 +251,7 @@ export default function BrandDetail() {
                       </div>
 
                       {/* Capacity Badge */}
-                      {product.capacity && (
+                      {product.type !== 'multi-split' && product.capacity && (
                         <div className="absolute top-3 right-3">
                           <span className="px-3 py-1 bg-gray-900/80 text-white rounded-full text-xs font-semibold">
                             {product.capacity} kW
@@ -264,7 +271,7 @@ export default function BrandDetail() {
 
                     {/* Quick Specs */}
                     <div className="flex items-center gap-2 mb-3 text-xs text-gray-500">
-                      {product.capacity && (
+                      {product.type !== 'multi-split' && product.capacity && (
                         <span className="flex items-center">
                           <Zap className="w-3 h-3 mr-1 text-yellow-500" />
                           {product.capacity} kW
@@ -276,6 +283,8 @@ export default function BrandDetail() {
                     </div>
 
                     {/* Buttons */}
+                    <p className="mb-3 font-semibold text-blue-800">{product.cashflowPrice && product.price !== undefined ? formatPrice(Math.round(product.price * 100)) : 'Prijs op aanvraag'}</p>
+                    {product.cashflowPrice && <p className="mb-3 text-xs text-gray-600">Inclusief btw, installatie en materialen</p>}
                     <div className="flex gap-2">
                       <Link
                         to={`/products/airco/${product.id}`}
@@ -284,12 +293,12 @@ export default function BrandDetail() {
                         <Eye className="w-4 h-4 mr-1" />
                         Meer info
                       </Link>
-                      <a
-                        href="#contact"
+                      <Link
+                        to={`/products/airco/${product.id}#contact-aanvraag`}
                         className="flex-1 text-center py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors"
                       >
                         Offerte
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </m.div>

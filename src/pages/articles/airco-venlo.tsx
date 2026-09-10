@@ -1,8 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { m } from 'framer-motion';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone,Mail,MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AircoVenlo() {
@@ -23,6 +22,7 @@ export default function AircoVenlo() {
           name="keywords" 
           content="airco venlo, airconditioning venlo, airco installatie venlo, airco onderhoud venlo, klimaatbeheersing venlo"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/airco-venlo" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">

@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
-  CheckCircle, Phone, Wrench, AlertTriangle, ShieldCheck, Clock, Calendar, Droplets, Zap, Filter,
+CheckCircle,Phone,Wrench,AlertTriangle,ShieldCheck,Clock,Calendar,Droplets,Zap,Filter,
 } from 'lucide-react';
 import MetaTags from '../components/MetaTags';
 import Breadcrumbs from '../components/Breadcrumbs';
-import { aggregateReviews } from '../data/reviews';
 
 const CANONICAL_URL = 'https://staycoolairco.nl/airco-service';
 
@@ -152,7 +151,7 @@ const AircoService: React.FC = () => {
     },
     {
       question: 'Welke garantie krijg ik op service-werk?',
-      answer: '1 jaar volledige garantie op het werk dat we verrichten — als hetzelfde onderdeel of dezelfde verbinding binnen 12 maanden weer faalt door onze fout, kosteloos opgelost. Op vervangen onderdelen geldt de fabrieksgarantie van die onderdeel-leverancier (meestal 2-5 jaar afhankelijk van merk).',
+      answer: "garantie volgens offerte op het werk dat we verrichten — als hetzelfde onderdeel of dezelfde verbinding binnen 12 maanden weer faalt door onze fout, kosteloos opgelost. Op vervangen onderdelen geldt de fabrieksgarantie van die onderdeel-leverancier (meestal 2-5 jaar afhankelijk van merk).",
     },
   ];
 
@@ -172,7 +171,7 @@ const AircoService: React.FC = () => {
         '@id': `${CANONICAL_URL}#service`,
         serviceType: 'Airco service en onderhoud',
         name: 'Airco service Limburg — onderhoud, storing, reparatie, bijvullen',
-        description: 'Complete airco service in Limburg: jaarlijks onderhoud vanaf €13/mnd, storing oplossen, reparatie, koudemiddel bijvullen. F-gassen + STEK gecertificeerd, 1 jaar garantie op werk.',
+        description: "Complete airco service in Limburg: jaarlijks onderhoud vanaf €13/mnd, storing oplossen, reparatie, koudemiddel bijvullen. F-gassen + STEK gecertificeerd, garantie volgens offerte op werk.",
         url: CANONICAL_URL,
         provider: {
           '@type': 'LocalBusiness',
@@ -189,13 +188,7 @@ const AircoService: React.FC = () => {
             addressRegion: 'Limburg',
             addressCountry: 'NL',
           },
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: aggregateReviews.averageRating.toString(),
-            reviewCount: aggregateReviews.totalReviews.toString(),
-            bestRating: '5',
-            worstRating: '1',
-          },
+
         },
         areaServed: {
           '@type': 'AdministrativeArea',
@@ -235,7 +228,7 @@ const AircoService: React.FC = () => {
     <>
       <MetaTags
         title="Airco Service Limburg | Onderhoud vanaf €13/mnd | StayCool"
-        description="Airco service in Limburg: onderhoudscontract vanaf €13/mnd, storing oplossen, reparatie, koudemiddel bijvullen. F-gas + STEK gecertificeerd. 1 jaar garantie. Bel 046 202 1430"
+        description="Airco service in Limburg: onderhoudscontract vanaf €13/mnd, storing oplossen, reparatie, koudemiddel bijvullen. F-gas + STEK gecertificeerd. garantie volgens offerte. Bel 046 202 1430"
         canonicalUrl={CANONICAL_URL}
         type="service"
         serviceType="Airco service"

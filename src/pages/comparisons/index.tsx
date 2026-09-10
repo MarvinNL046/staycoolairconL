@@ -1,7 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import MetaTags from '../../components/MetaTags';
-import { ArrowRight, Home, Zap, Euro } from 'lucide-react';
+import { ArrowRight,Home,Zap,Euro } from 'lucide-react';
 
 export default function ComparisonsIndex() {
   const comparisons = [

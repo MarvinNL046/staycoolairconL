@@ -1,9 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Calendar, Facebook, Instagram, Linkedin, MessageCircle } from 'lucide-react';
+import { Phone,Mail,Facebook,Instagram,Linkedin,MessageCircle } from 'lucide-react';
 import Logo from './Logo';
 import { seoNavigation } from '../data/seoNavigation';
 import Button from './ui/Button';
+import ServiceNoticePopup from './ServiceNoticePopup';
 import { footerMoneyPageLinks } from '../data/moneyPageLinks';
 
 export default function Footer() {
@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className="bg-quatt-dark text-white pt-24 pb-12 rounded-t-[3rem] mt-12 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-quatt-orange to-orange-400" />
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-24 right-0 w-96 max-w-full h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
@@ -97,6 +97,7 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+            <ServiceNoticePopup />
             <Button href="https://afspraken.staycoolairco.nl" variant="primary" className="w-full">
               Plan gratis adviesgesprek
             </Button>

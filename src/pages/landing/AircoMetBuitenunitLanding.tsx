@@ -1,6 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Zap, Wind, ThermometerSun, Snowflake } from 'lucide-react';
+import { Zap,Wind,ThermometerSun,Snowflake } from 'lucide-react';
 import ProductLandingHero from '../../components/landing/ProductLandingHero';
 import ProductLandingFeatures from '../../components/landing/ProductLandingFeatures';
 import ProductLandingContact from '../../components/landing/ProductLandingContact';
@@ -36,18 +35,18 @@ export default function AircoMetBuitenunitLanding() {
     <>
       <Helmet>
         <title>Airco Met Buitenunit | Energie-efficiënt | Professionele Installatie | StayCool Airco</title>
-        <meta 
-          name="description" 
+        <meta
+          name="description"
           content="Split airco met buitenunit: energiezuinige koeling en verwarming. Professionele installatie, fluisterstille werking en tot 60% lagere energiekosten. Bekijk onze A+++ modellen."
         />
-        <meta 
-          name="keywords" 
+        <meta
+          name="keywords"
           content="airco met buitenunit, split airco, airco split unit, multi split airco, energie-efficiënte airco, airco installatie"
         />
         <link rel="canonical" href="https://staycoolairco.nl/airco-met-buitenunit" />
       </Helmet>
 
-      <SchemaMarkup 
+      <SchemaMarkup
         type="Product"
         data={{
           "@type": "Product",
@@ -62,27 +61,12 @@ export default function AircoMetBuitenunitLanding() {
             "availability": "https://schema.org/InStock"
           },
           "image": "/images/products/568-Pular-indoor-vooraanzicht.webp",
-          "review": {
-            "@type": "Review",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "4.8",
-              "bestRating": "5"
-            },
-            "author": {
-              "@type": "Person",
-              "name": "StayCool Airco Klanten"
-            }
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "156"
-          }
+
+
         }}
       />
 
-      <ProductLandingHero 
+      <ProductLandingHero
         title="Airco Met Buitenunit: Hoogwaardige Split Aircosystemen"
         subtitle="Energiezuinig • Fluisterstil • Krachtige Koeling & Verwarming"
         description="Ontdek onze uitgebreide collectie split airco's met buitenunit. Geniet van optimaal klimaatcomfort met onze energiezuinige, stille en krachtige airconditioners, inclusief professionele installatie."
@@ -99,7 +83,7 @@ export default function AircoMetBuitenunitLanding() {
         ]}
       />
 
-      <ProductLandingFeatures 
+      <ProductLandingFeatures
         title="Waarom Kiezen voor een Airco met Buitenunit?"
         subtitle="Ontdek de voordelen van een split aircosysteem"
         features={features}
@@ -121,9 +105,9 @@ export default function AircoMetBuitenunitLanding() {
               <div className="px-4 py-5 sm:p-6">
                 <h3 className="text-lg font-medium text-gray-900">Single Split Airco</h3>
                 <div className="mt-2 h-48 bg-gray-200 rounded-md overflow-hidden">
-                  <img 
-                    src="/images/products/568-Pular-indoor-vooraanzicht.webp" 
-                    alt="Single Split Airco" 
+                  <img
+                    src="/images/products/568-Pular-indoor-vooraanzicht.webp"
+                    alt="Single Split Airco"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -170,9 +154,9 @@ export default function AircoMetBuitenunitLanding() {
               <div className="px-4 py-5 sm:p-6">
                 <h3 className="text-lg font-medium text-gray-900">Duo Split Airco</h3>
                 <div className="mt-2 h-48 bg-gray-200 rounded-md overflow-hidden">
-                  <img 
-                    src="/images/products/570-Pular-indoor-right.webp" 
-                    alt="Duo Split Airco" 
+                  <img
+                    src="/images/products/570-Pular-indoor-right.webp"
+                    alt="Duo Split Airco"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -214,9 +198,9 @@ export default function AircoMetBuitenunitLanding() {
               <div className="px-4 py-5 sm:p-6">
                 <h3 className="text-lg font-medium text-gray-900">Multi Split Airco</h3>
                 <div className="mt-2 h-48 bg-gray-200 rounded-md overflow-hidden">
-                  <img 
-                    src="/images/products/787-cosmo-indoor-vooraanzicht.webp" 
-                    alt="Multi Split Airco" 
+                  <img
+                    src="/images/products/787-cosmo-indoor-vooraanzicht.webp"
+                    alt="Multi Split Airco"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -392,7 +376,7 @@ export default function AircoMetBuitenunitLanding() {
         </div>
       </div>
 
-      <ProductLandingContact 
+      <ProductLandingContact
         title="Vraag een Vrijblijvende Offerte Aan"
         subtitle="Ontvang persoonlijk advies en een scherpe prijsopgave voor uw airco met buitenunit"
         brandName="Split Airco"

@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Clock, Phone, CheckCircle, Car, Shield, Zap, AlertCircle, Navigation, FileText } from 'lucide-react';
+import { MapPin,Clock,Phone,CheckCircle,Car,Shield,Zap,AlertCircle,Navigation,FileText,Calendar } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
 
@@ -654,7 +653,8 @@ const AircoServiceLimburgRegioPage = () => {
             </Link>
           </div>
           <p className="mt-6 text-blue-200">
-            24-96 uur responstijd | Spoedservice beschikbaar | 1200+ Tevreden klanten
+
+            24-96 uur responstijd | Spoedservice beschikbaar | klanten in ons werkgebied
           </p>
         </div>
       </section>

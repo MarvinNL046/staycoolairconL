@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Calculator, Euro, Zap, TrendingDown, Phone, Info, ThermometerSun } from 'lucide-react';
+import { CheckCircle,Calculator,Euro,Zap,TrendingDown,Phone,ThermometerSun } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
@@ -51,7 +51,7 @@ const StroomverbruikAirco: React.FC = () => {
     },
     {
       question: 'Verbruikt een inverter airco minder dan een on/off model?',
-      answer: 'Ja, aanzienlijk minder - wel 30-50% besparing. Een on/off airco schakelt volledig aan (100% vermogen) of uit (0% vermogen). Dit veroorzaakt stroompieken bij elke start en de compressor moet telkens opnieuw opstarten, wat veel energie kost. Een inverter airco past het toerental van de compressor geleidelijk aan tussen 20-100% vermogen, afhankelijk van de warmte/koel-behoefte. Hierdoor draait de compressor continu op laag toerental, wat veel energiezuiniger is dan constant aan/uit schakelen. Bovendien houdt een inverter de temperatuur stabieler, wat comfort verhoogt. Alle moderne airco\'s (vanaf 2015) hebben inverter technologie - koop nooit meer een on/off model.'
+      answer: "Ja, aanzienlijk minder - wel situatieafhankelijke besparing. Een on/off airco schakelt volledig aan (100% vermogen) of uit (0% vermogen). Dit veroorzaakt stroompieken bij elke start en de compressor moet telkens opnieuw opstarten, wat veel energie kost. Een inverter airco past het toerental van de compressor geleidelijk aan tussen 20-100% vermogen, afhankelijk van de warmte/koel-behoefte. Hierdoor draait de compressor continu op laag toerental, wat veel energiezuiniger is dan constant aan/uit schakelen. Bovendien houdt een inverter de temperatuur stabieler, wat comfort verhoogt. Alle moderne airco's (vanaf 2015) hebben inverter technologie - koop nooit meer een on/off model."
     },
     {
       question: 'Wat kost het om een airco een hele zomer te gebruiken?',
@@ -158,7 +158,7 @@ const StroomverbruikAirco: React.FC = () => {
                 <div className="flex justify-center mb-4">
                   {usp.icon}
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}
@@ -234,10 +234,10 @@ const StroomverbruikAirco: React.FC = () => {
 
               <div className="grid md:grid-cols-2 gap-6 my-8">
                 <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-lg p-6 border border-cyan-200">
-                  <h4 className="font-bold text-gray-900 mb-4 flex items-center text-xl">
+                  <h3 className="font-bold text-gray-900 mb-4 flex items-center text-xl">
                     <ThermometerSun className="h-6 w-6 mr-2 text-cyan-600" />
                     Koelen (Zomer)
-                  </h4>
+                  </h3>
                   <ul className="space-y-3 text-gray-700">
                     <li><strong>SEER-waarde:</strong> 7,0 - 9,0 (gemiddeld 8,0)</li>
                     <li><strong>Efficiency:</strong> 700-900% rendement</li>
@@ -252,10 +252,10 @@ const StroomverbruikAirco: React.FC = () => {
                 </div>
 
                 <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-lg p-6 border border-orange-200">
-                  <h4 className="font-bold text-gray-900 mb-4 flex items-center text-xl">
+                  <h3 className="font-bold text-gray-900 mb-4 flex items-center text-xl">
                     <ThermometerSun className="h-6 w-6 mr-2 text-orange-600" />
                     Verwarmen (Winter)
-                  </h4>
+                  </h3>
                   <ul className="space-y-3 text-gray-700">
                     <li><strong>SCOP-waarde:</strong> 4,0 - 5,5 (gemiddeld 4,5)</li>
                     <li><strong>Efficiency:</strong> 400-550% rendement</li>
@@ -271,10 +271,10 @@ const StroomverbruikAirco: React.FC = () => {
               </div>
 
               <div className="bg-green-50 border-l-4 border-green-500 p-6 my-8">
-                <h4 className="font-bold text-gray-900 mb-3 flex items-center">
+                <h3 className="font-bold text-gray-900 mb-3 flex items-center">
                   <TrendingDown className="h-6 w-6 mr-2 text-green-600" />
                   Vergelijking met Andere Verwarmingsmethoden
-                </h4>
+                </h3>
                 <p className="text-gray-700 mb-4">
                   Voor 3,5 kW warmteafgifte gedurende 8 uur (28 kWh warmte):
                 </p>
@@ -419,7 +419,7 @@ const StroomverbruikAirco: React.FC = () => {
 
               <div className="grid md:grid-cols-2 gap-6 my-8">
                 <div className="bg-red-50 rounded-lg p-6 border border-red-200">
-                  <h4 className="font-bold text-xl text-gray-900 mb-4">❌ On/Off Airco (Oudere Technologie)</h4>
+                  <h3 className="font-bold text-xl text-gray-900 mb-4">❌ On/Off Airco (Oudere Technologie)</h3>
                   <ul className="space-y-3 text-gray-700 text-sm">
                     <li><strong>Werking:</strong> Compressor draait op 100% of 0% (aan/uit)</li>
                     <li><strong>Stroompieken:</strong> Hoge stroompieken bij elke start (tot 5x nominaal vermogen)</li>
@@ -435,7 +435,7 @@ const StroomverbruikAirco: React.FC = () => {
                 </div>
 
                 <div className="bg-green-50 rounded-lg p-6 border border-green-200">
-                  <h4 className="font-bold text-xl text-gray-900 mb-4">✅ Inverter Airco (Moderne Technologie)</h4>
+                  <h3 className="font-bold text-xl text-gray-900 mb-4">✅ Inverter Airco (Moderne Technologie)</h3>
                   <ul className="space-y-3 text-gray-700 text-sm">
                     <li><strong>Werking:</strong> Compressor past toerental aan (20-100%)</li>
                     <li><strong>Gelijkmatig verbruik:</strong> Geen stroompieken, constant laag toerental</li>
@@ -452,7 +452,7 @@ const StroomverbruikAirco: React.FC = () => {
               </div>
 
               <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg p-8 my-8 border-2 border-yellow-300">
-                <h4 className="font-bold text-gray-900 mb-4 text-xl">Besparing Inverter vs On/Off</h4>
+                <h3 className="font-bold text-gray-900 mb-4 text-xl">Besparing Inverter vs On/Off</h3>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex justify-between items-center border-b border-yellow-200 pb-2">
                     <span><strong>Dagbesparing (8u gebruik):</strong></span>
@@ -554,7 +554,7 @@ const StroomverbruikAirco: React.FC = () => {
                     </div>
                     <div className="flex-grow">
                       <div className="flex justify-between items-start mb-2">
-                        <h4 className="font-bold text-gray-900">{tip.title}</h4>
+                        <h3 className="font-bold text-gray-900">{tip.title}</h3>
                         <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold ml-4 flex-shrink-0">
                           {tip.savings}
                         </span>
@@ -566,18 +566,18 @@ const StroomverbruikAirco: React.FC = () => {
               </div>
 
               <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-lg p-8 my-8 border border-purple-200">
-                <h4 className="font-bold text-gray-900 mb-4 text-xl flex items-center">
+                <h3 className="font-bold text-gray-900 mb-4 text-xl flex items-center">
                   <TrendingDown className="h-7 w-7 mr-3 text-purple-600" />
                   Cumulatief Besparingseffect
-                </h4>
+                </h3>
                 <p className="text-gray-700 mb-4">
                   Door meerdere tips te combineren, kunt u het verbruik met 20-40% verlagen:
                 </p>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• <strong>Basismaatregelen</strong> (tips 1, 2, 3, 6): 20-25% besparing</li>
-                  <li>• <strong>+ Isolatie/zonwering</strong> (tips 4, 5, 7): Extra 15-20% besparing</li>
-                  <li>• <strong>+ Onderhoud/optimalisatie</strong> (tips 8, 9): Extra 5-10% besparing</li>
-                  <li>• <strong>+ Upgrade A+++</strong> (tip 10): Extra 20-30% besparing bij oude airco</li>
+                  <li>• <strong>Basismaatregelen</strong>  (tips 1, 2, 3, 6): situatieafhankelijke besparing</li>
+                  <li>• <strong>+ Isolatie/zonwering</strong>  (tips 4, 5, 7): Extra situatieafhankelijke besparing</li>
+                  <li>• <strong>+ Onderhoud/optimalisatie</strong>  (tips 8, 9): Extra situatieafhankelijke besparing</li>
+                  <li>• <strong>+ Upgrade A+++</strong>  (tip 10): Extra situatieafhankelijke besparing bij oude airco</li>
                 </ul>
                 <div className="bg-purple-100 rounded-lg p-4 mt-4">
                   <p className="font-bold text-purple-900 text-lg">

@@ -1,6 +1,5 @@
-import React from 'react';
 import ArticleLayout from '../../components/ArticleLayout';
-import { Wind, Droplets, AlertTriangle, CheckCircle, Clock, Calendar, HelpCircle, Zap } from 'lucide-react';
+import { Wind,Droplets,AlertTriangle,CheckCircle,Clock,Calendar,HelpCircle,Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AircoLuchtfilterOnderhoud = () => {

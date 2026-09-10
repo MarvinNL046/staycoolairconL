@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Shield, Euro, Moon, Wind, Volume2, Phone, Calculator, Award, Star, Zap } from 'lucide-react';
+import { CheckCircle,Shield,Moon,Wind,Volume2,Phone,Calculator,Star,Zap } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const AircoInstallatieSlaapkamer: React.FC = () => {
   const breadcrumbItems = [
@@ -68,7 +67,7 @@ const AircoInstallatieSlaapkamer: React.FC = () => {
     },
     {
       question: "Wat kost een airco installatie in de slaapkamer?",
-      answer: "Een complete airco installatie voor een slaapkamer kost tussen €1.600 en €3.000, afhankelijk van gekozen merk en capaciteit. Basismodellen (LG, Tosot) vanaf €1.600, middenklasse (Mitsubishi, Samsung) vanaf €1.900, premium (Daikin Emura) vanaf €2.400. Dit is inclusief professionele installatie, elektrische aansluiting, afvoer, 5-10 jaar garantie en volledige inbedrijfstelling. De terugverdientijd door energiebesparing is gemiddeld 5-7 jaar."
+      answer: "Een complete airco installatie voor een slaapkamer kost tussen €1.600 en €3.000, afhankelijk van gekozen merk en capaciteit. Basismodellen (LG, Tosot) vanaf €1.600, middenklasse (Mitsubishi, Samsung) vanaf €1.900, premium (Daikin Emura) vanaf €2.400. Dit is inclusief professionele installatie, elektrische aansluiting, afvoer, garantie volgens offerte en volledige inbedrijfstelling. De terugverdientijd door energiebesparing is gemiddeld 5-7 jaar."
     }
   ];
 
@@ -76,7 +75,7 @@ const AircoInstallatieSlaapkamer: React.FC = () => {
     <>
       <MetaTags
         title="Airco Installatie Slaapkamer Limburg | Ultrastil vanaf 19dB | StayCool"
-        description="Airco slaapkamer ✓ Ultrastil vanaf 19dB ✓ Perfecte slaaptemperatuur ✓ 10 jaar garantie ✓ F-gas gecertificeerd. Gezonde nachtrust!"
+        description="Airco slaapkamer ✓ Ultrastil vanaf 19dB ✓ Perfecte slaaptemperatuur ✓ garantie volgens offerte ✓ F-gas gecertificeerd. Gezonde nachtrust!"
       />
 
       <SchemaMarkup
@@ -136,7 +135,7 @@ const AircoInstallatieSlaapkamer: React.FC = () => {
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-5 w-5 mr-2" />
-                <span>10 Jaar Garantie</span>
+                <span>garantie volgens offerte</span>
               </div>
             </div>
           </div>
@@ -151,7 +150,7 @@ const AircoInstallatieSlaapkamer: React.FC = () => {
                   <div className="flex justify-center mb-4">
                     {usp.icon}
                   </div>
-                  <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                  <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                   <p className="text-gray-600 text-center">{usp.description}</p>
                 </div>
               ))}
@@ -210,10 +209,10 @@ const AircoInstallatieSlaapkamer: React.FC = () => {
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="border border-gray-200 rounded-lg p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                     <Star className="h-6 w-6 text-yellow-400 mr-2" />
                     Premium Klasse (19-20 dB)
-                  </h4>
+                  </h3>
                   <p className="text-gray-600 mb-4">
                     <strong>Daikin Emura, Mitsubishi Heavy Diamond</strong>
                   </p>
@@ -239,10 +238,10 @@ const AircoInstallatieSlaapkamer: React.FC = () => {
                 </div>
 
                 <div className="border border-gray-200 rounded-lg p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                     <Star className="h-6 w-6 text-yellow-400 mr-2" />
                     Comfort Klasse (21-24 dB)
-                  </h4>
+                  </h3>
                   <p className="text-gray-600 mb-4">
                     <strong>LG Artcool, Samsung WindFree</strong>
                   </p>
@@ -284,10 +283,10 @@ const AircoInstallatieSlaapkamer: React.FC = () => {
 
               <div className="space-y-6 mb-8">
                 <div className="bg-green-50 border-l-4 border-green-500 p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-2" />
                     Ideale Plaatsing
-                  </h4>
+                  </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -309,10 +308,10 @@ const AircoInstallatieSlaapkamer: React.FC = () => {
                 </div>
 
                 <div className="bg-red-50 border-l-4 border-red-500 p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
                     <span className="text-red-500 mr-2">✕</span>
                     Te Vermijden
-                  </h4>
+                  </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <span className="text-red-500 mr-2 mt-0.5">✕</span>
@@ -344,40 +343,40 @@ const AircoInstallatieSlaapkamer: React.FC = () => {
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     <Moon className="inline h-6 w-6 text-sky-500 mr-2" />
                     Sleep Mode / Nachtmodus
-                  </h4>
+                  </h3>
                   <p className="text-gray-600 mb-4">
                     Automatische temperatuuraanpassing gedurende de nacht. De airco begint bij uw ingestelde temperatuur (bijv. 18°C) en verlaagt deze geleidelijk naar 16-17°C voor diepe slaap. Voor het ontwaken verhoogt het systeem de temperatuur weer naar 19-20°C voor comfortabel opstaan. Ventilatorsnelheid wordt geminimaliseerd voor ultrastil gebruik.
                   </p>
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     <Volume2 className="inline h-6 w-6 text-sky-500 mr-2" />
                     Silent Mode
-                  </h4>
+                  </h3>
                   <p className="text-gray-600 mb-4">
                     Reduceert geluidsniveau tot absolute minimum (19-20 dB) door ventilatorsnelheid te beperken en compressor op laagste toeren te laten draaien. LED display wordt gedimd of uitgeschakeld. Piepjes bij bediening worden gedempt. Ideaal voor zeer lichte slapers, baby's en wanneer absolute stilte vereist is.
                   </p>
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     <Wind className="inline h-6 w-6 text-sky-500 mr-2" />
                     Intelligente Luchtrichting
-                  </h4>
+                  </h3>
                   <p className="text-gray-600 mb-4">
                     Automatische horizontale en verticale lamellen sturen lucht weg van het bed. Premium modellen met 3D bewegende lamellen creëren indirecte luchtstroom via plafond en wanden. Sommige systemen (Daikin Coanda effect) gebruiken plafond als geleider voor tochtvrije verdeling. Sensoren detecteren personen en vermijden directe luchtstroom.
                   </p>
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     <Zap className="inline h-6 w-6 text-sky-500 mr-2" />
                     Smart Timer Functies
-                  </h4>
+                  </h3>
                   <p className="text-gray-600 mb-4">
                     Programmeer de airco om 1-2 uur voor bedtijd te starten en de slaapkamer voor te koelen. 's Nachts draait het systeem op minimum vermogen. Timer schakelt de airco na 6-8 uur uit of naar hoger vermogen bij ontwaken. Wekelijkse schema's mogelijk voor verschillende bedtijden. Via WiFi app bedienbaar vanuit bed of onderweg.
                   </p>
@@ -421,9 +420,9 @@ const AircoInstallatieSlaapkamer: React.FC = () => {
               </p>
 
               <div className="border border-gray-200 rounded-lg p-6 mb-8">
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Jaarlijkse Kosten Slaapkamer Airco (2.5 kW unit)
-                </h4>
+                </h3>
                 <div className="space-y-3 text-gray-600">
                   <div className="flex justify-between items-center border-b pb-2">
                     <span>Zomernachten (90 nachten × 8 uur × 0.25 kW)</span>
@@ -448,7 +447,7 @@ const AircoInstallatieSlaapkamer: React.FC = () => {
               </div>
 
               <div className="bg-green-50 border-l-4 border-green-500 p-6 mb-8">
-                <h4 className="font-semibold text-gray-900 mb-2">Tip: Maximale Efficiëntie</h4>
+                <h3 className="font-semibold text-gray-900 mb-2">Tip: Maximale Efficiëntie</h3>
                 <p className="text-gray-600">
                   Gebruik de timer om uw slaapkamer 1-2 uur voor bedtijd te koelen tot 18°C. Schakel dan naar sleep mode die de temperatuur handhaaft met minimaal vermogen. Programmeer de airco om 1 uur voor ontwaken uit te schakelen - de kamer blijft voldoende koel. Dit bespaart 40-50% energie vergeleken met ononderbroken gebruik op vol vermogen.
                 </p>

@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Wind, Shield, Heart, Droplets, Phone, AlertTriangle, Calendar, Sparkles, ThermometerSun } from 'lucide-react';
+import { CheckCircle,Wind,Shield,Heart,Phone,AlertTriangle,Calendar,Sparkles } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
 import HowToSchema from '../../../components/SEO/HowToSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const AircoFilterReiniging: React.FC = () => {
   const breadcrumbItems = [
@@ -28,7 +27,7 @@ const AircoFilterReiniging: React.FC = () => {
     },
     {
       icon: <Sparkles className="h-12 w-12 text-sky-500" />,
-      title: "Tot 15% Besparing",
+      title: "situatieafhankelijke besparing",
       description: "Verminder energieverbruik door optimale doorstroming van lucht"
     },
     {
@@ -141,7 +140,7 @@ const AircoFilterReiniging: React.FC = () => {
     <>
       <MetaTags
         title="Airco Filter Reiniging Limburg | Luchtkwaliteit Verbeteren | StayCool Airco"
-        description="Airco filter reiniging ✓ Gezondere lucht ✓ 15% energiebesparing ✓ Alle filtertypes ✓ Zelf doen of professioneel ✓ Gratis advies!"
+        description="Airco filter reiniging ✓ Gezondere lucht ✓ situatieafhankelijke besparing ✓ Alle filtertypes ✓ Zelf doen of professioneel ✓ Gratis advies!"
       />
 
       <SchemaMarkup
@@ -214,7 +213,8 @@ const AircoFilterReiniging: React.FC = () => {
             </span>
             <span className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />
-              Tot 15% besparing
+
+              situatieafhankelijke besparing
             </span>
             <span className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />

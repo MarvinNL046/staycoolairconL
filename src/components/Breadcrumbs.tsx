@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 
@@ -8,10 +7,12 @@ interface BreadcrumbItem {
 }
 
 interface BreadcrumbsProps {
-  items: BreadcrumbItem[];
+  items?: BreadcrumbItem[];
+  className?: string;
 }
 
-export default function Breadcrumbs({ items }: BreadcrumbsProps) {
+export default function Breadcrumbs({ items = [], className = '' }: BreadcrumbsProps) {
+  const crumbs = items.filter(item => item.path !== '/' && item.label.toLowerCase() !== 'home');
   // Create structured data for SEO
   const structuredData = {
     '@context': 'https://schema.org',
@@ -20,28 +21,22 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       {
         '@type': 'ListItem',
         'position': 1,
-        'item': {
-          '@id': '/',
-          'name': 'Home'
-        }
+        'name': 'Home',
+        'item': 'https://staycoolairco.nl/'
       },
-      ...items.map((item, index) => ({
+      ...crumbs.map((item, index) => ({
         '@type': 'ListItem',
         'position': index + 2,
-        'item': {
-          '@id': item.path || '',
-          'name': item.label
-        }
+        'name': item.label,
+        ...(item.path && { item: new URL(item.path, 'https://staycoolairco.nl').href })
       }))
     ]
   };
 
   return (
     <>
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
-      <nav aria-label="Breadcrumb" className="mb-8 overflow-x-auto">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, '\\u003c') }} />
+      <nav aria-label="Breadcrumb" className={`mb-8 overflow-x-auto ${className}`}>
         <ol className="flex items-center min-w-max text-sm" role="list">
           <li className="flex items-center">
             <Link 
@@ -52,7 +47,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
               Home
             </Link>
           </li>
-          {items.map((item, index) => (
+          {crumbs.map((item, index) => (
             <li key={index} className="flex items-center">
               <ChevronRight 
                 className="h-4 w-4 text-gray-400 mx-2 flex-shrink-0" 

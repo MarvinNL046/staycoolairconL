@@ -1,13 +1,18 @@
 {
+  "buildCommand": "npm run build:seo",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
+    {
+      "source": "/seo/pillar-9-kosten-prijzen/kosten-airco-plaatsen",
+      "destination": "/kosten-airco-plaatsen",
+      "permanent": true
+    },
     {
       "source": "/kennisbank/airco-plaatsen-limburg",
       "destination": "/airco-plaatsen-limburg",
       "permanent": true
     }
-  ],
-  "rewrites": [
-    { "source": "/((?!api/|fonts/|images/|assets/|.*\\.[a-zA-Z0-9]+$).*)", "destination": "/index.html" }
   ],
   "headers": [
     {
@@ -54,6 +59,15 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=2592000"
+        }
+      ]
+    },
+    {
+      "source": "/indexnow-manifest.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
         }
       ]
     }

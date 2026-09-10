@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Shield, Euro, Zap, Wind, ThermometerSun, Phone, Mail, Calculator, TrendingUp, Star, Award, Home, MapPin } from 'lucide-react';
+import { CheckCircle,Shield,Euro,Phone,Mail,Calculator,TrendingUp,Star,Award,MapPin } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const AircoPlaatsenVenlo = () => {
   const breadcrumbItems = [
@@ -116,7 +114,7 @@ const AircoPlaatsenVenlo = () => {
     <>
       <MetaTags
         title="Airco Plaatsen Venlo | Grensstreek Specialist | StayCool Airco"
-        description="Airco plaatsen Venlo ✓ F-gassen gecertificeerd ✓ Vanaf €1.800 ✓ 10 jaar garantie ✓ Centrum, Blerick, Tegelen ✓ Gratis offerte!"
+        description="Airco plaatsen Venlo ✓ F-gassen gecertificeerd ✓ Vanaf €1.800 ✓ garantie volgens offerte ✓ Centrum, Blerick, Tegelen ✓ Gratis offerte!"
       />
 
       <SchemaMarkup
@@ -124,7 +122,7 @@ const AircoPlaatsenVenlo = () => {
         data={{
           "@type": "Service",
           "name": "Airco Plaatsen Venlo",
-          "description": "Professionele airco installatie en plaatsing in Venlo en omgeving. F-gassen gecertificeerd met 10 jaar garantie op premium merken.",
+          "description": "Professionele airco installatie en plaatsing in Venlo en omgeving. F-gassen gecertificeerd met garantie volgens offerte op premium merken.",
           "provider": {
             "@type": "LocalBusiness",
             "name": "StayCool Airco",
@@ -187,7 +185,8 @@ const AircoPlaatsenVenlo = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-sky-50 mb-8 max-w-3xl">
-              Professionele airco plaatsing in de grensstreek. F-gassen gecertificeerd met scherpe prijzen, 10 jaar garantie en ook service beschikbaar in Duitsland (NRW).
+
+              Professionele airco plaatsing in de grensstreek. F-gassen gecertificeerd met scherpe prijzen, garantie volgens offerte en ook service beschikbaar in Duitsland (NRW).
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -224,7 +223,8 @@ const AircoPlaatsenVenlo = () => {
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-5 w-5 mr-2" />
-                10 Jaar Garantie
+
+                garantie volgens offerte
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-5 w-5 mr-2" />
@@ -358,10 +358,10 @@ const AircoPlaatsenVenlo = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h4 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
                     <Award className="h-5 w-5 mr-2 text-sky-500" />
                     Daikin Premium
-                  </h4>
+                  </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
@@ -373,7 +373,7 @@ const AircoPlaatsenVenlo = () => {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
-                      <span>10 jaar garantie bij correcte plaatsing</span>
+                      <span>garantie volgens offerte bij correcte plaatsing</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
@@ -383,10 +383,10 @@ const AircoPlaatsenVenlo = () => {
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h4 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
                     <Award className="h-5 w-5 mr-2 text-sky-500" />
                     Mitsubishi Heavy Industries
-                  </h4>
+                  </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
@@ -408,10 +408,10 @@ const AircoPlaatsenVenlo = () => {
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h4 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
                     <Award className="h-5 w-5 mr-2 text-sky-500" />
                     LG Premium
-                  </h4>
+                  </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
@@ -427,16 +427,16 @@ const AircoPlaatsenVenlo = () => {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
-                      <span>10 jaar garantie compressor</span>
+                      <span>garantie volgens offerte compressor</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="bg-white border border-gray-200 rounded-lg p-6">
-                  <h4 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
+                  <h3 className="font-semibold text-lg text-gray-900 mb-3 flex items-center">
                     <Award className="h-5 w-5 mr-2 text-sky-500" />
                     Samsung & Gree
-                  </h4>
+                  </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 mr-2 text-sky-500 flex-shrink-0 mt-0.5" />
@@ -459,12 +459,13 @@ const AircoPlaatsenVenlo = () => {
               </div>
 
               <div className="bg-orange-50 border-l-4 border-orange-500 p-6 mb-8">
-                <h4 className="text-xl font-semibold text-gray-900 mb-2 flex items-center">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 flex items-center">
                   <TrendingUp className="h-6 w-6 mr-2 text-orange-600" />
                   Maximale Besparing met Zonnepanelen
-                </h4>
+                </h3>
                 <p className="text-gray-600">
-                  Heeft u zonnepanelen op uw woning in Venlo? Dan is een airco warmtepomp de slimste investering. U vermijdt de lage terugleververgoeding (slechts €0,09 per kWh) door uw eigen opgewekte stroom te gebruiken voor verwarming én koeling. Met een rendement van 400-500% bespaart u tot 60% op energiekosten vergeleken met traditionele cv. Bovendien verhoogt u uw energieonafhankelijkheid aanzienlijk.
+
+                  Heeft u zonnepanelen op uw woning in Venlo? Dan is een airco warmtepomp de slimste investering. U vermijdt de lage terugleververgoeding (slechts €0,09 per kWh) door uw eigen opgewekte stroom te gebruiken voor verwarming én koeling. Met een rendement van 400-500% kunt u mogelijk besparen op uw energiekosten vergeleken met traditionele cv. Bovendien verhoogt u uw energieonafhankelijkheid aanzienlijk.
                 </p>
               </div>
 
@@ -478,7 +479,7 @@ const AircoPlaatsenVenlo = () => {
                     1
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Gratis Adviesgesprek</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Gratis Adviesgesprek</h3>
                     <p className="text-gray-600">
                       We bezoeken uw woning in Venlo (of Duitse grensstreek) voor een persoonlijk adviesgesprek. We bekijken de beste plaatsingslocaties, bespreken uw wensen en adviseren over het meest geschikte systeem.
                     </p>
@@ -490,7 +491,7 @@ const AircoPlaatsenVenlo = () => {
                     2
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Offerte op Maat</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Offerte op Maat</h3>
                     <p className="text-gray-600">
                       U ontvangt binnen 24 uur een gedetailleerde offerte met alle specificaties, plaatsingsplan en totaalprijs. Geen verborgen kosten, alles transparant en duidelijk.
                     </p>
@@ -502,7 +503,7 @@ const AircoPlaatsenVenlo = () => {
                     3
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Professionele Plaatsing</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Professionele Plaatsing</h3>
                     <p className="text-gray-600">
                       Onze F-gassen gecertificeerde monteurs plaatsen uw airco volgens fabrieksspecificaties. We werken netjes, efficiënt en laten uw woning schoon achter.
                     </p>
@@ -514,7 +515,7 @@ const AircoPlaatsenVenlo = () => {
                     4
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-xl font-semibold text-gray-900 mb-2">Uitleg en Nazorg</h4>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Uitleg en Nazorg</h3>
                     <p className="text-gray-600">
                       Na plaatsing krijgt u uitgebreide uitleg over optimaal gebruik, onderhoud en bediening. We bieden uitstekende nazorg en zijn altijd bereikbaar voor vragen.
                     </p>

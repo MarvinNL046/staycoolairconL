@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { m } from 'framer-motion';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -192,7 +191,7 @@ export default function AircoOfferteHeerlen() {
 
               <div className="not-prose grid md:grid-cols-2 gap-4 my-6">
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
-                  <h4 className="font-bold mb-2 text-blue-900">Heerlerbaan & Welten</h4>
+                  <h3 className="font-bold mb-2 text-blue-900">Heerlerbaan & Welten</h3>
                   <p className="text-sm text-gray-700 mb-2">
                     <strong>Typisch:</strong> mix van rijtjes jaren 60–80 en twee-onder-een-kap. Iets
                     hoger gemiddeld welstandsniveau, veel koophuizen.
@@ -203,7 +202,7 @@ export default function AircoOfferteHeerlen() {
                   </p>
                 </div>
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
-                  <h4 className="font-bold mb-2 text-blue-900">Heerlerheide & Heksenberg</h4>
+                  <h3 className="font-bold mb-2 text-blue-900">Heerlerheide & Heksenberg</h3>
                   <p className="text-sm text-gray-700 mb-2">
                     <strong>Typisch:</strong> mix van rijtjeshuizen en portiekwoningen, veel
                     jaren-70 bouw. Kleinere kavels.
@@ -214,7 +213,7 @@ export default function AircoOfferteHeerlen() {
                   </p>
                 </div>
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
-                  <h4 className="font-bold mb-2 text-blue-900">Hoensbroek</h4>
+                  <h3 className="font-bold mb-2 text-blue-900">Hoensbroek</h3>
                   <p className="text-sm text-gray-700 mb-2">
                     <strong>Typisch:</strong> zeer gemengd — van karakteristieke jaren-30 tot
                     jaren-70 rijtjes. Kasteel Hoensbroek-hoek heeft soms welstandsregels.
@@ -226,7 +225,7 @@ export default function AircoOfferteHeerlen() {
                   </p>
                 </div>
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
-                  <h4 className="font-bold mb-2 text-blue-900">Meezenbroek, Vrieheide, GMS</h4>
+                  <h3 className="font-bold mb-2 text-blue-900">Meezenbroek, Vrieheide, GMS</h3>
                   <p className="text-sm text-gray-700 mb-2">
                     <strong>Typisch:</strong> oudere mijnwerkerswoningen, hoog corporatie-aandeel, vaak
                     aanstaande of lopende renovatie-projecten.
@@ -237,7 +236,7 @@ export default function AircoOfferteHeerlen() {
                   </p>
                 </div>
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
-                  <h4 className="font-bold mb-2 text-blue-900">Centrum & Aarveld</h4>
+                  <h3 className="font-bold mb-2 text-blue-900">Centrum & Aarveld</h3>
                   <p className="text-sm text-gray-700 mb-2">
                     <strong>Typisch:</strong> boven-winkelwoningen, appartementen, kleine
                     tussenwoningen. Compact.
@@ -248,7 +247,7 @@ export default function AircoOfferteHeerlen() {
                   </p>
                 </div>
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
-                  <h4 className="font-bold mb-2 text-blue-900">Grensbuurten (Kerkrade/Landgraaf/Brunssum)</h4>
+                  <h3 className="font-bold mb-2 text-blue-900">Grensbuurten (Kerkrade/Landgraaf/Brunssum)</h3>
                   <p className="text-sm text-gray-700 mb-2">
                     <strong>Typisch:</strong> vergelijkbare woningvoorraad als Heerlen zelf — wij werken
                     in heel Parkstad.
@@ -332,7 +331,7 @@ export default function AircoOfferteHeerlen() {
               </p>
 
               <div className="not-prose bg-green-50 border-l-4 border-green-500 p-5 rounded-r my-6">
-                <h4 className="font-bold text-green-900 mb-3">Rekensom: jaren-70 rijtjeshuis in Heerlen</h4>
+                <h3 className="font-bold text-green-900 mb-3">Rekensom: jaren-70 rijtjeshuis in Heerlen</h3>
                 <ul className="text-sm text-gray-700 space-y-2 mb-0">
                   <li>
                     Gemiddeld <strong>gasverbruik</strong>: 1.400–1.800 m³/jaar (landelijk: 1.169 m³)
@@ -396,7 +395,7 @@ export default function AircoOfferteHeerlen() {
               </p>
 
               <div className="not-prose bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r my-6">
-                <h4 className="font-bold text-amber-900 mb-2">Wat levert de isolatie-kant op?</h4>
+                <h3 className="font-bold text-amber-900 mb-2">Wat levert de isolatie-kant op?</h3>
                 <ul className="text-sm text-gray-700 space-y-1 mb-0">
                   <li><strong>9% BTW</strong> op het arbeidsloon van isolatiewerk aan woningen ouder dan 2 jaar (i.p.v. 21%)</li>
                   <li>Vaak een eigen <strong>ISDE-bedrag voor isolatie</strong>, dat verdubbelt bij twee isolatiemaatregelen binnen 24 maanden</li>
@@ -459,7 +458,7 @@ export default function AircoOfferteHeerlen() {
               </p>
 
               <div className="not-prose bg-blue-50 border-l-4 border-blue-500 p-5 rounded-r my-6">
-                <h4 className="font-bold text-blue-900 mb-2">Stappenplan voor huurders in Heerlen</h4>
+                <h3 className="font-bold text-blue-900 mb-2">Stappenplan voor huurders in Heerlen</h3>
                 <ol className="text-sm text-gray-700 space-y-2 mb-0">
                   <li>
                     <strong>1. Check uw huurovereenkomst</strong> — zoek op "zelf aangebrachte
@@ -497,7 +496,7 @@ export default function AircoOfferteHeerlen() {
               <div className="not-prose grid md:grid-cols-2 gap-4 my-6">
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
                   <div className="text-2xl font-bold text-blue-600 mb-2">Dag 1</div>
-                  <h4 className="font-bold mb-2">Gratis inmeting in Heerlen</h4>
+                  <h3 className="font-bold mb-2">Gratis inmeting in Heerlen</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Onze monteur komt bij u thuis in Parkstad, meet de ruimtes, beoordeelt isolatie en
                     elektragroepen, en bespreekt de optimale plaatsing van de buitenunit. Duurt
@@ -506,7 +505,7 @@ export default function AircoOfferteHeerlen() {
                 </div>
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
                   <div className="text-2xl font-bold text-blue-600 mb-2">Dag 2–3</div>
-                  <h4 className="font-bold mb-2">Offerte op maat</h4>
+                  <h3 className="font-bold mb-2">Offerte op maat</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Binnen 48 uur krijgt u een vaste offerte met minimaal 2 merk-opties, transparante
                     kostenopbouw (incl. 21% BTW), en uw verwachte terugverdientijd via de energiebesparing.
@@ -514,7 +513,7 @@ export default function AircoOfferteHeerlen() {
                 </div>
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
                   <div className="text-2xl font-bold text-blue-600 mb-2">Dag 4–14</div>
-                  <h4 className="font-bold mb-2">Planning</h4>
+                  <h3 className="font-bold mb-2">Planning</h3>
                   <p className="text-sm text-gray-700 m-0">
                     In 2026 kunnen we in Parkstad doorgaans binnen 2 weken een installatie inplannen.
                     Voor corporatie-/VvE-trajecten reken op 6–8 weken extra voor toestemming.
@@ -522,7 +521,7 @@ export default function AircoOfferteHeerlen() {
                 </div>
                 <div className="bg-white border border-gray-200 p-5 rounded-lg shadow-sm">
                   <div className="text-2xl font-bold text-blue-600 mb-2">Installatiedag</div>
-                  <h4 className="font-bold mb-2">1 werkdag</h4>
+                  <h3 className="font-bold mb-2">1 werkdag</h3>
                   <p className="text-sm text-gray-700 m-0">
                     Standaard single-split wordt in 1 dag gemonteerd, getest en opgeleverd. U krijgt
                     een F-gassen-rapport en volledige oplevering.
@@ -550,7 +549,7 @@ export default function AircoOfferteHeerlen() {
               <h2>9. Veelvoorkomende valkuilen bij offerte-vergelijken in Heerlen</h2>
 
               <div className="not-prose bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r my-6">
-                <h4 className="font-bold text-amber-900 mb-3">Wat wij klanten in Parkstad achteraf horen</h4>
+                <h3 className="font-bold text-amber-900 mb-3">Wat wij klanten in Parkstad achteraf horen</h3>
                 <ul className="text-sm text-gray-700 space-y-2 mb-0">
                   <li>
                     <strong>"De goedkoopste online offerte had geen F-gassen-installateur"</strong> —

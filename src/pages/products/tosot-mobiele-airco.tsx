@@ -1,5 +1,4 @@
-import React from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams,Navigate } from 'react-router-dom';
 import { productData } from '../../data/products';
 
 export default function TosotMobieleAircoPage() {

@@ -1,4 +1,4 @@
-import { SchemaValidator, validator } from './schemaValidator';
+import { SchemaValidator,validator } from './schemaValidator';
 
 // Schema audit utility to validate and optimize existing schemas
 export class SchemaAudit {

@@ -9,6 +9,7 @@ export interface ProductImage {
 }
 
 export interface Model {
+  cashflowOffers?: Array<{ family: string; name: string; configuration: string; sourceSlug: string; netCents: number; vatRate: number }>;
   name: string;
   slug: string;
   description: string;

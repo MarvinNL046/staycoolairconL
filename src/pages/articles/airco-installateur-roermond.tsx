@@ -1,8 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { m } from 'framer-motion';
-import { Phone, Mail, MapPin, Wrench, Calendar, CheckCircle } from 'lucide-react';
+import { Phone,Mail,MapPin,Wrench,Calendar,CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AircoInstallateurRoermond() {
@@ -23,6 +22,7 @@ export default function AircoInstallateurRoermond() {
           name="keywords" 
           content="airco installateur roermond, airconditioning monteur roermond, airco montage roermond, airco specialist roermond"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/airco-installateur-roermond" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
@@ -82,7 +82,7 @@ export default function AircoInstallateurRoermond() {
                 </div>
                 <ul className="space-y-2">
                   <li>✓ F-gassen gecertificeerd</li>
-                  <li>✓ 5 jaar garantie</li>
+                  <li>✓ garantie volgens offerte</li>
                   <li>✓ Erkend installateur</li>
                   <li>✓ Vaste prijzen</li>
                 </ul>

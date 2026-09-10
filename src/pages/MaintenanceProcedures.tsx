@@ -1,37 +1,11 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { Wrench, Calendar, ThermometerSun, Shield, AlertTriangle, Filter, Wind, Clock, ArrowLeft, Check, Star, Crown } from 'lucide-react';
+import { Wrench,Calendar,ThermometerSun,Shield,AlertTriangle,Clock,Check,Star,Crown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { maintenancePlans } from '../data/maintenancePlans';
 
 export default function MaintenanceProcedures() {
-  const maintenancePackages = [
-    {
-      icon: Star,
-      title: 'Premium Pakket',
-      price: '11,-',
-      features: [
-        'Jaarlijks onderhoud',
-        'Reiniging van binnen- en buitenunit',
-        'Controle koudemiddel en druk',
-        'Inspectie elektrische aansluitingen',
-        'Controle condensafvoer',
-        'Voorrang bij storingen'
-      ]
-    },
-    {
-      icon: Crown,
-      title: 'All-Inclusive Pakket',
-      price: '16,-',
-      features: [
-        'Alles uit het Premium Pakket',
-        'Directe vervanging bij defecten',
-        'Geen onverwachte kosten',
-        'Priority storingsdienst',
-        'Garantie op onderdelen'
-      ]
-    }
-  ];
+  const maintenancePackages = maintenancePlans.map(plan => ({ ...plan, icon: plan.id === 'basis' ? Star : Crown }));
 
   const procedures = [
     {
@@ -90,11 +64,12 @@ export default function MaintenanceProcedures() {
   return (
     <>
       <Helmet>
-        <title>Onderhoudspakketten | StayCool Airco</title>
-        <meta 
-          name="description" 
-          content="Bekijk onze onderhoudspakketten voor uw airconditioning. Kies uit Premium of All-Inclusive voor optimale zorg voor uw systeem."
+        <title>Airco onderhoudsabonnement: Basis of Premium | StayCool</title>
+        <meta
+          name="description"
+          content="Onderhoud voor bestaande StayCool-klanten. Basis €13 of Premium €16 per maand per complete airco-unit. Vergelijk de pakketten en meld u online aan."
         />
+        <link rel="canonical" href="https://staycoolairco.nl/onderhoud" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
@@ -117,15 +92,21 @@ export default function MaintenanceProcedures() {
                 </li>
               </ol>
             </nav>
-            
+
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 break-words">
                 Onderhoudspakketten
               </h1>
               <p className="text-xl text-blue-50 mb-8">
-                Kies het onderhoudspakket dat het beste bij u past en houd uw airco in optimale conditie
+                Jaarlijks onderhoud voor uw StayCool-airco. Kies Basis voor €13 of Premium voor €16 per maand per complete airco-unit.
               </p>
-              
+              <p className="text-blue-50 mb-6">
+                Voor bestaande klanten met een airco die door StayCool is geleverd en geïnstalleerd.
+              </p>
+              <a href="#onderhoudspakketten" className="inline-block rounded-lg bg-white px-6 py-3 font-semibold text-blue-800 hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white mb-8">
+                Vergelijk de onderhoudspakketten
+              </a>
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
                   <Wrench className="h-8 w-8 mx-auto mb-2" />
@@ -145,6 +126,60 @@ export default function MaintenanceProcedures() {
         </section>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+          {/* Maintenance Packages */}
+          <section id="onderhoudspakketten" aria-labelledby="pakketten-titel" className="max-w-4xl mx-auto mb-16 scroll-mt-28">
+            <h2 id="pakketten-titel" className="text-3xl font-bold text-gray-900 mb-4">Kies het onderhoud dat bij u past</h2>
+            <p className="text-gray-700 mb-3">De maandprijzen gelden per complete airco-unit: één buitendeel en één binnendeel. Extra binnendelen kosten €8 per maand bij Basis of €11 bij Premium.</p>
+            <p className="text-gray-700 mb-8">Liever zonder abonnement? Een losse onderhoudsbeurt kost €189 per complete airco-unit. Bij het aanmelden ziet u de prijs voor uw aantal units en het gekozen betaalritme.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {maintenancePackages.map((pkg, index) => (
+              <m.div
+                key={pkg.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="p-6">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-800 mb-4">
+                    <pkg.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {pkg.title}
+                  </h3>
+                  <div className="text-3xl font-bold text-blue-800 mb-2">
+                    €{pkg.price}
+                    <span className="text-base font-normal text-gray-600"> p.m.</span>
+                  </div>
+                  <p className="text-sm text-gray-600 mb-2">€{pkg.annualPrice} per jaar bij maandbetaling, per complete airco-unit.</p>
+                  <p className="text-sm text-gray-600 mb-6">Extra binnendeel: €{pkg.extraIndoorPrice} per maand.</p>
+                  <ul className="space-y-3">
+                    {pkg.features.map((feature, featureIndex) => (
+                      <li
+                        key={featureIndex}
+                        className="flex items-start"
+                      >
+                        <Check className="h-5 w-5 text-blue-800 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-600">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-8">
+                    <a
+                      href={`https://aanmelden.staycoolairco.nl/?pakket=${pkg.id}`}
+                      className="block w-full text-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-900 transition-colors duration-300"
+                    >
+                      Kies {pkg.title}
+                    </a>
+                  </div>
+                </div>
+              </m.div>
+            ))}
+          </div>
+            <p className="text-sm text-gray-600 mt-6">Op de aanmeldpagina bevestigt u uw pakketkeuze en kiest u uw betaalritme. U kunt uw pakket daar nog aanpassen. Houd uw klant-, offerte- of factuurnummer bij de hand. Bekijk ook de <Link to="/voorwaarden" className="text-blue-800 underline">algemene voorwaarden</Link> voor de afspraken over uw abonnement.</p>
+          </section>
 
           {/* Image Gallery Section */}
           <m.div
@@ -218,19 +253,19 @@ export default function MaintenanceProcedures() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto mb-16"
           >
-            <div className="bg-orange-50 rounded-xl p-8 border-2 border-orange-200">
-              <div className="flex items-start">
+            <div className="bg-orange-50 rounded-xl p-4 sm:p-8 border-2 border-orange-200">
+              <div className="flex flex-col sm:flex-row items-start">
                 <div className="flex-shrink-0">
                   <AlertTriangle className="h-8 w-8 text-orange-500 mt-1" />
                 </div>
-                <div className="ml-4">
+                <div className="min-w-0 mt-3 sm:mt-0 sm:ml-4 break-words">
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">
                     Belangrijk: Onderhoudsbeleid StayCool Airco
                   </h2>
                   <div className="space-y-4 text-gray-700">
                     <p>
-                      Bij StayCool Airco streven we naar de hoogste kwaliteit en service voor onze klanten. 
-                      Om dit te kunnen garanderen, voeren wij <strong className="text-gray-900">uitsluitend onderhoud en reparaties</strong> uit 
+                      Bij StayCool Airco streven we naar de hoogste kwaliteit en service voor onze klanten.
+                      Om dit te kunnen garanderen, voeren wij <strong className="text-gray-900">uitsluitend onderhoud en reparaties</strong> uit
                       aan airconditioningsystemen die door ons zijn geleverd en geïnstalleerd.
                     </p>
                     <div>
@@ -259,12 +294,12 @@ export default function MaintenanceProcedures() {
                         Heeft u een airco die niet door StayCool is geïnstalleerd?
                       </p>
                       <p>
-                        Wij adviseren u contact op te nemen met de oorspronkelijke installateur of een algemene 
+                        Wij adviseren u contact op te nemen met de oorspronkelijke installateur of een algemene
                         onderhoudspartij voor airconditioningsystemen.
                       </p>
                     </div>
                     <p className="text-sm text-gray-600 italic mt-4">
-                      Wij begrijpen dat dit mogelijk ongemak veroorzaakt en bieden hiervoor onze excuses aan. 
+                      Wij begrijpen dat dit mogelijk ongemak veroorzaakt en bieden hiervoor onze excuses aan.
                       Deze keuze is gemaakt om de beste service aan onze klanten te kunnen blijven bieden.
                     </p>
                   </div>
@@ -272,52 +307,6 @@ export default function MaintenanceProcedures() {
               </div>
             </div>
           </m.div>
-
-          {/* Maintenance Packages */}
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {maintenancePackages.map((pkg, index) => (
-              <m.div
-                key={pkg.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="p-6">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-800 mb-4">
-                    <pkg.icon className="h-6 w-6" />
-                  </div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                    {pkg.title}
-                  </h2>
-                  <div className="text-3xl font-bold text-blue-800 mb-6">
-                    €{pkg.price}
-                    <span className="text-base font-normal text-gray-600"> p.m.</span>
-                  </div>
-                  <ul className="space-y-3">
-                    {pkg.features.map((feature, featureIndex) => (
-                      <li 
-                        key={featureIndex}
-                        className="flex items-start"
-                      >
-                        <Check className="h-5 w-5 text-blue-800 mr-2 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-600">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-8">
-                    <a
-                      href="https://aanmelden.staycoolairco.nl/"
-                      className="block w-full text-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-800 hover:bg-blue-900 transition-colors duration-300"
-                    >
-                      Kies {pkg.title}
-                    </a>
-                  </div>
-                </div>
-              </m.div>
-            ))}
-          </div>
 
           {/* Safety Guidelines */}
           <div className="bg-yellow-50 rounded-xl p-6 mb-12">
@@ -327,7 +316,7 @@ export default function MaintenanceProcedures() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {safetyGuidelines.map((guideline, index) => (
-                <div 
+                <div
                   key={index}
                   className="flex items-center text-yellow-700"
                 >
@@ -368,7 +357,7 @@ export default function MaintenanceProcedures() {
                       </h3>
                       <ol className="space-y-2">
                         {procedure.steps.map((step, stepIndex) => (
-                          <li 
+                          <li
                             key={stepIndex}
                             className="flex items-start"
                           >
@@ -389,7 +378,7 @@ export default function MaintenanceProcedures() {
                         </h3>
                         <ul className="space-y-2">
                           {procedure.tools.map((tool) => (
-                            <li 
+                            <li
                               key={tool}
                               className="flex items-center text-gray-600"
                             >
@@ -416,6 +405,10 @@ export default function MaintenanceProcedures() {
 
         </div>
       </div>
+      <nav aria-label="Meer weten voor u een pakket kiest" className="mx-auto max-w-5xl px-4 py-8 flex flex-col gap-3">
+        <Link to="/seo/pillar-9-kosten-prijzen/airco-onderhoud-kosten" className="text-blue-800 underline">Vergelijk de jaarprijs van los onderhoud, Basis en Premium</Link>
+        <Link to="/kennisbank/hoe-vaak-airco-onderhoud" className="text-blue-800 underline">Lees hoe vaak uw airco onderhoud nodig heeft</Link>
+      </nav>
     </>
   );
 }

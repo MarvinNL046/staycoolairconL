@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React,{ useState,useEffect,useCallback } from 'react';
 import { throttle } from '../utils/helpers';
 
 const BackToTop: React.FC = () => {

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { onCLS, onFID, onLCP, onFCP, onTTFB } from 'web-vitals';
+import { onCLS,onFID,onLCP,onFCP,onTTFB } from 'web-vitals';
 import { trackPerformance } from '../utils/analytics';
 
 // Helper to determine performance rating

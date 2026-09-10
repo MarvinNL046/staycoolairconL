@@ -1,7 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Phone, MapPin, Clock, Shield, Star, CheckCircle, ArrowRight } from 'lucide-react';
+import { Phone,MapPin,Clock,Shield,Star,CheckCircle,ArrowRight } from 'lucide-react';
 import MetaTags from '../../components/MetaTags';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import Contact from '../../components/Contact';
@@ -38,22 +36,7 @@ export default function OptimalKeywordExample() {
   const postalCodes = "6041, 6042, 6043, 6044, 6045";
   const neighborhoods = ["Roermond Centrum", "Herten", "Donderberg", "Binnenstad"];
 
-  const testimonials = [
-    {
-      name: "Marcel van Dijk",
-      rating: 5,
-      comment: "Fantastische service! De airco was binnen één dag geïnstalleerd en werkt perfect. Aanrader!",
-      date: "2025-01-15",
-      neighborhood: "Roermond Centrum"
-    },
-    {
-      name: "Linda Smeets",
-      rating: 5,
-      comment: "Professionele installatie en duidelijke uitleg. Bespaar nu al 40% op mijn energierekening.",
-      date: "2025-02-20",
-      neighborhood: "Herten"
-    }
-  ];
+  const testimonials = [] as { name: string; rating: number; comment: string; date: string; neighborhood: string; }[];
 
   const faqs = [
     {
@@ -70,7 +53,7 @@ export default function OptimalKeywordExample() {
     },
     {
       question: "Is StayCool een erkende airco installateur in Roermond?",
-      answer: "Ja, StayCool Airco is F-gassen gecertificeerd en een officiële dealer van A-merken zoals Daikin en Mitsubishi. Wij hebben meer dan 500+ tevreden klanten in Limburg en werken volgens STEK-normen."
+      answer: "Ja, StayCool Airco is F-gassen gecertificeerd en een officiële dealer van A-merken zoals Daikin en Mitsubishi. Wij hebben klanten in ons werkgebied in Limburg en werken volgens STEK-normen."
     }
   ];
 
@@ -147,7 +130,7 @@ export default function OptimalKeywordExample() {
               </div>
               <div className="flex items-center">
                 <Star className="h-6 w-6 mr-2 text-yellow-400" />
-                <span>500+ Tevreden Klanten</span>
+                <span>klanten in ons werkgebied</span>
               </div>
               <div className="flex items-center">
                 <Clock className="h-6 w-6 mr-2 text-blue-300" />
@@ -190,8 +173,8 @@ export default function OptimalKeywordExample() {
               <p className="text-lg text-gray-700 mb-6">
                 Bent u op zoek naar een <strong>betrouwbare airco installateur in Roermond</strong>?
                 StayCool Airco is uw lokale specialist voor professionele klimaatbeheersing in
-                heel Roermond en omstreken. Als F-gassen gecertificeerd <strong>airco bedrijf</strong> met
-                meer dan 500+ tevreden klanten staan wij garant voor vakkundige installatie en
+                heel Roermond en omstreken. Als F-gassen gecertificeerd <strong>airco bedrijf</strong>  met
+                klanten in ons werkgebied staan wij garant voor vakkundige installatie en
                 uitstekende service.
               </p>
 

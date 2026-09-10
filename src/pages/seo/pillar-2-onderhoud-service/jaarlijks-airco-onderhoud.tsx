@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Shield, Calendar, Wrench, ThermometerSun, Phone, Mail, Calculator, Euro, Award, TrendingUp, Wind } from 'lucide-react';
+import { CheckCircle,Shield,Calendar,Phone,Euro,Award,TrendingUp } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const JaarlijksAircoOnderhoud: React.FC = () => {
   const breadcrumbItems = [
@@ -22,7 +21,7 @@ const JaarlijksAircoOnderhoud: React.FC = () => {
     },
     {
       icon: <Euro className="h-12 w-12 text-sky-500" />,
-      title: "Tot 30% Besparing",
+      title: "situatieafhankelijke besparing",
       description: "Goed onderhouden airco's verbruiken tot 30% minder energie en hebben langere levensduur"
     },
     {
@@ -64,7 +63,7 @@ const JaarlijksAircoOnderhoud: React.FC = () => {
   const faqItems = [
     {
       question: "Hoe vaak moet mijn airco onderhouden worden?",
-      answer: "Voor optimale prestaties en een lange levensduur adviseren wij om uw airconditioning minimaal één keer per jaar professioneel te laten onderhouden. Bij intensief gebruik (bijvoorbeeld in commerciële ruimtes) kan tweemaal per jaar nodig zijn. Regelmatig onderhoud voorkomt storingen, verlengt de levensduur met jaren en bespaart tot 30% op energiekosten."
+      answer: "Voor optimale prestaties en een lange levensduur adviseren wij om uw airconditioning minimaal één keer per jaar professioneel te laten onderhouden. Bij intensief gebruik (bijvoorbeeld in commerciële ruimtes) kan tweemaal per jaar nodig zijn. Regelmatig onderhoud voorkomt storingen, verlengt de levensduur met jaren en kan mogelijk besparen op energiekosten."
     },
     {
       question: "Wat kost een jaarlijks onderhoudscontract?",
@@ -100,7 +99,7 @@ const JaarlijksAircoOnderhoud: React.FC = () => {
     <>
       <MetaTags
         title="Jaarlijks Airco Onderhoud Limburg | Preventief Onderhoudscontract | StayCool Airco"
-        description="Jaarlijks airco onderhoud ✓ Preventief onderhoudscontract ✓ Tot 30% besparing ✓ F-gassen gecertificeerd ✓ Gratis offerte in heel Limburg!"
+        description="Jaarlijks airco onderhoud ✓ Preventief onderhoudscontract ✓ situatieafhankelijke besparing ✓ F-gassen gecertificeerd ✓ Gratis offerte in heel Limburg!"
       />
 
       <SchemaMarkup
@@ -139,7 +138,8 @@ const JaarlijksAircoOnderhoud: React.FC = () => {
             Jaarlijks Airco Onderhoud in Limburg
           </h1>
           <p className="text-xl md:text-2xl text-sky-50 mb-8 max-w-3xl">
-            Voorkom storingen en bespaar tot 30% op energiekosten met een preventief onderhoudscontract. F-gassen gecertificeerde specialisten in heel Limburg.
+
+            Voorkom storingen en Bekijk de mogelijke besparing op energiekosten met een preventief onderhoudscontract. F-gassen gecertificeerde specialisten in heel Limburg.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">

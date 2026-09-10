@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Shield, Euro, Zap, Wind, ThermometerSun, Phone, Calculator, TrendingUp, Star, Award, Snowflake } from 'lucide-react';
+import { CheckCircle,Shield,Euro,Zap,Wind,Phone,Calculator,TrendingUp,Star,Award,Snowflake } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const MitsubishiHeavyAirco = () => {
   const breadcrumbItems = [
@@ -22,7 +20,7 @@ const MitsubishiHeavyAirco = () => {
     },
     {
       icon: <Shield className="h-12 w-12 text-sky-500" />,
-      title: "7 Jaar Garantie",
+      title: "garantie volgens offerte",
       description: "Uitgebreide fabrieksgarantie van 7 jaar als bewijs van uitzonderlijke betrouwbaarheid en kwaliteit"
     },
     {
@@ -106,7 +104,7 @@ const MitsubishiHeavyAirco = () => {
     },
     {
       question: "Welke garantie krijg ik op een Mitsubishi Heavy airco?",
-      answer: "Mitsubishi Heavy biedt standaard 5 jaar fabrieksgarantie op alle componenten. Bij registratie binnen 3 maanden na installatie door een erkend installateur zoals StayCool Airco wordt dit automatisch verlengd naar 7 jaar garantie. Deze langere garantieperiode toont het vertrouwen in de uitzonderlijke kwaliteit en betrouwbaarheid. De garantie dekt alle onderdelen inclusief compressor, en geldt alleen bij correct uitgevoerd jaarlijks onderhoud."
+      answer: "Mitsubishi Heavy biedt standaard 5 jaar fabrieksgarantie op alle componenten. Bij registratie binnen 3 maanden na installatie door een erkend installateur zoals StayCool Airco wordt dit automatisch verlengd naar garantie volgens offerte. Deze langere garantieperiode toont het vertrouwen in de uitzonderlijke kwaliteit en betrouwbaarheid. De garantie dekt alle onderdelen inclusief compressor, en geldt alleen bij correct uitgevoerd jaarlijks onderhoud."
     },
     {
       question: "Wat is de 3D i-See sensor en hoe werkt deze?",
@@ -114,7 +112,7 @@ const MitsubishiHeavyAirco = () => {
     },
     {
       question: "Hoe energiezuinig is een Mitsubishi Heavy airco?",
-      answer: "Mitsubishi Heavy airconditioners scoren uitstekend op energie-efficiency met energielabels A+++ op de Premium en Diamond series. De SCOP (verwarmingsefficiency) ligt tussen 4,6 en 5,1, wat betekent dat u voor elke kWh stroom 4,6 tot 5,1 kWh warmte krijgt - dus 360-410% gratis energie uit de buitenlucht. Dit resulteert in 55-65% besparing op verwarmingskosten vergeleken met conventionele systemen. De Hyper Inverter technologie optimaliseert continu het energieverbruik."
+      answer: "Mitsubishi Heavy airconditioners scoren uitstekend op energie-efficiency met energielabels A+++ op de Premium en Diamond series. De SCOP (verwarmingsefficiency) ligt tussen 4,6 en 5,1, wat betekent dat u voor elke kWh stroom 4,6 tot 5,1 kWh warmte krijgt - dus 360-410% gratis energie uit de buitenlucht. Dit resulteert in situatieafhankelijke besparing op verwarmingskosten vergeleken met conventionele systemen. De Hyper Inverter technologie optimaliseert continu het energieverbruik."
     },
     {
       question: "Kan ik een Mitsubishi Heavy airco op afstand bedienen?",
@@ -126,7 +124,7 @@ const MitsubishiHeavyAirco = () => {
     },
     {
       question: "Wat kost een Mitsubishi Heavy airco inclusief installatie?",
-      answer: "Een complete Mitsubishi Heavy installatie varieert tussen €2.400 en €4.200 afhankelijk van het gekozen model en de complexiteit. De Compact serie start vanaf €2.400, de Premium serie vanaf €2.800 en de Diamond serie (topmodel met 3D i-See) vanaf €3.600. Deze prijzen zijn inclusief professionele installatie door StayCool Airco, 7 jaar garantie, afvoer oude apparatuur en volledige instructie. Vraag een gratis offerte aan voor een exacte prijsopgave voor uw situatie."
+      answer: "Een complete Mitsubishi Heavy installatie varieert tussen €2.400 en €4.200 afhankelijk van het gekozen model en de complexiteit. De Compact serie start vanaf €2.400, de Premium serie vanaf €2.800 en de Diamond serie (topmodel met 3D i-See) vanaf €3.600. Deze prijzen zijn inclusief professionele installatie door StayCool Airco, garantie volgens offerte, afvoer oude apparatuur en volledige instructie. Vraag een gratis offerte aan voor een exacte prijsopgave voor uw situatie."
     }
   ];
 
@@ -134,7 +132,7 @@ const MitsubishiHeavyAirco = () => {
     <>
       <MetaTags
         title="Mitsubishi Heavy Airco Limburg | Premium Japanse Kwaliteit | StayCool"
-        description="Mitsubishi Heavy Industries airco ✓ Premium Japanse kwaliteit ✓ 7 jaar garantie ✓ A+++ efficiency ✓ Erkend installateur. Gratis advies!"
+        description="Mitsubishi Heavy Industries airco ✓ Premium Japanse kwaliteit ✓ garantie volgens offerte ✓ A+++ efficiency ✓ Erkend installateur. Gratis advies!"
       />
 
       <SchemaMarkup
@@ -143,7 +141,7 @@ const MitsubishiHeavyAirco = () => {
           "@context": "https://schema.org",
           "@type": "Product",
           name: "Mitsubishi Heavy Industries Airco",
-          description: "Premium Mitsubishi Heavy airconditioners met 7 jaar garantie en professionele installatie door erkend installateur StayCool Airco in Limburg",
+          description: "Premium Mitsubishi Heavy airconditioners met garantie volgens offerte en professionele installatie door erkend installateur StayCool Airco in Limburg",
           brand: {
             "@type": "Brand",
             name: "Mitsubishi Heavy Industries"
@@ -159,11 +157,7 @@ const MitsubishiHeavyAirco = () => {
               name: "Limburg"
             }
           },
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "127"
-          }
+
         }}
       />
 
@@ -178,7 +172,8 @@ const MitsubishiHeavyAirco = () => {
             Mitsubishi Heavy Airco: Premium Japanse Kwaliteit
           </h1>
           <p className="text-xl md:text-2xl text-sky-50 mb-8 max-w-3xl">
-            Industriële betrouwbaarheid voor uw woning. Mitsubishi Heavy Industries combineert Japanse precisie met 7 jaar garantie en A+++ efficiency voor ongeëvenaard comfort.
+
+            Industriële betrouwbaarheid voor uw woning. Mitsubishi Heavy Industries combineert Japanse precisie met garantie volgens offerte en A+++ efficiency voor ongeëvenaard comfort.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -218,7 +213,7 @@ const MitsubishiHeavyAirco = () => {
                 <div className="flex justify-center mb-4">
                   {usp.icon}
                 </div>
-                <h3 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h3>
+                <h2 className="font-semibold text-lg mb-2 text-gray-900 text-center">{usp.title}</h2>
                 <p className="text-gray-600 text-center">{usp.description}</p>
               </div>
             ))}
@@ -387,7 +382,8 @@ const MitsubishiHeavyAirco = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Bespaar Tot 65% Op Energiekosten
+
+              Bekijk de mogelijke besparing op energiekosten
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Door de Hyper Inverter technologie en SCOP waarden tot 5,1 behoort Mitsubishi Heavy tot de meest energiezuinige airconditioners op de markt.
@@ -635,7 +631,8 @@ const MitsubishiHeavyAirco = () => {
             Investeer In Premium Japanse Kwaliteit
           </h2>
           <p className="text-xl mb-8 text-orange-50">
-            Vraag nu een gratis adviesgesprek aan en ontdek waarom Mitsubishi Heavy de beste keuze is voor langdurig comfort en betrouwbaarheid. 7 jaar garantie inbegrepen.
+
+            Vraag nu een gratis adviesgesprek aan en ontdek waarom Mitsubishi Heavy de beste keuze is voor langdurig comfort en betrouwbaarheid. garantie volgens offerte inbegrepen.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-600 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg">

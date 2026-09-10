@@ -31,11 +31,11 @@ export const measureINP = () => {
 };
 
 // Utility to wrap event handlers with performance tracking
-export const trackInteraction = <T extends Function>(
-  handler: T,
+export const trackInteraction = <Args extends unknown[], Result>(
+  handler: (...args: Args) => Result,
   name: string
-): T => {
-  return ((...args: any[]) => {
+): ((...args: Args) => Result) => {
+  return (...args: Args) => {
     const start = performance.now();
     
     try {
@@ -62,5 +62,5 @@ export const trackInteraction = <T extends Function>(
       console.error(`Error in interaction "${name}" after ${duration.toFixed(2)}ms:`, error);
       throw error;
     }
-  }) as T;
+  };
 };

@@ -1,8 +1,7 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '../../components/Breadcrumbs';
-import { ArrowLeft, Split, Box, Building2, Home, CheckCircle, XCircle } from 'lucide-react';
+import { ArrowLeft,Building2,Home,CheckCircle,XCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AircoTypes() {
@@ -92,6 +91,7 @@ export default function AircoTypes() {
           name="keywords" 
           content="airco systemen, split unit airco, multi split airco, mono block airco, VRF systeem, VRV systeem, airconditioner types"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/soorten-airco" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">

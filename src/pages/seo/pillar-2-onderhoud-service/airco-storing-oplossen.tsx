@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { CheckCircle, AlertCircle, Phone, Wrench, Clock, Shield, Settings, TrendingUp, ThermometerSnowflake, Wind, Zap } from 'lucide-react';
+import { CheckCircle,AlertCircle,Phone,Wrench,Clock,Shield,Settings } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
 import FAQSchema from '../../../components/SEO/FAQSchema';
 import HowToSchema from '../../../components/SEO/HowToSchema';
-import LazyImage from '../../../components/LazyImage';
 
 const AircoStoringOplossen: React.FC = () => {
   const breadcrumbItems = [

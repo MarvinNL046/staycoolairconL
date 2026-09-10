@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Battery, Zap, CheckCircle, X, Euro, Shield, Phone, Calculator, Award, Home, Building2 } from 'lucide-react';
+import { Battery,CheckCircle,Shield,Phone,Calculator,Award,Home,Building2 } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
@@ -137,7 +136,7 @@ const Thuisbatterij1FaseVs3FasePage = () => {
     },
     {
       question: "Zijn 3-fase batterijen duurder in onderhoud?",
-      answer: "Nee, onderhoudskosten zijn vergelijkbaar. Zowel 1-fase als 3-fase AlphaESS batterijen zijn onderhoudsvrij met 10 jaar garantie. Geen jaarlijks onderhoud, geen extra kosten. Het enige verschil zit in aanschafprijs (3-fase €1.500-3.000 duurder door krachtigere omvormer) en installatie (3-fase iets complexer, €200-400 extra installatiekosten). Na installatie zijn operationele kosten identiek: €0/jaar."
+      answer: "Nee, onderhoudskosten zijn vergelijkbaar. Zowel 1-fase als 3-fase AlphaESS batterijen zijn onderhoudsvrij met garantie volgens offerte. Geen jaarlijks onderhoud, geen extra kosten. Het enige verschil zit in aanschafprijs (3-fase €1.500-3.000 duurder door krachtigere omvormer) en installatie (3-fase iets complexer, €200-400 extra installatiekosten). Na installatie zijn operationele kosten identiek: €0/jaar."
     },
     {
       question: "Kan ik met 1-fase batterij ook mijn elektrische auto laden?",
@@ -432,7 +431,7 @@ const Thuisbatterij1FaseVs3FasePage = () => {
             </h2>
 
             <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-8">
-              <h4 className="text-xl font-bold text-gray-900 mb-4">1-Fase Systeem (SMILE5, 5 kWh):</h4>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">1-Fase Systeem (SMILE5, 5 kWh):</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>Aanschaf: €6.000-7.000 (na BTW-teruggave €5.000-5.800)</li>
                 <li>Jaarlijkse besparing: €600-800</li>
@@ -441,7 +440,7 @@ const Thuisbatterij1FaseVs3FasePage = () => {
             </div>
 
             <div className="bg-orange-50 border-l-4 border-orange-500 p-6 mb-8">
-              <h4 className="text-xl font-bold text-gray-900 mb-4">3-Fase Systeem (SMILE-T10, 10 kWh):</h4>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">3-Fase Systeem (SMILE-T10, 10 kWh):</h3>
               <ul className="space-y-2 text-gray-700">
                 <li>Aanschaf: €11.000-12.000 (na BTW-teruggave €9.000-10.000)</li>
                 <li>Jaarlijkse besparing: €1.000-1.400 (particulier) of €1.500-2.500 (zakelijk met peak shaving)</li>

@@ -1,8 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { m } from 'framer-motion';
-import { Phone, Mail, MapPin, Wrench, Award, Clock } from 'lucide-react';
+import { Phone,Mail,MapPin,Wrench,Award,Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AircoPlaatsenLimburg() {
@@ -17,7 +16,7 @@ export default function AircoPlaatsenLimburg() {
         <title>Airco Plaatsen Limburg | Professionele Airconditioning Installatie</title>
         <meta 
           name="description" 
-          content="Wilt u een airco laten plaatsen in Limburg? Onze ervaren monteurs zorgen voor een vakkundige installatie. Profiteer van onze expertise en 5 jaar garantie."
+          content="Wilt u een airco laten plaatsen in Limburg? Onze ervaren monteurs zorgen voor een vakkundige installatie. Profiteer van onze expertise en garantie volgens offerte."
         />
         <meta 
           name="keywords" 
@@ -71,7 +70,7 @@ export default function AircoPlaatsenLimburg() {
                   <li>✓ F-gassen gecertificeerd</li>
                   <li>✓ <Link to="/kennisbank/scop-4-6" className="text-blue-600 hover:text-blue-700">Hoge SCOP waarden</Link></li>
                   <li>✓ Erkend installateur</li>
-                  <li>✓ 5 jaar garantie</li>
+                  <li>✓ garantie volgens offerte</li>
                 </ul>
               </div>
 

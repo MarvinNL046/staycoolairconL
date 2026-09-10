@@ -1,56 +1,27 @@
-import React, { useState } from 'react';
+import React,{ useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Home,
-  Sun,
-  Thermometer,
-  Shield,
-  Phone,
-  CheckCircle,
-  AlertCircle,
-  Calendar,
-  Award,
-  Zap,
-  Settings,
-  FileText,
-  HelpCircle,
-  ArrowRight,
-  Star,
-  ChevronRight,
-  Euro,
-  Clock,
-  Wind,
-  Volume2,
-  Wifi,
-  Timer,
-  Package,
-  Ruler,
-  Check,
-  X,
-  CloudSnow,
-  Droplets,
-  CircleOff,
-  Leaf,
-  Gauge,
-  TrendingUp,
-  Lightbulb,
-  Maximize2,
-  Info,
-  BarChart3,
-  Triangle,
-  Building,
-  FlameKindling,
-  Snowflake,
-  ThermometerSun,
-  ArrowUp,
-  ArrowDown,
-  Layers,
-  Users,
-  Baby,
-  Gamepad2,
-  Briefcase,
-  Dumbbell
+import {
+Home,
+Sun,Phone,
+CheckCircle,
+AlertCircle,FileText,
+HelpCircle,Star,
+ChevronRight,
+Euro,Check,Droplets,Gauge,
+TrendingUp,
+Lightbulb,Info,
+BarChart3,
+Triangle,
+Building,
+FlameKindling,
+Snowflake,
+ThermometerSun,
+ArrowUp,Layers,
+Users,
+Baby,
+Gamepad2,
+Briefcase,
+Dumbbell
 } from 'lucide-react';
 import SchemaMarkup from '../../components/SchemaMarkup';
 import FAQSchema from '../../components/SEO/FAQSchema';
@@ -59,7 +30,7 @@ import ContactForm from '../../components/Contact';
 import LazyImage from '../../components/LazyImage';
 
 const AircoVoorZolderLanding: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('uitdagingen');
+
   const [showAllFAQ, setShowAllFAQ] = useState(false);
   const [activeFAQ, setActiveFAQ] = useState<number | null>(null);
   const [selectedAtticType, setSelectedAtticType] = useState('schuin-dak');
@@ -219,32 +190,7 @@ const AircoVoorZolderLanding: React.FC = () => {
     }
   };
 
-  const reviews = [
-    {
-      name: 'Mark van der Heijden',
-      location: 'Maastricht',
-      rating: 5,
-      text: 'Eindelijk is onze zolder het hele jaar door bruikbaar. Van onleefbare sauna naar comfortabele ruimte!',
-      situation: 'Zolderkantoor',
-      result: '35°C → 22°C'
-    },
-    {
-      name: 'Familie Willems',
-      location: 'Venlo',
-      rating: 5,
-      text: 'Kinderen kunnen nu ook in zomer op zolder slapen. Fluisterstil en perfect koel.',
-      situation: 'Kinderslaapkamers',
-      result: 'Hele jaar comfort'
-    },
-    {
-      name: 'Sophie Janssen',
-      location: 'Roermond',
-      rating: 5,
-      text: 'Mijn thuiskantoor op zolder is nu productief het hele jaar. Beste investering!',
-      situation: 'Thuiswerkplek',
-      result: '+40% productiviteit'
-    }
-  ];
+
 
   const faqItems = [
     {
@@ -346,10 +292,10 @@ const AircoVoorZolderLanding: React.FC = () => {
                 Airco voor de Zolder
               </h1>
               <p className="text-xl mb-8 leading-relaxed opacity-90">
-                Van onleefbare hitte naar comfortabele ruimte. 
+                Van onleefbare hitte naar comfortabele ruimte.
                 Ontdek speciale airco oplossingen voor iedere zolder.
               </p>
-              
+
               {/* Temperature Contrast */}
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8">
                 <div className="grid grid-cols-2 gap-4 text-center">
@@ -381,7 +327,7 @@ const AircoVoorZolderLanding: React.FC = () => {
                 </a>
               </div>
             </div>
-            
+
             <div className="relative">
               <LazyImage
                 src="/images/onze_monteurs/O1V_9717.jpg"
@@ -567,7 +513,7 @@ const AircoVoorZolderLanding: React.FC = () => {
                 <p className="text-gray-600 mb-6">
                   {atticTypes[selectedAtticType as keyof typeof atticTypes].description}
                 </p>
-                
+
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-semibold mb-2 flex items-center gap-2">
@@ -578,7 +524,7 @@ const AircoVoorZolderLanding: React.FC = () => {
                       {atticTypes[selectedAtticType as keyof typeof atticTypes].placement}
                     </p>
                   </div>
-                  
+
                   <div>
                     <h4 className="font-semibold mb-2 flex items-center gap-2">
                       <Gauge className="w-5 h-5 text-orange-600" />
@@ -590,7 +536,7 @@ const AircoVoorZolderLanding: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="font-semibold mb-4">Specifieke Aandachtspunten:</h4>
                 <ul className="space-y-3">
@@ -601,10 +547,10 @@ const AircoVoorZolderLanding: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <div className="mt-6 bg-orange-50 rounded-lg p-4">
                   <p className="text-sm text-orange-800">
-                    <strong>Tip:</strong> Onze experts hebben ervaring met alle types zolders 
+                    <strong>Tip:</strong> Onze experts hebben ervaring met alle types zolders
                     en vinden altijd een passende oplossing.
                   </p>
                 </div>
@@ -659,9 +605,10 @@ const AircoVoorZolderLanding: React.FC = () => {
               Slimme Tip
             </h3>
             <p className="text-blue-800">
-              Combineer isolatie met airco installatie voor het beste resultaat. 
-              Wij werken samen met isolatiebedrijven en kunnen een totaalpakket aanbieden. 
-              Dit levert vaak 30-40% besparing op de totale investering.
+
+              Combineer isolatie met airco installatie voor het beste resultaat.
+              Wij werken samen met isolatiebedrijven en kunnen een totaalpakket aanbieden.
+              Dit levert vaak situatieafhankelijke besparing op de totale investering.
             </p>
           </div>
         </div>
@@ -682,7 +629,7 @@ const AircoVoorZolderLanding: React.FC = () => {
                   <useCase.icon className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-lg font-semibold mb-3">{useCase.type}</h3>
-                
+
                 <div className="space-y-3 text-sm">
                   <div>
                     <p className="font-medium text-red-600">Probleem:</p>
@@ -705,7 +652,7 @@ const AircoVoorZolderLanding: React.FC = () => {
             <Building className="w-12 h-12 text-orange-600 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-4">+40% Extra Leefruimte</h3>
             <p className="text-gray-700 mb-6">
-              Een gekoelde zolder voegt effectief een extra verdieping toe aan uw huis. 
+              Een gekoelde zolder voegt effectief een extra verdieping toe aan uw huis.
               Goedkoper dan een aanbouw!
             </p>
             <a href="#offerte" className="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition inline-block">
@@ -732,8 +679,8 @@ const AircoVoorZolderLanding: React.FC = () => {
                     <span className="capitalize">{key}</span>
                     <div className="flex items-center gap-2">
                       <div className="w-32 bg-red-200 rounded-full h-2">
-                        <div 
-                          className="bg-red-600 h-2 rounded-full" 
+                        <div
+                          className="bg-red-600 h-2 rounded-full"
                           style={{ width: `${value}%` }}
                         />
                       </div>
@@ -752,8 +699,8 @@ const AircoVoorZolderLanding: React.FC = () => {
                     <span className="capitalize">{key}</span>
                     <div className="flex items-center gap-2">
                       <div className="w-32 bg-green-200 rounded-full h-2">
-                        <div 
-                          className="bg-green-600 h-2 rounded-full" 
+                        <div
+                          className="bg-green-600 h-2 rounded-full"
                           style={{ width: `${value}%` }}
                         />
                       </div>
@@ -851,9 +798,8 @@ const AircoVoorZolderLanding: React.FC = () => {
               </div>
             </div>
 
-            <ContactForm 
-              source="Airco voor Zolder Landing"
-              showPrivacyPolicy={true}
+            <ContactForm
+              inquiryContext="Airco voor Zolder Landing"
             />
           </div>
 
@@ -881,30 +827,7 @@ const AircoVoorZolderLanding: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((review, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-1">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
-                  <span className="text-sm text-gray-500">{review.situation}</span>
-                </div>
-                <p className="text-gray-700 mb-4 italic">"{review.text}"</p>
-                <div className="pt-4 border-t">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-semibold">{review.name}</p>
-                      <p className="text-sm text-gray-500">{review.location}</p>
-                    </div>
-                    <div className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-medium">
-                      {review.result}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+            <a className="text-blue-700 underline" href="https://www.google.com/search?q=staycool+airco" target="_blank" rel="noopener noreferrer">Bekijk actuele klantervaringen op Google</a>
           </div>
         </div>
       </section>

@@ -1,7 +1,6 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import MetaTags from '../../components/MetaTags';
-import { ArrowLeft, Leaf, LineChart, Sun, Zap, ThermometerSun, Battery, PiggyBank } from 'lucide-react';
+import { ArrowLeft,LineChart,Zap,ThermometerSun,Battery,PiggyBank } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function CO2Reduction() {
@@ -24,7 +23,7 @@ export default function CO2Reduction() {
     {
       icon: LineChart,
       title: 'Hogere Besparing',
-      description: 'Bespaar tot 60% op verwarmingskosten én voorkom terugleverkosten.'
+      description: "Bekijk de mogelijke besparing op verwarmingskosten én voorkom terugleverkosten."
     }
   ];
 
@@ -58,7 +57,7 @@ export default function CO2Reduction() {
             "@id": "https://staycoolairco.nl/kennisbank/co2-reductie"
           },
           "datePublished": "2024-01-01",
-          "dateModified": new Date().toISOString().split('T')[0]
+
         }}
       />
 
@@ -66,7 +65,7 @@ export default function CO2Reduction() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <nav className="mb-8">
-            <Link 
+            <Link
               to="/kennisbank"
               className="inline-flex items-center text-blue-600 hover:text-blue-700"
             >
@@ -101,9 +100,9 @@ export default function CO2Reduction() {
                 className="bg-white p-6 rounded-xl shadow-lg"
               >
                 <benefit.icon className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <h2 className="text-lg font-semibold text-gray-900 mb-2">
                   {benefit.title}
-                </h3>
+                </h2>
                 <p className="text-gray-600">
                   {benefit.description}
                 </p>
@@ -115,8 +114,8 @@ export default function CO2Reduction() {
           <div className="prose prose-lg max-w-none">
             <h2>Waarom CO2-reductie belangrijk is</h2>
             <p>
-              De gebouwde omgeving is verantwoordelijk voor een significant deel van 
-              de CO2-uitstoot. Door slim gebruik van moderne airconditioningsystemen 
+              De gebouwde omgeving is verantwoordelijk voor een significant deel van
+              de CO2-uitstoot. Door slim gebruik van moderne airconditioningsystemen
               kunnen we deze uitstoot aanzienlijk verminderen.
             </p>
 
@@ -126,8 +125,8 @@ export default function CO2Reduction() {
                 Besparing met Zonnepanelen
               </h3>
               <p className="mb-0">
-                Heeft u zonnepanelen? Door te verwarmen met uw airco gebruikt u de 
-                zelf opgewekte energie direct, waardoor u terugleverkosten voorkomt 
+                Heeft u zonnepanelen? Door te verwarmen met uw airco gebruikt u de
+                zelf opgewekte energie direct, waardoor u terugleverkosten voorkomt
                 en maximaal profiteert van uw zonnepanelen.
               </p>
             </div>
@@ -161,19 +160,19 @@ export default function CO2Reduction() {
             <h2>Tips voor optimaal gebruik</h2>
             <ol>
               <li>
-                <strong>Constante temperatuur:</strong> Laat de airco op een constante 
+                <strong>Constante temperatuur:</strong> Laat de airco op een constante
                 temperatuur draaien voor het beste rendement.
               </li>
               <li>
-                <strong>Onderhoud:</strong> Zorg voor regelmatig onderhoud om het 
+                <strong>Onderhoud:</strong> Zorg voor regelmatig onderhoud om het
                 rendement optimaal te houden.
               </li>
               <li>
-                <strong>Isolatie:</strong> Zorg voor goede isolatie van uw woning 
+                <strong>Isolatie:</strong> Zorg voor goede isolatie van uw woning
                 voor het beste resultaat.
               </li>
               <li>
-                <strong>Timing:</strong> Verwarm bij zonnepanelen vooral overdag 
+                <strong>Timing:</strong> Verwarm bij zonnepanelen vooral overdag
                 wanneer de zon schijnt.
               </li>
             </ol>

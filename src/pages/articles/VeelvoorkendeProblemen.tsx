@@ -1,7 +1,6 @@
-import React from 'react';
 import { m } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, AlertTriangle, ThermometerSun, Droplets, Wind, Wrench, Filter } from 'lucide-react';
+import { ArrowLeft,AlertTriangle,ThermometerSun,Droplets,Wind,Wrench,Filter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function CommonProblems() {
@@ -80,6 +79,7 @@ export default function CommonProblems() {
           name="keywords" 
           content="airco problemen, airco storing, airco onderhoud, airco reparatie, airco lekkage, airco geluid"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/veelvoorkomende-problemen" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">

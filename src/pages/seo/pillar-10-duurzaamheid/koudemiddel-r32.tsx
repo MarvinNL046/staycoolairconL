@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Leaf, CheckCircle, Shield, TrendingDown, Wind, ThermometerSun, Phone, Calculator, Award, Zap } from 'lucide-react';
+import { Leaf,CheckCircle,Shield,TrendingDown,ThermometerSun,Phone,Calculator,Award,Zap } from 'lucide-react';
 import MetaTags from '../../../components/MetaTags';
 import Breadcrumbs from '../../../components/Breadcrumbs';
 import SchemaMarkup from '../../../components/SchemaMarkup';
@@ -67,7 +66,7 @@ const KoudemiddelR32Page = () => {
     },
     {
       question: "Kan ik mijn bestaande airco omzetten naar R32?",
-      answer: "Nee, het is technisch en wettelijk niet toegestaan om bestaande systemen om te zetten naar R32. De systemen zijn specifiek ontworpen voor één type koudemiddel vanwege verschillende drukken, oliesoorten en componentspecificaties. Als uw huidige systeem R410A of R22 gebruikt, raden wij aan om bij vervanging te kiezen voor een modern R32 systeem. Dit levert direct lagere energiekosten, betere prestaties en een kleinere ecologische voetafdruk op, met gemiddeld 25% besparing op uw energierekening."
+      answer: "Nee, het is technisch en wettelijk niet toegestaan om bestaande systemen om te zetten naar R32. De systemen zijn specifiek ontworpen voor één type koudemiddel vanwege verschillende drukken, oliesoorten en componentspecificaties. Als uw huidige systeem R410A of R22 gebruikt, raden wij aan om bij vervanging te kiezen voor een modern R32 systeem. Dit levert direct lagere energiekosten, betere prestaties en een kleinere ecologische voetafdruk op, met gemiddeld situatieafhankelijke besparing op uw energierekening."
     },
     {
       question: "Hoeveel CO2 bespaar ik met R32 ten opzichte van R410A?",
@@ -103,7 +102,7 @@ const KoudemiddelR32Page = () => {
         data={{
           "@type": "Service",
           name: "R32 Koudemiddel Airconditioning",
-          description: "Installatie en onderhoud van milieuvriendelijke R32 airconditioning systemen met 75% lagere CO2-impact en superieure energie-efficiëntie",
+          description: "Installatie en onderhoud van R32-koudemiddel airconditioning systemen met 75% lagere CO2-impact en superieure energie-efficiëntie",
           provider: {
             "@type": "LocalBusiness",
             name: "StayCool Airco",
@@ -138,7 +137,8 @@ const KoudemiddelR32Page = () => {
               Koudemiddel R32: De Milieuvriendelijke Toekomst van Airconditioning
             </h1>
             <p className="text-xl md:text-2xl text-green-50 mb-8 leading-relaxed">
-              Verminder uw CO2-voetafdruk met 2,5 ton per jaar en bespaar 10-15% op energiekosten met de nieuwste generatie R32 koudemiddel - 68% minder impact op klimaatverandering dan R410A
+
+              Verminder uw CO2-voetafdruk met 2,5 ton per jaar en Bekijk de mogelijke besparing op energiekosten met de nieuwste generatie R32 koudemiddel - 68% minder impact op klimaatverandering dan R410A
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link
@@ -167,7 +167,7 @@ const KoudemiddelR32Page = () => {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-green-200" />
-                <span>10-15% Energiebesparing</span>
+                <span>situatieafhankelijke besparing</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5 text-green-200" />
@@ -341,7 +341,7 @@ const KoudemiddelR32Page = () => {
             <div className="flex items-start gap-4">
               <Leaf className="h-8 w-8 text-green-600 flex-shrink-0 mt-1" />
               <div>
-                <h4 className="text-xl font-bold text-gray-900 mb-2">Waarom R32 de Winnaar Is</h4>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Waarom R32 de Winnaar Is</h3>
                 <p className="text-gray-700 leading-relaxed">
                   R32 scoort op alle belangrijke criteria beter dan alternatieven: 68% lagere milieu-impact, 10-15% lagere energiekosten, EU-conform tot ver na 2050, en 30% minder koudemiddel nodig. De keuze voor R32 is niet alleen beter voor het milieu, maar ook voor uw portemonnee en toekomstzekerheid.
                 </p>
@@ -427,7 +427,8 @@ const KoudemiddelR32Page = () => {
             Veelgestelde Vragen over R32 Koudemiddel
           </h2>
           <p className="text-xl text-gray-600 mb-12 text-center">
-            Alle antwoorden op uw vragen over het milieuvriendelijke R32 koudemiddel
+
+            Alle antwoorden op uw vragen over het R32-koudemiddel
           </p>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
@@ -451,7 +452,8 @@ const KoudemiddelR32Page = () => {
             Klaar voor Duurzame Klimaatbeheersing met R32?
           </h2>
           <p className="text-xl mb-8 text-green-50 leading-relaxed">
-            Verminder uw CO2-voetafdruk met 2,5 ton per jaar, bespaar 10-15% op energiekosten, en investeer in toekomstbestendige technologie. Vraag nu gratis advies aan en ontdek wat R32 voor u kan betekenen.
+
+            Verminder uw CO2-voetafdruk met 2,5 ton per jaar, Bekijk de mogelijke besparing op energiekosten, en investeer in toekomstbestendige technologie. Vraag nu gratis advies aan en ontdek wat R32 voor u kan betekenen.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link

@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Sun, Snowflake, Leaf, Umbrella, Phone, CheckCircle, AlertTriangle, Wrench } from 'lucide-react';
+import { Calendar,Sun,Snowflake,Leaf,Umbrella,Phone,CheckCircle,AlertTriangle,Wrench } from 'lucide-react';
 import MetaTags from '../../../../components/MetaTags';
 import Breadcrumbs from '../../../../components/Breadcrumbs';
 
@@ -448,14 +447,14 @@ const AircoOnderhoudsSeizoen = () => {
                 <div className="space-y-4">
                   <div className="border-b border-gray-200 pb-3">
                     <div className="flex justify-between items-center mb-1">
-                      <span className="font-semibold text-gray-700">1 airco unit</span>
-                      <span className="text-2xl font-bold text-green-600">€11</span>
+                      <span className="font-semibold text-gray-700">Basis per complete unit</span>
+                      <span className="text-2xl font-bold text-green-600">€13</span>
                     </div>
                     <span className="text-sm text-gray-500">per maand</span>
                   </div>
                   <div className="border-b border-gray-200 pb-3">
                     <div className="flex justify-between items-center mb-1">
-                      <span className="font-semibold text-gray-700">2+ airco units</span>
+                      <span className="font-semibold text-gray-700">Premium per complete unit</span>
                       <span className="text-2xl font-bold text-green-600">€16</span>
                     </div>
                     <span className="text-sm text-gray-500">per maand</span>

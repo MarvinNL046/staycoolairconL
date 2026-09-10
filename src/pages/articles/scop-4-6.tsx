@@ -1,8 +1,7 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Breadcrumbs from '../../components/Breadcrumbs';
 import { m } from 'framer-motion';
-import { ThermometerSun, Zap, BarChart, Info, Phone, Mail, MapPin } from 'lucide-react';
+import { ThermometerSun,Zap,BarChart,Info,Phone,Mail,MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Scop46() {
@@ -23,6 +22,7 @@ export default function Scop46() {
           name="keywords" 
           content="SCOP 4.6, energie-efficiëntie, warmtepomp rendement, airco efficiëntie, energiebesparing, duurzame verwarming"
         />
+        <link rel="canonical" href="https://staycoolairco.nl/kennisbank/scop-4-6" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">

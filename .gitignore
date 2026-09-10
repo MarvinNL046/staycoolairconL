@@ -37,6 +37,7 @@ coverage
 
 # Build
 stats.html
+*.tsbuildinfo
 
 # Cache
 .cache
