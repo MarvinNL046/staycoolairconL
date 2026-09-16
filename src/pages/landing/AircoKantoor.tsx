@@ -343,12 +343,10 @@ export default function AircoKantoor() {
               <Phone className="h-5 w-5" /> 046 202 1430
             </a>
             <a
-              href="https://wa.me/31636481054"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-xl"
+              href="mailto:info@staycoolairco.nl"
+              className="inline-flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-xl"
             >
-              WhatsApp: 06 36481054
+              Mail ons
             </a>
           </div>
         </div>

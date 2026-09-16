@@ -78,7 +78,7 @@ const AircoReparatieService: React.FC = () => {
   const reparatieproces = [
     {
       stap: "1. Storingsmelding",
-      beschrijving: "U meldt de storing telefonisch, via WhatsApp of via ons contactformulier. We plannen een afspraak op korte termijn."
+      beschrijving: "U meldt de storing telefonisch, per e-mail naar info@staycoolairco.nl of via ons contactformulier. We plannen een afspraak op korte termijn."
     },
     {
       stap: "2. Diagnose Ter Plaatse",
@@ -428,12 +428,10 @@ const AircoReparatieService: React.FC = () => {
                   </Link>
 
                   <a
-                    href="https://wa.me/31636481054"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center px-6 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors"
+                    href="mailto:info@staycoolairco.nl"
+                    className="block w-full text-center px-6 py-3 bg-blue-700 text-white font-semibold rounded-lg hover:bg-blue-800 transition-colors"
                   >
-                    WhatsApp
+                    E-mail
                   </a>
                 </div>
 

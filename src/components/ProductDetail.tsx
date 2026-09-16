@@ -6,7 +6,6 @@ import {
 Check,Info,X,
 Phone,
 Share2,
-MessageCircle,
 Mail
 } from 'lucide-react';
 import ProductCarousel from './ProductCarousel';
@@ -89,17 +88,7 @@ export default function ProductDetail({
               images={images}
             />
             <div className="mt-4 flex justify-end space-x-2">
-              <button
-                onClick={() => {
-                  const url = window.location.href;
-                  const text = `Bekijk de ${brand} ${model} op StayCool Airco`;
-                  window.open(`https://wa.me/?text=${encodeURIComponent(text + '\n' + url)}`, '_blank');
-                }}
-                className="p-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded-full transition-colors"
-                aria-label="Deel via WhatsApp"
-              >
-                <MessageCircle className="h-5 w-5" />
-              </button>
+
               <button
                 onClick={() => {
                   const url = window.location.href;

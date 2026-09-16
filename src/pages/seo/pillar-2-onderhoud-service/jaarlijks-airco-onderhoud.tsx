@@ -350,12 +350,10 @@ const JaarlijksAircoOnderhoud: React.FC = () => {
                   </a>
 
                   <a
-                    href="https://wa.me/31636481054"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center px-6 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors"
+                    href="mailto:info@staycoolairco.nl"
+                    className="block w-full text-center px-6 py-3 bg-blue-700 text-white font-semibold rounded-lg hover:bg-blue-800 transition-colors"
                   >
-                    WhatsApp Contact
+                    Mail ons
                   </a>
                 </div>
 

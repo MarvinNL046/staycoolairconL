@@ -1,6 +1,6 @@
 import React,{ useState } from 'react';
 import { m } from 'framer-motion';
-import { Phone,Mail,MapPin,MessageSquare,Send } from 'lucide-react';
+import { Phone,Mail,MapPin,Send } from 'lucide-react';
 import { sendEmail } from '../../utils/email';
 import { trackFormSubmission,trackInteraction } from '../../utils/analytics';
 import { trackPixelFormSubmission } from '../../utils/facebook';
@@ -56,7 +56,7 @@ export default function ProductLandingContact({
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     if (isSubmitting) return;
 
     setIsSubmitting(true);
@@ -69,10 +69,10 @@ export default function ProductLandingContact({
 
       // Track successful form submission
       trackFormSubmission('landing_contact_form', true);
-      
+
       // Track Facebook Pixel conversion (client-side) and get event ID
       const eventId = trackPixelFormSubmission('landing_contact_form', true);
-      
+
       // Track with Conversions API (server-side) using same event ID for deduplication
       console.log('Landing form: Tracking with Conversions API...');
       trackAPIFormSubmission('landing_contact_form', formData, 1650, eventId).catch(console.error);
@@ -89,7 +89,7 @@ export default function ProductLandingContact({
     } catch (error) {
       console.error('Form submission error:', error);
       toast.error('Er is iets misgegaan. Probeer het later opnieuw of neem telefonisch contact op.');
-      
+
       // Track form submission error
       trackFormSubmission('landing_contact_form', false);
     } finally {
@@ -141,14 +141,7 @@ export default function ProductLandingContact({
                   <Phone className="h-6 w-6 mr-3" />
                   <span>046 202 1430</span>
                 </a>
-                <a 
-                  href="https://wa.me/31636481054" 
-                  className="flex items-center text-gray-600 hover:text-blue-600"
-                  onClick={() => trackInteraction('landing_contact', 'click_whatsapp')}
-                >
-                  <MessageSquare className="h-6 w-6 mr-3" />
-                  <span>WhatsApp: 06 36481054</span>
-                </a>
+
                 <a 
                   href="mailto:info@staycoolairco.nl" 
                   className="flex items-center text-gray-600 hover:text-blue-600"

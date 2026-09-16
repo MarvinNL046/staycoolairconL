@@ -510,9 +510,9 @@ const AircoInstallatieEchtSusteren = () => {
               Direct Contact met Onze Specialisten
             </h2>
             <p className="text-xl mb-8 text-sky-50">
-              Bel, mail of WhatsApp ons voor direct advies over airco installatie in Echt-Susteren
+              Bel of mail ons voor direct advies over airco installatie in Echt-Susteren
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <a
                 href="tel:0462021430"
                 className="flex flex-col items-center justify-center p-6 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-colors"
@@ -529,14 +529,7 @@ const AircoInstallatieEchtSusteren = () => {
                 <span className="font-semibold">Mail Ons</span>
                 <span className="text-sky-100">info@staycoolairco.nl</span>
               </a>
-              <a
-                href="https://wa.me/31636481054"
-                className="flex flex-col items-center justify-center p-6 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-colors"
-              >
-                <Phone className="h-8 w-8 mb-2" />
-                <span className="font-semibold">WhatsApp</span>
-                <span className="text-sky-100">06 36481054</span>
-              </a>
+
             </div>
           </div>
         </section>

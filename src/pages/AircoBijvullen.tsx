@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import {
-CheckCircle,Shield,Droplets,AlertTriangle,Phone,Award,Settings,
-} from 'lucide-react';
+import {CheckCircle,Shield,Droplets,AlertTriangle,Phone,Award,Settings, Mail} from 'lucide-react';
 import MetaTags from '../components/MetaTags';
 import Breadcrumbs from '../components/Breadcrumbs';
 import { aggregateReviews } from '../data/reviews';
@@ -161,7 +159,7 @@ const AircoBijvullen: React.FC = () => {
     },
     {
       question: 'Hoe weet ik welk koudemiddel mijn airco gebruikt?',
-      answer: 'Op het typeplaatje van de buitenunit (en meestal ook op de binnenunit) staat het type vermeld — R32, R410A, R407C of soms R22. Twijfel? Stuur ons een foto van het typeplaatje via WhatsApp (06 36481054); wij vertellen meteen wat het is en wat een bijvulling realistisch kost.',
+      answer: 'Op het typeplaatje van de buitenunit (en meestal ook op de binnenunit) staat het type vermeld — R32, R410A, R407C of soms R22. Twijfel? Stuur ons een foto van het typeplaatje per e-mail naar info@staycoolairco.nl; wij vertellen meteen wat het is en wat een bijvulling realistisch kost.',
     },
     {
       question: 'Wat als ik R22-systeem heb?',
@@ -496,7 +494,7 @@ const AircoBijvullen: React.FC = () => {
                 </div>
 
                 <p>
-                  Stuur ons een foto van het typeplaatje van uw buitenunit (via WhatsApp 06 36481054), dan zien wij meteen wat erin zit en kunnen een realistische prijs noemen voordat we langskomen.
+                  Stuur ons een foto van het typeplaatje van uw buitenunit (via E-mail: info@staycoolairco.nl), dan zien wij meteen wat erin zit en kunnen een realistische prijs noemen voordat we langskomen.
                 </p>
 
                 <h3 id="lekdetectie" className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
@@ -540,7 +538,7 @@ const AircoBijvullen: React.FC = () => {
                     <li className="flex items-start">
                       <span className="flex-shrink-0 w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold mr-3">1</span>
                       <div>
-                        <strong className="text-gray-900">Telefoon of WhatsApp</strong>
+                        <strong className="text-gray-900">Telefoon of e-mail</strong>
                         <p className="text-gray-600 text-sm">U belt of stuurt foto van typeplaatje. Wij geven indicatie van prijs en plannen langskomen — meestal binnen een week.</p>
                       </div>
                     </li>
@@ -661,7 +659,7 @@ const AircoBijvullen: React.FC = () => {
                 </ul>
 
                 <p>
-                  Voor een prijsindicatie op uw VRF/VRV-systeem: bel 046 202 1430 of stuur een appje met foto van het typeplaatje van de buitenunit naar 06 36481054.
+                  Voor een prijsindicatie op uw VRF/VRV-systeem: bel 046 202 1430 of stuur een e-mail met foto van het typeplaatje van de buitenunit naar info@staycoolairco.nl.
                 </p>
 
                 <h3 id="bespaartips" className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
@@ -691,7 +689,7 @@ const AircoBijvullen: React.FC = () => {
                 </ol>
 
                 <p>
-                  Tip 6, gratis: stuur ons een foto van uw typeplaatje via WhatsApp (06 36481054). Dan zien we direct welk koudemiddel erin zit en kunnen we vooraf inschatten of het probleem groot of klein is — voordat we langskomen.
+                  Tip 6, gratis: stuur ons een foto van uw typeplaatje per e-mail naar info@staycoolairco.nl. Dan zien we direct welk koudemiddel erin zit en kunnen we vooraf inschatten of het probleem groot of klein is — voordat we langskomen.
                 </p>
               </div>
             </div>
@@ -701,7 +699,7 @@ const AircoBijvullen: React.FC = () => {
               <div className="bg-white rounded-lg shadow-lg p-6 sticky top-4">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Direct hulp nodig?</h3>
                 <p className="text-gray-600 mb-6">
-                  Bel of stuur een appje met een foto van het typeplaatje. We geven meteen een indicatie.
+                  Bel ons of mail een foto van het typeplaatje, samen met uw postcode en een beschrijving van het probleem.
                 </p>
 
                 <div className="space-y-4">
@@ -714,12 +712,10 @@ const AircoBijvullen: React.FC = () => {
                   </a>
 
                   <a
-                    href="https://wa.me/31636481054"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center px-6 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors"
+                    href="mailto:info@staycoolairco.nl"
+                    className="block w-full text-center px-6 py-3 bg-blue-700 text-white font-semibold rounded-lg hover:bg-blue-800 transition-colors"
                   >
-                    WhatsApp 06 36481054
+                    Mail ons
                   </a>
 
                   <Link
@@ -825,7 +821,7 @@ const AircoBijvullen: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Airco bijvullen of laten checken?</h2>
           <p className="text-xl mb-8 text-orange-50">
-            We rijden vanuit Nieuwstadt door heel Limburg. Foto van het typeplaatje sturen via WhatsApp is meestal het snelst — dan weten wij meteen om welk koudemiddel het gaat en wat een realistische prijs is.
+            We rijden vanuit Nieuwstadt door heel Limburg. Mail een foto van het typeplaatje naar info@staycoolairco.nl, samen met uw postcode en een omschrijving van het probleem. Zo kunnen wij gericht met u meedenken.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -836,13 +832,11 @@ const AircoBijvullen: React.FC = () => {
               Bel 046 202 1430
             </a>
             <a
-              href="https://wa.me/31636481054"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:info@staycoolairco.nl"
               className="inline-flex items-center justify-center px-8 py-4 bg-orange-700 text-white font-bold rounded-lg hover:bg-orange-800 transition-colors text-lg"
             >
-              <Droplets className="h-6 w-6 mr-2" />
-              WhatsApp 06 36481054
+              <Mail className="h-6 w-6 mr-2" />
+              Mail ons
             </a>
           </div>
         </div>

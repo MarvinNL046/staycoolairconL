@@ -10,8 +10,9 @@ QuickReply,
 ContactData
 } from './types';
 
-// LocalStorage key
-const CHAT_STORAGE_KEY = 'staycool_chatbot_state';
+// Start a fresh conversation after changing contact channels, so stored replies
+// cannot keep advertising an old support channel to returning visitors.
+const CHAT_STORAGE_KEY = 'staycool_chatbot_state_phone_email_v2';
 
 // Load state from localStorage
 const loadStateFromStorage = (): ChatbotState => {
@@ -29,7 +30,7 @@ const loadStateFromStorage = (): ChatbotState => {
   } catch (error) {
     console.error('Error loading chat state:', error);
   }
-  
+
   return {
     messages: [],
     currentFlow: null,
@@ -56,7 +57,7 @@ export const useChatbot = () => {
 
   const addBotMessage = (text: string, quickReplies?: QuickReply[]) => {
     setIsTyping(true);
-    
+
     setTimeout(() => {
       const message: ChatbotMessage = {
         id: `bot-${Date.now()}-${Math.random()}`,
@@ -65,13 +66,13 @@ export const useChatbot = () => {
         timestamp: new Date(),
         quickReplies
       };
-      
+
       setState(prev => ({
         ...prev,
         messages: [...prev.messages, message],
         isLoading: false
       }));
-      
+
       setIsTyping(false);
     }, 800); // Simulate typing delay
   };
@@ -83,7 +84,7 @@ export const useChatbot = () => {
       sender: 'user',
       timestamp: new Date()
     };
-    
+
     setState(prev => ({
       ...prev,
       messages: [...prev.messages, message],
@@ -101,7 +102,7 @@ export const useChatbot = () => {
             currentStep: 'property_type',
             contactData: { ...prev.contactData, customerType: 'home' }
           }));
-          
+
           setTimeout(() => {
             addBotMessage(
               "Wat voor type woning heb je?",
@@ -119,7 +120,7 @@ export const useChatbot = () => {
             currentStep: 'business_type',
             contactData: { ...prev.contactData, customerType: 'business' }
           }));
-          
+
           setTimeout(() => {
             addBotMessage(
               "Wat voor type bedrijfspand heeft u?",
@@ -140,7 +141,7 @@ export const useChatbot = () => {
           currentStep: 'room_count',
           contactData: { ...prev.contactData, propertyType: value }
         }));
-        
+
         setTimeout(() => {
           addBotMessage(
             "Hoeveel ruimtes wil je koelen?",
@@ -159,7 +160,7 @@ export const useChatbot = () => {
           currentStep: 'room_count',
           contactData: { ...prev.contactData, businessType: value }
         }));
-        
+
         setTimeout(() => {
           addBotMessage(
             "Hoeveel ruimtes/verdiepingen moet geklimatiseerd worden?",
@@ -179,9 +180,9 @@ export const useChatbot = () => {
           currentStep: 'budget',
           contactData: { ...prev.contactData, roomCount: value }
         }));
-        
+
         const isBusinessCustomer = state.contactData.customerType === 'business';
-        
+
         setTimeout(() => {
           if (isBusinessCustomer) {
             addBotMessage(
@@ -212,7 +213,7 @@ export const useChatbot = () => {
           currentStep: 'brand_preference',
           contactData: { ...prev.contactData, budget: value }
         }));
-        
+
         setTimeout(() => {
           addBotMessage(
             "Heb je al een voorkeur voor een bepaald merk?",
@@ -233,7 +234,7 @@ export const useChatbot = () => {
           currentStep: 'timeline',
           contactData: { ...prev.contactData, brandPreference: value }
         }));
-        
+
         setTimeout(() => {
           addBotMessage(
             "Wanneer wil je de airco laten installeren?",
@@ -252,7 +253,7 @@ export const useChatbot = () => {
           currentStep: 'additional_interests',
           contactData: { ...prev.contactData, timeline: value }
         }));
-        
+
         setTimeout(() => {
           addBotMessage(
             "Waar ben je nog meer in geïnteresseerd?",
@@ -272,19 +273,19 @@ export const useChatbot = () => {
           currentStep: 'choose_contact_method',
           contactData: { ...prev.contactData, additionalInterests: value }
         }));
-        
+
         setTimeout(() => {
           let message = "";
-          
+
           // Add specific info about home batteries if interested
           if (value === 'battery' || value === 'both') {
             message = "Met een thuisbatterij kun je zonnestroom bewaren voor later gebruik. De passende capaciteit, kosten en mogelijke besparing hangen af van jouw verbruik en contract. Btw-teruggave is alleen onder voorwaarden mogelijk. We bekijken graag jouw situatie.\n\n";
           }
-          
+
           message += isBusinessOpen() 
             ? "Op basis van jouw wensen kunnen we een gratis adviesgesprek inplannen. Je kunt:"
             : `Op basis van jouw wensen kunnen we een gratis adviesgesprek inplannen. Let op: we zijn nu gesloten. We zijn weer bereikbaar ${getNextOpeningTime()}. Je kunt wel alvast online een afspraak inplannen!`;
-          
+
           addBotMessage(
             message,
             [
@@ -308,7 +309,7 @@ export const useChatbot = () => {
         addBotMessage(
           "Bedankt! 🎉 Je aanvraag is succesvol verstuurd. Een van onze adviseurs neemt binnen 24 uur contact met je op voor het inplannen van een gratis adviesgesprek aan huis.\n\nTip: Wil je niet wachten? Je kunt ook direct online een afspraak maken via afspraken.staycoolairco.nl"
         );
-        
+
         // Track conversion
         trackEvent('chatbot_lead_submitted', {
           flow: 'sales',
@@ -338,7 +339,7 @@ export const useChatbot = () => {
                 ]
               );
               break;
-              
+
             case 'leaking':
               addBotMessage(
                 "Een lekkage moet snel verholpen worden. Waar lekt de airco precies?",
@@ -349,7 +350,7 @@ export const useChatbot = () => {
                 ]
               );
               break;
-              
+
             case 'noise':
               addBotMessage(
                 "Wat voor soort geluid maakt de airco?",
@@ -360,7 +361,7 @@ export const useChatbot = () => {
                 ]
               );
               break;
-              
+
             case 'not_starting':
               addBotMessage(
                 "Controleer het volgende:\n\n1. Staat de stroom aan?\n2. Werkt de afstandsbediening? (batterijen?)\n3. Staat de automaat in de meterkast aan?",
@@ -377,13 +378,13 @@ export const useChatbot = () => {
       case 'contact_technician':
         const contactMessage = isBusinessOpen()
           ? "Deze storing kunnen we het beste ter plekke oplossen. Je kunt:"
-          : `Deze storing kunnen we het beste ter plekke oplossen. Let op: we zijn nu gesloten. We zijn weer bereikbaar ${getNextOpeningTime()}. Voor spoedeisende storingen kun je WhatsApp gebruiken.`;
-        
+          : `Deze storing kunnen we het beste ter plekke oplossen. Let op: we zijn nu gesloten. We zijn weer bereikbaar ${getNextOpeningTime()}. Mail je storing naar info@staycoolairco.nl; we pakken je bericht tijdens onze openingstijden op.`;
+
         addBotMessage(
           contactMessage,
           [
             { text: "📞 Direct bellen: 046-202-1430", value: "call" },
-            { text: "💬 WhatsApp: 06-36481054", value: "whatsapp" },
+            { text: "📧 Mail: info@staycoolairco.nl", value: "email" },
             { text: "📧 Storing melden via formulier", value: "form" }
           ]
         );
@@ -400,13 +401,13 @@ export const useChatbot = () => {
 
   const sendMessage = useCallback((text: string) => {
     addUserMessage(text);
-    
+
     // Handle contact form submission
     if (state.currentStep === 'contact' || state.currentStep === 'support_form') {
       // This will be handled by a separate contact form component
       return;
     }
-    
+
     // Default response for free text
     setTimeout(() => {
       addBotMessage(
@@ -420,7 +421,7 @@ export const useChatbot = () => {
     // Find the selected reply text
     const lastBotMessage = [...state.messages].reverse().find(m => m.sender === 'bot');
     const selectedReply = lastBotMessage?.quickReplies?.find(r => r.value === value);
-    
+
     if (selectedReply) {
       addUserMessage(selectedReply.text);
     }
@@ -456,7 +457,7 @@ export const useChatbot = () => {
           currentFlow: 'support',
           currentStep: 'problem_type'
         }));
-        
+
         setTimeout(() => {
           addBotMessage(
             "Vervelend dat je een storing hebt! Wat is het probleem?",
@@ -475,7 +476,7 @@ export const useChatbot = () => {
           currentStep: 'battery_capacity',
           contactData: { ...prev.contactData, productType: 'battery' }
         }));
-        
+
         setTimeout(() => {
           addBotMessage(
             "AlphaESS thuisbatterijen zijn de slimste keuze voor energieopslag! 🔋\n\nWe hebben modellen van 3,85 kWh tot 46,2 kWh. Voor welk type woning zoek je een thuisbatterij?",
@@ -498,7 +499,7 @@ export const useChatbot = () => {
           currentStep: 'battery_phase',
           contactData: { ...prev.contactData, batteryCapacity: value }
         }));
-        
+
         setTimeout(() => {
           const capacityRecommendation = {
             'small': '3,85 - 7,7 kWh',
@@ -506,7 +507,7 @@ export const useChatbot = () => {
             'large': '15,4 - 30,8 kWh',
             'business_battery': '23,1 - 46,2 kWh'
           }[value] || '7,7 - 15,4 kWh';
-          
+
           addBotMessage(
             `Voor jouw situatie adviseren we een batterij van ${capacityRecommendation}. Heb je een 1-fase of 3-fase aansluiting?`,
             [
@@ -522,7 +523,7 @@ export const useChatbot = () => {
           currentStep: 'battery_solar',
           contactData: { ...prev.contactData, batteryPhase: value }
         }));
-        
+
         setTimeout(() => {
           addBotMessage(
             "Heb je al zonnepanelen of ben je van plan ze te plaatsen?",
@@ -539,16 +540,16 @@ export const useChatbot = () => {
           currentStep: 'choose_contact_method',
           contactData: { ...prev.contactData, solarStatus: value }
         }));
-        
+
         setTimeout(() => {
           const solarMessage = value === 'no_solar' 
             ? "Geen probleem! Een thuisbatterij werkt ook uitstekend zonder zonnepanelen door slim gebruik te maken van dynamische energieprijzen.\n\n"
             : "";
-            
+
           const message = solarMessage + (isBusinessOpen() 
             ? "Op basis van jouw wensen kunnen we een gratis adviesgesprek inplannen voor een maatwerk offerte. Je kunt:"
             : `Op basis van jouw wensen kunnen we een gratis adviesgesprek inplannen voor een maatwerk offerte. Let op: we zijn nu gesloten. We zijn weer bereikbaar ${getNextOpeningTime()}. Je kunt wel alvast online een afspraak inplannen!`);
-          
+
           addBotMessage(
             message,
             [
@@ -575,8 +576,8 @@ export const useChatbot = () => {
         );
       } else if (value === 'call') {
         window.location.href = 'tel:046-202-1430';
-      } else if (value === 'whatsapp') {
-        window.open('https://wa.me/31636481054', '_blank');
+      } else if (value === 'email') {
+        window.location.href = 'mailto:info@staycoolairco.nl?subject=Storing%20airco';
       } else if (value === 'form') {
         handleSupportFlow('support_form', value);
       } else {
@@ -587,11 +588,11 @@ export const useChatbot = () => {
 
   const submitContactForm = useCallback(async (formData: ContactData) => {
     setState(prev => ({ ...prev, isLoading: true }));
-    
+
     try {
       // Prepare email content
       const isBusinessCustomer = state.contactData.customerType === 'business';
-      
+
       let salesMessage = '';
       if (state.currentFlow === 'sales') {
         // Check if this is a battery-specific inquiry
@@ -602,19 +603,19 @@ export const useChatbot = () => {
             'large': 'Grote woning/villa (15,4 - 30,8 kWh)',
             'business_battery': 'Bedrijfspand (23,1 - 46,2 kWh)'
           }[state.contactData.batteryCapacity || ''] || 'Niet opgegeven';
-          
+
           const phaseText = {
             '1phase': '1-fase',
             '3phase': '3-fase',
             'unknown_phase': 'Onbekend'
           }[state.contactData.batteryPhase || ''] || 'Niet opgegeven';
-          
+
           const solarText = {
             'has_solar': 'Heeft al zonnepanelen',
             'planning_solar': 'Van plan zonnepanelen te plaatsen',
             'no_solar': 'Geen zonnepanelen (alleen batterij)'
           }[state.contactData.solarStatus || ''] || 'Niet opgegeven';
-          
+
           salesMessage = `Chatbot Sales Lead - THUISBATTERIJ:\n\nProductinteresse: AlphaESS Thuisbatterij\nWoningtype: ${capacityText}\nAansluiting: ${phaseText}\nZonnepanelen: ${solarText}\n\nContactgegevens:\nNaam: ${formData.name}\nEmail: ${formData.email}\nTelefoon: ${formData.phone}\nPostcode: ${formData.postalCode || 'Niet opgegeven'}`;
         } else {
           const interestText = {
@@ -631,7 +632,7 @@ export const useChatbot = () => {
           }
         }
       }
-      
+
       const emailData = {
         name: formData.name,
         email: formData.email,
@@ -643,7 +644,7 @@ export const useChatbot = () => {
       };
 
       await sendEmail(emailData);
-      
+
       if (state.currentFlow === 'sales') {
         handleSalesFlow('confirmation');
       } else {
@@ -680,7 +681,7 @@ export const useChatbot = () => {
           { text: "❄️ Ik heb een storing", value: "support" }
         ]
       };
-      
+
       setState(prev => ({ 
         ...prev, 
         messages: [welcomeMessage],
@@ -692,14 +693,14 @@ export const useChatbot = () => {
   // Go back to previous step
   const goBack = useCallback(() => {
     if (state.messages.length < 3) return; // Need at least 3 messages to go back
-    
+
     // Remove last bot and user messages
     const newMessages = state.messages.slice(0, -2);
-    
+
     // Determine the previous step based on the flow
     let previousStep = state.currentStep;
     let previousContactData = { ...state.contactData };
-    
+
     if (state.currentFlow === 'sales') {
       const stepOrder = ['welcome', 'property_type', 'business_type', 'room_count', 'budget', 'brand_preference', 'timeline', 'additional_interests', 'battery_capacity', 'battery_phase', 'battery_solar', 'contact'];
       const currentIndex = stepOrder.indexOf(state.currentStep as string);
@@ -710,7 +711,7 @@ export const useChatbot = () => {
         } else {
           previousStep = stepOrder[currentIndex - 1] as SalesStep;
         }
-        
+
         // Clear the data for the current step
         const dataFieldMap: Record<string, keyof ContactData> = {
           'property_type': 'propertyType',
@@ -721,14 +722,14 @@ export const useChatbot = () => {
           'timeline': 'timeline',
           'additional_interests': 'additionalInterests'
         };
-        
+
         const fieldToClear = dataFieldMap[state.currentStep as string];
         if (fieldToClear) {
           delete previousContactData[fieldToClear];
         }
       }
     }
-    
+
     setState(prev => ({
       ...prev,
       messages: newMessages,

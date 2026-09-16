@@ -232,7 +232,7 @@ export default function AircoInstallatieLimburg() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { step: 1, icon: Phone, title: 'Contact Opnemen', desc: 'Bel ons, stuur een WhatsApp of vul het contactformulier in. Wij reageren binnen 24 uur.' },
+              { step: 1, icon: Phone, title: 'Contact Opnemen', desc: 'Bel ons, mail naar info@staycoolairco.nl of vul het contactformulier in. We nemen contact met u op om uw wensen te bespreken.' },
               { step: 2, icon: CheckCircle, title: 'Gratis Offerte', desc: 'We bellen voor een intake of plannen een gratis thuisbezoek. U ontvangt een heldere offerte.' },
               { step: 3, icon: Wrench, title: 'Professionele Installatie', desc: 'Onze gecertificeerde monteurs installeren uw airco vakkundig en net binnen de afgesproken tijd.' },
               { step: 4, icon: Star, title: 'Klaar & Genieten', desc: 'Na de installatie krijgt u uitleg over de bediening. Direct genieten van koel comfort!' },

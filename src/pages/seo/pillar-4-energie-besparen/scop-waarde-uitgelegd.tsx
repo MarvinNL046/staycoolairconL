@@ -787,9 +787,9 @@ const SCOPWaardeUitgelegd: React.FC = () => {
             <a href="tel:0462021430" className="underline hover:text-white font-semibold">
               046 202 1430
             </a>{' '}
-            of WhatsApp{' '}
-            <a href="https://wa.me/31636481054" className="underline hover:text-white font-semibold">
-              06 36481054
+            of mail naar{' '}
+            <a href="mailto:info@staycoolairco.nl" className="underline hover:text-white font-semibold">
+              info@staycoolairco.nl
             </a>
           </p>
         </div>

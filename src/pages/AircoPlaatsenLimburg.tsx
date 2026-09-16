@@ -450,9 +450,7 @@ const AircoPlaatsenLimburg: React.FC = () => {
 
             <p>
 
-              We installeren airco’s in Limburg, en eerlijk gezegd: telefonische bereikbaarheid
-              is bij ons niet altijd top — we zijn vaak op pad bij klanten. WhatsApp (06 36481054) is meestal de snelste
-              route voor een eerste reactie. Voor de praktijk-context van een installatie in Zuid-Limburg, lees ook
+              We installeren airco’s in Limburg. Bel ons op 046 202 1430 of mail naar info@staycoolairco.nl. Krijgt u ons telefonisch niet te pakken? Mail uw vraag en telefoonnummer, dan kunnen we u terugbellen. Voor de praktijk-context van een installatie in Zuid-Limburg, lees ook
               {' '}<Link to="/blog/airco-installatie-zuid-limburg">de Zuid-Limburg installatie-praktijk</Link>.
             </p>
 
@@ -494,12 +492,10 @@ const AircoPlaatsenLimburg: React.FC = () => {
               <Phone className="h-6 w-6 mr-2" />Bel 046 202 1430
             </a>
             <a
-              href="https://wa.me/31636481054"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:info@staycoolairco.nl"
               className="inline-flex items-center justify-center px-8 py-4 bg-orange-700 text-white font-bold rounded-lg hover:bg-orange-800 transition-colors text-lg"
             >
-              WhatsApp 06 36481054
+              Mail ons
             </a>
             <Link
               to="/contact"

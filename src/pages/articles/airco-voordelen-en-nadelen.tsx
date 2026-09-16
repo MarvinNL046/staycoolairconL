@@ -283,7 +283,7 @@ export default function AircoVoordelenEnNadelen() {
 
         <div className="bg-sky-800 rounded-xl p-6 mb-10 text-white text-center">
           <p className="text-xl font-bold mb-2">Stel uw vraag aan onze specialist</p>
-          <p className="text-sky-200 mb-4">StayCool Airco | Limburg | 4.9 ⭐ | WhatsApp: 06 36481054</p>
+          <p className="text-sky-200 mb-4">StayCool Airco | Limburg | 4.9 ⭐ | E-mail: info@staycoolairco.nl</p>
           <a
             href="tel:0462021430"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl"

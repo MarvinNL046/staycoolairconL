@@ -168,20 +168,7 @@ export default function Contact({ inquiryContext = '', inquiryLabel = 'Uw gesele
                 </div>
               </a>
 
-              <a
-                href="https://wa.me/31636481054"
-                className="flex flex-col sm:flex-row items-start group"
-                onClick={() => trackInteraction('contact', 'click_whatsapp')}
-              >
-                <div className="w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center text-green-600 group-hover:bg-green-600 group-hover:text-white transition-colors shrink-0">
-                  <MessageSquare className="h-6 w-6" />
-                </div>
-                <div className="min-w-0 mt-3 sm:mt-0 sm:ml-6 break-words">
-                  <span className="block text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">WhatsApp</span>
-                  <span className="text-xl font-bold text-quatt-dark group-hover:text-green-600 transition-colors">06 36481054</span>
-                  <span className="block text-sm text-gray-500 mt-1">Snel antwoord</span>
-                </div>
-              </a>
+
 
               <a
                 href="mailto:info@staycoolairco.nl"

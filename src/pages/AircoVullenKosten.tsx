@@ -309,14 +309,14 @@ const AircoVullenKosten: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Wilt u een persoonlijke prijsindicatie?</h2>
           <p className="text-xl mb-8 text-orange-50">
-            Stuur ons een foto van het typeplaatje van uw buitenunit via WhatsApp. We zien meteen welk koudemiddel erin zit en geven een realistische bandbreedte voordat we langskomen.
+            Stuur ons een foto van het typeplaatje van uw buitenunit per e-mail naar info@staycoolairco.nl. We zien meteen welk koudemiddel erin zit en geven een realistische bandbreedte voordat we langskomen.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:0462021430" className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-600 font-bold rounded-lg hover:bg-gray-100 transition-colors text-lg">
               <Phone className="h-6 w-6 mr-2" />Bel 046 202 1430
             </a>
-            <a href="https://wa.me/31636481054" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-orange-700 text-white font-bold rounded-lg hover:bg-orange-800 transition-colors text-lg">
-              WhatsApp 06 36481054
+            <a href="mailto:info@staycoolairco.nl" className="inline-flex items-center justify-center px-8 py-4 bg-orange-700 text-white font-bold rounded-lg hover:bg-orange-800 transition-colors text-lg">
+              Mail ons
             </a>
           </div>
         </div>

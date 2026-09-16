@@ -443,7 +443,7 @@ export default function LocationLandingPage({
                   Bel direct: 046-202-1430
                 </a>
                 <p className="text-sm text-gray-600 mt-3 text-center">
-                  Of stuur een appje naar 06 36481054 — vaak het snelst.
+                  Of mail uw vraag naar info@staycoolairco.nl.
                 </p>
               </div>
             </div>

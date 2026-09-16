@@ -100,7 +100,7 @@ const AircoService: React.FC = () => {
     },
     {
       symptoom: 'Foutcode op display',
-      actie: 'Stuur foto van de code via WhatsApp (06 36481054). Veel codes zijn op afstand te interpreteren — vaak filter of sensor-probleem dat u zelf oplost.',
+      actie: 'Stuur foto van de code per e-mail naar info@staycoolairco.nl. Veel codes zijn op afstand te interpreteren — vaak filter of sensor-probleem dat u zelf oplost.',
     },
     {
       symptoom: 'Sissend of borrelend geluid',
@@ -501,8 +501,8 @@ const AircoService: React.FC = () => {
                 <li className="flex items-start">
                   <span className="flex-shrink-0 w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center font-bold mr-3">1</span>
                   <div>
-                    <strong className="text-gray-900">Telefoon of WhatsApp</strong>
-                    <p className="text-gray-600 text-sm">U belt 046 202 1430 of stuurt foto via WhatsApp 06 36481054 (vaak het snelst). Beschrijf het probleem; we geven indicatie van prijsband en plannen het bezoek.</p>
+                    <strong className="text-gray-900">Telefoon of e-mail</strong>
+                    <p className="text-gray-600 text-sm">U belt 046 202 1430 of stuurt foto via E-mail: info@staycoolairco.nl. Beschrijf het probleem; we geven indicatie van prijsband en plannen het bezoek.</p>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -587,7 +587,7 @@ const AircoService: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Service nodig? Drie routes.</h2>
           <p className="text-xl mb-8 text-orange-50">
-            Onderhoudscontract afsluiten, losse beurt boeken, of acute storing melden — bel of stuur een appje, we plannen direct.
+            Onderhoudscontract afsluiten, losse beurt boeken, of acute storing melden — bel of mail ons, dan bespreken we de mogelijkheden.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -597,12 +597,10 @@ const AircoService: React.FC = () => {
               <Phone className="h-6 w-6 mr-2" />Bel 046 202 1430
             </a>
             <a
-              href="https://wa.me/31636481054"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:info@staycoolairco.nl"
               className="inline-flex items-center justify-center px-8 py-4 bg-orange-700 text-white font-bold rounded-lg hover:bg-orange-800 transition-colors text-lg"
             >
-              WhatsApp 06 36481054
+              Mail ons
             </a>
             <Link
               to="/airco-onderhoud"

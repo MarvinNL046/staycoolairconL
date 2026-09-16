@@ -648,7 +648,7 @@ const DaikinAircoModellen = () => {
             </a>
           </div>
           <p className="mt-6 text-orange-100 text-sm">
-            Ook bereikbaar via WhatsApp: 06 36481054
+            Ook bereikbaar via E-mail: info@staycoolairco.nl
           </p>
         </div>
       </section>

@@ -533,12 +533,10 @@ const AircoBuitenunitPlaatsing = () => {
               Gratis Offerte Aanvragen
             </Link>
             <a
-              href="https://wa.me/31636481054"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:info@staycoolairco.nl"
               className="inline-flex items-center justify-center px-8 py-4 bg-sky-700 text-white font-bold rounded-lg hover:bg-sky-800 transition-colors text-lg"
             >
-              WhatsApp: 06 36481054
+              Mail ons
             </a>
           </div>
         </div>

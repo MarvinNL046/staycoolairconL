@@ -225,7 +225,7 @@ const AircoBijvullenZelfDoen: React.FC = () => {
             </ul>
 
             <p>
-              Voor Limburg kunt u ons bellen op 046 202 1430 of een appje sturen naar 06 36481054. Stuur eventueel een foto van het typeplaatje van de buitenunit erbij — dan zien we direct welk koudemiddel erin zit en kunnen we vooraf een realistische bandbreedte noemen. Voor de complete prijsindicatie: zie onze <Link to="/airco-vullen-kosten" className="text-sky-600 underline">kosten-pagina</Link>. Voor de uitleg over het hele proces (lekdetectie → reparatie → vacumeren → bijvullen): de <Link to="/airco-bijvullen" className="text-sky-600 underline">pillar-page airco bijvullen</Link>.
+              Voor Limburg kunt u ons bellen op 046 202 1430 of een e-mail sturen naar info@staycoolairco.nl. Stuur eventueel een foto van het typeplaatje van de buitenunit erbij — dan zien we direct welk koudemiddel erin zit en kunnen we vooraf een realistische bandbreedte noemen. Voor de complete prijsindicatie: zie onze <Link to="/airco-vullen-kosten" className="text-sky-600 underline">kosten-pagina</Link>. Voor de uitleg over het hele proces (lekdetectie → reparatie → vacumeren → bijvullen): de <Link to="/airco-bijvullen" className="text-sky-600 underline">pillar-page airco bijvullen</Link>.
             </p>
 
             <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-4">Veelgestelde vragen</h2>
@@ -246,14 +246,14 @@ const AircoBijvullenZelfDoen: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Liever direct hulp dan zelf knutselen?</h2>
           <p className="text-lg text-gray-700 mb-6">
-            Stuur een foto van uw typeplaatje via WhatsApp — we geven binnen het uur een prijsindicatie.
+            Stuur een foto van uw typeplaatje per e-mail naar info@staycoolairco.nl. Vermeld ook uw postcode en een korte omschrijving van het probleem.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a href="tel:0462021430" className="inline-flex items-center justify-center px-6 py-3 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700">
               <Phone className="h-5 w-5 mr-2" />Bel 046 202 1430
             </a>
-            <a href="https://wa.me/31636481054" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600">
-              WhatsApp 06 36481054
+            <a href="mailto:info@staycoolairco.nl" className="inline-flex items-center justify-center px-6 py-3 bg-blue-700 text-white font-semibold rounded-lg hover:bg-blue-800">
+              Mail ons
             </a>
             <Link to="/airco-bijvullen" className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600">
               Bekijk pillar bijvullen

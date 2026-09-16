@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone,Mail,Facebook,Instagram,Linkedin,MessageCircle } from 'lucide-react';
+import { Phone,Mail,Facebook,Instagram,Linkedin } from 'lucide-react';
 import Logo from './Logo';
 import { seoNavigation } from '../data/seoNavigation';
 import Button from './ui/Button';
@@ -86,14 +86,6 @@ export default function Footer() {
                     <Mail className="w-5 h-5" />
                   </div>
                   <span className="font-medium">info@staycoolairco.nl</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://wa.me/31636481054" className="flex items-center text-gray-300 hover:text-white transition-colors group">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 group-hover:bg-quatt-orange transition-colors">
-                    <MessageCircle className="w-5 h-5" />
-                  </div>
-                  <span className="font-medium">WhatsApp: 06 36481054</span>
                 </a>
               </li>
             </ul>

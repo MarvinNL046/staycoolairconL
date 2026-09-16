@@ -1,6 +1,6 @@
 import React,{ useState,useRef,useEffect } from 'react';
 import { m,AnimatePresence } from 'framer-motion';
-import { X,MessageCircle,MessageSquare,ArrowLeft,RotateCcw } from 'lucide-react';
+import { X,MessageCircle,Mail,ArrowLeft,RotateCcw } from 'lucide-react';
 import { useChatbot } from './useChatbot';
 import { ChatMessage } from './ChatMessage';
 import { ChatInput } from './ChatInput';
@@ -14,7 +14,7 @@ export const Chatbot: React.FC = () => {
   const [inputValue, setInputValue] = useState('');
   const [isDesktop, setIsDesktop] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  
+
   const {
     messages,
     currentStep,
@@ -94,6 +94,7 @@ export const Chatbot: React.FC = () => {
     <>
       {/* Floating Action Button */}
       <m.button
+        aria-label="Open StayCool Assistent"
         className="fixed bottom-24 right-6 z-40 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-shadow"
         onClick={() => setIsOpen(true)}
         whileHover={{ scale: 1.05 }}
@@ -169,7 +170,7 @@ export const Chatbot: React.FC = () => {
               {messages.map((message) => (
                 <ChatMessage key={message.id} message={message} />
               ))}
-              
+
               {isTyping && (
                 <div className="flex justify-start">
                   <div className="bg-gray-100 text-gray-800 px-4 py-2 rounded-2xl rounded-bl-md">
@@ -181,7 +182,7 @@ export const Chatbot: React.FC = () => {
                   </div>
                 </div>
               )}
-              
+
               <div ref={messagesEndRef} />
             </div>
 
@@ -195,17 +196,15 @@ export const Chatbot: React.FC = () => {
               />
             )}
 
-            {/* WhatsApp button for support flow */}
+            {/* Email button for support flow */}
             {currentFlow === 'support' && currentStep !== 'support_form' && (
               <div className="px-4 pb-2 border-t border-gray-200">
                 <a 
-                  href="https://wa.me/31636481054?text=Hoi,%20ik%20heb%20een%20storing%20met%20mijn%20airco"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg transition-colors"
+                  href="mailto:info@staycoolairco.nl?subject=Storing%20airco"
+                  className="flex items-center justify-center gap-2 w-full bg-blue-700 hover:bg-blue-800 text-white py-3 px-4 rounded-lg transition-colors"
                 >
-                  <MessageSquare size={20} />
-                  <span className="font-medium">Direct WhatsApp contact</span>
+                  <Mail size={20} />
+                  <span className="font-medium">Mail ons over je storing</span>
                 </a>
               </div>
             )}
